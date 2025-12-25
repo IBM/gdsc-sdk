@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,26 +48,28 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VulnerabilitiesFilterOptions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VulnerabilitiesFilterOptions {
   public static final String SERIALIZED_NAME_VULNERABILITY_TYPES = "vulnerabilityTypes";
   @SerializedName(SERIALIZED_NAME_VULNERABILITY_TYPES)
+  @javax.annotation.Nullable
   private List<VulnerabilityType> vulnerabilityTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CRITICALITIES = "criticalities";
   @SerializedName(SERIALIZED_NAME_CRITICALITIES)
+  @javax.annotation.Nullable
   private List<VulnerabilityCriticality> criticalities = new ArrayList<>();
 
   /**
@@ -129,36 +132,43 @@ public class VulnerabilitiesFilterOptions {
 
   public static final String SERIALIZED_NAME_THREATS = "threats";
   @SerializedName(SERIALIZED_NAME_THREATS)
+  @javax.annotation.Nullable
   private List<ThreatsEnum> threats = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_COMPLIANCE = "compliance";
   @SerializedName(SERIALIZED_NAME_COMPLIANCE)
+  @javax.annotation.Nullable
   private List<Compliance> compliance = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_THREAT_CATEGORIES = "threatCategories";
   @SerializedName(SERIALIZED_NAME_THREAT_CATEGORIES)
+  @javax.annotation.Nullable
   private List<VulnerabilityThreatCategory> threatCategories = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_AFFECTED_DATA_STORE = "affectedDataStore";
   @SerializedName(SERIALIZED_NAME_AFFECTED_DATA_STORE)
+  @javax.annotation.Nullable
   private VulnerabilityAffectedDataStoreFilterOptions affectedDataStore;
 
   public static final String SERIALIZED_NAME_STATUS_TYPES = "statusTypes";
   @SerializedName(SERIALIZED_NAME_STATUS_TYPES)
+  @javax.annotation.Nullable
   private List<VulnerabilityStatusType> statusTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS_TYPE_FAMILIES = "statusTypeFamilies";
   @SerializedName(SERIALIZED_NAME_STATUS_TYPE_FAMILIES)
+  @javax.annotation.Nullable
   private List<VulnerabilityStatusTypeFamily> statusTypeFamilies = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DISCOVERED_SINCE = "discoveredSince";
   @SerializedName(SERIALIZED_NAME_DISCOVERED_SINCE)
+  @javax.annotation.Nullable
   private BigDecimal discoveredSince;
 
   public VulnerabilitiesFilterOptions() {
   }
 
-  public VulnerabilitiesFilterOptions vulnerabilityTypes(List<VulnerabilityType> vulnerabilityTypes) {
+  public VulnerabilitiesFilterOptions vulnerabilityTypes(@javax.annotation.Nullable List<VulnerabilityType> vulnerabilityTypes) {
     this.vulnerabilityTypes = vulnerabilityTypes;
     return this;
   }
@@ -171,21 +181,21 @@ public class VulnerabilitiesFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get vulnerabilityTypes
    * @return vulnerabilityTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<VulnerabilityType> getVulnerabilityTypes() {
     return vulnerabilityTypes;
   }
 
-  public void setVulnerabilityTypes(List<VulnerabilityType> vulnerabilityTypes) {
+  public void setVulnerabilityTypes(@javax.annotation.Nullable List<VulnerabilityType> vulnerabilityTypes) {
     this.vulnerabilityTypes = vulnerabilityTypes;
   }
 
 
-  public VulnerabilitiesFilterOptions criticalities(List<VulnerabilityCriticality> criticalities) {
+  public VulnerabilitiesFilterOptions criticalities(@javax.annotation.Nullable List<VulnerabilityCriticality> criticalities) {
     this.criticalities = criticalities;
     return this;
   }
@@ -198,21 +208,21 @@ public class VulnerabilitiesFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get criticalities
    * @return criticalities
-  **/
+   */
   @javax.annotation.Nullable
   public List<VulnerabilityCriticality> getCriticalities() {
     return criticalities;
   }
 
-  public void setCriticalities(List<VulnerabilityCriticality> criticalities) {
+  public void setCriticalities(@javax.annotation.Nullable List<VulnerabilityCriticality> criticalities) {
     this.criticalities = criticalities;
   }
 
 
-  public VulnerabilitiesFilterOptions threats(List<ThreatsEnum> threats) {
+  public VulnerabilitiesFilterOptions threats(@javax.annotation.Nullable List<ThreatsEnum> threats) {
     this.threats = threats;
     return this;
   }
@@ -225,21 +235,21 @@ public class VulnerabilitiesFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get threats
    * @return threats
-  **/
+   */
   @javax.annotation.Nullable
   public List<ThreatsEnum> getThreats() {
     return threats;
   }
 
-  public void setThreats(List<ThreatsEnum> threats) {
+  public void setThreats(@javax.annotation.Nullable List<ThreatsEnum> threats) {
     this.threats = threats;
   }
 
 
-  public VulnerabilitiesFilterOptions compliance(List<Compliance> compliance) {
+  public VulnerabilitiesFilterOptions compliance(@javax.annotation.Nullable List<Compliance> compliance) {
     this.compliance = compliance;
     return this;
   }
@@ -252,21 +262,21 @@ public class VulnerabilitiesFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get compliance
    * @return compliance
-  **/
+   */
   @javax.annotation.Nullable
   public List<Compliance> getCompliance() {
     return compliance;
   }
 
-  public void setCompliance(List<Compliance> compliance) {
+  public void setCompliance(@javax.annotation.Nullable List<Compliance> compliance) {
     this.compliance = compliance;
   }
 
 
-  public VulnerabilitiesFilterOptions threatCategories(List<VulnerabilityThreatCategory> threatCategories) {
+  public VulnerabilitiesFilterOptions threatCategories(@javax.annotation.Nullable List<VulnerabilityThreatCategory> threatCategories) {
     this.threatCategories = threatCategories;
     return this;
   }
@@ -279,40 +289,40 @@ public class VulnerabilitiesFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get threatCategories
    * @return threatCategories
-  **/
+   */
   @javax.annotation.Nullable
   public List<VulnerabilityThreatCategory> getThreatCategories() {
     return threatCategories;
   }
 
-  public void setThreatCategories(List<VulnerabilityThreatCategory> threatCategories) {
+  public void setThreatCategories(@javax.annotation.Nullable List<VulnerabilityThreatCategory> threatCategories) {
     this.threatCategories = threatCategories;
   }
 
 
-  public VulnerabilitiesFilterOptions affectedDataStore(VulnerabilityAffectedDataStoreFilterOptions affectedDataStore) {
+  public VulnerabilitiesFilterOptions affectedDataStore(@javax.annotation.Nullable VulnerabilityAffectedDataStoreFilterOptions affectedDataStore) {
     this.affectedDataStore = affectedDataStore;
     return this;
   }
 
-   /**
+  /**
    * Get affectedDataStore
    * @return affectedDataStore
-  **/
+   */
   @javax.annotation.Nullable
   public VulnerabilityAffectedDataStoreFilterOptions getAffectedDataStore() {
     return affectedDataStore;
   }
 
-  public void setAffectedDataStore(VulnerabilityAffectedDataStoreFilterOptions affectedDataStore) {
+  public void setAffectedDataStore(@javax.annotation.Nullable VulnerabilityAffectedDataStoreFilterOptions affectedDataStore) {
     this.affectedDataStore = affectedDataStore;
   }
 
 
-  public VulnerabilitiesFilterOptions statusTypes(List<VulnerabilityStatusType> statusTypes) {
+  public VulnerabilitiesFilterOptions statusTypes(@javax.annotation.Nullable List<VulnerabilityStatusType> statusTypes) {
     this.statusTypes = statusTypes;
     return this;
   }
@@ -325,21 +335,21 @@ public class VulnerabilitiesFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get statusTypes
    * @return statusTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<VulnerabilityStatusType> getStatusTypes() {
     return statusTypes;
   }
 
-  public void setStatusTypes(List<VulnerabilityStatusType> statusTypes) {
+  public void setStatusTypes(@javax.annotation.Nullable List<VulnerabilityStatusType> statusTypes) {
     this.statusTypes = statusTypes;
   }
 
 
-  public VulnerabilitiesFilterOptions statusTypeFamilies(List<VulnerabilityStatusTypeFamily> statusTypeFamilies) {
+  public VulnerabilitiesFilterOptions statusTypeFamilies(@javax.annotation.Nullable List<VulnerabilityStatusTypeFamily> statusTypeFamilies) {
     this.statusTypeFamilies = statusTypeFamilies;
     return this;
   }
@@ -352,35 +362,35 @@ public class VulnerabilitiesFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get statusTypeFamilies
    * @return statusTypeFamilies
-  **/
+   */
   @javax.annotation.Nullable
   public List<VulnerabilityStatusTypeFamily> getStatusTypeFamilies() {
     return statusTypeFamilies;
   }
 
-  public void setStatusTypeFamilies(List<VulnerabilityStatusTypeFamily> statusTypeFamilies) {
+  public void setStatusTypeFamilies(@javax.annotation.Nullable List<VulnerabilityStatusTypeFamily> statusTypeFamilies) {
     this.statusTypeFamilies = statusTypeFamilies;
   }
 
 
-  public VulnerabilitiesFilterOptions discoveredSince(BigDecimal discoveredSince) {
+  public VulnerabilitiesFilterOptions discoveredSince(@javax.annotation.Nullable BigDecimal discoveredSince) {
     this.discoveredSince = discoveredSince;
     return this;
   }
 
-   /**
+  /**
    * as epoch timestamp
    * @return discoveredSince
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getDiscoveredSince() {
     return discoveredSince;
   }
 
-  public void setDiscoveredSince(BigDecimal discoveredSince) {
+  public void setDiscoveredSince(@javax.annotation.Nullable BigDecimal discoveredSince) {
     this.discoveredSince = discoveredSince;
   }
 
@@ -445,31 +455,22 @@ public class VulnerabilitiesFilterOptions {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("vulnerabilityTypes");
-    openapiFields.add("criticalities");
-    openapiFields.add("threats");
-    openapiFields.add("compliance");
-    openapiFields.add("threatCategories");
-    openapiFields.add("affectedDataStore");
-    openapiFields.add("statusTypes");
-    openapiFields.add("statusTypeFamilies");
-    openapiFields.add("discoveredSince");
+    openapiFields = new HashSet<String>(Arrays.asList("vulnerabilityTypes", "criticalities", "threats", "compliance", "threatCategories", "affectedDataStore", "statusTypes", "statusTypeFamilies", "discoveredSince"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesFilterOptions
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesFilterOptions
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VulnerabilitiesFilterOptions.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VulnerabilitiesFilterOptions is not found in the empty JSON string", VulnerabilitiesFilterOptions.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VulnerabilitiesFilterOptions is not found in the empty JSON string", VulnerabilitiesFilterOptions.openapiRequiredFields.toString()));
         }
       }
 
@@ -477,29 +478,29 @@ public class VulnerabilitiesFilterOptions {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VulnerabilitiesFilterOptions.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VulnerabilitiesFilterOptions` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VulnerabilitiesFilterOptions` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("vulnerabilityTypes") != null && !jsonObj.get("vulnerabilityTypes").isJsonNull() && !jsonObj.get("vulnerabilityTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vulnerabilityTypes` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilityTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vulnerabilityTypes` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilityTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("criticalities") != null && !jsonObj.get("criticalities").isJsonNull() && !jsonObj.get("criticalities").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `criticalities` to be an array in the JSON string but got `%s`", jsonObj.get("criticalities").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `criticalities` to be an array in the JSON string but got `%s`", jsonObj.get("criticalities").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("threats") != null && !jsonObj.get("threats").isJsonNull() && !jsonObj.get("threats").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `threats` to be an array in the JSON string but got `%s`", jsonObj.get("threats").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `threats` to be an array in the JSON string but got `%s`", jsonObj.get("threats").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("compliance") != null && !jsonObj.get("compliance").isJsonNull() && !jsonObj.get("compliance").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `compliance` to be an array in the JSON string but got `%s`", jsonObj.get("compliance").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `compliance` to be an array in the JSON string but got `%s`", jsonObj.get("compliance").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("threatCategories") != null && !jsonObj.get("threatCategories").isJsonNull() && !jsonObj.get("threatCategories").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `threatCategories` to be an array in the JSON string but got `%s`", jsonObj.get("threatCategories").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `threatCategories` to be an array in the JSON string but got `%s`", jsonObj.get("threatCategories").toString()));
       }
       // validate the optional field `affectedDataStore`
       if (jsonObj.get("affectedDataStore") != null && !jsonObj.get("affectedDataStore").isJsonNull()) {
@@ -507,11 +508,11 @@ public class VulnerabilitiesFilterOptions {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("statusTypes") != null && !jsonObj.get("statusTypes").isJsonNull() && !jsonObj.get("statusTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `statusTypes` to be an array in the JSON string but got `%s`", jsonObj.get("statusTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `statusTypes` to be an array in the JSON string but got `%s`", jsonObj.get("statusTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("statusTypeFamilies") != null && !jsonObj.get("statusTypeFamilies").isJsonNull() && !jsonObj.get("statusTypeFamilies").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `statusTypeFamilies` to be an array in the JSON string but got `%s`", jsonObj.get("statusTypeFamilies").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `statusTypeFamilies` to be an array in the JSON string but got `%s`", jsonObj.get("statusTypeFamilies").toString()));
       }
   }
 
@@ -544,22 +545,22 @@ public class VulnerabilitiesFilterOptions {
     }
   }
 
- /**
-  * Create an instance of VulnerabilitiesFilterOptions given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VulnerabilitiesFilterOptions
-  * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesFilterOptions
-  */
+  /**
+   * Create an instance of VulnerabilitiesFilterOptions given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VulnerabilitiesFilterOptions
+   * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesFilterOptions
+   */
   public static VulnerabilitiesFilterOptions fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VulnerabilitiesFilterOptions.class);
   }
 
- /**
-  * Convert an instance of VulnerabilitiesFilterOptions to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VulnerabilitiesFilterOptions to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -72,9 +72,9 @@ class Assetsv3ListPolicyResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in policy_list (list)
         _items = []
         if self.policy_list:
-            for _item in self.policy_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_policy_list in self.policy_list:
+                if _item_policy_list:
+                    _items.append(_item_policy_list.to_dict())
             _dict['policy_list'] = _items
         return _dict
 

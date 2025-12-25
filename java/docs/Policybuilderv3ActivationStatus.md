@@ -7,9 +7,17 @@
 
 * `NOT_ACTIVATED` (value: `"NOT_ACTIVATED"`)
 
-* `ACTIVATED` (value: `"ACTIVATED"`)
+* `ACTIVE` (value: `"ACTIVE"`)
 
-* `ACTIVATED_WITH_ISSUES` (value: `"ACTIVATED_WITH_ISSUES"`)
+* `ISSUES` (value: `"ISSUES"`)
+
+* `INACTIVE` (value: `"INACTIVE"`)
+
+* `IN_PROGRESS` (value: `"IN_PROGRESS"`)
+
+* `FAILURE` (value: `"FAILURE"`)
+
+* `TERMINATED` (value: `"TERMINATED"`)
 
 
 

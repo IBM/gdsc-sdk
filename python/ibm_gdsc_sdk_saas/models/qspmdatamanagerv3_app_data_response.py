@@ -72,9 +72,9 @@ class Qspmdatamanagerv3AppDataResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in app_data (list)
         _items = []
         if self.app_data:
-            for _item in self.app_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_app_data in self.app_data:
+                if _item_app_data:
+                    _items.append(_item_app_data.to_dict())
             _dict['appData'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,111 +40,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Policybuilderv3EdgeActivationObject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3EdgeActivationObject {
   public static final String SERIALIZED_NAME_ACTIVATION_ORDER = "activation_order";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_ORDER)
+  @javax.annotation.Nullable
   private Integer activationOrder;
 
   public static final String SERIALIZED_NAME_ACTIVATION_STATUS = "activation_status";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_STATUS)
+  @javax.annotation.Nullable
   private Policybuilderv3ActivationStatus activationStatus = Policybuilderv3ActivationStatus.NOT_ACTIVATED;
 
   public static final String SERIALIZED_NAME_ACTIVATION_TIMESTAMP = "activation_timestamp";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_TIMESTAMP)
+  @javax.annotation.Nullable
   private OffsetDateTime activationTimestamp;
 
   public static final String SERIALIZED_NAME_EDGE_ID = "edge_id";
   @SerializedName(SERIALIZED_NAME_EDGE_ID)
+  @javax.annotation.Nullable
   private String edgeId;
 
   public Policybuilderv3EdgeActivationObject() {
   }
 
-  public Policybuilderv3EdgeActivationObject activationOrder(Integer activationOrder) {
+  public Policybuilderv3EdgeActivationObject activationOrder(@javax.annotation.Nullable Integer activationOrder) {
     this.activationOrder = activationOrder;
     return this;
   }
 
-   /**
+  /**
    * Get activationOrder
    * @return activationOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getActivationOrder() {
     return activationOrder;
   }
 
-  public void setActivationOrder(Integer activationOrder) {
+  public void setActivationOrder(@javax.annotation.Nullable Integer activationOrder) {
     this.activationOrder = activationOrder;
   }
 
 
-  public Policybuilderv3EdgeActivationObject activationStatus(Policybuilderv3ActivationStatus activationStatus) {
+  public Policybuilderv3EdgeActivationObject activationStatus(@javax.annotation.Nullable Policybuilderv3ActivationStatus activationStatus) {
     this.activationStatus = activationStatus;
     return this;
   }
 
-   /**
+  /**
    * Get activationStatus
    * @return activationStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ActivationStatus getActivationStatus() {
     return activationStatus;
   }
 
-  public void setActivationStatus(Policybuilderv3ActivationStatus activationStatus) {
+  public void setActivationStatus(@javax.annotation.Nullable Policybuilderv3ActivationStatus activationStatus) {
     this.activationStatus = activationStatus;
   }
 
 
-  public Policybuilderv3EdgeActivationObject activationTimestamp(OffsetDateTime activationTimestamp) {
+  public Policybuilderv3EdgeActivationObject activationTimestamp(@javax.annotation.Nullable OffsetDateTime activationTimestamp) {
     this.activationTimestamp = activationTimestamp;
     return this;
   }
 
-   /**
+  /**
    * Get activationTimestamp
    * @return activationTimestamp
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getActivationTimestamp() {
     return activationTimestamp;
   }
 
-  public void setActivationTimestamp(OffsetDateTime activationTimestamp) {
+  public void setActivationTimestamp(@javax.annotation.Nullable OffsetDateTime activationTimestamp) {
     this.activationTimestamp = activationTimestamp;
   }
 
 
-  public Policybuilderv3EdgeActivationObject edgeId(String edgeId) {
+  public Policybuilderv3EdgeActivationObject edgeId(@javax.annotation.Nullable String edgeId) {
     this.edgeId = edgeId;
     return this;
   }
 
-   /**
+  /**
    * Get edgeId
    * @return edgeId
-  **/
+   */
   @javax.annotation.Nullable
   public String getEdgeId() {
     return edgeId;
   }
 
-  public void setEdgeId(String edgeId) {
+  public void setEdgeId(@javax.annotation.Nullable String edgeId) {
     this.edgeId = edgeId;
   }
 
@@ -198,26 +203,22 @@ public class Policybuilderv3EdgeActivationObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("activation_order");
-    openapiFields.add("activation_status");
-    openapiFields.add("activation_timestamp");
-    openapiFields.add("edge_id");
+    openapiFields = new HashSet<String>(Arrays.asList("activation_order", "activation_status", "activation_timestamp", "edge_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3EdgeActivationObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3EdgeActivationObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3EdgeActivationObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3EdgeActivationObject is not found in the empty JSON string", Policybuilderv3EdgeActivationObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3EdgeActivationObject is not found in the empty JSON string", Policybuilderv3EdgeActivationObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -225,7 +226,7 @@ public class Policybuilderv3EdgeActivationObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3EdgeActivationObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3EdgeActivationObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3EdgeActivationObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -234,7 +235,7 @@ public class Policybuilderv3EdgeActivationObject {
         Policybuilderv3ActivationStatus.validateJsonElement(jsonObj.get("activation_status"));
       }
       if ((jsonObj.get("edge_id") != null && !jsonObj.get("edge_id").isJsonNull()) && !jsonObj.get("edge_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `edge_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("edge_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `edge_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("edge_id").toString()));
       }
   }
 
@@ -267,22 +268,22 @@ public class Policybuilderv3EdgeActivationObject {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3EdgeActivationObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3EdgeActivationObject
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3EdgeActivationObject
-  */
+  /**
+   * Create an instance of Policybuilderv3EdgeActivationObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3EdgeActivationObject
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3EdgeActivationObject
+   */
   public static Policybuilderv3EdgeActivationObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3EdgeActivationObject.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3EdgeActivationObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3EdgeActivationObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

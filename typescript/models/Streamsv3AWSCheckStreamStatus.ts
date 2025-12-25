@@ -16,7 +16,7 @@ import { HttpFile } from '../http/http';
 * AWSCheckStreamStatus defines status code for AWS stream check result.
 */
 export enum Streamsv3AWSCheckStreamStatus {
-    Ok = 'STREAM_OK',
-    AuthenticationFailed = 'STREAM_AUTHENTICATION_FAILED',
-    NotFound = 'STREAM_NOT_FOUND'
+    StreamOk = 'STREAM_OK',
+    StreamAuthenticationFailed = 'STREAM_AUTHENTICATION_FAILED',
+    StreamNotFound = 'STREAM_NOT_FOUND'
 }

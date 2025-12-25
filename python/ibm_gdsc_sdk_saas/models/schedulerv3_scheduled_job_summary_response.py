@@ -75,16 +75,16 @@ class Schedulerv3ScheduledJobSummaryResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_names (list)
         _items = []
         if self.report_names:
-            for _item in self.report_names:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_names in self.report_names:
+                if _item_report_names:
+                    _items.append(_item_report_names.to_dict())
             _dict['report_names'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in scheduled_job (list)
         _items = []
         if self.scheduled_job:
-            for _item in self.scheduled_job:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_scheduled_job in self.scheduled_job:
+                if _item_scheduled_job:
+                    _items.append(_item_scheduled_job.to_dict())
             _dict['scheduled_job'] = _items
         return _dict
 

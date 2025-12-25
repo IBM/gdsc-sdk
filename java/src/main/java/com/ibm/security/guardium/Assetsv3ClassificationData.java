@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ClassificationData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ClassificationData {
   public static final String SERIALIZED_NAME_AVAILABILITY = "availability";
   @SerializedName(SERIALIZED_NAME_AVAILABILITY)
+  @javax.annotation.Nullable
   private String availability;
 
   public static final String SERIALIZED_NAME_RULE_NAME = "rule_name";
   @SerializedName(SERIALIZED_NAME_RULE_NAME)
+  @javax.annotation.Nullable
   private String ruleName;
 
   public static final String SERIALIZED_NAME_SENSITIVE_DATA_COUNT = "sensitive_data_count";
   @SerializedName(SERIALIZED_NAME_SENSITIVE_DATA_COUNT)
+  @javax.annotation.Nullable
   private String sensitiveDataCount;
 
   public Assetsv3ClassificationData() {
   }
 
-  public Assetsv3ClassificationData availability(String availability) {
+  public Assetsv3ClassificationData availability(@javax.annotation.Nullable String availability) {
     this.availability = availability;
     return this;
   }
 
-   /**
+  /**
    * Get availability
    * @return availability
-  **/
+   */
   @javax.annotation.Nullable
   public String getAvailability() {
     return availability;
   }
 
-  public void setAvailability(String availability) {
+  public void setAvailability(@javax.annotation.Nullable String availability) {
     this.availability = availability;
   }
 
 
-  public Assetsv3ClassificationData ruleName(String ruleName) {
+  public Assetsv3ClassificationData ruleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
     return this;
   }
 
-   /**
+  /**
    * Get ruleName
    * @return ruleName
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleName() {
     return ruleName;
   }
 
-  public void setRuleName(String ruleName) {
+  public void setRuleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
   }
 
 
-  public Assetsv3ClassificationData sensitiveDataCount(String sensitiveDataCount) {
+  public Assetsv3ClassificationData sensitiveDataCount(@javax.annotation.Nullable String sensitiveDataCount) {
     this.sensitiveDataCount = sensitiveDataCount;
     return this;
   }
 
-   /**
+  /**
    * Get sensitiveDataCount
    * @return sensitiveDataCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getSensitiveDataCount() {
     return sensitiveDataCount;
   }
 
-  public void setSensitiveDataCount(String sensitiveDataCount) {
+  public void setSensitiveDataCount(@javax.annotation.Nullable String sensitiveDataCount) {
     this.sensitiveDataCount = sensitiveDataCount;
   }
 
@@ -171,25 +175,22 @@ public class Assetsv3ClassificationData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("availability");
-    openapiFields.add("rule_name");
-    openapiFields.add("sensitive_data_count");
+    openapiFields = new HashSet<String>(Arrays.asList("availability", "rule_name", "sensitive_data_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ClassificationData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ClassificationData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ClassificationData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ClassificationData is not found in the empty JSON string", Assetsv3ClassificationData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ClassificationData is not found in the empty JSON string", Assetsv3ClassificationData.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Assetsv3ClassificationData {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ClassificationData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ClassificationData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ClassificationData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("availability") != null && !jsonObj.get("availability").isJsonNull()) && !jsonObj.get("availability").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `availability` to be a primitive type in the JSON string but got `%s`", jsonObj.get("availability").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `availability` to be a primitive type in the JSON string but got `%s`", jsonObj.get("availability").toString()));
       }
       if ((jsonObj.get("rule_name") != null && !jsonObj.get("rule_name").isJsonNull()) && !jsonObj.get("rule_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
       }
       if ((jsonObj.get("sensitive_data_count") != null && !jsonObj.get("sensitive_data_count").isJsonNull()) && !jsonObj.get("sensitive_data_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitive_data_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitive_data_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitive_data_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitive_data_count").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Assetsv3ClassificationData {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ClassificationData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ClassificationData
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ClassificationData
-  */
+  /**
+   * Create an instance of Assetsv3ClassificationData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ClassificationData
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ClassificationData
+   */
   public static Assetsv3ClassificationData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ClassificationData.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ClassificationData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ClassificationData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,249 +40,259 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RunAuditReportRequest is the argument of RunAuditReport API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3RunAuditReportRequest {
   public static final String SERIALIZED_NAME_FETCH_SIZE = "fetch_size";
   @SerializedName(SERIALIZED_NAME_FETCH_SIZE)
+  @javax.annotation.Nullable
   private Integer fetchSize;
 
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)
+  @javax.annotation.Nullable
   private String headerName;
 
   public static final String SERIALIZED_NAME_JOB_ID = "job_id";
   @SerializedName(SERIALIZED_NAME_JOB_ID)
+  @javax.annotation.Nullable
   private String jobId;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Integer offset;
 
   public static final String SERIALIZED_NAME_ORDER_BY = "order_by";
   @SerializedName(SERIALIZED_NAME_ORDER_BY)
+  @javax.annotation.Nullable
   private Reportsv3OrderBy orderBy = Reportsv3OrderBy.UNDEFINED_ORDER_BY;
 
   public static final String SERIALIZED_NAME_REPORT_FILTERS = "report_filters";
   @SerializedName(SERIALIZED_NAME_REPORT_FILTERS)
+  @javax.annotation.Nullable
   private Reportsv3ReportFilterBrackets reportFilters;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_SCHEMA_NAME = "schema_name";
   @SerializedName(SERIALIZED_NAME_SCHEMA_NAME)
+  @javax.annotation.Nullable
   private String schemaName;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public static final String SERIALIZED_NAME_WITHOUT_LIMIT = "without_limit";
   @SerializedName(SERIALIZED_NAME_WITHOUT_LIMIT)
+  @javax.annotation.Nullable
   private Boolean withoutLimit;
 
   public Reportsrunnerv3RunAuditReportRequest() {
   }
 
-  public Reportsrunnerv3RunAuditReportRequest fetchSize(Integer fetchSize) {
+  public Reportsrunnerv3RunAuditReportRequest fetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
     return this;
   }
 
-   /**
+  /**
    * The max amount of rows to return for pagination. Required if report query uses offset and fetch_size parameters.
    * @return fetchSize
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFetchSize() {
     return fetchSize;
   }
 
-  public void setFetchSize(Integer fetchSize) {
+  public void setFetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest headerName(String headerName) {
+  public Reportsrunnerv3RunAuditReportRequest headerName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
     return this;
   }
 
-   /**
+  /**
    * The header name.
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderName() {
     return headerName;
   }
 
-  public void setHeaderName(String headerName) {
+  public void setHeaderName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest jobId(String jobId) {
+  public Reportsrunnerv3RunAuditReportRequest jobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * Unique token identifying the export job.
    * @return jobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getJobId() {
     return jobId;
   }
 
-  public void setJobId(String jobId) {
+  public void setJobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest offset(Integer offset) {
+  public Reportsrunnerv3RunAuditReportRequest offset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * The amount to offset the rows by for pagination. Required if report query uses offset and fetch_size parameters.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOffset() {
     return offset;
   }
 
-  public void setOffset(Integer offset) {
+  public void setOffset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest orderBy(Reportsv3OrderBy orderBy) {
+  public Reportsrunnerv3RunAuditReportRequest orderBy(@javax.annotation.Nullable Reportsv3OrderBy orderBy) {
     this.orderBy = orderBy;
     return this;
   }
 
-   /**
+  /**
    * Get orderBy
    * @return orderBy
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3OrderBy getOrderBy() {
     return orderBy;
   }
 
-  public void setOrderBy(Reportsv3OrderBy orderBy) {
+  public void setOrderBy(@javax.annotation.Nullable Reportsv3OrderBy orderBy) {
     this.orderBy = orderBy;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest reportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public Reportsrunnerv3RunAuditReportRequest reportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
     return this;
   }
 
-   /**
+  /**
    * Get reportFilters
    * @return reportFilters
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportFilterBrackets getReportFilters() {
     return reportFilters;
   }
 
-  public void setReportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public void setReportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest reportId(String reportId) {
+  public Reportsrunnerv3RunAuditReportRequest reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * The ID of the Report we wish to run (e.g. 000000000000000000000905).
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest schemaName(String schemaName) {
+  public Reportsrunnerv3RunAuditReportRequest schemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
     return this;
   }
 
-   /**
+  /**
    * The schema name to organize report task temp tables.
    * @return schemaName
-  **/
+   */
   @javax.annotation.Nullable
   public String getSchemaName() {
     return schemaName;
   }
 
-  public void setSchemaName(String schemaName) {
+  public void setSchemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest tableName(String tableName) {
+  public Reportsrunnerv3RunAuditReportRequest tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * The table name to save report task data(task_id).
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
 
-  public Reportsrunnerv3RunAuditReportRequest withoutLimit(Boolean withoutLimit) {
+  public Reportsrunnerv3RunAuditReportRequest withoutLimit(@javax.annotation.Nullable Boolean withoutLimit) {
     this.withoutLimit = withoutLimit;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to limit the results.
    * @return withoutLimit
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getWithoutLimit() {
     return withoutLimit;
   }
 
-  public void setWithoutLimit(Boolean withoutLimit) {
+  public void setWithoutLimit(@javax.annotation.Nullable Boolean withoutLimit) {
     this.withoutLimit = withoutLimit;
   }
 
@@ -348,32 +359,22 @@ public class Reportsrunnerv3RunAuditReportRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("fetch_size");
-    openapiFields.add("header_name");
-    openapiFields.add("job_id");
-    openapiFields.add("offset");
-    openapiFields.add("order_by");
-    openapiFields.add("report_filters");
-    openapiFields.add("report_id");
-    openapiFields.add("schema_name");
-    openapiFields.add("table_name");
-    openapiFields.add("without_limit");
+    openapiFields = new HashSet<String>(Arrays.asList("fetch_size", "header_name", "job_id", "offset", "order_by", "report_filters", "report_id", "schema_name", "table_name", "without_limit"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3RunAuditReportRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3RunAuditReportRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3RunAuditReportRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3RunAuditReportRequest is not found in the empty JSON string", Reportsrunnerv3RunAuditReportRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3RunAuditReportRequest is not found in the empty JSON string", Reportsrunnerv3RunAuditReportRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -381,15 +382,15 @@ public class Reportsrunnerv3RunAuditReportRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3RunAuditReportRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3RunAuditReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3RunAuditReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("header_name") != null && !jsonObj.get("header_name").isJsonNull()) && !jsonObj.get("header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
       }
       if ((jsonObj.get("job_id") != null && !jsonObj.get("job_id").isJsonNull()) && !jsonObj.get("job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
       }
       // validate the optional field `order_by`
       if (jsonObj.get("order_by") != null && !jsonObj.get("order_by").isJsonNull()) {
@@ -400,13 +401,13 @@ public class Reportsrunnerv3RunAuditReportRequest {
         Reportsv3ReportFilterBrackets.validateJsonElement(jsonObj.get("report_filters"));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("schema_name") != null && !jsonObj.get("schema_name").isJsonNull()) && !jsonObj.get("schema_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
   }
 
@@ -439,22 +440,22 @@ public class Reportsrunnerv3RunAuditReportRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3RunAuditReportRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3RunAuditReportRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3RunAuditReportRequest
-  */
+  /**
+   * Create an instance of Reportsrunnerv3RunAuditReportRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3RunAuditReportRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3RunAuditReportRequest
+   */
   public static Reportsrunnerv3RunAuditReportRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3RunAuditReportRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3RunAuditReportRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3RunAuditReportRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **filters_array** | [**List[Reportsv3ReportFilter]**](Reportsv3ReportFilter.md) | Filters Array. | [optional] 
 **having_array** | [**List[Reportsv3ReportAggFilter]**](Reportsv3ReportAggFilter.md) |  | [optional] 
 **is_custom** | **bool** | Optional: Indicate if this is a custom filter in the UI. | [optional] 
-**option_type** | [**Reportsv3OptionType**](Reportsv3OptionType.md) |  | [optional] 
+**option_type** | [**Reportsv3OptionType**](Reportsv3OptionType.md) |  | [optional] [default to Reportsv3OptionType.UNDEFINED_OPTION_TYPE]
 **sequence** | **int** | Filter sequence. | [optional] 
 
 ## Example

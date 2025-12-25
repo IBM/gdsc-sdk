@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,40 +43,44 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Additional information about Managed Units.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3MUDetailsObj {
   public static final String SERIALIZED_NAME_AGG_HEALTH_VIEW_LIST = "agg_health_view_list";
   @SerializedName(SERIALIZED_NAME_AGG_HEALTH_VIEW_LIST)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3AggregationViewListObject> aggHealthViewList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CONNECTIVITY_DETAILS = "connectivity_details";
   @SerializedName(SERIALIZED_NAME_CONNECTIVITY_DETAILS)
+  @javax.annotation.Nullable
   private Guardiumconnectorv3GeneralDetailsObject connectivityDetails;
 
   public static final String SERIALIZED_NAME_GENERAL_ERR_MESSAGES = "general_err_messages";
   @SerializedName(SERIALIZED_NAME_GENERAL_ERR_MESSAGES)
+  @javax.annotation.Nullable
   private List<String> generalErrMessages = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_UTILIZATION_SCHEME = "utilization_scheme";
   @SerializedName(SERIALIZED_NAME_UTILIZATION_SCHEME)
+  @javax.annotation.Nullable
   private Guardiumconnectorv3UtilizationParameterObject utilizationScheme;
 
   public Guardiumconnectorv3MUDetailsObj() {
   }
 
-  public Guardiumconnectorv3MUDetailsObj aggHealthViewList(List<Guardiumconnectorv3AggregationViewListObject> aggHealthViewList) {
+  public Guardiumconnectorv3MUDetailsObj aggHealthViewList(@javax.annotation.Nullable List<Guardiumconnectorv3AggregationViewListObject> aggHealthViewList) {
     this.aggHealthViewList = aggHealthViewList;
     return this;
   }
@@ -88,40 +93,40 @@ public class Guardiumconnectorv3MUDetailsObj {
     return this;
   }
 
-   /**
+  /**
    * Aggregation details.
    * @return aggHealthViewList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3AggregationViewListObject> getAggHealthViewList() {
     return aggHealthViewList;
   }
 
-  public void setAggHealthViewList(List<Guardiumconnectorv3AggregationViewListObject> aggHealthViewList) {
+  public void setAggHealthViewList(@javax.annotation.Nullable List<Guardiumconnectorv3AggregationViewListObject> aggHealthViewList) {
     this.aggHealthViewList = aggHealthViewList;
   }
 
 
-  public Guardiumconnectorv3MUDetailsObj connectivityDetails(Guardiumconnectorv3GeneralDetailsObject connectivityDetails) {
+  public Guardiumconnectorv3MUDetailsObj connectivityDetails(@javax.annotation.Nullable Guardiumconnectorv3GeneralDetailsObject connectivityDetails) {
     this.connectivityDetails = connectivityDetails;
     return this;
   }
 
-   /**
+  /**
    * Get connectivityDetails
    * @return connectivityDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Guardiumconnectorv3GeneralDetailsObject getConnectivityDetails() {
     return connectivityDetails;
   }
 
-  public void setConnectivityDetails(Guardiumconnectorv3GeneralDetailsObject connectivityDetails) {
+  public void setConnectivityDetails(@javax.annotation.Nullable Guardiumconnectorv3GeneralDetailsObject connectivityDetails) {
     this.connectivityDetails = connectivityDetails;
   }
 
 
-  public Guardiumconnectorv3MUDetailsObj generalErrMessages(List<String> generalErrMessages) {
+  public Guardiumconnectorv3MUDetailsObj generalErrMessages(@javax.annotation.Nullable List<String> generalErrMessages) {
     this.generalErrMessages = generalErrMessages;
     return this;
   }
@@ -134,35 +139,35 @@ public class Guardiumconnectorv3MUDetailsObj {
     return this;
   }
 
-   /**
+  /**
    * Additional messages and details about managed units.
    * @return generalErrMessages
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getGeneralErrMessages() {
     return generalErrMessages;
   }
 
-  public void setGeneralErrMessages(List<String> generalErrMessages) {
+  public void setGeneralErrMessages(@javax.annotation.Nullable List<String> generalErrMessages) {
     this.generalErrMessages = generalErrMessages;
   }
 
 
-  public Guardiumconnectorv3MUDetailsObj utilizationScheme(Guardiumconnectorv3UtilizationParameterObject utilizationScheme) {
+  public Guardiumconnectorv3MUDetailsObj utilizationScheme(@javax.annotation.Nullable Guardiumconnectorv3UtilizationParameterObject utilizationScheme) {
     this.utilizationScheme = utilizationScheme;
     return this;
   }
 
-   /**
+  /**
    * Get utilizationScheme
    * @return utilizationScheme
-  **/
+   */
   @javax.annotation.Nullable
   public Guardiumconnectorv3UtilizationParameterObject getUtilizationScheme() {
     return utilizationScheme;
   }
 
-  public void setUtilizationScheme(Guardiumconnectorv3UtilizationParameterObject utilizationScheme) {
+  public void setUtilizationScheme(@javax.annotation.Nullable Guardiumconnectorv3UtilizationParameterObject utilizationScheme) {
     this.utilizationScheme = utilizationScheme;
   }
 
@@ -217,26 +222,22 @@ public class Guardiumconnectorv3MUDetailsObj {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("agg_health_view_list");
-    openapiFields.add("connectivity_details");
-    openapiFields.add("general_err_messages");
-    openapiFields.add("utilization_scheme");
+    openapiFields = new HashSet<String>(Arrays.asList("agg_health_view_list", "connectivity_details", "general_err_messages", "utilization_scheme"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3MUDetailsObj
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3MUDetailsObj
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3MUDetailsObj.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3MUDetailsObj is not found in the empty JSON string", Guardiumconnectorv3MUDetailsObj.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3MUDetailsObj is not found in the empty JSON string", Guardiumconnectorv3MUDetailsObj.openapiRequiredFields.toString()));
         }
       }
 
@@ -244,7 +245,7 @@ public class Guardiumconnectorv3MUDetailsObj {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3MUDetailsObj.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3MUDetailsObj` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3MUDetailsObj` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -253,7 +254,7 @@ public class Guardiumconnectorv3MUDetailsObj {
         if (jsonArrayaggHealthViewList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("agg_health_view_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `agg_health_view_list` to be an array in the JSON string but got `%s`", jsonObj.get("agg_health_view_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `agg_health_view_list` to be an array in the JSON string but got `%s`", jsonObj.get("agg_health_view_list").toString()));
           }
 
           // validate the optional field `agg_health_view_list` (array)
@@ -268,7 +269,7 @@ public class Guardiumconnectorv3MUDetailsObj {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("general_err_messages") != null && !jsonObj.get("general_err_messages").isJsonNull() && !jsonObj.get("general_err_messages").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `general_err_messages` to be an array in the JSON string but got `%s`", jsonObj.get("general_err_messages").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `general_err_messages` to be an array in the JSON string but got `%s`", jsonObj.get("general_err_messages").toString()));
       }
       // validate the optional field `utilization_scheme`
       if (jsonObj.get("utilization_scheme") != null && !jsonObj.get("utilization_scheme").isJsonNull()) {
@@ -305,22 +306,22 @@ public class Guardiumconnectorv3MUDetailsObj {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3MUDetailsObj given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3MUDetailsObj
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3MUDetailsObj
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3MUDetailsObj given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3MUDetailsObj
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3MUDetailsObj
+   */
   public static Guardiumconnectorv3MUDetailsObj fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3MUDetailsObj.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3MUDetailsObj to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3MUDetailsObj to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

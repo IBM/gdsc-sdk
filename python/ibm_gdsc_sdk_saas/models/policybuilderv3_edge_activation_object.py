@@ -29,7 +29,7 @@ class Policybuilderv3EdgeActivationObject(BaseModel):
     Policybuilderv3EdgeActivationObject
     """ # noqa: E501
     activation_order: Optional[StrictInt] = None
-    activation_status: Optional[Policybuilderv3ActivationStatus] = None
+    activation_status: Optional[Policybuilderv3ActivationStatus] = Policybuilderv3ActivationStatus.NOT_ACTIVATED
     activation_timestamp: Optional[datetime] = None
     edge_id: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["activation_order", "activation_status", "activation_timestamp", "edge_id"]
@@ -86,7 +86,7 @@ class Policybuilderv3EdgeActivationObject(BaseModel):
 
         _obj = cls.model_validate({
             "activation_order": obj.get("activation_order"),
-            "activation_status": obj.get("activation_status"),
+            "activation_status": obj.get("activation_status") if obj.get("activation_status") is not None else Policybuilderv3ActivationStatus.NOT_ACTIVATED,
             "activation_timestamp": obj.get("activation_timestamp"),
             "edge_id": obj.get("edge_id")
         })

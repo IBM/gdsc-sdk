@@ -28,7 +28,7 @@ class Connectionsv3StapCommandRequest(BaseModel):
     StapCommandRequest defines the message structure for STAP command request.
     """ # noqa: E501
     command: Optional[StrictStr] = Field(default=None, description="Specify STAP command.")
-    operation: Optional[Connectionsv3StapOperation] = None
+    operation: Optional[Connectionsv3StapOperation] = Connectionsv3StapOperation.STAP_REINITIALIZE_BUFFER
     stap_id: Optional[StrictStr] = Field(default=None, description="Provide STAP identifier.")
     __properties: ClassVar[List[str]] = ["command", "operation", "stap_id"]
 
@@ -84,7 +84,7 @@ class Connectionsv3StapCommandRequest(BaseModel):
 
         _obj = cls.model_validate({
             "command": obj.get("command"),
-            "operation": obj.get("operation"),
+            "operation": obj.get("operation") if obj.get("operation") is not None else Connectionsv3StapOperation.STAP_REINITIALIZE_BUFFER,
             "stap_id": obj.get("stap_id")
         })
         return _obj

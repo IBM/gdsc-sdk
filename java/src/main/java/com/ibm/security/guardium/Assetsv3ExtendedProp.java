@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ExtendedProp
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ExtendedProp {
   public static final String SERIALIZED_NAME_DATA_TYPE = "data_type";
   @SerializedName(SERIALIZED_NAME_DATA_TYPE)
+  @javax.annotation.Nullable
   private String dataType;
 
   public static final String SERIALIZED_NAME_ENTITY_NAME = "entity_name";
   @SerializedName(SERIALIZED_NAME_ENTITY_NAME)
+  @javax.annotation.Nullable
   private String entityName;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entity_type";
   @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
+  @javax.annotation.Nullable
   private String entityType;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public Assetsv3ExtendedProp() {
   }
 
-  public Assetsv3ExtendedProp dataType(String dataType) {
+  public Assetsv3ExtendedProp dataType(@javax.annotation.Nullable String dataType) {
     this.dataType = dataType;
     return this;
   }
 
-   /**
+  /**
    * Get dataType
    * @return dataType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataType() {
     return dataType;
   }
 
-  public void setDataType(String dataType) {
+  public void setDataType(@javax.annotation.Nullable String dataType) {
     this.dataType = dataType;
   }
 
 
-  public Assetsv3ExtendedProp entityName(String entityName) {
+  public Assetsv3ExtendedProp entityName(@javax.annotation.Nullable String entityName) {
     this.entityName = entityName;
     return this;
   }
 
-   /**
+  /**
    * Get entityName
    * @return entityName
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityName() {
     return entityName;
   }
 
-  public void setEntityName(String entityName) {
+  public void setEntityName(@javax.annotation.Nullable String entityName) {
     this.entityName = entityName;
   }
 
 
-  public Assetsv3ExtendedProp entityType(String entityType) {
+  public Assetsv3ExtendedProp entityType(@javax.annotation.Nullable String entityType) {
     this.entityType = entityType;
     return this;
   }
 
-   /**
+  /**
    * Get entityType
    * @return entityType
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityType() {
     return entityType;
   }
 
-  public void setEntityType(String entityType) {
+  public void setEntityType(@javax.annotation.Nullable String entityType) {
     this.entityType = entityType;
   }
 
 
-  public Assetsv3ExtendedProp key(String key) {
+  public Assetsv3ExtendedProp key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Get key
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Assetsv3ExtendedProp value(String value) {
+  public Assetsv3ExtendedProp value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Get value
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public String getValue() {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
@@ -221,27 +227,22 @@ public class Assetsv3ExtendedProp {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data_type");
-    openapiFields.add("entity_name");
-    openapiFields.add("entity_type");
-    openapiFields.add("key");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("data_type", "entity_name", "entity_type", "key", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ExtendedProp
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ExtendedProp
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ExtendedProp.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ExtendedProp is not found in the empty JSON string", Assetsv3ExtendedProp.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ExtendedProp is not found in the empty JSON string", Assetsv3ExtendedProp.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Assetsv3ExtendedProp {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ExtendedProp.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ExtendedProp` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ExtendedProp` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("data_type") != null && !jsonObj.get("data_type").isJsonNull()) && !jsonObj.get("data_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `data_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `data_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_type").toString()));
       }
       if ((jsonObj.get("entity_name") != null && !jsonObj.get("entity_name").isJsonNull()) && !jsonObj.get("entity_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_name").toString()));
       }
       if ((jsonObj.get("entity_type") != null && !jsonObj.get("entity_type").isJsonNull()) && !jsonObj.get("entity_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_type").toString()));
       }
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Assetsv3ExtendedProp {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ExtendedProp given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ExtendedProp
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ExtendedProp
-  */
+  /**
+   * Create an instance of Assetsv3ExtendedProp given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ExtendedProp
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ExtendedProp
+   */
   public static Assetsv3ExtendedProp fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ExtendedProp.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ExtendedProp to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ExtendedProp to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

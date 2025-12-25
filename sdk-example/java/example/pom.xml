@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ibm.security.guardium</groupId>
   <artifactId>example</artifactId>
-  <version>3.0.20250227</version>
+  <version>3.0.20250220</version>
   <name>example</name>
   <!-- FIXME change it to the project's website -->
   <url>https://github.com/IBM/gdsc-sdk/tree/main/sdk-example/java/example</url>
@@ -13,7 +13,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jackson-databind-nullable-version>0.2.6</jackson-databind-nullable-version>
     <ibm-gdsc-sdk-project>com.ibm.security.guardium.saas</ibm-gdsc-sdk-project>
-    <ibm-gdsc-sdk-version>3.0.20250227</ibm-gdsc-sdk-version>
+    <ibm-gdsc-sdk-version>1.0.0</ibm-gdsc-sdk-version>
   </properties>
 
   <dependencyManagement>

@@ -6,7 +6,7 @@ List of account configs and streaming connection configs.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**account_configs** | [**List[Connectionsv3AccountConfig]**](Connectionsv3AccountConfig.md) | Accounts infomation. | [optional] 
+**account_configs** | [**List[Connectionsv3AccountConfig]**](Connectionsv3AccountConfig.md) | Accounts information. | [optional] 
 **instance_configs** | [**List[Connectionsv3StreamConnectionConfig]**](Connectionsv3StreamConnectionConfig.md) | Streaming connections information. | [optional] 
 
 ## Example

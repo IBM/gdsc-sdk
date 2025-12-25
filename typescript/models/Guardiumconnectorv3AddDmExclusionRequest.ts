@@ -23,6 +23,8 @@ export class Guardiumconnectorv3AddDmExclusionRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "datamart",
@@ -38,4 +40,3 @@ export class Guardiumconnectorv3AddDmExclusionRequest {
     public constructor() {
     }
 }
-

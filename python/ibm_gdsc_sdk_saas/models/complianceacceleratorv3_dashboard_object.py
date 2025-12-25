@@ -28,7 +28,7 @@ class Complianceacceleratorv3DashboardObject(BaseModel):
     Dashboard object.
     """ # noqa: E501
     id: Optional[StrictStr] = Field(default=None, description="ID of dashboards.", alias="ID")
-    type: Optional[Complianceacceleratorv3DashboardType] = Field(default=None, alias="Type")
+    type: Optional[Complianceacceleratorv3DashboardType] = Field(default=Complianceacceleratorv3DashboardType.UNDEFINED_DASH, alias="Type")
     __properties: ClassVar[List[str]] = ["ID", "Type"]
 
     model_config = ConfigDict(
@@ -83,7 +83,7 @@ class Complianceacceleratorv3DashboardObject(BaseModel):
 
         _obj = cls.model_validate({
             "ID": obj.get("ID"),
-            "Type": obj.get("Type")
+            "Type": obj.get("Type") if obj.get("Type") is not None else Complianceacceleratorv3DashboardType.UNDEFINED_DASH
         })
         return _obj
 

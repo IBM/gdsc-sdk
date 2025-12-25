@@ -79,23 +79,23 @@ class DataResourcesSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in resource_types (list)
         _items = []
         if self.resource_types:
-            for _item in self.resource_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_resource_types in self.resource_types:
+                if _item_resource_types:
+                    _items.append(_item_resource_types.to_dict())
             _dict['resourceTypes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in resource_owners (list)
         _items = []
         if self.resource_owners:
-            for _item in self.resource_owners:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_resource_owners in self.resource_owners:
+                if _item_resource_owners:
+                    _items.append(_item_resource_owners.to_dict())
             _dict['resourceOwners'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in sensitivities (list)
         _items = []
         if self.sensitivities:
-            for _item in self.sensitivities:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sensitivities in self.sensitivities:
+                if _item_sensitivities:
+                    _items.append(_item_sensitivities.to_dict())
             _dict['sensitivities'] = _items
         return _dict
 

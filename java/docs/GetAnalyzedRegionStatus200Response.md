@@ -16,7 +16,7 @@
 | Name | Value |
 |---- | -----|
 | ANALYZED | &quot;Analyzed&quot; |
-| NOTANALYZED | &quot;NotAnalyzed&quot; |
+| NOT_ANALYZED | &quot;NotAnalyzed&quot; |
 
 
 

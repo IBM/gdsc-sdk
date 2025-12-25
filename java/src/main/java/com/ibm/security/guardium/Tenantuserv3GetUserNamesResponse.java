@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,51 +40,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetUserNamesResponse returns the.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3GetUserNamesResponse {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public static final String SERIALIZED_NAME_USERS = "users";
   @SerializedName(SERIALIZED_NAME_USERS)
+  @javax.annotation.Nullable
   private Map<String, String> users = new HashMap<>();
 
   public Tenantuserv3GetUserNamesResponse() {
   }
 
-  public Tenantuserv3GetUserNamesResponse message(String message) {
+  public Tenantuserv3GetUserNamesResponse message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Success or failure.
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
 
-  public Tenantuserv3GetUserNamesResponse users(Map<String, String> users) {
+  public Tenantuserv3GetUserNamesResponse users(@javax.annotation.Nullable Map<String, String> users) {
     this.users = users;
     return this;
   }
@@ -96,16 +99,16 @@ public class Tenantuserv3GetUserNamesResponse {
     return this;
   }
 
-   /**
+  /**
    * Map of user names found by id.
    * @return users
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getUsers() {
     return users;
   }
 
-  public void setUsers(Map<String, String> users) {
+  public void setUsers(@javax.annotation.Nullable Map<String, String> users) {
     this.users = users;
   }
 
@@ -156,24 +159,22 @@ public class Tenantuserv3GetUserNamesResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("message");
-    openapiFields.add("users");
+    openapiFields = new HashSet<String>(Arrays.asList("message", "users"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3GetUserNamesResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3GetUserNamesResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3GetUserNamesResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3GetUserNamesResponse is not found in the empty JSON string", Tenantuserv3GetUserNamesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3GetUserNamesResponse is not found in the empty JSON string", Tenantuserv3GetUserNamesResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -181,12 +182,12 @@ public class Tenantuserv3GetUserNamesResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3GetUserNamesResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3GetUserNamesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3GetUserNamesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
   }
 
@@ -219,22 +220,22 @@ public class Tenantuserv3GetUserNamesResponse {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3GetUserNamesResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3GetUserNamesResponse
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3GetUserNamesResponse
-  */
+  /**
+   * Create an instance of Tenantuserv3GetUserNamesResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3GetUserNamesResponse
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3GetUserNamesResponse
+   */
   public static Tenantuserv3GetUserNamesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3GetUserNamesResponse.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3GetUserNamesResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3GetUserNamesResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

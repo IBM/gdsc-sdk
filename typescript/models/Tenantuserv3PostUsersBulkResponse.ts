@@ -21,6 +21,8 @@ export class Tenantuserv3PostUsersBulkResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "location",
@@ -42,4 +44,3 @@ export class Tenantuserv3PostUsersBulkResponse {
     public constructor() {
     }
 }
-

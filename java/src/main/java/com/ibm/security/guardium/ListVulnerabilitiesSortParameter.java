@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,19 +39,19 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListVulnerabilitiesSortParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListVulnerabilitiesSortParameter {
   /**
    * Gets or Sets sortBy
@@ -59,7 +60,7 @@ public class ListVulnerabilitiesSortParameter {
   public enum SortByEnum {
     CRITICALITY("criticality"),
     
-    DETECTIONTIMESTAMP("detectionTimestamp");
+    DETECTION_TIMESTAMP("detectionTimestamp");
 
     private String value;
 
@@ -106,49 +107,51 @@ public class ListVulnerabilitiesSortParameter {
 
   public static final String SERIALIZED_NAME_SORT_BY = "sortBy";
   @SerializedName(SERIALIZED_NAME_SORT_BY)
+  @javax.annotation.Nonnull
   private SortByEnum sortBy;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sortOrder";
   @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @javax.annotation.Nullable
   private SortOrder sortOrder;
 
   public ListVulnerabilitiesSortParameter() {
   }
 
-  public ListVulnerabilitiesSortParameter sortBy(SortByEnum sortBy) {
+  public ListVulnerabilitiesSortParameter sortBy(@javax.annotation.Nonnull SortByEnum sortBy) {
     this.sortBy = sortBy;
     return this;
   }
 
-   /**
+  /**
    * Get sortBy
    * @return sortBy
-  **/
+   */
   @javax.annotation.Nonnull
   public SortByEnum getSortBy() {
     return sortBy;
   }
 
-  public void setSortBy(SortByEnum sortBy) {
+  public void setSortBy(@javax.annotation.Nonnull SortByEnum sortBy) {
     this.sortBy = sortBy;
   }
 
 
-  public ListVulnerabilitiesSortParameter sortOrder(SortOrder sortOrder) {
+  public ListVulnerabilitiesSortParameter sortOrder(@javax.annotation.Nullable SortOrder sortOrder) {
     this.sortOrder = sortOrder;
     return this;
   }
 
-   /**
+  /**
    * Get sortOrder
    * @return sortOrder
-  **/
+   */
   @javax.annotation.Nullable
   public SortOrder getSortOrder() {
     return sortOrder;
   }
 
-  public void setSortOrder(SortOrder sortOrder) {
+  public void setSortOrder(@javax.annotation.Nullable SortOrder sortOrder) {
     this.sortOrder = sortOrder;
   }
 
@@ -199,25 +202,22 @@ public class ListVulnerabilitiesSortParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("sortBy");
-    openapiFields.add("sortOrder");
+    openapiFields = new HashSet<String>(Arrays.asList("sortBy", "sortOrder"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("sortBy");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("sortBy"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListVulnerabilitiesSortParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListVulnerabilitiesSortParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListVulnerabilitiesSortParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListVulnerabilitiesSortParameter is not found in the empty JSON string", ListVulnerabilitiesSortParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListVulnerabilitiesSortParameter is not found in the empty JSON string", ListVulnerabilitiesSortParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -225,19 +225,19 @@ public class ListVulnerabilitiesSortParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListVulnerabilitiesSortParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListVulnerabilitiesSortParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListVulnerabilitiesSortParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ListVulnerabilitiesSortParameter.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sortBy").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sortBy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sortBy").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sortBy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sortBy").toString()));
       }
       // validate the required field `sortBy`
       SortByEnum.validateJsonElement(jsonObj.get("sortBy"));
@@ -276,22 +276,22 @@ public class ListVulnerabilitiesSortParameter {
     }
   }
 
- /**
-  * Create an instance of ListVulnerabilitiesSortParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListVulnerabilitiesSortParameter
-  * @throws IOException if the JSON string is invalid with respect to ListVulnerabilitiesSortParameter
-  */
+  /**
+   * Create an instance of ListVulnerabilitiesSortParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListVulnerabilitiesSortParameter
+   * @throws IOException if the JSON string is invalid with respect to ListVulnerabilitiesSortParameter
+   */
   public static ListVulnerabilitiesSortParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListVulnerabilitiesSortParameter.class);
   }
 
- /**
-  * Convert an instance of ListVulnerabilitiesSortParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListVulnerabilitiesSortParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

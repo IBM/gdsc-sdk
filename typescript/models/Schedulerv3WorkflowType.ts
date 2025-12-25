@@ -16,7 +16,7 @@ import { HttpFile } from '../http/http';
 * - REVIEW_NONE: No workflow  - REVIEW_ENTIRE: One task to review entire report  - REVIEW_ONE_ROW: One task per row of the report
 */
 export enum Schedulerv3WorkflowType {
-    None = 'REVIEW_NONE',
-    Entire = 'REVIEW_ENTIRE',
-    OneRow = 'REVIEW_ONE_ROW'
+    ReviewNone = 'REVIEW_NONE',
+    ReviewEntire = 'REVIEW_ENTIRE',
+    ReviewOneRow = 'REVIEW_ONE_ROW'
 }

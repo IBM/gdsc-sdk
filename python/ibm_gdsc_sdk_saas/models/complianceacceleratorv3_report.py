@@ -34,7 +34,7 @@ class Complianceacceleratorv3Report(BaseModel):
     groups_present: Optional[List[Complianceacceleratorv3Group]] = Field(default=None, description="Groups present in the reports.")
     report_id: Optional[StrictStr] = Field(default=None, description="Id of the reports.")
     report_tags: Optional[List[Reportsv3ReportTag]] = Field(default=None, description="The report tags.")
-    status: Optional[Complianceacceleratorv3ReportStatus] = None
+    status: Optional[Complianceacceleratorv3ReportStatus] = Complianceacceleratorv3ReportStatus.POPULATED
     title: Optional[StrictStr] = Field(default=None, description="Title of the report.")
     __properties: ClassVar[List[str]] = ["description", "groups_needed", "groups_present", "report_id", "report_tags", "status", "title"]
 
@@ -80,23 +80,23 @@ class Complianceacceleratorv3Report(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in groups_needed (list)
         _items = []
         if self.groups_needed:
-            for _item in self.groups_needed:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_groups_needed in self.groups_needed:
+                if _item_groups_needed:
+                    _items.append(_item_groups_needed.to_dict())
             _dict['groups_needed'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in groups_present (list)
         _items = []
         if self.groups_present:
-            for _item in self.groups_present:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_groups_present in self.groups_present:
+                if _item_groups_present:
+                    _items.append(_item_groups_present.to_dict())
             _dict['groups_present'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in report_tags (list)
         _items = []
         if self.report_tags:
-            for _item in self.report_tags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_tags in self.report_tags:
+                if _item_report_tags:
+                    _items.append(_item_report_tags.to_dict())
             _dict['report_tags'] = _items
         return _dict
 
@@ -115,7 +115,7 @@ class Complianceacceleratorv3Report(BaseModel):
             "groups_present": [Complianceacceleratorv3Group.from_dict(_item) for _item in obj["groups_present"]] if obj.get("groups_present") is not None else None,
             "report_id": obj.get("report_id"),
             "report_tags": [Reportsv3ReportTag.from_dict(_item) for _item in obj["report_tags"]] if obj.get("report_tags") is not None else None,
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Complianceacceleratorv3ReportStatus.POPULATED,
             "title": obj.get("title")
         })
         return _obj

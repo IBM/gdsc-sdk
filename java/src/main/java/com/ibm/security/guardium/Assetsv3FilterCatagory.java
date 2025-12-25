@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,86 +42,92 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3FilterCatagory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3FilterCatagory {
   public static final String SERIALIZED_NAME_CATAGORY_ID = "catagory_id";
   @SerializedName(SERIALIZED_NAME_CATAGORY_ID)
+  @javax.annotation.Nullable
   private String catagoryId;
 
   public static final String SERIALIZED_NAME_DATE_RANGE = "date_range";
   @SerializedName(SERIALIZED_NAME_DATE_RANGE)
+  @javax.annotation.Nullable
   private Assetsv3TimelineDateRange dateRange;
 
   public static final String SERIALIZED_NAME_SELECTED_SUB_CATAGORY_LIST = "selected_sub_catagory_list";
   @SerializedName(SERIALIZED_NAME_SELECTED_SUB_CATAGORY_LIST)
+  @javax.annotation.Nullable
   private List<Assetsv3FilterSubCatagory> selectedSubCatagoryList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUB_CATAGORY_IDS = "sub_catagory_ids";
   @SerializedName(SERIALIZED_NAME_SUB_CATAGORY_IDS)
+  @javax.annotation.Nullable
   private List<String> subCatagoryIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUB_CATEGORY_VALUES = "sub_category_values";
   @SerializedName(SERIALIZED_NAME_SUB_CATEGORY_VALUES)
+  @javax.annotation.Nullable
   private List<String> subCategoryValues = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TIMELINE_VALUE_SELECTED = "timeline_value_selected";
   @SerializedName(SERIALIZED_NAME_TIMELINE_VALUE_SELECTED)
+  @javax.annotation.Nullable
   private String timelineValueSelected;
 
   public Assetsv3FilterCatagory() {
   }
 
-  public Assetsv3FilterCatagory catagoryId(String catagoryId) {
+  public Assetsv3FilterCatagory catagoryId(@javax.annotation.Nullable String catagoryId) {
     this.catagoryId = catagoryId;
     return this;
   }
 
-   /**
+  /**
    * Get catagoryId
    * @return catagoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCatagoryId() {
     return catagoryId;
   }
 
-  public void setCatagoryId(String catagoryId) {
+  public void setCatagoryId(@javax.annotation.Nullable String catagoryId) {
     this.catagoryId = catagoryId;
   }
 
 
-  public Assetsv3FilterCatagory dateRange(Assetsv3TimelineDateRange dateRange) {
+  public Assetsv3FilterCatagory dateRange(@javax.annotation.Nullable Assetsv3TimelineDateRange dateRange) {
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3TimelineDateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(Assetsv3TimelineDateRange dateRange) {
+  public void setDateRange(@javax.annotation.Nullable Assetsv3TimelineDateRange dateRange) {
     this.dateRange = dateRange;
   }
 
 
-  public Assetsv3FilterCatagory selectedSubCatagoryList(List<Assetsv3FilterSubCatagory> selectedSubCatagoryList) {
+  public Assetsv3FilterCatagory selectedSubCatagoryList(@javax.annotation.Nullable List<Assetsv3FilterSubCatagory> selectedSubCatagoryList) {
     this.selectedSubCatagoryList = selectedSubCatagoryList;
     return this;
   }
@@ -133,21 +140,21 @@ public class Assetsv3FilterCatagory {
     return this;
   }
 
-   /**
+  /**
    * Get selectedSubCatagoryList
    * @return selectedSubCatagoryList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3FilterSubCatagory> getSelectedSubCatagoryList() {
     return selectedSubCatagoryList;
   }
 
-  public void setSelectedSubCatagoryList(List<Assetsv3FilterSubCatagory> selectedSubCatagoryList) {
+  public void setSelectedSubCatagoryList(@javax.annotation.Nullable List<Assetsv3FilterSubCatagory> selectedSubCatagoryList) {
     this.selectedSubCatagoryList = selectedSubCatagoryList;
   }
 
 
-  public Assetsv3FilterCatagory subCatagoryIds(List<String> subCatagoryIds) {
+  public Assetsv3FilterCatagory subCatagoryIds(@javax.annotation.Nullable List<String> subCatagoryIds) {
     this.subCatagoryIds = subCatagoryIds;
     return this;
   }
@@ -160,21 +167,21 @@ public class Assetsv3FilterCatagory {
     return this;
   }
 
-   /**
+  /**
    * Get subCatagoryIds
    * @return subCatagoryIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSubCatagoryIds() {
     return subCatagoryIds;
   }
 
-  public void setSubCatagoryIds(List<String> subCatagoryIds) {
+  public void setSubCatagoryIds(@javax.annotation.Nullable List<String> subCatagoryIds) {
     this.subCatagoryIds = subCatagoryIds;
   }
 
 
-  public Assetsv3FilterCatagory subCategoryValues(List<String> subCategoryValues) {
+  public Assetsv3FilterCatagory subCategoryValues(@javax.annotation.Nullable List<String> subCategoryValues) {
     this.subCategoryValues = subCategoryValues;
     return this;
   }
@@ -187,35 +194,35 @@ public class Assetsv3FilterCatagory {
     return this;
   }
 
-   /**
+  /**
    * Get subCategoryValues
    * @return subCategoryValues
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSubCategoryValues() {
     return subCategoryValues;
   }
 
-  public void setSubCategoryValues(List<String> subCategoryValues) {
+  public void setSubCategoryValues(@javax.annotation.Nullable List<String> subCategoryValues) {
     this.subCategoryValues = subCategoryValues;
   }
 
 
-  public Assetsv3FilterCatagory timelineValueSelected(String timelineValueSelected) {
+  public Assetsv3FilterCatagory timelineValueSelected(@javax.annotation.Nullable String timelineValueSelected) {
     this.timelineValueSelected = timelineValueSelected;
     return this;
   }
 
-   /**
+  /**
    * Get timelineValueSelected
    * @return timelineValueSelected
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimelineValueSelected() {
     return timelineValueSelected;
   }
 
-  public void setTimelineValueSelected(String timelineValueSelected) {
+  public void setTimelineValueSelected(@javax.annotation.Nullable String timelineValueSelected) {
     this.timelineValueSelected = timelineValueSelected;
   }
 
@@ -274,28 +281,22 @@ public class Assetsv3FilterCatagory {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("catagory_id");
-    openapiFields.add("date_range");
-    openapiFields.add("selected_sub_catagory_list");
-    openapiFields.add("sub_catagory_ids");
-    openapiFields.add("sub_category_values");
-    openapiFields.add("timeline_value_selected");
+    openapiFields = new HashSet<String>(Arrays.asList("catagory_id", "date_range", "selected_sub_catagory_list", "sub_catagory_ids", "sub_category_values", "timeline_value_selected"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3FilterCatagory
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3FilterCatagory
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3FilterCatagory.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3FilterCatagory is not found in the empty JSON string", Assetsv3FilterCatagory.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3FilterCatagory is not found in the empty JSON string", Assetsv3FilterCatagory.openapiRequiredFields.toString()));
         }
       }
 
@@ -303,12 +304,12 @@ public class Assetsv3FilterCatagory {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3FilterCatagory.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3FilterCatagory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3FilterCatagory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("catagory_id") != null && !jsonObj.get("catagory_id").isJsonNull()) && !jsonObj.get("catagory_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `catagory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("catagory_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `catagory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("catagory_id").toString()));
       }
       // validate the optional field `date_range`
       if (jsonObj.get("date_range") != null && !jsonObj.get("date_range").isJsonNull()) {
@@ -319,7 +320,7 @@ public class Assetsv3FilterCatagory {
         if (jsonArrayselectedSubCatagoryList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("selected_sub_catagory_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `selected_sub_catagory_list` to be an array in the JSON string but got `%s`", jsonObj.get("selected_sub_catagory_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `selected_sub_catagory_list` to be an array in the JSON string but got `%s`", jsonObj.get("selected_sub_catagory_list").toString()));
           }
 
           // validate the optional field `selected_sub_catagory_list` (array)
@@ -330,14 +331,14 @@ public class Assetsv3FilterCatagory {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sub_catagory_ids") != null && !jsonObj.get("sub_catagory_ids").isJsonNull() && !jsonObj.get("sub_catagory_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sub_catagory_ids` to be an array in the JSON string but got `%s`", jsonObj.get("sub_catagory_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_catagory_ids` to be an array in the JSON string but got `%s`", jsonObj.get("sub_catagory_ids").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sub_category_values") != null && !jsonObj.get("sub_category_values").isJsonNull() && !jsonObj.get("sub_category_values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sub_category_values` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category_values").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_category_values` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category_values").toString()));
       }
       if ((jsonObj.get("timeline_value_selected") != null && !jsonObj.get("timeline_value_selected").isJsonNull()) && !jsonObj.get("timeline_value_selected").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `timeline_value_selected` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timeline_value_selected").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `timeline_value_selected` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timeline_value_selected").toString()));
       }
   }
 
@@ -370,22 +371,22 @@ public class Assetsv3FilterCatagory {
     }
   }
 
- /**
-  * Create an instance of Assetsv3FilterCatagory given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3FilterCatagory
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3FilterCatagory
-  */
+  /**
+   * Create an instance of Assetsv3FilterCatagory given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3FilterCatagory
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3FilterCatagory
+   */
   public static Assetsv3FilterCatagory fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3FilterCatagory.class);
   }
 
- /**
-  * Convert an instance of Assetsv3FilterCatagory to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3FilterCatagory to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

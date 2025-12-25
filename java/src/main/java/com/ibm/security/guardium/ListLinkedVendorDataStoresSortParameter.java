@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,34 +39,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListLinkedVendorDataStoresSortParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListLinkedVendorDataStoresSortParameter {
   /**
    * Gets or Sets sortBy
    */
   @JsonAdapter(SortByEnum.Adapter.class)
   public enum SortByEnum {
-    DATASTOREID("dataStoreId"),
+    DATA_STORE_ID("dataStoreId"),
     
-    DATASTORETYPE("dataStoreType"),
+    DATA_STORE_TYPE("dataStoreType"),
     
-    DATASTORENAME("dataStoreName"),
+    DATA_STORE_NAME("dataStoreName"),
     
-    CLOUDREGION("cloudRegion"),
+    CLOUD_REGION("cloudRegion"),
     
-    CLOUDPROVIDER("cloudProvider");
+    CLOUD_PROVIDER("cloudProvider");
 
     private String value;
 
@@ -112,49 +113,51 @@ public class ListLinkedVendorDataStoresSortParameter {
 
   public static final String SERIALIZED_NAME_SORT_BY = "sortBy";
   @SerializedName(SERIALIZED_NAME_SORT_BY)
+  @javax.annotation.Nonnull
   private SortByEnum sortBy;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sortOrder";
   @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @javax.annotation.Nullable
   private SortOrder sortOrder;
 
   public ListLinkedVendorDataStoresSortParameter() {
   }
 
-  public ListLinkedVendorDataStoresSortParameter sortBy(SortByEnum sortBy) {
+  public ListLinkedVendorDataStoresSortParameter sortBy(@javax.annotation.Nonnull SortByEnum sortBy) {
     this.sortBy = sortBy;
     return this;
   }
 
-   /**
+  /**
    * Get sortBy
    * @return sortBy
-  **/
+   */
   @javax.annotation.Nonnull
   public SortByEnum getSortBy() {
     return sortBy;
   }
 
-  public void setSortBy(SortByEnum sortBy) {
+  public void setSortBy(@javax.annotation.Nonnull SortByEnum sortBy) {
     this.sortBy = sortBy;
   }
 
 
-  public ListLinkedVendorDataStoresSortParameter sortOrder(SortOrder sortOrder) {
+  public ListLinkedVendorDataStoresSortParameter sortOrder(@javax.annotation.Nullable SortOrder sortOrder) {
     this.sortOrder = sortOrder;
     return this;
   }
 
-   /**
+  /**
    * Get sortOrder
    * @return sortOrder
-  **/
+   */
   @javax.annotation.Nullable
   public SortOrder getSortOrder() {
     return sortOrder;
   }
 
-  public void setSortOrder(SortOrder sortOrder) {
+  public void setSortOrder(@javax.annotation.Nullable SortOrder sortOrder) {
     this.sortOrder = sortOrder;
   }
 
@@ -205,25 +208,22 @@ public class ListLinkedVendorDataStoresSortParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("sortBy");
-    openapiFields.add("sortOrder");
+    openapiFields = new HashSet<String>(Arrays.asList("sortBy", "sortOrder"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("sortBy");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("sortBy"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListLinkedVendorDataStoresSortParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListLinkedVendorDataStoresSortParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListLinkedVendorDataStoresSortParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListLinkedVendorDataStoresSortParameter is not found in the empty JSON string", ListLinkedVendorDataStoresSortParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListLinkedVendorDataStoresSortParameter is not found in the empty JSON string", ListLinkedVendorDataStoresSortParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -231,19 +231,19 @@ public class ListLinkedVendorDataStoresSortParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListLinkedVendorDataStoresSortParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListLinkedVendorDataStoresSortParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListLinkedVendorDataStoresSortParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ListLinkedVendorDataStoresSortParameter.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sortBy").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sortBy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sortBy").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sortBy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sortBy").toString()));
       }
       // validate the required field `sortBy`
       SortByEnum.validateJsonElement(jsonObj.get("sortBy"));
@@ -282,22 +282,22 @@ public class ListLinkedVendorDataStoresSortParameter {
     }
   }
 
- /**
-  * Create an instance of ListLinkedVendorDataStoresSortParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListLinkedVendorDataStoresSortParameter
-  * @throws IOException if the JSON string is invalid with respect to ListLinkedVendorDataStoresSortParameter
-  */
+  /**
+   * Create an instance of ListLinkedVendorDataStoresSortParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListLinkedVendorDataStoresSortParameter
+   * @throws IOException if the JSON string is invalid with respect to ListLinkedVendorDataStoresSortParameter
+   */
   public static ListLinkedVendorDataStoresSortParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListLinkedVendorDataStoresSortParameter.class);
   }
 
- /**
-  * Convert an instance of ListLinkedVendorDataStoresSortParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListLinkedVendorDataStoresSortParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

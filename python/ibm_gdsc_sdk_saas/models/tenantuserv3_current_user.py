@@ -79,9 +79,9 @@ class Tenantuserv3CurrentUser(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tenants (list)
         _items = []
         if self.tenants:
-            for _item in self.tenants:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tenants in self.tenants:
+                if _item_tenants:
+                    _items.append(_item_tenants.to_dict())
             _dict['tenants'] = _items
         # override the default output from pydantic by calling `to_dict()` of user
         if self.user:

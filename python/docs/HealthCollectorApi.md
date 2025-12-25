@@ -228,7 +228,7 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_saas.HealthCollectorApi(api_client)
-    unit = 'UNKNOWN_UNIT' # str | Type of unit for which data needs to be retrieved. (optional) (default to 'UNKNOWN_UNIT')
+    unit = UNKNOWN_UNIT # str | Type of unit for which data needs to be retrieved. (optional) (default to UNKNOWN_UNIT)
     cm_id = 'cm_id_example' # str | Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved. (optional)
     start_time = '2013-10-20T19:20:30+01:00' # datetime | The start time from which the data needs to be calculated. (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | The end time from which the data needs to be calculated. (optional)
@@ -249,7 +249,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unit** | **str**| Type of unit for which data needs to be retrieved. | [optional] [default to &#39;UNKNOWN_UNIT&#39;]
+ **unit** | **str**| Type of unit for which data needs to be retrieved. | [optional] [default to UNKNOWN_UNIT]
  **cm_id** | **str**| Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved. | [optional] 
  **start_time** | **datetime**| The start time from which the data needs to be calculated. | [optional] 
  **end_time** | **datetime**| The end time from which the data needs to be calculated. | [optional] 

@@ -10,11 +10,11 @@
  * Do not edit the class manually.
  */
 
-import { ClassificationStatus } from '../models/ClassificationStatus';
 import { Compliance } from '../models/Compliance';
 import { DataStoreEncryptionStatus } from '../models/DataStoreEncryptionStatus';
 import { SensitivityCategory } from '../models/SensitivityCategory';
 import { ServiceProvider } from '../models/ServiceProvider';
+import { StoreClassificationStatus } from '../models/StoreClassificationStatus';
 import { HttpFile } from '../http/http';
 
 export class ListDataStoresFilterParameter {
@@ -25,7 +25,7 @@ export class ListDataStoresFilterParameter {
     'cloudAccountIds'?: Array<string>;
     'cloudRegions'?: Array<string>;
     'labels'?: Array<string>;
-    'classificationStatuses'?: Array<ClassificationStatus>;
+    'classificationStatuses'?: Array<StoreClassificationStatus>;
     'sensitivityTags'?: Array<string>;
     'sensitivityCategories'?: Array<SensitivityCategory>;
     'compliances'?: Array<Compliance>;
@@ -34,6 +34,8 @@ export class ListDataStoresFilterParameter {
     'storePartialName'?: string;
 
     static readonly discriminator: string | undefined = undefined;
+
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
@@ -81,7 +83,7 @@ export class ListDataStoresFilterParameter {
         {
             "name": "classificationStatuses",
             "baseName": "classificationStatuses",
-            "type": "Array<ClassificationStatus>",
+            "type": "Array<StoreClassificationStatus>",
             "format": ""
         },
         {
@@ -128,7 +130,6 @@ export class ListDataStoresFilterParameter {
     public constructor() {
     }
 }
-
 
 export enum ListDataStoresFilterParameterStoreTypesFamilyEnum {
     Saas = 'SAAS',

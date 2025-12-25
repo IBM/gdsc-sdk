@@ -95,13 +95,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call addVulnerabilityStatusCommentCall(String vulnerabilityId, String statusId, AddCommentBody addCommentBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addVulnerabilityStatusCommentCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull AddCommentBody addCommentBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -118,7 +119,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = addCommentBody;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()))
             .replace("{" + "statusId" + "}", localVarApiClient.escapeString(statusId.toString()));
 
@@ -149,7 +150,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addVulnerabilityStatusCommentValidateBeforeCall(String vulnerabilityId, String statusId, AddCommentBody addCommentBody, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addVulnerabilityStatusCommentValidateBeforeCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull AddCommentBody addCommentBody, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vulnerabilityId' is set
         if (vulnerabilityId == null) {
             throw new ApiException("Missing the required parameter 'vulnerabilityId' when calling addVulnerabilityStatusComment(Async)");
@@ -178,13 +179,14 @@ public class DataVulnerabilitiesApi {
      * @return VulnerabilityStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public VulnerabilityStatus addVulnerabilityStatusComment(String vulnerabilityId, String statusId, AddCommentBody addCommentBody) throws ApiException {
+    public VulnerabilityStatus addVulnerabilityStatusComment(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull AddCommentBody addCommentBody) throws ApiException {
         ApiResponse<VulnerabilityStatus> localVarResp = addVulnerabilityStatusCommentWithHttpInfo(vulnerabilityId, statusId, addCommentBody);
         return localVarResp.getData();
     }
@@ -198,13 +200,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;VulnerabilityStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<VulnerabilityStatus> addVulnerabilityStatusCommentWithHttpInfo(String vulnerabilityId, String statusId, AddCommentBody addCommentBody) throws ApiException {
+    public ApiResponse<VulnerabilityStatus> addVulnerabilityStatusCommentWithHttpInfo(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull AddCommentBody addCommentBody) throws ApiException {
         okhttp3.Call localVarCall = addVulnerabilityStatusCommentValidateBeforeCall(vulnerabilityId, statusId, addCommentBody, null);
         Type localVarReturnType = new TypeToken<VulnerabilityStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -220,13 +223,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call addVulnerabilityStatusCommentAsync(String vulnerabilityId, String statusId, AddCommentBody addCommentBody, final ApiCallback<VulnerabilityStatus> _callback) throws ApiException {
+    public okhttp3.Call addVulnerabilityStatusCommentAsync(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull AddCommentBody addCommentBody, final ApiCallback<VulnerabilityStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = addVulnerabilityStatusCommentValidateBeforeCall(vulnerabilityId, statusId, addCommentBody, _callback);
         Type localVarReturnType = new TypeToken<VulnerabilityStatus>(){}.getType();
@@ -240,13 +244,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getVulnerabilitiesSummaryCall(VulnerabilitiesFilterOptions filter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVulnerabilitiesSummaryCall(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -263,7 +268,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/summary";
+        String localVarPath = "/api/v2/dspm/vulnerabilities/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -295,7 +300,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVulnerabilitiesSummaryValidateBeforeCall(VulnerabilitiesFilterOptions filter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVulnerabilitiesSummaryValidateBeforeCall(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, final ApiCallback _callback) throws ApiException {
         return getVulnerabilitiesSummaryCall(filter, _callback);
 
     }
@@ -307,13 +312,14 @@ public class DataVulnerabilitiesApi {
      * @return VulnerabilitiesSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public VulnerabilitiesSummary getVulnerabilitiesSummary(VulnerabilitiesFilterOptions filter) throws ApiException {
+    public VulnerabilitiesSummary getVulnerabilitiesSummary(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter) throws ApiException {
         ApiResponse<VulnerabilitiesSummary> localVarResp = getVulnerabilitiesSummaryWithHttpInfo(filter);
         return localVarResp.getData();
     }
@@ -325,13 +331,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;VulnerabilitiesSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<VulnerabilitiesSummary> getVulnerabilitiesSummaryWithHttpInfo(VulnerabilitiesFilterOptions filter) throws ApiException {
+    public ApiResponse<VulnerabilitiesSummary> getVulnerabilitiesSummaryWithHttpInfo(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter) throws ApiException {
         okhttp3.Call localVarCall = getVulnerabilitiesSummaryValidateBeforeCall(filter, null);
         Type localVarReturnType = new TypeToken<VulnerabilitiesSummary>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -345,13 +352,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getVulnerabilitiesSummaryAsync(VulnerabilitiesFilterOptions filter, final ApiCallback<VulnerabilitiesSummary> _callback) throws ApiException {
+    public okhttp3.Call getVulnerabilitiesSummaryAsync(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, final ApiCallback<VulnerabilitiesSummary> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getVulnerabilitiesSummaryValidateBeforeCall(filter, _callback);
         Type localVarReturnType = new TypeToken<VulnerabilitiesSummary>(){}.getType();
@@ -365,13 +373,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getVulnerabilityCall(String vulnerabilityId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVulnerabilityCall(@javax.annotation.Nonnull String vulnerabilityId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -388,7 +397,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -417,7 +426,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVulnerabilityValidateBeforeCall(String vulnerabilityId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVulnerabilityValidateBeforeCall(@javax.annotation.Nonnull String vulnerabilityId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vulnerabilityId' is set
         if (vulnerabilityId == null) {
             throw new ApiException("Missing the required parameter 'vulnerabilityId' when calling getVulnerability(Async)");
@@ -434,13 +443,14 @@ public class DataVulnerabilitiesApi {
      * @return Vulnerability
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public Vulnerability getVulnerability(String vulnerabilityId) throws ApiException {
+    public Vulnerability getVulnerability(@javax.annotation.Nonnull String vulnerabilityId) throws ApiException {
         ApiResponse<Vulnerability> localVarResp = getVulnerabilityWithHttpInfo(vulnerabilityId);
         return localVarResp.getData();
     }
@@ -452,13 +462,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;Vulnerability&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<Vulnerability> getVulnerabilityWithHttpInfo(String vulnerabilityId) throws ApiException {
+    public ApiResponse<Vulnerability> getVulnerabilityWithHttpInfo(@javax.annotation.Nonnull String vulnerabilityId) throws ApiException {
         okhttp3.Call localVarCall = getVulnerabilityValidateBeforeCall(vulnerabilityId, null);
         Type localVarReturnType = new TypeToken<Vulnerability>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -472,13 +483,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getVulnerabilityAsync(String vulnerabilityId, final ApiCallback<Vulnerability> _callback) throws ApiException {
+    public okhttp3.Call getVulnerabilityAsync(@javax.annotation.Nonnull String vulnerabilityId, final ApiCallback<Vulnerability> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getVulnerabilityValidateBeforeCall(vulnerabilityId, _callback);
         Type localVarReturnType = new TypeToken<Vulnerability>(){}.getType();
@@ -495,13 +507,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listVulnerabilitiesCall(VulnerabilitiesFilterOptions filter, ListVulnerabilitiesSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listVulnerabilitiesCall(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -518,7 +531,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities";
+        String localVarPath = "/api/v2/dspm/vulnerabilities";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -562,7 +575,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listVulnerabilitiesValidateBeforeCall(VulnerabilitiesFilterOptions filter, ListVulnerabilitiesSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listVulnerabilitiesValidateBeforeCall(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listVulnerabilitiesCall(filter, sort, pageSize, nextToken, _callback);
 
     }
@@ -577,13 +590,14 @@ public class DataVulnerabilitiesApi {
      * @return ListVulnerabilities200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListVulnerabilities200Response listVulnerabilities(VulnerabilitiesFilterOptions filter, ListVulnerabilitiesSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListVulnerabilities200Response listVulnerabilities(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListVulnerabilities200Response> localVarResp = listVulnerabilitiesWithHttpInfo(filter, sort, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -598,13 +612,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;ListVulnerabilities200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListVulnerabilities200Response> listVulnerabilitiesWithHttpInfo(VulnerabilitiesFilterOptions filter, ListVulnerabilitiesSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListVulnerabilities200Response> listVulnerabilitiesWithHttpInfo(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listVulnerabilitiesValidateBeforeCall(filter, sort, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListVulnerabilities200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -621,13 +636,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listVulnerabilitiesAsync(VulnerabilitiesFilterOptions filter, ListVulnerabilitiesSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback<ListVulnerabilities200Response> _callback) throws ApiException {
+    public okhttp3.Call listVulnerabilitiesAsync(@javax.annotation.Nullable VulnerabilitiesFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListVulnerabilities200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listVulnerabilitiesValidateBeforeCall(filter, sort, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListVulnerabilities200Response>(){}.getType();
@@ -644,13 +660,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listVulnerabilitiesByDataStoreCall(VulnerabilitiesByDataStoreFilterOptions filter, ListVulnerabilitiesByDataStoreSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listVulnerabilitiesByDataStoreCall(@javax.annotation.Nullable VulnerabilitiesByDataStoreFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesByDataStoreSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -667,7 +684,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/byDataStore";
+        String localVarPath = "/api/v2/dspm/vulnerabilities/byDataStore";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -711,7 +728,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listVulnerabilitiesByDataStoreValidateBeforeCall(VulnerabilitiesByDataStoreFilterOptions filter, ListVulnerabilitiesByDataStoreSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listVulnerabilitiesByDataStoreValidateBeforeCall(@javax.annotation.Nullable VulnerabilitiesByDataStoreFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesByDataStoreSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listVulnerabilitiesByDataStoreCall(filter, sort, pageSize, nextToken, _callback);
 
     }
@@ -726,13 +743,14 @@ public class DataVulnerabilitiesApi {
      * @return ListVulnerabilitiesByDataStore200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListVulnerabilitiesByDataStore200Response listVulnerabilitiesByDataStore(VulnerabilitiesByDataStoreFilterOptions filter, ListVulnerabilitiesByDataStoreSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListVulnerabilitiesByDataStore200Response listVulnerabilitiesByDataStore(@javax.annotation.Nullable VulnerabilitiesByDataStoreFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesByDataStoreSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListVulnerabilitiesByDataStore200Response> localVarResp = listVulnerabilitiesByDataStoreWithHttpInfo(filter, sort, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -747,13 +765,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;ListVulnerabilitiesByDataStore200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListVulnerabilitiesByDataStore200Response> listVulnerabilitiesByDataStoreWithHttpInfo(VulnerabilitiesByDataStoreFilterOptions filter, ListVulnerabilitiesByDataStoreSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListVulnerabilitiesByDataStore200Response> listVulnerabilitiesByDataStoreWithHttpInfo(@javax.annotation.Nullable VulnerabilitiesByDataStoreFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesByDataStoreSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listVulnerabilitiesByDataStoreValidateBeforeCall(filter, sort, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListVulnerabilitiesByDataStore200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -770,13 +789,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listVulnerabilitiesByDataStoreAsync(VulnerabilitiesByDataStoreFilterOptions filter, ListVulnerabilitiesByDataStoreSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback<ListVulnerabilitiesByDataStore200Response> _callback) throws ApiException {
+    public okhttp3.Call listVulnerabilitiesByDataStoreAsync(@javax.annotation.Nullable VulnerabilitiesByDataStoreFilterOptions filter, @javax.annotation.Nullable ListVulnerabilitiesByDataStoreSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListVulnerabilitiesByDataStore200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listVulnerabilitiesByDataStoreValidateBeforeCall(filter, sort, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListVulnerabilitiesByDataStore200Response>(){}.getType();
@@ -792,13 +812,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeVulnerabilityStatusCommentCall(String vulnerabilityId, String statusId, String commentId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call removeVulnerabilityStatusCommentCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -815,7 +836,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()))
             .replace("{" + "statusId" + "}", localVarApiClient.escapeString(statusId.toString()))
             .replace("{" + "commentId" + "}", localVarApiClient.escapeString(commentId.toString()));
@@ -846,7 +867,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call removeVulnerabilityStatusCommentValidateBeforeCall(String vulnerabilityId, String statusId, String commentId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call removeVulnerabilityStatusCommentValidateBeforeCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vulnerabilityId' is set
         if (vulnerabilityId == null) {
             throw new ApiException("Missing the required parameter 'vulnerabilityId' when calling removeVulnerabilityStatusComment(Async)");
@@ -874,13 +895,14 @@ public class DataVulnerabilitiesApi {
      * @param commentId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public void removeVulnerabilityStatusComment(String vulnerabilityId, String statusId, String commentId) throws ApiException {
+    public void removeVulnerabilityStatusComment(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId) throws ApiException {
         removeVulnerabilityStatusCommentWithHttpInfo(vulnerabilityId, statusId, commentId);
     }
 
@@ -893,13 +915,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<Void> removeVulnerabilityStatusCommentWithHttpInfo(String vulnerabilityId, String statusId, String commentId) throws ApiException {
+    public ApiResponse<Void> removeVulnerabilityStatusCommentWithHttpInfo(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId) throws ApiException {
         okhttp3.Call localVarCall = removeVulnerabilityStatusCommentValidateBeforeCall(vulnerabilityId, statusId, commentId, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -914,13 +937,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeVulnerabilityStatusCommentAsync(String vulnerabilityId, String statusId, String commentId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call removeVulnerabilityStatusCommentAsync(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = removeVulnerabilityStatusCommentValidateBeforeCall(vulnerabilityId, statusId, commentId, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -934,13 +958,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call setVulnerabilityStatusCall(String vulnerabilityId, SetVulnerabilityStatusRequest setVulnerabilityStatusRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call setVulnerabilityStatusCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull SetVulnerabilityStatusRequest setVulnerabilityStatusRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -957,7 +982,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = setVulnerabilityStatusRequest;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -987,7 +1012,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call setVulnerabilityStatusValidateBeforeCall(String vulnerabilityId, SetVulnerabilityStatusRequest setVulnerabilityStatusRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call setVulnerabilityStatusValidateBeforeCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull SetVulnerabilityStatusRequest setVulnerabilityStatusRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vulnerabilityId' is set
         if (vulnerabilityId == null) {
             throw new ApiException("Missing the required parameter 'vulnerabilityId' when calling setVulnerabilityStatus(Async)");
@@ -1010,13 +1035,14 @@ public class DataVulnerabilitiesApi {
      * @return VulnerabilityStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public VulnerabilityStatus setVulnerabilityStatus(String vulnerabilityId, SetVulnerabilityStatusRequest setVulnerabilityStatusRequest) throws ApiException {
+    public VulnerabilityStatus setVulnerabilityStatus(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull SetVulnerabilityStatusRequest setVulnerabilityStatusRequest) throws ApiException {
         ApiResponse<VulnerabilityStatus> localVarResp = setVulnerabilityStatusWithHttpInfo(vulnerabilityId, setVulnerabilityStatusRequest);
         return localVarResp.getData();
     }
@@ -1029,13 +1055,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;VulnerabilityStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<VulnerabilityStatus> setVulnerabilityStatusWithHttpInfo(String vulnerabilityId, SetVulnerabilityStatusRequest setVulnerabilityStatusRequest) throws ApiException {
+    public ApiResponse<VulnerabilityStatus> setVulnerabilityStatusWithHttpInfo(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull SetVulnerabilityStatusRequest setVulnerabilityStatusRequest) throws ApiException {
         okhttp3.Call localVarCall = setVulnerabilityStatusValidateBeforeCall(vulnerabilityId, setVulnerabilityStatusRequest, null);
         Type localVarReturnType = new TypeToken<VulnerabilityStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1050,13 +1077,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call setVulnerabilityStatusAsync(String vulnerabilityId, SetVulnerabilityStatusRequest setVulnerabilityStatusRequest, final ApiCallback<VulnerabilityStatus> _callback) throws ApiException {
+    public okhttp3.Call setVulnerabilityStatusAsync(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull SetVulnerabilityStatusRequest setVulnerabilityStatusRequest, final ApiCallback<VulnerabilityStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = setVulnerabilityStatusValidateBeforeCall(vulnerabilityId, setVulnerabilityStatusRequest, _callback);
         Type localVarReturnType = new TypeToken<VulnerabilityStatus>(){}.getType();
@@ -1073,13 +1101,14 @@ public class DataVulnerabilitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVulnerabilityStatusCommentCall(String vulnerabilityId, String statusId, String commentId, UpdateCommentBody updateCommentBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateVulnerabilityStatusCommentCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, @javax.annotation.Nonnull UpdateCommentBody updateCommentBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1096,7 +1125,7 @@ public class DataVulnerabilitiesApi {
         Object localVarPostBody = updateCommentBody;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
+        String localVarPath = "/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}"
             .replace("{" + "vulnerabilityId" + "}", localVarApiClient.escapeString(vulnerabilityId.toString()))
             .replace("{" + "statusId" + "}", localVarApiClient.escapeString(statusId.toString()))
             .replace("{" + "commentId" + "}", localVarApiClient.escapeString(commentId.toString()));
@@ -1128,7 +1157,7 @@ public class DataVulnerabilitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateVulnerabilityStatusCommentValidateBeforeCall(String vulnerabilityId, String statusId, String commentId, UpdateCommentBody updateCommentBody, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateVulnerabilityStatusCommentValidateBeforeCall(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, @javax.annotation.Nonnull UpdateCommentBody updateCommentBody, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vulnerabilityId' is set
         if (vulnerabilityId == null) {
             throw new ApiException("Missing the required parameter 'vulnerabilityId' when calling updateVulnerabilityStatusComment(Async)");
@@ -1163,13 +1192,14 @@ public class DataVulnerabilitiesApi {
      * @return VulnerabilityStatusComment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public VulnerabilityStatusComment updateVulnerabilityStatusComment(String vulnerabilityId, String statusId, String commentId, UpdateCommentBody updateCommentBody) throws ApiException {
+    public VulnerabilityStatusComment updateVulnerabilityStatusComment(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, @javax.annotation.Nonnull UpdateCommentBody updateCommentBody) throws ApiException {
         ApiResponse<VulnerabilityStatusComment> localVarResp = updateVulnerabilityStatusCommentWithHttpInfo(vulnerabilityId, statusId, commentId, updateCommentBody);
         return localVarResp.getData();
     }
@@ -1184,13 +1214,14 @@ public class DataVulnerabilitiesApi {
      * @return ApiResponse&lt;VulnerabilityStatusComment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<VulnerabilityStatusComment> updateVulnerabilityStatusCommentWithHttpInfo(String vulnerabilityId, String statusId, String commentId, UpdateCommentBody updateCommentBody) throws ApiException {
+    public ApiResponse<VulnerabilityStatusComment> updateVulnerabilityStatusCommentWithHttpInfo(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, @javax.annotation.Nonnull UpdateCommentBody updateCommentBody) throws ApiException {
         okhttp3.Call localVarCall = updateVulnerabilityStatusCommentValidateBeforeCall(vulnerabilityId, statusId, commentId, updateCommentBody, null);
         Type localVarReturnType = new TypeToken<VulnerabilityStatusComment>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1207,13 +1238,14 @@ public class DataVulnerabilitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call updateVulnerabilityStatusCommentAsync(String vulnerabilityId, String statusId, String commentId, UpdateCommentBody updateCommentBody, final ApiCallback<VulnerabilityStatusComment> _callback) throws ApiException {
+    public okhttp3.Call updateVulnerabilityStatusCommentAsync(@javax.annotation.Nonnull String vulnerabilityId, @javax.annotation.Nonnull String statusId, @javax.annotation.Nonnull String commentId, @javax.annotation.Nonnull UpdateCommentBody updateCommentBody, final ApiCallback<VulnerabilityStatusComment> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateVulnerabilityStatusCommentValidateBeforeCall(vulnerabilityId, statusId, commentId, updateCommentBody, _callback);
         Type localVarReturnType = new TypeToken<VulnerabilityStatusComment>(){}.getType();

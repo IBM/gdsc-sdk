@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **origin_data** | **str** | Only return record that with the specified origin_data. | [optional] 
 **origins** | **List[str]** | Only return record that includes the specified origins. | [optional] 
 **start_time** | **datetime** | Return records created at this time or later (&gt;&#x3D;). | [optional] 
-**state** | [**NotificationRecordsFilterStateFilter**](NotificationRecordsFilterStateFilter.md) |  | [optional] 
+**state** | [**NotificationRecordsFilterStateFilter**](NotificationRecordsFilterStateFilter.md) |  | [optional] [default to NotificationRecordsFilterStateFilter.INCLUDE_ALL]
 
 ## Example
 

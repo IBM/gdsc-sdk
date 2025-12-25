@@ -73,9 +73,9 @@ class Ecosystemv3DataInsertRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in entries (list)
         _items = []
         if self.entries:
-            for _item in self.entries:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_entries in self.entries:
+                if _item_entries:
+                    _items.append(_item_entries.to_dict())
             _dict['entries'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,157 +38,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Account.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3Account {
   public static final String SERIALIZED_NAME_ACCESS_KEY = "access_key";
   @SerializedName(SERIALIZED_NAME_ACCESS_KEY)
+  @javax.annotation.Nullable
   private String accessKey;
 
   public static final String SERIALIZED_NAME_AUTHENTICATION_TYPE = "authentication_type";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_TYPE)
+  @javax.annotation.Nullable
   private String authenticationType;
 
   public static final String SERIALIZED_NAME_CONNECTION_TYPE = "connection_type";
   @SerializedName(SERIALIZED_NAME_CONNECTION_TYPE)
+  @javax.annotation.Nullable
   private String connectionType;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_ROLE_ARN = "role_arn";
   @SerializedName(SERIALIZED_NAME_ROLE_ARN)
+  @javax.annotation.Nullable
   private String roleArn;
 
   public static final String SERIALIZED_NAME_SECRET_ACCESS_KEY = "secret_access_key";
   @SerializedName(SERIALIZED_NAME_SECRET_ACCESS_KEY)
+  @javax.annotation.Nullable
   private String secretAccessKey;
 
   public Connectionsv3Account() {
   }
 
-  public Connectionsv3Account accessKey(String accessKey) {
+  public Connectionsv3Account accessKey(@javax.annotation.Nullable String accessKey) {
     this.accessKey = accessKey;
     return this;
   }
 
-   /**
+  /**
    * Access key for the connection account.
    * @return accessKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccessKey() {
     return accessKey;
   }
 
-  public void setAccessKey(String accessKey) {
+  public void setAccessKey(@javax.annotation.Nullable String accessKey) {
     this.accessKey = accessKey;
   }
 
 
-  public Connectionsv3Account authenticationType(String authenticationType) {
+  public Connectionsv3Account authenticationType(@javax.annotation.Nullable String authenticationType) {
     this.authenticationType = authenticationType;
     return this;
   }
 
-   /**
+  /**
    * Authentication type of account.
    * @return authenticationType
-  **/
+   */
   @javax.annotation.Nullable
   public String getAuthenticationType() {
     return authenticationType;
   }
 
-  public void setAuthenticationType(String authenticationType) {
+  public void setAuthenticationType(@javax.annotation.Nullable String authenticationType) {
     this.authenticationType = authenticationType;
   }
 
 
-  public Connectionsv3Account connectionType(String connectionType) {
+  public Connectionsv3Account connectionType(@javax.annotation.Nullable String connectionType) {
     this.connectionType = connectionType;
     return this;
   }
 
-   /**
+  /**
    * Connection type for the account.
    * @return connectionType
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionType() {
     return connectionType;
   }
 
-  public void setConnectionType(String connectionType) {
+  public void setConnectionType(@javax.annotation.Nullable String connectionType) {
     this.connectionType = connectionType;
   }
 
 
-  public Connectionsv3Account name(String name) {
+  public Connectionsv3Account name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of acccount.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Connectionsv3Account roleArn(String roleArn) {
+  public Connectionsv3Account roleArn(@javax.annotation.Nullable String roleArn) {
     this.roleArn = roleArn;
     return this;
   }
 
-   /**
+  /**
    * Optional: role of the acccount.
    * @return roleArn
-  **/
+   */
   @javax.annotation.Nullable
   public String getRoleArn() {
     return roleArn;
   }
 
-  public void setRoleArn(String roleArn) {
+  public void setRoleArn(@javax.annotation.Nullable String roleArn) {
     this.roleArn = roleArn;
   }
 
 
-  public Connectionsv3Account secretAccessKey(String secretAccessKey) {
+  public Connectionsv3Account secretAccessKey(@javax.annotation.Nullable String secretAccessKey) {
     this.secretAccessKey = secretAccessKey;
     return this;
   }
 
-   /**
+  /**
    * Account password.
    * @return secretAccessKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getSecretAccessKey() {
     return secretAccessKey;
   }
 
-  public void setSecretAccessKey(String secretAccessKey) {
+  public void setSecretAccessKey(@javax.annotation.Nullable String secretAccessKey) {
     this.secretAccessKey = secretAccessKey;
   }
 
@@ -246,28 +253,22 @@ public class Connectionsv3Account {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("access_key");
-    openapiFields.add("authentication_type");
-    openapiFields.add("connection_type");
-    openapiFields.add("name");
-    openapiFields.add("role_arn");
-    openapiFields.add("secret_access_key");
+    openapiFields = new HashSet<String>(Arrays.asList("access_key", "authentication_type", "connection_type", "name", "role_arn", "secret_access_key"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3Account
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3Account
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3Account.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3Account is not found in the empty JSON string", Connectionsv3Account.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3Account is not found in the empty JSON string", Connectionsv3Account.openapiRequiredFields.toString()));
         }
       }
 
@@ -275,27 +276,27 @@ public class Connectionsv3Account {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3Account.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3Account` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3Account` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("access_key") != null && !jsonObj.get("access_key").isJsonNull()) && !jsonObj.get("access_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `access_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `access_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_key").toString()));
       }
       if ((jsonObj.get("authentication_type") != null && !jsonObj.get("authentication_type").isJsonNull()) && !jsonObj.get("authentication_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `authentication_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("authentication_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `authentication_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("authentication_type").toString()));
       }
       if ((jsonObj.get("connection_type") != null && !jsonObj.get("connection_type").isJsonNull()) && !jsonObj.get("connection_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_type").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("role_arn") != null && !jsonObj.get("role_arn").isJsonNull()) && !jsonObj.get("role_arn").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `role_arn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_arn").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `role_arn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_arn").toString()));
       }
       if ((jsonObj.get("secret_access_key") != null && !jsonObj.get("secret_access_key").isJsonNull()) && !jsonObj.get("secret_access_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `secret_access_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret_access_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `secret_access_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret_access_key").toString()));
       }
   }
 
@@ -328,22 +329,22 @@ public class Connectionsv3Account {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3Account given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3Account
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3Account
-  */
+  /**
+   * Create an instance of Connectionsv3Account given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3Account
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3Account
+   */
   public static Connectionsv3Account fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3Account.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3Account to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3Account to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

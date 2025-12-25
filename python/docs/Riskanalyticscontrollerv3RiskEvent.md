@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 **pivot** | [**Riskanalyticsenginev3Pivot**](Riskanalyticsenginev3Pivot.md) |  | [optional] 
 **risk_id** | **int** | Risk id. | [optional] 
 **severity** | **int** | Severity of the risk. | [optional] 
-**severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] 
+**severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] [default to Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL]
 **short_observations** | [**List[Riskanalyticscontrollerv3ShortObservation]**](Riskanalyticscontrollerv3ShortObservation.md) | Observations of the risk. | [optional] 
-**status** | [**Riskanalyticscontrollerv3Status**](Riskanalyticscontrollerv3Status.md) |  | [optional] 
+**status** | [**Riskanalyticscontrollerv3Status**](Riskanalyticscontrollerv3Status.md) |  | [optional] [default to Riskanalyticscontrollerv3Status.UNDEFINED_STATUS]
 **status_changed_by_user_name** | **str** | Status changed by the user name. | [optional] 
 **to_date** | **datetime** | Last updated date in format YYYY-MM-DDTHH:mm:ssZ. | [optional] 
 

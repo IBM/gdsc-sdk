@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,203 +39,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * File object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Datamartprocessorv3DatamartFileInfo {
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private String error;
 
   public static final String SERIALIZED_NAME_FAILED_STATE = "failed_state";
   @SerializedName(SERIALIZED_NAME_FAILED_STATE)
+  @javax.annotation.Nullable
   private Boolean failedState;
 
   public static final String SERIALIZED_NAME_FILE_NAME = "file_name";
   @SerializedName(SERIALIZED_NAME_FILE_NAME)
+  @javax.annotation.Nullable
   private String fileName;
 
   public static final String SERIALIZED_NAME_FILE_STATUS = "file_status";
   @SerializedName(SERIALIZED_NAME_FILE_STATUS)
+  @javax.annotation.Nullable
   private Integer fileStatus;
 
   public static final String SERIALIZED_NAME_INGEST_RECORD_COUNT = "ingest_record_count";
   @SerializedName(SERIALIZED_NAME_INGEST_RECORD_COUNT)
+  @javax.annotation.Nullable
   private Integer ingestRecordCount;
 
   public static final String SERIALIZED_NAME_RETRY_COUNT = "retry_count";
   @SerializedName(SERIALIZED_NAME_RETRY_COUNT)
+  @javax.annotation.Nullable
   private Integer retryCount;
 
   public static final String SERIALIZED_NAME_RETRY_END_TIME = "retry_end_time";
   @SerializedName(SERIALIZED_NAME_RETRY_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime retryEndTime;
 
   public static final String SERIALIZED_NAME_RETRY_START_TIME = "retry_start_time";
   @SerializedName(SERIALIZED_NAME_RETRY_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime retryStartTime;
 
   public Datamartprocessorv3DatamartFileInfo() {
   }
 
-  public Datamartprocessorv3DatamartFileInfo error(String error) {
+  public Datamartprocessorv3DatamartFileInfo error(@javax.annotation.Nullable String error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Errors if any.
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public String getError() {
     return error;
   }
 
-  public void setError(String error) {
+  public void setError(@javax.annotation.Nullable String error) {
     this.error = error;
   }
 
 
-  public Datamartprocessorv3DatamartFileInfo failedState(Boolean failedState) {
+  public Datamartprocessorv3DatamartFileInfo failedState(@javax.annotation.Nullable Boolean failedState) {
     this.failedState = failedState;
     return this;
   }
 
-   /**
+  /**
    * If the file is in failed state, usually means failed permanently.
    * @return failedState
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getFailedState() {
     return failedState;
   }
 
-  public void setFailedState(Boolean failedState) {
+  public void setFailedState(@javax.annotation.Nullable Boolean failedState) {
     this.failedState = failedState;
   }
 
 
-  public Datamartprocessorv3DatamartFileInfo fileName(String fileName) {
+  public Datamartprocessorv3DatamartFileInfo fileName(@javax.annotation.Nullable String fileName) {
     this.fileName = fileName;
     return this;
   }
 
-   /**
+  /**
    * Filename.
    * @return fileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFileName() {
     return fileName;
   }
 
-  public void setFileName(String fileName) {
+  public void setFileName(@javax.annotation.Nullable String fileName) {
     this.fileName = fileName;
   }
 
 
-  public Datamartprocessorv3DatamartFileInfo fileStatus(Integer fileStatus) {
+  public Datamartprocessorv3DatamartFileInfo fileStatus(@javax.annotation.Nullable Integer fileStatus) {
     this.fileStatus = fileStatus;
     return this;
   }
 
-   /**
+  /**
    * Status of the file.
    * @return fileStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFileStatus() {
     return fileStatus;
   }
 
-  public void setFileStatus(Integer fileStatus) {
+  public void setFileStatus(@javax.annotation.Nullable Integer fileStatus) {
     this.fileStatus = fileStatus;
   }
 
 
-  public Datamartprocessorv3DatamartFileInfo ingestRecordCount(Integer ingestRecordCount) {
+  public Datamartprocessorv3DatamartFileInfo ingestRecordCount(@javax.annotation.Nullable Integer ingestRecordCount) {
     this.ingestRecordCount = ingestRecordCount;
     return this;
   }
 
-   /**
+  /**
    * Total numbers of records ingested for this file in Insights.
    * @return ingestRecordCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getIngestRecordCount() {
     return ingestRecordCount;
   }
 
-  public void setIngestRecordCount(Integer ingestRecordCount) {
+  public void setIngestRecordCount(@javax.annotation.Nullable Integer ingestRecordCount) {
     this.ingestRecordCount = ingestRecordCount;
   }
 
 
-  public Datamartprocessorv3DatamartFileInfo retryCount(Integer retryCount) {
+  public Datamartprocessorv3DatamartFileInfo retryCount(@javax.annotation.Nullable Integer retryCount) {
     this.retryCount = retryCount;
     return this;
   }
 
-   /**
+  /**
    * Total number of times file has been retried.
    * @return retryCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRetryCount() {
     return retryCount;
   }
 
-  public void setRetryCount(Integer retryCount) {
+  public void setRetryCount(@javax.annotation.Nullable Integer retryCount) {
     this.retryCount = retryCount;
   }
 
 
-  public Datamartprocessorv3DatamartFileInfo retryEndTime(OffsetDateTime retryEndTime) {
+  public Datamartprocessorv3DatamartFileInfo retryEndTime(@javax.annotation.Nullable OffsetDateTime retryEndTime) {
     this.retryEndTime = retryEndTime;
     return this;
   }
 
-   /**
+  /**
    * End time of last retry attempt.
    * @return retryEndTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getRetryEndTime() {
     return retryEndTime;
   }
 
-  public void setRetryEndTime(OffsetDateTime retryEndTime) {
+  public void setRetryEndTime(@javax.annotation.Nullable OffsetDateTime retryEndTime) {
     this.retryEndTime = retryEndTime;
   }
 
 
-  public Datamartprocessorv3DatamartFileInfo retryStartTime(OffsetDateTime retryStartTime) {
+  public Datamartprocessorv3DatamartFileInfo retryStartTime(@javax.annotation.Nullable OffsetDateTime retryStartTime) {
     this.retryStartTime = retryStartTime;
     return this;
   }
 
-   /**
+  /**
    * Start time of last retry attempt.
    * @return retryStartTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getRetryStartTime() {
     return retryStartTime;
   }
 
-  public void setRetryStartTime(OffsetDateTime retryStartTime) {
+  public void setRetryStartTime(@javax.annotation.Nullable OffsetDateTime retryStartTime) {
     this.retryStartTime = retryStartTime;
   }
 
@@ -297,30 +306,22 @@ public class Datamartprocessorv3DatamartFileInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("error");
-    openapiFields.add("failed_state");
-    openapiFields.add("file_name");
-    openapiFields.add("file_status");
-    openapiFields.add("ingest_record_count");
-    openapiFields.add("retry_count");
-    openapiFields.add("retry_end_time");
-    openapiFields.add("retry_start_time");
+    openapiFields = new HashSet<String>(Arrays.asList("error", "failed_state", "file_name", "file_status", "ingest_record_count", "retry_count", "retry_end_time", "retry_start_time"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Datamartprocessorv3DatamartFileInfo
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Datamartprocessorv3DatamartFileInfo
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Datamartprocessorv3DatamartFileInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Datamartprocessorv3DatamartFileInfo is not found in the empty JSON string", Datamartprocessorv3DatamartFileInfo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Datamartprocessorv3DatamartFileInfo is not found in the empty JSON string", Datamartprocessorv3DatamartFileInfo.openapiRequiredFields.toString()));
         }
       }
 
@@ -328,15 +329,15 @@ public class Datamartprocessorv3DatamartFileInfo {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Datamartprocessorv3DatamartFileInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Datamartprocessorv3DatamartFileInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Datamartprocessorv3DatamartFileInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("error") != null && !jsonObj.get("error").isJsonNull()) && !jsonObj.get("error").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
       }
       if ((jsonObj.get("file_name") != null && !jsonObj.get("file_name").isJsonNull()) && !jsonObj.get("file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("file_name").toString()));
       }
   }
 
@@ -369,22 +370,22 @@ public class Datamartprocessorv3DatamartFileInfo {
     }
   }
 
- /**
-  * Create an instance of Datamartprocessorv3DatamartFileInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Datamartprocessorv3DatamartFileInfo
-  * @throws IOException if the JSON string is invalid with respect to Datamartprocessorv3DatamartFileInfo
-  */
+  /**
+   * Create an instance of Datamartprocessorv3DatamartFileInfo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Datamartprocessorv3DatamartFileInfo
+   * @throws IOException if the JSON string is invalid with respect to Datamartprocessorv3DatamartFileInfo
+   */
   public static Datamartprocessorv3DatamartFileInfo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Datamartprocessorv3DatamartFileInfo.class);
   }
 
- /**
-  * Convert an instance of Datamartprocessorv3DatamartFileInfo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Datamartprocessorv3DatamartFileInfo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,120 +41,125 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3Category
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Category {
   public static final String SERIALIZED_NAME_CATEGORY_DESCRIPTION = "category_description";
   @SerializedName(SERIALIZED_NAME_CATEGORY_DESCRIPTION)
+  @javax.annotation.Nullable
   private String categoryDescription;
 
   public static final String SERIALIZED_NAME_CATEGORY_ID = "category_id";
   @SerializedName(SERIALIZED_NAME_CATEGORY_ID)
+  @javax.annotation.Nullable
   private String categoryId;
 
   public static final String SERIALIZED_NAME_CATEGORY_NAME = "category_name";
   @SerializedName(SERIALIZED_NAME_CATEGORY_NAME)
+  @javax.annotation.Nullable
   private String categoryName;
 
   public static final String SERIALIZED_NAME_MULTI_VERSION = "multi_version";
   @SerializedName(SERIALIZED_NAME_MULTI_VERSION)
+  @javax.annotation.Nullable
   private Boolean multiVersion;
 
   public static final String SERIALIZED_NAME_VERSIONS = "versions";
   @SerializedName(SERIALIZED_NAME_VERSIONS)
+  @javax.annotation.Nullable
   private List<Reportsv3CategoryVersion> versions = new ArrayList<>();
 
   public Reportsv3Category() {
   }
 
-  public Reportsv3Category categoryDescription(String categoryDescription) {
+  public Reportsv3Category categoryDescription(@javax.annotation.Nullable String categoryDescription) {
     this.categoryDescription = categoryDescription;
     return this;
   }
 
-   /**
+  /**
    * The category description.
    * @return categoryDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryDescription() {
     return categoryDescription;
   }
 
-  public void setCategoryDescription(String categoryDescription) {
+  public void setCategoryDescription(@javax.annotation.Nullable String categoryDescription) {
     this.categoryDescription = categoryDescription;
   }
 
 
-  public Reportsv3Category categoryId(String categoryId) {
+  public Reportsv3Category categoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
     return this;
   }
 
-   /**
+  /**
    * The category id.
    * @return categoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryId() {
     return categoryId;
   }
 
-  public void setCategoryId(String categoryId) {
+  public void setCategoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
   }
 
 
-  public Reportsv3Category categoryName(String categoryName) {
+  public Reportsv3Category categoryName(@javax.annotation.Nullable String categoryName) {
     this.categoryName = categoryName;
     return this;
   }
 
-   /**
+  /**
    * Identifies the NLS translated string.
    * @return categoryName
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryName() {
     return categoryName;
   }
 
-  public void setCategoryName(String categoryName) {
+  public void setCategoryName(@javax.annotation.Nullable String categoryName) {
     this.categoryName = categoryName;
   }
 
 
-  public Reportsv3Category multiVersion(Boolean multiVersion) {
+  public Reportsv3Category multiVersion(@javax.annotation.Nullable Boolean multiVersion) {
     this.multiVersion = multiVersion;
     return this;
   }
 
-   /**
+  /**
    * Get multiVersion
    * @return multiVersion
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getMultiVersion() {
     return multiVersion;
   }
 
-  public void setMultiVersion(Boolean multiVersion) {
+  public void setMultiVersion(@javax.annotation.Nullable Boolean multiVersion) {
     this.multiVersion = multiVersion;
   }
 
 
-  public Reportsv3Category versions(List<Reportsv3CategoryVersion> versions) {
+  public Reportsv3Category versions(@javax.annotation.Nullable List<Reportsv3CategoryVersion> versions) {
     this.versions = versions;
     return this;
   }
@@ -166,16 +172,16 @@ public class Reportsv3Category {
     return this;
   }
 
-   /**
+  /**
    * Get versions
    * @return versions
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3CategoryVersion> getVersions() {
     return versions;
   }
 
-  public void setVersions(List<Reportsv3CategoryVersion> versions) {
+  public void setVersions(@javax.annotation.Nullable List<Reportsv3CategoryVersion> versions) {
     this.versions = versions;
   }
 
@@ -232,27 +238,22 @@ public class Reportsv3Category {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("category_description");
-    openapiFields.add("category_id");
-    openapiFields.add("category_name");
-    openapiFields.add("multi_version");
-    openapiFields.add("versions");
+    openapiFields = new HashSet<String>(Arrays.asList("category_description", "category_id", "category_name", "multi_version", "versions"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Category
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Category
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Category.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Category is not found in the empty JSON string", Reportsv3Category.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Category is not found in the empty JSON string", Reportsv3Category.openapiRequiredFields.toString()));
         }
       }
 
@@ -260,25 +261,25 @@ public class Reportsv3Category {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Category.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Category` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Category` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("category_description") != null && !jsonObj.get("category_description").isJsonNull()) && !jsonObj.get("category_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_description").toString()));
       }
       if ((jsonObj.get("category_id") != null && !jsonObj.get("category_id").isJsonNull()) && !jsonObj.get("category_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
       }
       if ((jsonObj.get("category_name") != null && !jsonObj.get("category_name").isJsonNull()) && !jsonObj.get("category_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_name").toString()));
       }
       if (jsonObj.get("versions") != null && !jsonObj.get("versions").isJsonNull()) {
         JsonArray jsonArrayversions = jsonObj.getAsJsonArray("versions");
         if (jsonArrayversions != null) {
           // ensure the json data is an array
           if (!jsonObj.get("versions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `versions` to be an array in the JSON string but got `%s`", jsonObj.get("versions").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `versions` to be an array in the JSON string but got `%s`", jsonObj.get("versions").toString()));
           }
 
           // validate the optional field `versions` (array)
@@ -318,22 +319,22 @@ public class Reportsv3Category {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Category given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Category
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Category
-  */
+  /**
+   * Create an instance of Reportsv3Category given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Category
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Category
+   */
   public static Reportsv3Category fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Category.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Category to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Category to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

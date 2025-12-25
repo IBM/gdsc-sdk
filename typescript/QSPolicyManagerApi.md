@@ -20,20 +20,19 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest = {
-  // any
+const request: QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest = {
+  
   body: {},
 };
 
-apiInstance.qSPolicyManagerBatchStatusUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerBatchStatusUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -74,14 +73,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest = {
-  // Qspmpolicymanagerv3UpdateConfigsRequest
+const request: QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest = {
+  
   qspmpolicymanagerv3UpdateConfigsRequest: {
     id: "id_example",
     options: {
@@ -90,9 +89,8 @@ let body:.QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest = {
   },
 };
 
-apiInstance.qSPolicyManagerConfigUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerConfigUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -133,14 +131,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerCreateTicketRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerCreateTicketRequest = {
-  // Qspmpolicymanagerv3CreateTicketRequest
+const request: QSPolicyManagerApiQSPolicyManagerCreateTicketRequest = {
+  
   qspmpolicymanagerv3CreateTicketRequest: {
     policyDatasetId: "policyDatasetId_example",
     policyType: "policyType_example",
@@ -154,9 +152,8 @@ let body:.QSPolicyManagerApiQSPolicyManagerCreateTicketRequest = {
   },
 };
 
-apiInstance.qSPolicyManagerCreateTicket(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerCreateTicket(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -197,17 +194,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.qSPolicyManagerFetchFilesfromBuckets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerFetchFilesfromBuckets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -245,14 +240,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest = {
-  // Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
+const request: QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest = {
+  
   qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest: {
     provisonIdList: [
       "provisonIdList_example",
@@ -263,9 +258,8 @@ let body:.QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest 
   },
 };
 
-apiInstance.qSPolicyManagerProcessPolicyDimentionRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerProcessPolicyDimentionRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -306,23 +300,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest = {
-  // Qspmpolicymanagerv3UpdateTicketStatusRequest
+const request: QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest = {
+  
   qspmpolicymanagerv3UpdateTicketStatusRequest: {
     policyDatasetId: "policyDatasetId_example",
     policyType: "policyType_example",
   },
 };
 
-apiInstance.qSPolicyManagerUpdateTicketStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerUpdateTicketStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

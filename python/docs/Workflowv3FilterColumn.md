@@ -7,7 +7,7 @@ FilterColumn represents a column field filter.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **header_name** | **str** |  | [optional] 
-**operator_type** | [**Workflowv3OperatorType**](Workflowv3OperatorType.md) |  | [optional] 
+**operator_type** | [**Workflowv3OperatorType**](Workflowv3OperatorType.md) |  | [optional] [default to Workflowv3OperatorType.UNDEFINED_OPERATOR_TYPE]
 **values** | **List[str]** |  | [optional] 
 
 ## Example

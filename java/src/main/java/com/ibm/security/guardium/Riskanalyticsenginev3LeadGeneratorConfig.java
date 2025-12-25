@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * LeadGeneratorConfig holds the configuration of a lead generator.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3LeadGeneratorConfig {
   public static final String SERIALIZED_NAME_IS_ACTIVE = "is_active";
   @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  @javax.annotation.Nullable
   private Boolean isActive;
 
   public static final String SERIALIZED_NAME_LEAD_GENERATOR_NAME = "lead_generator_name";
   @SerializedName(SERIALIZED_NAME_LEAD_GENERATOR_NAME)
+  @javax.annotation.Nullable
   private String leadGeneratorName;
 
   public static final String SERIALIZED_NAME_LEAD_GENERATOR_PARAMS = "lead_generator_params";
   @SerializedName(SERIALIZED_NAME_LEAD_GENERATOR_PARAMS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3LeadGeneratorConfigParamValue> leadGeneratorParams = new ArrayList<>();
 
   public Riskanalyticsenginev3LeadGeneratorConfig() {
   }
 
-  public Riskanalyticsenginev3LeadGeneratorConfig isActive(Boolean isActive) {
+  public Riskanalyticsenginev3LeadGeneratorConfig isActive(@javax.annotation.Nullable Boolean isActive) {
     this.isActive = isActive;
     return this;
   }
 
-   /**
+  /**
    * Is the lead generator set to active or inactive.
    * @return isActive
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsActive() {
     return isActive;
   }
 
-  public void setIsActive(Boolean isActive) {
+  public void setIsActive(@javax.annotation.Nullable Boolean isActive) {
     this.isActive = isActive;
   }
 
 
-  public Riskanalyticsenginev3LeadGeneratorConfig leadGeneratorName(String leadGeneratorName) {
+  public Riskanalyticsenginev3LeadGeneratorConfig leadGeneratorName(@javax.annotation.Nullable String leadGeneratorName) {
     this.leadGeneratorName = leadGeneratorName;
     return this;
   }
 
-   /**
+  /**
    * Name of the lead generator.
    * @return leadGeneratorName
-  **/
+   */
   @javax.annotation.Nullable
   public String getLeadGeneratorName() {
     return leadGeneratorName;
   }
 
-  public void setLeadGeneratorName(String leadGeneratorName) {
+  public void setLeadGeneratorName(@javax.annotation.Nullable String leadGeneratorName) {
     this.leadGeneratorName = leadGeneratorName;
   }
 
 
-  public Riskanalyticsenginev3LeadGeneratorConfig leadGeneratorParams(List<Riskanalyticsenginev3LeadGeneratorConfigParamValue> leadGeneratorParams) {
+  public Riskanalyticsenginev3LeadGeneratorConfig leadGeneratorParams(@javax.annotation.Nullable List<Riskanalyticsenginev3LeadGeneratorConfigParamValue> leadGeneratorParams) {
     this.leadGeneratorParams = leadGeneratorParams;
     return this;
   }
@@ -120,16 +124,16 @@ public class Riskanalyticsenginev3LeadGeneratorConfig {
     return this;
   }
 
-   /**
+  /**
    * The parameters to update for this lead generator.
    * @return leadGeneratorParams
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3LeadGeneratorConfigParamValue> getLeadGeneratorParams() {
     return leadGeneratorParams;
   }
 
-  public void setLeadGeneratorParams(List<Riskanalyticsenginev3LeadGeneratorConfigParamValue> leadGeneratorParams) {
+  public void setLeadGeneratorParams(@javax.annotation.Nullable List<Riskanalyticsenginev3LeadGeneratorConfigParamValue> leadGeneratorParams) {
     this.leadGeneratorParams = leadGeneratorParams;
   }
 
@@ -182,25 +186,22 @@ public class Riskanalyticsenginev3LeadGeneratorConfig {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("is_active");
-    openapiFields.add("lead_generator_name");
-    openapiFields.add("lead_generator_params");
+    openapiFields = new HashSet<String>(Arrays.asList("is_active", "lead_generator_name", "lead_generator_params"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3LeadGeneratorConfig
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3LeadGeneratorConfig
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3LeadGeneratorConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3LeadGeneratorConfig is not found in the empty JSON string", Riskanalyticsenginev3LeadGeneratorConfig.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3LeadGeneratorConfig is not found in the empty JSON string", Riskanalyticsenginev3LeadGeneratorConfig.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,19 +209,19 @@ public class Riskanalyticsenginev3LeadGeneratorConfig {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3LeadGeneratorConfig.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3LeadGeneratorConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3LeadGeneratorConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("lead_generator_name") != null && !jsonObj.get("lead_generator_name").isJsonNull()) && !jsonObj.get("lead_generator_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lead_generator_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lead_generator_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `lead_generator_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lead_generator_name").toString()));
       }
       if (jsonObj.get("lead_generator_params") != null && !jsonObj.get("lead_generator_params").isJsonNull()) {
         JsonArray jsonArrayleadGeneratorParams = jsonObj.getAsJsonArray("lead_generator_params");
         if (jsonArrayleadGeneratorParams != null) {
           // ensure the json data is an array
           if (!jsonObj.get("lead_generator_params").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `lead_generator_params` to be an array in the JSON string but got `%s`", jsonObj.get("lead_generator_params").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `lead_generator_params` to be an array in the JSON string but got `%s`", jsonObj.get("lead_generator_params").toString()));
           }
 
           // validate the optional field `lead_generator_params` (array)
@@ -260,22 +261,22 @@ public class Riskanalyticsenginev3LeadGeneratorConfig {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3LeadGeneratorConfig given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3LeadGeneratorConfig
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3LeadGeneratorConfig
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3LeadGeneratorConfig given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3LeadGeneratorConfig
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3LeadGeneratorConfig
+   */
   public static Riskanalyticsenginev3LeadGeneratorConfig fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3LeadGeneratorConfig.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3LeadGeneratorConfig to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3LeadGeneratorConfig to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

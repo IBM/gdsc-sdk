@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetReportDataCountResponse is the argument get count.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3GetReportDataCountResponse {
   public static final String SERIALIZED_NAME_LIMIT_REACHED = "limit_reached";
   @SerializedName(SERIALIZED_NAME_LIMIT_REACHED)
+  @javax.annotation.Nullable
   private Boolean limitReached;
 
   public static final String SERIALIZED_NAME_TOTAL_NUMBER_OF_ROWS = "total_number_of_rows";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUMBER_OF_ROWS)
+  @javax.annotation.Nullable
   private Integer totalNumberOfRows;
 
   public Reportsrunnerv3GetReportDataCountResponse() {
   }
 
-  public Reportsrunnerv3GetReportDataCountResponse limitReached(Boolean limitReached) {
+  public Reportsrunnerv3GetReportDataCountResponse limitReached(@javax.annotation.Nullable Boolean limitReached) {
     this.limitReached = limitReached;
     return this;
   }
 
-   /**
+  /**
    * limit_reached - signifies if the query limit reached. When set to true, it means that the limit was reached and there are more records on DB which were not read yet.
    * @return limitReached
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getLimitReached() {
     return limitReached;
   }
 
-  public void setLimitReached(Boolean limitReached) {
+  public void setLimitReached(@javax.annotation.Nullable Boolean limitReached) {
     this.limitReached = limitReached;
   }
 
 
-  public Reportsrunnerv3GetReportDataCountResponse totalNumberOfRows(Integer totalNumberOfRows) {
+  public Reportsrunnerv3GetReportDataCountResponse totalNumberOfRows(@javax.annotation.Nullable Integer totalNumberOfRows) {
     this.totalNumberOfRows = totalNumberOfRows;
     return this;
   }
 
-   /**
+  /**
    * Total Rows Count.
    * @return totalNumberOfRows
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTotalNumberOfRows() {
     return totalNumberOfRows;
   }
 
-  public void setTotalNumberOfRows(Integer totalNumberOfRows) {
+  public void setTotalNumberOfRows(@javax.annotation.Nullable Integer totalNumberOfRows) {
     this.totalNumberOfRows = totalNumberOfRows;
   }
 
@@ -146,24 +149,22 @@ public class Reportsrunnerv3GetReportDataCountResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("limit_reached");
-    openapiFields.add("total_number_of_rows");
+    openapiFields = new HashSet<String>(Arrays.asList("limit_reached", "total_number_of_rows"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetReportDataCountResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetReportDataCountResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3GetReportDataCountResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3GetReportDataCountResponse is not found in the empty JSON string", Reportsrunnerv3GetReportDataCountResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3GetReportDataCountResponse is not found in the empty JSON string", Reportsrunnerv3GetReportDataCountResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,7 +172,7 @@ public class Reportsrunnerv3GetReportDataCountResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3GetReportDataCountResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetReportDataCountResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetReportDataCountResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -206,22 +207,22 @@ public class Reportsrunnerv3GetReportDataCountResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3GetReportDataCountResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3GetReportDataCountResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetReportDataCountResponse
-  */
+  /**
+   * Create an instance of Reportsrunnerv3GetReportDataCountResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3GetReportDataCountResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetReportDataCountResponse
+   */
   public static Reportsrunnerv3GetReportDataCountResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3GetReportDataCountResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3GetReportDataCountResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3GetReportDataCountResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

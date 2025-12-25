@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Additional info message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3AdditionalInfo {
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3FieldType type = Riskanalyticsenginev3FieldType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public Riskanalyticsenginev3AdditionalInfo() {
   }
 
-  public Riskanalyticsenginev3AdditionalInfo key(String key) {
+  public Riskanalyticsenginev3AdditionalInfo key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Additional info key.
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Riskanalyticsenginev3AdditionalInfo type(Riskanalyticsenginev3FieldType type) {
+  public Riskanalyticsenginev3AdditionalInfo type(@javax.annotation.Nullable Riskanalyticsenginev3FieldType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3FieldType getType() {
     return type;
   }
 
-  public void setType(Riskanalyticsenginev3FieldType type) {
+  public void setType(@javax.annotation.Nullable Riskanalyticsenginev3FieldType type) {
     this.type = type;
   }
 
 
-  public Riskanalyticsenginev3AdditionalInfo value(String value) {
+  public Riskanalyticsenginev3AdditionalInfo value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Additional info value.
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public String getValue() {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
@@ -172,25 +176,22 @@ public class Riskanalyticsenginev3AdditionalInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("key");
-    openapiFields.add("type");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("key", "type", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3AdditionalInfo
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3AdditionalInfo
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3AdditionalInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3AdditionalInfo is not found in the empty JSON string", Riskanalyticsenginev3AdditionalInfo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3AdditionalInfo is not found in the empty JSON string", Riskanalyticsenginev3AdditionalInfo.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,19 +199,19 @@ public class Riskanalyticsenginev3AdditionalInfo {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3AdditionalInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3AdditionalInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3AdditionalInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
         Riskanalyticsenginev3FieldType.validateJsonElement(jsonObj.get("type"));
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -243,22 +244,22 @@ public class Riskanalyticsenginev3AdditionalInfo {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3AdditionalInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3AdditionalInfo
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3AdditionalInfo
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3AdditionalInfo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3AdditionalInfo
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3AdditionalInfo
+   */
   public static Riskanalyticsenginev3AdditionalInfo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3AdditionalInfo.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3AdditionalInfo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3AdditionalInfo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

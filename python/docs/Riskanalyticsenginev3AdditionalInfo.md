@@ -7,7 +7,7 @@ Additional info message.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **key** | **str** | Additional info key. | [optional] 
-**type** | [**Riskanalyticsenginev3FieldType**](Riskanalyticsenginev3FieldType.md) |  | [optional] 
+**type** | [**Riskanalyticsenginev3FieldType**](Riskanalyticsenginev3FieldType.md) |  | [optional] [default to Riskanalyticsenginev3FieldType.UNDEFINED_TYPE]
 **value** | **str** | Additional info value. | [optional] 
 
 ## Example

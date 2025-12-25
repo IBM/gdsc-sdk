@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,88 +43,104 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListActualFlowPathsFilterParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListActualFlowPathsFilterParameter {
   public static final String SERIALIZED_NAME_FLOW_IDS = "flowIds";
   @SerializedName(SERIALIZED_NAME_FLOW_IDS)
+  @javax.annotation.Nullable
   private List<String> flowIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SOURCE_IDS = "sourceIds";
   @SerializedName(SERIALIZED_NAME_SOURCE_IDS)
+  @javax.annotation.Nullable
   private List<String> sourceIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SOURCE_TYPES = "sourceTypes";
   @SerializedName(SERIALIZED_NAME_SOURCE_TYPES)
+  @javax.annotation.Nullable
   private List<String> sourceTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SOURCE_CLOUD_ACCOUNT_IDS = "sourceCloudAccountIds";
   @SerializedName(SERIALIZED_NAME_SOURCE_CLOUD_ACCOUNT_IDS)
+  @javax.annotation.Nullable
   private List<String> sourceCloudAccountIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SOURCE_CLOUD_REGIONS = "sourceCloudRegions";
   @SerializedName(SERIALIZED_NAME_SOURCE_CLOUD_REGIONS)
+  @javax.annotation.Nullable
   private List<String> sourceCloudRegions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SOURCE_CLOUD_PROVIDERS = "sourceCloudProviders";
   @SerializedName(SERIALIZED_NAME_SOURCE_CLOUD_PROVIDERS)
+  @javax.annotation.Nullable
   private List<CloudServiceProvider> sourceCloudProviders = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESTINATION_IDS = "destinationIds";
   @SerializedName(SERIALIZED_NAME_DESTINATION_IDS)
+  @javax.annotation.Nullable
   private List<String> destinationIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESTINATION_TYPES = "destinationTypes";
   @SerializedName(SERIALIZED_NAME_DESTINATION_TYPES)
+  @javax.annotation.Nullable
   private List<String> destinationTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESTINATION_CLOUD_ACCOUNT_IDS = "destinationCloudAccountIds";
   @SerializedName(SERIALIZED_NAME_DESTINATION_CLOUD_ACCOUNT_IDS)
+  @javax.annotation.Nullable
   private List<String> destinationCloudAccountIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESTINATION_CLOUD_REGIONS = "destinationCloudRegions";
   @SerializedName(SERIALIZED_NAME_DESTINATION_CLOUD_REGIONS)
+  @javax.annotation.Nullable
   private List<String> destinationCloudRegions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESTINATION_CLOUD_PROVIDERS = "destinationCloudProviders";
   @SerializedName(SERIALIZED_NAME_DESTINATION_CLOUD_PROVIDERS)
+  @javax.annotation.Nullable
   private List<CloudServiceProvider> destinationCloudProviders = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ACCESS_TYPES = "accessTypes";
   @SerializedName(SERIALIZED_NAME_ACCESS_TYPES)
+  @javax.annotation.Nullable
   private List<AccessType> accessTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_USERNAMES = "usernames";
   @SerializedName(SERIALIZED_NAME_USERNAMES)
+  @javax.annotation.Nullable
   private List<String> usernames = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TRUSTEE_IDS = "trusteeIds";
   @SerializedName(SERIALIZED_NAME_TRUSTEE_IDS)
+  @javax.annotation.Nullable
   private List<String> trusteeIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LAST_SEEN = "lastSeen";
   @SerializedName(SERIALIZED_NAME_LAST_SEEN)
+  @javax.annotation.Nullable
   private Comparator lastSeen;
 
   public static final String SERIALIZED_NAME_FIRST_SEEN = "firstSeen";
   @SerializedName(SERIALIZED_NAME_FIRST_SEEN)
+  @javax.annotation.Nullable
   private Comparator firstSeen;
 
   public ListActualFlowPathsFilterParameter() {
   }
 
-  public ListActualFlowPathsFilterParameter flowIds(List<String> flowIds) {
+  public ListActualFlowPathsFilterParameter flowIds(@javax.annotation.Nullable List<String> flowIds) {
     this.flowIds = flowIds;
     return this;
   }
@@ -136,21 +153,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get flowIds
    * @return flowIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getFlowIds() {
     return flowIds;
   }
 
-  public void setFlowIds(List<String> flowIds) {
+  public void setFlowIds(@javax.annotation.Nullable List<String> flowIds) {
     this.flowIds = flowIds;
   }
 
 
-  public ListActualFlowPathsFilterParameter sourceIds(List<String> sourceIds) {
+  public ListActualFlowPathsFilterParameter sourceIds(@javax.annotation.Nullable List<String> sourceIds) {
     this.sourceIds = sourceIds;
     return this;
   }
@@ -163,21 +180,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sourceIds
    * @return sourceIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSourceIds() {
     return sourceIds;
   }
 
-  public void setSourceIds(List<String> sourceIds) {
+  public void setSourceIds(@javax.annotation.Nullable List<String> sourceIds) {
     this.sourceIds = sourceIds;
   }
 
 
-  public ListActualFlowPathsFilterParameter sourceTypes(List<String> sourceTypes) {
+  public ListActualFlowPathsFilterParameter sourceTypes(@javax.annotation.Nullable List<String> sourceTypes) {
     this.sourceTypes = sourceTypes;
     return this;
   }
@@ -190,21 +207,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sourceTypes
    * @return sourceTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSourceTypes() {
     return sourceTypes;
   }
 
-  public void setSourceTypes(List<String> sourceTypes) {
+  public void setSourceTypes(@javax.annotation.Nullable List<String> sourceTypes) {
     this.sourceTypes = sourceTypes;
   }
 
 
-  public ListActualFlowPathsFilterParameter sourceCloudAccountIds(List<String> sourceCloudAccountIds) {
+  public ListActualFlowPathsFilterParameter sourceCloudAccountIds(@javax.annotation.Nullable List<String> sourceCloudAccountIds) {
     this.sourceCloudAccountIds = sourceCloudAccountIds;
     return this;
   }
@@ -217,21 +234,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sourceCloudAccountIds
    * @return sourceCloudAccountIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSourceCloudAccountIds() {
     return sourceCloudAccountIds;
   }
 
-  public void setSourceCloudAccountIds(List<String> sourceCloudAccountIds) {
+  public void setSourceCloudAccountIds(@javax.annotation.Nullable List<String> sourceCloudAccountIds) {
     this.sourceCloudAccountIds = sourceCloudAccountIds;
   }
 
 
-  public ListActualFlowPathsFilterParameter sourceCloudRegions(List<String> sourceCloudRegions) {
+  public ListActualFlowPathsFilterParameter sourceCloudRegions(@javax.annotation.Nullable List<String> sourceCloudRegions) {
     this.sourceCloudRegions = sourceCloudRegions;
     return this;
   }
@@ -244,21 +261,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sourceCloudRegions
    * @return sourceCloudRegions
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSourceCloudRegions() {
     return sourceCloudRegions;
   }
 
-  public void setSourceCloudRegions(List<String> sourceCloudRegions) {
+  public void setSourceCloudRegions(@javax.annotation.Nullable List<String> sourceCloudRegions) {
     this.sourceCloudRegions = sourceCloudRegions;
   }
 
 
-  public ListActualFlowPathsFilterParameter sourceCloudProviders(List<CloudServiceProvider> sourceCloudProviders) {
+  public ListActualFlowPathsFilterParameter sourceCloudProviders(@javax.annotation.Nullable List<CloudServiceProvider> sourceCloudProviders) {
     this.sourceCloudProviders = sourceCloudProviders;
     return this;
   }
@@ -271,21 +288,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sourceCloudProviders
    * @return sourceCloudProviders
-  **/
+   */
   @javax.annotation.Nullable
   public List<CloudServiceProvider> getSourceCloudProviders() {
     return sourceCloudProviders;
   }
 
-  public void setSourceCloudProviders(List<CloudServiceProvider> sourceCloudProviders) {
+  public void setSourceCloudProviders(@javax.annotation.Nullable List<CloudServiceProvider> sourceCloudProviders) {
     this.sourceCloudProviders = sourceCloudProviders;
   }
 
 
-  public ListActualFlowPathsFilterParameter destinationIds(List<String> destinationIds) {
+  public ListActualFlowPathsFilterParameter destinationIds(@javax.annotation.Nullable List<String> destinationIds) {
     this.destinationIds = destinationIds;
     return this;
   }
@@ -298,21 +315,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get destinationIds
    * @return destinationIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDestinationIds() {
     return destinationIds;
   }
 
-  public void setDestinationIds(List<String> destinationIds) {
+  public void setDestinationIds(@javax.annotation.Nullable List<String> destinationIds) {
     this.destinationIds = destinationIds;
   }
 
 
-  public ListActualFlowPathsFilterParameter destinationTypes(List<String> destinationTypes) {
+  public ListActualFlowPathsFilterParameter destinationTypes(@javax.annotation.Nullable List<String> destinationTypes) {
     this.destinationTypes = destinationTypes;
     return this;
   }
@@ -325,21 +342,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get destinationTypes
    * @return destinationTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDestinationTypes() {
     return destinationTypes;
   }
 
-  public void setDestinationTypes(List<String> destinationTypes) {
+  public void setDestinationTypes(@javax.annotation.Nullable List<String> destinationTypes) {
     this.destinationTypes = destinationTypes;
   }
 
 
-  public ListActualFlowPathsFilterParameter destinationCloudAccountIds(List<String> destinationCloudAccountIds) {
+  public ListActualFlowPathsFilterParameter destinationCloudAccountIds(@javax.annotation.Nullable List<String> destinationCloudAccountIds) {
     this.destinationCloudAccountIds = destinationCloudAccountIds;
     return this;
   }
@@ -352,21 +369,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get destinationCloudAccountIds
    * @return destinationCloudAccountIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDestinationCloudAccountIds() {
     return destinationCloudAccountIds;
   }
 
-  public void setDestinationCloudAccountIds(List<String> destinationCloudAccountIds) {
+  public void setDestinationCloudAccountIds(@javax.annotation.Nullable List<String> destinationCloudAccountIds) {
     this.destinationCloudAccountIds = destinationCloudAccountIds;
   }
 
 
-  public ListActualFlowPathsFilterParameter destinationCloudRegions(List<String> destinationCloudRegions) {
+  public ListActualFlowPathsFilterParameter destinationCloudRegions(@javax.annotation.Nullable List<String> destinationCloudRegions) {
     this.destinationCloudRegions = destinationCloudRegions;
     return this;
   }
@@ -379,21 +396,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get destinationCloudRegions
    * @return destinationCloudRegions
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDestinationCloudRegions() {
     return destinationCloudRegions;
   }
 
-  public void setDestinationCloudRegions(List<String> destinationCloudRegions) {
+  public void setDestinationCloudRegions(@javax.annotation.Nullable List<String> destinationCloudRegions) {
     this.destinationCloudRegions = destinationCloudRegions;
   }
 
 
-  public ListActualFlowPathsFilterParameter destinationCloudProviders(List<CloudServiceProvider> destinationCloudProviders) {
+  public ListActualFlowPathsFilterParameter destinationCloudProviders(@javax.annotation.Nullable List<CloudServiceProvider> destinationCloudProviders) {
     this.destinationCloudProviders = destinationCloudProviders;
     return this;
   }
@@ -406,21 +423,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get destinationCloudProviders
    * @return destinationCloudProviders
-  **/
+   */
   @javax.annotation.Nullable
   public List<CloudServiceProvider> getDestinationCloudProviders() {
     return destinationCloudProviders;
   }
 
-  public void setDestinationCloudProviders(List<CloudServiceProvider> destinationCloudProviders) {
+  public void setDestinationCloudProviders(@javax.annotation.Nullable List<CloudServiceProvider> destinationCloudProviders) {
     this.destinationCloudProviders = destinationCloudProviders;
   }
 
 
-  public ListActualFlowPathsFilterParameter accessTypes(List<AccessType> accessTypes) {
+  public ListActualFlowPathsFilterParameter accessTypes(@javax.annotation.Nullable List<AccessType> accessTypes) {
     this.accessTypes = accessTypes;
     return this;
   }
@@ -433,21 +450,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get accessTypes
    * @return accessTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<AccessType> getAccessTypes() {
     return accessTypes;
   }
 
-  public void setAccessTypes(List<AccessType> accessTypes) {
+  public void setAccessTypes(@javax.annotation.Nullable List<AccessType> accessTypes) {
     this.accessTypes = accessTypes;
   }
 
 
-  public ListActualFlowPathsFilterParameter usernames(List<String> usernames) {
+  public ListActualFlowPathsFilterParameter usernames(@javax.annotation.Nullable List<String> usernames) {
     this.usernames = usernames;
     return this;
   }
@@ -460,21 +477,21 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get usernames
    * @return usernames
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getUsernames() {
     return usernames;
   }
 
-  public void setUsernames(List<String> usernames) {
+  public void setUsernames(@javax.annotation.Nullable List<String> usernames) {
     this.usernames = usernames;
   }
 
 
-  public ListActualFlowPathsFilterParameter trusteeIds(List<String> trusteeIds) {
+  public ListActualFlowPathsFilterParameter trusteeIds(@javax.annotation.Nullable List<String> trusteeIds) {
     this.trusteeIds = trusteeIds;
     return this;
   }
@@ -487,54 +504,54 @@ public class ListActualFlowPathsFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Identifiers of access granting cloud assets (aws ARN, Azure resource id, etc.)
    * @return trusteeIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTrusteeIds() {
     return trusteeIds;
   }
 
-  public void setTrusteeIds(List<String> trusteeIds) {
+  public void setTrusteeIds(@javax.annotation.Nullable List<String> trusteeIds) {
     this.trusteeIds = trusteeIds;
   }
 
 
-  public ListActualFlowPathsFilterParameter lastSeen(Comparator lastSeen) {
+  public ListActualFlowPathsFilterParameter lastSeen(@javax.annotation.Nullable Comparator lastSeen) {
     this.lastSeen = lastSeen;
     return this;
   }
 
-   /**
+  /**
    * Get lastSeen
    * @return lastSeen
-  **/
+   */
   @javax.annotation.Nullable
   public Comparator getLastSeen() {
     return lastSeen;
   }
 
-  public void setLastSeen(Comparator lastSeen) {
+  public void setLastSeen(@javax.annotation.Nullable Comparator lastSeen) {
     this.lastSeen = lastSeen;
   }
 
 
-  public ListActualFlowPathsFilterParameter firstSeen(Comparator firstSeen) {
+  public ListActualFlowPathsFilterParameter firstSeen(@javax.annotation.Nullable Comparator firstSeen) {
     this.firstSeen = firstSeen;
     return this;
   }
 
-   /**
+  /**
    * Get firstSeen
    * @return firstSeen
-  **/
+   */
   @javax.annotation.Nullable
   public Comparator getFirstSeen() {
     return firstSeen;
   }
 
-  public void setFirstSeen(Comparator firstSeen) {
+  public void setFirstSeen(@javax.annotation.Nullable Comparator firstSeen) {
     this.firstSeen = firstSeen;
   }
 
@@ -613,38 +630,22 @@ public class ListActualFlowPathsFilterParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("flowIds");
-    openapiFields.add("sourceIds");
-    openapiFields.add("sourceTypes");
-    openapiFields.add("sourceCloudAccountIds");
-    openapiFields.add("sourceCloudRegions");
-    openapiFields.add("sourceCloudProviders");
-    openapiFields.add("destinationIds");
-    openapiFields.add("destinationTypes");
-    openapiFields.add("destinationCloudAccountIds");
-    openapiFields.add("destinationCloudRegions");
-    openapiFields.add("destinationCloudProviders");
-    openapiFields.add("accessTypes");
-    openapiFields.add("usernames");
-    openapiFields.add("trusteeIds");
-    openapiFields.add("lastSeen");
-    openapiFields.add("firstSeen");
+    openapiFields = new HashSet<String>(Arrays.asList("flowIds", "sourceIds", "sourceTypes", "sourceCloudAccountIds", "sourceCloudRegions", "sourceCloudProviders", "destinationIds", "destinationTypes", "destinationCloudAccountIds", "destinationCloudRegions", "destinationCloudProviders", "accessTypes", "usernames", "trusteeIds", "lastSeen", "firstSeen"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListActualFlowPathsFilterParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListActualFlowPathsFilterParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListActualFlowPathsFilterParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListActualFlowPathsFilterParameter is not found in the empty JSON string", ListActualFlowPathsFilterParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListActualFlowPathsFilterParameter is not found in the empty JSON string", ListActualFlowPathsFilterParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -652,65 +653,65 @@ public class ListActualFlowPathsFilterParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListActualFlowPathsFilterParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListActualFlowPathsFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListActualFlowPathsFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("flowIds") != null && !jsonObj.get("flowIds").isJsonNull() && !jsonObj.get("flowIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `flowIds` to be an array in the JSON string but got `%s`", jsonObj.get("flowIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `flowIds` to be an array in the JSON string but got `%s`", jsonObj.get("flowIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sourceIds") != null && !jsonObj.get("sourceIds").isJsonNull() && !jsonObj.get("sourceIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sourceIds` to be an array in the JSON string but got `%s`", jsonObj.get("sourceIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sourceIds` to be an array in the JSON string but got `%s`", jsonObj.get("sourceIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sourceTypes") != null && !jsonObj.get("sourceTypes").isJsonNull() && !jsonObj.get("sourceTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sourceTypes` to be an array in the JSON string but got `%s`", jsonObj.get("sourceTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sourceTypes` to be an array in the JSON string but got `%s`", jsonObj.get("sourceTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sourceCloudAccountIds") != null && !jsonObj.get("sourceCloudAccountIds").isJsonNull() && !jsonObj.get("sourceCloudAccountIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sourceCloudAccountIds` to be an array in the JSON string but got `%s`", jsonObj.get("sourceCloudAccountIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sourceCloudAccountIds` to be an array in the JSON string but got `%s`", jsonObj.get("sourceCloudAccountIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sourceCloudRegions") != null && !jsonObj.get("sourceCloudRegions").isJsonNull() && !jsonObj.get("sourceCloudRegions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sourceCloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("sourceCloudRegions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sourceCloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("sourceCloudRegions").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sourceCloudProviders") != null && !jsonObj.get("sourceCloudProviders").isJsonNull() && !jsonObj.get("sourceCloudProviders").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sourceCloudProviders` to be an array in the JSON string but got `%s`", jsonObj.get("sourceCloudProviders").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sourceCloudProviders` to be an array in the JSON string but got `%s`", jsonObj.get("sourceCloudProviders").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("destinationIds") != null && !jsonObj.get("destinationIds").isJsonNull() && !jsonObj.get("destinationIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `destinationIds` to be an array in the JSON string but got `%s`", jsonObj.get("destinationIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `destinationIds` to be an array in the JSON string but got `%s`", jsonObj.get("destinationIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("destinationTypes") != null && !jsonObj.get("destinationTypes").isJsonNull() && !jsonObj.get("destinationTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `destinationTypes` to be an array in the JSON string but got `%s`", jsonObj.get("destinationTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `destinationTypes` to be an array in the JSON string but got `%s`", jsonObj.get("destinationTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("destinationCloudAccountIds") != null && !jsonObj.get("destinationCloudAccountIds").isJsonNull() && !jsonObj.get("destinationCloudAccountIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `destinationCloudAccountIds` to be an array in the JSON string but got `%s`", jsonObj.get("destinationCloudAccountIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `destinationCloudAccountIds` to be an array in the JSON string but got `%s`", jsonObj.get("destinationCloudAccountIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("destinationCloudRegions") != null && !jsonObj.get("destinationCloudRegions").isJsonNull() && !jsonObj.get("destinationCloudRegions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `destinationCloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("destinationCloudRegions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `destinationCloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("destinationCloudRegions").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("destinationCloudProviders") != null && !jsonObj.get("destinationCloudProviders").isJsonNull() && !jsonObj.get("destinationCloudProviders").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `destinationCloudProviders` to be an array in the JSON string but got `%s`", jsonObj.get("destinationCloudProviders").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `destinationCloudProviders` to be an array in the JSON string but got `%s`", jsonObj.get("destinationCloudProviders").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("accessTypes") != null && !jsonObj.get("accessTypes").isJsonNull() && !jsonObj.get("accessTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accessTypes` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accessTypes` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("usernames") != null && !jsonObj.get("usernames").isJsonNull() && !jsonObj.get("usernames").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `usernames` to be an array in the JSON string but got `%s`", jsonObj.get("usernames").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `usernames` to be an array in the JSON string but got `%s`", jsonObj.get("usernames").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("trusteeIds") != null && !jsonObj.get("trusteeIds").isJsonNull() && !jsonObj.get("trusteeIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `trusteeIds` to be an array in the JSON string but got `%s`", jsonObj.get("trusteeIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `trusteeIds` to be an array in the JSON string but got `%s`", jsonObj.get("trusteeIds").toString()));
       }
       // validate the optional field `lastSeen`
       if (jsonObj.get("lastSeen") != null && !jsonObj.get("lastSeen").isJsonNull()) {
@@ -751,22 +752,22 @@ public class ListActualFlowPathsFilterParameter {
     }
   }
 
- /**
-  * Create an instance of ListActualFlowPathsFilterParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListActualFlowPathsFilterParameter
-  * @throws IOException if the JSON string is invalid with respect to ListActualFlowPathsFilterParameter
-  */
+  /**
+   * Create an instance of ListActualFlowPathsFilterParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListActualFlowPathsFilterParameter
+   * @throws IOException if the JSON string is invalid with respect to ListActualFlowPathsFilterParameter
+   */
   public static ListActualFlowPathsFilterParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListActualFlowPathsFilterParameter.class);
   }
 
- /**
-  * Convert an instance of ListActualFlowPathsFilterParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListActualFlowPathsFilterParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

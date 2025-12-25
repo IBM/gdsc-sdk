@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,48 +42,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3EntityHeader
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3EntityHeader {
   public static final String SERIALIZED_NAME_CHOICES = "choices";
   @SerializedName(SERIALIZED_NAME_CHOICES)
+  @javax.annotation.Nullable
   private List<Workflowv3EntityValueChoice> choices = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_GROUP_TYPE_ID = "group_type_id";
   @SerializedName(SERIALIZED_NAME_GROUP_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer groupTypeId;
 
   public static final String SERIALIZED_NAME_HIDE_FROM_VIEW = "hide_from_view";
   @SerializedName(SERIALIZED_NAME_HIDE_FROM_VIEW)
+  @javax.annotation.Nullable
   private Boolean hideFromView;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Workflowv3EntityHeaderType type = Workflowv3EntityHeaderType.STRING;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public Workflowv3EntityHeader() {
   }
 
-  public Workflowv3EntityHeader choices(List<Workflowv3EntityValueChoice> choices) {
+  public Workflowv3EntityHeader choices(@javax.annotation.Nullable List<Workflowv3EntityValueChoice> choices) {
     this.choices = choices;
     return this;
   }
@@ -95,111 +102,111 @@ public class Workflowv3EntityHeader {
     return this;
   }
 
-   /**
+  /**
    * Get choices
    * @return choices
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3EntityValueChoice> getChoices() {
     return choices;
   }
 
-  public void setChoices(List<Workflowv3EntityValueChoice> choices) {
+  public void setChoices(@javax.annotation.Nullable List<Workflowv3EntityValueChoice> choices) {
     this.choices = choices;
   }
 
 
-  public Workflowv3EntityHeader groupTypeId(Integer groupTypeId) {
+  public Workflowv3EntityHeader groupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
     return this;
   }
 
-   /**
+  /**
    * Get groupTypeId
    * @return groupTypeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupTypeId() {
     return groupTypeId;
   }
 
-  public void setGroupTypeId(Integer groupTypeId) {
+  public void setGroupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
   }
 
 
-  public Workflowv3EntityHeader hideFromView(Boolean hideFromView) {
+  public Workflowv3EntityHeader hideFromView(@javax.annotation.Nullable Boolean hideFromView) {
     this.hideFromView = hideFromView;
     return this;
   }
 
-   /**
+  /**
    * Get hideFromView
    * @return hideFromView
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHideFromView() {
     return hideFromView;
   }
 
-  public void setHideFromView(Boolean hideFromView) {
+  public void setHideFromView(@javax.annotation.Nullable Boolean hideFromView) {
     this.hideFromView = hideFromView;
   }
 
 
-  public Workflowv3EntityHeader key(String key) {
+  public Workflowv3EntityHeader key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Get key
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Workflowv3EntityHeader type(Workflowv3EntityHeaderType type) {
+  public Workflowv3EntityHeader type(@javax.annotation.Nullable Workflowv3EntityHeaderType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3EntityHeaderType getType() {
     return type;
   }
 
-  public void setType(Workflowv3EntityHeaderType type) {
+  public void setType(@javax.annotation.Nullable Workflowv3EntityHeaderType type) {
     this.type = type;
   }
 
 
-  public Workflowv3EntityHeader value(String value) {
+  public Workflowv3EntityHeader value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Get value
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public String getValue() {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
@@ -258,28 +265,22 @@ public class Workflowv3EntityHeader {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("choices");
-    openapiFields.add("group_type_id");
-    openapiFields.add("hide_from_view");
-    openapiFields.add("key");
-    openapiFields.add("type");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("choices", "group_type_id", "hide_from_view", "key", "type", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3EntityHeader
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3EntityHeader
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3EntityHeader.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3EntityHeader is not found in the empty JSON string", Workflowv3EntityHeader.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3EntityHeader is not found in the empty JSON string", Workflowv3EntityHeader.openapiRequiredFields.toString()));
         }
       }
 
@@ -287,7 +288,7 @@ public class Workflowv3EntityHeader {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3EntityHeader.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3EntityHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3EntityHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -296,7 +297,7 @@ public class Workflowv3EntityHeader {
         if (jsonArraychoices != null) {
           // ensure the json data is an array
           if (!jsonObj.get("choices").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `choices` to be an array in the JSON string but got `%s`", jsonObj.get("choices").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `choices` to be an array in the JSON string but got `%s`", jsonObj.get("choices").toString()));
           }
 
           // validate the optional field `choices` (array)
@@ -306,14 +307,14 @@ public class Workflowv3EntityHeader {
         }
       }
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
         Workflowv3EntityHeaderType.validateJsonElement(jsonObj.get("type"));
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -346,22 +347,22 @@ public class Workflowv3EntityHeader {
     }
   }
 
- /**
-  * Create an instance of Workflowv3EntityHeader given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3EntityHeader
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3EntityHeader
-  */
+  /**
+   * Create an instance of Workflowv3EntityHeader given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3EntityHeader
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3EntityHeader
+   */
   public static Workflowv3EntityHeader fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3EntityHeader.class);
   }
 
- /**
-  * Convert an instance of Workflowv3EntityHeader to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3EntityHeader to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

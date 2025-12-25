@@ -20,23 +20,22 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
+import type { AuthServerServiceApiAuthServerServiceCreateOauthClientRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:.AuthServerServiceApiAuthServerServiceCreateOauthClientRequest = {
-  // AuthserverCreateOauthClientRequest
+const request: AuthServerServiceApiAuthServerServiceCreateOauthClientRequest = {
+  
   authserverCreateOauthClientRequest: {
     description: "description_example",
     name: "name_example",
   },
 };
 
-apiInstance.authServerServiceCreateOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceCreateOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -77,20 +76,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
+import type { AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:.AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest = {
-  // string | ClientID of registered OAuth.
+const request: AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest = {
+    // ClientID of registered OAuth.
   clientId: "client_id_example",
 };
 
-apiInstance.authServerServiceDeleteOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceDeleteOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -131,17 +129,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.authServerServiceGetAccessToken(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceGetAccessToken(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -179,20 +175,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
+import type { AuthServerServiceApiAuthServerServiceGetOauthClientRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:.AuthServerServiceApiAuthServerServiceGetOauthClientRequest = {
-  // string | ClientID of registered OAuth.
+const request: AuthServerServiceApiAuthServerServiceGetOauthClientRequest = {
+    // ClientID of registered OAuth.
   clientId: "client_id_example",
 };
 
-apiInstance.authServerServiceGetOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceGetOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -233,17 +228,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.authServerServiceGetUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceGetUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -281,17 +274,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.authServerServiceListOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceListOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

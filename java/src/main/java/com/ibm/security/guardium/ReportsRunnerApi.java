@@ -95,13 +95,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetActiveQueriesCall(Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetActiveQueriesCall(@javax.annotation.Nonnull Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -147,7 +148,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerGetActiveQueriesValidateBeforeCall(Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerGetActiveQueriesValidateBeforeCall(@javax.annotation.Nonnull Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsrunnerv3GetActiveQueriesRequest' is set
         if (reportsrunnerv3GetActiveQueriesRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsrunnerv3GetActiveQueriesRequest' when calling reportsRunnerGetActiveQueries(Async)");
@@ -164,13 +165,14 @@ public class ReportsRunnerApi {
      * @return Reportsrunnerv3GetActiveQueriesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsrunnerv3GetActiveQueriesResponse reportsRunnerGetActiveQueries(Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest) throws ApiException {
+    public Reportsrunnerv3GetActiveQueriesResponse reportsRunnerGetActiveQueries(@javax.annotation.Nonnull Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest) throws ApiException {
         ApiResponse<Reportsrunnerv3GetActiveQueriesResponse> localVarResp = reportsRunnerGetActiveQueriesWithHttpInfo(reportsrunnerv3GetActiveQueriesRequest);
         return localVarResp.getData();
     }
@@ -182,13 +184,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;Reportsrunnerv3GetActiveQueriesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsrunnerv3GetActiveQueriesResponse> reportsRunnerGetActiveQueriesWithHttpInfo(Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest) throws ApiException {
+    public ApiResponse<Reportsrunnerv3GetActiveQueriesResponse> reportsRunnerGetActiveQueriesWithHttpInfo(@javax.annotation.Nonnull Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerGetActiveQueriesValidateBeforeCall(reportsrunnerv3GetActiveQueriesRequest, null);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetActiveQueriesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -202,13 +205,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetActiveQueriesAsync(Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest, final ApiCallback<Reportsrunnerv3GetActiveQueriesResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetActiveQueriesAsync(@javax.annotation.Nonnull Reportsrunnerv3GetActiveQueriesRequest reportsrunnerv3GetActiveQueriesRequest, final ApiCallback<Reportsrunnerv3GetActiveQueriesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerGetActiveQueriesValidateBeforeCall(reportsrunnerv3GetActiveQueriesRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetActiveQueriesResponse>(){}.getType();
@@ -223,13 +227,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetAuditDataCountCall(String reportId, Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetAuditDataCountCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -276,7 +281,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerGetAuditDataCountValidateBeforeCall(String reportId, Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerGetAuditDataCountValidateBeforeCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling reportsRunnerGetAuditDataCount(Async)");
@@ -299,13 +304,14 @@ public class ReportsRunnerApi {
      * @return Reportsrunnerv3GetReportDataCountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsrunnerv3GetReportDataCountResponse reportsRunnerGetAuditDataCount(String reportId, Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest) throws ApiException {
+    public Reportsrunnerv3GetReportDataCountResponse reportsRunnerGetAuditDataCount(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest) throws ApiException {
         ApiResponse<Reportsrunnerv3GetReportDataCountResponse> localVarResp = reportsRunnerGetAuditDataCountWithHttpInfo(reportId, reportsrunnerv3GetAuditDataCountRequest);
         return localVarResp.getData();
     }
@@ -318,13 +324,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;Reportsrunnerv3GetReportDataCountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsrunnerv3GetReportDataCountResponse> reportsRunnerGetAuditDataCountWithHttpInfo(String reportId, Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest) throws ApiException {
+    public ApiResponse<Reportsrunnerv3GetReportDataCountResponse> reportsRunnerGetAuditDataCountWithHttpInfo(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerGetAuditDataCountValidateBeforeCall(reportId, reportsrunnerv3GetAuditDataCountRequest, null);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetReportDataCountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -339,13 +346,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetAuditDataCountAsync(String reportId, Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest, final ApiCallback<Reportsrunnerv3GetReportDataCountResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetAuditDataCountAsync(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3GetAuditDataCountRequest reportsrunnerv3GetAuditDataCountRequest, final ApiCallback<Reportsrunnerv3GetReportDataCountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerGetAuditDataCountValidateBeforeCall(reportId, reportsrunnerv3GetAuditDataCountRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetReportDataCountResponse>(){}.getType();
@@ -359,13 +367,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetChartDataCall(Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetChartDataCall(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -411,7 +420,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerGetChartDataValidateBeforeCall(Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerGetChartDataValidateBeforeCall(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsrunnerv3GetChartDataRequest' is set
         if (reportsrunnerv3GetChartDataRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsrunnerv3GetChartDataRequest' when calling reportsRunnerGetChartData(Async)");
@@ -428,13 +437,14 @@ public class ReportsRunnerApi {
      * @return Reportsrunnerv3GetChartDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsrunnerv3GetChartDataResponse reportsRunnerGetChartData(Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest) throws ApiException {
+    public Reportsrunnerv3GetChartDataResponse reportsRunnerGetChartData(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest) throws ApiException {
         ApiResponse<Reportsrunnerv3GetChartDataResponse> localVarResp = reportsRunnerGetChartDataWithHttpInfo(reportsrunnerv3GetChartDataRequest);
         return localVarResp.getData();
     }
@@ -446,13 +456,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;Reportsrunnerv3GetChartDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsrunnerv3GetChartDataResponse> reportsRunnerGetChartDataWithHttpInfo(Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest) throws ApiException {
+    public ApiResponse<Reportsrunnerv3GetChartDataResponse> reportsRunnerGetChartDataWithHttpInfo(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerGetChartDataValidateBeforeCall(reportsrunnerv3GetChartDataRequest, null);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetChartDataResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -466,13 +477,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetChartDataAsync(Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest, final ApiCallback<Reportsrunnerv3GetChartDataResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetChartDataAsync(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequest reportsrunnerv3GetChartDataRequest, final ApiCallback<Reportsrunnerv3GetChartDataResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerGetChartDataValidateBeforeCall(reportsrunnerv3GetChartDataRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetChartDataResponse>(){}.getType();
@@ -486,13 +498,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetChartDatav2Call(Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetChartDatav2Call(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -538,7 +551,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerGetChartDatav2ValidateBeforeCall(Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerGetChartDatav2ValidateBeforeCall(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsrunnerv3GetChartDataRequestv2' is set
         if (reportsrunnerv3GetChartDataRequestv2 == null) {
             throw new ApiException("Missing the required parameter 'reportsrunnerv3GetChartDataRequestv2' when calling reportsRunnerGetChartDatav2(Async)");
@@ -555,13 +568,14 @@ public class ReportsRunnerApi {
      * @return Reportsrunnerv3GetChartDataResponsev2
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsrunnerv3GetChartDataResponsev2 reportsRunnerGetChartDatav2(Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2) throws ApiException {
+    public Reportsrunnerv3GetChartDataResponsev2 reportsRunnerGetChartDatav2(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2) throws ApiException {
         ApiResponse<Reportsrunnerv3GetChartDataResponsev2> localVarResp = reportsRunnerGetChartDatav2WithHttpInfo(reportsrunnerv3GetChartDataRequestv2);
         return localVarResp.getData();
     }
@@ -573,13 +587,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;Reportsrunnerv3GetChartDataResponsev2&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsrunnerv3GetChartDataResponsev2> reportsRunnerGetChartDatav2WithHttpInfo(Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2) throws ApiException {
+    public ApiResponse<Reportsrunnerv3GetChartDataResponsev2> reportsRunnerGetChartDatav2WithHttpInfo(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerGetChartDatav2ValidateBeforeCall(reportsrunnerv3GetChartDataRequestv2, null);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetChartDataResponsev2>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -593,13 +608,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetChartDatav2Async(Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2, final ApiCallback<Reportsrunnerv3GetChartDataResponsev2> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetChartDatav2Async(@javax.annotation.Nonnull Reportsrunnerv3GetChartDataRequestv2 reportsrunnerv3GetChartDataRequestv2, final ApiCallback<Reportsrunnerv3GetChartDataResponsev2> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerGetChartDatav2ValidateBeforeCall(reportsrunnerv3GetChartDataRequestv2, _callback);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetChartDataResponsev2>(){}.getType();
@@ -613,13 +629,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetReportColumnFacetCall(Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetReportColumnFacetCall(@javax.annotation.Nonnull Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -665,7 +682,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerGetReportColumnFacetValidateBeforeCall(Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerGetReportColumnFacetValidateBeforeCall(@javax.annotation.Nonnull Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsrunnerv3GetReportColumnFacetRequest' is set
         if (reportsrunnerv3GetReportColumnFacetRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsrunnerv3GetReportColumnFacetRequest' when calling reportsRunnerGetReportColumnFacet(Async)");
@@ -682,13 +699,14 @@ public class ReportsRunnerApi {
      * @return Reportsrunnerv3GetReportColumnFacetResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsrunnerv3GetReportColumnFacetResponse reportsRunnerGetReportColumnFacet(Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest) throws ApiException {
+    public Reportsrunnerv3GetReportColumnFacetResponse reportsRunnerGetReportColumnFacet(@javax.annotation.Nonnull Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest) throws ApiException {
         ApiResponse<Reportsrunnerv3GetReportColumnFacetResponse> localVarResp = reportsRunnerGetReportColumnFacetWithHttpInfo(reportsrunnerv3GetReportColumnFacetRequest);
         return localVarResp.getData();
     }
@@ -700,13 +718,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;Reportsrunnerv3GetReportColumnFacetResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsrunnerv3GetReportColumnFacetResponse> reportsRunnerGetReportColumnFacetWithHttpInfo(Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest) throws ApiException {
+    public ApiResponse<Reportsrunnerv3GetReportColumnFacetResponse> reportsRunnerGetReportColumnFacetWithHttpInfo(@javax.annotation.Nonnull Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerGetReportColumnFacetValidateBeforeCall(reportsrunnerv3GetReportColumnFacetRequest, null);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetReportColumnFacetResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -720,13 +739,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetReportColumnFacetAsync(Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest, final ApiCallback<Reportsrunnerv3GetReportColumnFacetResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetReportColumnFacetAsync(@javax.annotation.Nonnull Reportsrunnerv3GetReportColumnFacetRequest reportsrunnerv3GetReportColumnFacetRequest, final ApiCallback<Reportsrunnerv3GetReportColumnFacetResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerGetReportColumnFacetValidateBeforeCall(reportsrunnerv3GetReportColumnFacetRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetReportColumnFacetResponse>(){}.getType();
@@ -740,13 +760,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetReportDataCountCall(Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetReportDataCountCall(@javax.annotation.Nonnull Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -792,7 +813,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerGetReportDataCountValidateBeforeCall(Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerGetReportDataCountValidateBeforeCall(@javax.annotation.Nonnull Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsrunnerv3GetReportDataCountRequest' is set
         if (reportsrunnerv3GetReportDataCountRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsrunnerv3GetReportDataCountRequest' when calling reportsRunnerGetReportDataCount(Async)");
@@ -809,13 +830,14 @@ public class ReportsRunnerApi {
      * @return Reportsrunnerv3GetReportDataCountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsrunnerv3GetReportDataCountResponse reportsRunnerGetReportDataCount(Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest) throws ApiException {
+    public Reportsrunnerv3GetReportDataCountResponse reportsRunnerGetReportDataCount(@javax.annotation.Nonnull Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest) throws ApiException {
         ApiResponse<Reportsrunnerv3GetReportDataCountResponse> localVarResp = reportsRunnerGetReportDataCountWithHttpInfo(reportsrunnerv3GetReportDataCountRequest);
         return localVarResp.getData();
     }
@@ -827,13 +849,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;Reportsrunnerv3GetReportDataCountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsrunnerv3GetReportDataCountResponse> reportsRunnerGetReportDataCountWithHttpInfo(Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest) throws ApiException {
+    public ApiResponse<Reportsrunnerv3GetReportDataCountResponse> reportsRunnerGetReportDataCountWithHttpInfo(@javax.annotation.Nonnull Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerGetReportDataCountValidateBeforeCall(reportsrunnerv3GetReportDataCountRequest, null);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetReportDataCountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -847,13 +870,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerGetReportDataCountAsync(Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest, final ApiCallback<Reportsrunnerv3GetReportDataCountResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerGetReportDataCountAsync(@javax.annotation.Nonnull Reportsrunnerv3GetReportDataCountRequest reportsrunnerv3GetReportDataCountRequest, final ApiCallback<Reportsrunnerv3GetReportDataCountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerGetReportDataCountValidateBeforeCall(reportsrunnerv3GetReportDataCountRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3GetReportDataCountResponse>(){}.getType();
@@ -868,13 +892,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerRunAuditReportCall(String reportId, Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerRunAuditReportCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -921,7 +946,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerRunAuditReportValidateBeforeCall(String reportId, Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerRunAuditReportValidateBeforeCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling reportsRunnerRunAuditReport(Async)");
@@ -944,13 +969,14 @@ public class ReportsRunnerApi {
      * @return StreamResultOfReportsrunnerv3RunReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public StreamResultOfReportsrunnerv3RunReportResponse reportsRunnerRunAuditReport(String reportId, Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest) throws ApiException {
+    public StreamResultOfReportsrunnerv3RunReportResponse reportsRunnerRunAuditReport(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest) throws ApiException {
         ApiResponse<StreamResultOfReportsrunnerv3RunReportResponse> localVarResp = reportsRunnerRunAuditReportWithHttpInfo(reportId, reportsrunnerv3RunAuditReportRequest);
         return localVarResp.getData();
     }
@@ -963,13 +989,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;StreamResultOfReportsrunnerv3RunReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<StreamResultOfReportsrunnerv3RunReportResponse> reportsRunnerRunAuditReportWithHttpInfo(String reportId, Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest) throws ApiException {
+    public ApiResponse<StreamResultOfReportsrunnerv3RunReportResponse> reportsRunnerRunAuditReportWithHttpInfo(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerRunAuditReportValidateBeforeCall(reportId, reportsrunnerv3RunAuditReportRequest, null);
         Type localVarReturnType = new TypeToken<StreamResultOfReportsrunnerv3RunReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -984,13 +1011,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerRunAuditReportAsync(String reportId, Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest, final ApiCallback<StreamResultOfReportsrunnerv3RunReportResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerRunAuditReportAsync(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsrunnerv3RunAuditReportRequest reportsrunnerv3RunAuditReportRequest, final ApiCallback<StreamResultOfReportsrunnerv3RunReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerRunAuditReportValidateBeforeCall(reportId, reportsrunnerv3RunAuditReportRequest, _callback);
         Type localVarReturnType = new TypeToken<StreamResultOfReportsrunnerv3RunReportResponse>(){}.getType();
@@ -1004,13 +1032,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerRunReportCall(Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerRunReportCall(@javax.annotation.Nonnull Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1056,7 +1085,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerRunReportValidateBeforeCall(Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerRunReportValidateBeforeCall(@javax.annotation.Nonnull Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsrunnerv3RunReportRequest' is set
         if (reportsrunnerv3RunReportRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsrunnerv3RunReportRequest' when calling reportsRunnerRunReport(Async)");
@@ -1073,13 +1102,14 @@ public class ReportsRunnerApi {
      * @return StreamResultOfReportsrunnerv3RunReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public StreamResultOfReportsrunnerv3RunReportResponse reportsRunnerRunReport(Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest) throws ApiException {
+    public StreamResultOfReportsrunnerv3RunReportResponse reportsRunnerRunReport(@javax.annotation.Nonnull Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest) throws ApiException {
         ApiResponse<StreamResultOfReportsrunnerv3RunReportResponse> localVarResp = reportsRunnerRunReportWithHttpInfo(reportsrunnerv3RunReportRequest);
         return localVarResp.getData();
     }
@@ -1091,13 +1121,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;StreamResultOfReportsrunnerv3RunReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<StreamResultOfReportsrunnerv3RunReportResponse> reportsRunnerRunReportWithHttpInfo(Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest) throws ApiException {
+    public ApiResponse<StreamResultOfReportsrunnerv3RunReportResponse> reportsRunnerRunReportWithHttpInfo(@javax.annotation.Nonnull Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerRunReportValidateBeforeCall(reportsrunnerv3RunReportRequest, null);
         Type localVarReturnType = new TypeToken<StreamResultOfReportsrunnerv3RunReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1111,13 +1142,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerRunReportAsync(Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest, final ApiCallback<StreamResultOfReportsrunnerv3RunReportResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerRunReportAsync(@javax.annotation.Nonnull Reportsrunnerv3RunReportRequest reportsrunnerv3RunReportRequest, final ApiCallback<StreamResultOfReportsrunnerv3RunReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerRunReportValidateBeforeCall(reportsrunnerv3RunReportRequest, _callback);
         Type localVarReturnType = new TypeToken<StreamResultOfReportsrunnerv3RunReportResponse>(){}.getType();
@@ -1131,13 +1163,14 @@ public class ReportsRunnerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerStopQueryCall(Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerStopQueryCall(@javax.annotation.Nonnull Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1183,7 +1216,7 @@ public class ReportsRunnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsRunnerStopQueryValidateBeforeCall(Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsRunnerStopQueryValidateBeforeCall(@javax.annotation.Nonnull Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsrunnerv3StopQueryRequest' is set
         if (reportsrunnerv3StopQueryRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsrunnerv3StopQueryRequest' when calling reportsRunnerStopQuery(Async)");
@@ -1200,13 +1233,14 @@ public class ReportsRunnerApi {
      * @return Reportsrunnerv3StopQueryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsrunnerv3StopQueryResponse reportsRunnerStopQuery(Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest) throws ApiException {
+    public Reportsrunnerv3StopQueryResponse reportsRunnerStopQuery(@javax.annotation.Nonnull Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest) throws ApiException {
         ApiResponse<Reportsrunnerv3StopQueryResponse> localVarResp = reportsRunnerStopQueryWithHttpInfo(reportsrunnerv3StopQueryRequest);
         return localVarResp.getData();
     }
@@ -1218,13 +1252,14 @@ public class ReportsRunnerApi {
      * @return ApiResponse&lt;Reportsrunnerv3StopQueryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsrunnerv3StopQueryResponse> reportsRunnerStopQueryWithHttpInfo(Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest) throws ApiException {
+    public ApiResponse<Reportsrunnerv3StopQueryResponse> reportsRunnerStopQueryWithHttpInfo(@javax.annotation.Nonnull Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsRunnerStopQueryValidateBeforeCall(reportsrunnerv3StopQueryRequest, null);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3StopQueryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1238,13 +1273,14 @@ public class ReportsRunnerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsRunnerStopQueryAsync(Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest, final ApiCallback<Reportsrunnerv3StopQueryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsRunnerStopQueryAsync(@javax.annotation.Nonnull Reportsrunnerv3StopQueryRequest reportsrunnerv3StopQueryRequest, final ApiCallback<Reportsrunnerv3StopQueryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsRunnerStopQueryValidateBeforeCall(reportsrunnerv3StopQueryRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsrunnerv3StopQueryResponse>(){}.getType();

@@ -19,6 +19,8 @@ export class ListLinkedVendorDataStoresSortParameter {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "sortBy",
@@ -40,7 +42,6 @@ export class ListLinkedVendorDataStoresSortParameter {
     public constructor() {
     }
 }
-
 
 export enum ListLinkedVendorDataStoresSortParameterSortByEnum {
     DataStoreId = 'dataStoreId',

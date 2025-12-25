@@ -24,6 +24,8 @@ export class Riskanalyticscontrollerv3Indicator {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "indicatorDesc",
@@ -45,4 +47,3 @@ export class Riskanalyticscontrollerv3Indicator {
     public constructor() {
     }
 }
-

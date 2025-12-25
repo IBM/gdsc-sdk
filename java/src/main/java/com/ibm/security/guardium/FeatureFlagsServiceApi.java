@@ -85,13 +85,14 @@ public class FeatureFlagsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceDeleteFeatureFlagOverridesCall(String flagName, String tenantId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceDeleteFeatureFlagOverridesCall(@javax.annotation.Nullable String flagName, @javax.annotation.Nullable String tenantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -144,7 +145,7 @@ public class FeatureFlagsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call featureFlagsServiceDeleteFeatureFlagOverridesValidateBeforeCall(String flagName, String tenantId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call featureFlagsServiceDeleteFeatureFlagOverridesValidateBeforeCall(@javax.annotation.Nullable String flagName, @javax.annotation.Nullable String tenantId, final ApiCallback _callback) throws ApiException {
         return featureFlagsServiceDeleteFeatureFlagOverridesCall(flagName, tenantId, _callback);
 
     }
@@ -157,13 +158,14 @@ public class FeatureFlagsServiceApi {
      * @return Featureflagsv3DeleteFeatureFlagOverridesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Featureflagsv3DeleteFeatureFlagOverridesResponse featureFlagsServiceDeleteFeatureFlagOverrides(String flagName, String tenantId) throws ApiException {
+    public Featureflagsv3DeleteFeatureFlagOverridesResponse featureFlagsServiceDeleteFeatureFlagOverrides(@javax.annotation.Nullable String flagName, @javax.annotation.Nullable String tenantId) throws ApiException {
         ApiResponse<Featureflagsv3DeleteFeatureFlagOverridesResponse> localVarResp = featureFlagsServiceDeleteFeatureFlagOverridesWithHttpInfo(flagName, tenantId);
         return localVarResp.getData();
     }
@@ -176,13 +178,14 @@ public class FeatureFlagsServiceApi {
      * @return ApiResponse&lt;Featureflagsv3DeleteFeatureFlagOverridesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Featureflagsv3DeleteFeatureFlagOverridesResponse> featureFlagsServiceDeleteFeatureFlagOverridesWithHttpInfo(String flagName, String tenantId) throws ApiException {
+    public ApiResponse<Featureflagsv3DeleteFeatureFlagOverridesResponse> featureFlagsServiceDeleteFeatureFlagOverridesWithHttpInfo(@javax.annotation.Nullable String flagName, @javax.annotation.Nullable String tenantId) throws ApiException {
         okhttp3.Call localVarCall = featureFlagsServiceDeleteFeatureFlagOverridesValidateBeforeCall(flagName, tenantId, null);
         Type localVarReturnType = new TypeToken<Featureflagsv3DeleteFeatureFlagOverridesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -197,13 +200,14 @@ public class FeatureFlagsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceDeleteFeatureFlagOverridesAsync(String flagName, String tenantId, final ApiCallback<Featureflagsv3DeleteFeatureFlagOverridesResponse> _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceDeleteFeatureFlagOverridesAsync(@javax.annotation.Nullable String flagName, @javax.annotation.Nullable String tenantId, final ApiCallback<Featureflagsv3DeleteFeatureFlagOverridesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = featureFlagsServiceDeleteFeatureFlagOverridesValidateBeforeCall(flagName, tenantId, _callback);
         Type localVarReturnType = new TypeToken<Featureflagsv3DeleteFeatureFlagOverridesResponse>(){}.getType();
@@ -218,13 +222,14 @@ public class FeatureFlagsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceGetFeatureFlagOverridesCall(String tenantId, List<String> flagNames, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceGetFeatureFlagOverridesCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -277,7 +282,7 @@ public class FeatureFlagsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call featureFlagsServiceGetFeatureFlagOverridesValidateBeforeCall(String tenantId, List<String> flagNames, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call featureFlagsServiceGetFeatureFlagOverridesValidateBeforeCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames, final ApiCallback _callback) throws ApiException {
         return featureFlagsServiceGetFeatureFlagOverridesCall(tenantId, flagNames, _callback);
 
     }
@@ -290,13 +295,14 @@ public class FeatureFlagsServiceApi {
      * @return Featureflagsv3GetFeatureFlagOverridesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Featureflagsv3GetFeatureFlagOverridesResponse featureFlagsServiceGetFeatureFlagOverrides(String tenantId, List<String> flagNames) throws ApiException {
+    public Featureflagsv3GetFeatureFlagOverridesResponse featureFlagsServiceGetFeatureFlagOverrides(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames) throws ApiException {
         ApiResponse<Featureflagsv3GetFeatureFlagOverridesResponse> localVarResp = featureFlagsServiceGetFeatureFlagOverridesWithHttpInfo(tenantId, flagNames);
         return localVarResp.getData();
     }
@@ -309,13 +315,14 @@ public class FeatureFlagsServiceApi {
      * @return ApiResponse&lt;Featureflagsv3GetFeatureFlagOverridesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Featureflagsv3GetFeatureFlagOverridesResponse> featureFlagsServiceGetFeatureFlagOverridesWithHttpInfo(String tenantId, List<String> flagNames) throws ApiException {
+    public ApiResponse<Featureflagsv3GetFeatureFlagOverridesResponse> featureFlagsServiceGetFeatureFlagOverridesWithHttpInfo(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames) throws ApiException {
         okhttp3.Call localVarCall = featureFlagsServiceGetFeatureFlagOverridesValidateBeforeCall(tenantId, flagNames, null);
         Type localVarReturnType = new TypeToken<Featureflagsv3GetFeatureFlagOverridesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -330,13 +337,14 @@ public class FeatureFlagsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceGetFeatureFlagOverridesAsync(String tenantId, List<String> flagNames, final ApiCallback<Featureflagsv3GetFeatureFlagOverridesResponse> _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceGetFeatureFlagOverridesAsync(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames, final ApiCallback<Featureflagsv3GetFeatureFlagOverridesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = featureFlagsServiceGetFeatureFlagOverridesValidateBeforeCall(tenantId, flagNames, _callback);
         Type localVarReturnType = new TypeToken<Featureflagsv3GetFeatureFlagOverridesResponse>(){}.getType();
@@ -351,13 +359,14 @@ public class FeatureFlagsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceGetFeatureFlagsCall(String tenantId, List<String> flagNames, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceGetFeatureFlagsCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -410,7 +419,7 @@ public class FeatureFlagsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call featureFlagsServiceGetFeatureFlagsValidateBeforeCall(String tenantId, List<String> flagNames, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call featureFlagsServiceGetFeatureFlagsValidateBeforeCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames, final ApiCallback _callback) throws ApiException {
         return featureFlagsServiceGetFeatureFlagsCall(tenantId, flagNames, _callback);
 
     }
@@ -423,13 +432,14 @@ public class FeatureFlagsServiceApi {
      * @return Featureflagsv3GetFeatureFlagsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Featureflagsv3GetFeatureFlagsResponse featureFlagsServiceGetFeatureFlags(String tenantId, List<String> flagNames) throws ApiException {
+    public Featureflagsv3GetFeatureFlagsResponse featureFlagsServiceGetFeatureFlags(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames) throws ApiException {
         ApiResponse<Featureflagsv3GetFeatureFlagsResponse> localVarResp = featureFlagsServiceGetFeatureFlagsWithHttpInfo(tenantId, flagNames);
         return localVarResp.getData();
     }
@@ -442,13 +452,14 @@ public class FeatureFlagsServiceApi {
      * @return ApiResponse&lt;Featureflagsv3GetFeatureFlagsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Featureflagsv3GetFeatureFlagsResponse> featureFlagsServiceGetFeatureFlagsWithHttpInfo(String tenantId, List<String> flagNames) throws ApiException {
+    public ApiResponse<Featureflagsv3GetFeatureFlagsResponse> featureFlagsServiceGetFeatureFlagsWithHttpInfo(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames) throws ApiException {
         okhttp3.Call localVarCall = featureFlagsServiceGetFeatureFlagsValidateBeforeCall(tenantId, flagNames, null);
         Type localVarReturnType = new TypeToken<Featureflagsv3GetFeatureFlagsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -463,13 +474,14 @@ public class FeatureFlagsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceGetFeatureFlagsAsync(String tenantId, List<String> flagNames, final ApiCallback<Featureflagsv3GetFeatureFlagsResponse> _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceGetFeatureFlagsAsync(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable List<String> flagNames, final ApiCallback<Featureflagsv3GetFeatureFlagsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = featureFlagsServiceGetFeatureFlagsValidateBeforeCall(tenantId, flagNames, _callback);
         Type localVarReturnType = new TypeToken<Featureflagsv3GetFeatureFlagsResponse>(){}.getType();
@@ -483,13 +495,14 @@ public class FeatureFlagsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceUpdateFeatureFlagOverridesCall(Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceUpdateFeatureFlagOverridesCall(@javax.annotation.Nonnull Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -535,7 +548,7 @@ public class FeatureFlagsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call featureFlagsServiceUpdateFeatureFlagOverridesValidateBeforeCall(Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call featureFlagsServiceUpdateFeatureFlagOverridesValidateBeforeCall(@javax.annotation.Nonnull Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'featureflagsv3UpdateFeatureFlagOverridesRequest' is set
         if (featureflagsv3UpdateFeatureFlagOverridesRequest == null) {
             throw new ApiException("Missing the required parameter 'featureflagsv3UpdateFeatureFlagOverridesRequest' when calling featureFlagsServiceUpdateFeatureFlagOverrides(Async)");
@@ -552,13 +565,14 @@ public class FeatureFlagsServiceApi {
      * @return Featureflagsv3UpdateFeatureFlagOverridesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Featureflagsv3UpdateFeatureFlagOverridesResponse featureFlagsServiceUpdateFeatureFlagOverrides(Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest) throws ApiException {
+    public Featureflagsv3UpdateFeatureFlagOverridesResponse featureFlagsServiceUpdateFeatureFlagOverrides(@javax.annotation.Nonnull Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest) throws ApiException {
         ApiResponse<Featureflagsv3UpdateFeatureFlagOverridesResponse> localVarResp = featureFlagsServiceUpdateFeatureFlagOverridesWithHttpInfo(featureflagsv3UpdateFeatureFlagOverridesRequest);
         return localVarResp.getData();
     }
@@ -570,13 +584,14 @@ public class FeatureFlagsServiceApi {
      * @return ApiResponse&lt;Featureflagsv3UpdateFeatureFlagOverridesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Featureflagsv3UpdateFeatureFlagOverridesResponse> featureFlagsServiceUpdateFeatureFlagOverridesWithHttpInfo(Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest) throws ApiException {
+    public ApiResponse<Featureflagsv3UpdateFeatureFlagOverridesResponse> featureFlagsServiceUpdateFeatureFlagOverridesWithHttpInfo(@javax.annotation.Nonnull Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest) throws ApiException {
         okhttp3.Call localVarCall = featureFlagsServiceUpdateFeatureFlagOverridesValidateBeforeCall(featureflagsv3UpdateFeatureFlagOverridesRequest, null);
         Type localVarReturnType = new TypeToken<Featureflagsv3UpdateFeatureFlagOverridesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -590,13 +605,14 @@ public class FeatureFlagsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call featureFlagsServiceUpdateFeatureFlagOverridesAsync(Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest, final ApiCallback<Featureflagsv3UpdateFeatureFlagOverridesResponse> _callback) throws ApiException {
+    public okhttp3.Call featureFlagsServiceUpdateFeatureFlagOverridesAsync(@javax.annotation.Nonnull Featureflagsv3UpdateFeatureFlagOverridesRequest featureflagsv3UpdateFeatureFlagOverridesRequest, final ApiCallback<Featureflagsv3UpdateFeatureFlagOverridesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = featureFlagsServiceUpdateFeatureFlagOverridesValidateBeforeCall(featureflagsv3UpdateFeatureFlagOverridesRequest, _callback);
         Type localVarReturnType = new TypeToken<Featureflagsv3UpdateFeatureFlagOverridesResponse>(){}.getType();

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,51 +40,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Filter objects of the view of risks.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3Filter {
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
+  @javax.annotation.Nullable
   private List<String> values = new ArrayList<>();
 
   public Riskanalyticscontrollerv3Filter() {
   }
 
-  public Riskanalyticscontrollerv3Filter headerId(String headerId) {
+  public Riskanalyticscontrollerv3Filter headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * Header_id to filter by.
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Riskanalyticscontrollerv3Filter values(List<String> values) {
+  public Riskanalyticscontrollerv3Filter values(@javax.annotation.Nullable List<String> values) {
     this.values = values;
     return this;
   }
@@ -96,16 +99,16 @@ public class Riskanalyticscontrollerv3Filter {
     return this;
   }
 
-   /**
+  /**
    * Values of the filters.
    * @return values
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getValues() {
     return values;
   }
 
-  public void setValues(List<String> values) {
+  public void setValues(@javax.annotation.Nullable List<String> values) {
     this.values = values;
   }
 
@@ -156,24 +159,22 @@ public class Riskanalyticscontrollerv3Filter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("header_id");
-    openapiFields.add("values");
+    openapiFields = new HashSet<String>(Arrays.asList("header_id", "values"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3Filter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3Filter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3Filter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3Filter is not found in the empty JSON string", Riskanalyticscontrollerv3Filter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3Filter is not found in the empty JSON string", Riskanalyticscontrollerv3Filter.openapiRequiredFields.toString()));
         }
       }
 
@@ -181,16 +182,16 @@ public class Riskanalyticscontrollerv3Filter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3Filter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3Filter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3Filter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("values") != null && !jsonObj.get("values").isJsonNull() && !jsonObj.get("values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
       }
   }
 
@@ -223,22 +224,22 @@ public class Riskanalyticscontrollerv3Filter {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3Filter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3Filter
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3Filter
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3Filter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3Filter
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3Filter
+   */
   public static Riskanalyticscontrollerv3Filter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3Filter.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3Filter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3Filter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

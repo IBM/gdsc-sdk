@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **additional_data** | **Dict[str, str]** |  | [optional] 
 **contents** | **str** |  | [optional] 
 **integration_id** | **str** |  | [optional] 
-**severity** | [**Notificationsv3NotificationSeverity**](Notificationsv3NotificationSeverity.md) |  | [optional] 
+**severity** | [**Notificationsv3NotificationSeverity**](Notificationsv3NotificationSeverity.md) |  | [optional] [default to Notificationsv3NotificationSeverity.UNDEFINED]
 **title** | **str** |  | [optional] 
 
 ## Example

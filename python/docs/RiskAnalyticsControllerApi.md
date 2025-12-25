@@ -658,16 +658,16 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
-    status = 'UNDEFINED_STATUS' # str | Status to retrieve only the status events, blank to retrieve all. (optional) (default to 'UNDEFINED_STATUS')
+    status = UNDEFINED_STATUS # str | Status to retrieve only the status events, blank to retrieve all. (optional) (default to UNDEFINED_STATUS)
     date_from = '2013-10-20T19:20:30+01:00' # datetime | The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
     date_to = '2013-10-20T19:20:30+01:00' # datetime | The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
-    pivot_type = 'UNDEFINED_PIVOT_TYPE' # str | Pivot type - enum. (optional) (default to 'UNDEFINED_PIVOT_TYPE')
+    pivot_type = UNDEFINED_PIVOT_TYPE # str | Pivot type - enum. (optional) (default to UNDEFINED_PIVOT_TYPE)
     pivot_id = 'pivot_id_example' # str | Pivot id -  all pivot fields separated by semicolon. (optional)
     pivot_db_user = 'pivot_db_user_example' # str | Optional db_user - if pivot is db user. (optional)
     pivot_database = 'pivot_database_example' # str | Optional database - if pivot is db user / database. (optional)
     pivot_server_ip = 'pivot_server_ip_example' # str | Optional server_ip - if pivot is db user / database. (optional)
     pivot_os_user = 'pivot_os_user_example' # str | Optional os_user - if pivot is os user. (optional)
-    pivot_database_source_field = 'UNDEFINED' # str | Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. (optional) (default to 'UNDEFINED')
+    pivot_database_source_field = UNDEFINED # str | Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. (optional) (default to UNDEFINED)
 
     try:
         # Summary: Get risk event row Description: Return a list of risk events.
@@ -685,16 +685,16 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | **str**| Status to retrieve only the status events, blank to retrieve all. | [optional] [default to &#39;UNDEFINED_STATUS&#39;]
+ **status** | **str**| Status to retrieve only the status events, blank to retrieve all. | [optional] [default to UNDEFINED_STATUS]
  **date_from** | **datetime**| The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ. | [optional] 
  **date_to** | **datetime**| The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ. | [optional] 
- **pivot_type** | **str**| Pivot type - enum. | [optional] [default to &#39;UNDEFINED_PIVOT_TYPE&#39;]
+ **pivot_type** | **str**| Pivot type - enum. | [optional] [default to UNDEFINED_PIVOT_TYPE]
  **pivot_id** | **str**| Pivot id -  all pivot fields separated by semicolon. | [optional] 
  **pivot_db_user** | **str**| Optional db_user - if pivot is db user. | [optional] 
  **pivot_database** | **str**| Optional database - if pivot is db user / database. | [optional] 
  **pivot_server_ip** | **str**| Optional server_ip - if pivot is db user / database. | [optional] 
  **pivot_os_user** | **str**| Optional os_user - if pivot is os user. | [optional] 
- **pivot_database_source_field** | **str**| Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. | [optional] [default to &#39;UNDEFINED&#39;]
+ **pivot_database_source_field** | **str**| Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. | [optional] [default to UNDEFINED]
 
 ### Return type
 
@@ -928,7 +928,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_saas.RiskAnalyticsControllerApi(api_client)
     lead_feature_id = 56 # int | Lead feature id. (optional)
-    observation_type = 'UNDEFINED_OBSERVATION_TYPE' # str | Observation type. (optional) (default to 'UNDEFINED_OBSERVATION_TYPE')
+    observation_type = UNDEFINED_OBSERVATION_TYPE # str | Observation type. (optional) (default to UNDEFINED_OBSERVATION_TYPE)
 
     try:
         # Summary: Get risk observation details Description: Return details of a single risk observation.
@@ -947,7 +947,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **lead_feature_id** | **int**| Lead feature id. | [optional] 
- **observation_type** | **str**| Observation type. | [optional] [default to &#39;UNDEFINED_OBSERVATION_TYPE&#39;]
+ **observation_type** | **str**| Observation type. | [optional] [default to UNDEFINED_OBSERVATION_TYPE]
 
 ### Return type
 

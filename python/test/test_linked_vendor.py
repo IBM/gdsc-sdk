@@ -27,7 +27,7 @@ class TestLinkedVendor(unittest.TestCase):
 
     def make_instance(self, include_optional) -> LinkedVendor:
         """Test LinkedVendor
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `LinkedVendor`
@@ -51,7 +51,13 @@ class TestLinkedVendor(unittest.TestCase):
                             certificate_name = 'PCI', )
                         ], ),
                 total_accounts = 11,
-                is_sensitive = True
+                is_sensitive = True,
+                sensitivity_summary = [
+                    ibm_gdsc_sdk_saas.models.sensitivity_summary.SensitivitySummary(
+                        tag = 'BUSINESS_EMAIL_ADDRESS', 
+                        count = 230, 
+                        category = 'Personal', )
+                    ]
             )
         else:
             return LinkedVendor(

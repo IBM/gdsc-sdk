@@ -6,10 +6,10 @@ ReportAggFilterCondition represents a report aggregate filter condition.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aggregation_type** | [**Reportsv3AggregationType**](Reportsv3AggregationType.md) |  | [optional] 
+**aggregation_type** | [**Reportsv3AggregationType**](Reportsv3AggregationType.md) |  | [optional] [default to Reportsv3AggregationType.UNDEFINED_AGG_TYPE]
 **header_id** | **str** |  | [optional] 
 **header_name** | **str** |  | [optional] 
-**operator_type** | [**Reportsv3OperatorType**](Reportsv3OperatorType.md) |  | [optional] 
+**operator_type** | [**Reportsv3OperatorType**](Reportsv3OperatorType.md) |  | [optional] [default to Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE]
 **table_name** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
 

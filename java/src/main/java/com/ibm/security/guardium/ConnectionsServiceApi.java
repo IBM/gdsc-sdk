@@ -65,7 +65,9 @@ import com.ibm.security.guardium.Connectionsv3UpdatePluginRequest;
 import com.ibm.security.guardium.Connectionsv3UpdatePluginResponse;
 import com.ibm.security.guardium.Connectionsv3UpdateSettingsRequest;
 import com.ibm.security.guardium.Connectionsv3ValidateAwsConnectionRequest;
+import com.ibm.security.guardium.Connectionsv3ValidateAzureConnectionRequest;
 import com.ibm.security.guardium.Connectionsv3ValidateConnectionResponse;
+import com.ibm.security.guardium.Connectionsv3ValidateGcpConnectionRequest;
 import com.ibm.security.guardium.RuntimeError;
 
 import java.lang.reflect.Type;
@@ -118,13 +120,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreateConnectionsAccountsCall(Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreateConnectionsAccountsCall(@javax.annotation.Nonnull Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -170,7 +173,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceCreateConnectionsAccountsValidateBeforeCall(Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceCreateConnectionsAccountsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3CreateConnectionsAccountsRequest' is set
         if (connectionsv3CreateConnectionsAccountsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3CreateConnectionsAccountsRequest' when calling connectionsServiceCreateConnectionsAccounts(Async)");
@@ -187,13 +190,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3CreateConnectionsAccountsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3CreateConnectionsAccountsResponse connectionsServiceCreateConnectionsAccounts(Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest) throws ApiException {
+    public Connectionsv3CreateConnectionsAccountsResponse connectionsServiceCreateConnectionsAccounts(@javax.annotation.Nonnull Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest) throws ApiException {
         ApiResponse<Connectionsv3CreateConnectionsAccountsResponse> localVarResp = connectionsServiceCreateConnectionsAccountsWithHttpInfo(connectionsv3CreateConnectionsAccountsRequest);
         return localVarResp.getData();
     }
@@ -205,13 +209,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3CreateConnectionsAccountsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3CreateConnectionsAccountsResponse> connectionsServiceCreateConnectionsAccountsWithHttpInfo(Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest) throws ApiException {
+    public ApiResponse<Connectionsv3CreateConnectionsAccountsResponse> connectionsServiceCreateConnectionsAccountsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceCreateConnectionsAccountsValidateBeforeCall(connectionsv3CreateConnectionsAccountsRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3CreateConnectionsAccountsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -225,13 +230,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreateConnectionsAccountsAsync(Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest, final ApiCallback<Connectionsv3CreateConnectionsAccountsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreateConnectionsAccountsAsync(@javax.annotation.Nonnull Connectionsv3CreateConnectionsAccountsRequest connectionsv3CreateConnectionsAccountsRequest, final ApiCallback<Connectionsv3CreateConnectionsAccountsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceCreateConnectionsAccountsValidateBeforeCall(connectionsv3CreateConnectionsAccountsRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3CreateConnectionsAccountsResponse>(){}.getType();
@@ -245,13 +251,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreateConnectionsConfigsCall(Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreateConnectionsConfigsCall(@javax.annotation.Nonnull Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -297,7 +304,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceCreateConnectionsConfigsValidateBeforeCall(Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceCreateConnectionsConfigsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3CreateConnectionsConfigsRequest' is set
         if (connectionsv3CreateConnectionsConfigsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3CreateConnectionsConfigsRequest' when calling connectionsServiceCreateConnectionsConfigs(Async)");
@@ -314,13 +321,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3CreateConnectionsConfigsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3CreateConnectionsConfigsResponse connectionsServiceCreateConnectionsConfigs(Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest) throws ApiException {
+    public Connectionsv3CreateConnectionsConfigsResponse connectionsServiceCreateConnectionsConfigs(@javax.annotation.Nonnull Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest) throws ApiException {
         ApiResponse<Connectionsv3CreateConnectionsConfigsResponse> localVarResp = connectionsServiceCreateConnectionsConfigsWithHttpInfo(connectionsv3CreateConnectionsConfigsRequest);
         return localVarResp.getData();
     }
@@ -332,13 +340,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3CreateConnectionsConfigsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3CreateConnectionsConfigsResponse> connectionsServiceCreateConnectionsConfigsWithHttpInfo(Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest) throws ApiException {
+    public ApiResponse<Connectionsv3CreateConnectionsConfigsResponse> connectionsServiceCreateConnectionsConfigsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceCreateConnectionsConfigsValidateBeforeCall(connectionsv3CreateConnectionsConfigsRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3CreateConnectionsConfigsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -352,13 +361,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreateConnectionsConfigsAsync(Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest, final ApiCallback<Connectionsv3CreateConnectionsConfigsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreateConnectionsConfigsAsync(@javax.annotation.Nonnull Connectionsv3CreateConnectionsConfigsRequest connectionsv3CreateConnectionsConfigsRequest, final ApiCallback<Connectionsv3CreateConnectionsConfigsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceCreateConnectionsConfigsValidateBeforeCall(connectionsv3CreateConnectionsConfigsRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3CreateConnectionsConfigsResponse>(){}.getType();
@@ -372,13 +382,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreatePluginCall(Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreatePluginCall(@javax.annotation.Nonnull Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -424,7 +435,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceCreatePluginValidateBeforeCall(Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceCreatePluginValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3CreatePluginRequest' is set
         if (connectionsv3CreatePluginRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3CreatePluginRequest' when calling connectionsServiceCreatePlugin(Async)");
@@ -441,13 +452,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3CreatePluginResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3CreatePluginResponse connectionsServiceCreatePlugin(Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest) throws ApiException {
+    public Connectionsv3CreatePluginResponse connectionsServiceCreatePlugin(@javax.annotation.Nonnull Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest) throws ApiException {
         ApiResponse<Connectionsv3CreatePluginResponse> localVarResp = connectionsServiceCreatePluginWithHttpInfo(connectionsv3CreatePluginRequest);
         return localVarResp.getData();
     }
@@ -459,13 +471,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3CreatePluginResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3CreatePluginResponse> connectionsServiceCreatePluginWithHttpInfo(Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest) throws ApiException {
+    public ApiResponse<Connectionsv3CreatePluginResponse> connectionsServiceCreatePluginWithHttpInfo(@javax.annotation.Nonnull Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceCreatePluginValidateBeforeCall(connectionsv3CreatePluginRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3CreatePluginResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -479,13 +492,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreatePluginAsync(Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest, final ApiCallback<Connectionsv3CreatePluginResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreatePluginAsync(@javax.annotation.Nonnull Connectionsv3CreatePluginRequest connectionsv3CreatePluginRequest, final ApiCallback<Connectionsv3CreatePluginResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceCreatePluginValidateBeforeCall(connectionsv3CreatePluginRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3CreatePluginResponse>(){}.getType();
@@ -499,13 +513,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreateSettingsCall(Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreateSettingsCall(@javax.annotation.Nonnull Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -551,7 +566,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceCreateSettingsValidateBeforeCall(Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceCreateSettingsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3CreateSettingsRequest' is set
         if (connectionsv3CreateSettingsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3CreateSettingsRequest' when calling connectionsServiceCreateSettings(Async)");
@@ -568,13 +583,14 @@ public class ConnectionsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object connectionsServiceCreateSettings(Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest) throws ApiException {
+    public Object connectionsServiceCreateSettings(@javax.annotation.Nonnull Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest) throws ApiException {
         ApiResponse<Object> localVarResp = connectionsServiceCreateSettingsWithHttpInfo(connectionsv3CreateSettingsRequest);
         return localVarResp.getData();
     }
@@ -586,13 +602,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> connectionsServiceCreateSettingsWithHttpInfo(Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest) throws ApiException {
+    public ApiResponse<Object> connectionsServiceCreateSettingsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceCreateSettingsValidateBeforeCall(connectionsv3CreateSettingsRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -606,13 +623,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceCreateSettingsAsync(Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceCreateSettingsAsync(@javax.annotation.Nonnull Connectionsv3CreateSettingsRequest connectionsv3CreateSettingsRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceCreateSettingsValidateBeforeCall(connectionsv3CreateSettingsRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -626,13 +644,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeleteConnectionsAccountsCall(String accountId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeleteConnectionsAccountsCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -678,7 +697,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceDeleteConnectionsAccountsValidateBeforeCall(String accountId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceDeleteConnectionsAccountsValidateBeforeCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
             throw new ApiException("Missing the required parameter 'accountId' when calling connectionsServiceDeleteConnectionsAccounts(Async)");
@@ -695,13 +714,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3DeleteConnectionsAccountsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3DeleteConnectionsAccountsResponse connectionsServiceDeleteConnectionsAccounts(String accountId) throws ApiException {
+    public Connectionsv3DeleteConnectionsAccountsResponse connectionsServiceDeleteConnectionsAccounts(@javax.annotation.Nonnull String accountId) throws ApiException {
         ApiResponse<Connectionsv3DeleteConnectionsAccountsResponse> localVarResp = connectionsServiceDeleteConnectionsAccountsWithHttpInfo(accountId);
         return localVarResp.getData();
     }
@@ -713,13 +733,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3DeleteConnectionsAccountsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3DeleteConnectionsAccountsResponse> connectionsServiceDeleteConnectionsAccountsWithHttpInfo(String accountId) throws ApiException {
+    public ApiResponse<Connectionsv3DeleteConnectionsAccountsResponse> connectionsServiceDeleteConnectionsAccountsWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceDeleteConnectionsAccountsValidateBeforeCall(accountId, null);
         Type localVarReturnType = new TypeToken<Connectionsv3DeleteConnectionsAccountsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -733,13 +754,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeleteConnectionsAccountsAsync(String accountId, final ApiCallback<Connectionsv3DeleteConnectionsAccountsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeleteConnectionsAccountsAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<Connectionsv3DeleteConnectionsAccountsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceDeleteConnectionsAccountsValidateBeforeCall(accountId, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3DeleteConnectionsAccountsResponse>(){}.getType();
@@ -753,13 +775,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeleteConnectionsConfigsCall(String connectionId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeleteConnectionsConfigsCall(@javax.annotation.Nonnull String connectionId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -805,7 +828,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceDeleteConnectionsConfigsValidateBeforeCall(String connectionId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceDeleteConnectionsConfigsValidateBeforeCall(@javax.annotation.Nonnull String connectionId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionId' is set
         if (connectionId == null) {
             throw new ApiException("Missing the required parameter 'connectionId' when calling connectionsServiceDeleteConnectionsConfigs(Async)");
@@ -822,13 +845,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3DeleteConnectionsConfigsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3DeleteConnectionsConfigsResponse connectionsServiceDeleteConnectionsConfigs(String connectionId) throws ApiException {
+    public Connectionsv3DeleteConnectionsConfigsResponse connectionsServiceDeleteConnectionsConfigs(@javax.annotation.Nonnull String connectionId) throws ApiException {
         ApiResponse<Connectionsv3DeleteConnectionsConfigsResponse> localVarResp = connectionsServiceDeleteConnectionsConfigsWithHttpInfo(connectionId);
         return localVarResp.getData();
     }
@@ -840,13 +864,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3DeleteConnectionsConfigsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3DeleteConnectionsConfigsResponse> connectionsServiceDeleteConnectionsConfigsWithHttpInfo(String connectionId) throws ApiException {
+    public ApiResponse<Connectionsv3DeleteConnectionsConfigsResponse> connectionsServiceDeleteConnectionsConfigsWithHttpInfo(@javax.annotation.Nonnull String connectionId) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceDeleteConnectionsConfigsValidateBeforeCall(connectionId, null);
         Type localVarReturnType = new TypeToken<Connectionsv3DeleteConnectionsConfigsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -860,13 +885,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeleteConnectionsConfigsAsync(String connectionId, final ApiCallback<Connectionsv3DeleteConnectionsConfigsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeleteConnectionsConfigsAsync(@javax.annotation.Nonnull String connectionId, final ApiCallback<Connectionsv3DeleteConnectionsConfigsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceDeleteConnectionsConfigsValidateBeforeCall(connectionId, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3DeleteConnectionsConfigsResponse>(){}.getType();
@@ -880,13 +906,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeleteConnectorCall(String connectionId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeleteConnectorCall(@javax.annotation.Nonnull String connectionId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -932,7 +959,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceDeleteConnectorValidateBeforeCall(String connectionId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceDeleteConnectorValidateBeforeCall(@javax.annotation.Nonnull String connectionId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionId' is set
         if (connectionId == null) {
             throw new ApiException("Missing the required parameter 'connectionId' when calling connectionsServiceDeleteConnector(Async)");
@@ -949,13 +976,14 @@ public class ConnectionsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object connectionsServiceDeleteConnector(String connectionId) throws ApiException {
+    public Object connectionsServiceDeleteConnector(@javax.annotation.Nonnull String connectionId) throws ApiException {
         ApiResponse<Object> localVarResp = connectionsServiceDeleteConnectorWithHttpInfo(connectionId);
         return localVarResp.getData();
     }
@@ -967,13 +995,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> connectionsServiceDeleteConnectorWithHttpInfo(String connectionId) throws ApiException {
+    public ApiResponse<Object> connectionsServiceDeleteConnectorWithHttpInfo(@javax.annotation.Nonnull String connectionId) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceDeleteConnectorValidateBeforeCall(connectionId, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -987,13 +1016,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeleteConnectorAsync(String connectionId, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeleteConnectorAsync(@javax.annotation.Nonnull String connectionId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceDeleteConnectorValidateBeforeCall(connectionId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -1007,13 +1037,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeletePluginCall(String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeletePluginCall(@javax.annotation.Nonnull String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1059,7 +1090,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceDeletePluginValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceDeletePluginValidateBeforeCall(@javax.annotation.Nonnull String id, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling connectionsServiceDeletePlugin(Async)");
@@ -1076,13 +1107,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3DeletePluginResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3DeletePluginResponse connectionsServiceDeletePlugin(String id) throws ApiException {
+    public Connectionsv3DeletePluginResponse connectionsServiceDeletePlugin(@javax.annotation.Nonnull String id) throws ApiException {
         ApiResponse<Connectionsv3DeletePluginResponse> localVarResp = connectionsServiceDeletePluginWithHttpInfo(id);
         return localVarResp.getData();
     }
@@ -1094,13 +1126,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3DeletePluginResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3DeletePluginResponse> connectionsServiceDeletePluginWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<Connectionsv3DeletePluginResponse> connectionsServiceDeletePluginWithHttpInfo(@javax.annotation.Nonnull String id) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceDeletePluginValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<Connectionsv3DeletePluginResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1114,13 +1147,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceDeletePluginAsync(String id, final ApiCallback<Connectionsv3DeletePluginResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceDeletePluginAsync(@javax.annotation.Nonnull String id, final ApiCallback<Connectionsv3DeletePluginResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceDeletePluginValidateBeforeCall(id, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3DeletePluginResponse>(){}.getType();
@@ -1135,13 +1169,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGeneratePackageCall(String id, Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGeneratePackageCall(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1188,7 +1223,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceGeneratePackageValidateBeforeCall(String id, Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceGeneratePackageValidateBeforeCall(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling connectionsServiceGeneratePackage(Async)");
@@ -1211,13 +1246,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GeneratePackageResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3GeneratePackageResponse connectionsServiceGeneratePackage(String id, Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest) throws ApiException {
+    public Connectionsv3GeneratePackageResponse connectionsServiceGeneratePackage(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest) throws ApiException {
         ApiResponse<Connectionsv3GeneratePackageResponse> localVarResp = connectionsServiceGeneratePackageWithHttpInfo(id, connectionsv3GeneratePackageRequest);
         return localVarResp.getData();
     }
@@ -1230,13 +1266,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GeneratePackageResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3GeneratePackageResponse> connectionsServiceGeneratePackageWithHttpInfo(String id, Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest) throws ApiException {
+    public ApiResponse<Connectionsv3GeneratePackageResponse> connectionsServiceGeneratePackageWithHttpInfo(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceGeneratePackageValidateBeforeCall(id, connectionsv3GeneratePackageRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3GeneratePackageResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1251,13 +1288,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGeneratePackageAsync(String id, Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest, final ApiCallback<Connectionsv3GeneratePackageResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGeneratePackageAsync(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3GeneratePackageRequest connectionsv3GeneratePackageRequest, final ApiCallback<Connectionsv3GeneratePackageResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceGeneratePackageValidateBeforeCall(id, connectionsv3GeneratePackageRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3GeneratePackageResponse>(){}.getType();
@@ -1270,7 +1308,8 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1332,7 +1371,8 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetBannerStateResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1349,7 +1389,8 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetBannerStateResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1368,7 +1409,8 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1389,13 +1431,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetConnectionsAccountsCall(String accountId, String accessKey, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetConnectionsAccountsCall(@javax.annotation.Nullable String accountId, @javax.annotation.Nullable String accessKey, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1448,7 +1491,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceGetConnectionsAccountsValidateBeforeCall(String accountId, String accessKey, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceGetConnectionsAccountsValidateBeforeCall(@javax.annotation.Nullable String accountId, @javax.annotation.Nullable String accessKey, final ApiCallback _callback) throws ApiException {
         return connectionsServiceGetConnectionsAccountsCall(accountId, accessKey, _callback);
 
     }
@@ -1461,13 +1504,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetConnectionsAccountsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3GetConnectionsAccountsResponse connectionsServiceGetConnectionsAccounts(String accountId, String accessKey) throws ApiException {
+    public Connectionsv3GetConnectionsAccountsResponse connectionsServiceGetConnectionsAccounts(@javax.annotation.Nullable String accountId, @javax.annotation.Nullable String accessKey) throws ApiException {
         ApiResponse<Connectionsv3GetConnectionsAccountsResponse> localVarResp = connectionsServiceGetConnectionsAccountsWithHttpInfo(accountId, accessKey);
         return localVarResp.getData();
     }
@@ -1480,13 +1524,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetConnectionsAccountsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3GetConnectionsAccountsResponse> connectionsServiceGetConnectionsAccountsWithHttpInfo(String accountId, String accessKey) throws ApiException {
+    public ApiResponse<Connectionsv3GetConnectionsAccountsResponse> connectionsServiceGetConnectionsAccountsWithHttpInfo(@javax.annotation.Nullable String accountId, @javax.annotation.Nullable String accessKey) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceGetConnectionsAccountsValidateBeforeCall(accountId, accessKey, null);
         Type localVarReturnType = new TypeToken<Connectionsv3GetConnectionsAccountsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1501,13 +1546,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetConnectionsAccountsAsync(String accountId, String accessKey, final ApiCallback<Connectionsv3GetConnectionsAccountsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetConnectionsAccountsAsync(@javax.annotation.Nullable String accountId, @javax.annotation.Nullable String accessKey, final ApiCallback<Connectionsv3GetConnectionsAccountsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceGetConnectionsAccountsValidateBeforeCall(accountId, accessKey, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3GetConnectionsAccountsResponse>(){}.getType();
@@ -1522,13 +1568,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetConnectionsConfigsCall(String type, String connectionId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetConnectionsConfigsCall(@javax.annotation.Nullable String type, @javax.annotation.Nullable String connectionId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1581,7 +1628,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceGetConnectionsConfigsValidateBeforeCall(String type, String connectionId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceGetConnectionsConfigsValidateBeforeCall(@javax.annotation.Nullable String type, @javax.annotation.Nullable String connectionId, final ApiCallback _callback) throws ApiException {
         return connectionsServiceGetConnectionsConfigsCall(type, connectionId, _callback);
 
     }
@@ -1594,13 +1641,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetConnectionsConfigsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3GetConnectionsConfigsResponse connectionsServiceGetConnectionsConfigs(String type, String connectionId) throws ApiException {
+    public Connectionsv3GetConnectionsConfigsResponse connectionsServiceGetConnectionsConfigs(@javax.annotation.Nullable String type, @javax.annotation.Nullable String connectionId) throws ApiException {
         ApiResponse<Connectionsv3GetConnectionsConfigsResponse> localVarResp = connectionsServiceGetConnectionsConfigsWithHttpInfo(type, connectionId);
         return localVarResp.getData();
     }
@@ -1613,13 +1661,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetConnectionsConfigsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3GetConnectionsConfigsResponse> connectionsServiceGetConnectionsConfigsWithHttpInfo(String type, String connectionId) throws ApiException {
+    public ApiResponse<Connectionsv3GetConnectionsConfigsResponse> connectionsServiceGetConnectionsConfigsWithHttpInfo(@javax.annotation.Nullable String type, @javax.annotation.Nullable String connectionId) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceGetConnectionsConfigsValidateBeforeCall(type, connectionId, null);
         Type localVarReturnType = new TypeToken<Connectionsv3GetConnectionsConfigsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1634,13 +1683,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetConnectionsConfigsAsync(String type, String connectionId, final ApiCallback<Connectionsv3GetConnectionsConfigsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetConnectionsConfigsAsync(@javax.annotation.Nullable String type, @javax.annotation.Nullable String connectionId, final ApiCallback<Connectionsv3GetConnectionsConfigsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceGetConnectionsConfigsValidateBeforeCall(type, connectionId, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3GetConnectionsConfigsResponse>(){}.getType();
@@ -1654,13 +1704,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetConnectionsWithFiltersCall(Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetConnectionsWithFiltersCall(@javax.annotation.Nonnull Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1706,7 +1757,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceGetConnectionsWithFiltersValidateBeforeCall(Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceGetConnectionsWithFiltersValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3GetConnectionsWithFiltersRequest' is set
         if (connectionsv3GetConnectionsWithFiltersRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3GetConnectionsWithFiltersRequest' when calling connectionsServiceGetConnectionsWithFilters(Async)");
@@ -1723,13 +1774,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetConnectionsWithFiltersResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3GetConnectionsWithFiltersResponse connectionsServiceGetConnectionsWithFilters(Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest) throws ApiException {
+    public Connectionsv3GetConnectionsWithFiltersResponse connectionsServiceGetConnectionsWithFilters(@javax.annotation.Nonnull Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest) throws ApiException {
         ApiResponse<Connectionsv3GetConnectionsWithFiltersResponse> localVarResp = connectionsServiceGetConnectionsWithFiltersWithHttpInfo(connectionsv3GetConnectionsWithFiltersRequest);
         return localVarResp.getData();
     }
@@ -1741,13 +1793,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetConnectionsWithFiltersResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3GetConnectionsWithFiltersResponse> connectionsServiceGetConnectionsWithFiltersWithHttpInfo(Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest) throws ApiException {
+    public ApiResponse<Connectionsv3GetConnectionsWithFiltersResponse> connectionsServiceGetConnectionsWithFiltersWithHttpInfo(@javax.annotation.Nonnull Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceGetConnectionsWithFiltersValidateBeforeCall(connectionsv3GetConnectionsWithFiltersRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3GetConnectionsWithFiltersResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1761,13 +1814,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetConnectionsWithFiltersAsync(Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest, final ApiCallback<Connectionsv3GetConnectionsWithFiltersResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetConnectionsWithFiltersAsync(@javax.annotation.Nonnull Connectionsv3GetConnectionsWithFiltersRequest connectionsv3GetConnectionsWithFiltersRequest, final ApiCallback<Connectionsv3GetConnectionsWithFiltersResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceGetConnectionsWithFiltersValidateBeforeCall(connectionsv3GetConnectionsWithFiltersRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3GetConnectionsWithFiltersResponse>(){}.getType();
@@ -1780,7 +1834,8 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1842,7 +1897,8 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetConnectorsSummaryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1859,7 +1915,8 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetConnectorsSummaryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1878,7 +1935,8 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1897,7 +1955,8 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1959,7 +2018,8 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetDataSourcesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1976,7 +2036,8 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetDataSourcesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1995,7 +2056,8 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2014,7 +2076,8 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2076,7 +2139,8 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetGuardRecordFieldsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2093,7 +2157,8 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetGuardRecordFieldsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2112,7 +2177,8 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2131,7 +2197,8 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2193,7 +2260,8 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetHeadersResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2210,7 +2278,8 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetHeadersResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2229,7 +2298,8 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2249,13 +2319,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetPluginsCall(String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetPluginsCall(@javax.annotation.Nullable String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2304,7 +2375,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceGetPluginsValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceGetPluginsValidateBeforeCall(@javax.annotation.Nullable String id, final ApiCallback _callback) throws ApiException {
         return connectionsServiceGetPluginsCall(id, _callback);
 
     }
@@ -2316,13 +2387,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetPluginsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3GetPluginsResponse connectionsServiceGetPlugins(String id) throws ApiException {
+    public Connectionsv3GetPluginsResponse connectionsServiceGetPlugins(@javax.annotation.Nullable String id) throws ApiException {
         ApiResponse<Connectionsv3GetPluginsResponse> localVarResp = connectionsServiceGetPluginsWithHttpInfo(id);
         return localVarResp.getData();
     }
@@ -2334,13 +2406,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetPluginsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3GetPluginsResponse> connectionsServiceGetPluginsWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<Connectionsv3GetPluginsResponse> connectionsServiceGetPluginsWithHttpInfo(@javax.annotation.Nullable String id) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceGetPluginsValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<Connectionsv3GetPluginsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2354,13 +2427,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceGetPluginsAsync(String id, final ApiCallback<Connectionsv3GetPluginsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceGetPluginsAsync(@javax.annotation.Nullable String id, final ApiCallback<Connectionsv3GetPluginsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceGetPluginsValidateBeforeCall(id, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3GetPluginsResponse>(){}.getType();
@@ -2373,7 +2447,8 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2435,7 +2510,8 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3GetSettingsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2452,7 +2528,8 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3GetSettingsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2471,7 +2548,8 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2491,13 +2569,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServicePartialUpdateConnectorsCall(Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServicePartialUpdateConnectorsCall(@javax.annotation.Nonnull Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2543,7 +2622,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServicePartialUpdateConnectorsValidateBeforeCall(Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServicePartialUpdateConnectorsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3PartialUpdateConnectorsRequest' is set
         if (connectionsv3PartialUpdateConnectorsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3PartialUpdateConnectorsRequest' when calling connectionsServicePartialUpdateConnectors(Async)");
@@ -2560,13 +2639,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3PartialUpdateConnectorsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3PartialUpdateConnectorsResponse connectionsServicePartialUpdateConnectors(Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest) throws ApiException {
+    public Connectionsv3PartialUpdateConnectorsResponse connectionsServicePartialUpdateConnectors(@javax.annotation.Nonnull Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest) throws ApiException {
         ApiResponse<Connectionsv3PartialUpdateConnectorsResponse> localVarResp = connectionsServicePartialUpdateConnectorsWithHttpInfo(connectionsv3PartialUpdateConnectorsRequest);
         return localVarResp.getData();
     }
@@ -2578,13 +2658,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3PartialUpdateConnectorsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3PartialUpdateConnectorsResponse> connectionsServicePartialUpdateConnectorsWithHttpInfo(Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest) throws ApiException {
+    public ApiResponse<Connectionsv3PartialUpdateConnectorsResponse> connectionsServicePartialUpdateConnectorsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServicePartialUpdateConnectorsValidateBeforeCall(connectionsv3PartialUpdateConnectorsRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3PartialUpdateConnectorsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2598,13 +2679,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServicePartialUpdateConnectorsAsync(Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest, final ApiCallback<Connectionsv3PartialUpdateConnectorsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServicePartialUpdateConnectorsAsync(@javax.annotation.Nonnull Connectionsv3PartialUpdateConnectorsRequest connectionsv3PartialUpdateConnectorsRequest, final ApiCallback<Connectionsv3PartialUpdateConnectorsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServicePartialUpdateConnectorsValidateBeforeCall(connectionsv3PartialUpdateConnectorsRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3PartialUpdateConnectorsResponse>(){}.getType();
@@ -2618,13 +2700,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServicePostStapCommandCall(Connectionsv3StapCommandRequest connectionsv3StapCommandRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServicePostStapCommandCall(@javax.annotation.Nonnull Connectionsv3StapCommandRequest connectionsv3StapCommandRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2670,7 +2753,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServicePostStapCommandValidateBeforeCall(Connectionsv3StapCommandRequest connectionsv3StapCommandRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServicePostStapCommandValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3StapCommandRequest connectionsv3StapCommandRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3StapCommandRequest' is set
         if (connectionsv3StapCommandRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3StapCommandRequest' when calling connectionsServicePostStapCommand(Async)");
@@ -2687,13 +2770,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3StatusResponseBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3StatusResponseBase connectionsServicePostStapCommand(Connectionsv3StapCommandRequest connectionsv3StapCommandRequest) throws ApiException {
+    public Connectionsv3StatusResponseBase connectionsServicePostStapCommand(@javax.annotation.Nonnull Connectionsv3StapCommandRequest connectionsv3StapCommandRequest) throws ApiException {
         ApiResponse<Connectionsv3StatusResponseBase> localVarResp = connectionsServicePostStapCommandWithHttpInfo(connectionsv3StapCommandRequest);
         return localVarResp.getData();
     }
@@ -2705,13 +2789,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3StatusResponseBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3StatusResponseBase> connectionsServicePostStapCommandWithHttpInfo(Connectionsv3StapCommandRequest connectionsv3StapCommandRequest) throws ApiException {
+    public ApiResponse<Connectionsv3StatusResponseBase> connectionsServicePostStapCommandWithHttpInfo(@javax.annotation.Nonnull Connectionsv3StapCommandRequest connectionsv3StapCommandRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServicePostStapCommandValidateBeforeCall(connectionsv3StapCommandRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3StatusResponseBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2725,13 +2810,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServicePostStapCommandAsync(Connectionsv3StapCommandRequest connectionsv3StapCommandRequest, final ApiCallback<Connectionsv3StatusResponseBase> _callback) throws ApiException {
+    public okhttp3.Call connectionsServicePostStapCommandAsync(@javax.annotation.Nonnull Connectionsv3StapCommandRequest connectionsv3StapCommandRequest, final ApiCallback<Connectionsv3StatusResponseBase> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServicePostStapCommandValidateBeforeCall(connectionsv3StapCommandRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3StatusResponseBase>(){}.getType();
@@ -2745,13 +2831,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateBannerStateCall(Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateBannerStateCall(@javax.annotation.Nonnull Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2797,7 +2884,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceUpdateBannerStateValidateBeforeCall(Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceUpdateBannerStateValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3UpdateBannerStateRequest' is set
         if (connectionsv3UpdateBannerStateRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3UpdateBannerStateRequest' when calling connectionsServiceUpdateBannerState(Async)");
@@ -2814,13 +2901,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3UpdateBannerStateResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3UpdateBannerStateResponse connectionsServiceUpdateBannerState(Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest) throws ApiException {
+    public Connectionsv3UpdateBannerStateResponse connectionsServiceUpdateBannerState(@javax.annotation.Nonnull Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest) throws ApiException {
         ApiResponse<Connectionsv3UpdateBannerStateResponse> localVarResp = connectionsServiceUpdateBannerStateWithHttpInfo(connectionsv3UpdateBannerStateRequest);
         return localVarResp.getData();
     }
@@ -2832,13 +2920,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3UpdateBannerStateResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3UpdateBannerStateResponse> connectionsServiceUpdateBannerStateWithHttpInfo(Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest) throws ApiException {
+    public ApiResponse<Connectionsv3UpdateBannerStateResponse> connectionsServiceUpdateBannerStateWithHttpInfo(@javax.annotation.Nonnull Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceUpdateBannerStateValidateBeforeCall(connectionsv3UpdateBannerStateRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdateBannerStateResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2852,13 +2941,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateBannerStateAsync(Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest, final ApiCallback<Connectionsv3UpdateBannerStateResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateBannerStateAsync(@javax.annotation.Nonnull Connectionsv3UpdateBannerStateRequest connectionsv3UpdateBannerStateRequest, final ApiCallback<Connectionsv3UpdateBannerStateResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceUpdateBannerStateValidateBeforeCall(connectionsv3UpdateBannerStateRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdateBannerStateResponse>(){}.getType();
@@ -2872,13 +2962,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateConnectionsAccountsCall(Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateConnectionsAccountsCall(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2924,7 +3015,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceUpdateConnectionsAccountsValidateBeforeCall(Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceUpdateConnectionsAccountsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3UpdateConnectionsAccountsRequest' is set
         if (connectionsv3UpdateConnectionsAccountsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3UpdateConnectionsAccountsRequest' when calling connectionsServiceUpdateConnectionsAccounts(Async)");
@@ -2941,13 +3032,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3UpdateConnectionsAccountsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3UpdateConnectionsAccountsResponse connectionsServiceUpdateConnectionsAccounts(Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest) throws ApiException {
+    public Connectionsv3UpdateConnectionsAccountsResponse connectionsServiceUpdateConnectionsAccounts(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest) throws ApiException {
         ApiResponse<Connectionsv3UpdateConnectionsAccountsResponse> localVarResp = connectionsServiceUpdateConnectionsAccountsWithHttpInfo(connectionsv3UpdateConnectionsAccountsRequest);
         return localVarResp.getData();
     }
@@ -2959,13 +3051,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3UpdateConnectionsAccountsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3UpdateConnectionsAccountsResponse> connectionsServiceUpdateConnectionsAccountsWithHttpInfo(Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest) throws ApiException {
+    public ApiResponse<Connectionsv3UpdateConnectionsAccountsResponse> connectionsServiceUpdateConnectionsAccountsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceUpdateConnectionsAccountsValidateBeforeCall(connectionsv3UpdateConnectionsAccountsRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdateConnectionsAccountsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2979,13 +3072,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateConnectionsAccountsAsync(Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest, final ApiCallback<Connectionsv3UpdateConnectionsAccountsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateConnectionsAccountsAsync(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsAccountsRequest connectionsv3UpdateConnectionsAccountsRequest, final ApiCallback<Connectionsv3UpdateConnectionsAccountsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceUpdateConnectionsAccountsValidateBeforeCall(connectionsv3UpdateConnectionsAccountsRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdateConnectionsAccountsResponse>(){}.getType();
@@ -2999,13 +3093,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateConnectionsConfigsCall(Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateConnectionsConfigsCall(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3051,7 +3146,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceUpdateConnectionsConfigsValidateBeforeCall(Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceUpdateConnectionsConfigsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3UpdateConnectionsConfigsRequest' is set
         if (connectionsv3UpdateConnectionsConfigsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3UpdateConnectionsConfigsRequest' when calling connectionsServiceUpdateConnectionsConfigs(Async)");
@@ -3068,13 +3163,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3UpdateConnectionsConfigsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3UpdateConnectionsConfigsResponse connectionsServiceUpdateConnectionsConfigs(Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest) throws ApiException {
+    public Connectionsv3UpdateConnectionsConfigsResponse connectionsServiceUpdateConnectionsConfigs(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest) throws ApiException {
         ApiResponse<Connectionsv3UpdateConnectionsConfigsResponse> localVarResp = connectionsServiceUpdateConnectionsConfigsWithHttpInfo(connectionsv3UpdateConnectionsConfigsRequest);
         return localVarResp.getData();
     }
@@ -3086,13 +3182,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3UpdateConnectionsConfigsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3UpdateConnectionsConfigsResponse> connectionsServiceUpdateConnectionsConfigsWithHttpInfo(Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest) throws ApiException {
+    public ApiResponse<Connectionsv3UpdateConnectionsConfigsResponse> connectionsServiceUpdateConnectionsConfigsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceUpdateConnectionsConfigsValidateBeforeCall(connectionsv3UpdateConnectionsConfigsRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdateConnectionsConfigsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3106,13 +3203,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateConnectionsConfigsAsync(Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest, final ApiCallback<Connectionsv3UpdateConnectionsConfigsResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateConnectionsConfigsAsync(@javax.annotation.Nonnull Connectionsv3UpdateConnectionsConfigsRequest connectionsv3UpdateConnectionsConfigsRequest, final ApiCallback<Connectionsv3UpdateConnectionsConfigsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceUpdateConnectionsConfigsValidateBeforeCall(connectionsv3UpdateConnectionsConfigsRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdateConnectionsConfigsResponse>(){}.getType();
@@ -3126,13 +3224,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateConnectorsCall(Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateConnectorsCall(@javax.annotation.Nonnull Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3178,7 +3277,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceUpdateConnectorsValidateBeforeCall(Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceUpdateConnectorsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3UpdateConnectorsRequest' is set
         if (connectionsv3UpdateConnectorsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3UpdateConnectorsRequest' when calling connectionsServiceUpdateConnectors(Async)");
@@ -3195,13 +3294,14 @@ public class ConnectionsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object connectionsServiceUpdateConnectors(Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest) throws ApiException {
+    public Object connectionsServiceUpdateConnectors(@javax.annotation.Nonnull Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest) throws ApiException {
         ApiResponse<Object> localVarResp = connectionsServiceUpdateConnectorsWithHttpInfo(connectionsv3UpdateConnectorsRequest);
         return localVarResp.getData();
     }
@@ -3213,13 +3313,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> connectionsServiceUpdateConnectorsWithHttpInfo(Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest) throws ApiException {
+    public ApiResponse<Object> connectionsServiceUpdateConnectorsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceUpdateConnectorsValidateBeforeCall(connectionsv3UpdateConnectorsRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3233,13 +3334,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateConnectorsAsync(Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateConnectorsAsync(@javax.annotation.Nonnull Connectionsv3UpdateConnectorsRequest connectionsv3UpdateConnectorsRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceUpdateConnectorsValidateBeforeCall(connectionsv3UpdateConnectorsRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -3254,13 +3356,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdatePluginCall(String id, Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdatePluginCall(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3307,7 +3410,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceUpdatePluginValidateBeforeCall(String id, Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceUpdatePluginValidateBeforeCall(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling connectionsServiceUpdatePlugin(Async)");
@@ -3330,13 +3433,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3UpdatePluginResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3UpdatePluginResponse connectionsServiceUpdatePlugin(String id, Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest) throws ApiException {
+    public Connectionsv3UpdatePluginResponse connectionsServiceUpdatePlugin(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest) throws ApiException {
         ApiResponse<Connectionsv3UpdatePluginResponse> localVarResp = connectionsServiceUpdatePluginWithHttpInfo(id, connectionsv3UpdatePluginRequest);
         return localVarResp.getData();
     }
@@ -3349,13 +3453,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3UpdatePluginResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3UpdatePluginResponse> connectionsServiceUpdatePluginWithHttpInfo(String id, Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest) throws ApiException {
+    public ApiResponse<Connectionsv3UpdatePluginResponse> connectionsServiceUpdatePluginWithHttpInfo(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceUpdatePluginValidateBeforeCall(id, connectionsv3UpdatePluginRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdatePluginResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3370,13 +3475,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdatePluginAsync(String id, Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest, final ApiCallback<Connectionsv3UpdatePluginResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdatePluginAsync(@javax.annotation.Nonnull String id, @javax.annotation.Nonnull Connectionsv3UpdatePluginRequest connectionsv3UpdatePluginRequest, final ApiCallback<Connectionsv3UpdatePluginResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceUpdatePluginValidateBeforeCall(id, connectionsv3UpdatePluginRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3UpdatePluginResponse>(){}.getType();
@@ -3390,13 +3496,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateSettingsCall(Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateSettingsCall(@javax.annotation.Nonnull Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3442,7 +3549,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceUpdateSettingsValidateBeforeCall(Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceUpdateSettingsValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3UpdateSettingsRequest' is set
         if (connectionsv3UpdateSettingsRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3UpdateSettingsRequest' when calling connectionsServiceUpdateSettings(Async)");
@@ -3459,13 +3566,14 @@ public class ConnectionsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object connectionsServiceUpdateSettings(Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest) throws ApiException {
+    public Object connectionsServiceUpdateSettings(@javax.annotation.Nonnull Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest) throws ApiException {
         ApiResponse<Object> localVarResp = connectionsServiceUpdateSettingsWithHttpInfo(connectionsv3UpdateSettingsRequest);
         return localVarResp.getData();
     }
@@ -3477,13 +3585,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> connectionsServiceUpdateSettingsWithHttpInfo(Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest) throws ApiException {
+    public ApiResponse<Object> connectionsServiceUpdateSettingsWithHttpInfo(@javax.annotation.Nonnull Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceUpdateSettingsValidateBeforeCall(connectionsv3UpdateSettingsRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3497,13 +3606,14 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceUpdateSettingsAsync(Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceUpdateSettingsAsync(@javax.annotation.Nonnull Connectionsv3UpdateSettingsRequest connectionsv3UpdateSettingsRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceUpdateSettingsValidateBeforeCall(connectionsv3UpdateSettingsRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -3517,13 +3627,14 @@ public class ConnectionsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceValidateAwsConnectionCall(Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceValidateAwsConnectionCall(@javax.annotation.Nonnull Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3569,7 +3680,7 @@ public class ConnectionsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call connectionsServiceValidateAwsConnectionValidateBeforeCall(Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call connectionsServiceValidateAwsConnectionValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'connectionsv3ValidateAwsConnectionRequest' is set
         if (connectionsv3ValidateAwsConnectionRequest == null) {
             throw new ApiException("Missing the required parameter 'connectionsv3ValidateAwsConnectionRequest' when calling connectionsServiceValidateAwsConnection(Async)");
@@ -3586,13 +3697,14 @@ public class ConnectionsServiceApi {
      * @return Connectionsv3ValidateConnectionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Connectionsv3ValidateConnectionResponse connectionsServiceValidateAwsConnection(Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest) throws ApiException {
+    public Connectionsv3ValidateConnectionResponse connectionsServiceValidateAwsConnection(@javax.annotation.Nonnull Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest) throws ApiException {
         ApiResponse<Connectionsv3ValidateConnectionResponse> localVarResp = connectionsServiceValidateAwsConnectionWithHttpInfo(connectionsv3ValidateAwsConnectionRequest);
         return localVarResp.getData();
     }
@@ -3604,13 +3716,14 @@ public class ConnectionsServiceApi {
      * @return ApiResponse&lt;Connectionsv3ValidateConnectionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Connectionsv3ValidateConnectionResponse> connectionsServiceValidateAwsConnectionWithHttpInfo(Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest) throws ApiException {
+    public ApiResponse<Connectionsv3ValidateConnectionResponse> connectionsServiceValidateAwsConnectionWithHttpInfo(@javax.annotation.Nonnull Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest) throws ApiException {
         okhttp3.Call localVarCall = connectionsServiceValidateAwsConnectionValidateBeforeCall(connectionsv3ValidateAwsConnectionRequest, null);
         Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3624,15 +3737,278 @@ public class ConnectionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call connectionsServiceValidateAwsConnectionAsync(Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest, final ApiCallback<Connectionsv3ValidateConnectionResponse> _callback) throws ApiException {
+    public okhttp3.Call connectionsServiceValidateAwsConnectionAsync(@javax.annotation.Nonnull Connectionsv3ValidateAwsConnectionRequest connectionsv3ValidateAwsConnectionRequest, final ApiCallback<Connectionsv3ValidateConnectionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = connectionsServiceValidateAwsConnectionValidateBeforeCall(connectionsv3ValidateAwsConnectionRequest, _callback);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for connectionsServiceValidateAzureConnection
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateAzureConnectionCall(@javax.annotation.Nonnull Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = connectionsv3ValidateAzureConnectionRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/connections/validate/azure";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call connectionsServiceValidateAzureConnectionValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'connectionsv3ValidateAzureConnectionRequest' is set
+        if (connectionsv3ValidateAzureConnectionRequest == null) {
+            throw new ApiException("Missing the required parameter 'connectionsv3ValidateAzureConnectionRequest' when calling connectionsServiceValidateAzureConnection(Async)");
+        }
+
+        return connectionsServiceValidateAzureConnectionCall(connectionsv3ValidateAzureConnectionRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection.
+     * 
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @return Connectionsv3ValidateConnectionResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Connectionsv3ValidateConnectionResponse connectionsServiceValidateAzureConnection(@javax.annotation.Nonnull Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest) throws ApiException {
+        ApiResponse<Connectionsv3ValidateConnectionResponse> localVarResp = connectionsServiceValidateAzureConnectionWithHttpInfo(connectionsv3ValidateAzureConnectionRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection.
+     * 
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @return ApiResponse&lt;Connectionsv3ValidateConnectionResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Connectionsv3ValidateConnectionResponse> connectionsServiceValidateAzureConnectionWithHttpInfo(@javax.annotation.Nonnull Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest) throws ApiException {
+        okhttp3.Call localVarCall = connectionsServiceValidateAzureConnectionValidateBeforeCall(connectionsv3ValidateAzureConnectionRequest, null);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Validate an Azure connection. Description: Validate an Azure connection. (asynchronously)
+     * 
+     * @param connectionsv3ValidateAzureConnectionRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateAzureConnectionAsync(@javax.annotation.Nonnull Connectionsv3ValidateAzureConnectionRequest connectionsv3ValidateAzureConnectionRequest, final ApiCallback<Connectionsv3ValidateConnectionResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = connectionsServiceValidateAzureConnectionValidateBeforeCall(connectionsv3ValidateAzureConnectionRequest, _callback);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for connectionsServiceValidateGcpConnection
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateGcpConnectionCall(@javax.annotation.Nonnull Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = connectionsv3ValidateGcpConnectionRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/connections/validate/gcp";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call connectionsServiceValidateGcpConnectionValidateBeforeCall(@javax.annotation.Nonnull Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'connectionsv3ValidateGcpConnectionRequest' is set
+        if (connectionsv3ValidateGcpConnectionRequest == null) {
+            throw new ApiException("Missing the required parameter 'connectionsv3ValidateGcpConnectionRequest' when calling connectionsServiceValidateGcpConnection(Async)");
+        }
+
+        return connectionsServiceValidateGcpConnectionCall(connectionsv3ValidateGcpConnectionRequest, _callback);
+
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection.
+     * 
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @return Connectionsv3ValidateConnectionResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Connectionsv3ValidateConnectionResponse connectionsServiceValidateGcpConnection(@javax.annotation.Nonnull Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest) throws ApiException {
+        ApiResponse<Connectionsv3ValidateConnectionResponse> localVarResp = connectionsServiceValidateGcpConnectionWithHttpInfo(connectionsv3ValidateGcpConnectionRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection.
+     * 
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @return ApiResponse&lt;Connectionsv3ValidateConnectionResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Connectionsv3ValidateConnectionResponse> connectionsServiceValidateGcpConnectionWithHttpInfo(@javax.annotation.Nonnull Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest) throws ApiException {
+        okhttp3.Call localVarCall = connectionsServiceValidateGcpConnectionValidateBeforeCall(connectionsv3ValidateGcpConnectionRequest, null);
+        Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Summary: Validate a GCP connection. Description: Validate a GCP connection. (asynchronously)
+     * 
+     * @param connectionsv3ValidateGcpConnectionRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call connectionsServiceValidateGcpConnectionAsync(@javax.annotation.Nonnull Connectionsv3ValidateGcpConnectionRequest connectionsv3ValidateGcpConnectionRequest, final ApiCallback<Connectionsv3ValidateConnectionResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = connectionsServiceValidateGcpConnectionValidateBeforeCall(connectionsv3ValidateGcpConnectionRequest, _callback);
         Type localVarReturnType = new TypeToken<Connectionsv3ValidateConnectionResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

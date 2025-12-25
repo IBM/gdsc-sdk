@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * File is an object for UC pipeline file.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3File {
   public static final String SERIALIZED_NAME_CONTENT = "content";
   @SerializedName(SERIALIZED_NAME_CONTENT)
+  @javax.annotation.Nullable
   private byte[] content;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
+  @javax.annotation.Nullable
   private String path;
 
   public Universalconnectormanagerv3File() {
   }
 
-  public Universalconnectormanagerv3File content(byte[] content) {
+  public Universalconnectormanagerv3File content(@javax.annotation.Nullable byte[] content) {
     this.content = content;
     return this;
   }
 
-   /**
+  /**
    * Content of the file.
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
   public byte[] getContent() {
     return content;
   }
 
-  public void setContent(byte[] content) {
+  public void setContent(@javax.annotation.Nullable byte[] content) {
     this.content = content;
   }
 
 
-  public Universalconnectormanagerv3File name(String name) {
+  public Universalconnectormanagerv3File name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of the file.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Universalconnectormanagerv3File path(String path) {
+  public Universalconnectormanagerv3File path(@javax.annotation.Nullable String path) {
     this.path = path;
     return this;
   }
 
-   /**
+  /**
    * Path of the file in s3.
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
   public String getPath() {
     return path;
   }
 
-  public void setPath(String path) {
+  public void setPath(@javax.annotation.Nullable String path) {
     this.path = path;
   }
 
@@ -171,25 +175,22 @@ public class Universalconnectormanagerv3File {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("content");
-    openapiFields.add("name");
-    openapiFields.add("path");
+    openapiFields = new HashSet<String>(Arrays.asList("content", "name", "path"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3File
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3File
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3File.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3File is not found in the empty JSON string", Universalconnectormanagerv3File.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3File is not found in the empty JSON string", Universalconnectormanagerv3File.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,15 +198,15 @@ public class Universalconnectormanagerv3File {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3File.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3File` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3File` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
   }
 
@@ -238,22 +239,22 @@ public class Universalconnectormanagerv3File {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3File given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3File
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3File
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3File given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3File
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3File
+   */
   public static Universalconnectormanagerv3File fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3File.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3File to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3File to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

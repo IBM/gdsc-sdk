@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Schedulerv3Dependency
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3Dependency {
   public static final String SERIALIZED_NAME_CONFIG_ID = "config_id";
   @SerializedName(SERIALIZED_NAME_CONFIG_ID)
+  @javax.annotation.Nullable
   private String configId;
 
   public static final String SERIALIZED_NAME_CONFIG_TYPE = "config_type";
   @SerializedName(SERIALIZED_NAME_CONFIG_TYPE)
+  @javax.annotation.Nullable
   private String configType;
 
   public static final String SERIALIZED_NAME_SCHEDULED_TASK_COUNT = "scheduled_task_count";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_TASK_COUNT)
+  @javax.annotation.Nullable
   private Long scheduledTaskCount;
 
   public Schedulerv3Dependency() {
   }
 
-  public Schedulerv3Dependency configId(String configId) {
+  public Schedulerv3Dependency configId(@javax.annotation.Nullable String configId) {
     this.configId = configId;
     return this;
   }
 
-   /**
+  /**
    * Get configId
    * @return configId
-  **/
+   */
   @javax.annotation.Nullable
   public String getConfigId() {
     return configId;
   }
 
-  public void setConfigId(String configId) {
+  public void setConfigId(@javax.annotation.Nullable String configId) {
     this.configId = configId;
   }
 
 
-  public Schedulerv3Dependency configType(String configType) {
+  public Schedulerv3Dependency configType(@javax.annotation.Nullable String configType) {
     this.configType = configType;
     return this;
   }
 
-   /**
+  /**
    * Specify the configuration entry type: Distribution.Rule, workflow_investigation_link, workflow_response_template, etc.
    * @return configType
-  **/
+   */
   @javax.annotation.Nullable
   public String getConfigType() {
     return configType;
   }
 
-  public void setConfigType(String configType) {
+  public void setConfigType(@javax.annotation.Nullable String configType) {
     this.configType = configType;
   }
 
 
-  public Schedulerv3Dependency scheduledTaskCount(Long scheduledTaskCount) {
+  public Schedulerv3Dependency scheduledTaskCount(@javax.annotation.Nullable Long scheduledTaskCount) {
     this.scheduledTaskCount = scheduledTaskCount;
     return this;
   }
 
-   /**
+  /**
    * Total number of the scheduled job tasks.
    * @return scheduledTaskCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getScheduledTaskCount() {
     return scheduledTaskCount;
   }
 
-  public void setScheduledTaskCount(Long scheduledTaskCount) {
+  public void setScheduledTaskCount(@javax.annotation.Nullable Long scheduledTaskCount) {
     this.scheduledTaskCount = scheduledTaskCount;
   }
 
@@ -171,25 +175,22 @@ public class Schedulerv3Dependency {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("config_id");
-    openapiFields.add("config_type");
-    openapiFields.add("scheduled_task_count");
+    openapiFields = new HashSet<String>(Arrays.asList("config_id", "config_type", "scheduled_task_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3Dependency
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3Dependency
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3Dependency.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3Dependency is not found in the empty JSON string", Schedulerv3Dependency.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3Dependency is not found in the empty JSON string", Schedulerv3Dependency.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,15 +198,15 @@ public class Schedulerv3Dependency {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3Dependency.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3Dependency` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3Dependency` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("config_id") != null && !jsonObj.get("config_id").isJsonNull()) && !jsonObj.get("config_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_id").toString()));
       }
       if ((jsonObj.get("config_type") != null && !jsonObj.get("config_type").isJsonNull()) && !jsonObj.get("config_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `config_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `config_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_type").toString()));
       }
   }
 
@@ -238,22 +239,22 @@ public class Schedulerv3Dependency {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3Dependency given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3Dependency
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3Dependency
-  */
+  /**
+   * Create an instance of Schedulerv3Dependency given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3Dependency
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3Dependency
+   */
   public static Schedulerv3Dependency fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3Dependency.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3Dependency to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3Dependency to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

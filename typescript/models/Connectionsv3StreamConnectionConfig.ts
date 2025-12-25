@@ -14,7 +14,7 @@ import { Connectionsv3StreamConnection } from '../models/Connectionsv3StreamConn
 import { HttpFile } from '../http/http';
 
 /**
-* Stream connection config with connecion id.
+* Stream connection config with connection id.
 */
 export class Connectionsv3StreamConnectionConfig {
     /**
@@ -24,6 +24,8 @@ export class Connectionsv3StreamConnectionConfig {
     'streamConnection'?: Connectionsv3StreamConnection;
 
     static readonly discriminator: string | undefined = undefined;
+
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
@@ -46,4 +48,3 @@ export class Connectionsv3StreamConnectionConfig {
     public constructor() {
     }
 }
-

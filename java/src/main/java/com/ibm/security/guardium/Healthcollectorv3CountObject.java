@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Count object is the generic object which indicates counts and timestamp.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3CountObject {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private String count;
 
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  @javax.annotation.Nullable
   private OffsetDateTime timestamp;
 
   public Healthcollectorv3CountObject() {
   }
 
-  public Healthcollectorv3CountObject count(String count) {
+  public Healthcollectorv3CountObject count(@javax.annotation.Nullable String count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Count of the entity.
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public String getCount() {
     return count;
   }
 
-  public void setCount(String count) {
+  public void setCount(@javax.annotation.Nullable String count) {
     this.count = count;
   }
 
 
-  public Healthcollectorv3CountObject timestamp(OffsetDateTime timestamp) {
+  public Healthcollectorv3CountObject timestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
     return this;
   }
 
-   /**
+  /**
    * Timestamp for the counts.
    * @return timestamp
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 
@@ -147,24 +150,22 @@ public class Healthcollectorv3CountObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("timestamp");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "timestamp"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3CountObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3CountObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3CountObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3CountObject is not found in the empty JSON string", Healthcollectorv3CountObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3CountObject is not found in the empty JSON string", Healthcollectorv3CountObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,12 +173,12 @@ public class Healthcollectorv3CountObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3CountObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3CountObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3CountObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("count") != null && !jsonObj.get("count").isJsonNull()) && !jsonObj.get("count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
       }
   }
 
@@ -210,22 +211,22 @@ public class Healthcollectorv3CountObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3CountObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3CountObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3CountObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3CountObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3CountObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3CountObject
+   */
   public static Healthcollectorv3CountObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3CountObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3CountObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3CountObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,56 +40,64 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PluginRQ is the request object for InvokePlugin,InvokeAppProv,InvokeExplorerV1,InvokeExplorerV2 API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpluginmanagerv3PluginRQ {
   public static final String SERIALIZED_NAME_EXTERNAL_PARAM = "external_param";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_PARAM)
+  @javax.annotation.Nullable
   private Map<String, String> externalParam = new HashMap<>();
 
   public static final String SERIALIZED_NAME_ORG_ID = "org_id";
   @SerializedName(SERIALIZED_NAME_ORG_ID)
+  @javax.annotation.Nullable
   private String orgId;
 
   public static final String SERIALIZED_NAME_PLUGIN_ID = "plugin_id";
   @SerializedName(SERIALIZED_NAME_PLUGIN_ID)
+  @javax.annotation.Nullable
   private String pluginId;
 
   public static final String SERIALIZED_NAME_PROVISION_ID = "provision_id";
   @SerializedName(SERIALIZED_NAME_PROVISION_ID)
+  @javax.annotation.Nullable
   private String provisionId;
 
   public static final String SERIALIZED_NAME_RUN_FOR_ALL_SCANS = "run_for_all_scans";
   @SerializedName(SERIALIZED_NAME_RUN_FOR_ALL_SCANS)
+  @javax.annotation.Nullable
   private Boolean runForAllScans;
 
   public static final String SERIALIZED_NAME_SCAN_DESC = "scan_desc";
   @SerializedName(SERIALIZED_NAME_SCAN_DESC)
+  @javax.annotation.Nullable
   private String scanDesc;
 
   public static final String SERIALIZED_NAME_SCAN_ID = "scan_id";
   @SerializedName(SERIALIZED_NAME_SCAN_ID)
+  @javax.annotation.Nullable
   private String scanId;
 
   public static final String SERIALIZED_NAME_USER_EMAIL = "user_email";
   @SerializedName(SERIALIZED_NAME_USER_EMAIL)
+  @javax.annotation.Nullable
   private String userEmail;
 
   public Qspmpluginmanagerv3PluginRQ() {
   }
 
-  public Qspmpluginmanagerv3PluginRQ externalParam(Map<String, String> externalParam) {
+  public Qspmpluginmanagerv3PluginRQ externalParam(@javax.annotation.Nullable Map<String, String> externalParam) {
     this.externalParam = externalParam;
     return this;
   }
@@ -101,149 +110,149 @@ public class Qspmpluginmanagerv3PluginRQ {
     return this;
   }
 
-   /**
+  /**
    * Get externalParam
    * @return externalParam
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getExternalParam() {
     return externalParam;
   }
 
-  public void setExternalParam(Map<String, String> externalParam) {
+  public void setExternalParam(@javax.annotation.Nullable Map<String, String> externalParam) {
     this.externalParam = externalParam;
   }
 
 
-  public Qspmpluginmanagerv3PluginRQ orgId(String orgId) {
+  public Qspmpluginmanagerv3PluginRQ orgId(@javax.annotation.Nullable String orgId) {
     this.orgId = orgId;
     return this;
   }
 
-   /**
+  /**
    * Get orgId
    * @return orgId
-  **/
+   */
   @javax.annotation.Nullable
   public String getOrgId() {
     return orgId;
   }
 
-  public void setOrgId(String orgId) {
+  public void setOrgId(@javax.annotation.Nullable String orgId) {
     this.orgId = orgId;
   }
 
 
-  public Qspmpluginmanagerv3PluginRQ pluginId(String pluginId) {
+  public Qspmpluginmanagerv3PluginRQ pluginId(@javax.annotation.Nullable String pluginId) {
     this.pluginId = pluginId;
     return this;
   }
 
-   /**
+  /**
    * Get pluginId
    * @return pluginId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginId() {
     return pluginId;
   }
 
-  public void setPluginId(String pluginId) {
+  public void setPluginId(@javax.annotation.Nullable String pluginId) {
     this.pluginId = pluginId;
   }
 
 
-  public Qspmpluginmanagerv3PluginRQ provisionId(String provisionId) {
+  public Qspmpluginmanagerv3PluginRQ provisionId(@javax.annotation.Nullable String provisionId) {
     this.provisionId = provisionId;
     return this;
   }
 
-   /**
+  /**
    * Get provisionId
    * @return provisionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getProvisionId() {
     return provisionId;
   }
 
-  public void setProvisionId(String provisionId) {
+  public void setProvisionId(@javax.annotation.Nullable String provisionId) {
     this.provisionId = provisionId;
   }
 
 
-  public Qspmpluginmanagerv3PluginRQ runForAllScans(Boolean runForAllScans) {
+  public Qspmpluginmanagerv3PluginRQ runForAllScans(@javax.annotation.Nullable Boolean runForAllScans) {
     this.runForAllScans = runForAllScans;
     return this;
   }
 
-   /**
+  /**
    * Get runForAllScans
    * @return runForAllScans
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getRunForAllScans() {
     return runForAllScans;
   }
 
-  public void setRunForAllScans(Boolean runForAllScans) {
+  public void setRunForAllScans(@javax.annotation.Nullable Boolean runForAllScans) {
     this.runForAllScans = runForAllScans;
   }
 
 
-  public Qspmpluginmanagerv3PluginRQ scanDesc(String scanDesc) {
+  public Qspmpluginmanagerv3PluginRQ scanDesc(@javax.annotation.Nullable String scanDesc) {
     this.scanDesc = scanDesc;
     return this;
   }
 
-   /**
+  /**
    * Get scanDesc
    * @return scanDesc
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanDesc() {
     return scanDesc;
   }
 
-  public void setScanDesc(String scanDesc) {
+  public void setScanDesc(@javax.annotation.Nullable String scanDesc) {
     this.scanDesc = scanDesc;
   }
 
 
-  public Qspmpluginmanagerv3PluginRQ scanId(String scanId) {
+  public Qspmpluginmanagerv3PluginRQ scanId(@javax.annotation.Nullable String scanId) {
     this.scanId = scanId;
     return this;
   }
 
-   /**
+  /**
    * Get scanId
    * @return scanId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanId() {
     return scanId;
   }
 
-  public void setScanId(String scanId) {
+  public void setScanId(@javax.annotation.Nullable String scanId) {
     this.scanId = scanId;
   }
 
 
-  public Qspmpluginmanagerv3PluginRQ userEmail(String userEmail) {
+  public Qspmpluginmanagerv3PluginRQ userEmail(@javax.annotation.Nullable String userEmail) {
     this.userEmail = userEmail;
     return this;
   }
 
-   /**
+  /**
    * Get userEmail
    * @return userEmail
-  **/
+   */
   @javax.annotation.Nullable
   public String getUserEmail() {
     return userEmail;
   }
 
-  public void setUserEmail(String userEmail) {
+  public void setUserEmail(@javax.annotation.Nullable String userEmail) {
     this.userEmail = userEmail;
   }
 
@@ -306,30 +315,22 @@ public class Qspmpluginmanagerv3PluginRQ {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("external_param");
-    openapiFields.add("org_id");
-    openapiFields.add("plugin_id");
-    openapiFields.add("provision_id");
-    openapiFields.add("run_for_all_scans");
-    openapiFields.add("scan_desc");
-    openapiFields.add("scan_id");
-    openapiFields.add("user_email");
+    openapiFields = new HashSet<String>(Arrays.asList("external_param", "org_id", "plugin_id", "provision_id", "run_for_all_scans", "scan_desc", "scan_id", "user_email"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpluginmanagerv3PluginRQ
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpluginmanagerv3PluginRQ
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpluginmanagerv3PluginRQ.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpluginmanagerv3PluginRQ is not found in the empty JSON string", Qspmpluginmanagerv3PluginRQ.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpluginmanagerv3PluginRQ is not found in the empty JSON string", Qspmpluginmanagerv3PluginRQ.openapiRequiredFields.toString()));
         }
       }
 
@@ -337,27 +338,27 @@ public class Qspmpluginmanagerv3PluginRQ {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpluginmanagerv3PluginRQ.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpluginmanagerv3PluginRQ` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpluginmanagerv3PluginRQ` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("org_id") != null && !jsonObj.get("org_id").isJsonNull()) && !jsonObj.get("org_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `org_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("org_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `org_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("org_id").toString()));
       }
       if ((jsonObj.get("plugin_id") != null && !jsonObj.get("plugin_id").isJsonNull()) && !jsonObj.get("plugin_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_id").toString()));
       }
       if ((jsonObj.get("provision_id") != null && !jsonObj.get("provision_id").isJsonNull()) && !jsonObj.get("provision_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `provision_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("provision_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `provision_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("provision_id").toString()));
       }
       if ((jsonObj.get("scan_desc") != null && !jsonObj.get("scan_desc").isJsonNull()) && !jsonObj.get("scan_desc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_desc").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_desc").toString()));
       }
       if ((jsonObj.get("scan_id") != null && !jsonObj.get("scan_id").isJsonNull()) && !jsonObj.get("scan_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_id").toString()));
       }
       if ((jsonObj.get("user_email") != null && !jsonObj.get("user_email").isJsonNull()) && !jsonObj.get("user_email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_email").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_email").toString()));
       }
   }
 
@@ -390,22 +391,22 @@ public class Qspmpluginmanagerv3PluginRQ {
     }
   }
 
- /**
-  * Create an instance of Qspmpluginmanagerv3PluginRQ given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpluginmanagerv3PluginRQ
-  * @throws IOException if the JSON string is invalid with respect to Qspmpluginmanagerv3PluginRQ
-  */
+  /**
+   * Create an instance of Qspmpluginmanagerv3PluginRQ given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpluginmanagerv3PluginRQ
+   * @throws IOException if the JSON string is invalid with respect to Qspmpluginmanagerv3PluginRQ
+   */
   public static Qspmpluginmanagerv3PluginRQ fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpluginmanagerv3PluginRQ.class);
   }
 
- /**
-  * Convert an instance of Qspmpluginmanagerv3PluginRQ to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpluginmanagerv3PluginRQ to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

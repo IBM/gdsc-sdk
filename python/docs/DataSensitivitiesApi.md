@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_sensitivities_summary**](DataSensitivitiesApi.md#get_sensitivities_summary) | **GET** /api/v1/dspm/sensitivities/summary | Get the summary of sensitivities
-[**get_sensitivity**](DataSensitivitiesApi.md#get_sensitivity) | **GET** /api/v1/dspm/sensitivities/{sensitivityId} | Get sensitivity details by providing its ID
-[**list_sensitivities**](DataSensitivitiesApi.md#list_sensitivities) | **GET** /api/v1/dspm/sensitivities | List sensitivities
+[**get_sensitivities_summary**](DataSensitivitiesApi.md#get_sensitivities_summary) | **GET** /api/v2/dspm/sensitivities/summary | Get the summary of sensitivities
+[**get_sensitivity**](DataSensitivitiesApi.md#get_sensitivity) | **GET** /api/v2/dspm/sensitivities/{sensitivityId} | Get sensitivity details by providing its ID
+[**list_sensitivities**](DataSensitivitiesApi.md#list_sensitivities) | **GET** /api/v2/dspm/sensitivities | List sensitivities
 
 
 # **get_sensitivities_summary**

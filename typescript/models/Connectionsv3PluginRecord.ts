@@ -18,6 +18,8 @@ export class Connectionsv3PluginRecord {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "guardRecordName",
@@ -39,4 +41,3 @@ export class Connectionsv3PluginRecord {
     public constructor() {
     }
 }
-

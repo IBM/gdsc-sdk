@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,249 +40,259 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Feature is a pair of key and value.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3Feature {
   public static final String SERIALIZED_NAME_FEATURE_NLS = "feature_nls";
   @SerializedName(SERIALIZED_NAME_FEATURE_NLS)
+  @javax.annotation.Nullable
   private String featureNls;
 
   public static final String SERIALIZED_NAME_IS_OBSERVATION = "is_observation";
   @SerializedName(SERIALIZED_NAME_IS_OBSERVATION)
+  @javax.annotation.Nullable
   private Boolean isObservation;
 
   public static final String SERIALIZED_NAME_IS_ZERO = "is_zero";
   @SerializedName(SERIALIZED_NAME_IS_ZERO)
+  @javax.annotation.Nullable
   private Boolean isZero;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_METHOD_TYPE = "method_type";
   @SerializedName(SERIALIZED_NAME_METHOD_TYPE)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3MethodType methodType = Riskanalyticsenginev3MethodType.UNDEFINED_METHOD_TYPE;
 
   public static final String SERIALIZED_NAME_ORIGINAL_VALUE = "original_value";
   @SerializedName(SERIALIZED_NAME_ORIGINAL_VALUE)
+  @javax.annotation.Nullable
   private Float originalValue;
 
   public static final String SERIALIZED_NAME_SCORE = "score";
   @SerializedName(SERIALIZED_NAME_SCORE)
+  @javax.annotation.Nullable
   private Integer score;
 
   public static final String SERIALIZED_NAME_SEQUENCE = "sequence";
   @SerializedName(SERIALIZED_NAME_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer sequence;
 
   public static final String SERIALIZED_NAME_SEVERITY_LEVEL = "severity_level";
   @SerializedName(SERIALIZED_NAME_SEVERITY_LEVEL)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3SeverityLevel severityLevel = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private Float value;
 
   public Riskanalyticsenginev3Feature() {
   }
 
-  public Riskanalyticsenginev3Feature featureNls(String featureNls) {
+  public Riskanalyticsenginev3Feature featureNls(@javax.annotation.Nullable String featureNls) {
     this.featureNls = featureNls;
     return this;
   }
 
-   /**
+  /**
    * NLS Feature key //upper case.
    * @return featureNls
-  **/
+   */
   @javax.annotation.Nullable
   public String getFeatureNls() {
     return featureNls;
   }
 
-  public void setFeatureNls(String featureNls) {
+  public void setFeatureNls(@javax.annotation.Nullable String featureNls) {
     this.featureNls = featureNls;
   }
 
 
-  public Riskanalyticsenginev3Feature isObservation(Boolean isObservation) {
+  public Riskanalyticsenginev3Feature isObservation(@javax.annotation.Nullable Boolean isObservation) {
     this.isObservation = isObservation;
     return this;
   }
 
-   /**
+  /**
    * Is observation flag to let the score service update it if need it.
    * @return isObservation
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsObservation() {
     return isObservation;
   }
 
-  public void setIsObservation(Boolean isObservation) {
+  public void setIsObservation(@javax.annotation.Nullable Boolean isObservation) {
     this.isObservation = isObservation;
   }
 
 
-  public Riskanalyticsenginev3Feature isZero(Boolean isZero) {
+  public Riskanalyticsenginev3Feature isZero(@javax.annotation.Nullable Boolean isZero) {
     this.isZero = isZero;
     return this;
   }
 
-   /**
+  /**
    * If value is zero - there is no value or original value so this flag will be true.
    * @return isZero
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsZero() {
     return isZero;
   }
 
-  public void setIsZero(Boolean isZero) {
+  public void setIsZero(@javax.annotation.Nullable Boolean isZero) {
     this.isZero = isZero;
   }
 
 
-  public Riskanalyticsenginev3Feature key(String key) {
+  public Riskanalyticsenginev3Feature key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Feature key.
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Riskanalyticsenginev3Feature methodType(Riskanalyticsenginev3MethodType methodType) {
+  public Riskanalyticsenginev3Feature methodType(@javax.annotation.Nullable Riskanalyticsenginev3MethodType methodType) {
     this.methodType = methodType;
     return this;
   }
 
-   /**
+  /**
    * Get methodType
    * @return methodType
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3MethodType getMethodType() {
     return methodType;
   }
 
-  public void setMethodType(Riskanalyticsenginev3MethodType methodType) {
+  public void setMethodType(@javax.annotation.Nullable Riskanalyticsenginev3MethodType methodType) {
     this.methodType = methodType;
   }
 
 
-  public Riskanalyticsenginev3Feature originalValue(Float originalValue) {
+  public Riskanalyticsenginev3Feature originalValue(@javax.annotation.Nullable Float originalValue) {
     this.originalValue = originalValue;
     return this;
   }
 
-   /**
+  /**
    * Feature value before normalization.
    * @return originalValue
-  **/
+   */
   @javax.annotation.Nullable
   public Float getOriginalValue() {
     return originalValue;
   }
 
-  public void setOriginalValue(Float originalValue) {
+  public void setOriginalValue(@javax.annotation.Nullable Float originalValue) {
     this.originalValue = originalValue;
   }
 
 
-  public Riskanalyticsenginev3Feature score(Integer score) {
+  public Riskanalyticsenginev3Feature score(@javax.annotation.Nullable Integer score) {
     this.score = score;
     return this;
   }
 
-   /**
+  /**
    * The feature score that was defined by riskApp.
    * @return score
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getScore() {
     return score;
   }
 
-  public void setScore(Integer score) {
+  public void setScore(@javax.annotation.Nullable Integer score) {
     this.score = score;
   }
 
 
-  public Riskanalyticsenginev3Feature sequence(Integer sequence) {
+  public Riskanalyticsenginev3Feature sequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
+  /**
    * Sequence.
    * @return sequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSequence() {
     return sequence;
   }
 
-  public void setSequence(Integer sequence) {
+  public void setSequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
   }
 
 
-  public Riskanalyticsenginev3Feature severityLevel(Riskanalyticsenginev3SeverityLevel severityLevel) {
+  public Riskanalyticsenginev3Feature severityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel severityLevel) {
     this.severityLevel = severityLevel;
     return this;
   }
 
-   /**
+  /**
    * Get severityLevel
    * @return severityLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3SeverityLevel getSeverityLevel() {
     return severityLevel;
   }
 
-  public void setSeverityLevel(Riskanalyticsenginev3SeverityLevel severityLevel) {
+  public void setSeverityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel severityLevel) {
     this.severityLevel = severityLevel;
   }
 
 
-  public Riskanalyticsenginev3Feature value(Float value) {
+  public Riskanalyticsenginev3Feature value(@javax.annotation.Nullable Float value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Feature value.
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public Float getValue() {
     return value;
   }
 
-  public void setValue(Float value) {
+  public void setValue(@javax.annotation.Nullable Float value) {
     this.value = value;
   }
 
@@ -348,32 +359,22 @@ public class Riskanalyticsenginev3Feature {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("feature_nls");
-    openapiFields.add("is_observation");
-    openapiFields.add("is_zero");
-    openapiFields.add("key");
-    openapiFields.add("method_type");
-    openapiFields.add("original_value");
-    openapiFields.add("score");
-    openapiFields.add("sequence");
-    openapiFields.add("severity_level");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("feature_nls", "is_observation", "is_zero", "key", "method_type", "original_value", "score", "sequence", "severity_level", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3Feature
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3Feature
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3Feature.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3Feature is not found in the empty JSON string", Riskanalyticsenginev3Feature.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3Feature is not found in the empty JSON string", Riskanalyticsenginev3Feature.openapiRequiredFields.toString()));
         }
       }
 
@@ -381,15 +382,15 @@ public class Riskanalyticsenginev3Feature {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3Feature.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3Feature` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3Feature` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("feature_nls") != null && !jsonObj.get("feature_nls").isJsonNull()) && !jsonObj.get("feature_nls").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `feature_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feature_nls").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `feature_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feature_nls").toString()));
       }
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       // validate the optional field `method_type`
       if (jsonObj.get("method_type") != null && !jsonObj.get("method_type").isJsonNull()) {
@@ -430,22 +431,22 @@ public class Riskanalyticsenginev3Feature {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3Feature given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3Feature
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3Feature
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3Feature given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3Feature
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3Feature
+   */
   public static Riskanalyticsenginev3Feature fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3Feature.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3Feature to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3Feature to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

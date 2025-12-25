@@ -6,7 +6,7 @@ Response message to create compliance workspace.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**Complianceacceleratorv3WorkspaceCreationStatus**](Complianceacceleratorv3WorkspaceCreationStatus.md) |  | [optional] 
+**status** | [**Complianceacceleratorv3WorkspaceCreationStatus**](Complianceacceleratorv3WorkspaceCreationStatus.md) |  | [optional] [default to Complianceacceleratorv3WorkspaceCreationStatus.NO_ACTION]
 **title** | **str** | More info of the step. | [optional] 
 **workspace_id** | **str** | The id of the workspace. | [optional] 
 

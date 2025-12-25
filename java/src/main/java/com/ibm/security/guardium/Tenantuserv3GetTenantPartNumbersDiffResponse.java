@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetTenantPartNumbersDiffResponse message for Get v3/tenants api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3GetTenantPartNumbersDiffResponse {
   public static final String SERIALIZED_NAME_ARE_PART_NUMBERS_SAME = "are_part_numbers_same";
   @SerializedName(SERIALIZED_NAME_ARE_PART_NUMBERS_SAME)
+  @javax.annotation.Nullable
   private Boolean arePartNumbersSame;
 
   public static final String SERIALIZED_NAME_TENANT_CAPABILITY_PART_NUMBERS_CHANGES = "tenant_capability_part_numbers_changes";
   @SerializedName(SERIALIZED_NAME_TENANT_CAPABILITY_PART_NUMBERS_CHANGES)
+  @javax.annotation.Nullable
   private Map<String, Tenantuserv3TenantCapabilityPartNumbers> tenantCapabilityPartNumbersChanges = new HashMap<>();
 
   public Tenantuserv3GetTenantPartNumbersDiffResponse() {
   }
 
-  public Tenantuserv3GetTenantPartNumbersDiffResponse arePartNumbersSame(Boolean arePartNumbersSame) {
+  public Tenantuserv3GetTenantPartNumbersDiffResponse arePartNumbersSame(@javax.annotation.Nullable Boolean arePartNumbersSame) {
     this.arePartNumbersSame = arePartNumbersSame;
     return this;
   }
 
-   /**
+  /**
    * Get arePartNumbersSame
    * @return arePartNumbersSame
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getArePartNumbersSame() {
     return arePartNumbersSame;
   }
 
-  public void setArePartNumbersSame(Boolean arePartNumbersSame) {
+  public void setArePartNumbersSame(@javax.annotation.Nullable Boolean arePartNumbersSame) {
     this.arePartNumbersSame = arePartNumbersSame;
   }
 
 
-  public Tenantuserv3GetTenantPartNumbersDiffResponse tenantCapabilityPartNumbersChanges(Map<String, Tenantuserv3TenantCapabilityPartNumbers> tenantCapabilityPartNumbersChanges) {
+  public Tenantuserv3GetTenantPartNumbersDiffResponse tenantCapabilityPartNumbersChanges(@javax.annotation.Nullable Map<String, Tenantuserv3TenantCapabilityPartNumbers> tenantCapabilityPartNumbersChanges) {
     this.tenantCapabilityPartNumbersChanges = tenantCapabilityPartNumbersChanges;
     return this;
   }
@@ -97,16 +100,16 @@ public class Tenantuserv3GetTenantPartNumbersDiffResponse {
     return this;
   }
 
-   /**
+  /**
    * Get tenantCapabilityPartNumbersChanges
    * @return tenantCapabilityPartNumbersChanges
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Tenantuserv3TenantCapabilityPartNumbers> getTenantCapabilityPartNumbersChanges() {
     return tenantCapabilityPartNumbersChanges;
   }
 
-  public void setTenantCapabilityPartNumbersChanges(Map<String, Tenantuserv3TenantCapabilityPartNumbers> tenantCapabilityPartNumbersChanges) {
+  public void setTenantCapabilityPartNumbersChanges(@javax.annotation.Nullable Map<String, Tenantuserv3TenantCapabilityPartNumbers> tenantCapabilityPartNumbersChanges) {
     this.tenantCapabilityPartNumbersChanges = tenantCapabilityPartNumbersChanges;
   }
 
@@ -157,24 +160,22 @@ public class Tenantuserv3GetTenantPartNumbersDiffResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("are_part_numbers_same");
-    openapiFields.add("tenant_capability_part_numbers_changes");
+    openapiFields = new HashSet<String>(Arrays.asList("are_part_numbers_same", "tenant_capability_part_numbers_changes"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3GetTenantPartNumbersDiffResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3GetTenantPartNumbersDiffResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3GetTenantPartNumbersDiffResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3GetTenantPartNumbersDiffResponse is not found in the empty JSON string", Tenantuserv3GetTenantPartNumbersDiffResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3GetTenantPartNumbersDiffResponse is not found in the empty JSON string", Tenantuserv3GetTenantPartNumbersDiffResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Tenantuserv3GetTenantPartNumbersDiffResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3GetTenantPartNumbersDiffResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3GetTenantPartNumbersDiffResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3GetTenantPartNumbersDiffResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -217,22 +218,22 @@ public class Tenantuserv3GetTenantPartNumbersDiffResponse {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3GetTenantPartNumbersDiffResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3GetTenantPartNumbersDiffResponse
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3GetTenantPartNumbersDiffResponse
-  */
+  /**
+   * Create an instance of Tenantuserv3GetTenantPartNumbersDiffResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3GetTenantPartNumbersDiffResponse
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3GetTenantPartNumbersDiffResponse
+   */
   public static Tenantuserv3GetTenantPartNumbersDiffResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3GetTenantPartNumbersDiffResponse.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3GetTenantPartNumbersDiffResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3GetTenantPartNumbersDiffResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

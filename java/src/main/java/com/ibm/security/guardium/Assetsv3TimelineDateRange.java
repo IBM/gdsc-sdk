@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,226 +38,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3TimelineDateRange
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3TimelineDateRange {
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)
+  @javax.annotation.Nullable
   private String end;
 
   public static final String SERIALIZED_NAME_END_NUMBER = "end_number";
   @SerializedName(SERIALIZED_NAME_END_NUMBER)
+  @javax.annotation.Nullable
   private Integer endNumber;
 
   public static final String SERIALIZED_NAME_END_UNIT = "end_unit";
   @SerializedName(SERIALIZED_NAME_END_UNIT)
+  @javax.annotation.Nullable
   private String endUnit;
 
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private String error;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_START = "start";
   @SerializedName(SERIALIZED_NAME_START)
+  @javax.annotation.Nullable
   private String start;
 
   public static final String SERIALIZED_NAME_START_NUMBER = "start_number";
   @SerializedName(SERIALIZED_NAME_START_NUMBER)
+  @javax.annotation.Nullable
   private Integer startNumber;
 
   public static final String SERIALIZED_NAME_START_UNIT = "start_unit";
   @SerializedName(SERIALIZED_NAME_START_UNIT)
+  @javax.annotation.Nullable
   private String startUnit;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Assetsv3TimelineDateRange() {
   }
 
-  public Assetsv3TimelineDateRange end(String end) {
+  public Assetsv3TimelineDateRange end(@javax.annotation.Nullable String end) {
     this.end = end;
     return this;
   }
 
-   /**
+  /**
    * Get end
    * @return end
-  **/
+   */
   @javax.annotation.Nullable
   public String getEnd() {
     return end;
   }
 
-  public void setEnd(String end) {
+  public void setEnd(@javax.annotation.Nullable String end) {
     this.end = end;
   }
 
 
-  public Assetsv3TimelineDateRange endNumber(Integer endNumber) {
+  public Assetsv3TimelineDateRange endNumber(@javax.annotation.Nullable Integer endNumber) {
     this.endNumber = endNumber;
     return this;
   }
 
-   /**
+  /**
    * Get endNumber
    * @return endNumber
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getEndNumber() {
     return endNumber;
   }
 
-  public void setEndNumber(Integer endNumber) {
+  public void setEndNumber(@javax.annotation.Nullable Integer endNumber) {
     this.endNumber = endNumber;
   }
 
 
-  public Assetsv3TimelineDateRange endUnit(String endUnit) {
+  public Assetsv3TimelineDateRange endUnit(@javax.annotation.Nullable String endUnit) {
     this.endUnit = endUnit;
     return this;
   }
 
-   /**
+  /**
    * Get endUnit
    * @return endUnit
-  **/
+   */
   @javax.annotation.Nullable
   public String getEndUnit() {
     return endUnit;
   }
 
-  public void setEndUnit(String endUnit) {
+  public void setEndUnit(@javax.annotation.Nullable String endUnit) {
     this.endUnit = endUnit;
   }
 
 
-  public Assetsv3TimelineDateRange error(String error) {
+  public Assetsv3TimelineDateRange error(@javax.annotation.Nullable String error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Get error
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public String getError() {
     return error;
   }
 
-  public void setError(String error) {
+  public void setError(@javax.annotation.Nullable String error) {
     this.error = error;
   }
 
 
-  public Assetsv3TimelineDateRange key(String key) {
+  public Assetsv3TimelineDateRange key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Get key
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Assetsv3TimelineDateRange start(String start) {
+  public Assetsv3TimelineDateRange start(@javax.annotation.Nullable String start) {
     this.start = start;
     return this;
   }
 
-   /**
+  /**
    * Get start
    * @return start
-  **/
+   */
   @javax.annotation.Nullable
   public String getStart() {
     return start;
   }
 
-  public void setStart(String start) {
+  public void setStart(@javax.annotation.Nullable String start) {
     this.start = start;
   }
 
 
-  public Assetsv3TimelineDateRange startNumber(Integer startNumber) {
+  public Assetsv3TimelineDateRange startNumber(@javax.annotation.Nullable Integer startNumber) {
     this.startNumber = startNumber;
     return this;
   }
 
-   /**
+  /**
    * Get startNumber
    * @return startNumber
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStartNumber() {
     return startNumber;
   }
 
-  public void setStartNumber(Integer startNumber) {
+  public void setStartNumber(@javax.annotation.Nullable Integer startNumber) {
     this.startNumber = startNumber;
   }
 
 
-  public Assetsv3TimelineDateRange startUnit(String startUnit) {
+  public Assetsv3TimelineDateRange startUnit(@javax.annotation.Nullable String startUnit) {
     this.startUnit = startUnit;
     return this;
   }
 
-   /**
+  /**
    * Get startUnit
    * @return startUnit
-  **/
+   */
   @javax.annotation.Nullable
   public String getStartUnit() {
     return startUnit;
   }
 
-  public void setStartUnit(String startUnit) {
+  public void setStartUnit(@javax.annotation.Nullable String startUnit) {
     this.startUnit = startUnit;
   }
 
 
-  public Assetsv3TimelineDateRange type(String type) {
+  public Assetsv3TimelineDateRange type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -321,31 +331,22 @@ public class Assetsv3TimelineDateRange {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("end");
-    openapiFields.add("end_number");
-    openapiFields.add("end_unit");
-    openapiFields.add("error");
-    openapiFields.add("key");
-    openapiFields.add("start");
-    openapiFields.add("start_number");
-    openapiFields.add("start_unit");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("end", "end_number", "end_unit", "error", "key", "start", "start_number", "start_unit", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3TimelineDateRange
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3TimelineDateRange
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3TimelineDateRange.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3TimelineDateRange is not found in the empty JSON string", Assetsv3TimelineDateRange.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3TimelineDateRange is not found in the empty JSON string", Assetsv3TimelineDateRange.openapiRequiredFields.toString()));
         }
       }
 
@@ -353,30 +354,30 @@ public class Assetsv3TimelineDateRange {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3TimelineDateRange.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3TimelineDateRange` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3TimelineDateRange` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("end") != null && !jsonObj.get("end").isJsonNull()) && !jsonObj.get("end").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `end` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `end` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end").toString()));
       }
       if ((jsonObj.get("end_unit") != null && !jsonObj.get("end_unit").isJsonNull()) && !jsonObj.get("end_unit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `end_unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_unit").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `end_unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_unit").toString()));
       }
       if ((jsonObj.get("error") != null && !jsonObj.get("error").isJsonNull()) && !jsonObj.get("error").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
       }
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       if ((jsonObj.get("start") != null && !jsonObj.get("start").isJsonNull()) && !jsonObj.get("start").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `start` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `start` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start").toString()));
       }
       if ((jsonObj.get("start_unit") != null && !jsonObj.get("start_unit").isJsonNull()) && !jsonObj.get("start_unit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `start_unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_unit").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `start_unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_unit").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -409,22 +410,22 @@ public class Assetsv3TimelineDateRange {
     }
   }
 
- /**
-  * Create an instance of Assetsv3TimelineDateRange given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3TimelineDateRange
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3TimelineDateRange
-  */
+  /**
+   * Create an instance of Assetsv3TimelineDateRange given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3TimelineDateRange
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3TimelineDateRange
+   */
   public static Assetsv3TimelineDateRange fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3TimelineDateRange.class);
   }
 
- /**
-  * Convert an instance of Assetsv3TimelineDateRange to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3TimelineDateRange to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

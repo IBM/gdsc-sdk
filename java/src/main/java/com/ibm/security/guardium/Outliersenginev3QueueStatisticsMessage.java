@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,226 +39,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StatisticsResponse is the message for the result from getStatistics.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3QueueStatisticsMessage {
   public static final String SERIALIZED_NAME_COVERAGE1H = "coverage_1h";
   @SerializedName(SERIALIZED_NAME_COVERAGE1H)
+  @javax.annotation.Nullable
   private Outliersenginev3DatasourcesCoverageStats coverage1h;
 
   public static final String SERIALIZED_NAME_COVERAGE24H = "coverage_24h";
   @SerializedName(SERIALIZED_NAME_COVERAGE24H)
+  @javax.annotation.Nullable
   private Outliersenginev3DatasourcesCoverageStats coverage24h;
 
   public static final String SERIALIZED_NAME_COVERAGE72H = "coverage_72h";
   @SerializedName(SERIALIZED_NAME_COVERAGE72H)
+  @javax.annotation.Nullable
   private Outliersenginev3DatasourcesCoverageStats coverage72h;
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
+  @javax.annotation.Nullable
   private Integer tasks;
 
   public static final String SERIALIZED_NAME_TASKS_DONE = "tasks_done";
   @SerializedName(SERIALIZED_NAME_TASKS_DONE)
+  @javax.annotation.Nullable
   private Integer tasksDone;
 
   public static final String SERIALIZED_NAME_TASKS_IN_PROGRESS = "tasks_in_progress";
   @SerializedName(SERIALIZED_NAME_TASKS_IN_PROGRESS)
+  @javax.annotation.Nullable
   private Integer tasksInProgress;
 
   public static final String SERIALIZED_NAME_TASKS_IN_PROGRESS2H = "tasks_in_progress_2h";
   @SerializedName(SERIALIZED_NAME_TASKS_IN_PROGRESS2H)
+  @javax.annotation.Nullable
   private Integer tasksInProgress2h;
 
   public static final String SERIALIZED_NAME_TASKS_NEW = "tasks_new";
   @SerializedName(SERIALIZED_NAME_TASKS_NEW)
+  @javax.annotation.Nullable
   private Integer tasksNew;
 
   public static final String SERIALIZED_NAME_TASKS_NEW2H = "tasks_new_2h";
   @SerializedName(SERIALIZED_NAME_TASKS_NEW2H)
+  @javax.annotation.Nullable
   private Integer tasksNew2h;
 
   public Outliersenginev3QueueStatisticsMessage() {
   }
 
-  public Outliersenginev3QueueStatisticsMessage coverage1h(Outliersenginev3DatasourcesCoverageStats coverage1h) {
+  public Outliersenginev3QueueStatisticsMessage coverage1h(@javax.annotation.Nullable Outliersenginev3DatasourcesCoverageStats coverage1h) {
     this.coverage1h = coverage1h;
     return this;
   }
 
-   /**
+  /**
    * Get coverage1h
    * @return coverage1h
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3DatasourcesCoverageStats getCoverage1h() {
     return coverage1h;
   }
 
-  public void setCoverage1h(Outliersenginev3DatasourcesCoverageStats coverage1h) {
+  public void setCoverage1h(@javax.annotation.Nullable Outliersenginev3DatasourcesCoverageStats coverage1h) {
     this.coverage1h = coverage1h;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage coverage24h(Outliersenginev3DatasourcesCoverageStats coverage24h) {
+  public Outliersenginev3QueueStatisticsMessage coverage24h(@javax.annotation.Nullable Outliersenginev3DatasourcesCoverageStats coverage24h) {
     this.coverage24h = coverage24h;
     return this;
   }
 
-   /**
+  /**
    * Get coverage24h
    * @return coverage24h
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3DatasourcesCoverageStats getCoverage24h() {
     return coverage24h;
   }
 
-  public void setCoverage24h(Outliersenginev3DatasourcesCoverageStats coverage24h) {
+  public void setCoverage24h(@javax.annotation.Nullable Outliersenginev3DatasourcesCoverageStats coverage24h) {
     this.coverage24h = coverage24h;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage coverage72h(Outliersenginev3DatasourcesCoverageStats coverage72h) {
+  public Outliersenginev3QueueStatisticsMessage coverage72h(@javax.annotation.Nullable Outliersenginev3DatasourcesCoverageStats coverage72h) {
     this.coverage72h = coverage72h;
     return this;
   }
 
-   /**
+  /**
    * Get coverage72h
    * @return coverage72h
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3DatasourcesCoverageStats getCoverage72h() {
     return coverage72h;
   }
 
-  public void setCoverage72h(Outliersenginev3DatasourcesCoverageStats coverage72h) {
+  public void setCoverage72h(@javax.annotation.Nullable Outliersenginev3DatasourcesCoverageStats coverage72h) {
     this.coverage72h = coverage72h;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage tasks(Integer tasks) {
+  public Outliersenginev3QueueStatisticsMessage tasks(@javax.annotation.Nullable Integer tasks) {
     this.tasks = tasks;
     return this;
   }
 
-   /**
+  /**
    * Number of tasks in queue, in total.
    * @return tasks
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTasks() {
     return tasks;
   }
 
-  public void setTasks(Integer tasks) {
+  public void setTasks(@javax.annotation.Nullable Integer tasks) {
     this.tasks = tasks;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage tasksDone(Integer tasksDone) {
+  public Outliersenginev3QueueStatisticsMessage tasksDone(@javax.annotation.Nullable Integer tasksDone) {
     this.tasksDone = tasksDone;
     return this;
   }
 
-   /**
+  /**
    * Number of tasks done.
    * @return tasksDone
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTasksDone() {
     return tasksDone;
   }
 
-  public void setTasksDone(Integer tasksDone) {
+  public void setTasksDone(@javax.annotation.Nullable Integer tasksDone) {
     this.tasksDone = tasksDone;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage tasksInProgress(Integer tasksInProgress) {
+  public Outliersenginev3QueueStatisticsMessage tasksInProgress(@javax.annotation.Nullable Integer tasksInProgress) {
     this.tasksInProgress = tasksInProgress;
     return this;
   }
 
-   /**
+  /**
    * Number of tasks in progress.
    * @return tasksInProgress
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTasksInProgress() {
     return tasksInProgress;
   }
 
-  public void setTasksInProgress(Integer tasksInProgress) {
+  public void setTasksInProgress(@javax.annotation.Nullable Integer tasksInProgress) {
     this.tasksInProgress = tasksInProgress;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage tasksInProgress2h(Integer tasksInProgress2h) {
+  public Outliersenginev3QueueStatisticsMessage tasksInProgress2h(@javax.annotation.Nullable Integer tasksInProgress2h) {
     this.tasksInProgress2h = tasksInProgress2h;
     return this;
   }
 
-   /**
+  /**
    * Number of tasks in progress, for over 2 hours.
    * @return tasksInProgress2h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTasksInProgress2h() {
     return tasksInProgress2h;
   }
 
-  public void setTasksInProgress2h(Integer tasksInProgress2h) {
+  public void setTasksInProgress2h(@javax.annotation.Nullable Integer tasksInProgress2h) {
     this.tasksInProgress2h = tasksInProgress2h;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage tasksNew(Integer tasksNew) {
+  public Outliersenginev3QueueStatisticsMessage tasksNew(@javax.annotation.Nullable Integer tasksNew) {
     this.tasksNew = tasksNew;
     return this;
   }
 
-   /**
+  /**
    * Number of new tasks in queue.
    * @return tasksNew
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTasksNew() {
     return tasksNew;
   }
 
-  public void setTasksNew(Integer tasksNew) {
+  public void setTasksNew(@javax.annotation.Nullable Integer tasksNew) {
     this.tasksNew = tasksNew;
   }
 
 
-  public Outliersenginev3QueueStatisticsMessage tasksNew2h(Integer tasksNew2h) {
+  public Outliersenginev3QueueStatisticsMessage tasksNew2h(@javax.annotation.Nullable Integer tasksNew2h) {
     this.tasksNew2h = tasksNew2h;
     return this;
   }
 
-   /**
+  /**
    * Number of new tasks in queue, for over 2 hours.
    * @return tasksNew2h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTasksNew2h() {
     return tasksNew2h;
   }
 
-  public void setTasksNew2h(Integer tasksNew2h) {
+  public void setTasksNew2h(@javax.annotation.Nullable Integer tasksNew2h) {
     this.tasksNew2h = tasksNew2h;
   }
 
@@ -322,31 +332,22 @@ public class Outliersenginev3QueueStatisticsMessage {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("coverage_1h");
-    openapiFields.add("coverage_24h");
-    openapiFields.add("coverage_72h");
-    openapiFields.add("tasks");
-    openapiFields.add("tasks_done");
-    openapiFields.add("tasks_in_progress");
-    openapiFields.add("tasks_in_progress_2h");
-    openapiFields.add("tasks_new");
-    openapiFields.add("tasks_new_2h");
+    openapiFields = new HashSet<String>(Arrays.asList("coverage_1h", "coverage_24h", "coverage_72h", "tasks", "tasks_done", "tasks_in_progress", "tasks_in_progress_2h", "tasks_new", "tasks_new_2h"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3QueueStatisticsMessage
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3QueueStatisticsMessage
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3QueueStatisticsMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3QueueStatisticsMessage is not found in the empty JSON string", Outliersenginev3QueueStatisticsMessage.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3QueueStatisticsMessage is not found in the empty JSON string", Outliersenginev3QueueStatisticsMessage.openapiRequiredFields.toString()));
         }
       }
 
@@ -354,7 +355,7 @@ public class Outliersenginev3QueueStatisticsMessage {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3QueueStatisticsMessage.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3QueueStatisticsMessage` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3QueueStatisticsMessage` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -401,22 +402,22 @@ public class Outliersenginev3QueueStatisticsMessage {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3QueueStatisticsMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3QueueStatisticsMessage
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3QueueStatisticsMessage
-  */
+  /**
+   * Create an instance of Outliersenginev3QueueStatisticsMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3QueueStatisticsMessage
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3QueueStatisticsMessage
+   */
   public static Outliersenginev3QueueStatisticsMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3QueueStatisticsMessage.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3QueueStatisticsMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3QueueStatisticsMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

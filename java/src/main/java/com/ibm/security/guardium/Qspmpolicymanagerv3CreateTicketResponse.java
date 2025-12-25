@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,180 +40,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response from creating a ticket.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpolicymanagerv3CreateTicketResponse {
   public static final String SERIALIZED_NAME_CREATE_TIME = "createTime";
   @SerializedName(SERIALIZED_NAME_CREATE_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime createTime;
 
   public static final String SERIALIZED_NAME_INTEGRATION_NAME = "integrationName";
   @SerializedName(SERIALIZED_NAME_INTEGRATION_NAME)
+  @javax.annotation.Nullable
   private String integrationName;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus status;
 
   public static final String SERIALIZED_NAME_SUMMARY = "summary";
   @SerializedName(SERIALIZED_NAME_SUMMARY)
+  @javax.annotation.Nullable
   private String summary;
 
   public static final String SERIALIZED_NAME_TICKET_ID = "ticket_id";
   @SerializedName(SERIALIZED_NAME_TICKET_ID)
+  @javax.annotation.Nullable
   private String ticketId;
 
   public static final String SERIALIZED_NAME_TICKET_NUMBER = "ticket_number";
   @SerializedName(SERIALIZED_NAME_TICKET_NUMBER)
+  @javax.annotation.Nullable
   private String ticketNumber;
 
   public static final String SERIALIZED_NAME_URI = "uri";
   @SerializedName(SERIALIZED_NAME_URI)
+  @javax.annotation.Nullable
   private String uri;
 
   public Qspmpolicymanagerv3CreateTicketResponse() {
   }
 
-  public Qspmpolicymanagerv3CreateTicketResponse createTime(OffsetDateTime createTime) {
+  public Qspmpolicymanagerv3CreateTicketResponse createTime(@javax.annotation.Nullable OffsetDateTime createTime) {
     this.createTime = createTime;
     return this;
   }
 
-   /**
+  /**
    * Get createTime
    * @return createTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(OffsetDateTime createTime) {
+  public void setCreateTime(@javax.annotation.Nullable OffsetDateTime createTime) {
     this.createTime = createTime;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketResponse integrationName(String integrationName) {
+  public Qspmpolicymanagerv3CreateTicketResponse integrationName(@javax.annotation.Nullable String integrationName) {
     this.integrationName = integrationName;
     return this;
   }
 
-   /**
+  /**
    * Get integrationName
    * @return integrationName
-  **/
+   */
   @javax.annotation.Nullable
   public String getIntegrationName() {
     return integrationName;
   }
 
-  public void setIntegrationName(String integrationName) {
+  public void setIntegrationName(@javax.annotation.Nullable String integrationName) {
     this.integrationName = integrationName;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketResponse status(RpcStatus status) {
+  public Qspmpolicymanagerv3CreateTicketResponse status(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(RpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketResponse summary(String summary) {
+  public Qspmpolicymanagerv3CreateTicketResponse summary(@javax.annotation.Nullable String summary) {
     this.summary = summary;
     return this;
   }
 
-   /**
+  /**
    * Get summary
    * @return summary
-  **/
+   */
   @javax.annotation.Nullable
   public String getSummary() {
     return summary;
   }
 
-  public void setSummary(String summary) {
+  public void setSummary(@javax.annotation.Nullable String summary) {
     this.summary = summary;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketResponse ticketId(String ticketId) {
+  public Qspmpolicymanagerv3CreateTicketResponse ticketId(@javax.annotation.Nullable String ticketId) {
     this.ticketId = ticketId;
     return this;
   }
 
-   /**
+  /**
    * Get ticketId
    * @return ticketId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTicketId() {
     return ticketId;
   }
 
-  public void setTicketId(String ticketId) {
+  public void setTicketId(@javax.annotation.Nullable String ticketId) {
     this.ticketId = ticketId;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketResponse ticketNumber(String ticketNumber) {
+  public Qspmpolicymanagerv3CreateTicketResponse ticketNumber(@javax.annotation.Nullable String ticketNumber) {
     this.ticketNumber = ticketNumber;
     return this;
   }
 
-   /**
+  /**
    * Get ticketNumber
    * @return ticketNumber
-  **/
+   */
   @javax.annotation.Nullable
   public String getTicketNumber() {
     return ticketNumber;
   }
 
-  public void setTicketNumber(String ticketNumber) {
+  public void setTicketNumber(@javax.annotation.Nullable String ticketNumber) {
     this.ticketNumber = ticketNumber;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketResponse uri(String uri) {
+  public Qspmpolicymanagerv3CreateTicketResponse uri(@javax.annotation.Nullable String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
+  /**
    * Get uri
    * @return uri
-  **/
+   */
   @javax.annotation.Nullable
   public String getUri() {
     return uri;
   }
 
-  public void setUri(String uri) {
+  public void setUri(@javax.annotation.Nullable String uri) {
     this.uri = uri;
   }
 
@@ -273,29 +281,22 @@ public class Qspmpolicymanagerv3CreateTicketResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("createTime");
-    openapiFields.add("integrationName");
-    openapiFields.add("status");
-    openapiFields.add("summary");
-    openapiFields.add("ticket_id");
-    openapiFields.add("ticket_number");
-    openapiFields.add("uri");
+    openapiFields = new HashSet<String>(Arrays.asList("createTime", "integrationName", "status", "summary", "ticket_id", "ticket_number", "uri"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3CreateTicketResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3CreateTicketResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpolicymanagerv3CreateTicketResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpolicymanagerv3CreateTicketResponse is not found in the empty JSON string", Qspmpolicymanagerv3CreateTicketResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpolicymanagerv3CreateTicketResponse is not found in the empty JSON string", Qspmpolicymanagerv3CreateTicketResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -303,28 +304,28 @@ public class Qspmpolicymanagerv3CreateTicketResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpolicymanagerv3CreateTicketResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3CreateTicketResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3CreateTicketResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("integrationName") != null && !jsonObj.get("integrationName").isJsonNull()) && !jsonObj.get("integrationName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `integrationName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integrationName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `integrationName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integrationName").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
         RpcStatus.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("summary") != null && !jsonObj.get("summary").isJsonNull()) && !jsonObj.get("summary").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `summary` to be a primitive type in the JSON string but got `%s`", jsonObj.get("summary").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `summary` to be a primitive type in the JSON string but got `%s`", jsonObj.get("summary").toString()));
       }
       if ((jsonObj.get("ticket_id") != null && !jsonObj.get("ticket_id").isJsonNull()) && !jsonObj.get("ticket_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ticket_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ticket_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ticket_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ticket_id").toString()));
       }
       if ((jsonObj.get("ticket_number") != null && !jsonObj.get("ticket_number").isJsonNull()) && !jsonObj.get("ticket_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ticket_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ticket_number").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ticket_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ticket_number").toString()));
       }
       if ((jsonObj.get("uri") != null && !jsonObj.get("uri").isJsonNull()) && !jsonObj.get("uri").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uri").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `uri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uri").toString()));
       }
   }
 
@@ -357,22 +358,22 @@ public class Qspmpolicymanagerv3CreateTicketResponse {
     }
   }
 
- /**
-  * Create an instance of Qspmpolicymanagerv3CreateTicketResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpolicymanagerv3CreateTicketResponse
-  * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3CreateTicketResponse
-  */
+  /**
+   * Create an instance of Qspmpolicymanagerv3CreateTicketResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpolicymanagerv3CreateTicketResponse
+   * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3CreateTicketResponse
+   */
   public static Qspmpolicymanagerv3CreateTicketResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpolicymanagerv3CreateTicketResponse.class);
   }
 
- /**
-  * Convert an instance of Qspmpolicymanagerv3CreateTicketResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpolicymanagerv3CreateTicketResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

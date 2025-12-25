@@ -27,7 +27,7 @@ class TestTenantuserv3GetRolesResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Tenantuserv3GetRolesResponse:
         """Test Tenantuserv3GetRolesResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Tenantuserv3GetRolesResponse`

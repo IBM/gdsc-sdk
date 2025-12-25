@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,48 +41,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Streaming status for a particular Managed Unit.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3StreamingStatusRecord {
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3Attribute> attributes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public static final String SERIALIZED_NAME_MU = "mu";
   @SerializedName(SERIALIZED_NAME_MU)
+  @javax.annotation.Nullable
   private String mu;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
   private String state;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private String status;
 
   public static final String SERIALIZED_NAME_UNIT_TYPE = "unit_type";
   @SerializedName(SERIALIZED_NAME_UNIT_TYPE)
+  @javax.annotation.Nullable
   private String unitType;
 
   public Guardiumconnectorv3StreamingStatusRecord() {
   }
 
-  public Guardiumconnectorv3StreamingStatusRecord attributes(List<Guardiumconnectorv3Attribute> attributes) {
+  public Guardiumconnectorv3StreamingStatusRecord attributes(@javax.annotation.Nullable List<Guardiumconnectorv3Attribute> attributes) {
     this.attributes = attributes;
     return this;
   }
@@ -94,111 +101,111 @@ public class Guardiumconnectorv3StreamingStatusRecord {
     return this;
   }
 
-   /**
+  /**
    * Name/value pair attributes stored in config db.
    * @return attributes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3Attribute> getAttributes() {
     return attributes;
   }
 
-  public void setAttributes(List<Guardiumconnectorv3Attribute> attributes) {
+  public void setAttributes(@javax.annotation.Nullable List<Guardiumconnectorv3Attribute> attributes) {
     this.attributes = attributes;
   }
 
 
-  public Guardiumconnectorv3StreamingStatusRecord message(String message) {
+  public Guardiumconnectorv3StreamingStatusRecord message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Message describing status.
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
 
-  public Guardiumconnectorv3StreamingStatusRecord mu(String mu) {
+  public Guardiumconnectorv3StreamingStatusRecord mu(@javax.annotation.Nullable String mu) {
     this.mu = mu;
     return this;
   }
 
-   /**
+  /**
    * MU Name.
    * @return mu
-  **/
+   */
   @javax.annotation.Nullable
   public String getMu() {
     return mu;
   }
 
-  public void setMu(String mu) {
+  public void setMu(@javax.annotation.Nullable String mu) {
     this.mu = mu;
   }
 
 
-  public Guardiumconnectorv3StreamingStatusRecord state(String state) {
+  public Guardiumconnectorv3StreamingStatusRecord state(@javax.annotation.Nullable String state) {
     this.state = state;
     return this;
   }
 
-   /**
+  /**
    * Streaming state : enabled, disabled.
    * @return state
-  **/
+   */
   @javax.annotation.Nullable
   public String getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(@javax.annotation.Nullable String state) {
     this.state = state;
   }
 
 
-  public Guardiumconnectorv3StreamingStatusRecord status(String status) {
+  public Guardiumconnectorv3StreamingStatusRecord status(@javax.annotation.Nullable String status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Streaming configuration current status (e.g RUNNING,DONE,FAILED,...).
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatus() {
     return status;
   }
 
-  public void setStatus(String status) {
+  public void setStatus(@javax.annotation.Nullable String status) {
     this.status = status;
   }
 
 
-  public Guardiumconnectorv3StreamingStatusRecord unitType(String unitType) {
+  public Guardiumconnectorv3StreamingStatusRecord unitType(@javax.annotation.Nullable String unitType) {
     this.unitType = unitType;
     return this;
   }
 
-   /**
+  /**
    * Type of managed unit (Collector or Aggregator).
    * @return unitType
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnitType() {
     return unitType;
   }
 
-  public void setUnitType(String unitType) {
+  public void setUnitType(@javax.annotation.Nullable String unitType) {
     this.unitType = unitType;
   }
 
@@ -257,28 +264,22 @@ public class Guardiumconnectorv3StreamingStatusRecord {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("attributes");
-    openapiFields.add("message");
-    openapiFields.add("mu");
-    openapiFields.add("state");
-    openapiFields.add("status");
-    openapiFields.add("unit_type");
+    openapiFields = new HashSet<String>(Arrays.asList("attributes", "message", "mu", "state", "status", "unit_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3StreamingStatusRecord
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3StreamingStatusRecord
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3StreamingStatusRecord.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3StreamingStatusRecord is not found in the empty JSON string", Guardiumconnectorv3StreamingStatusRecord.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3StreamingStatusRecord is not found in the empty JSON string", Guardiumconnectorv3StreamingStatusRecord.openapiRequiredFields.toString()));
         }
       }
 
@@ -286,7 +287,7 @@ public class Guardiumconnectorv3StreamingStatusRecord {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3StreamingStatusRecord.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3StreamingStatusRecord` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3StreamingStatusRecord` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -295,7 +296,7 @@ public class Guardiumconnectorv3StreamingStatusRecord {
         if (jsonArrayattributes != null) {
           // ensure the json data is an array
           if (!jsonObj.get("attributes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
           }
 
           // validate the optional field `attributes` (array)
@@ -305,19 +306,19 @@ public class Guardiumconnectorv3StreamingStatusRecord {
         }
       }
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
       if ((jsonObj.get("mu") != null && !jsonObj.get("mu").isJsonNull()) && !jsonObj.get("mu").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `mu` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mu").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `mu` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mu").toString()));
       }
       if ((jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull()) && !jsonObj.get("state").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
       }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
       if ((jsonObj.get("unit_type") != null && !jsonObj.get("unit_type").isJsonNull()) && !jsonObj.get("unit_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `unit_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unit_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_type").toString()));
       }
   }
 
@@ -350,22 +351,22 @@ public class Guardiumconnectorv3StreamingStatusRecord {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3StreamingStatusRecord given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3StreamingStatusRecord
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3StreamingStatusRecord
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3StreamingStatusRecord given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3StreamingStatusRecord
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3StreamingStatusRecord
+   */
   public static Guardiumconnectorv3StreamingStatusRecord fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3StreamingStatusRecord.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3StreamingStatusRecord to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3StreamingStatusRecord to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

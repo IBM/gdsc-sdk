@@ -72,9 +72,9 @@ class Outliersenginev3GetSourceStatisticsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in source_statistics (list)
         _items = []
         if self.source_statistics:
-            for _item in self.source_statistics:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_source_statistics in self.source_statistics:
+                if _item_source_statistics:
+                    _items.append(_item_source_statistics.to_dict())
             _dict['source_statistics'] = _items
         return _dict
 

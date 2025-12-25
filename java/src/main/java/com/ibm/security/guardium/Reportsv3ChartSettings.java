@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,364 +40,379 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ChartSettings encapsulates all data necessary for a chart object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ChartSettings {
   public static final String SERIALIZED_NAME_CHART_ID = "chart_id";
   @SerializedName(SERIALIZED_NAME_CHART_ID)
+  @javax.annotation.Nullable
   private String chartId;
 
   public static final String SERIALIZED_NAME_CHART_TITLE = "chart_title";
   @SerializedName(SERIALIZED_NAME_CHART_TITLE)
+  @javax.annotation.Nullable
   private String chartTitle;
 
   public static final String SERIALIZED_NAME_CHART_TYPE = "chart_type";
   @SerializedName(SERIALIZED_NAME_CHART_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3ChartType chartType = Reportsv3ChartType.UNDEFINED_CHART_TYPE;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_CREATOR_USER_ID = "creator_user_id";
   @SerializedName(SERIALIZED_NAME_CREATOR_USER_ID)
+  @javax.annotation.Nullable
   private String creatorUserId;
 
   public static final String SERIALIZED_NAME_DATASET_HEADER_ID = "dataset_header_id";
   @SerializedName(SERIALIZED_NAME_DATASET_HEADER_ID)
+  @javax.annotation.Nullable
   private String datasetHeaderId;
 
   public static final String SERIALIZED_NAME_DATASET_MAX_VALUES = "dataset_max_values";
   @SerializedName(SERIALIZED_NAME_DATASET_MAX_VALUES)
+  @javax.annotation.Nullable
   private Integer datasetMaxValues;
 
   public static final String SERIALIZED_NAME_DEFAULT_CHART_EXPANDED = "default_chart_expanded";
   @SerializedName(SERIALIZED_NAME_DEFAULT_CHART_EXPANDED)
+  @javax.annotation.Nullable
   private Boolean defaultChartExpanded;
 
   public static final String SERIALIZED_NAME_IS_DEFAULT_CHART = "is_default_chart";
   @SerializedName(SERIALIZED_NAME_IS_DEFAULT_CHART)
+  @javax.annotation.Nullable
   private Boolean isDefaultChart;
 
   public static final String SERIALIZED_NAME_IS_PREDEFINED = "is_predefined";
   @SerializedName(SERIALIZED_NAME_IS_PREDEFINED)
+  @javax.annotation.Nullable
   private Boolean isPredefined;
 
   public static final String SERIALIZED_NAME_REFRESH_RATE = "refresh_rate";
   @SerializedName(SERIALIZED_NAME_REFRESH_RATE)
+  @javax.annotation.Nullable
   private Integer refreshRate;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_XAXIS_HEADER_ID = "xaxis_header_id";
   @SerializedName(SERIALIZED_NAME_XAXIS_HEADER_ID)
+  @javax.annotation.Nullable
   private String xaxisHeaderId;
 
   public static final String SERIALIZED_NAME_XAXIS_MAX_VALUES = "xaxis_max_values";
   @SerializedName(SERIALIZED_NAME_XAXIS_MAX_VALUES)
+  @javax.annotation.Nullable
   private Integer xaxisMaxValues;
 
   public static final String SERIALIZED_NAME_YAXIS_HEADER_ID = "yaxis_header_id";
   @SerializedName(SERIALIZED_NAME_YAXIS_HEADER_ID)
+  @javax.annotation.Nullable
   private String yaxisHeaderId;
 
   public Reportsv3ChartSettings() {
   }
 
-  public Reportsv3ChartSettings chartId(String chartId) {
+  public Reportsv3ChartSettings chartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
     return this;
   }
 
-   /**
+  /**
    * The chart id.
    * @return chartId
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartId() {
     return chartId;
   }
 
-  public void setChartId(String chartId) {
+  public void setChartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
   }
 
 
-  public Reportsv3ChartSettings chartTitle(String chartTitle) {
+  public Reportsv3ChartSettings chartTitle(@javax.annotation.Nullable String chartTitle) {
     this.chartTitle = chartTitle;
     return this;
   }
 
-   /**
+  /**
    * The chart title.
    * @return chartTitle
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartTitle() {
     return chartTitle;
   }
 
-  public void setChartTitle(String chartTitle) {
+  public void setChartTitle(@javax.annotation.Nullable String chartTitle) {
     this.chartTitle = chartTitle;
   }
 
 
-  public Reportsv3ChartSettings chartType(Reportsv3ChartType chartType) {
+  public Reportsv3ChartSettings chartType(@javax.annotation.Nullable Reportsv3ChartType chartType) {
     this.chartType = chartType;
     return this;
   }
 
-   /**
+  /**
    * Get chartType
    * @return chartType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ChartType getChartType() {
     return chartType;
   }
 
-  public void setChartType(Reportsv3ChartType chartType) {
+  public void setChartType(@javax.annotation.Nullable Reportsv3ChartType chartType) {
     this.chartType = chartType;
   }
 
 
-  public Reportsv3ChartSettings creationTime(OffsetDateTime creationTime) {
+  public Reportsv3ChartSettings creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * The chart&#39;s cration time in format YYYY-MM-DDTHH:mm:ss.sssZ.
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Reportsv3ChartSettings creatorUserId(String creatorUserId) {
+  public Reportsv3ChartSettings creatorUserId(@javax.annotation.Nullable String creatorUserId) {
     this.creatorUserId = creatorUserId;
     return this;
   }
 
-   /**
+  /**
    * An identifier for the creator of the chart.
    * @return creatorUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreatorUserId() {
     return creatorUserId;
   }
 
-  public void setCreatorUserId(String creatorUserId) {
+  public void setCreatorUserId(@javax.annotation.Nullable String creatorUserId) {
     this.creatorUserId = creatorUserId;
   }
 
 
-  public Reportsv3ChartSettings datasetHeaderId(String datasetHeaderId) {
+  public Reportsv3ChartSettings datasetHeaderId(@javax.annotation.Nullable String datasetHeaderId) {
     this.datasetHeaderId = datasetHeaderId;
     return this;
   }
 
-   /**
+  /**
    * Header id for the dataset values.
    * @return datasetHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasetHeaderId() {
     return datasetHeaderId;
   }
 
-  public void setDatasetHeaderId(String datasetHeaderId) {
+  public void setDatasetHeaderId(@javax.annotation.Nullable String datasetHeaderId) {
     this.datasetHeaderId = datasetHeaderId;
   }
 
 
-  public Reportsv3ChartSettings datasetMaxValues(Integer datasetMaxValues) {
+  public Reportsv3ChartSettings datasetMaxValues(@javax.annotation.Nullable Integer datasetMaxValues) {
     this.datasetMaxValues = datasetMaxValues;
     return this;
   }
 
-   /**
+  /**
    * Chart dataset max values.
    * @return datasetMaxValues
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasetMaxValues() {
     return datasetMaxValues;
   }
 
-  public void setDatasetMaxValues(Integer datasetMaxValues) {
+  public void setDatasetMaxValues(@javax.annotation.Nullable Integer datasetMaxValues) {
     this.datasetMaxValues = datasetMaxValues;
   }
 
 
-  public Reportsv3ChartSettings defaultChartExpanded(Boolean defaultChartExpanded) {
+  public Reportsv3ChartSettings defaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
     return this;
   }
 
-   /**
+  /**
    * The default_chart_expanded is a flag taken from the user settings collection per report and user.
    * @return defaultChartExpanded
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDefaultChartExpanded() {
     return defaultChartExpanded;
   }
 
-  public void setDefaultChartExpanded(Boolean defaultChartExpanded) {
+  public void setDefaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
   }
 
 
-  public Reportsv3ChartSettings isDefaultChart(Boolean isDefaultChart) {
+  public Reportsv3ChartSettings isDefaultChart(@javax.annotation.Nullable Boolean isDefaultChart) {
     this.isDefaultChart = isDefaultChart;
     return this;
   }
 
-   /**
+  /**
    * If true - this chart will be shown with the report.
    * @return isDefaultChart
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsDefaultChart() {
     return isDefaultChart;
   }
 
-  public void setIsDefaultChart(Boolean isDefaultChart) {
+  public void setIsDefaultChart(@javax.annotation.Nullable Boolean isDefaultChart) {
     this.isDefaultChart = isDefaultChart;
   }
 
 
-  public Reportsv3ChartSettings isPredefined(Boolean isPredefined) {
+  public Reportsv3ChartSettings isPredefined(@javax.annotation.Nullable Boolean isPredefined) {
     this.isPredefined = isPredefined;
     return this;
   }
 
-   /**
+  /**
    * If a chart is predefined.
    * @return isPredefined
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsPredefined() {
     return isPredefined;
   }
 
-  public void setIsPredefined(Boolean isPredefined) {
+  public void setIsPredefined(@javax.annotation.Nullable Boolean isPredefined) {
     this.isPredefined = isPredefined;
   }
 
 
-  public Reportsv3ChartSettings refreshRate(Integer refreshRate) {
+  public Reportsv3ChartSettings refreshRate(@javax.annotation.Nullable Integer refreshRate) {
     this.refreshRate = refreshRate;
     return this;
   }
 
-   /**
+  /**
    * Chart refresh rate.
    * @return refreshRate
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRefreshRate() {
     return refreshRate;
   }
 
-  public void setRefreshRate(Integer refreshRate) {
+  public void setRefreshRate(@javax.annotation.Nullable Integer refreshRate) {
     this.refreshRate = refreshRate;
   }
 
 
-  public Reportsv3ChartSettings reportId(String reportId) {
+  public Reportsv3ChartSettings reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * The report id that the chart connected to.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsv3ChartSettings xaxisHeaderId(String xaxisHeaderId) {
+  public Reportsv3ChartSettings xaxisHeaderId(@javax.annotation.Nullable String xaxisHeaderId) {
     this.xaxisHeaderId = xaxisHeaderId;
     return this;
   }
 
-   /**
+  /**
    * Header id for the x-axis values.
    * @return xaxisHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getXaxisHeaderId() {
     return xaxisHeaderId;
   }
 
-  public void setXaxisHeaderId(String xaxisHeaderId) {
+  public void setXaxisHeaderId(@javax.annotation.Nullable String xaxisHeaderId) {
     this.xaxisHeaderId = xaxisHeaderId;
   }
 
 
-  public Reportsv3ChartSettings xaxisMaxValues(Integer xaxisMaxValues) {
+  public Reportsv3ChartSettings xaxisMaxValues(@javax.annotation.Nullable Integer xaxisMaxValues) {
     this.xaxisMaxValues = xaxisMaxValues;
     return this;
   }
 
-   /**
+  /**
    * Chart xaxis max values.
    * @return xaxisMaxValues
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getXaxisMaxValues() {
     return xaxisMaxValues;
   }
 
-  public void setXaxisMaxValues(Integer xaxisMaxValues) {
+  public void setXaxisMaxValues(@javax.annotation.Nullable Integer xaxisMaxValues) {
     this.xaxisMaxValues = xaxisMaxValues;
   }
 
 
-  public Reportsv3ChartSettings yaxisHeaderId(String yaxisHeaderId) {
+  public Reportsv3ChartSettings yaxisHeaderId(@javax.annotation.Nullable String yaxisHeaderId) {
     this.yaxisHeaderId = yaxisHeaderId;
     return this;
   }
 
-   /**
+  /**
    * Header id for the y-axis values.
    * @return yaxisHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getYaxisHeaderId() {
     return yaxisHeaderId;
   }
 
-  public void setYaxisHeaderId(String yaxisHeaderId) {
+  public void setYaxisHeaderId(@javax.annotation.Nullable String yaxisHeaderId) {
     this.yaxisHeaderId = yaxisHeaderId;
   }
 
@@ -473,37 +489,22 @@ public class Reportsv3ChartSettings {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_id");
-    openapiFields.add("chart_title");
-    openapiFields.add("chart_type");
-    openapiFields.add("creation_time");
-    openapiFields.add("creator_user_id");
-    openapiFields.add("dataset_header_id");
-    openapiFields.add("dataset_max_values");
-    openapiFields.add("default_chart_expanded");
-    openapiFields.add("is_default_chart");
-    openapiFields.add("is_predefined");
-    openapiFields.add("refresh_rate");
-    openapiFields.add("report_id");
-    openapiFields.add("xaxis_header_id");
-    openapiFields.add("xaxis_max_values");
-    openapiFields.add("yaxis_header_id");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_id", "chart_title", "chart_type", "creation_time", "creator_user_id", "dataset_header_id", "dataset_max_values", "default_chart_expanded", "is_default_chart", "is_predefined", "refresh_rate", "report_id", "xaxis_header_id", "xaxis_max_values", "yaxis_header_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ChartSettings
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ChartSettings
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ChartSettings.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ChartSettings is not found in the empty JSON string", Reportsv3ChartSettings.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ChartSettings is not found in the empty JSON string", Reportsv3ChartSettings.openapiRequiredFields.toString()));
         }
       }
 
@@ -511,34 +512,34 @@ public class Reportsv3ChartSettings {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ChartSettings.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ChartSettings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ChartSettings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("chart_id") != null && !jsonObj.get("chart_id").isJsonNull()) && !jsonObj.get("chart_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
       }
       if ((jsonObj.get("chart_title") != null && !jsonObj.get("chart_title").isJsonNull()) && !jsonObj.get("chart_title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_title").toString()));
       }
       // validate the optional field `chart_type`
       if (jsonObj.get("chart_type") != null && !jsonObj.get("chart_type").isJsonNull()) {
         Reportsv3ChartType.validateJsonElement(jsonObj.get("chart_type"));
       }
       if ((jsonObj.get("creator_user_id") != null && !jsonObj.get("creator_user_id").isJsonNull()) && !jsonObj.get("creator_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `creator_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `creator_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_id").toString()));
       }
       if ((jsonObj.get("dataset_header_id") != null && !jsonObj.get("dataset_header_id").isJsonNull()) && !jsonObj.get("dataset_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataset_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataset_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_header_id").toString()));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("xaxis_header_id") != null && !jsonObj.get("xaxis_header_id").isJsonNull()) && !jsonObj.get("xaxis_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `xaxis_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("xaxis_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `xaxis_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("xaxis_header_id").toString()));
       }
       if ((jsonObj.get("yaxis_header_id") != null && !jsonObj.get("yaxis_header_id").isJsonNull()) && !jsonObj.get("yaxis_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `yaxis_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("yaxis_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `yaxis_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("yaxis_header_id").toString()));
       }
   }
 
@@ -571,22 +572,22 @@ public class Reportsv3ChartSettings {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ChartSettings given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ChartSettings
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ChartSettings
-  */
+  /**
+   * Create an instance of Reportsv3ChartSettings given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ChartSettings
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ChartSettings
+   */
   public static Reportsv3ChartSettings fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ChartSettings.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ChartSettings to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ChartSettings to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

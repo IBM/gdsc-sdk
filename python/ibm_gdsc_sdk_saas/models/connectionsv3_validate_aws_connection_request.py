@@ -27,13 +27,13 @@ class Connectionsv3ValidateAwsConnectionRequest(BaseModel):
     Connectionsv3ValidateAwsConnectionRequest
     """ # noqa: E501
     access_key: Optional[StrictStr] = None
+    bucket_name: Optional[StrictStr] = None
     group_name: Optional[StrictStr] = None
-    input_plugin_type: Optional[StrictStr] = Field(default=None, description="aws connection input type as Cloudwatch, SQS, ...")
-    log_stream: Optional[StrictStr] = None
+    input_plugin_type: Optional[StrictStr] = Field(default=None, description="aws connection input type as Cloudwatch, SQS, S3, ...")
     queue_url: Optional[StrictStr] = None
     region: Optional[StrictStr] = None
     secret_key: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["access_key", "group_name", "input_plugin_type", "log_stream", "queue_url", "region", "secret_key"]
+    __properties: ClassVar[List[str]] = ["access_key", "bucket_name", "group_name", "input_plugin_type", "queue_url", "region", "secret_key"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -87,9 +87,9 @@ class Connectionsv3ValidateAwsConnectionRequest(BaseModel):
 
         _obj = cls.model_validate({
             "access_key": obj.get("access_key"),
+            "bucket_name": obj.get("bucket_name"),
             "group_name": obj.get("group_name"),
             "input_plugin_type": obj.get("input_plugin_type"),
-            "log_stream": obj.get("log_stream"),
             "queue_url": obj.get("queue_url"),
             "region": obj.get("region"),
             "secret_key": obj.get("secret_key")

@@ -28,12 +28,12 @@ class Schedulerv3ScheduledTaskSummary(BaseModel):
     """
     ScheduledTaskSummary returns enough details for list view.
     """ # noqa: E501
-    audit_type: Optional[Schedulerv3AuditType] = None
+    audit_type: Optional[Schedulerv3AuditType] = Schedulerv3AuditType.UNDEFINED_TYPE
     name: Optional[StrictStr] = Field(default=None, description="Task name (usually the same as the report name).")
     report_id: Optional[StrictStr] = None
     report_name: Optional[StrictStr] = None
     scheduled_task_id: Optional[StrictStr] = Field(default=None, description="Id for the task.")
-    type: Optional[Schedulerv3TaskType] = None
+    type: Optional[Schedulerv3TaskType] = Schedulerv3TaskType.UNDEFINED_JOBTYPE
     __properties: ClassVar[List[str]] = ["audit_type", "name", "report_id", "report_name", "scheduled_task_id", "type"]
 
     model_config = ConfigDict(
@@ -87,12 +87,12 @@ class Schedulerv3ScheduledTaskSummary(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "audit_type": obj.get("audit_type"),
+            "audit_type": obj.get("audit_type") if obj.get("audit_type") is not None else Schedulerv3AuditType.UNDEFINED_TYPE,
             "name": obj.get("name"),
             "report_id": obj.get("report_id"),
             "report_name": obj.get("report_name"),
             "scheduled_task_id": obj.get("scheduled_task_id"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Schedulerv3TaskType.UNDEFINED_JOBTYPE
         })
         return _obj
 

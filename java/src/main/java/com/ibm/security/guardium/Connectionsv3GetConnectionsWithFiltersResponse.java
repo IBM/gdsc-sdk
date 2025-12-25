@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,40 +43,44 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3GetConnectionsWithFiltersResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3GetConnectionsWithFiltersResponse {
   public static final String SERIALIZED_NAME_CONNECTORS = "connectors";
   @SerializedName(SERIALIZED_NAME_CONNECTORS)
+  @javax.annotation.Nullable
   private List<Connectionsv3Connector> connectors = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FACETS = "facets";
   @SerializedName(SERIALIZED_NAME_FACETS)
+  @javax.annotation.Nullable
   private List<Connectionsv3ConnectorFilterHeader> facets = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PRESET_STATS = "preset_stats";
   @SerializedName(SERIALIZED_NAME_PRESET_STATS)
+  @javax.annotation.Nullable
   private List<Connectionsv3ConnectorSettingStat> presetStats = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TOTAL_CONNECTORS = "total_connectors";
   @SerializedName(SERIALIZED_NAME_TOTAL_CONNECTORS)
+  @javax.annotation.Nullable
   private Integer totalConnectors;
 
   public Connectionsv3GetConnectionsWithFiltersResponse() {
   }
 
-  public Connectionsv3GetConnectionsWithFiltersResponse connectors(List<Connectionsv3Connector> connectors) {
+  public Connectionsv3GetConnectionsWithFiltersResponse connectors(@javax.annotation.Nullable List<Connectionsv3Connector> connectors) {
     this.connectors = connectors;
     return this;
   }
@@ -88,21 +93,21 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
     return this;
   }
 
-   /**
+  /**
    * Get connectors
    * @return connectors
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3Connector> getConnectors() {
     return connectors;
   }
 
-  public void setConnectors(List<Connectionsv3Connector> connectors) {
+  public void setConnectors(@javax.annotation.Nullable List<Connectionsv3Connector> connectors) {
     this.connectors = connectors;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersResponse facets(List<Connectionsv3ConnectorFilterHeader> facets) {
+  public Connectionsv3GetConnectionsWithFiltersResponse facets(@javax.annotation.Nullable List<Connectionsv3ConnectorFilterHeader> facets) {
     this.facets = facets;
     return this;
   }
@@ -115,21 +120,21 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
     return this;
   }
 
-   /**
+  /**
    * Get facets
    * @return facets
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3ConnectorFilterHeader> getFacets() {
     return facets;
   }
 
-  public void setFacets(List<Connectionsv3ConnectorFilterHeader> facets) {
+  public void setFacets(@javax.annotation.Nullable List<Connectionsv3ConnectorFilterHeader> facets) {
     this.facets = facets;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersResponse presetStats(List<Connectionsv3ConnectorSettingStat> presetStats) {
+  public Connectionsv3GetConnectionsWithFiltersResponse presetStats(@javax.annotation.Nullable List<Connectionsv3ConnectorSettingStat> presetStats) {
     this.presetStats = presetStats;
     return this;
   }
@@ -142,35 +147,35 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
     return this;
   }
 
-   /**
+  /**
    * Get presetStats
    * @return presetStats
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3ConnectorSettingStat> getPresetStats() {
     return presetStats;
   }
 
-  public void setPresetStats(List<Connectionsv3ConnectorSettingStat> presetStats) {
+  public void setPresetStats(@javax.annotation.Nullable List<Connectionsv3ConnectorSettingStat> presetStats) {
     this.presetStats = presetStats;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersResponse totalConnectors(Integer totalConnectors) {
+  public Connectionsv3GetConnectionsWithFiltersResponse totalConnectors(@javax.annotation.Nullable Integer totalConnectors) {
     this.totalConnectors = totalConnectors;
     return this;
   }
 
-   /**
+  /**
    * Get totalConnectors
    * @return totalConnectors
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTotalConnectors() {
     return totalConnectors;
   }
 
-  public void setTotalConnectors(Integer totalConnectors) {
+  public void setTotalConnectors(@javax.annotation.Nullable Integer totalConnectors) {
     this.totalConnectors = totalConnectors;
   }
 
@@ -225,26 +230,22 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("connectors");
-    openapiFields.add("facets");
-    openapiFields.add("preset_stats");
-    openapiFields.add("total_connectors");
+    openapiFields = new HashSet<String>(Arrays.asList("connectors", "facets", "preset_stats", "total_connectors"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetConnectionsWithFiltersResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetConnectionsWithFiltersResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3GetConnectionsWithFiltersResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3GetConnectionsWithFiltersResponse is not found in the empty JSON string", Connectionsv3GetConnectionsWithFiltersResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3GetConnectionsWithFiltersResponse is not found in the empty JSON string", Connectionsv3GetConnectionsWithFiltersResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -252,7 +253,7 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3GetConnectionsWithFiltersResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3GetConnectionsWithFiltersResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3GetConnectionsWithFiltersResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -261,7 +262,7 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
         if (jsonArrayconnectors != null) {
           // ensure the json data is an array
           if (!jsonObj.get("connectors").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `connectors` to be an array in the JSON string but got `%s`", jsonObj.get("connectors").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connectors` to be an array in the JSON string but got `%s`", jsonObj.get("connectors").toString()));
           }
 
           // validate the optional field `connectors` (array)
@@ -275,7 +276,7 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
         if (jsonArrayfacets != null) {
           // ensure the json data is an array
           if (!jsonObj.get("facets").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `facets` to be an array in the JSON string but got `%s`", jsonObj.get("facets").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `facets` to be an array in the JSON string but got `%s`", jsonObj.get("facets").toString()));
           }
 
           // validate the optional field `facets` (array)
@@ -289,7 +290,7 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
         if (jsonArraypresetStats != null) {
           // ensure the json data is an array
           if (!jsonObj.get("preset_stats").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `preset_stats` to be an array in the JSON string but got `%s`", jsonObj.get("preset_stats").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `preset_stats` to be an array in the JSON string but got `%s`", jsonObj.get("preset_stats").toString()));
           }
 
           // validate the optional field `preset_stats` (array)
@@ -329,22 +330,22 @@ public class Connectionsv3GetConnectionsWithFiltersResponse {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3GetConnectionsWithFiltersResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3GetConnectionsWithFiltersResponse
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetConnectionsWithFiltersResponse
-  */
+  /**
+   * Create an instance of Connectionsv3GetConnectionsWithFiltersResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3GetConnectionsWithFiltersResponse
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetConnectionsWithFiltersResponse
+   */
   public static Connectionsv3GetConnectionsWithFiltersResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3GetConnectionsWithFiltersResponse.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3GetConnectionsWithFiltersResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3GetConnectionsWithFiltersResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

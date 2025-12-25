@@ -79,9 +79,9 @@ class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in hourly_findings (list)
         _items = []
         if self.hourly_findings:
-            for _item in self.hourly_findings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_hourly_findings in self.hourly_findings:
+                if _item_hourly_findings:
+                    _items.append(_item_hourly_findings.to_dict())
             _dict['hourly_findings'] = _items
         # override the default output from pydantic by calling `to_dict()` of risk_event
         if self.risk_event:

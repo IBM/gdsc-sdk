@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **external_id** | **str** | External id of this user. E.g. ISV id. | [optional] 
 **metadata** | **Dict[str, str]** | Metadata will contain all preferences. | [optional] 
 **roles** | **List[str]** | Roles. | [optional] 
-**state** | [**Tenantuserv3UserState**](Tenantuserv3UserState.md) |  | [optional] 
+**state** | [**Tenantuserv3UserState**](Tenantuserv3UserState.md) |  | [optional] [default to Tenantuserv3UserState.ACTIVE]
 **uid** | **str** | Email. | [optional] 
 **user_id** | **str** | Unique id for user. | [optional] 
 

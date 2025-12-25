@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3UpdateAssetNameRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3UpdateAssetNameRequest {
   public static final String SERIALIZED_NAME_GROUPER_ID = "grouper_id";
   @SerializedName(SERIALIZED_NAME_GROUPER_ID)
+  @javax.annotation.Nullable
   private Integer grouperId;
 
   public static final String SERIALIZED_NAME_UPDATED_NAME = "updated_name";
   @SerializedName(SERIALIZED_NAME_UPDATED_NAME)
+  @javax.annotation.Nullable
   private String updatedName;
 
   public Assetsv3UpdateAssetNameRequest() {
   }
 
-  public Assetsv3UpdateAssetNameRequest grouperId(Integer grouperId) {
+  public Assetsv3UpdateAssetNameRequest grouperId(@javax.annotation.Nullable Integer grouperId) {
     this.grouperId = grouperId;
     return this;
   }
 
-   /**
+  /**
    * Get grouperId
    * @return grouperId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGrouperId() {
     return grouperId;
   }
 
-  public void setGrouperId(Integer grouperId) {
+  public void setGrouperId(@javax.annotation.Nullable Integer grouperId) {
     this.grouperId = grouperId;
   }
 
 
-  public Assetsv3UpdateAssetNameRequest updatedName(String updatedName) {
+  public Assetsv3UpdateAssetNameRequest updatedName(@javax.annotation.Nullable String updatedName) {
     this.updatedName = updatedName;
     return this;
   }
 
-   /**
+  /**
    * Get updatedName
    * @return updatedName
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdatedName() {
     return updatedName;
   }
 
-  public void setUpdatedName(String updatedName) {
+  public void setUpdatedName(@javax.annotation.Nullable String updatedName) {
     this.updatedName = updatedName;
   }
 
@@ -146,24 +149,22 @@ public class Assetsv3UpdateAssetNameRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("grouper_id");
-    openapiFields.add("updated_name");
+    openapiFields = new HashSet<String>(Arrays.asList("grouper_id", "updated_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3UpdateAssetNameRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3UpdateAssetNameRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3UpdateAssetNameRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3UpdateAssetNameRequest is not found in the empty JSON string", Assetsv3UpdateAssetNameRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3UpdateAssetNameRequest is not found in the empty JSON string", Assetsv3UpdateAssetNameRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,12 +172,12 @@ public class Assetsv3UpdateAssetNameRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3UpdateAssetNameRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3UpdateAssetNameRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3UpdateAssetNameRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("updated_name") != null && !jsonObj.get("updated_name").isJsonNull()) && !jsonObj.get("updated_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `updated_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `updated_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated_name").toString()));
       }
   }
 
@@ -209,22 +210,22 @@ public class Assetsv3UpdateAssetNameRequest {
     }
   }
 
- /**
-  * Create an instance of Assetsv3UpdateAssetNameRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3UpdateAssetNameRequest
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3UpdateAssetNameRequest
-  */
+  /**
+   * Create an instance of Assetsv3UpdateAssetNameRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3UpdateAssetNameRequest
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3UpdateAssetNameRequest
+   */
   public static Assetsv3UpdateAssetNameRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3UpdateAssetNameRequest.class);
   }
 
- /**
-  * Convert an instance of Assetsv3UpdateAssetNameRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3UpdateAssetNameRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -75,9 +75,9 @@ class Reportsv3ChartDisplayLayout(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in chart_headers (list)
         _items = []
         if self.chart_headers:
-            for _item in self.chart_headers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_chart_headers in self.chart_headers:
+                if _item_chart_headers:
+                    _items.append(_item_chart_headers.to_dict())
             _dict['chart_headers'] = _items
         return _dict
 

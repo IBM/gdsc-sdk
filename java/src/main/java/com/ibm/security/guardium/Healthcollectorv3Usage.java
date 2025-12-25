@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,134 +39,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Healthcollectorv3Usage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3Usage {
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nullable
   private String label;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NLS_KEY = "nls_key";
   @SerializedName(SERIALIZED_NAME_NLS_KEY)
+  @javax.annotation.Nullable
   private String nlsKey;
 
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  @javax.annotation.Nullable
   private OffsetDateTime timestamp;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private Double value;
 
   public Healthcollectorv3Usage() {
   }
 
-  public Healthcollectorv3Usage label(String label) {
+  public Healthcollectorv3Usage label(@javax.annotation.Nullable String label) {
     this.label = label;
     return this;
   }
 
-   /**
+  /**
    * Get label
    * @return label
-  **/
+   */
   @javax.annotation.Nullable
   public String getLabel() {
     return label;
   }
 
-  public void setLabel(String label) {
+  public void setLabel(@javax.annotation.Nullable String label) {
     this.label = label;
   }
 
 
-  public Healthcollectorv3Usage name(String name) {
+  public Healthcollectorv3Usage name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Healthcollectorv3Usage nlsKey(String nlsKey) {
+  public Healthcollectorv3Usage nlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
     return this;
   }
 
-   /**
+  /**
    * Get nlsKey
    * @return nlsKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getNlsKey() {
     return nlsKey;
   }
 
-  public void setNlsKey(String nlsKey) {
+  public void setNlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
   }
 
 
-  public Healthcollectorv3Usage timestamp(OffsetDateTime timestamp) {
+  public Healthcollectorv3Usage timestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
     return this;
   }
 
-   /**
+  /**
    * Get timestamp
    * @return timestamp
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 
 
-  public Healthcollectorv3Usage value(Double value) {
+  public Healthcollectorv3Usage value(@javax.annotation.Nullable Double value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Get value
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public Double getValue() {
     return value;
   }
 
-  public void setValue(Double value) {
+  public void setValue(@javax.annotation.Nullable Double value) {
     this.value = value;
   }
 
@@ -222,27 +228,22 @@ public class Healthcollectorv3Usage {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("label");
-    openapiFields.add("name");
-    openapiFields.add("nls_key");
-    openapiFields.add("timestamp");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("label", "name", "nls_key", "timestamp", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3Usage
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3Usage
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3Usage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3Usage is not found in the empty JSON string", Healthcollectorv3Usage.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3Usage is not found in the empty JSON string", Healthcollectorv3Usage.openapiRequiredFields.toString()));
         }
       }
 
@@ -250,18 +251,18 @@ public class Healthcollectorv3Usage {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3Usage.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3Usage` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3Usage` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("label") != null && !jsonObj.get("label").isJsonNull()) && !jsonObj.get("label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("nls_key") != null && !jsonObj.get("nls_key").isJsonNull()) && !jsonObj.get("nls_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
       }
   }
 
@@ -294,22 +295,22 @@ public class Healthcollectorv3Usage {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3Usage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3Usage
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3Usage
-  */
+  /**
+   * Create an instance of Healthcollectorv3Usage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3Usage
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3Usage
+   */
   public static Healthcollectorv3Usage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3Usage.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3Usage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3Usage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

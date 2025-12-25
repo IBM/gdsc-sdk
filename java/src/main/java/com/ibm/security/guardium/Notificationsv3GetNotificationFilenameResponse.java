@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Returns the download file name associated with the specified notification or an empty string if there is no download. file name associated with the specified notification.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Notificationsv3GetNotificationFilenameResponse {
   public static final String SERIALIZED_NAME_FILENAME = "filename";
   @SerializedName(SERIALIZED_NAME_FILENAME)
+  @javax.annotation.Nullable
   private String filename;
 
   public static final String SERIALIZED_NAME_RESULT = "result";
   @SerializedName(SERIALIZED_NAME_RESULT)
+  @javax.annotation.Nullable
   private String result;
 
   public Notificationsv3GetNotificationFilenameResponse() {
   }
 
-  public Notificationsv3GetNotificationFilenameResponse filename(String filename) {
+  public Notificationsv3GetNotificationFilenameResponse filename(@javax.annotation.Nullable String filename) {
     this.filename = filename;
     return this;
   }
 
-   /**
+  /**
    * Get filename
    * @return filename
-  **/
+   */
   @javax.annotation.Nullable
   public String getFilename() {
     return filename;
   }
 
-  public void setFilename(String filename) {
+  public void setFilename(@javax.annotation.Nullable String filename) {
     this.filename = filename;
   }
 
 
-  public Notificationsv3GetNotificationFilenameResponse result(String result) {
+  public Notificationsv3GetNotificationFilenameResponse result(@javax.annotation.Nullable String result) {
     this.result = result;
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
-  **/
+   */
   @javax.annotation.Nullable
   public String getResult() {
     return result;
   }
 
-  public void setResult(String result) {
+  public void setResult(@javax.annotation.Nullable String result) {
     this.result = result;
   }
 
@@ -146,24 +149,22 @@ public class Notificationsv3GetNotificationFilenameResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filename");
-    openapiFields.add("result");
+    openapiFields = new HashSet<String>(Arrays.asList("filename", "result"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Notificationsv3GetNotificationFilenameResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Notificationsv3GetNotificationFilenameResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Notificationsv3GetNotificationFilenameResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Notificationsv3GetNotificationFilenameResponse is not found in the empty JSON string", Notificationsv3GetNotificationFilenameResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Notificationsv3GetNotificationFilenameResponse is not found in the empty JSON string", Notificationsv3GetNotificationFilenameResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Notificationsv3GetNotificationFilenameResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Notificationsv3GetNotificationFilenameResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Notificationsv3GetNotificationFilenameResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Notificationsv3GetNotificationFilenameResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("filename") != null && !jsonObj.get("filename").isJsonNull()) && !jsonObj.get("filename").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filename").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filename").toString()));
       }
       if ((jsonObj.get("result") != null && !jsonObj.get("result").isJsonNull()) && !jsonObj.get("result").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("result").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("result").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Notificationsv3GetNotificationFilenameResponse {
     }
   }
 
- /**
-  * Create an instance of Notificationsv3GetNotificationFilenameResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Notificationsv3GetNotificationFilenameResponse
-  * @throws IOException if the JSON string is invalid with respect to Notificationsv3GetNotificationFilenameResponse
-  */
+  /**
+   * Create an instance of Notificationsv3GetNotificationFilenameResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Notificationsv3GetNotificationFilenameResponse
+   * @throws IOException if the JSON string is invalid with respect to Notificationsv3GetNotificationFilenameResponse
+   */
   public static Notificationsv3GetNotificationFilenameResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Notificationsv3GetNotificationFilenameResponse.class);
   }
 
- /**
-  * Convert an instance of Notificationsv3GetNotificationFilenameResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Notificationsv3GetNotificationFilenameResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

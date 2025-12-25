@@ -36,7 +36,7 @@ class Riskanalyticscontrollerv3RiskEventHourlyFindings(BaseModel):
     hourly_category: Optional[StrictStr] = Field(default=None, description="Classification of the risk in the given hour.")
     hourly_category_description: Optional[StrictStr] = Field(default=None, description="Classification description of the risk in the given hour.")
     hourly_description: Optional[StrictStr] = Field(default=None, description="Description of the risk.")
-    hourly_severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = None
+    hourly_severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL
     indicators: Optional[List[Riskanalyticscontrollerv3Indicator]] = Field(default=None, description="list of all the indicators - Optional (depending on include_indicators).")
     __properties: ClassVar[List[str]] = ["date_from", "date_to", "findings", "hourly_category", "hourly_category_description", "hourly_description", "hourly_severity_level", "indicators"]
 
@@ -82,16 +82,16 @@ class Riskanalyticscontrollerv3RiskEventHourlyFindings(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in findings (list)
         _items = []
         if self.findings:
-            for _item in self.findings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_findings in self.findings:
+                if _item_findings:
+                    _items.append(_item_findings.to_dict())
             _dict['findings'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in indicators (list)
         _items = []
         if self.indicators:
-            for _item in self.indicators:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_indicators in self.indicators:
+                if _item_indicators:
+                    _items.append(_item_indicators.to_dict())
             _dict['indicators'] = _items
         return _dict
 
@@ -111,7 +111,7 @@ class Riskanalyticscontrollerv3RiskEventHourlyFindings(BaseModel):
             "hourly_category": obj.get("hourly_category"),
             "hourly_category_description": obj.get("hourly_category_description"),
             "hourly_description": obj.get("hourly_description"),
-            "hourly_severity_level": obj.get("hourly_severity_level"),
+            "hourly_severity_level": obj.get("hourly_severity_level") if obj.get("hourly_severity_level") is not None else Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL,
             "indicators": [Riskanalyticscontrollerv3Indicator.from_dict(_item) for _item in obj["indicators"]] if obj.get("indicators") is not None else None
         })
         return _obj

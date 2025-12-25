@@ -27,7 +27,7 @@ class TestDataResource(unittest.TestCase):
 
     def make_instance(self, include_optional) -> DataResource:
         """Test DataResource
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `DataResource`
@@ -53,7 +53,8 @@ class TestDataResource(unittest.TestCase):
                             tag = 'BUSINESS_EMAIL_ADDRESS', 
                             count = 230, 
                             category = 'Personal', )
-                        ], )
+                        ], ),
+                path = ''
             )
         else:
             return DataResource(

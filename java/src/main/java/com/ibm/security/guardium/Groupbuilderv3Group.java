@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,248 +44,266 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Group imports groups from a Guradium Data Protection central manager to GDSC.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3Group {
   public static final String SERIALIZED_NAME_ACCESS_LEVEL = "access_level";
   @SerializedName(SERIALIZED_NAME_ACCESS_LEVEL)
+  @javax.annotation.Nullable
   private Integer accessLevel;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_FLATTENED_MEMBER_COUNT = "flattened_member_count";
   @SerializedName(SERIALIZED_NAME_FLATTENED_MEMBER_COUNT)
+  @javax.annotation.Nullable
   private Integer flattenedMemberCount;
 
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer groupId;
 
   public static final String SERIALIZED_NAME_GROUP_TYPE_ID = "group_type_id";
   @SerializedName(SERIALIZED_NAME_GROUP_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer groupTypeId;
 
   public static final String SERIALIZED_NAME_LAST_SYNC_DATE = "last_sync_date";
   @SerializedName(SERIALIZED_NAME_LAST_SYNC_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime lastSyncDate;
 
   public static final String SERIALIZED_NAME_LDAP_CONFIG = "ldap_config";
   @SerializedName(SERIALIZED_NAME_LDAP_CONFIG)
+  @javax.annotation.Nullable
   private Groupbuilderv3LdapConfig ldapConfig;
 
   public static final String SERIALIZED_NAME_MEMBER_COUNT = "member_count";
   @SerializedName(SERIALIZED_NAME_MEMBER_COUNT)
+  @javax.annotation.Nullable
   private Integer memberCount;
 
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
+  @javax.annotation.Nullable
   private List<Groupbuilderv3GroupMember> members = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NESTED = "nested";
   @SerializedName(SERIALIZED_NAME_NESTED)
+  @javax.annotation.Nullable
   private Boolean nested;
 
   public static final String SERIALIZED_NAME_NESTED_GROUP_MEMBERS = "nested_group_members";
   @SerializedName(SERIALIZED_NAME_NESTED_GROUP_MEMBERS)
+  @javax.annotation.Nullable
   private List<Groupbuilderv3NestedGroupMember> nestedGroupMembers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NEXT_SYNC_DATE = "next_sync_date";
   @SerializedName(SERIALIZED_NAME_NEXT_SYNC_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime nextSyncDate;
 
   public static final String SERIALIZED_NAME_SYNC_INACTIVE_CODE = "sync_inactive_code";
   @SerializedName(SERIALIZED_NAME_SYNC_INACTIVE_CODE)
+  @javax.annotation.Nullable
   private Integer syncInactiveCode;
 
   public static final String SERIALIZED_NAME_SYNC_SOURCE = "sync_source";
   @SerializedName(SERIALIZED_NAME_SYNC_SOURCE)
+  @javax.annotation.Nullable
   private String syncSource;
 
   public static final String SERIALIZED_NAME_SYNCED = "synced";
   @SerializedName(SERIALIZED_NAME_SYNCED)
+  @javax.annotation.Nullable
   private Boolean synced;
 
   public static final String SERIALIZED_NAME_TUPLE_COUNT = "tuple_count";
   @SerializedName(SERIALIZED_NAME_TUPLE_COUNT)
+  @javax.annotation.Nullable
   private Integer tupleCount;
 
   public static final String SERIALIZED_NAME_TUPLE_PARAMS = "tuple_params";
   @SerializedName(SERIALIZED_NAME_TUPLE_PARAMS)
+  @javax.annotation.Nullable
   private List<String> tupleParams = new ArrayList<>();
 
   public Groupbuilderv3Group() {
   }
 
-  public Groupbuilderv3Group accessLevel(Integer accessLevel) {
+  public Groupbuilderv3Group accessLevel(@javax.annotation.Nullable Integer accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
 
-   /**
+  /**
    * Group access level.
    * @return accessLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getAccessLevel() {
     return accessLevel;
   }
 
-  public void setAccessLevel(Integer accessLevel) {
+  public void setAccessLevel(@javax.annotation.Nullable Integer accessLevel) {
     this.accessLevel = accessLevel;
   }
 
 
-  public Groupbuilderv3Group description(String description) {
+  public Groupbuilderv3Group description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Group description.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Groupbuilderv3Group flattenedMemberCount(Integer flattenedMemberCount) {
+  public Groupbuilderv3Group flattenedMemberCount(@javax.annotation.Nullable Integer flattenedMemberCount) {
     this.flattenedMemberCount = flattenedMemberCount;
     return this;
   }
 
-   /**
+  /**
    * Flattened member count for nested groups.
    * @return flattenedMemberCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFlattenedMemberCount() {
     return flattenedMemberCount;
   }
 
-  public void setFlattenedMemberCount(Integer flattenedMemberCount) {
+  public void setFlattenedMemberCount(@javax.annotation.Nullable Integer flattenedMemberCount) {
     this.flattenedMemberCount = flattenedMemberCount;
   }
 
 
-  public Groupbuilderv3Group groupId(Integer groupId) {
+  public Groupbuilderv3Group groupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * Group ID.
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(Integer groupId) {
+  public void setGroupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
   }
 
 
-  public Groupbuilderv3Group groupTypeId(Integer groupTypeId) {
+  public Groupbuilderv3Group groupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
     return this;
   }
 
-   /**
+  /**
    * Group type ID.
    * @return groupTypeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupTypeId() {
     return groupTypeId;
   }
 
-  public void setGroupTypeId(Integer groupTypeId) {
+  public void setGroupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
   }
 
 
-  public Groupbuilderv3Group lastSyncDate(OffsetDateTime lastSyncDate) {
+  public Groupbuilderv3Group lastSyncDate(@javax.annotation.Nullable OffsetDateTime lastSyncDate) {
     this.lastSyncDate = lastSyncDate;
     return this;
   }
 
-   /**
+  /**
    * Last synchronization date.
    * @return lastSyncDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastSyncDate() {
     return lastSyncDate;
   }
 
-  public void setLastSyncDate(OffsetDateTime lastSyncDate) {
+  public void setLastSyncDate(@javax.annotation.Nullable OffsetDateTime lastSyncDate) {
     this.lastSyncDate = lastSyncDate;
   }
 
 
-  public Groupbuilderv3Group ldapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public Groupbuilderv3Group ldapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
     return this;
   }
 
-   /**
+  /**
    * Get ldapConfig
    * @return ldapConfig
-  **/
+   */
   @javax.annotation.Nullable
   public Groupbuilderv3LdapConfig getLdapConfig() {
     return ldapConfig;
   }
 
-  public void setLdapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public void setLdapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
   }
 
 
-  public Groupbuilderv3Group memberCount(Integer memberCount) {
+  public Groupbuilderv3Group memberCount(@javax.annotation.Nullable Integer memberCount) {
     this.memberCount = memberCount;
     return this;
   }
 
-   /**
+  /**
    * Group members count.
    * @return memberCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMemberCount() {
     return memberCount;
   }
 
-  public void setMemberCount(Integer memberCount) {
+  public void setMemberCount(@javax.annotation.Nullable Integer memberCount) {
     this.memberCount = memberCount;
   }
 
 
-  public Groupbuilderv3Group members(List<Groupbuilderv3GroupMember> members) {
+  public Groupbuilderv3Group members(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> members) {
     this.members = members;
     return this;
   }
@@ -297,59 +316,59 @@ public class Groupbuilderv3Group {
     return this;
   }
 
-   /**
+  /**
    * Array of members.
    * @return members
-  **/
+   */
   @javax.annotation.Nullable
   public List<Groupbuilderv3GroupMember> getMembers() {
     return members;
   }
 
-  public void setMembers(List<Groupbuilderv3GroupMember> members) {
+  public void setMembers(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> members) {
     this.members = members;
   }
 
 
-  public Groupbuilderv3Group name(String name) {
+  public Groupbuilderv3Group name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Group name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Groupbuilderv3Group nested(Boolean nested) {
+  public Groupbuilderv3Group nested(@javax.annotation.Nullable Boolean nested) {
     this.nested = nested;
     return this;
   }
 
-   /**
+  /**
    * Nested (hierarchical).
    * @return nested
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getNested() {
     return nested;
   }
 
-  public void setNested(Boolean nested) {
+  public void setNested(@javax.annotation.Nullable Boolean nested) {
     this.nested = nested;
   }
 
 
-  public Groupbuilderv3Group nestedGroupMembers(List<Groupbuilderv3NestedGroupMember> nestedGroupMembers) {
+  public Groupbuilderv3Group nestedGroupMembers(@javax.annotation.Nullable List<Groupbuilderv3NestedGroupMember> nestedGroupMembers) {
     this.nestedGroupMembers = nestedGroupMembers;
     return this;
   }
@@ -362,116 +381,116 @@ public class Groupbuilderv3Group {
     return this;
   }
 
-   /**
+  /**
    * Array of nested (hierarchical) members.
    * @return nestedGroupMembers
-  **/
+   */
   @javax.annotation.Nullable
   public List<Groupbuilderv3NestedGroupMember> getNestedGroupMembers() {
     return nestedGroupMembers;
   }
 
-  public void setNestedGroupMembers(List<Groupbuilderv3NestedGroupMember> nestedGroupMembers) {
+  public void setNestedGroupMembers(@javax.annotation.Nullable List<Groupbuilderv3NestedGroupMember> nestedGroupMembers) {
     this.nestedGroupMembers = nestedGroupMembers;
   }
 
 
-  public Groupbuilderv3Group nextSyncDate(OffsetDateTime nextSyncDate) {
+  public Groupbuilderv3Group nextSyncDate(@javax.annotation.Nullable OffsetDateTime nextSyncDate) {
     this.nextSyncDate = nextSyncDate;
     return this;
   }
 
-   /**
+  /**
    * Next synchronization date.
    * @return nextSyncDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getNextSyncDate() {
     return nextSyncDate;
   }
 
-  public void setNextSyncDate(OffsetDateTime nextSyncDate) {
+  public void setNextSyncDate(@javax.annotation.Nullable OffsetDateTime nextSyncDate) {
     this.nextSyncDate = nextSyncDate;
   }
 
 
-  public Groupbuilderv3Group syncInactiveCode(Integer syncInactiveCode) {
+  public Groupbuilderv3Group syncInactiveCode(@javax.annotation.Nullable Integer syncInactiveCode) {
     this.syncInactiveCode = syncInactiveCode;
     return this;
   }
 
-   /**
+  /**
    * Synchronization inactive code.
    * @return syncInactiveCode
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSyncInactiveCode() {
     return syncInactiveCode;
   }
 
-  public void setSyncInactiveCode(Integer syncInactiveCode) {
+  public void setSyncInactiveCode(@javax.annotation.Nullable Integer syncInactiveCode) {
     this.syncInactiveCode = syncInactiveCode;
   }
 
 
-  public Groupbuilderv3Group syncSource(String syncSource) {
+  public Groupbuilderv3Group syncSource(@javax.annotation.Nullable String syncSource) {
     this.syncSource = syncSource;
     return this;
   }
 
-   /**
+  /**
    * Name of Guardium Data Protection central manager synchronized to the group.
    * @return syncSource
-  **/
+   */
   @javax.annotation.Nullable
   public String getSyncSource() {
     return syncSource;
   }
 
-  public void setSyncSource(String syncSource) {
+  public void setSyncSource(@javax.annotation.Nullable String syncSource) {
     this.syncSource = syncSource;
   }
 
 
-  public Groupbuilderv3Group synced(Boolean synced) {
+  public Groupbuilderv3Group synced(@javax.annotation.Nullable Boolean synced) {
     this.synced = synced;
     return this;
   }
 
-   /**
+  /**
    * Synchronized.
    * @return synced
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getSynced() {
     return synced;
   }
 
-  public void setSynced(Boolean synced) {
+  public void setSynced(@javax.annotation.Nullable Boolean synced) {
     this.synced = synced;
   }
 
 
-  public Groupbuilderv3Group tupleCount(Integer tupleCount) {
+  public Groupbuilderv3Group tupleCount(@javax.annotation.Nullable Integer tupleCount) {
     this.tupleCount = tupleCount;
     return this;
   }
 
-   /**
+  /**
    * Group tuples count.
    * @return tupleCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTupleCount() {
     return tupleCount;
   }
 
-  public void setTupleCount(Integer tupleCount) {
+  public void setTupleCount(@javax.annotation.Nullable Integer tupleCount) {
     this.tupleCount = tupleCount;
   }
 
 
-  public Groupbuilderv3Group tupleParams(List<String> tupleParams) {
+  public Groupbuilderv3Group tupleParams(@javax.annotation.Nullable List<String> tupleParams) {
     this.tupleParams = tupleParams;
     return this;
   }
@@ -484,16 +503,16 @@ public class Groupbuilderv3Group {
     return this;
   }
 
-   /**
+  /**
    * Tuple parameters.
    * @return tupleParams
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTupleParams() {
     return tupleParams;
   }
 
-  public void setTupleParams(List<String> tupleParams) {
+  public void setTupleParams(@javax.annotation.Nullable List<String> tupleParams) {
     this.tupleParams = tupleParams;
   }
 
@@ -576,40 +595,22 @@ public class Groupbuilderv3Group {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("access_level");
-    openapiFields.add("description");
-    openapiFields.add("flattened_member_count");
-    openapiFields.add("group_id");
-    openapiFields.add("group_type_id");
-    openapiFields.add("last_sync_date");
-    openapiFields.add("ldap_config");
-    openapiFields.add("member_count");
-    openapiFields.add("members");
-    openapiFields.add("name");
-    openapiFields.add("nested");
-    openapiFields.add("nested_group_members");
-    openapiFields.add("next_sync_date");
-    openapiFields.add("sync_inactive_code");
-    openapiFields.add("sync_source");
-    openapiFields.add("synced");
-    openapiFields.add("tuple_count");
-    openapiFields.add("tuple_params");
+    openapiFields = new HashSet<String>(Arrays.asList("access_level", "description", "flattened_member_count", "group_id", "group_type_id", "last_sync_date", "ldap_config", "member_count", "members", "name", "nested", "nested_group_members", "next_sync_date", "sync_inactive_code", "sync_source", "synced", "tuple_count", "tuple_params"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3Group
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3Group
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3Group.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3Group is not found in the empty JSON string", Groupbuilderv3Group.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3Group is not found in the empty JSON string", Groupbuilderv3Group.openapiRequiredFields.toString()));
         }
       }
 
@@ -617,12 +618,12 @@ public class Groupbuilderv3Group {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3Group.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3Group` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3Group` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       // validate the optional field `ldap_config`
       if (jsonObj.get("ldap_config") != null && !jsonObj.get("ldap_config").isJsonNull()) {
@@ -633,7 +634,7 @@ public class Groupbuilderv3Group {
         if (jsonArraymembers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("members").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `members` to be an array in the JSON string but got `%s`", jsonObj.get("members").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `members` to be an array in the JSON string but got `%s`", jsonObj.get("members").toString()));
           }
 
           // validate the optional field `members` (array)
@@ -643,14 +644,14 @@ public class Groupbuilderv3Group {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if (jsonObj.get("nested_group_members") != null && !jsonObj.get("nested_group_members").isJsonNull()) {
         JsonArray jsonArraynestedGroupMembers = jsonObj.getAsJsonArray("nested_group_members");
         if (jsonArraynestedGroupMembers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("nested_group_members").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `nested_group_members` to be an array in the JSON string but got `%s`", jsonObj.get("nested_group_members").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nested_group_members` to be an array in the JSON string but got `%s`", jsonObj.get("nested_group_members").toString()));
           }
 
           // validate the optional field `nested_group_members` (array)
@@ -660,11 +661,11 @@ public class Groupbuilderv3Group {
         }
       }
       if ((jsonObj.get("sync_source") != null && !jsonObj.get("sync_source").isJsonNull()) && !jsonObj.get("sync_source").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sync_source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sync_source").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sync_source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sync_source").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tuple_params") != null && !jsonObj.get("tuple_params").isJsonNull() && !jsonObj.get("tuple_params").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tuple_params` to be an array in the JSON string but got `%s`", jsonObj.get("tuple_params").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tuple_params` to be an array in the JSON string but got `%s`", jsonObj.get("tuple_params").toString()));
       }
   }
 
@@ -697,22 +698,22 @@ public class Groupbuilderv3Group {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3Group given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3Group
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3Group
-  */
+  /**
+   * Create an instance of Groupbuilderv3Group given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3Group
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3Group
+   */
   public static Groupbuilderv3Group fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3Group.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3Group to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3Group to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

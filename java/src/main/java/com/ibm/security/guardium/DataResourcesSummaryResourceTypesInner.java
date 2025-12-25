@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DataResourcesSummaryResourceTypesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class DataResourcesSummaryResourceTypesInner {
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resourceType";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
+  @javax.annotation.Nonnull
   private String resourceType;
 
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nonnull
   private BigDecimal count;
 
   public DataResourcesSummaryResourceTypesInner() {
   }
 
-  public DataResourcesSummaryResourceTypesInner resourceType(String resourceType) {
+  public DataResourcesSummaryResourceTypesInner resourceType(@javax.annotation.Nonnull String resourceType) {
     this.resourceType = resourceType;
     return this;
   }
 
-   /**
+  /**
    * Get resourceType
    * @return resourceType
-  **/
+   */
   @javax.annotation.Nonnull
   public String getResourceType() {
     return resourceType;
   }
 
-  public void setResourceType(String resourceType) {
+  public void setResourceType(@javax.annotation.Nonnull String resourceType) {
     this.resourceType = resourceType;
   }
 
 
-  public DataResourcesSummaryResourceTypesInner count(BigDecimal count) {
+  public DataResourcesSummaryResourceTypesInner count(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getCount() {
     return count;
   }
 
-  public void setCount(BigDecimal count) {
+  public void setCount(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
   }
 
@@ -147,26 +150,22 @@ public class DataResourcesSummaryResourceTypesInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("resourceType");
-    openapiFields.add("count");
+    openapiFields = new HashSet<String>(Arrays.asList("resourceType", "count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("resourceType");
-    openapiRequiredFields.add("count");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("resourceType", "count"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to DataResourcesSummaryResourceTypesInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to DataResourcesSummaryResourceTypesInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DataResourcesSummaryResourceTypesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in DataResourcesSummaryResourceTypesInner is not found in the empty JSON string", DataResourcesSummaryResourceTypesInner.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DataResourcesSummaryResourceTypesInner is not found in the empty JSON string", DataResourcesSummaryResourceTypesInner.openapiRequiredFields.toString()));
         }
       }
 
@@ -174,19 +173,19 @@ public class DataResourcesSummaryResourceTypesInner {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DataResourcesSummaryResourceTypesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DataResourcesSummaryResourceTypesInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DataResourcesSummaryResourceTypesInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : DataResourcesSummaryResourceTypesInner.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("resourceType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resourceType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resourceType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceType").toString()));
       }
   }
 
@@ -219,22 +218,22 @@ public class DataResourcesSummaryResourceTypesInner {
     }
   }
 
- /**
-  * Create an instance of DataResourcesSummaryResourceTypesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of DataResourcesSummaryResourceTypesInner
-  * @throws IOException if the JSON string is invalid with respect to DataResourcesSummaryResourceTypesInner
-  */
+  /**
+   * Create an instance of DataResourcesSummaryResourceTypesInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of DataResourcesSummaryResourceTypesInner
+   * @throws IOException if the JSON string is invalid with respect to DataResourcesSummaryResourceTypesInner
+   */
   public static DataResourcesSummaryResourceTypesInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, DataResourcesSummaryResourceTypesInner.class);
   }
 
- /**
-  * Convert an instance of DataResourcesSummaryResourceTypesInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of DataResourcesSummaryResourceTypesInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

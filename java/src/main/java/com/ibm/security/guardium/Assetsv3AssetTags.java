@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AssetTags - Tag related info for the asset used in Tags widget.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetTags {
   public static final String SERIALIZED_NAME_ASSET_ID = "asset_id";
   @SerializedName(SERIALIZED_NAME_ASSET_ID)
+  @javax.annotation.Nullable
   private String assetId;
 
   public static final String SERIALIZED_NAME_CONCEPT = "concept";
   @SerializedName(SERIALIZED_NAME_CONCEPT)
+  @javax.annotation.Nullable
   private String concept;
 
   public static final String SERIALIZED_NAME_CONCEPT_ID = "concept_id";
   @SerializedName(SERIALIZED_NAME_CONCEPT_ID)
+  @javax.annotation.Nullable
   private String conceptId;
 
   public static final String SERIALIZED_NAME_DOMAIN_ID = "domain_id";
   @SerializedName(SERIALIZED_NAME_DOMAIN_ID)
+  @javax.annotation.Nullable
   private String domainId;
 
   public static final String SERIALIZED_NAME_DOMAIN_NAME = "domain_name";
   @SerializedName(SERIALIZED_NAME_DOMAIN_NAME)
+  @javax.annotation.Nullable
   private String domainName;
 
   public Assetsv3AssetTags() {
   }
 
-  public Assetsv3AssetTags assetId(String assetId) {
+  public Assetsv3AssetTags assetId(@javax.annotation.Nullable String assetId) {
     this.assetId = assetId;
     return this;
   }
 
-   /**
+  /**
    * Get assetId
    * @return assetId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetId() {
     return assetId;
   }
 
-  public void setAssetId(String assetId) {
+  public void setAssetId(@javax.annotation.Nullable String assetId) {
     this.assetId = assetId;
   }
 
 
-  public Assetsv3AssetTags concept(String concept) {
+  public Assetsv3AssetTags concept(@javax.annotation.Nullable String concept) {
     this.concept = concept;
     return this;
   }
 
-   /**
+  /**
    * Get concept
    * @return concept
-  **/
+   */
   @javax.annotation.Nullable
   public String getConcept() {
     return concept;
   }
 
-  public void setConcept(String concept) {
+  public void setConcept(@javax.annotation.Nullable String concept) {
     this.concept = concept;
   }
 
 
-  public Assetsv3AssetTags conceptId(String conceptId) {
+  public Assetsv3AssetTags conceptId(@javax.annotation.Nullable String conceptId) {
     this.conceptId = conceptId;
     return this;
   }
 
-   /**
+  /**
    * Get conceptId
    * @return conceptId
-  **/
+   */
   @javax.annotation.Nullable
   public String getConceptId() {
     return conceptId;
   }
 
-  public void setConceptId(String conceptId) {
+  public void setConceptId(@javax.annotation.Nullable String conceptId) {
     this.conceptId = conceptId;
   }
 
 
-  public Assetsv3AssetTags domainId(String domainId) {
+  public Assetsv3AssetTags domainId(@javax.annotation.Nullable String domainId) {
     this.domainId = domainId;
     return this;
   }
 
-   /**
+  /**
    * Get domainId
    * @return domainId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDomainId() {
     return domainId;
   }
 
-  public void setDomainId(String domainId) {
+  public void setDomainId(@javax.annotation.Nullable String domainId) {
     this.domainId = domainId;
   }
 
 
-  public Assetsv3AssetTags domainName(String domainName) {
+  public Assetsv3AssetTags domainName(@javax.annotation.Nullable String domainName) {
     this.domainName = domainName;
     return this;
   }
 
-   /**
+  /**
    * Get domainName
    * @return domainName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDomainName() {
     return domainName;
   }
 
-  public void setDomainName(String domainName) {
+  public void setDomainName(@javax.annotation.Nullable String domainName) {
     this.domainName = domainName;
   }
 
@@ -221,27 +227,22 @@ public class Assetsv3AssetTags {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_id");
-    openapiFields.add("concept");
-    openapiFields.add("concept_id");
-    openapiFields.add("domain_id");
-    openapiFields.add("domain_name");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_id", "concept", "concept_id", "domain_id", "domain_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetTags
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetTags
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetTags.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetTags is not found in the empty JSON string", Assetsv3AssetTags.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetTags is not found in the empty JSON string", Assetsv3AssetTags.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Assetsv3AssetTags {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetTags.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetTags` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetTags` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("asset_id") != null && !jsonObj.get("asset_id").isJsonNull()) && !jsonObj.get("asset_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_id").toString()));
       }
       if ((jsonObj.get("concept") != null && !jsonObj.get("concept").isJsonNull()) && !jsonObj.get("concept").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `concept` to be a primitive type in the JSON string but got `%s`", jsonObj.get("concept").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `concept` to be a primitive type in the JSON string but got `%s`", jsonObj.get("concept").toString()));
       }
       if ((jsonObj.get("concept_id") != null && !jsonObj.get("concept_id").isJsonNull()) && !jsonObj.get("concept_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `concept_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("concept_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `concept_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("concept_id").toString()));
       }
       if ((jsonObj.get("domain_id") != null && !jsonObj.get("domain_id").isJsonNull()) && !jsonObj.get("domain_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `domain_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `domain_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_id").toString()));
       }
       if ((jsonObj.get("domain_name") != null && !jsonObj.get("domain_name").isJsonNull()) && !jsonObj.get("domain_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `domain_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `domain_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_name").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Assetsv3AssetTags {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetTags given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetTags
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetTags
-  */
+  /**
+   * Create an instance of Assetsv3AssetTags given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetTags
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetTags
+   */
   public static Assetsv3AssetTags fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetTags.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetTags to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetTags to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

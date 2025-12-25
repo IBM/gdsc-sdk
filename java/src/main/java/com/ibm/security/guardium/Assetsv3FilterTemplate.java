@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,68 +42,79 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * FilterTemplate - Filter Template structure.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3FilterTemplate {
   public static final String SERIALIZED_NAME_COLUMMNS_LIST = "colummns_list";
   @SerializedName(SERIALIZED_NAME_COLUMMNS_LIST)
+  @javax.annotation.Nullable
   private List<Assetsv3TableColumn> colummnsList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private String count;
 
   public static final String SERIALIZED_NAME_CREATED_BY = "created_by";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
+  @javax.annotation.Nullable
   private String createdBy;
 
   public static final String SERIALIZED_NAME_CREATED_DATE = "created_date";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
+  @javax.annotation.Nullable
   private String createdDate;
 
   public static final String SERIALIZED_NAME_DASHBOARD_TEMPLATE = "dashboard_template";
   @SerializedName(SERIALIZED_NAME_DASHBOARD_TEMPLATE)
+  @javax.annotation.Nullable
   private Boolean dashboardTemplate;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_SELECTED_FILTERS = "selected_filters";
   @SerializedName(SERIALIZED_NAME_SELECTED_FILTERS)
+  @javax.annotation.Nullable
   private List<Assetsv3FilterCatagory> selectedFilters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+  @javax.annotation.Nullable
   private String templateId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public static final String SERIALIZED_NAME_UPDATED_DATE = "updated_date";
   @SerializedName(SERIALIZED_NAME_UPDATED_DATE)
+  @javax.annotation.Nullable
   private String updatedDate;
 
   public Assetsv3FilterTemplate() {
   }
 
-  public Assetsv3FilterTemplate colummnsList(List<Assetsv3TableColumn> colummnsList) {
+  public Assetsv3FilterTemplate colummnsList(@javax.annotation.Nullable List<Assetsv3TableColumn> colummnsList) {
     this.colummnsList = colummnsList;
     return this;
   }
@@ -115,135 +127,135 @@ public class Assetsv3FilterTemplate {
     return this;
   }
 
-   /**
+  /**
    * Get colummnsList
    * @return colummnsList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3TableColumn> getColummnsList() {
     return colummnsList;
   }
 
-  public void setColummnsList(List<Assetsv3TableColumn> colummnsList) {
+  public void setColummnsList(@javax.annotation.Nullable List<Assetsv3TableColumn> colummnsList) {
     this.colummnsList = colummnsList;
   }
 
 
-  public Assetsv3FilterTemplate count(String count) {
+  public Assetsv3FilterTemplate count(@javax.annotation.Nullable String count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public String getCount() {
     return count;
   }
 
-  public void setCount(String count) {
+  public void setCount(@javax.annotation.Nullable String count) {
     this.count = count;
   }
 
 
-  public Assetsv3FilterTemplate createdBy(String createdBy) {
+  public Assetsv3FilterTemplate createdBy(@javax.annotation.Nullable String createdBy) {
     this.createdBy = createdBy;
     return this;
   }
 
-   /**
+  /**
    * Get createdBy
    * @return createdBy
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreatedBy() {
     return createdBy;
   }
 
-  public void setCreatedBy(String createdBy) {
+  public void setCreatedBy(@javax.annotation.Nullable String createdBy) {
     this.createdBy = createdBy;
   }
 
 
-  public Assetsv3FilterTemplate createdDate(String createdDate) {
+  public Assetsv3FilterTemplate createdDate(@javax.annotation.Nullable String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
+  /**
    * Get createdDate
    * @return createdDate
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(String createdDate) {
+  public void setCreatedDate(@javax.annotation.Nullable String createdDate) {
     this.createdDate = createdDate;
   }
 
 
-  public Assetsv3FilterTemplate dashboardTemplate(Boolean dashboardTemplate) {
+  public Assetsv3FilterTemplate dashboardTemplate(@javax.annotation.Nullable Boolean dashboardTemplate) {
     this.dashboardTemplate = dashboardTemplate;
     return this;
   }
 
-   /**
+  /**
    * Get dashboardTemplate
    * @return dashboardTemplate
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDashboardTemplate() {
     return dashboardTemplate;
   }
 
-  public void setDashboardTemplate(Boolean dashboardTemplate) {
+  public void setDashboardTemplate(@javax.annotation.Nullable Boolean dashboardTemplate) {
     this.dashboardTemplate = dashboardTemplate;
   }
 
 
-  public Assetsv3FilterTemplate description(String description) {
+  public Assetsv3FilterTemplate description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Assetsv3FilterTemplate id(String id) {
+  public Assetsv3FilterTemplate id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Assetsv3FilterTemplate selectedFilters(List<Assetsv3FilterCatagory> selectedFilters) {
+  public Assetsv3FilterTemplate selectedFilters(@javax.annotation.Nullable List<Assetsv3FilterCatagory> selectedFilters) {
     this.selectedFilters = selectedFilters;
     return this;
   }
@@ -256,73 +268,73 @@ public class Assetsv3FilterTemplate {
     return this;
   }
 
-   /**
+  /**
    * Get selectedFilters
    * @return selectedFilters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3FilterCatagory> getSelectedFilters() {
     return selectedFilters;
   }
 
-  public void setSelectedFilters(List<Assetsv3FilterCatagory> selectedFilters) {
+  public void setSelectedFilters(@javax.annotation.Nullable List<Assetsv3FilterCatagory> selectedFilters) {
     this.selectedFilters = selectedFilters;
   }
 
 
-  public Assetsv3FilterTemplate templateId(String templateId) {
+  public Assetsv3FilterTemplate templateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
+  /**
    * Get templateId
    * @return templateId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTemplateId() {
     return templateId;
   }
 
-  public void setTemplateId(String templateId) {
+  public void setTemplateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
   }
 
 
-  public Assetsv3FilterTemplate title(String title) {
+  public Assetsv3FilterTemplate title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Get title
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
 
-  public Assetsv3FilterTemplate updatedDate(String updatedDate) {
+  public Assetsv3FilterTemplate updatedDate(@javax.annotation.Nullable String updatedDate) {
     this.updatedDate = updatedDate;
     return this;
   }
 
-   /**
+  /**
    * Get updatedDate
    * @return updatedDate
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdatedDate() {
     return updatedDate;
   }
 
-  public void setUpdatedDate(String updatedDate) {
+  public void setUpdatedDate(@javax.annotation.Nullable String updatedDate) {
     this.updatedDate = updatedDate;
   }
 
@@ -391,33 +403,22 @@ public class Assetsv3FilterTemplate {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("colummns_list");
-    openapiFields.add("count");
-    openapiFields.add("created_by");
-    openapiFields.add("created_date");
-    openapiFields.add("dashboard_template");
-    openapiFields.add("description");
-    openapiFields.add("id");
-    openapiFields.add("selected_filters");
-    openapiFields.add("template_id");
-    openapiFields.add("title");
-    openapiFields.add("updated_date");
+    openapiFields = new HashSet<String>(Arrays.asList("colummns_list", "count", "created_by", "created_date", "dashboard_template", "description", "id", "selected_filters", "template_id", "title", "updated_date"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3FilterTemplate
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3FilterTemplate
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3FilterTemplate.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3FilterTemplate is not found in the empty JSON string", Assetsv3FilterTemplate.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3FilterTemplate is not found in the empty JSON string", Assetsv3FilterTemplate.openapiRequiredFields.toString()));
         }
       }
 
@@ -425,7 +426,7 @@ public class Assetsv3FilterTemplate {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3FilterTemplate.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3FilterTemplate` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3FilterTemplate` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -434,7 +435,7 @@ public class Assetsv3FilterTemplate {
         if (jsonArraycolummnsList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("colummns_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `colummns_list` to be an array in the JSON string but got `%s`", jsonObj.get("colummns_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `colummns_list` to be an array in the JSON string but got `%s`", jsonObj.get("colummns_list").toString()));
           }
 
           // validate the optional field `colummns_list` (array)
@@ -444,26 +445,26 @@ public class Assetsv3FilterTemplate {
         }
       }
       if ((jsonObj.get("count") != null && !jsonObj.get("count").isJsonNull()) && !jsonObj.get("count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
       }
       if ((jsonObj.get("created_by") != null && !jsonObj.get("created_by").isJsonNull()) && !jsonObj.get("created_by").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `created_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_by").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `created_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_by").toString()));
       }
       if ((jsonObj.get("created_date") != null && !jsonObj.get("created_date").isJsonNull()) && !jsonObj.get("created_date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `created_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_date").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `created_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_date").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if (jsonObj.get("selected_filters") != null && !jsonObj.get("selected_filters").isJsonNull()) {
         JsonArray jsonArrayselectedFilters = jsonObj.getAsJsonArray("selected_filters");
         if (jsonArrayselectedFilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("selected_filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `selected_filters` to be an array in the JSON string but got `%s`", jsonObj.get("selected_filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `selected_filters` to be an array in the JSON string but got `%s`", jsonObj.get("selected_filters").toString()));
           }
 
           // validate the optional field `selected_filters` (array)
@@ -473,13 +474,13 @@ public class Assetsv3FilterTemplate {
         }
       }
       if ((jsonObj.get("template_id") != null && !jsonObj.get("template_id").isJsonNull()) && !jsonObj.get("template_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
       if ((jsonObj.get("updated_date") != null && !jsonObj.get("updated_date").isJsonNull()) && !jsonObj.get("updated_date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `updated_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated_date").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `updated_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated_date").toString()));
       }
   }
 
@@ -512,22 +513,22 @@ public class Assetsv3FilterTemplate {
     }
   }
 
- /**
-  * Create an instance of Assetsv3FilterTemplate given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3FilterTemplate
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3FilterTemplate
-  */
+  /**
+   * Create an instance of Assetsv3FilterTemplate given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3FilterTemplate
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3FilterTemplate
+   */
   public static Assetsv3FilterTemplate fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3FilterTemplate.class);
   }
 
- /**
-  * Convert an instance of Assetsv3FilterTemplate to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3FilterTemplate to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

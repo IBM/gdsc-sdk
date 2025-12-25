@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { Reportsv3AggregationType } from '../models/Reportsv3AggregationType';
 import { Reportsv3FieldName } from '../models/Reportsv3FieldName';
 import { Reportsv3HeaderDescription } from '../models/Reportsv3HeaderDescription';
 import { HttpFile } from '../http/http';
@@ -18,6 +19,7 @@ import { HttpFile } from '../http/http';
 * DisplayHeader that have the header name and the translated value.
 */
 export class Reportsv3DisplayHeader {
+    'aggregationType'?: Reportsv3AggregationType;
     'fieldName'?: Reportsv3FieldName;
     'headerDescription'?: Reportsv3HeaderDescription;
     /**
@@ -39,7 +41,15 @@ export class Reportsv3DisplayHeader {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "aggregationType",
+            "baseName": "aggregation_type",
+            "type": "Reportsv3AggregationType",
+            "format": ""
+        },
         {
             "name": "fieldName",
             "baseName": "field_name",
@@ -84,4 +94,5 @@ export class Reportsv3DisplayHeader {
     public constructor() {
     }
 }
+
 

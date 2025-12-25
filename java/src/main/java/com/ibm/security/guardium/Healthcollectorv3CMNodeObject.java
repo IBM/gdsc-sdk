@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CMNodeObject gets health information for the central manager and all its managed units and monitoring agents.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3CMNodeObject {
   public static final String SERIALIZED_NAME_CM = "cm";
   @SerializedName(SERIALIZED_NAME_CM)
+  @javax.annotation.Nullable
   private String cm;
 
   public static final String SERIALIZED_NAME_LAST_HEALTH_INFO_COLLECTED_TIMESTAMP = "last_health_info_collected_timestamp";
   @SerializedName(SERIALIZED_NAME_LAST_HEALTH_INFO_COLLECTED_TIMESTAMP)
+  @javax.annotation.Nullable
   private String lastHealthInfoCollectedTimestamp;
 
   public static final String SERIALIZED_NAME_NODES = "nodes";
   @SerializedName(SERIALIZED_NAME_NODES)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3ManagedUnitObject> nodes = new ArrayList<>();
 
   public Healthcollectorv3CMNodeObject() {
   }
 
-  public Healthcollectorv3CMNodeObject cm(String cm) {
+  public Healthcollectorv3CMNodeObject cm(@javax.annotation.Nullable String cm) {
     this.cm = cm;
     return this;
   }
 
-   /**
+  /**
    * Host name or IP address of the central manager.
    * @return cm
-  **/
+   */
   @javax.annotation.Nullable
   public String getCm() {
     return cm;
   }
 
-  public void setCm(String cm) {
+  public void setCm(@javax.annotation.Nullable String cm) {
     this.cm = cm;
   }
 
 
-  public Healthcollectorv3CMNodeObject lastHealthInfoCollectedTimestamp(String lastHealthInfoCollectedTimestamp) {
+  public Healthcollectorv3CMNodeObject lastHealthInfoCollectedTimestamp(@javax.annotation.Nullable String lastHealthInfoCollectedTimestamp) {
     this.lastHealthInfoCollectedTimestamp = lastHealthInfoCollectedTimestamp;
     return this;
   }
 
-   /**
+  /**
    * Timestamp from when the health information was collected.
    * @return lastHealthInfoCollectedTimestamp
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastHealthInfoCollectedTimestamp() {
     return lastHealthInfoCollectedTimestamp;
   }
 
-  public void setLastHealthInfoCollectedTimestamp(String lastHealthInfoCollectedTimestamp) {
+  public void setLastHealthInfoCollectedTimestamp(@javax.annotation.Nullable String lastHealthInfoCollectedTimestamp) {
     this.lastHealthInfoCollectedTimestamp = lastHealthInfoCollectedTimestamp;
   }
 
 
-  public Healthcollectorv3CMNodeObject nodes(List<Healthcollectorv3ManagedUnitObject> nodes) {
+  public Healthcollectorv3CMNodeObject nodes(@javax.annotation.Nullable List<Healthcollectorv3ManagedUnitObject> nodes) {
     this.nodes = nodes;
     return this;
   }
@@ -120,16 +124,16 @@ public class Healthcollectorv3CMNodeObject {
     return this;
   }
 
-   /**
+  /**
    * List of Guardium Data Protection systems.
    * @return nodes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3ManagedUnitObject> getNodes() {
     return nodes;
   }
 
-  public void setNodes(List<Healthcollectorv3ManagedUnitObject> nodes) {
+  public void setNodes(@javax.annotation.Nullable List<Healthcollectorv3ManagedUnitObject> nodes) {
     this.nodes = nodes;
   }
 
@@ -182,25 +186,22 @@ public class Healthcollectorv3CMNodeObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cm");
-    openapiFields.add("last_health_info_collected_timestamp");
-    openapiFields.add("nodes");
+    openapiFields = new HashSet<String>(Arrays.asList("cm", "last_health_info_collected_timestamp", "nodes"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3CMNodeObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3CMNodeObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3CMNodeObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3CMNodeObject is not found in the empty JSON string", Healthcollectorv3CMNodeObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3CMNodeObject is not found in the empty JSON string", Healthcollectorv3CMNodeObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,22 +209,22 @@ public class Healthcollectorv3CMNodeObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3CMNodeObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3CMNodeObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3CMNodeObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("cm") != null && !jsonObj.get("cm").isJsonNull()) && !jsonObj.get("cm").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm").toString()));
       }
       if ((jsonObj.get("last_health_info_collected_timestamp") != null && !jsonObj.get("last_health_info_collected_timestamp").isJsonNull()) && !jsonObj.get("last_health_info_collected_timestamp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_health_info_collected_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_health_info_collected_timestamp").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_health_info_collected_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_health_info_collected_timestamp").toString()));
       }
       if (jsonObj.get("nodes") != null && !jsonObj.get("nodes").isJsonNull()) {
         JsonArray jsonArraynodes = jsonObj.getAsJsonArray("nodes");
         if (jsonArraynodes != null) {
           // ensure the json data is an array
           if (!jsonObj.get("nodes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `nodes` to be an array in the JSON string but got `%s`", jsonObj.get("nodes").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nodes` to be an array in the JSON string but got `%s`", jsonObj.get("nodes").toString()));
           }
 
           // validate the optional field `nodes` (array)
@@ -263,22 +264,22 @@ public class Healthcollectorv3CMNodeObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3CMNodeObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3CMNodeObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3CMNodeObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3CMNodeObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3CMNodeObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3CMNodeObject
+   */
   public static Healthcollectorv3CMNodeObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3CMNodeObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3CMNodeObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3CMNodeObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

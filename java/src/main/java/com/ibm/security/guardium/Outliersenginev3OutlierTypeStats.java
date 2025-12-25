@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,180 +38,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Describes an outlier type: What characterizes it, and how many were found during a period of time.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3OutlierTypeStats {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private Integer count;
 
   public static final String SERIALIZED_NAME_TYPE_DIFF_MESSAGES = "type_diff_messages";
   @SerializedName(SERIALIZED_NAME_TYPE_DIFF_MESSAGES)
+  @javax.annotation.Nullable
   private Boolean typeDiffMessages;
 
   public static final String SERIALIZED_NAME_TYPE_FAILS = "type_fails";
   @SerializedName(SERIALIZED_NAME_TYPE_FAILS)
+  @javax.annotation.Nullable
   private Boolean typeFails;
 
   public static final String SERIALIZED_NAME_TYPE_NEW_MESSAGES = "type_new_messages";
   @SerializedName(SERIALIZED_NAME_TYPE_NEW_MESSAGES)
+  @javax.annotation.Nullable
   private Boolean typeNewMessages;
 
   public static final String SERIALIZED_NAME_TYPE_ONGOING = "type_ongoing";
   @SerializedName(SERIALIZED_NAME_TYPE_ONGOING)
+  @javax.annotation.Nullable
   private Boolean typeOngoing;
 
   public static final String SERIALIZED_NAME_TYPE_VOLUME = "type_volume";
   @SerializedName(SERIALIZED_NAME_TYPE_VOLUME)
+  @javax.annotation.Nullable
   private Boolean typeVolume;
 
   public static final String SERIALIZED_NAME_TYPE_VULNERABLE_OBJECTS = "type_vulnerable_objects";
   @SerializedName(SERIALIZED_NAME_TYPE_VULNERABLE_OBJECTS)
+  @javax.annotation.Nullable
   private Boolean typeVulnerableObjects;
 
   public Outliersenginev3OutlierTypeStats() {
   }
 
-  public Outliersenginev3OutlierTypeStats count(Integer count) {
+  public Outliersenginev3OutlierTypeStats count(@javax.annotation.Nullable Integer count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * The number outliers found with the same characterization.
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getCount() {
     return count;
   }
 
-  public void setCount(Integer count) {
+  public void setCount(@javax.annotation.Nullable Integer count) {
     this.count = count;
   }
 
 
-  public Outliersenginev3OutlierTypeStats typeDiffMessages(Boolean typeDiffMessages) {
+  public Outliersenginev3OutlierTypeStats typeDiffMessages(@javax.annotation.Nullable Boolean typeDiffMessages) {
     this.typeDiffMessages = typeDiffMessages;
     return this;
   }
 
-   /**
+  /**
    * Get typeDiffMessages
    * @return typeDiffMessages
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTypeDiffMessages() {
     return typeDiffMessages;
   }
 
-  public void setTypeDiffMessages(Boolean typeDiffMessages) {
+  public void setTypeDiffMessages(@javax.annotation.Nullable Boolean typeDiffMessages) {
     this.typeDiffMessages = typeDiffMessages;
   }
 
 
-  public Outliersenginev3OutlierTypeStats typeFails(Boolean typeFails) {
+  public Outliersenginev3OutlierTypeStats typeFails(@javax.annotation.Nullable Boolean typeFails) {
     this.typeFails = typeFails;
     return this;
   }
 
-   /**
+  /**
    * Outlier is characterized by a high rate of exceptions, or error types.
    * @return typeFails
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTypeFails() {
     return typeFails;
   }
 
-  public void setTypeFails(Boolean typeFails) {
+  public void setTypeFails(@javax.annotation.Nullable Boolean typeFails) {
     this.typeFails = typeFails;
   }
 
 
-  public Outliersenginev3OutlierTypeStats typeNewMessages(Boolean typeNewMessages) {
+  public Outliersenginev3OutlierTypeStats typeNewMessages(@javax.annotation.Nullable Boolean typeNewMessages) {
     this.typeNewMessages = typeNewMessages;
     return this;
   }
 
-   /**
+  /**
    * Outlier is characterized by high volume of new activity.
    * @return typeNewMessages
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTypeNewMessages() {
     return typeNewMessages;
   }
 
-  public void setTypeNewMessages(Boolean typeNewMessages) {
+  public void setTypeNewMessages(@javax.annotation.Nullable Boolean typeNewMessages) {
     this.typeNewMessages = typeNewMessages;
   }
 
 
-  public Outliersenginev3OutlierTypeStats typeOngoing(Boolean typeOngoing) {
+  public Outliersenginev3OutlierTypeStats typeOngoing(@javax.annotation.Nullable Boolean typeOngoing) {
     this.typeOngoing = typeOngoing;
     return this;
   }
 
-   /**
+  /**
    * Outlier is characterized by an ongoing activity below the thresholds, in recent hours.
    * @return typeOngoing
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTypeOngoing() {
     return typeOngoing;
   }
 
-  public void setTypeOngoing(Boolean typeOngoing) {
+  public void setTypeOngoing(@javax.annotation.Nullable Boolean typeOngoing) {
     this.typeOngoing = typeOngoing;
   }
 
 
-  public Outliersenginev3OutlierTypeStats typeVolume(Boolean typeVolume) {
+  public Outliersenginev3OutlierTypeStats typeVolume(@javax.annotation.Nullable Boolean typeVolume) {
     this.typeVolume = typeVolume;
     return this;
   }
 
-   /**
+  /**
    * Outlier is characterized by high volume of activity, in general.
    * @return typeVolume
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTypeVolume() {
     return typeVolume;
   }
 
-  public void setTypeVolume(Boolean typeVolume) {
+  public void setTypeVolume(@javax.annotation.Nullable Boolean typeVolume) {
     this.typeVolume = typeVolume;
   }
 
 
-  public Outliersenginev3OutlierTypeStats typeVulnerableObjects(Boolean typeVulnerableObjects) {
+  public Outliersenginev3OutlierTypeStats typeVulnerableObjects(@javax.annotation.Nullable Boolean typeVulnerableObjects) {
     this.typeVulnerableObjects = typeVulnerableObjects;
     return this;
   }
 
-   /**
+  /**
    * Outlier is characterized by a high activity rate on vulnerable object groups.
    * @return typeVulnerableObjects
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTypeVulnerableObjects() {
     return typeVulnerableObjects;
   }
 
-  public void setTypeVulnerableObjects(Boolean typeVulnerableObjects) {
+  public void setTypeVulnerableObjects(@javax.annotation.Nullable Boolean typeVulnerableObjects) {
     this.typeVulnerableObjects = typeVulnerableObjects;
   }
 
@@ -271,29 +279,22 @@ public class Outliersenginev3OutlierTypeStats {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("type_diff_messages");
-    openapiFields.add("type_fails");
-    openapiFields.add("type_new_messages");
-    openapiFields.add("type_ongoing");
-    openapiFields.add("type_volume");
-    openapiFields.add("type_vulnerable_objects");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "type_diff_messages", "type_fails", "type_new_messages", "type_ongoing", "type_volume", "type_vulnerable_objects"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3OutlierTypeStats
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3OutlierTypeStats
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3OutlierTypeStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3OutlierTypeStats is not found in the empty JSON string", Outliersenginev3OutlierTypeStats.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3OutlierTypeStats is not found in the empty JSON string", Outliersenginev3OutlierTypeStats.openapiRequiredFields.toString()));
         }
       }
 
@@ -301,7 +302,7 @@ public class Outliersenginev3OutlierTypeStats {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3OutlierTypeStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3OutlierTypeStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3OutlierTypeStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -336,22 +337,22 @@ public class Outliersenginev3OutlierTypeStats {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3OutlierTypeStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3OutlierTypeStats
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3OutlierTypeStats
-  */
+  /**
+   * Create an instance of Outliersenginev3OutlierTypeStats given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3OutlierTypeStats
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3OutlierTypeStats
+   */
   public static Outliersenginev3OutlierTypeStats fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3OutlierTypeStats.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3OutlierTypeStats to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3OutlierTypeStats to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -272,7 +272,9 @@ class ThirdPartyVendorsApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -285,11 +287,12 @@ class ThirdPartyVendorsApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -299,7 +302,7 @@ class ThirdPartyVendorsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts',
+            resource_path='/api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -533,7 +536,9 @@ class ThirdPartyVendorsApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -546,11 +551,12 @@ class ThirdPartyVendorsApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -560,7 +566,7 @@ class ThirdPartyVendorsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/linkedVendors/{vendorId}',
+            resource_path='/api/v2/dspm/linkedVendors/{vendorId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -846,7 +852,9 @@ class ThirdPartyVendorsApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -875,11 +883,12 @@ class ThirdPartyVendorsApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -889,7 +898,7 @@ class ThirdPartyVendorsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/linkedVendors/{vendorId}/dataStores',
+            resource_path='/api/v2/dspm/linkedVendors/{vendorId}/dataStores',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1110,7 +1119,9 @@ class ThirdPartyVendorsApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1121,11 +1132,12 @@ class ThirdPartyVendorsApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1135,7 +1147,7 @@ class ThirdPartyVendorsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/linkedVendors',
+            resource_path='/api/v2/dspm/linkedVendors',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1369,7 +1381,9 @@ class ThirdPartyVendorsApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1384,11 +1398,12 @@ class ThirdPartyVendorsApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1398,7 +1413,7 @@ class ThirdPartyVendorsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/linkedVendors/trustedAssets',
+            resource_path='/api/v2/dspm/linkedVendors/trustedAssets',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

@@ -84,13 +84,14 @@ public class QsPluginManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokeAppProvCall(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokeAppProvCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -137,7 +138,7 @@ public class QsPluginManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSPluginManagerInvokeAppProvValidateBeforeCall(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSPluginManagerInvokeAppProvValidateBeforeCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
             throw new ApiException("Missing the required parameter 'pluginId' when calling qSPluginManagerInvokeAppProv(Async)");
@@ -160,13 +161,14 @@ public class QsPluginManagerApi {
      * @return Qspmpluginmanagerv3PluginRS
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokeAppProv(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokeAppProv(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         ApiResponse<Qspmpluginmanagerv3PluginRS> localVarResp = qSPluginManagerInvokeAppProvWithHttpInfo(pluginId, qspmpluginmanagerv3PluginRQ);
         return localVarResp.getData();
     }
@@ -179,13 +181,14 @@ public class QsPluginManagerApi {
      * @return ApiResponse&lt;Qspmpluginmanagerv3PluginRS&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokeAppProvWithHttpInfo(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokeAppProvWithHttpInfo(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         okhttp3.Call localVarCall = qSPluginManagerInvokeAppProvValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, null);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -200,13 +203,14 @@ public class QsPluginManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokeAppProvAsync(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokeAppProvAsync(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSPluginManagerInvokeAppProvValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, _callback);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
@@ -221,13 +225,14 @@ public class QsPluginManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokeExplorerV1Call(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokeExplorerV1Call(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -274,7 +279,7 @@ public class QsPluginManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSPluginManagerInvokeExplorerV1ValidateBeforeCall(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSPluginManagerInvokeExplorerV1ValidateBeforeCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
             throw new ApiException("Missing the required parameter 'pluginId' when calling qSPluginManagerInvokeExplorerV1(Async)");
@@ -297,13 +302,14 @@ public class QsPluginManagerApi {
      * @return Qspmpluginmanagerv3PluginRS
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokeExplorerV1(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokeExplorerV1(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         ApiResponse<Qspmpluginmanagerv3PluginRS> localVarResp = qSPluginManagerInvokeExplorerV1WithHttpInfo(pluginId, qspmpluginmanagerv3PluginRQ);
         return localVarResp.getData();
     }
@@ -316,13 +322,14 @@ public class QsPluginManagerApi {
      * @return ApiResponse&lt;Qspmpluginmanagerv3PluginRS&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokeExplorerV1WithHttpInfo(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokeExplorerV1WithHttpInfo(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         okhttp3.Call localVarCall = qSPluginManagerInvokeExplorerV1ValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, null);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -337,13 +344,14 @@ public class QsPluginManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokeExplorerV1Async(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokeExplorerV1Async(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSPluginManagerInvokeExplorerV1ValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, _callback);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
@@ -358,13 +366,14 @@ public class QsPluginManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokeExplorerV2Call(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokeExplorerV2Call(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -411,7 +420,7 @@ public class QsPluginManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSPluginManagerInvokeExplorerV2ValidateBeforeCall(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSPluginManagerInvokeExplorerV2ValidateBeforeCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
             throw new ApiException("Missing the required parameter 'pluginId' when calling qSPluginManagerInvokeExplorerV2(Async)");
@@ -434,13 +443,14 @@ public class QsPluginManagerApi {
      * @return Qspmpluginmanagerv3PluginRS
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokeExplorerV2(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokeExplorerV2(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         ApiResponse<Qspmpluginmanagerv3PluginRS> localVarResp = qSPluginManagerInvokeExplorerV2WithHttpInfo(pluginId, qspmpluginmanagerv3PluginRQ);
         return localVarResp.getData();
     }
@@ -453,13 +463,14 @@ public class QsPluginManagerApi {
      * @return ApiResponse&lt;Qspmpluginmanagerv3PluginRS&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokeExplorerV2WithHttpInfo(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokeExplorerV2WithHttpInfo(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         okhttp3.Call localVarCall = qSPluginManagerInvokeExplorerV2ValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, null);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -474,13 +485,14 @@ public class QsPluginManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokeExplorerV2Async(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokeExplorerV2Async(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSPluginManagerInvokeExplorerV2ValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, _callback);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
@@ -495,13 +507,14 @@ public class QsPluginManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokePluginCall(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokePluginCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -548,7 +561,7 @@ public class QsPluginManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSPluginManagerInvokePluginValidateBeforeCall(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSPluginManagerInvokePluginValidateBeforeCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
             throw new ApiException("Missing the required parameter 'pluginId' when calling qSPluginManagerInvokePlugin(Async)");
@@ -571,13 +584,14 @@ public class QsPluginManagerApi {
      * @return Qspmpluginmanagerv3PluginRS
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokePlugin(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public Qspmpluginmanagerv3PluginRS qSPluginManagerInvokePlugin(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         ApiResponse<Qspmpluginmanagerv3PluginRS> localVarResp = qSPluginManagerInvokePluginWithHttpInfo(pluginId, qspmpluginmanagerv3PluginRQ);
         return localVarResp.getData();
     }
@@ -590,13 +604,14 @@ public class QsPluginManagerApi {
      * @return ApiResponse&lt;Qspmpluginmanagerv3PluginRS&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokePluginWithHttpInfo(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
+    public ApiResponse<Qspmpluginmanagerv3PluginRS> qSPluginManagerInvokePluginWithHttpInfo(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ) throws ApiException {
         okhttp3.Call localVarCall = qSPluginManagerInvokePluginValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, null);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -611,13 +626,14 @@ public class QsPluginManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokePluginAsync(String pluginId, Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokePluginAsync(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PluginRQ qspmpluginmanagerv3PluginRQ, final ApiCallback<Qspmpluginmanagerv3PluginRS> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSPluginManagerInvokePluginValidateBeforeCall(pluginId, qspmpluginmanagerv3PluginRQ, _callback);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PluginRS>(){}.getType();
@@ -632,13 +648,14 @@ public class QsPluginManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokePolicyCall(String pluginId, Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokePolicyCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -685,7 +702,7 @@ public class QsPluginManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSPluginManagerInvokePolicyValidateBeforeCall(String pluginId, Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSPluginManagerInvokePolicyValidateBeforeCall(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
             throw new ApiException("Missing the required parameter 'pluginId' when calling qSPluginManagerInvokePolicy(Async)");
@@ -708,13 +725,14 @@ public class QsPluginManagerApi {
      * @return Qspmpluginmanagerv3PolicyPluginRS
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qspmpluginmanagerv3PolicyPluginRS qSPluginManagerInvokePolicy(String pluginId, Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ) throws ApiException {
+    public Qspmpluginmanagerv3PolicyPluginRS qSPluginManagerInvokePolicy(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ) throws ApiException {
         ApiResponse<Qspmpluginmanagerv3PolicyPluginRS> localVarResp = qSPluginManagerInvokePolicyWithHttpInfo(pluginId, qspmpluginmanagerv3PolicyPluginRQ);
         return localVarResp.getData();
     }
@@ -727,13 +745,14 @@ public class QsPluginManagerApi {
      * @return ApiResponse&lt;Qspmpluginmanagerv3PolicyPluginRS&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qspmpluginmanagerv3PolicyPluginRS> qSPluginManagerInvokePolicyWithHttpInfo(String pluginId, Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ) throws ApiException {
+    public ApiResponse<Qspmpluginmanagerv3PolicyPluginRS> qSPluginManagerInvokePolicyWithHttpInfo(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ) throws ApiException {
         okhttp3.Call localVarCall = qSPluginManagerInvokePolicyValidateBeforeCall(pluginId, qspmpluginmanagerv3PolicyPluginRQ, null);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PolicyPluginRS>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -748,13 +767,14 @@ public class QsPluginManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSPluginManagerInvokePolicyAsync(String pluginId, Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ, final ApiCallback<Qspmpluginmanagerv3PolicyPluginRS> _callback) throws ApiException {
+    public okhttp3.Call qSPluginManagerInvokePolicyAsync(@javax.annotation.Nonnull String pluginId, @javax.annotation.Nonnull Qspmpluginmanagerv3PolicyPluginRQ qspmpluginmanagerv3PolicyPluginRQ, final ApiCallback<Qspmpluginmanagerv3PolicyPluginRS> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSPluginManagerInvokePolicyValidateBeforeCall(pluginId, qspmpluginmanagerv3PolicyPluginRQ, _callback);
         Type localVarReturnType = new TypeToken<Qspmpluginmanagerv3PolicyPluginRS>(){}.getType();

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,40 +43,44 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * A request to update a specific notification with the specified fields. The ID field is required, all other fields are optional. Specified fields will be used to included in the persisted NotificationRecord.  If no fields are specified then the  notification record update is not performed.  If the ID is not specified an error is returned.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Notificationsv3UpdateNotificationRecordRequest {
   public static final String SERIALIZED_NAME_NOTIFICATION_ID = "notification_id";
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_ID)
+  @javax.annotation.Nullable
   private List<String> notificationId = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private Notificationsv3NotificationSeverity severity = Notificationsv3NotificationSeverity.UNDEFINED;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
   private Notificationsv3NotificationState state = Notificationsv3NotificationState.UNREAD;
 
   public static final String SERIALIZED_NAME_TEMPLATE_DATA = "template_data";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_DATA)
+  @javax.annotation.Nullable
   private List<Notificationsv3TemplateProperty> templateData = new ArrayList<>();
 
   public Notificationsv3UpdateNotificationRecordRequest() {
   }
 
-  public Notificationsv3UpdateNotificationRecordRequest notificationId(List<String> notificationId) {
+  public Notificationsv3UpdateNotificationRecordRequest notificationId(@javax.annotation.Nullable List<String> notificationId) {
     this.notificationId = notificationId;
     return this;
   }
@@ -88,59 +93,59 @@ public class Notificationsv3UpdateNotificationRecordRequest {
     return this;
   }
 
-   /**
+  /**
    * Unique IDs for notifications; required for update.
    * @return notificationId
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getNotificationId() {
     return notificationId;
   }
 
-  public void setNotificationId(List<String> notificationId) {
+  public void setNotificationId(@javax.annotation.Nullable List<String> notificationId) {
     this.notificationId = notificationId;
   }
 
 
-  public Notificationsv3UpdateNotificationRecordRequest severity(Notificationsv3NotificationSeverity severity) {
+  public Notificationsv3UpdateNotificationRecordRequest severity(@javax.annotation.Nullable Notificationsv3NotificationSeverity severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Get severity
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public Notificationsv3NotificationSeverity getSeverity() {
     return severity;
   }
 
-  public void setSeverity(Notificationsv3NotificationSeverity severity) {
+  public void setSeverity(@javax.annotation.Nullable Notificationsv3NotificationSeverity severity) {
     this.severity = severity;
   }
 
 
-  public Notificationsv3UpdateNotificationRecordRequest state(Notificationsv3NotificationState state) {
+  public Notificationsv3UpdateNotificationRecordRequest state(@javax.annotation.Nullable Notificationsv3NotificationState state) {
     this.state = state;
     return this;
   }
 
-   /**
+  /**
    * Get state
    * @return state
-  **/
+   */
   @javax.annotation.Nullable
   public Notificationsv3NotificationState getState() {
     return state;
   }
 
-  public void setState(Notificationsv3NotificationState state) {
+  public void setState(@javax.annotation.Nullable Notificationsv3NotificationState state) {
     this.state = state;
   }
 
 
-  public Notificationsv3UpdateNotificationRecordRequest templateData(List<Notificationsv3TemplateProperty> templateData) {
+  public Notificationsv3UpdateNotificationRecordRequest templateData(@javax.annotation.Nullable List<Notificationsv3TemplateProperty> templateData) {
     this.templateData = templateData;
     return this;
   }
@@ -153,16 +158,16 @@ public class Notificationsv3UpdateNotificationRecordRequest {
     return this;
   }
 
-   /**
+  /**
    * Not required for update.
    * @return templateData
-  **/
+   */
   @javax.annotation.Nullable
   public List<Notificationsv3TemplateProperty> getTemplateData() {
     return templateData;
   }
 
-  public void setTemplateData(List<Notificationsv3TemplateProperty> templateData) {
+  public void setTemplateData(@javax.annotation.Nullable List<Notificationsv3TemplateProperty> templateData) {
     this.templateData = templateData;
   }
 
@@ -217,26 +222,22 @@ public class Notificationsv3UpdateNotificationRecordRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("notification_id");
-    openapiFields.add("severity");
-    openapiFields.add("state");
-    openapiFields.add("template_data");
+    openapiFields = new HashSet<String>(Arrays.asList("notification_id", "severity", "state", "template_data"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Notificationsv3UpdateNotificationRecordRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Notificationsv3UpdateNotificationRecordRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Notificationsv3UpdateNotificationRecordRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Notificationsv3UpdateNotificationRecordRequest is not found in the empty JSON string", Notificationsv3UpdateNotificationRecordRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Notificationsv3UpdateNotificationRecordRequest is not found in the empty JSON string", Notificationsv3UpdateNotificationRecordRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -244,13 +245,13 @@ public class Notificationsv3UpdateNotificationRecordRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Notificationsv3UpdateNotificationRecordRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Notificationsv3UpdateNotificationRecordRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Notificationsv3UpdateNotificationRecordRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("notification_id") != null && !jsonObj.get("notification_id").isJsonNull() && !jsonObj.get("notification_id").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `notification_id` to be an array in the JSON string but got `%s`", jsonObj.get("notification_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `notification_id` to be an array in the JSON string but got `%s`", jsonObj.get("notification_id").toString()));
       }
       // validate the optional field `severity`
       if (jsonObj.get("severity") != null && !jsonObj.get("severity").isJsonNull()) {
@@ -265,7 +266,7 @@ public class Notificationsv3UpdateNotificationRecordRequest {
         if (jsonArraytemplateData != null) {
           // ensure the json data is an array
           if (!jsonObj.get("template_data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `template_data` to be an array in the JSON string but got `%s`", jsonObj.get("template_data").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_data` to be an array in the JSON string but got `%s`", jsonObj.get("template_data").toString()));
           }
 
           // validate the optional field `template_data` (array)
@@ -305,22 +306,22 @@ public class Notificationsv3UpdateNotificationRecordRequest {
     }
   }
 
- /**
-  * Create an instance of Notificationsv3UpdateNotificationRecordRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Notificationsv3UpdateNotificationRecordRequest
-  * @throws IOException if the JSON string is invalid with respect to Notificationsv3UpdateNotificationRecordRequest
-  */
+  /**
+   * Create an instance of Notificationsv3UpdateNotificationRecordRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Notificationsv3UpdateNotificationRecordRequest
+   * @throws IOException if the JSON string is invalid with respect to Notificationsv3UpdateNotificationRecordRequest
+   */
   public static Notificationsv3UpdateNotificationRecordRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Notificationsv3UpdateNotificationRecordRequest.class);
   }
 
- /**
-  * Convert an instance of Notificationsv3UpdateNotificationRecordRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Notificationsv3UpdateNotificationRecordRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

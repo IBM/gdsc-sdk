@@ -72,9 +72,9 @@ class Healthcollectorv3GetObjectStorageUsageResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in object_storage_usage (list)
         _items = []
         if self.object_storage_usage:
-            for _item in self.object_storage_usage:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_object_storage_usage in self.object_storage_usage:
+                if _item_object_storage_usage:
+                    _items.append(_item_object_storage_usage.to_dict())
             _dict['object_storage_usage'] = _items
         return _dict
 

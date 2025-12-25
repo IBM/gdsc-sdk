@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,55 +40,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3UpdateVariantOverrideRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3UpdateVariantOverrideRequest {
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
+  @javax.annotation.Nullable
   private Map<String, String> values = new HashMap<>();
 
   public static final String SERIALIZED_NAME_VARIANT_ID = "variant_id";
   @SerializedName(SERIALIZED_NAME_VARIANT_ID)
+  @javax.annotation.Nullable
   private String variantId;
 
   public Reportsv3UpdateVariantOverrideRequest() {
   }
 
-  public Reportsv3UpdateVariantOverrideRequest key(String key) {
+  public Reportsv3UpdateVariantOverrideRequest key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Get key
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Reportsv3UpdateVariantOverrideRequest values(Map<String, String> values) {
+  public Reportsv3UpdateVariantOverrideRequest values(@javax.annotation.Nullable Map<String, String> values) {
     this.values = values;
     return this;
   }
@@ -100,35 +104,35 @@ public class Reportsv3UpdateVariantOverrideRequest {
     return this;
   }
 
-   /**
+  /**
    * Get values
    * @return values
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getValues() {
     return values;
   }
 
-  public void setValues(Map<String, String> values) {
+  public void setValues(@javax.annotation.Nullable Map<String, String> values) {
     this.values = values;
   }
 
 
-  public Reportsv3UpdateVariantOverrideRequest variantId(String variantId) {
+  public Reportsv3UpdateVariantOverrideRequest variantId(@javax.annotation.Nullable String variantId) {
     this.variantId = variantId;
     return this;
   }
 
-   /**
+  /**
    * Get variantId
    * @return variantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getVariantId() {
     return variantId;
   }
 
-  public void setVariantId(String variantId) {
+  public void setVariantId(@javax.annotation.Nullable String variantId) {
     this.variantId = variantId;
   }
 
@@ -181,25 +185,22 @@ public class Reportsv3UpdateVariantOverrideRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("key");
-    openapiFields.add("values");
-    openapiFields.add("variant_id");
+    openapiFields = new HashSet<String>(Arrays.asList("key", "values", "variant_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateVariantOverrideRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateVariantOverrideRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3UpdateVariantOverrideRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3UpdateVariantOverrideRequest is not found in the empty JSON string", Reportsv3UpdateVariantOverrideRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3UpdateVariantOverrideRequest is not found in the empty JSON string", Reportsv3UpdateVariantOverrideRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -207,15 +208,15 @@ public class Reportsv3UpdateVariantOverrideRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3UpdateVariantOverrideRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3UpdateVariantOverrideRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3UpdateVariantOverrideRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       if ((jsonObj.get("variant_id") != null && !jsonObj.get("variant_id").isJsonNull()) && !jsonObj.get("variant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `variant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `variant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_id").toString()));
       }
   }
 
@@ -248,22 +249,22 @@ public class Reportsv3UpdateVariantOverrideRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3UpdateVariantOverrideRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3UpdateVariantOverrideRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateVariantOverrideRequest
-  */
+  /**
+   * Create an instance of Reportsv3UpdateVariantOverrideRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3UpdateVariantOverrideRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateVariantOverrideRequest
+   */
   public static Reportsv3UpdateVariantOverrideRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3UpdateVariantOverrideRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3UpdateVariantOverrideRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3UpdateVariantOverrideRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

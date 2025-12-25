@@ -16,10 +16,10 @@ Name | Type | Description | Notes
 **run_detail** | **str** |  | [optional] 
 **schedule_id** | **str** |  | [optional] 
 **start_time** | **datetime** |  | [optional] 
-**status** | [**Schedulerv3ExecutionStatus**](Schedulerv3ExecutionStatus.md) |  | [optional] 
+**status** | [**Schedulerv3ExecutionStatus**](Schedulerv3ExecutionStatus.md) |  | [optional] [default to Schedulerv3ExecutionStatus.UNDEFINED]
 **task_id** | **str** |  | [optional] 
 **task_name** | **str** |  | [optional] 
-**task_type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] 
+**task_type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] [default to Schedulerv3TaskType.UNDEFINED_JOBTYPE]
 
 ## Example
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,226 +39,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsrunnerv3ActiveQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3ActiveQuery {
   public static final String SERIALIZED_NAME_CAN_STOP = "can_stop";
   @SerializedName(SERIALIZED_NAME_CAN_STOP)
+  @javax.annotation.Nullable
   private Boolean canStop;
 
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
+  @javax.annotation.Nullable
   private String detail;
 
   public static final String SERIALIZED_NAME_ELAPSED_TIME = "elapsed_time";
   @SerializedName(SERIALIZED_NAME_ELAPSED_TIME)
+  @javax.annotation.Nullable
   private Integer elapsedTime;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_QUERY_ID = "query_id";
   @SerializedName(SERIALIZED_NAME_QUERY_ID)
+  @javax.annotation.Nullable
   private String queryId;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private String status;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
+  @javax.annotation.Nullable
   private String user;
 
   public Reportsrunnerv3ActiveQuery() {
   }
 
-  public Reportsrunnerv3ActiveQuery canStop(Boolean canStop) {
+  public Reportsrunnerv3ActiveQuery canStop(@javax.annotation.Nullable Boolean canStop) {
     this.canStop = canStop;
     return this;
   }
 
-   /**
+  /**
    * Get canStop
    * @return canStop
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCanStop() {
     return canStop;
   }
 
-  public void setCanStop(Boolean canStop) {
+  public void setCanStop(@javax.annotation.Nullable Boolean canStop) {
     this.canStop = canStop;
   }
 
 
-  public Reportsrunnerv3ActiveQuery detail(String detail) {
+  public Reportsrunnerv3ActiveQuery detail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
     return this;
   }
 
-   /**
+  /**
    * Get detail
    * @return detail
-  **/
+   */
   @javax.annotation.Nullable
   public String getDetail() {
     return detail;
   }
 
-  public void setDetail(String detail) {
+  public void setDetail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
   }
 
 
-  public Reportsrunnerv3ActiveQuery elapsedTime(Integer elapsedTime) {
+  public Reportsrunnerv3ActiveQuery elapsedTime(@javax.annotation.Nullable Integer elapsedTime) {
     this.elapsedTime = elapsedTime;
     return this;
   }
 
-   /**
+  /**
    * Get elapsedTime
    * @return elapsedTime
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getElapsedTime() {
     return elapsedTime;
   }
 
-  public void setElapsedTime(Integer elapsedTime) {
+  public void setElapsedTime(@javax.annotation.Nullable Integer elapsedTime) {
     this.elapsedTime = elapsedTime;
   }
 
 
-  public Reportsrunnerv3ActiveQuery name(String name) {
+  public Reportsrunnerv3ActiveQuery name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Reportsrunnerv3ActiveQuery queryId(String queryId) {
+  public Reportsrunnerv3ActiveQuery queryId(@javax.annotation.Nullable String queryId) {
     this.queryId = queryId;
     return this;
   }
 
-   /**
+  /**
    * Get queryId
    * @return queryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getQueryId() {
     return queryId;
   }
 
-  public void setQueryId(String queryId) {
+  public void setQueryId(@javax.annotation.Nullable String queryId) {
     this.queryId = queryId;
   }
 
 
-  public Reportsrunnerv3ActiveQuery startTime(OffsetDateTime startTime) {
+  public Reportsrunnerv3ActiveQuery startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * Get startTime
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
 
-  public Reportsrunnerv3ActiveQuery status(String status) {
+  public Reportsrunnerv3ActiveQuery status(@javax.annotation.Nullable String status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatus() {
     return status;
   }
 
-  public void setStatus(String status) {
+  public void setStatus(@javax.annotation.Nullable String status) {
     this.status = status;
   }
 
 
-  public Reportsrunnerv3ActiveQuery type(String type) {
+  public Reportsrunnerv3ActiveQuery type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
 
-  public Reportsrunnerv3ActiveQuery user(String user) {
+  public Reportsrunnerv3ActiveQuery user(@javax.annotation.Nullable String user) {
     this.user = user;
     return this;
   }
 
-   /**
+  /**
    * Get user
    * @return user
-  **/
+   */
   @javax.annotation.Nullable
   public String getUser() {
     return user;
   }
 
-  public void setUser(String user) {
+  public void setUser(@javax.annotation.Nullable String user) {
     this.user = user;
   }
 
@@ -322,31 +332,22 @@ public class Reportsrunnerv3ActiveQuery {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("can_stop");
-    openapiFields.add("detail");
-    openapiFields.add("elapsed_time");
-    openapiFields.add("name");
-    openapiFields.add("query_id");
-    openapiFields.add("start_time");
-    openapiFields.add("status");
-    openapiFields.add("type");
-    openapiFields.add("user");
+    openapiFields = new HashSet<String>(Arrays.asList("can_stop", "detail", "elapsed_time", "name", "query_id", "start_time", "status", "type", "user"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3ActiveQuery
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3ActiveQuery
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3ActiveQuery.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3ActiveQuery is not found in the empty JSON string", Reportsrunnerv3ActiveQuery.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3ActiveQuery is not found in the empty JSON string", Reportsrunnerv3ActiveQuery.openapiRequiredFields.toString()));
         }
       }
 
@@ -354,27 +355,27 @@ public class Reportsrunnerv3ActiveQuery {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3ActiveQuery.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3ActiveQuery` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3ActiveQuery` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonNull()) && !jsonObj.get("detail").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("query_id") != null && !jsonObj.get("query_id").isJsonNull()) && !jsonObj.get("query_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `query_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `query_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_id").toString()));
       }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
       if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
       }
   }
 
@@ -407,22 +408,22 @@ public class Reportsrunnerv3ActiveQuery {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3ActiveQuery given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3ActiveQuery
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3ActiveQuery
-  */
+  /**
+   * Create an instance of Reportsrunnerv3ActiveQuery given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3ActiveQuery
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3ActiveQuery
+   */
   public static Reportsrunnerv3ActiveQuery fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3ActiveQuery.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3ActiveQuery to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3ActiveQuery to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

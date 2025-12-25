@@ -29,7 +29,7 @@ class Notificationsv3SearchNotificationRecordsRequest(BaseModel):
     Notificationsv3SearchNotificationRecordsRequest
     """ # noqa: E501
     filters: Optional[List[Notificationsv3NotificationRecordsFilter]] = None
-    operator: Optional[Notificationsv3PipelineQueryOperator] = None
+    operator: Optional[Notificationsv3PipelineQueryOperator] = Notificationsv3PipelineQueryOperator.OPERATOR_AND
     __properties: ClassVar[List[str]] = ["filters", "operator"]
 
     model_config = ConfigDict(
@@ -74,9 +74,9 @@ class Notificationsv3SearchNotificationRecordsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filters (list)
         _items = []
         if self.filters:
-            for _item in self.filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filters in self.filters:
+                if _item_filters:
+                    _items.append(_item_filters.to_dict())
             _dict['filters'] = _items
         return _dict
 
@@ -91,7 +91,7 @@ class Notificationsv3SearchNotificationRecordsRequest(BaseModel):
 
         _obj = cls.model_validate({
             "filters": [Notificationsv3NotificationRecordsFilter.from_dict(_item) for _item in obj["filters"]] if obj.get("filters") is not None else None,
-            "operator": obj.get("operator")
+            "operator": obj.get("operator") if obj.get("operator") is not None else Notificationsv3PipelineQueryOperator.OPERATOR_AND
         })
         return _obj
 

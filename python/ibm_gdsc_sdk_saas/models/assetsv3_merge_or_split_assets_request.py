@@ -74,9 +74,9 @@ class Assetsv3MergeOrSplitAssetsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in destination_assets (list)
         _items = []
         if self.destination_assets:
-            for _item in self.destination_assets:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_destination_assets in self.destination_assets:
+                if _item_destination_assets:
+                    _items.append(_item_destination_assets.to_dict())
             _dict['destination_assets'] = _items
         # override the default output from pydantic by calling `to_dict()` of source_asset
         if self.source_asset:

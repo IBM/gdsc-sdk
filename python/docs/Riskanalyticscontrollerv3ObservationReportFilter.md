@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **header_id** | **str** | The header id to filter. | [optional] 
 **header_value** | **str** | The value to filter this header by. | [optional] 
-**operator_type** | [**Reportsv3OperatorType**](Reportsv3OperatorType.md) |  | [optional] 
+**operator_type** | [**Reportsv3OperatorType**](Reportsv3OperatorType.md) |  | [optional] [default to Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE]
 
 ## Example
 

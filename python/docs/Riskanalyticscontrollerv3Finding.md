@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **finding_description** | **str** | Finding description. | [optional] 
 **finding_details_map** | [**List[Riskanalyticscontrollerv3FindingDetailsMap]**](Riskanalyticscontrollerv3FindingDetailsMap.md) | Finding details - Optional. | [optional] 
-**finding_type** | [**Riskanalyticscontrollerv3ObservationType**](Riskanalyticscontrollerv3ObservationType.md) |  | [optional] 
+**finding_type** | [**Riskanalyticscontrollerv3ObservationType**](Riskanalyticscontrollerv3ObservationType.md) |  | [optional] [default to Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE]
 
 ## Example
 

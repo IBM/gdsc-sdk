@@ -24,6 +24,7 @@ from ibm_gdsc_sdk_saas.models.policybuilderv3_edge_activation_object import Poli
 from ibm_gdsc_sdk_saas.models.policybuilderv3_import_issue import Policybuilderv3ImportIssue
 from ibm_gdsc_sdk_saas.models.policybuilderv3_import_state import Policybuilderv3ImportState
 from ibm_gdsc_sdk_saas.models.policybuilderv3_policy_type import Policybuilderv3PolicyType
+from ibm_gdsc_sdk_saas.models.policybuilderv3_product_type import Policybuilderv3ProductType
 from ibm_gdsc_sdk_saas.models.policybuilderv3_rule_type import Policybuilderv3RuleType
 from typing import Optional, Set
 from typing_extensions import Self
@@ -32,26 +33,29 @@ class Policybuilderv3Policy(BaseModel):
     """
     Policy object for creating/storing the policy.
     """ # noqa: E501
+    activation_frequency: Optional[StrictStr] = None
     activation_status: Optional[StrictInt] = Field(default=None, description="activation_status identifier: 1001 -> install with no issues, 1002-> installed with issues, 1003 -> not installed.")
     contains_rule_types: Optional[List[Policybuilderv3RuleType]] = Field(default=None, description="Indicates different type of rule types contained by the policy.")
-    control_flow: Optional[Policybuilderv3ControlFlow] = None
+    control_flow: Optional[Policybuilderv3ControlFlow] = Policybuilderv3ControlFlow.STANDARD
     edge_activation_info: Optional[List[Policybuilderv3EdgeActivationObject]] = None
     installed_flag: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether policy is installed or not.")
     installed_order: Optional[StrictInt] = Field(default=None, description="Variable to indicate the order of the installed policy.")
     installed_timestamp: Optional[StrictStr] = Field(default=None, description="Timestamp to indicate when the policy was installed.")
     last_edited_timestamp: Optional[StrictStr] = Field(default=None, description="Timestamp to indicate when the policy was last edited.")
+    last_revised_by: Optional[StrictStr] = None
     log_flat: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy has log flat enabled or not.")
     no_of_rules: Optional[StrictInt] = Field(default=None, description="Indicates number of rules in the policy.")
     policy_id: Optional[StrictStr] = Field(default=None, description="Policy Id.")
-    policy_import_issue: Optional[Policybuilderv3ImportIssue] = None
-    policy_import_state: Optional[Policybuilderv3ImportState] = None
+    policy_import_issue: Optional[Policybuilderv3ImportIssue] = Policybuilderv3ImportIssue.NO_IMPORT_ISSUE
+    policy_import_state: Optional[Policybuilderv3ImportState] = Policybuilderv3ImportState.NO_IMPORT_STATUS
     policy_name: Optional[StrictStr] = Field(default=None, description="Policy Name.")
-    policy_type: Optional[Policybuilderv3PolicyType] = None
+    policy_type: Optional[Policybuilderv3PolicyType] = Policybuilderv3PolicyType.DATA_POLICY
+    product_id: Optional[Policybuilderv3ProductType] = Policybuilderv3ProductType.NO_PRODUCT
     rules_on_flat: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy has rules on flat enabled or not.")
     template: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy is a template policy or not.")
     ui_sequence: Optional[StrictInt] = Field(default=None, description="Sequence in which the policy will be displayed in the UI.")
     version: Optional[StrictInt] = Field(default=None, description="Policy version for different versions of the policy.")
-    __properties: ClassVar[List[str]] = ["activation_status", "contains_rule_types", "control_flow", "edge_activation_info", "installed_flag", "installed_order", "installed_timestamp", "last_edited_timestamp", "log_flat", "no_of_rules", "policy_id", "policy_import_issue", "policy_import_state", "policy_name", "policy_type", "rules_on_flat", "template", "ui_sequence", "version"]
+    __properties: ClassVar[List[str]] = ["activation_frequency", "activation_status", "contains_rule_types", "control_flow", "edge_activation_info", "installed_flag", "installed_order", "installed_timestamp", "last_edited_timestamp", "last_revised_by", "log_flat", "no_of_rules", "policy_id", "policy_import_issue", "policy_import_state", "policy_name", "policy_type", "product_id", "rules_on_flat", "template", "ui_sequence", "version"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -95,9 +99,9 @@ class Policybuilderv3Policy(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in edge_activation_info (list)
         _items = []
         if self.edge_activation_info:
-            for _item in self.edge_activation_info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_edge_activation_info in self.edge_activation_info:
+                if _item_edge_activation_info:
+                    _items.append(_item_edge_activation_info.to_dict())
             _dict['edge_activation_info'] = _items
         return _dict
 
@@ -111,21 +115,24 @@ class Policybuilderv3Policy(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "activation_frequency": obj.get("activation_frequency"),
             "activation_status": obj.get("activation_status"),
             "contains_rule_types": obj.get("contains_rule_types"),
-            "control_flow": obj.get("control_flow"),
+            "control_flow": obj.get("control_flow") if obj.get("control_flow") is not None else Policybuilderv3ControlFlow.STANDARD,
             "edge_activation_info": [Policybuilderv3EdgeActivationObject.from_dict(_item) for _item in obj["edge_activation_info"]] if obj.get("edge_activation_info") is not None else None,
             "installed_flag": obj.get("installed_flag"),
             "installed_order": obj.get("installed_order"),
             "installed_timestamp": obj.get("installed_timestamp"),
             "last_edited_timestamp": obj.get("last_edited_timestamp"),
+            "last_revised_by": obj.get("last_revised_by"),
             "log_flat": obj.get("log_flat"),
             "no_of_rules": obj.get("no_of_rules"),
             "policy_id": obj.get("policy_id"),
-            "policy_import_issue": obj.get("policy_import_issue"),
-            "policy_import_state": obj.get("policy_import_state"),
+            "policy_import_issue": obj.get("policy_import_issue") if obj.get("policy_import_issue") is not None else Policybuilderv3ImportIssue.NO_IMPORT_ISSUE,
+            "policy_import_state": obj.get("policy_import_state") if obj.get("policy_import_state") is not None else Policybuilderv3ImportState.NO_IMPORT_STATUS,
             "policy_name": obj.get("policy_name"),
-            "policy_type": obj.get("policy_type"),
+            "policy_type": obj.get("policy_type") if obj.get("policy_type") is not None else Policybuilderv3PolicyType.DATA_POLICY,
+            "product_id": obj.get("product_id") if obj.get("product_id") is not None else Policybuilderv3ProductType.NO_PRODUCT,
             "rules_on_flat": obj.get("rules_on_flat"),
             "template": obj.get("template"),
             "ui_sequence": obj.get("ui_sequence"),

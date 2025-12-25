@@ -18,28 +18,27 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {
-  // string | Provide tenant_id. (optional)
+const request: SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {
+    // Provide tenant_id. (optional)
   tenantId: "tenant_id_example",
-  // string | Provide edge_id. (optional)
+    // Provide edge_id. (optional)
   edgeId: "edge_id_example",
-  // string | Provide configuration type. (optional)
+    // Provide configuration type. (optional)
   configType: "config_type_example",
-  // string | Specify config_id provided by configuration service. (optional)
+    // Specify config_id provided by configuration service. (optional)
   configId: "config_id_example",
-  // number | Provide CRC value of configuration parameters that sniffer is currently using. (optional)
+    // Provide CRC value of configuration parameters that sniffer is currently using. (optional)
   configurationParametersCrc: 1,
 };
 
-apiInstance.snifAssistServiceGetSnifConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServiceGetSnifConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -84,24 +83,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {
-  // string | Specify tenant_id. (optional)
+const request: SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {
+    // Specify tenant_id. (optional)
   tenantId: "tenant_id_example",
-  // string | Specify edge_id if known. (optional)
+    // Specify edge_id if known. (optional)
   edgeId: "edge_id_example",
-  // number | Provide CRC value of installed policy that sniffer is currently using. (optional)
+    // Provide CRC value of installed policy that sniffer is currently using. (optional)
   policyCrc: 1,
 };
 
-apiInstance.snifAssistServiceGetSnifPolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServiceGetSnifPolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -144,14 +142,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest = {
-  // Snifassistv3PostSnifFeedbackRequest
+const request: SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest = {
+  
   snifassistv3PostSnifFeedbackRequest: {
     edgeId: "edgeId_example",
     snifFeedback: {
@@ -163,9 +161,8 @@ let body:.SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest = {
   },
 };
 
-apiInstance.snifAssistServicePostSnifFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServicePostSnifFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -206,14 +203,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServiceTestRegexRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServiceTestRegexRequest = {
-  // Snifassistv3TestRegexRequest
+const request: SnifAssistServiceApiSnifAssistServiceTestRegexRequest = {
+  
   snifassistv3TestRegexRequest: {
     regex: "regex_example",
     tenantId: "tenantId_example",
@@ -221,9 +218,8 @@ let body:.SnifAssistServiceApiSnifAssistServiceTestRegexRequest = {
   },
 };
 
-apiInstance.snifAssistServiceTestRegex(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServiceTestRegex(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

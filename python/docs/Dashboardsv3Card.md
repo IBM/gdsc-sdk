@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **card_id** | **str** | Card ID. | [optional] 
 **card_position** | [**Dashboardsv3CardPosition**](Dashboardsv3CardPosition.md) |  | [optional] 
-**card_type** | [**Dashboardsv3CardType**](Dashboardsv3CardType.md) |  | [optional] 
+**card_type** | [**Dashboardsv3CardType**](Dashboardsv3CardType.md) |  | [optional] [default to Dashboardsv3CardType.UNDEFINED_CARD_TYPE]
 **excluded_global_filter_ids** | **List[str]** |  | [optional] 
 **report_parameters** | [**Dashboardsv3ReportParameters**](Dashboardsv3ReportParameters.md) |  | [optional] 
 

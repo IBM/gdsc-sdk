@@ -32,7 +32,7 @@ class Workflowv3EntityHeader(BaseModel):
     group_type_id: Optional[StrictInt] = None
     hide_from_view: Optional[StrictBool] = None
     key: Optional[StrictStr] = None
-    type: Optional[Workflowv3EntityHeaderType] = None
+    type: Optional[Workflowv3EntityHeaderType] = Workflowv3EntityHeaderType.STRING
     value: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["choices", "group_type_id", "hide_from_view", "key", "type", "value"]
 
@@ -78,9 +78,9 @@ class Workflowv3EntityHeader(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in choices (list)
         _items = []
         if self.choices:
-            for _item in self.choices:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_choices in self.choices:
+                if _item_choices:
+                    _items.append(_item_choices.to_dict())
             _dict['choices'] = _items
         return _dict
 
@@ -98,7 +98,7 @@ class Workflowv3EntityHeader(BaseModel):
             "group_type_id": obj.get("group_type_id"),
             "hide_from_view": obj.get("hide_from_view"),
             "key": obj.get("key"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Workflowv3EntityHeaderType.STRING,
             "value": obj.get("value")
         })
         return _obj

@@ -74,9 +74,9 @@ class Groupbuilderv3GetGroupTypesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in group_types (list)
         _items = []
         if self.group_types:
-            for _item in self.group_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_group_types in self.group_types:
+                if _item_group_types:
+                    _items.append(_item_group_types.to_dict())
             _dict['group_types'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

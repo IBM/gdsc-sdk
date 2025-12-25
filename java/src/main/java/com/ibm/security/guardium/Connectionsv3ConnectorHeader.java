@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connector header.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ConnectorHeader {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_IS_DEFAULT = "is_default";
   @SerializedName(SERIALIZED_NAME_IS_DEFAULT)
+  @javax.annotation.Nullable
   private Boolean isDefault;
 
   public static final String SERIALIZED_NAME_IS_EDITABLE = "is_editable";
   @SerializedName(SERIALIZED_NAME_IS_EDITABLE)
+  @javax.annotation.Nullable
   private Boolean isEditable;
 
   public static final String SERIALIZED_NAME_IS_HIDDEN = "is_hidden";
   @SerializedName(SERIALIZED_NAME_IS_HIDDEN)
+  @javax.annotation.Nullable
   private Boolean isHidden;
 
   public static final String SERIALIZED_NAME_NLS_KEY = "nls_key";
   @SerializedName(SERIALIZED_NAME_NLS_KEY)
+  @javax.annotation.Nullable
   private String nlsKey;
 
   public Connectionsv3ConnectorHeader() {
   }
 
-  public Connectionsv3ConnectorHeader id(String id) {
+  public Connectionsv3ConnectorHeader id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * The header id.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Connectionsv3ConnectorHeader isDefault(Boolean isDefault) {
+  public Connectionsv3ConnectorHeader isDefault(@javax.annotation.Nullable Boolean isDefault) {
     this.isDefault = isDefault;
     return this;
   }
 
-   /**
+  /**
    * Is the header displayed by default.
    * @return isDefault
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsDefault() {
     return isDefault;
   }
 
-  public void setIsDefault(Boolean isDefault) {
+  public void setIsDefault(@javax.annotation.Nullable Boolean isDefault) {
     this.isDefault = isDefault;
   }
 
 
-  public Connectionsv3ConnectorHeader isEditable(Boolean isEditable) {
+  public Connectionsv3ConnectorHeader isEditable(@javax.annotation.Nullable Boolean isEditable) {
     this.isEditable = isEditable;
     return this;
   }
 
-   /**
+  /**
    * Is editable.
    * @return isEditable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsEditable() {
     return isEditable;
   }
 
-  public void setIsEditable(Boolean isEditable) {
+  public void setIsEditable(@javax.annotation.Nullable Boolean isEditable) {
     this.isEditable = isEditable;
   }
 
 
-  public Connectionsv3ConnectorHeader isHidden(Boolean isHidden) {
+  public Connectionsv3ConnectorHeader isHidden(@javax.annotation.Nullable Boolean isHidden) {
     this.isHidden = isHidden;
     return this;
   }
 
-   /**
+  /**
    * Visible in the UI.
    * @return isHidden
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsHidden() {
     return isHidden;
   }
 
-  public void setIsHidden(Boolean isHidden) {
+  public void setIsHidden(@javax.annotation.Nullable Boolean isHidden) {
     this.isHidden = isHidden;
   }
 
 
-  public Connectionsv3ConnectorHeader nlsKey(String nlsKey) {
+  public Connectionsv3ConnectorHeader nlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
     return this;
   }
 
-   /**
+  /**
    * The header nls_key.
    * @return nlsKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getNlsKey() {
     return nlsKey;
   }
 
-  public void setNlsKey(String nlsKey) {
+  public void setNlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
   }
 
@@ -221,27 +227,22 @@ public class Connectionsv3ConnectorHeader {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("is_default");
-    openapiFields.add("is_editable");
-    openapiFields.add("is_hidden");
-    openapiFields.add("nls_key");
+    openapiFields = new HashSet<String>(Arrays.asList("id", "is_default", "is_editable", "is_hidden", "nls_key"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorHeader
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorHeader
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ConnectorHeader.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ConnectorHeader is not found in the empty JSON string", Connectionsv3ConnectorHeader.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ConnectorHeader is not found in the empty JSON string", Connectionsv3ConnectorHeader.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,15 +250,15 @@ public class Connectionsv3ConnectorHeader {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ConnectorHeader.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("nls_key") != null && !jsonObj.get("nls_key").isJsonNull()) && !jsonObj.get("nls_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
       }
   }
 
@@ -290,22 +291,22 @@ public class Connectionsv3ConnectorHeader {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ConnectorHeader given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ConnectorHeader
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorHeader
-  */
+  /**
+   * Create an instance of Connectionsv3ConnectorHeader given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ConnectorHeader
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorHeader
+   */
   public static Connectionsv3ConnectorHeader fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ConnectorHeader.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ConnectorHeader to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ConnectorHeader to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

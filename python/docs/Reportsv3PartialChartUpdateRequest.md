@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chart_id** | **str** | Unique chart ID. | [optional] 
 **chart_title** | **str** | The chart title. | [optional] 
-**chart_type** | [**Reportsv3ChartType**](Reportsv3ChartType.md) |  | [optional] 
+**chart_type** | [**Reportsv3ChartType**](Reportsv3ChartType.md) |  | [optional] [default to Reportsv3ChartType.UNDEFINED_CHART_TYPE]
 **update_mask** | [**ProtobufFieldMask**](ProtobufFieldMask.md) |  | [optional] 
 
 ## Example

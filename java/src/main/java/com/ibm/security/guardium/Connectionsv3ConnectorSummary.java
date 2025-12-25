@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,111 +39,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connector summary.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ConnectorSummary {
   public static final String SERIALIZED_NAME_STATUS_GREEN = "status_green";
   @SerializedName(SERIALIZED_NAME_STATUS_GREEN)
+  @javax.annotation.Nullable
   private Integer statusGreen;
 
   public static final String SERIALIZED_NAME_STATUS_RED = "status_red";
   @SerializedName(SERIALIZED_NAME_STATUS_RED)
+  @javax.annotation.Nullable
   private Integer statusRed;
 
   public static final String SERIALIZED_NAME_STATUS_YELLOW = "status_yellow";
   @SerializedName(SERIALIZED_NAME_STATUS_YELLOW)
+  @javax.annotation.Nullable
   private Integer statusYellow;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Connectionsv3ConnectorType type = Connectionsv3ConnectorType.UNDEFINED_TYPE;
 
   public Connectionsv3ConnectorSummary() {
   }
 
-  public Connectionsv3ConnectorSummary statusGreen(Integer statusGreen) {
+  public Connectionsv3ConnectorSummary statusGreen(@javax.annotation.Nullable Integer statusGreen) {
     this.statusGreen = statusGreen;
     return this;
   }
 
-   /**
+  /**
    * The number of connections with a green status.
    * @return statusGreen
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatusGreen() {
     return statusGreen;
   }
 
-  public void setStatusGreen(Integer statusGreen) {
+  public void setStatusGreen(@javax.annotation.Nullable Integer statusGreen) {
     this.statusGreen = statusGreen;
   }
 
 
-  public Connectionsv3ConnectorSummary statusRed(Integer statusRed) {
+  public Connectionsv3ConnectorSummary statusRed(@javax.annotation.Nullable Integer statusRed) {
     this.statusRed = statusRed;
     return this;
   }
 
-   /**
+  /**
    * The number of connections with a red status.
    * @return statusRed
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatusRed() {
     return statusRed;
   }
 
-  public void setStatusRed(Integer statusRed) {
+  public void setStatusRed(@javax.annotation.Nullable Integer statusRed) {
     this.statusRed = statusRed;
   }
 
 
-  public Connectionsv3ConnectorSummary statusYellow(Integer statusYellow) {
+  public Connectionsv3ConnectorSummary statusYellow(@javax.annotation.Nullable Integer statusYellow) {
     this.statusYellow = statusYellow;
     return this;
   }
 
-   /**
+  /**
    * The number of connections with a yellow status.
    * @return statusYellow
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatusYellow() {
     return statusYellow;
   }
 
-  public void setStatusYellow(Integer statusYellow) {
+  public void setStatusYellow(@javax.annotation.Nullable Integer statusYellow) {
     this.statusYellow = statusYellow;
   }
 
 
-  public Connectionsv3ConnectorSummary type(Connectionsv3ConnectorType type) {
+  public Connectionsv3ConnectorSummary type(@javax.annotation.Nullable Connectionsv3ConnectorType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3ConnectorType getType() {
     return type;
   }
 
-  public void setType(Connectionsv3ConnectorType type) {
+  public void setType(@javax.annotation.Nullable Connectionsv3ConnectorType type) {
     this.type = type;
   }
 
@@ -197,26 +202,22 @@ public class Connectionsv3ConnectorSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status_green");
-    openapiFields.add("status_red");
-    openapiFields.add("status_yellow");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("status_green", "status_red", "status_yellow", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ConnectorSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ConnectorSummary is not found in the empty JSON string", Connectionsv3ConnectorSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ConnectorSummary is not found in the empty JSON string", Connectionsv3ConnectorSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -224,7 +225,7 @@ public class Connectionsv3ConnectorSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ConnectorSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -263,22 +264,22 @@ public class Connectionsv3ConnectorSummary {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ConnectorSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ConnectorSummary
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorSummary
-  */
+  /**
+   * Create an instance of Connectionsv3ConnectorSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ConnectorSummary
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorSummary
+   */
   public static Connectionsv3ConnectorSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ConnectorSummary.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ConnectorSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ConnectorSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

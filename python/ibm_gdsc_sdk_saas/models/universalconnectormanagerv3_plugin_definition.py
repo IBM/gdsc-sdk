@@ -87,9 +87,9 @@ class Universalconnectormanagerv3PluginDefinition(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in supported_datasources (list)
         _items = []
         if self.supported_datasources:
-            for _item in self.supported_datasources:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_supported_datasources in self.supported_datasources:
+                if _item_supported_datasources:
+                    _items.append(_item_supported_datasources.to_dict())
             _dict['supported_datasources'] = _items
         return _dict
 

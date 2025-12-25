@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3RuleParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3RuleParameter {
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer groupId;
 
   public static final String SERIALIZED_NAME_PARAMETER_NAME = "parameter_name";
   @SerializedName(SERIALIZED_NAME_PARAMETER_NAME)
+  @javax.annotation.Nullable
   private String parameterName;
 
   public static final String SERIALIZED_NAME_PARAMETER_OPERATOR = "parameter_operator";
   @SerializedName(SERIALIZED_NAME_PARAMETER_OPERATOR)
+  @javax.annotation.Nullable
   private String parameterOperator;
 
   public static final String SERIALIZED_NAME_PARAMETER_VALUE = "parameter_value";
   @SerializedName(SERIALIZED_NAME_PARAMETER_VALUE)
+  @javax.annotation.Nullable
   private String parameterValue;
 
   public Guardiumconnectorv3RuleParameter() {
   }
 
-  public Guardiumconnectorv3RuleParameter groupId(Integer groupId) {
+  public Guardiumconnectorv3RuleParameter groupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * Get groupId
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(Integer groupId) {
+  public void setGroupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
   }
 
 
-  public Guardiumconnectorv3RuleParameter parameterName(String parameterName) {
+  public Guardiumconnectorv3RuleParameter parameterName(@javax.annotation.Nullable String parameterName) {
     this.parameterName = parameterName;
     return this;
   }
 
-   /**
+  /**
    * Get parameterName
    * @return parameterName
-  **/
+   */
   @javax.annotation.Nullable
   public String getParameterName() {
     return parameterName;
   }
 
-  public void setParameterName(String parameterName) {
+  public void setParameterName(@javax.annotation.Nullable String parameterName) {
     this.parameterName = parameterName;
   }
 
 
-  public Guardiumconnectorv3RuleParameter parameterOperator(String parameterOperator) {
+  public Guardiumconnectorv3RuleParameter parameterOperator(@javax.annotation.Nullable String parameterOperator) {
     this.parameterOperator = parameterOperator;
     return this;
   }
 
-   /**
+  /**
    * Get parameterOperator
    * @return parameterOperator
-  **/
+   */
   @javax.annotation.Nullable
   public String getParameterOperator() {
     return parameterOperator;
   }
 
-  public void setParameterOperator(String parameterOperator) {
+  public void setParameterOperator(@javax.annotation.Nullable String parameterOperator) {
     this.parameterOperator = parameterOperator;
   }
 
 
-  public Guardiumconnectorv3RuleParameter parameterValue(String parameterValue) {
+  public Guardiumconnectorv3RuleParameter parameterValue(@javax.annotation.Nullable String parameterValue) {
     this.parameterValue = parameterValue;
     return this;
   }
 
-   /**
+  /**
    * Get parameterValue
    * @return parameterValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getParameterValue() {
     return parameterValue;
   }
 
-  public void setParameterValue(String parameterValue) {
+  public void setParameterValue(@javax.annotation.Nullable String parameterValue) {
     this.parameterValue = parameterValue;
   }
 
@@ -196,26 +201,22 @@ public class Guardiumconnectorv3RuleParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group_id");
-    openapiFields.add("parameter_name");
-    openapiFields.add("parameter_operator");
-    openapiFields.add("parameter_value");
+    openapiFields = new HashSet<String>(Arrays.asList("group_id", "parameter_name", "parameter_operator", "parameter_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3RuleParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3RuleParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3RuleParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3RuleParameter is not found in the empty JSON string", Guardiumconnectorv3RuleParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3RuleParameter is not found in the empty JSON string", Guardiumconnectorv3RuleParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,18 +224,18 @@ public class Guardiumconnectorv3RuleParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3RuleParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3RuleParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3RuleParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("parameter_name") != null && !jsonObj.get("parameter_name").isJsonNull()) && !jsonObj.get("parameter_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parameter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_name").toString()));
       }
       if ((jsonObj.get("parameter_operator") != null && !jsonObj.get("parameter_operator").isJsonNull()) && !jsonObj.get("parameter_operator").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parameter_operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_operator").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameter_operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_operator").toString()));
       }
       if ((jsonObj.get("parameter_value") != null && !jsonObj.get("parameter_value").isJsonNull()) && !jsonObj.get("parameter_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parameter_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameter_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_value").toString()));
       }
   }
 
@@ -267,22 +268,22 @@ public class Guardiumconnectorv3RuleParameter {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3RuleParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3RuleParameter
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3RuleParameter
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3RuleParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3RuleParameter
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3RuleParameter
+   */
   public static Guardiumconnectorv3RuleParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3RuleParameter.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3RuleParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3RuleParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

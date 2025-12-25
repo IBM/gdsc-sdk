@@ -72,9 +72,9 @@ class Reportsv3GetChartSettingsv2Response(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in chart_settings (list)
         _items = []
         if self.chart_settings:
-            for _item in self.chart_settings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_chart_settings in self.chart_settings:
+                if _item_chart_settings:
+                    _items.append(_item_chart_settings.to_dict())
             _dict['chart_settings'] = _items
         return _dict
 

@@ -23,6 +23,8 @@ export class Schedulerv3GetTagsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "tags",
@@ -38,4 +40,3 @@ export class Schedulerv3GetTagsResponse {
     public constructor() {
     }
 }
-

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,71 +42,78 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connector setting.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ConnectorSetting {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
+  @javax.annotation.Nullable
   private List<Connectionsv3HeaderFilter> filters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HEADERS = "headers";
   @SerializedName(SERIALIZED_NAME_HEADERS)
+  @javax.annotation.Nullable
   private List<String> headers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
+  @javax.annotation.Nullable
   private Connectionsv3OrderType order = Connectionsv3OrderType.NONE;
 
   public static final String SERIALIZED_NAME_SORTED_BY = "sortedBy";
   @SerializedName(SERIALIZED_NAME_SORTED_BY)
+  @javax.annotation.Nullable
   private String sortedBy;
 
   public Connectionsv3ConnectorSetting() {
   }
 
-  public Connectionsv3ConnectorSetting description(String description) {
+  public Connectionsv3ConnectorSetting description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * The description.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Connectionsv3ConnectorSetting filters(List<Connectionsv3HeaderFilter> filters) {
+  public Connectionsv3ConnectorSetting filters(@javax.annotation.Nullable List<Connectionsv3HeaderFilter> filters) {
     this.filters = filters;
     return this;
   }
@@ -118,21 +126,21 @@ public class Connectionsv3ConnectorSetting {
     return this;
   }
 
-   /**
+  /**
    * The filters associated to this setting.
    * @return filters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3HeaderFilter> getFilters() {
     return filters;
   }
 
-  public void setFilters(List<Connectionsv3HeaderFilter> filters) {
+  public void setFilters(@javax.annotation.Nullable List<Connectionsv3HeaderFilter> filters) {
     this.filters = filters;
   }
 
 
-  public Connectionsv3ConnectorSetting headers(List<String> headers) {
+  public Connectionsv3ConnectorSetting headers(@javax.annotation.Nullable List<String> headers) {
     this.headers = headers;
     return this;
   }
@@ -145,92 +153,92 @@ public class Connectionsv3ConnectorSetting {
     return this;
   }
 
-   /**
+  /**
    * The headers used when this setting is active.
    * @return headers
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getHeaders() {
     return headers;
   }
 
-  public void setHeaders(List<String> headers) {
+  public void setHeaders(@javax.annotation.Nullable List<String> headers) {
     this.headers = headers;
   }
 
 
-  public Connectionsv3ConnectorSetting id(String id) {
+  public Connectionsv3ConnectorSetting id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * The id of the setting.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Connectionsv3ConnectorSetting name(String name) {
+  public Connectionsv3ConnectorSetting name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * The name of the Preset.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Connectionsv3ConnectorSetting order(Connectionsv3OrderType order) {
+  public Connectionsv3ConnectorSetting order(@javax.annotation.Nullable Connectionsv3OrderType order) {
     this.order = order;
     return this;
   }
 
-   /**
+  /**
    * Get order
    * @return order
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3OrderType getOrder() {
     return order;
   }
 
-  public void setOrder(Connectionsv3OrderType order) {
+  public void setOrder(@javax.annotation.Nullable Connectionsv3OrderType order) {
     this.order = order;
   }
 
 
-  public Connectionsv3ConnectorSetting sortedBy(String sortedBy) {
+  public Connectionsv3ConnectorSetting sortedBy(@javax.annotation.Nullable String sortedBy) {
     this.sortedBy = sortedBy;
     return this;
   }
 
-   /**
+  /**
    * The header key used for sorting.
    * @return sortedBy
-  **/
+   */
   @javax.annotation.Nullable
   public String getSortedBy() {
     return sortedBy;
   }
 
-  public void setSortedBy(String sortedBy) {
+  public void setSortedBy(@javax.annotation.Nullable String sortedBy) {
     this.sortedBy = sortedBy;
   }
 
@@ -291,29 +299,22 @@ public class Connectionsv3ConnectorSetting {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("description");
-    openapiFields.add("filters");
-    openapiFields.add("headers");
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("order");
-    openapiFields.add("sortedBy");
+    openapiFields = new HashSet<String>(Arrays.asList("description", "filters", "headers", "id", "name", "order", "sortedBy"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorSetting
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorSetting
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ConnectorSetting.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ConnectorSetting is not found in the empty JSON string", Connectionsv3ConnectorSetting.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ConnectorSetting is not found in the empty JSON string", Connectionsv3ConnectorSetting.openapiRequiredFields.toString()));
         }
       }
 
@@ -321,19 +322,19 @@ public class Connectionsv3ConnectorSetting {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ConnectorSetting.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorSetting` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorSetting` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("filters") != null && !jsonObj.get("filters").isJsonNull()) {
         JsonArray jsonArrayfilters = jsonObj.getAsJsonArray("filters");
         if (jsonArrayfilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
           }
 
           // validate the optional field `filters` (array)
@@ -344,20 +345,20 @@ public class Connectionsv3ConnectorSetting {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("headers") != null && !jsonObj.get("headers").isJsonNull() && !jsonObj.get("headers").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // validate the optional field `order`
       if (jsonObj.get("order") != null && !jsonObj.get("order").isJsonNull()) {
         Connectionsv3OrderType.validateJsonElement(jsonObj.get("order"));
       }
       if ((jsonObj.get("sortedBy") != null && !jsonObj.get("sortedBy").isJsonNull()) && !jsonObj.get("sortedBy").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sortedBy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sortedBy").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sortedBy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sortedBy").toString()));
       }
   }
 
@@ -390,22 +391,22 @@ public class Connectionsv3ConnectorSetting {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ConnectorSetting given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ConnectorSetting
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorSetting
-  */
+  /**
+   * Create an instance of Connectionsv3ConnectorSetting given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ConnectorSetting
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorSetting
+   */
   public static Connectionsv3ConnectorSetting fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ConnectorSetting.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ConnectorSetting to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ConnectorSetting to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

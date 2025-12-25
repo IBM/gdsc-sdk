@@ -74,9 +74,9 @@ class Guardiumconnectorv3GetCollectorsConfigResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in collectors_config (list)
         _items = []
         if self.collectors_config:
-            for _item in self.collectors_config:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_collectors_config in self.collectors_config:
+                if _item_collectors_config:
+                    _items.append(_item_collectors_config.to_dict())
             _dict['collectors_config'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

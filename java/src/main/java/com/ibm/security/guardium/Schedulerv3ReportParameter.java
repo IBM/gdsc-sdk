@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,105 +41,111 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportParameter includes all the parameters needed to run a report.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3ReportParameter {
   public static final String SERIALIZED_NAME_EXTRA_DETAIL = "extra_detail";
   @SerializedName(SERIALIZED_NAME_EXTRA_DETAIL)
+  @javax.annotation.Nullable
   private String extraDetail;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_NAME = "report_name";
   @SerializedName(SERIALIZED_NAME_REPORT_NAME)
+  @javax.annotation.Nullable
   private String reportName;
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAMETERS = "runtime_parameters";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Reportsv3RunTimeParameter> runtimeParameters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SYNC_EXECUTION_DATE = "sync_execution_date";
   @SerializedName(SERIALIZED_NAME_SYNC_EXECUTION_DATE)
+  @javax.annotation.Nullable
   private Boolean syncExecutionDate;
 
   public static final String SERIALIZED_NAME_THRESHOLD = "threshold";
   @SerializedName(SERIALIZED_NAME_THRESHOLD)
+  @javax.annotation.Nullable
   private Long threshold;
 
   public Schedulerv3ReportParameter() {
   }
 
-  public Schedulerv3ReportParameter extraDetail(String extraDetail) {
+  public Schedulerv3ReportParameter extraDetail(@javax.annotation.Nullable String extraDetail) {
     this.extraDetail = extraDetail;
     return this;
   }
 
-   /**
+  /**
    * Get extraDetail
    * @return extraDetail
-  **/
+   */
   @javax.annotation.Nullable
   public String getExtraDetail() {
     return extraDetail;
   }
 
-  public void setExtraDetail(String extraDetail) {
+  public void setExtraDetail(@javax.annotation.Nullable String extraDetail) {
     this.extraDetail = extraDetail;
   }
 
 
-  public Schedulerv3ReportParameter reportId(String reportId) {
+  public Schedulerv3ReportParameter reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Report ID for the scheduled report.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Schedulerv3ReportParameter reportName(String reportName) {
+  public Schedulerv3ReportParameter reportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * Optional: Report Name for the scheduled report.
    * @return reportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(String reportName) {
+  public void setReportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
 
-  public Schedulerv3ReportParameter runtimeParameters(List<Reportsv3RunTimeParameter> runtimeParameters) {
+  public Schedulerv3ReportParameter runtimeParameters(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameters) {
     this.runtimeParameters = runtimeParameters;
     return this;
   }
@@ -151,54 +158,54 @@ public class Schedulerv3ReportParameter {
     return this;
   }
 
-   /**
+  /**
    * Optional: Runtime parameters for this report.
    * @return runtimeParameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3RunTimeParameter> getRuntimeParameters() {
     return runtimeParameters;
   }
 
-  public void setRuntimeParameters(List<Reportsv3RunTimeParameter> runtimeParameters) {
+  public void setRuntimeParameters(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameters) {
     this.runtimeParameters = runtimeParameters;
   }
 
 
-  public Schedulerv3ReportParameter syncExecutionDate(Boolean syncExecutionDate) {
+  public Schedulerv3ReportParameter syncExecutionDate(@javax.annotation.Nullable Boolean syncExecutionDate) {
     this.syncExecutionDate = syncExecutionDate;
     return this;
   }
 
-   /**
+  /**
    * Optional: Flag if sync query_from_date when running this report.
    * @return syncExecutionDate
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getSyncExecutionDate() {
     return syncExecutionDate;
   }
 
-  public void setSyncExecutionDate(Boolean syncExecutionDate) {
+  public void setSyncExecutionDate(@javax.annotation.Nullable Boolean syncExecutionDate) {
     this.syncExecutionDate = syncExecutionDate;
   }
 
 
-  public Schedulerv3ReportParameter threshold(Long threshold) {
+  public Schedulerv3ReportParameter threshold(@javax.annotation.Nullable Long threshold) {
     this.threshold = threshold;
     return this;
   }
 
-   /**
+  /**
    * Optional: threshold count for creating tickets or other integration messages. Default is 1. If there is one row of data from a report, send message.
    * @return threshold
-  **/
+   */
   @javax.annotation.Nullable
   public Long getThreshold() {
     return threshold;
   }
 
-  public void setThreshold(Long threshold) {
+  public void setThreshold(@javax.annotation.Nullable Long threshold) {
     this.threshold = threshold;
   }
 
@@ -257,28 +264,22 @@ public class Schedulerv3ReportParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("extra_detail");
-    openapiFields.add("report_id");
-    openapiFields.add("report_name");
-    openapiFields.add("runtime_parameters");
-    openapiFields.add("sync_execution_date");
-    openapiFields.add("threshold");
+    openapiFields = new HashSet<String>(Arrays.asList("extra_detail", "report_id", "report_name", "runtime_parameters", "sync_execution_date", "threshold"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ReportParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ReportParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3ReportParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3ReportParameter is not found in the empty JSON string", Schedulerv3ReportParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3ReportParameter is not found in the empty JSON string", Schedulerv3ReportParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -286,25 +287,25 @@ public class Schedulerv3ReportParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3ReportParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3ReportParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3ReportParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("extra_detail") != null && !jsonObj.get("extra_detail").isJsonNull()) && !jsonObj.get("extra_detail").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `extra_detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("extra_detail").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extra_detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("extra_detail").toString()));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("report_name") != null && !jsonObj.get("report_name").isJsonNull()) && !jsonObj.get("report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
       }
       if (jsonObj.get("runtime_parameters") != null && !jsonObj.get("runtime_parameters").isJsonNull()) {
         JsonArray jsonArrayruntimeParameters = jsonObj.getAsJsonArray("runtime_parameters");
         if (jsonArrayruntimeParameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("runtime_parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `runtime_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `runtime_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameters").toString()));
           }
 
           // validate the optional field `runtime_parameters` (array)
@@ -344,22 +345,22 @@ public class Schedulerv3ReportParameter {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3ReportParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3ReportParameter
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3ReportParameter
-  */
+  /**
+   * Create an instance of Schedulerv3ReportParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3ReportParameter
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3ReportParameter
+   */
   public static Schedulerv3ReportParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3ReportParameter.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3ReportParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3ReportParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

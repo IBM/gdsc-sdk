@@ -38,7 +38,7 @@ class Tenantuserv3FullUser(BaseModel):
     metadata: Optional[Dict[str, StrictStr]] = Field(default=None, description="Metadata will contain all preferences   --> this will contain all user-specific settings, including session time out.")
     privileges: Optional[Dict[str, StrictBool]] = Field(default=None, description="Cumulative privileges base on all roles.")
     roles: Optional[List[StrictStr]] = Field(default=None, description="Roles.")
-    state: Optional[Tenantuserv3UserState] = None
+    state: Optional[Tenantuserv3UserState] = Tenantuserv3UserState.ACTIVE
     tenant_id: Optional[StrictStr] = Field(default=None, description="Tenant this user belongs to.")
     uid: Optional[StrictStr] = Field(default=None, description="Email.")
     user_id: Optional[StrictStr] = Field(default=None, description="Unique id for user.")
@@ -105,7 +105,7 @@ class Tenantuserv3FullUser(BaseModel):
             "metadata": obj.get("metadata"),
             "privileges": obj.get("privileges"),
             "roles": obj.get("roles"),
-            "state": obj.get("state"),
+            "state": obj.get("state") if obj.get("state") is not None else Tenantuserv3UserState.ACTIVE,
             "tenant_id": obj.get("tenant_id"),
             "uid": obj.get("uid"),
             "user_id": obj.get("user_id")

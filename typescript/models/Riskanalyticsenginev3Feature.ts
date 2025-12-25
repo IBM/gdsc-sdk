@@ -55,6 +55,8 @@ export class Riskanalyticsenginev3Feature {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "featureNls",
@@ -124,6 +126,5 @@ export class Riskanalyticsenginev3Feature {
     public constructor() {
     }
 }
-
 
 

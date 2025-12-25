@@ -13,10 +13,10 @@ Name | Type | Description | Notes
 **description** | **str** | Optional: Multiline description of the task. | [optional] 
 **investigation_links** | [**List[Schedulerv3ConfigurationItem]**](Schedulerv3ConfigurationItem.md) |  | [optional] 
 **origin** | [**Workflowv3Origin**](Workflowv3Origin.md) |  | [optional] 
-**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] 
+**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] [default to Workflowv3Priority.UNDEFINED_PRIORITY]
 **report_result** | [**Workflowv3ReportResult**](Workflowv3ReportResult.md) |  | [optional] 
 **response_template** | [**Schedulerv3ConfigurationItem**](Schedulerv3ConfigurationItem.md) |  | [optional] 
-**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] 
+**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] [default to Workflowv3Status.UNDEFINED_STATUS]
 **tags** | **List[str]** |  | [optional] 
 **title** | **str** | Task title (subject). | [optional] 
 

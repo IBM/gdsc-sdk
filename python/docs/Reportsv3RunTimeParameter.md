@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **key** | **str** | The run time parameter key (ReportFilter.value). | [optional] 
 **label** | **str** | The run time parameter label. | [optional] 
-**operator_type** | [**Reportsv3OperatorType**](Reportsv3OperatorType.md) |  | [optional] 
-**runtime_parameter_type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] 
+**operator_type** | [**Reportsv3OperatorType**](Reportsv3OperatorType.md) |  | [optional] [default to Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE]
+**runtime_parameter_type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] [default to Reportsv3HeaderType.UNDEFINED_TYPE]
 **runtime_parameter_type_length** | **int** | Runtime parameter&#39;s field type length. | [optional] 
 **value** | **str** | Run time parameter values. | [optional] 
 

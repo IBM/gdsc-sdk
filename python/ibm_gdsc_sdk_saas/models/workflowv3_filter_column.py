@@ -28,7 +28,7 @@ class Workflowv3FilterColumn(BaseModel):
     FilterColumn represents a column field filter.
     """ # noqa: E501
     header_name: Optional[StrictStr] = None
-    operator_type: Optional[Workflowv3OperatorType] = None
+    operator_type: Optional[Workflowv3OperatorType] = Workflowv3OperatorType.UNDEFINED_OPERATOR_TYPE
     values: Optional[List[StrictStr]] = None
     __properties: ClassVar[List[str]] = ["header_name", "operator_type", "values"]
 
@@ -84,7 +84,7 @@ class Workflowv3FilterColumn(BaseModel):
 
         _obj = cls.model_validate({
             "header_name": obj.get("header_name"),
-            "operator_type": obj.get("operator_type"),
+            "operator_type": obj.get("operator_type") if obj.get("operator_type") is not None else Workflowv3OperatorType.UNDEFINED_OPERATOR_TYPE,
             "values": obj.get("values")
         })
         return _obj

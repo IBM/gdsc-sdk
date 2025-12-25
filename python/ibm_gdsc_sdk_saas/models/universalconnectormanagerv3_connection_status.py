@@ -28,7 +28,7 @@ class Universalconnectormanagerv3ConnectionStatus(BaseModel):
     """
     An object that describes the Connectivity status of this connection.
     """ # noqa: E501
-    status: Optional[Universalconnectormanagerv3ConnectivityState] = None
+    status: Optional[Universalconnectormanagerv3ConnectivityState] = Universalconnectormanagerv3ConnectivityState.UC_OK
     status_text: Optional[StrictStr] = Field(default=None, description="If status is not OK, details what's wrong (non-localized).")
     timestamp: Optional[datetime] = Field(default=None, description="Datetime of status.")
     timestamp_last_ok: Optional[datetime] = Field(default=None, description="Datetime of previous OK status.")
@@ -85,7 +85,7 @@ class Universalconnectormanagerv3ConnectionStatus(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Universalconnectormanagerv3ConnectivityState.UC_OK,
             "status_text": obj.get("status_text"),
             "timestamp": obj.get("timestamp"),
             "timestamp_last_ok": obj.get("timestamp_last_ok")

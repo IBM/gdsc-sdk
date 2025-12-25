@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,55 +42,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UserTenant contains info on the user and on connected tenants.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3UserTenant {
   public static final String SERIALIZED_NAME_ACTIVE_TENANT = "active_tenant";
   @SerializedName(SERIALIZED_NAME_ACTIVE_TENANT)
+  @javax.annotation.Nullable
   private Tenantuserv3Tenant activeTenant;
 
   public static final String SERIALIZED_NAME_TENANTS = "tenants";
   @SerializedName(SERIALIZED_NAME_TENANTS)
+  @javax.annotation.Nullable
   private List<Tenantuserv3Tenant> tenants = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
+  @javax.annotation.Nullable
   private Tenantuserv3FullUser user;
 
   public Tenantuserv3UserTenant() {
   }
 
-  public Tenantuserv3UserTenant activeTenant(Tenantuserv3Tenant activeTenant) {
+  public Tenantuserv3UserTenant activeTenant(@javax.annotation.Nullable Tenantuserv3Tenant activeTenant) {
     this.activeTenant = activeTenant;
     return this;
   }
 
-   /**
+  /**
    * Get activeTenant
    * @return activeTenant
-  **/
+   */
   @javax.annotation.Nullable
   public Tenantuserv3Tenant getActiveTenant() {
     return activeTenant;
   }
 
-  public void setActiveTenant(Tenantuserv3Tenant activeTenant) {
+  public void setActiveTenant(@javax.annotation.Nullable Tenantuserv3Tenant activeTenant) {
     this.activeTenant = activeTenant;
   }
 
 
-  public Tenantuserv3UserTenant tenants(List<Tenantuserv3Tenant> tenants) {
+  public Tenantuserv3UserTenant tenants(@javax.annotation.Nullable List<Tenantuserv3Tenant> tenants) {
     this.tenants = tenants;
     return this;
   }
@@ -102,35 +106,35 @@ public class Tenantuserv3UserTenant {
     return this;
   }
 
-   /**
+  /**
    * Limited info about the other tenants this user belongs to.
    * @return tenants
-  **/
+   */
   @javax.annotation.Nullable
   public List<Tenantuserv3Tenant> getTenants() {
     return tenants;
   }
 
-  public void setTenants(List<Tenantuserv3Tenant> tenants) {
+  public void setTenants(@javax.annotation.Nullable List<Tenantuserv3Tenant> tenants) {
     this.tenants = tenants;
   }
 
 
-  public Tenantuserv3UserTenant user(Tenantuserv3FullUser user) {
+  public Tenantuserv3UserTenant user(@javax.annotation.Nullable Tenantuserv3FullUser user) {
     this.user = user;
     return this;
   }
 
-   /**
+  /**
    * Get user
    * @return user
-  **/
+   */
   @javax.annotation.Nullable
   public Tenantuserv3FullUser getUser() {
     return user;
   }
 
-  public void setUser(Tenantuserv3FullUser user) {
+  public void setUser(@javax.annotation.Nullable Tenantuserv3FullUser user) {
     this.user = user;
   }
 
@@ -183,25 +187,22 @@ public class Tenantuserv3UserTenant {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("active_tenant");
-    openapiFields.add("tenants");
-    openapiFields.add("user");
+    openapiFields = new HashSet<String>(Arrays.asList("active_tenant", "tenants", "user"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3UserTenant
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3UserTenant
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3UserTenant.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3UserTenant is not found in the empty JSON string", Tenantuserv3UserTenant.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3UserTenant is not found in the empty JSON string", Tenantuserv3UserTenant.openapiRequiredFields.toString()));
         }
       }
 
@@ -209,7 +210,7 @@ public class Tenantuserv3UserTenant {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3UserTenant.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3UserTenant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3UserTenant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -222,7 +223,7 @@ public class Tenantuserv3UserTenant {
         if (jsonArraytenants != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tenants").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tenants` to be an array in the JSON string but got `%s`", jsonObj.get("tenants").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenants` to be an array in the JSON string but got `%s`", jsonObj.get("tenants").toString()));
           }
 
           // validate the optional field `tenants` (array)
@@ -266,22 +267,22 @@ public class Tenantuserv3UserTenant {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3UserTenant given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3UserTenant
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3UserTenant
-  */
+  /**
+   * Create an instance of Tenantuserv3UserTenant given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3UserTenant
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3UserTenant
+   */
   public static Tenantuserv3UserTenant fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3UserTenant.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3UserTenant to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3UserTenant to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

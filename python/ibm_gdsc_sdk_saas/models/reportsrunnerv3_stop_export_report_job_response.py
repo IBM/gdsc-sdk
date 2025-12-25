@@ -29,7 +29,7 @@ class Reportsrunnerv3StopExportReportJobResponse(BaseModel):
     """ # noqa: E501
     export_file_name: Optional[StrictStr] = Field(default=None, description="Export file name.")
     job_id: Optional[StrictStr] = Field(default=None, description="Token that identifies the export job.")
-    job_status: Optional[Reportsrunnerv3ExportJobStatus] = None
+    job_status: Optional[Reportsrunnerv3ExportJobStatus] = Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS
     __properties: ClassVar[List[str]] = ["export_file_name", "job_id", "job_status"]
 
     model_config = ConfigDict(
@@ -85,7 +85,7 @@ class Reportsrunnerv3StopExportReportJobResponse(BaseModel):
         _obj = cls.model_validate({
             "export_file_name": obj.get("export_file_name"),
             "job_id": obj.get("job_id"),
-            "job_status": obj.get("job_status")
+            "job_status": obj.get("job_status") if obj.get("job_status") is not None else Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS
         })
         return _obj
 

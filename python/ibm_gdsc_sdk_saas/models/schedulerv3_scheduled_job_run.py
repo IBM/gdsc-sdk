@@ -40,10 +40,10 @@ class Schedulerv3ScheduledJobRun(BaseModel):
     run_detail: Optional[StrictStr] = None
     schedule_id: Optional[StrictStr] = None
     start_time: Optional[datetime] = None
-    status: Optional[Schedulerv3ExecutionStatus] = None
+    status: Optional[Schedulerv3ExecutionStatus] = Schedulerv3ExecutionStatus.UNDEFINED
     task_id: Optional[StrictStr] = None
     task_name: Optional[StrictStr] = None
-    task_type: Optional[Schedulerv3TaskType] = None
+    task_type: Optional[Schedulerv3TaskType] = Schedulerv3TaskType.UNDEFINED_JOBTYPE
     __properties: ClassVar[List[str]] = ["collection_id", "end_time", "job_id", "previous_job_id", "query_from", "query_to", "queue_time", "result_size", "run_detail", "schedule_id", "start_time", "status", "task_id", "task_name", "task_type"]
 
     model_config = ConfigDict(
@@ -108,10 +108,10 @@ class Schedulerv3ScheduledJobRun(BaseModel):
             "run_detail": obj.get("run_detail"),
             "schedule_id": obj.get("schedule_id"),
             "start_time": obj.get("start_time"),
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Schedulerv3ExecutionStatus.UNDEFINED,
             "task_id": obj.get("task_id"),
             "task_name": obj.get("task_name"),
-            "task_type": obj.get("task_type")
+            "task_type": obj.get("task_type") if obj.get("task_type") is not None else Schedulerv3TaskType.UNDEFINED_JOBTYPE
         })
         return _obj
 

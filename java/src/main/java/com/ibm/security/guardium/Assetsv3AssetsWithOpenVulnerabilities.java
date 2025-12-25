@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AssetsWithOpenVulnerabilities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetsWithOpenVulnerabilities {
   public static final String SERIALIZED_NAME_ASSET_TYPE = "asset_type";
   @SerializedName(SERIALIZED_NAME_ASSET_TYPE)
+  @javax.annotation.Nullable
   private String assetType;
 
   public static final String SERIALIZED_NAME_TOTAL_ASSETS = "total_assets";
   @SerializedName(SERIALIZED_NAME_TOTAL_ASSETS)
+  @javax.annotation.Nullable
   private String totalAssets;
 
   public static final String SERIALIZED_NAME_VULNERABILITY_GROUP = "vulnerability_group";
   @SerializedName(SERIALIZED_NAME_VULNERABILITY_GROUP)
+  @javax.annotation.Nullable
   private String vulnerabilityGroup;
 
   public Assetsv3AssetsWithOpenVulnerabilities() {
   }
 
-  public Assetsv3AssetsWithOpenVulnerabilities assetType(String assetType) {
+  public Assetsv3AssetsWithOpenVulnerabilities assetType(@javax.annotation.Nullable String assetType) {
     this.assetType = assetType;
     return this;
   }
 
-   /**
+  /**
    * Get assetType
    * @return assetType
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetType() {
     return assetType;
   }
 
-  public void setAssetType(String assetType) {
+  public void setAssetType(@javax.annotation.Nullable String assetType) {
     this.assetType = assetType;
   }
 
 
-  public Assetsv3AssetsWithOpenVulnerabilities totalAssets(String totalAssets) {
+  public Assetsv3AssetsWithOpenVulnerabilities totalAssets(@javax.annotation.Nullable String totalAssets) {
     this.totalAssets = totalAssets;
     return this;
   }
 
-   /**
+  /**
    * Get totalAssets
    * @return totalAssets
-  **/
+   */
   @javax.annotation.Nullable
   public String getTotalAssets() {
     return totalAssets;
   }
 
-  public void setTotalAssets(String totalAssets) {
+  public void setTotalAssets(@javax.annotation.Nullable String totalAssets) {
     this.totalAssets = totalAssets;
   }
 
 
-  public Assetsv3AssetsWithOpenVulnerabilities vulnerabilityGroup(String vulnerabilityGroup) {
+  public Assetsv3AssetsWithOpenVulnerabilities vulnerabilityGroup(@javax.annotation.Nullable String vulnerabilityGroup) {
     this.vulnerabilityGroup = vulnerabilityGroup;
     return this;
   }
 
-   /**
+  /**
    * Get vulnerabilityGroup
    * @return vulnerabilityGroup
-  **/
+   */
   @javax.annotation.Nullable
   public String getVulnerabilityGroup() {
     return vulnerabilityGroup;
   }
 
-  public void setVulnerabilityGroup(String vulnerabilityGroup) {
+  public void setVulnerabilityGroup(@javax.annotation.Nullable String vulnerabilityGroup) {
     this.vulnerabilityGroup = vulnerabilityGroup;
   }
 
@@ -171,25 +175,22 @@ public class Assetsv3AssetsWithOpenVulnerabilities {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_type");
-    openapiFields.add("total_assets");
-    openapiFields.add("vulnerability_group");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_type", "total_assets", "vulnerability_group"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetsWithOpenVulnerabilities
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetsWithOpenVulnerabilities
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetsWithOpenVulnerabilities.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetsWithOpenVulnerabilities is not found in the empty JSON string", Assetsv3AssetsWithOpenVulnerabilities.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetsWithOpenVulnerabilities is not found in the empty JSON string", Assetsv3AssetsWithOpenVulnerabilities.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Assetsv3AssetsWithOpenVulnerabilities {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetsWithOpenVulnerabilities.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetsWithOpenVulnerabilities` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetsWithOpenVulnerabilities` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("asset_type") != null && !jsonObj.get("asset_type").isJsonNull()) && !jsonObj.get("asset_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_type").toString()));
       }
       if ((jsonObj.get("total_assets") != null && !jsonObj.get("total_assets").isJsonNull()) && !jsonObj.get("total_assets").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `total_assets` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_assets").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `total_assets` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_assets").toString()));
       }
       if ((jsonObj.get("vulnerability_group") != null && !jsonObj.get("vulnerability_group").isJsonNull()) && !jsonObj.get("vulnerability_group").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vulnerability_group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vulnerability_group").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vulnerability_group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vulnerability_group").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Assetsv3AssetsWithOpenVulnerabilities {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetsWithOpenVulnerabilities given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetsWithOpenVulnerabilities
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetsWithOpenVulnerabilities
-  */
+  /**
+   * Create an instance of Assetsv3AssetsWithOpenVulnerabilities given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetsWithOpenVulnerabilities
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetsWithOpenVulnerabilities
+   */
   public static Assetsv3AssetsWithOpenVulnerabilities fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetsWithOpenVulnerabilities.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetsWithOpenVulnerabilities to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetsWithOpenVulnerabilities to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

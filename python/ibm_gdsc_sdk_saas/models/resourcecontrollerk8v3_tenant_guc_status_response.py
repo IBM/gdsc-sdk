@@ -29,7 +29,7 @@ class Resourcecontrollerk8v3TenantGUCStatusResponse(BaseModel):
     Resourcecontrollerk8v3TenantGUCStatusResponse
     """ # noqa: E501
     container_status: Optional[StrictStr] = None
-    statefulset_state: Optional[Resourcecontrollerk8v3GUCStatefulsetState] = None
+    statefulset_state: Optional[Resourcecontrollerk8v3GUCStatefulsetState] = Resourcecontrollerk8v3GUCStatefulsetState.READY
     status: Optional[RpcStatus] = None
     __properties: ClassVar[List[str]] = ["container_status", "statefulset_state", "status"]
 
@@ -88,7 +88,7 @@ class Resourcecontrollerk8v3TenantGUCStatusResponse(BaseModel):
 
         _obj = cls.model_validate({
             "container_status": obj.get("container_status"),
-            "statefulset_state": obj.get("statefulset_state"),
+            "statefulset_state": obj.get("statefulset_state") if obj.get("statefulset_state") is not None else Resourcecontrollerk8v3GUCStatefulsetState.READY,
             "status": RpcStatus.from_dict(obj["status"]) if obj.get("status") is not None else None
         })
         return _obj

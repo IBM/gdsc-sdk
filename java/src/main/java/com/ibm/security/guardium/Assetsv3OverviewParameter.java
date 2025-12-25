@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3OverviewParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3OverviewParameter {
   public static final String SERIALIZED_NAME_DATABASE_NAME = "database_name";
   @SerializedName(SERIALIZED_NAME_DATABASE_NAME)
+  @javax.annotation.Nullable
   private String databaseName;
 
   public static final String SERIALIZED_NAME_DB_ID = "db_id";
   @SerializedName(SERIALIZED_NAME_DB_ID)
+  @javax.annotation.Nullable
   private String dbId;
 
   public static final String SERIALIZED_NAME_IP_HOST = "ip_host";
   @SerializedName(SERIALIZED_NAME_IP_HOST)
+  @javax.annotation.Nullable
   private List<Assetsv3IpHost> ipHost = new ArrayList<>();
 
   public Assetsv3OverviewParameter() {
   }
 
-  public Assetsv3OverviewParameter databaseName(String databaseName) {
+  public Assetsv3OverviewParameter databaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
     return this;
   }
 
-   /**
+  /**
    * Get databaseName
    * @return databaseName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseName() {
     return databaseName;
   }
 
-  public void setDatabaseName(String databaseName) {
+  public void setDatabaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
   }
 
 
-  public Assetsv3OverviewParameter dbId(String dbId) {
+  public Assetsv3OverviewParameter dbId(@javax.annotation.Nullable String dbId) {
     this.dbId = dbId;
     return this;
   }
 
-   /**
+  /**
    * Get dbId
    * @return dbId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDbId() {
     return dbId;
   }
 
-  public void setDbId(String dbId) {
+  public void setDbId(@javax.annotation.Nullable String dbId) {
     this.dbId = dbId;
   }
 
 
-  public Assetsv3OverviewParameter ipHost(List<Assetsv3IpHost> ipHost) {
+  public Assetsv3OverviewParameter ipHost(@javax.annotation.Nullable List<Assetsv3IpHost> ipHost) {
     this.ipHost = ipHost;
     return this;
   }
@@ -120,16 +124,16 @@ public class Assetsv3OverviewParameter {
     return this;
   }
 
-   /**
+  /**
    * IP addresses and hosts associated with each.
    * @return ipHost
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3IpHost> getIpHost() {
     return ipHost;
   }
 
-  public void setIpHost(List<Assetsv3IpHost> ipHost) {
+  public void setIpHost(@javax.annotation.Nullable List<Assetsv3IpHost> ipHost) {
     this.ipHost = ipHost;
   }
 
@@ -182,25 +186,22 @@ public class Assetsv3OverviewParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("database_name");
-    openapiFields.add("db_id");
-    openapiFields.add("ip_host");
+    openapiFields = new HashSet<String>(Arrays.asList("database_name", "db_id", "ip_host"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3OverviewParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3OverviewParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3OverviewParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3OverviewParameter is not found in the empty JSON string", Assetsv3OverviewParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3OverviewParameter is not found in the empty JSON string", Assetsv3OverviewParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,22 +209,22 @@ public class Assetsv3OverviewParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3OverviewParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3OverviewParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3OverviewParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("database_name") != null && !jsonObj.get("database_name").isJsonNull()) && !jsonObj.get("database_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
       }
       if ((jsonObj.get("db_id") != null && !jsonObj.get("db_id").isJsonNull()) && !jsonObj.get("db_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `db_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `db_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_id").toString()));
       }
       if (jsonObj.get("ip_host") != null && !jsonObj.get("ip_host").isJsonNull()) {
         JsonArray jsonArrayipHost = jsonObj.getAsJsonArray("ip_host");
         if (jsonArrayipHost != null) {
           // ensure the json data is an array
           if (!jsonObj.get("ip_host").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `ip_host` to be an array in the JSON string but got `%s`", jsonObj.get("ip_host").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ip_host` to be an array in the JSON string but got `%s`", jsonObj.get("ip_host").toString()));
           }
 
           // validate the optional field `ip_host` (array)
@@ -263,22 +264,22 @@ public class Assetsv3OverviewParameter {
     }
   }
 
- /**
-  * Create an instance of Assetsv3OverviewParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3OverviewParameter
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3OverviewParameter
-  */
+  /**
+   * Create an instance of Assetsv3OverviewParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3OverviewParameter
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3OverviewParameter
+   */
   public static Assetsv3OverviewParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3OverviewParameter.class);
   }
 
- /**
-  * Convert an instance of Assetsv3OverviewParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3OverviewParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

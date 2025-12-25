@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RepeatEnd includes repeat ends at which hour and the timezone information.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3RepeatEnd {
   public static final String SERIALIZED_NAME_HOUR = "hour";
   @SerializedName(SERIALIZED_NAME_HOUR)
+  @javax.annotation.Nullable
   private Long hour;
 
   public static final String SERIALIZED_NAME_MINUTE = "minute";
   @SerializedName(SERIALIZED_NAME_MINUTE)
+  @javax.annotation.Nullable
   private Long minute;
 
   public static final String SERIALIZED_NAME_TIMEZONE = "timezone";
   @SerializedName(SERIALIZED_NAME_TIMEZONE)
+  @javax.annotation.Nullable
   private String timezone;
 
   public Schedulerv3RepeatEnd() {
   }
 
-  public Schedulerv3RepeatEnd hour(Long hour) {
+  public Schedulerv3RepeatEnd hour(@javax.annotation.Nullable Long hour) {
     this.hour = hour;
     return this;
   }
 
-   /**
+  /**
    * Ends at which hour.
    * @return hour
-  **/
+   */
   @javax.annotation.Nullable
   public Long getHour() {
     return hour;
   }
 
-  public void setHour(Long hour) {
+  public void setHour(@javax.annotation.Nullable Long hour) {
     this.hour = hour;
   }
 
 
-  public Schedulerv3RepeatEnd minute(Long minute) {
+  public Schedulerv3RepeatEnd minute(@javax.annotation.Nullable Long minute) {
     this.minute = minute;
     return this;
   }
 
-   /**
+  /**
    * Ends at which minute.
    * @return minute
-  **/
+   */
   @javax.annotation.Nullable
   public Long getMinute() {
     return minute;
   }
 
-  public void setMinute(Long minute) {
+  public void setMinute(@javax.annotation.Nullable Long minute) {
     this.minute = minute;
   }
 
 
-  public Schedulerv3RepeatEnd timezone(String timezone) {
+  public Schedulerv3RepeatEnd timezone(@javax.annotation.Nullable String timezone) {
     this.timezone = timezone;
     return this;
   }
 
-   /**
+  /**
    * Timezone information.
    * @return timezone
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimezone() {
     return timezone;
   }
 
-  public void setTimezone(String timezone) {
+  public void setTimezone(@javax.annotation.Nullable String timezone) {
     this.timezone = timezone;
   }
 
@@ -171,25 +175,22 @@ public class Schedulerv3RepeatEnd {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("hour");
-    openapiFields.add("minute");
-    openapiFields.add("timezone");
+    openapiFields = new HashSet<String>(Arrays.asList("hour", "minute", "timezone"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3RepeatEnd
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3RepeatEnd
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3RepeatEnd.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3RepeatEnd is not found in the empty JSON string", Schedulerv3RepeatEnd.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3RepeatEnd is not found in the empty JSON string", Schedulerv3RepeatEnd.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,12 +198,12 @@ public class Schedulerv3RepeatEnd {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3RepeatEnd.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3RepeatEnd` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3RepeatEnd` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("timezone") != null && !jsonObj.get("timezone").isJsonNull()) && !jsonObj.get("timezone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `timezone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timezone").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `timezone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timezone").toString()));
       }
   }
 
@@ -235,22 +236,22 @@ public class Schedulerv3RepeatEnd {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3RepeatEnd given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3RepeatEnd
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3RepeatEnd
-  */
+  /**
+   * Create an instance of Schedulerv3RepeatEnd given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3RepeatEnd
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3RepeatEnd
+   */
   public static Schedulerv3RepeatEnd fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3RepeatEnd.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3RepeatEnd to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3RepeatEnd to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

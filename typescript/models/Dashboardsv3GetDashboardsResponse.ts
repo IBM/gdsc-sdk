@@ -24,6 +24,8 @@ export class Dashboardsv3GetDashboardsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "dashboardsList",
@@ -39,4 +41,3 @@ export class Dashboardsv3GetDashboardsResponse {
     public constructor() {
     }
 }
-

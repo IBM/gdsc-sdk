@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,824 +38,859 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AssetInformation - Asset Overview - Asset Information .
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetInformation {
   public static final String SERIALIZED_NAME_APPLICATION = "application";
   @SerializedName(SERIALIZED_NAME_APPLICATION)
+  @javax.annotation.Nullable
   private String application;
 
   public static final String SERIALIZED_NAME_APPLICATION_ID = "application_id";
   @SerializedName(SERIALIZED_NAME_APPLICATION_ID)
+  @javax.annotation.Nullable
   private String applicationId;
 
   public static final String SERIALIZED_NAME_ASSET_NAME = "asset_name";
   @SerializedName(SERIALIZED_NAME_ASSET_NAME)
+  @javax.annotation.Nullable
   private String assetName;
 
   public static final String SERIALIZED_NAME_ASSET_TYPE = "asset_type";
   @SerializedName(SERIALIZED_NAME_ASSET_TYPE)
+  @javax.annotation.Nullable
   private String assetType;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @javax.annotation.Nullable
   private String category;
 
   public static final String SERIALIZED_NAME_CITY = "city";
   @SerializedName(SERIALIZED_NAME_CITY)
+  @javax.annotation.Nullable
   private String city;
 
   public static final String SERIALIZED_NAME_COUNTRY = "country";
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  @javax.annotation.Nullable
   private String country;
 
   public static final String SERIALIZED_NAME_CRITICALITY = "criticality";
   @SerializedName(SERIALIZED_NAME_CRITICALITY)
+  @javax.annotation.Nullable
   private String criticality;
 
   public static final String SERIALIZED_NAME_DATA_CENTER = "data_center";
   @SerializedName(SERIALIZED_NAME_DATA_CENTER)
+  @javax.annotation.Nullable
   private String dataCenter;
 
   public static final String SERIALIZED_NAME_DATABASE = "database";
   @SerializedName(SERIALIZED_NAME_DATABASE)
+  @javax.annotation.Nullable
   private String database;
 
   public static final String SERIALIZED_NAME_DATABASE_PROTOCOL = "database_protocol";
   @SerializedName(SERIALIZED_NAME_DATABASE_PROTOCOL)
+  @javax.annotation.Nullable
   private String databaseProtocol;
 
   public static final String SERIALIZED_NAME_DATABASE_TYPE = "database_type";
   @SerializedName(SERIALIZED_NAME_DATABASE_TYPE)
+  @javax.annotation.Nullable
   private String databaseType;
 
   public static final String SERIALIZED_NAME_DEPLOYMENT = "deployment";
   @SerializedName(SERIALIZED_NAME_DEPLOYMENT)
+  @javax.annotation.Nullable
   private String deployment;
 
   public static final String SERIALIZED_NAME_ENDPOINT = "endpoint";
   @SerializedName(SERIALIZED_NAME_ENDPOINT)
+  @javax.annotation.Nullable
   private String endpoint;
 
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
   @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  @javax.annotation.Nullable
   private String environment;
 
   public static final String SERIALIZED_NAME_FOLDER_PATH = "folder_path";
   @SerializedName(SERIALIZED_NAME_FOLDER_PATH)
+  @javax.annotation.Nullable
   private String folderPath;
 
   public static final String SERIALIZED_NAME_GDP_DATA_SOURCES = "gdp_data_sources";
   @SerializedName(SERIALIZED_NAME_GDP_DATA_SOURCES)
+  @javax.annotation.Nullable
   private String gdpDataSources;
 
   public static final String SERIALIZED_NAME_HAS_TRAINING_DATA = "has_training_data";
   @SerializedName(SERIALIZED_NAME_HAS_TRAINING_DATA)
+  @javax.annotation.Nullable
   private Boolean hasTrainingData;
 
   public static final String SERIALIZED_NAME_HOST_NAME = "host_name";
   @SerializedName(SERIALIZED_NAME_HOST_NAME)
+  @javax.annotation.Nullable
   private String hostName;
 
   public static final String SERIALIZED_NAME_LAST_ACTIVITY = "last_activity";
   @SerializedName(SERIALIZED_NAME_LAST_ACTIVITY)
+  @javax.annotation.Nullable
   private String lastActivity;
 
   public static final String SERIALIZED_NAME_LAST_TRAINED = "last_trained";
   @SerializedName(SERIALIZED_NAME_LAST_TRAINED)
+  @javax.annotation.Nullable
   private String lastTrained;
 
   public static final String SERIALIZED_NAME_MAC_ADDRESS = "mac_address";
   @SerializedName(SERIALIZED_NAME_MAC_ADDRESS)
+  @javax.annotation.Nullable
   private String macAddress;
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
+  @javax.annotation.Nullable
   private String model;
 
   public static final String SERIALIZED_NAME_OS = "os";
   @SerializedName(SERIALIZED_NAME_OS)
+  @javax.annotation.Nullable
   private String os;
 
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)
+  @javax.annotation.Nullable
   private String owner;
 
   public static final String SERIALIZED_NAME_PUBLISHER = "publisher";
   @SerializedName(SERIALIZED_NAME_PUBLISHER)
+  @javax.annotation.Nullable
   private String publisher;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_RISK_LEVEL = "risk_level";
   @SerializedName(SERIALIZED_NAME_RISK_LEVEL)
+  @javax.annotation.Nullable
   private String riskLevel;
 
   public static final String SERIALIZED_NAME_SCHEMA = "schema";
   @SerializedName(SERIALIZED_NAME_SCHEMA)
+  @javax.annotation.Nullable
   private String schema;
 
   public static final String SERIALIZED_NAME_SERVER = "server";
   @SerializedName(SERIALIZED_NAME_SERVER)
+  @javax.annotation.Nullable
   private String server;
 
   public static final String SERIALIZED_NAME_SERVICE = "service";
   @SerializedName(SERIALIZED_NAME_SERVICE)
+  @javax.annotation.Nullable
   private String service;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
+  @javax.annotation.Nullable
   private String size;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
   private String state;
 
   public static final String SERIALIZED_NAME_STORAGE = "storage";
   @SerializedName(SERIALIZED_NAME_STORAGE)
+  @javax.annotation.Nullable
   private String storage;
 
   public static final String SERIALIZED_NAME_STORAGE_ID = "storage_id";
   @SerializedName(SERIALIZED_NAME_STORAGE_ID)
+  @javax.annotation.Nullable
   private String storageId;
 
   public Assetsv3AssetInformation() {
   }
 
-  public Assetsv3AssetInformation application(String application) {
+  public Assetsv3AssetInformation application(@javax.annotation.Nullable String application) {
     this.application = application;
     return this;
   }
 
-   /**
+  /**
    * Get application
    * @return application
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplication() {
     return application;
   }
 
-  public void setApplication(String application) {
+  public void setApplication(@javax.annotation.Nullable String application) {
     this.application = application;
   }
 
 
-  public Assetsv3AssetInformation applicationId(String applicationId) {
+  public Assetsv3AssetInformation applicationId(@javax.annotation.Nullable String applicationId) {
     this.applicationId = applicationId;
     return this;
   }
 
-   /**
+  /**
    * Get applicationId
    * @return applicationId
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplicationId() {
     return applicationId;
   }
 
-  public void setApplicationId(String applicationId) {
+  public void setApplicationId(@javax.annotation.Nullable String applicationId) {
     this.applicationId = applicationId;
   }
 
 
-  public Assetsv3AssetInformation assetName(String assetName) {
+  public Assetsv3AssetInformation assetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
     return this;
   }
 
-   /**
+  /**
    * Get assetName
    * @return assetName
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetName() {
     return assetName;
   }
 
-  public void setAssetName(String assetName) {
+  public void setAssetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
   }
 
 
-  public Assetsv3AssetInformation assetType(String assetType) {
+  public Assetsv3AssetInformation assetType(@javax.annotation.Nullable String assetType) {
     this.assetType = assetType;
     return this;
   }
 
-   /**
+  /**
    * Get assetType
    * @return assetType
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetType() {
     return assetType;
   }
 
-  public void setAssetType(String assetType) {
+  public void setAssetType(@javax.annotation.Nullable String assetType) {
     this.assetType = assetType;
   }
 
 
-  public Assetsv3AssetInformation category(String category) {
+  public Assetsv3AssetInformation category(@javax.annotation.Nullable String category) {
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategory() {
     return category;
   }
 
-  public void setCategory(String category) {
+  public void setCategory(@javax.annotation.Nullable String category) {
     this.category = category;
   }
 
 
-  public Assetsv3AssetInformation city(String city) {
+  public Assetsv3AssetInformation city(@javax.annotation.Nullable String city) {
     this.city = city;
     return this;
   }
 
-   /**
+  /**
    * Get city
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
   public String getCity() {
     return city;
   }
 
-  public void setCity(String city) {
+  public void setCity(@javax.annotation.Nullable String city) {
     this.city = city;
   }
 
 
-  public Assetsv3AssetInformation country(String country) {
+  public Assetsv3AssetInformation country(@javax.annotation.Nullable String country) {
     this.country = country;
     return this;
   }
 
-   /**
+  /**
    * Get country
    * @return country
-  **/
+   */
   @javax.annotation.Nullable
   public String getCountry() {
     return country;
   }
 
-  public void setCountry(String country) {
+  public void setCountry(@javax.annotation.Nullable String country) {
     this.country = country;
   }
 
 
-  public Assetsv3AssetInformation criticality(String criticality) {
+  public Assetsv3AssetInformation criticality(@javax.annotation.Nullable String criticality) {
     this.criticality = criticality;
     return this;
   }
 
-   /**
+  /**
    * Get criticality
    * @return criticality
-  **/
+   */
   @javax.annotation.Nullable
   public String getCriticality() {
     return criticality;
   }
 
-  public void setCriticality(String criticality) {
+  public void setCriticality(@javax.annotation.Nullable String criticality) {
     this.criticality = criticality;
   }
 
 
-  public Assetsv3AssetInformation dataCenter(String dataCenter) {
+  public Assetsv3AssetInformation dataCenter(@javax.annotation.Nullable String dataCenter) {
     this.dataCenter = dataCenter;
     return this;
   }
 
-   /**
+  /**
    * Get dataCenter
    * @return dataCenter
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataCenter() {
     return dataCenter;
   }
 
-  public void setDataCenter(String dataCenter) {
+  public void setDataCenter(@javax.annotation.Nullable String dataCenter) {
     this.dataCenter = dataCenter;
   }
 
 
-  public Assetsv3AssetInformation database(String database) {
+  public Assetsv3AssetInformation database(@javax.annotation.Nullable String database) {
     this.database = database;
     return this;
   }
 
-   /**
+  /**
    * Get database
    * @return database
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabase() {
     return database;
   }
 
-  public void setDatabase(String database) {
+  public void setDatabase(@javax.annotation.Nullable String database) {
     this.database = database;
   }
 
 
-  public Assetsv3AssetInformation databaseProtocol(String databaseProtocol) {
+  public Assetsv3AssetInformation databaseProtocol(@javax.annotation.Nullable String databaseProtocol) {
     this.databaseProtocol = databaseProtocol;
     return this;
   }
 
-   /**
+  /**
    * Get databaseProtocol
    * @return databaseProtocol
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseProtocol() {
     return databaseProtocol;
   }
 
-  public void setDatabaseProtocol(String databaseProtocol) {
+  public void setDatabaseProtocol(@javax.annotation.Nullable String databaseProtocol) {
     this.databaseProtocol = databaseProtocol;
   }
 
 
-  public Assetsv3AssetInformation databaseType(String databaseType) {
+  public Assetsv3AssetInformation databaseType(@javax.annotation.Nullable String databaseType) {
     this.databaseType = databaseType;
     return this;
   }
 
-   /**
+  /**
    * Get databaseType
    * @return databaseType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseType() {
     return databaseType;
   }
 
-  public void setDatabaseType(String databaseType) {
+  public void setDatabaseType(@javax.annotation.Nullable String databaseType) {
     this.databaseType = databaseType;
   }
 
 
-  public Assetsv3AssetInformation deployment(String deployment) {
+  public Assetsv3AssetInformation deployment(@javax.annotation.Nullable String deployment) {
     this.deployment = deployment;
     return this;
   }
 
-   /**
+  /**
    * Get deployment
    * @return deployment
-  **/
+   */
   @javax.annotation.Nullable
   public String getDeployment() {
     return deployment;
   }
 
-  public void setDeployment(String deployment) {
+  public void setDeployment(@javax.annotation.Nullable String deployment) {
     this.deployment = deployment;
   }
 
 
-  public Assetsv3AssetInformation endpoint(String endpoint) {
+  public Assetsv3AssetInformation endpoint(@javax.annotation.Nullable String endpoint) {
     this.endpoint = endpoint;
     return this;
   }
 
-   /**
+  /**
    * Get endpoint
    * @return endpoint
-  **/
+   */
   @javax.annotation.Nullable
   public String getEndpoint() {
     return endpoint;
   }
 
-  public void setEndpoint(String endpoint) {
+  public void setEndpoint(@javax.annotation.Nullable String endpoint) {
     this.endpoint = endpoint;
   }
 
 
-  public Assetsv3AssetInformation environment(String environment) {
+  public Assetsv3AssetInformation environment(@javax.annotation.Nullable String environment) {
     this.environment = environment;
     return this;
   }
 
-   /**
+  /**
    * Get environment
    * @return environment
-  **/
+   */
   @javax.annotation.Nullable
   public String getEnvironment() {
     return environment;
   }
 
-  public void setEnvironment(String environment) {
+  public void setEnvironment(@javax.annotation.Nullable String environment) {
     this.environment = environment;
   }
 
 
-  public Assetsv3AssetInformation folderPath(String folderPath) {
+  public Assetsv3AssetInformation folderPath(@javax.annotation.Nullable String folderPath) {
     this.folderPath = folderPath;
     return this;
   }
 
-   /**
+  /**
    * Get folderPath
    * @return folderPath
-  **/
+   */
   @javax.annotation.Nullable
   public String getFolderPath() {
     return folderPath;
   }
 
-  public void setFolderPath(String folderPath) {
+  public void setFolderPath(@javax.annotation.Nullable String folderPath) {
     this.folderPath = folderPath;
   }
 
 
-  public Assetsv3AssetInformation gdpDataSources(String gdpDataSources) {
+  public Assetsv3AssetInformation gdpDataSources(@javax.annotation.Nullable String gdpDataSources) {
     this.gdpDataSources = gdpDataSources;
     return this;
   }
 
-   /**
+  /**
    * Get gdpDataSources
    * @return gdpDataSources
-  **/
+   */
   @javax.annotation.Nullable
   public String getGdpDataSources() {
     return gdpDataSources;
   }
 
-  public void setGdpDataSources(String gdpDataSources) {
+  public void setGdpDataSources(@javax.annotation.Nullable String gdpDataSources) {
     this.gdpDataSources = gdpDataSources;
   }
 
 
-  public Assetsv3AssetInformation hasTrainingData(Boolean hasTrainingData) {
+  public Assetsv3AssetInformation hasTrainingData(@javax.annotation.Nullable Boolean hasTrainingData) {
     this.hasTrainingData = hasTrainingData;
     return this;
   }
 
-   /**
+  /**
    * Get hasTrainingData
    * @return hasTrainingData
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHasTrainingData() {
     return hasTrainingData;
   }
 
-  public void setHasTrainingData(Boolean hasTrainingData) {
+  public void setHasTrainingData(@javax.annotation.Nullable Boolean hasTrainingData) {
     this.hasTrainingData = hasTrainingData;
   }
 
 
-  public Assetsv3AssetInformation hostName(String hostName) {
+  public Assetsv3AssetInformation hostName(@javax.annotation.Nullable String hostName) {
     this.hostName = hostName;
     return this;
   }
 
-   /**
+  /**
    * Get hostName
    * @return hostName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHostName() {
     return hostName;
   }
 
-  public void setHostName(String hostName) {
+  public void setHostName(@javax.annotation.Nullable String hostName) {
     this.hostName = hostName;
   }
 
 
-  public Assetsv3AssetInformation lastActivity(String lastActivity) {
+  public Assetsv3AssetInformation lastActivity(@javax.annotation.Nullable String lastActivity) {
     this.lastActivity = lastActivity;
     return this;
   }
 
-   /**
+  /**
    * Get lastActivity
    * @return lastActivity
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastActivity() {
     return lastActivity;
   }
 
-  public void setLastActivity(String lastActivity) {
+  public void setLastActivity(@javax.annotation.Nullable String lastActivity) {
     this.lastActivity = lastActivity;
   }
 
 
-  public Assetsv3AssetInformation lastTrained(String lastTrained) {
+  public Assetsv3AssetInformation lastTrained(@javax.annotation.Nullable String lastTrained) {
     this.lastTrained = lastTrained;
     return this;
   }
 
-   /**
+  /**
    * Get lastTrained
    * @return lastTrained
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastTrained() {
     return lastTrained;
   }
 
-  public void setLastTrained(String lastTrained) {
+  public void setLastTrained(@javax.annotation.Nullable String lastTrained) {
     this.lastTrained = lastTrained;
   }
 
 
-  public Assetsv3AssetInformation macAddress(String macAddress) {
+  public Assetsv3AssetInformation macAddress(@javax.annotation.Nullable String macAddress) {
     this.macAddress = macAddress;
     return this;
   }
 
-   /**
+  /**
    * Get macAddress
    * @return macAddress
-  **/
+   */
   @javax.annotation.Nullable
   public String getMacAddress() {
     return macAddress;
   }
 
-  public void setMacAddress(String macAddress) {
+  public void setMacAddress(@javax.annotation.Nullable String macAddress) {
     this.macAddress = macAddress;
   }
 
 
-  public Assetsv3AssetInformation model(String model) {
+  public Assetsv3AssetInformation model(@javax.annotation.Nullable String model) {
     this.model = model;
     return this;
   }
 
-   /**
+  /**
    * Get model
    * @return model
-  **/
+   */
   @javax.annotation.Nullable
   public String getModel() {
     return model;
   }
 
-  public void setModel(String model) {
+  public void setModel(@javax.annotation.Nullable String model) {
     this.model = model;
   }
 
 
-  public Assetsv3AssetInformation os(String os) {
+  public Assetsv3AssetInformation os(@javax.annotation.Nullable String os) {
     this.os = os;
     return this;
   }
 
-   /**
+  /**
    * Get os
    * @return os
-  **/
+   */
   @javax.annotation.Nullable
   public String getOs() {
     return os;
   }
 
-  public void setOs(String os) {
+  public void setOs(@javax.annotation.Nullable String os) {
     this.os = os;
   }
 
 
-  public Assetsv3AssetInformation owner(String owner) {
+  public Assetsv3AssetInformation owner(@javax.annotation.Nullable String owner) {
     this.owner = owner;
     return this;
   }
 
-   /**
+  /**
    * Get owner
    * @return owner
-  **/
+   */
   @javax.annotation.Nullable
   public String getOwner() {
     return owner;
   }
 
-  public void setOwner(String owner) {
+  public void setOwner(@javax.annotation.Nullable String owner) {
     this.owner = owner;
   }
 
 
-  public Assetsv3AssetInformation publisher(String publisher) {
+  public Assetsv3AssetInformation publisher(@javax.annotation.Nullable String publisher) {
     this.publisher = publisher;
     return this;
   }
 
-   /**
+  /**
    * Get publisher
    * @return publisher
-  **/
+   */
   @javax.annotation.Nullable
   public String getPublisher() {
     return publisher;
   }
 
-  public void setPublisher(String publisher) {
+  public void setPublisher(@javax.annotation.Nullable String publisher) {
     this.publisher = publisher;
   }
 
 
-  public Assetsv3AssetInformation region(String region) {
+  public Assetsv3AssetInformation region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Get region
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public Assetsv3AssetInformation riskLevel(String riskLevel) {
+  public Assetsv3AssetInformation riskLevel(@javax.annotation.Nullable String riskLevel) {
     this.riskLevel = riskLevel;
     return this;
   }
 
-   /**
+  /**
    * Get riskLevel
    * @return riskLevel
-  **/
+   */
   @javax.annotation.Nullable
   public String getRiskLevel() {
     return riskLevel;
   }
 
-  public void setRiskLevel(String riskLevel) {
+  public void setRiskLevel(@javax.annotation.Nullable String riskLevel) {
     this.riskLevel = riskLevel;
   }
 
 
-  public Assetsv3AssetInformation schema(String schema) {
+  public Assetsv3AssetInformation schema(@javax.annotation.Nullable String schema) {
     this.schema = schema;
     return this;
   }
 
-   /**
+  /**
    * Get schema
    * @return schema
-  **/
+   */
   @javax.annotation.Nullable
   public String getSchema() {
     return schema;
   }
 
-  public void setSchema(String schema) {
+  public void setSchema(@javax.annotation.Nullable String schema) {
     this.schema = schema;
   }
 
 
-  public Assetsv3AssetInformation server(String server) {
+  public Assetsv3AssetInformation server(@javax.annotation.Nullable String server) {
     this.server = server;
     return this;
   }
 
-   /**
+  /**
    * Get server
    * @return server
-  **/
+   */
   @javax.annotation.Nullable
   public String getServer() {
     return server;
   }
 
-  public void setServer(String server) {
+  public void setServer(@javax.annotation.Nullable String server) {
     this.server = server;
   }
 
 
-  public Assetsv3AssetInformation service(String service) {
+  public Assetsv3AssetInformation service(@javax.annotation.Nullable String service) {
     this.service = service;
     return this;
   }
 
-   /**
+  /**
    * Get service
    * @return service
-  **/
+   */
   @javax.annotation.Nullable
   public String getService() {
     return service;
   }
 
-  public void setService(String service) {
+  public void setService(@javax.annotation.Nullable String service) {
     this.service = service;
   }
 
 
-  public Assetsv3AssetInformation size(String size) {
+  public Assetsv3AssetInformation size(@javax.annotation.Nullable String size) {
     this.size = size;
     return this;
   }
 
-   /**
+  /**
    * Get size
    * @return size
-  **/
+   */
   @javax.annotation.Nullable
   public String getSize() {
     return size;
   }
 
-  public void setSize(String size) {
+  public void setSize(@javax.annotation.Nullable String size) {
     this.size = size;
   }
 
 
-  public Assetsv3AssetInformation state(String state) {
+  public Assetsv3AssetInformation state(@javax.annotation.Nullable String state) {
     this.state = state;
     return this;
   }
 
-   /**
+  /**
    * Get state
    * @return state
-  **/
+   */
   @javax.annotation.Nullable
   public String getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(@javax.annotation.Nullable String state) {
     this.state = state;
   }
 
 
-  public Assetsv3AssetInformation storage(String storage) {
+  public Assetsv3AssetInformation storage(@javax.annotation.Nullable String storage) {
     this.storage = storage;
     return this;
   }
 
-   /**
+  /**
    * Get storage
    * @return storage
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorage() {
     return storage;
   }
 
-  public void setStorage(String storage) {
+  public void setStorage(@javax.annotation.Nullable String storage) {
     this.storage = storage;
   }
 
 
-  public Assetsv3AssetInformation storageId(String storageId) {
+  public Assetsv3AssetInformation storageId(@javax.annotation.Nullable String storageId) {
     this.storageId = storageId;
     return this;
   }
 
-   /**
+  /**
    * Get storageId
    * @return storageId
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorageId() {
     return storageId;
   }
 
-  public void setStorageId(String storageId) {
+  public void setStorageId(@javax.annotation.Nullable String storageId) {
     this.storageId = storageId;
   }
 
@@ -971,57 +1007,22 @@ public class Assetsv3AssetInformation {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("application");
-    openapiFields.add("application_id");
-    openapiFields.add("asset_name");
-    openapiFields.add("asset_type");
-    openapiFields.add("category");
-    openapiFields.add("city");
-    openapiFields.add("country");
-    openapiFields.add("criticality");
-    openapiFields.add("data_center");
-    openapiFields.add("database");
-    openapiFields.add("database_protocol");
-    openapiFields.add("database_type");
-    openapiFields.add("deployment");
-    openapiFields.add("endpoint");
-    openapiFields.add("environment");
-    openapiFields.add("folder_path");
-    openapiFields.add("gdp_data_sources");
-    openapiFields.add("has_training_data");
-    openapiFields.add("host_name");
-    openapiFields.add("last_activity");
-    openapiFields.add("last_trained");
-    openapiFields.add("mac_address");
-    openapiFields.add("model");
-    openapiFields.add("os");
-    openapiFields.add("owner");
-    openapiFields.add("publisher");
-    openapiFields.add("region");
-    openapiFields.add("risk_level");
-    openapiFields.add("schema");
-    openapiFields.add("server");
-    openapiFields.add("service");
-    openapiFields.add("size");
-    openapiFields.add("state");
-    openapiFields.add("storage");
-    openapiFields.add("storage_id");
+    openapiFields = new HashSet<String>(Arrays.asList("application", "application_id", "asset_name", "asset_type", "category", "city", "country", "criticality", "data_center", "database", "database_protocol", "database_type", "deployment", "endpoint", "environment", "folder_path", "gdp_data_sources", "has_training_data", "host_name", "last_activity", "last_trained", "mac_address", "model", "os", "owner", "publisher", "region", "risk_level", "schema", "server", "service", "size", "state", "storage", "storage_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetInformation
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetInformation
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetInformation.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetInformation is not found in the empty JSON string", Assetsv3AssetInformation.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetInformation is not found in the empty JSON string", Assetsv3AssetInformation.openapiRequiredFields.toString()));
         }
       }
 
@@ -1029,111 +1030,111 @@ public class Assetsv3AssetInformation {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetInformation.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetInformation` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetInformation` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("application") != null && !jsonObj.get("application").isJsonNull()) && !jsonObj.get("application").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application").toString()));
       }
       if ((jsonObj.get("application_id") != null && !jsonObj.get("application_id").isJsonNull()) && !jsonObj.get("application_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_id").toString()));
       }
       if ((jsonObj.get("asset_name") != null && !jsonObj.get("asset_name").isJsonNull()) && !jsonObj.get("asset_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
       }
       if ((jsonObj.get("asset_type") != null && !jsonObj.get("asset_type").isJsonNull()) && !jsonObj.get("asset_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_type").toString()));
       }
       if ((jsonObj.get("category") != null && !jsonObj.get("category").isJsonNull()) && !jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
       if ((jsonObj.get("city") != null && !jsonObj.get("city").isJsonNull()) && !jsonObj.get("city").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("city").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("city").toString()));
       }
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
       if ((jsonObj.get("criticality") != null && !jsonObj.get("criticality").isJsonNull()) && !jsonObj.get("criticality").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `criticality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("criticality").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `criticality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("criticality").toString()));
       }
       if ((jsonObj.get("data_center") != null && !jsonObj.get("data_center").isJsonNull()) && !jsonObj.get("data_center").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_center").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_center").toString()));
       }
       if ((jsonObj.get("database") != null && !jsonObj.get("database").isJsonNull()) && !jsonObj.get("database").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database").toString()));
       }
       if ((jsonObj.get("database_protocol") != null && !jsonObj.get("database_protocol").isJsonNull()) && !jsonObj.get("database_protocol").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_protocol").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_protocol").toString()));
       }
       if ((jsonObj.get("database_type") != null && !jsonObj.get("database_type").isJsonNull()) && !jsonObj.get("database_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_type").toString()));
       }
       if ((jsonObj.get("deployment") != null && !jsonObj.get("deployment").isJsonNull()) && !jsonObj.get("deployment").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `deployment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("deployment").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `deployment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("deployment").toString()));
       }
       if ((jsonObj.get("endpoint") != null && !jsonObj.get("endpoint").isJsonNull()) && !jsonObj.get("endpoint").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `endpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("endpoint").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `endpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("endpoint").toString()));
       }
       if ((jsonObj.get("environment") != null && !jsonObj.get("environment").isJsonNull()) && !jsonObj.get("environment").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `environment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("environment").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `environment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("environment").toString()));
       }
       if ((jsonObj.get("folder_path") != null && !jsonObj.get("folder_path").isJsonNull()) && !jsonObj.get("folder_path").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `folder_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_path").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `folder_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_path").toString()));
       }
       if ((jsonObj.get("gdp_data_sources") != null && !jsonObj.get("gdp_data_sources").isJsonNull()) && !jsonObj.get("gdp_data_sources").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `gdp_data_sources` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gdp_data_sources").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `gdp_data_sources` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gdp_data_sources").toString()));
       }
       if ((jsonObj.get("host_name") != null && !jsonObj.get("host_name").isJsonNull()) && !jsonObj.get("host_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `host_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `host_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host_name").toString()));
       }
       if ((jsonObj.get("last_activity") != null && !jsonObj.get("last_activity").isJsonNull()) && !jsonObj.get("last_activity").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_activity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_activity").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_activity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_activity").toString()));
       }
       if ((jsonObj.get("last_trained") != null && !jsonObj.get("last_trained").isJsonNull()) && !jsonObj.get("last_trained").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_trained` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_trained").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_trained` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_trained").toString()));
       }
       if ((jsonObj.get("mac_address") != null && !jsonObj.get("mac_address").isJsonNull()) && !jsonObj.get("mac_address").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `mac_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mac_address").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `mac_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mac_address").toString()));
       }
       if ((jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) && !jsonObj.get("model").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
       }
       if ((jsonObj.get("os") != null && !jsonObj.get("os").isJsonNull()) && !jsonObj.get("os").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `os` to be a primitive type in the JSON string but got `%s`", jsonObj.get("os").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `os` to be a primitive type in the JSON string but got `%s`", jsonObj.get("os").toString()));
       }
       if ((jsonObj.get("owner") != null && !jsonObj.get("owner").isJsonNull()) && !jsonObj.get("owner").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `owner` to be a primitive type in the JSON string but got `%s`", jsonObj.get("owner").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `owner` to be a primitive type in the JSON string but got `%s`", jsonObj.get("owner").toString()));
       }
       if ((jsonObj.get("publisher") != null && !jsonObj.get("publisher").isJsonNull()) && !jsonObj.get("publisher").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `publisher` to be a primitive type in the JSON string but got `%s`", jsonObj.get("publisher").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `publisher` to be a primitive type in the JSON string but got `%s`", jsonObj.get("publisher").toString()));
       }
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
       if ((jsonObj.get("risk_level") != null && !jsonObj.get("risk_level").isJsonNull()) && !jsonObj.get("risk_level").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `risk_level` to be a primitive type in the JSON string but got `%s`", jsonObj.get("risk_level").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `risk_level` to be a primitive type in the JSON string but got `%s`", jsonObj.get("risk_level").toString()));
       }
       if ((jsonObj.get("schema") != null && !jsonObj.get("schema").isJsonNull()) && !jsonObj.get("schema").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schema` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schema` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema").toString()));
       }
       if ((jsonObj.get("server") != null && !jsonObj.get("server").isJsonNull()) && !jsonObj.get("server").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `server` to be a primitive type in the JSON string but got `%s`", jsonObj.get("server").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `server` to be a primitive type in the JSON string but got `%s`", jsonObj.get("server").toString()));
       }
       if ((jsonObj.get("service") != null && !jsonObj.get("service").isJsonNull()) && !jsonObj.get("service").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `service` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `service` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service").toString()));
       }
       if ((jsonObj.get("size") != null && !jsonObj.get("size").isJsonNull()) && !jsonObj.get("size").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("size").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("size").toString()));
       }
       if ((jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull()) && !jsonObj.get("state").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
       }
       if ((jsonObj.get("storage") != null && !jsonObj.get("storage").isJsonNull()) && !jsonObj.get("storage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage").toString()));
       }
       if ((jsonObj.get("storage_id") != null && !jsonObj.get("storage_id").isJsonNull()) && !jsonObj.get("storage_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_id").toString()));
       }
   }
 
@@ -1166,22 +1167,22 @@ public class Assetsv3AssetInformation {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetInformation given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetInformation
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetInformation
-  */
+  /**
+   * Create an instance of Assetsv3AssetInformation given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetInformation
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetInformation
+   */
   public static Assetsv3AssetInformation fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetInformation.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetInformation to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetInformation to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

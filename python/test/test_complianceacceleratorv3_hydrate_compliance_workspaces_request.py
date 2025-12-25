@@ -27,7 +27,7 @@ class TestComplianceacceleratorv3HydrateComplianceWorkspacesRequest(unittest.Tes
 
     def make_instance(self, include_optional) -> Complianceacceleratorv3HydrateComplianceWorkspacesRequest:
         """Test Complianceacceleratorv3HydrateComplianceWorkspacesRequest
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Complianceacceleratorv3HydrateComplianceWorkspacesRequest`

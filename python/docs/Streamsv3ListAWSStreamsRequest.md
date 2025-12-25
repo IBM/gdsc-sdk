@@ -7,12 +7,12 @@ ListAWSStreamsRequest defines a request to list AWS Kinesis streams.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_key_id** | **str** | AWS access key ID. | [optional] 
-**auth_type** | [**Streamsv3AuthType**](Streamsv3AuthType.md) |  | [optional] 
+**auth_type** | [**Streamsv3AuthType**](Streamsv3AuthType.md) |  | [optional] [default to Streamsv3AuthType.SECURITY_CREDENTIALS]
 **id** | **str** | Identifier. | [optional] 
 **region** | **List[str]** | AWS region. | [optional] 
 **role_arn** | **str** | IAM role ARN. | [optional] 
 **secret_key_id** | **str** | AWS secret key ID. | [optional] 
-**stream_type** | [**Streamsv3StreamType**](Streamsv3StreamType.md) |  | [optional] 
+**stream_type** | [**Streamsv3StreamType**](Streamsv3StreamType.md) |  | [optional] [default to Streamsv3StreamType.AWS_KINESIS]
 
 ## Example
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,71 +43,78 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Report object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3Report {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_GROUPS_NEEDED = "groups_needed";
   @SerializedName(SERIALIZED_NAME_GROUPS_NEEDED)
+  @javax.annotation.Nullable
   private List<Complianceacceleratorv3Group> groupsNeeded = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_GROUPS_PRESENT = "groups_present";
   @SerializedName(SERIALIZED_NAME_GROUPS_PRESENT)
+  @javax.annotation.Nullable
   private List<Complianceacceleratorv3Group> groupsPresent = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_TAGS = "report_tags";
   @SerializedName(SERIALIZED_NAME_REPORT_TAGS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportTag> reportTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3ReportStatus status = Complianceacceleratorv3ReportStatus.POPULATED;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public Complianceacceleratorv3Report() {
   }
 
-  public Complianceacceleratorv3Report description(String description) {
+  public Complianceacceleratorv3Report description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Report description.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Complianceacceleratorv3Report groupsNeeded(List<Complianceacceleratorv3Group> groupsNeeded) {
+  public Complianceacceleratorv3Report groupsNeeded(@javax.annotation.Nullable List<Complianceacceleratorv3Group> groupsNeeded) {
     this.groupsNeeded = groupsNeeded;
     return this;
   }
@@ -119,21 +127,21 @@ public class Complianceacceleratorv3Report {
     return this;
   }
 
-   /**
+  /**
    * Get groupsNeeded
    * @return groupsNeeded
-  **/
+   */
   @javax.annotation.Nullable
   public List<Complianceacceleratorv3Group> getGroupsNeeded() {
     return groupsNeeded;
   }
 
-  public void setGroupsNeeded(List<Complianceacceleratorv3Group> groupsNeeded) {
+  public void setGroupsNeeded(@javax.annotation.Nullable List<Complianceacceleratorv3Group> groupsNeeded) {
     this.groupsNeeded = groupsNeeded;
   }
 
 
-  public Complianceacceleratorv3Report groupsPresent(List<Complianceacceleratorv3Group> groupsPresent) {
+  public Complianceacceleratorv3Report groupsPresent(@javax.annotation.Nullable List<Complianceacceleratorv3Group> groupsPresent) {
     this.groupsPresent = groupsPresent;
     return this;
   }
@@ -146,40 +154,40 @@ public class Complianceacceleratorv3Report {
     return this;
   }
 
-   /**
+  /**
    * Groups present in the reports.
    * @return groupsPresent
-  **/
+   */
   @javax.annotation.Nullable
   public List<Complianceacceleratorv3Group> getGroupsPresent() {
     return groupsPresent;
   }
 
-  public void setGroupsPresent(List<Complianceacceleratorv3Group> groupsPresent) {
+  public void setGroupsPresent(@javax.annotation.Nullable List<Complianceacceleratorv3Group> groupsPresent) {
     this.groupsPresent = groupsPresent;
   }
 
 
-  public Complianceacceleratorv3Report reportId(String reportId) {
+  public Complianceacceleratorv3Report reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Id of the reports.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Complianceacceleratorv3Report reportTags(List<Reportsv3ReportTag> reportTags) {
+  public Complianceacceleratorv3Report reportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
     return this;
   }
@@ -192,54 +200,54 @@ public class Complianceacceleratorv3Report {
     return this;
   }
 
-   /**
+  /**
    * The report tags.
    * @return reportTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportTag> getReportTags() {
     return reportTags;
   }
 
-  public void setReportTags(List<Reportsv3ReportTag> reportTags) {
+  public void setReportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
   }
 
 
-  public Complianceacceleratorv3Report status(Complianceacceleratorv3ReportStatus status) {
+  public Complianceacceleratorv3Report status(@javax.annotation.Nullable Complianceacceleratorv3ReportStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3ReportStatus getStatus() {
     return status;
   }
 
-  public void setStatus(Complianceacceleratorv3ReportStatus status) {
+  public void setStatus(@javax.annotation.Nullable Complianceacceleratorv3ReportStatus status) {
     this.status = status;
   }
 
 
-  public Complianceacceleratorv3Report title(String title) {
+  public Complianceacceleratorv3Report title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Title of the report.
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
@@ -300,29 +308,22 @@ public class Complianceacceleratorv3Report {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("description");
-    openapiFields.add("groups_needed");
-    openapiFields.add("groups_present");
-    openapiFields.add("report_id");
-    openapiFields.add("report_tags");
-    openapiFields.add("status");
-    openapiFields.add("title");
+    openapiFields = new HashSet<String>(Arrays.asList("description", "groups_needed", "groups_present", "report_id", "report_tags", "status", "title"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Report
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Report
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3Report.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3Report is not found in the empty JSON string", Complianceacceleratorv3Report.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3Report is not found in the empty JSON string", Complianceacceleratorv3Report.openapiRequiredFields.toString()));
         }
       }
 
@@ -330,19 +331,19 @@ public class Complianceacceleratorv3Report {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3Report.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Report` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Report` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("groups_needed") != null && !jsonObj.get("groups_needed").isJsonNull()) {
         JsonArray jsonArraygroupsNeeded = jsonObj.getAsJsonArray("groups_needed");
         if (jsonArraygroupsNeeded != null) {
           // ensure the json data is an array
           if (!jsonObj.get("groups_needed").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `groups_needed` to be an array in the JSON string but got `%s`", jsonObj.get("groups_needed").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `groups_needed` to be an array in the JSON string but got `%s`", jsonObj.get("groups_needed").toString()));
           }
 
           // validate the optional field `groups_needed` (array)
@@ -356,7 +357,7 @@ public class Complianceacceleratorv3Report {
         if (jsonArraygroupsPresent != null) {
           // ensure the json data is an array
           if (!jsonObj.get("groups_present").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `groups_present` to be an array in the JSON string but got `%s`", jsonObj.get("groups_present").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `groups_present` to be an array in the JSON string but got `%s`", jsonObj.get("groups_present").toString()));
           }
 
           // validate the optional field `groups_present` (array)
@@ -366,14 +367,14 @@ public class Complianceacceleratorv3Report {
         }
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if (jsonObj.get("report_tags") != null && !jsonObj.get("report_tags").isJsonNull()) {
         JsonArray jsonArrayreportTags = jsonObj.getAsJsonArray("report_tags");
         if (jsonArrayreportTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
           }
 
           // validate the optional field `report_tags` (array)
@@ -387,7 +388,7 @@ public class Complianceacceleratorv3Report {
         Complianceacceleratorv3ReportStatus.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
   }
 
@@ -420,22 +421,22 @@ public class Complianceacceleratorv3Report {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3Report given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3Report
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Report
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3Report given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3Report
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Report
+   */
   public static Complianceacceleratorv3Report fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3Report.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3Report to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3Report to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

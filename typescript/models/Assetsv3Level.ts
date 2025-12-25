@@ -16,10 +16,10 @@ import { HttpFile } from '../http/http';
 * - LEVEL_UNKNOWN: no info about risk/criticality involved  - LEVEL_NONE: no risk/criticality involed  - LEVEL_LOW: low risk/criticality involed  - LEVEL_MEDIUM: medium risk/criticality involed  - LEVEL_HIGH: high risk/criticality involed  - LEVEL_CRITICAL: critical risk/criticality involed
 */
 export enum Assetsv3Level {
-    Unknown = 'LEVEL_UNKNOWN',
-    None = 'LEVEL_NONE',
-    Low = 'LEVEL_LOW',
-    Medium = 'LEVEL_MEDIUM',
-    High = 'LEVEL_HIGH',
-    Critical = 'LEVEL_CRITICAL'
+    LevelUnknown = 'LEVEL_UNKNOWN',
+    LevelNone = 'LEVEL_NONE',
+    LevelLow = 'LEVEL_LOW',
+    LevelMedium = 'LEVEL_MEDIUM',
+    LevelHigh = 'LEVEL_HIGH',
+    LevelCritical = 'LEVEL_CRITICAL'
 }

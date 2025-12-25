@@ -2,10 +2,11 @@
 
 Control flow.
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+* `STANDARD` (value: `'STANDARD'`)
+
+* `COMPLIANCE` (value: `'COMPLIANCE'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

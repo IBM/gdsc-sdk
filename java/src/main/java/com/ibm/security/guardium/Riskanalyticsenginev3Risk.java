@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -45,125 +46,136 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Riskanalyticsenginev3Risk
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3Risk {
   public static final String SERIALIZED_NAME_CLASSIFICATION_DETAILS = "classification_details";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_DETAILS)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3ClassificationDetails classificationDetails;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String SERIALIZED_NAME_FEATURE_SETS = "feature_sets";
   @SerializedName(SERIALIZED_NAME_FEATURE_SETS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3FeatureSet> featureSets = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_IS_EMERGING = "is_emerging";
   @SerializedName(SERIALIZED_NAME_IS_EMERGING)
+  @javax.annotation.Nullable
   private Boolean isEmerging;
 
   public static final String SERIALIZED_NAME_LEADS = "leads";
   @SerializedName(SERIALIZED_NAME_LEADS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3Lead> leads = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PIVOT = "pivot";
   @SerializedName(SERIALIZED_NAME_PIVOT)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3Pivot pivot;
 
   public static final String SERIALIZED_NAME_SCORE = "score";
   @SerializedName(SERIALIZED_NAME_SCORE)
+  @javax.annotation.Nullable
   private Integer score;
 
   public static final String SERIALIZED_NAME_SEVERITY_LEVEL = "severity_level";
   @SerializedName(SERIALIZED_NAME_SEVERITY_LEVEL)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3SeverityLevel severityLevel = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public Riskanalyticsenginev3Risk() {
   }
 
-  public Riskanalyticsenginev3Risk classificationDetails(Riskanalyticsenginev3ClassificationDetails classificationDetails) {
+  public Riskanalyticsenginev3Risk classificationDetails(@javax.annotation.Nullable Riskanalyticsenginev3ClassificationDetails classificationDetails) {
     this.classificationDetails = classificationDetails;
     return this;
   }
 
-   /**
+  /**
    * Get classificationDetails
    * @return classificationDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3ClassificationDetails getClassificationDetails() {
     return classificationDetails;
   }
 
-  public void setClassificationDetails(Riskanalyticsenginev3ClassificationDetails classificationDetails) {
+  public void setClassificationDetails(@javax.annotation.Nullable Riskanalyticsenginev3ClassificationDetails classificationDetails) {
     this.classificationDetails = classificationDetails;
   }
 
 
-  public Riskanalyticsenginev3Risk creationTime(OffsetDateTime creationTime) {
+  public Riskanalyticsenginev3Risk creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * The risk creation time in format YYYY-MM-DDTHH:mm:ss.sssZ.
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Riskanalyticsenginev3Risk endTime(OffsetDateTime endTime) {
+  public Riskanalyticsenginev3Risk endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * The leads end time in format YYYY-MM-DDTHH:mm:ss.sssZ.
    * @return endTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public Riskanalyticsenginev3Risk featureSets(List<Riskanalyticsenginev3FeatureSet> featureSets) {
+  public Riskanalyticsenginev3Risk featureSets(@javax.annotation.Nullable List<Riskanalyticsenginev3FeatureSet> featureSets) {
     this.featureSets = featureSets;
     return this;
   }
@@ -176,59 +188,59 @@ public class Riskanalyticsenginev3Risk {
     return this;
   }
 
-   /**
+  /**
    * The risk features (scores).
    * @return featureSets
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3FeatureSet> getFeatureSets() {
     return featureSets;
   }
 
-  public void setFeatureSets(List<Riskanalyticsenginev3FeatureSet> featureSets) {
+  public void setFeatureSets(@javax.annotation.Nullable List<Riskanalyticsenginev3FeatureSet> featureSets) {
     this.featureSets = featureSets;
   }
 
 
-  public Riskanalyticsenginev3Risk id(String id) {
+  public Riskanalyticsenginev3Risk id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * The risk id.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Riskanalyticsenginev3Risk isEmerging(Boolean isEmerging) {
+  public Riskanalyticsenginev3Risk isEmerging(@javax.annotation.Nullable Boolean isEmerging) {
     this.isEmerging = isEmerging;
     return this;
   }
 
-   /**
+  /**
    * Get isEmerging
    * @return isEmerging
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsEmerging() {
     return isEmerging;
   }
 
-  public void setIsEmerging(Boolean isEmerging) {
+  public void setIsEmerging(@javax.annotation.Nullable Boolean isEmerging) {
     this.isEmerging = isEmerging;
   }
 
 
-  public Riskanalyticsenginev3Risk leads(List<Riskanalyticsenginev3Lead> leads) {
+  public Riskanalyticsenginev3Risk leads(@javax.annotation.Nullable List<Riskanalyticsenginev3Lead> leads) {
     this.leads = leads;
     return this;
   }
@@ -241,92 +253,92 @@ public class Riskanalyticsenginev3Risk {
     return this;
   }
 
-   /**
+  /**
    * The risk leads.
    * @return leads
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3Lead> getLeads() {
     return leads;
   }
 
-  public void setLeads(List<Riskanalyticsenginev3Lead> leads) {
+  public void setLeads(@javax.annotation.Nullable List<Riskanalyticsenginev3Lead> leads) {
     this.leads = leads;
   }
 
 
-  public Riskanalyticsenginev3Risk pivot(Riskanalyticsenginev3Pivot pivot) {
+  public Riskanalyticsenginev3Risk pivot(@javax.annotation.Nullable Riskanalyticsenginev3Pivot pivot) {
     this.pivot = pivot;
     return this;
   }
 
-   /**
+  /**
    * Get pivot
    * @return pivot
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3Pivot getPivot() {
     return pivot;
   }
 
-  public void setPivot(Riskanalyticsenginev3Pivot pivot) {
+  public void setPivot(@javax.annotation.Nullable Riskanalyticsenginev3Pivot pivot) {
     this.pivot = pivot;
   }
 
 
-  public Riskanalyticsenginev3Risk score(Integer score) {
+  public Riskanalyticsenginev3Risk score(@javax.annotation.Nullable Integer score) {
     this.score = score;
     return this;
   }
 
-   /**
+  /**
    * The risk score.
    * @return score
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getScore() {
     return score;
   }
 
-  public void setScore(Integer score) {
+  public void setScore(@javax.annotation.Nullable Integer score) {
     this.score = score;
   }
 
 
-  public Riskanalyticsenginev3Risk severityLevel(Riskanalyticsenginev3SeverityLevel severityLevel) {
+  public Riskanalyticsenginev3Risk severityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel severityLevel) {
     this.severityLevel = severityLevel;
     return this;
   }
 
-   /**
+  /**
    * Get severityLevel
    * @return severityLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3SeverityLevel getSeverityLevel() {
     return severityLevel;
   }
 
-  public void setSeverityLevel(Riskanalyticsenginev3SeverityLevel severityLevel) {
+  public void setSeverityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel severityLevel) {
     this.severityLevel = severityLevel;
   }
 
 
-  public Riskanalyticsenginev3Risk startTime(OffsetDateTime startTime) {
+  public Riskanalyticsenginev3Risk startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * The leads start time in format YYYY-MM-DDTHH:mm:ss.sssZ.
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
@@ -395,33 +407,22 @@ public class Riskanalyticsenginev3Risk {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("classification_details");
-    openapiFields.add("creation_time");
-    openapiFields.add("end_time");
-    openapiFields.add("feature_sets");
-    openapiFields.add("id");
-    openapiFields.add("is_emerging");
-    openapiFields.add("leads");
-    openapiFields.add("pivot");
-    openapiFields.add("score");
-    openapiFields.add("severity_level");
-    openapiFields.add("start_time");
+    openapiFields = new HashSet<String>(Arrays.asList("classification_details", "creation_time", "end_time", "feature_sets", "id", "is_emerging", "leads", "pivot", "score", "severity_level", "start_time"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3Risk
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3Risk
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3Risk.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3Risk is not found in the empty JSON string", Riskanalyticsenginev3Risk.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3Risk is not found in the empty JSON string", Riskanalyticsenginev3Risk.openapiRequiredFields.toString()));
         }
       }
 
@@ -429,7 +430,7 @@ public class Riskanalyticsenginev3Risk {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3Risk.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3Risk` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3Risk` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -442,7 +443,7 @@ public class Riskanalyticsenginev3Risk {
         if (jsonArrayfeatureSets != null) {
           // ensure the json data is an array
           if (!jsonObj.get("feature_sets").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `feature_sets` to be an array in the JSON string but got `%s`", jsonObj.get("feature_sets").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `feature_sets` to be an array in the JSON string but got `%s`", jsonObj.get("feature_sets").toString()));
           }
 
           // validate the optional field `feature_sets` (array)
@@ -452,14 +453,14 @@ public class Riskanalyticsenginev3Risk {
         }
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if (jsonObj.get("leads") != null && !jsonObj.get("leads").isJsonNull()) {
         JsonArray jsonArrayleads = jsonObj.getAsJsonArray("leads");
         if (jsonArrayleads != null) {
           // ensure the json data is an array
           if (!jsonObj.get("leads").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `leads` to be an array in the JSON string but got `%s`", jsonObj.get("leads").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `leads` to be an array in the JSON string but got `%s`", jsonObj.get("leads").toString()));
           }
 
           // validate the optional field `leads` (array)
@@ -507,22 +508,22 @@ public class Riskanalyticsenginev3Risk {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3Risk given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3Risk
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3Risk
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3Risk given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3Risk
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3Risk
+   */
   public static Riskanalyticsenginev3Risk fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3Risk.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3Risk to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3Risk to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

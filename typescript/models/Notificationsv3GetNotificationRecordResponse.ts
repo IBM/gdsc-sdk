@@ -27,6 +27,8 @@ export class Notificationsv3GetNotificationRecordResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "record",
@@ -54,4 +56,3 @@ export class Notificationsv3GetNotificationRecordResponse {
     public constructor() {
     }
 }
-

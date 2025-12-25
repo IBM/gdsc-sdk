@@ -76,16 +76,16 @@ class Guardiumconnectorv3Action(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in notifications (list)
         _items = []
         if self.notifications:
-            for _item in self.notifications:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_notifications in self.notifications:
+                if _item_notifications:
+                    _items.append(_item_notifications.to_dict())
             _dict['notifications'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in parameters (list)
         _items = []
         if self.parameters:
-            for _item in self.parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_parameters in self.parameters:
+                if _item_parameters:
+                    _items.append(_item_parameters.to_dict())
             _dict['parameters'] = _items
         return _dict
 

@@ -27,7 +27,7 @@ class TestPolicybuilderv3CreateUpdatePolicyRequest(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Policybuilderv3CreateUpdatePolicyRequest:
         """Test Policybuilderv3CreateUpdatePolicyRequest
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Policybuilderv3CreateUpdatePolicyRequest`
@@ -50,6 +50,7 @@ class TestPolicybuilderv3CreateUpdatePolicyRequest(unittest.TestCase):
                     policy_id = '', 
                     policy_name = '', 
                     policy_type = 'DATA_POLICY', 
+                    product_id = 'NO_PRODUCT', 
                     rules = [
                         ibm_gdsc_sdk_saas.models.policybuilderv3_rule.policybuilderv3Rule(
                             actions = [

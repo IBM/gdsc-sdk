@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,44 +42,49 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * [risk-details] A reference link within a finding; used for representing a deep-link to relevant report.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3FindingReferenceLink {
   public static final String SERIALIZED_NAME_REPORT_FILTERS = "report_filters";
   @SerializedName(SERIALIZED_NAME_REPORT_FILTERS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3ObservationReportFilter> reportFilters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATISTICS = "statistics";
   @SerializedName(SERIALIZED_NAME_STATISTICS)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3Statistics statistics;
 
   public static final String SERIALIZED_NAME_TEXT = "text";
   @SerializedName(SERIALIZED_NAME_TEXT)
+  @javax.annotation.Nullable
   private String text;
 
   public static final String SERIALIZED_NAME_TEXT_TEMPLATE = "text_template";
   @SerializedName(SERIALIZED_NAME_TEXT_TEMPLATE)
+  @javax.annotation.Nullable
   private String textTemplate;
 
   public static final String SERIALIZED_NAME_TEXT_VARIABLES = "text_variables";
   @SerializedName(SERIALIZED_NAME_TEXT_VARIABLES)
+  @javax.annotation.Nullable
   private List<String> textVariables = new ArrayList<>();
 
   public Riskanalyticscontrollerv3FindingReferenceLink() {
   }
 
-  public Riskanalyticscontrollerv3FindingReferenceLink reportFilters(List<Riskanalyticscontrollerv3ObservationReportFilter> reportFilters) {
+  public Riskanalyticscontrollerv3FindingReferenceLink reportFilters(@javax.annotation.Nullable List<Riskanalyticscontrollerv3ObservationReportFilter> reportFilters) {
     this.reportFilters = reportFilters;
     return this;
   }
@@ -91,78 +97,78 @@ public class Riskanalyticscontrollerv3FindingReferenceLink {
     return this;
   }
 
-   /**
+  /**
    * Get reportFilters
    * @return reportFilters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3ObservationReportFilter> getReportFilters() {
     return reportFilters;
   }
 
-  public void setReportFilters(List<Riskanalyticscontrollerv3ObservationReportFilter> reportFilters) {
+  public void setReportFilters(@javax.annotation.Nullable List<Riskanalyticscontrollerv3ObservationReportFilter> reportFilters) {
     this.reportFilters = reportFilters;
   }
 
 
-  public Riskanalyticscontrollerv3FindingReferenceLink statistics(Riskanalyticscontrollerv3Statistics statistics) {
+  public Riskanalyticscontrollerv3FindingReferenceLink statistics(@javax.annotation.Nullable Riskanalyticscontrollerv3Statistics statistics) {
     this.statistics = statistics;
     return this;
   }
 
-   /**
+  /**
    * Get statistics
    * @return statistics
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3Statistics getStatistics() {
     return statistics;
   }
 
-  public void setStatistics(Riskanalyticscontrollerv3Statistics statistics) {
+  public void setStatistics(@javax.annotation.Nullable Riskanalyticscontrollerv3Statistics statistics) {
     this.statistics = statistics;
   }
 
 
-  public Riskanalyticscontrollerv3FindingReferenceLink text(String text) {
+  public Riskanalyticscontrollerv3FindingReferenceLink text(@javax.annotation.Nullable String text) {
     this.text = text;
     return this;
   }
 
-   /**
+  /**
    * Final text, generated from text_template (localized) and text_variables (as-is).
    * @return text
-  **/
+   */
   @javax.annotation.Nullable
   public String getText() {
     return text;
   }
 
-  public void setText(String text) {
+  public void setText(@javax.annotation.Nullable String text) {
     this.text = text;
   }
 
 
-  public Riskanalyticscontrollerv3FindingReferenceLink textTemplate(String textTemplate) {
+  public Riskanalyticscontrollerv3FindingReferenceLink textTemplate(@javax.annotation.Nullable String textTemplate) {
     this.textTemplate = textTemplate;
     return this;
   }
 
-   /**
+  /**
    * Text template key in insights-nls project; used to create the final text for the UI, during the response.
    * @return textTemplate
-  **/
+   */
   @javax.annotation.Nullable
   public String getTextTemplate() {
     return textTemplate;
   }
 
-  public void setTextTemplate(String textTemplate) {
+  public void setTextTemplate(@javax.annotation.Nullable String textTemplate) {
     this.textTemplate = textTemplate;
   }
 
 
-  public Riskanalyticscontrollerv3FindingReferenceLink textVariables(List<String> textVariables) {
+  public Riskanalyticscontrollerv3FindingReferenceLink textVariables(@javax.annotation.Nullable List<String> textVariables) {
     this.textVariables = textVariables;
     return this;
   }
@@ -175,16 +181,16 @@ public class Riskanalyticscontrollerv3FindingReferenceLink {
     return this;
   }
 
-   /**
+  /**
    * [optional] Variable text tokens that replace placeholders in the text template; ordered according to appearance in template.
    * @return textVariables
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTextVariables() {
     return textVariables;
   }
 
-  public void setTextVariables(List<String> textVariables) {
+  public void setTextVariables(@javax.annotation.Nullable List<String> textVariables) {
     this.textVariables = textVariables;
   }
 
@@ -241,27 +247,22 @@ public class Riskanalyticscontrollerv3FindingReferenceLink {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("report_filters");
-    openapiFields.add("statistics");
-    openapiFields.add("text");
-    openapiFields.add("text_template");
-    openapiFields.add("text_variables");
+    openapiFields = new HashSet<String>(Arrays.asList("report_filters", "statistics", "text", "text_template", "text_variables"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3FindingReferenceLink
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3FindingReferenceLink
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3FindingReferenceLink.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3FindingReferenceLink is not found in the empty JSON string", Riskanalyticscontrollerv3FindingReferenceLink.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3FindingReferenceLink is not found in the empty JSON string", Riskanalyticscontrollerv3FindingReferenceLink.openapiRequiredFields.toString()));
         }
       }
 
@@ -269,7 +270,7 @@ public class Riskanalyticscontrollerv3FindingReferenceLink {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3FindingReferenceLink.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3FindingReferenceLink` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3FindingReferenceLink` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -278,7 +279,7 @@ public class Riskanalyticscontrollerv3FindingReferenceLink {
         if (jsonArrayreportFilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_filters` to be an array in the JSON string but got `%s`", jsonObj.get("report_filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_filters` to be an array in the JSON string but got `%s`", jsonObj.get("report_filters").toString()));
           }
 
           // validate the optional field `report_filters` (array)
@@ -292,14 +293,14 @@ public class Riskanalyticscontrollerv3FindingReferenceLink {
         Riskanalyticscontrollerv3Statistics.validateJsonElement(jsonObj.get("statistics"));
       }
       if ((jsonObj.get("text") != null && !jsonObj.get("text").isJsonNull()) && !jsonObj.get("text").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text").toString()));
       }
       if ((jsonObj.get("text_template") != null && !jsonObj.get("text_template").isJsonNull()) && !jsonObj.get("text_template").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `text_template` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text_template").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `text_template` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text_template").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("text_variables") != null && !jsonObj.get("text_variables").isJsonNull() && !jsonObj.get("text_variables").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `text_variables` to be an array in the JSON string but got `%s`", jsonObj.get("text_variables").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `text_variables` to be an array in the JSON string but got `%s`", jsonObj.get("text_variables").toString()));
       }
   }
 
@@ -332,22 +333,22 @@ public class Riskanalyticscontrollerv3FindingReferenceLink {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3FindingReferenceLink given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3FindingReferenceLink
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3FindingReferenceLink
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3FindingReferenceLink given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3FindingReferenceLink
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3FindingReferenceLink
+   */
   public static Riskanalyticscontrollerv3FindingReferenceLink fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3FindingReferenceLink.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3FindingReferenceLink to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3FindingReferenceLink to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

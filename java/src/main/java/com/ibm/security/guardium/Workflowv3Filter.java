@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,198 +45,213 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Filter - to find specific Cases.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3Filter {
   public static final String SERIALIZED_NAME_ASSIGNED_TO_ME = "assigned_to_me";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_TO_ME)
+  @javax.annotation.Nullable
   private Boolean assignedToMe;
 
   public static final String SERIALIZED_NAME_ASSIGNED_TO_MY_ROLES = "assigned_to_my_roles";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_TO_MY_ROLES)
+  @javax.annotation.Nullable
   private Boolean assignedToMyRoles;
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateCreated;
 
   public static final String SERIALIZED_NAME_DATE_CREATED_OPERATOR = "date_created_operator";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED_OPERATOR)
+  @javax.annotation.Nullable
   private Workflowv3FilterOperator dateCreatedOperator = Workflowv3FilterOperator.IGNORE;
 
   public static final String SERIALIZED_NAME_DATE_DUE = "date_due";
   @SerializedName(SERIALIZED_NAME_DATE_DUE)
+  @javax.annotation.Nullable
   private OffsetDateTime dateDue;
 
   public static final String SERIALIZED_NAME_DATE_DUE_OPERATOR = "date_due_operator";
   @SerializedName(SERIALIZED_NAME_DATE_DUE_OPERATOR)
+  @javax.annotation.Nullable
   private Workflowv3FilterOperator dateDueOperator = Workflowv3FilterOperator.IGNORE;
 
   public static final String SERIALIZED_NAME_FILTER_COLUMNS = "filter_columns";
   @SerializedName(SERIALIZED_NAME_FILTER_COLUMNS)
+  @javax.annotation.Nullable
   private List<Workflowv3FilterColumn> filterColumns = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Workflowv3Priority priority = Workflowv3Priority.UNDEFINED_PRIORITY;
 
   public static final String SERIALIZED_NAME_PRIORITY_OPERATOR = "priority_operator";
   @SerializedName(SERIALIZED_NAME_PRIORITY_OPERATOR)
+  @javax.annotation.Nullable
   private Workflowv3FilterOperator priorityOperator = Workflowv3FilterOperator.IGNORE;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_SCHEDULED_JOB_ID = "scheduled_job_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_JOB_ID)
+  @javax.annotation.Nullable
   private List<String> scheduledJobId = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SCHEDULED_TASK_ID = "scheduled_task_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_TASK_ID)
+  @javax.annotation.Nullable
   private List<String> scheduledTaskId = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Workflowv3Status status = Workflowv3Status.UNDEFINED_STATUS;
 
   public static final String SERIALIZED_NAME_STATUS_OPERATOR = "status_operator";
   @SerializedName(SERIALIZED_NAME_STATUS_OPERATOR)
+  @javax.annotation.Nullable
   private Workflowv3FilterOperator statusOperator = Workflowv3FilterOperator.IGNORE;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public Workflowv3Filter() {
   }
 
-  public Workflowv3Filter assignedToMe(Boolean assignedToMe) {
+  public Workflowv3Filter assignedToMe(@javax.annotation.Nullable Boolean assignedToMe) {
     this.assignedToMe = assignedToMe;
     return this;
   }
 
-   /**
+  /**
    * Optional: Cases and tasks that are assigned to Me.
    * @return assignedToMe
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getAssignedToMe() {
     return assignedToMe;
   }
 
-  public void setAssignedToMe(Boolean assignedToMe) {
+  public void setAssignedToMe(@javax.annotation.Nullable Boolean assignedToMe) {
     this.assignedToMe = assignedToMe;
   }
 
 
-  public Workflowv3Filter assignedToMyRoles(Boolean assignedToMyRoles) {
+  public Workflowv3Filter assignedToMyRoles(@javax.annotation.Nullable Boolean assignedToMyRoles) {
     this.assignedToMyRoles = assignedToMyRoles;
     return this;
   }
 
-   /**
+  /**
    * Optional: Cases and tasks that are assigned to My Roles.
    * @return assignedToMyRoles
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getAssignedToMyRoles() {
     return assignedToMyRoles;
   }
 
-  public void setAssignedToMyRoles(Boolean assignedToMyRoles) {
+  public void setAssignedToMyRoles(@javax.annotation.Nullable Boolean assignedToMyRoles) {
     this.assignedToMyRoles = assignedToMyRoles;
   }
 
 
-  public Workflowv3Filter dateCreated(OffsetDateTime dateCreated) {
+  public Workflowv3Filter dateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
   }
 
-   /**
+  /**
    * Optional: where Date Created meets criteria.
    * @return dateCreated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
-  public void setDateCreated(OffsetDateTime dateCreated) {
+  public void setDateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
-  public Workflowv3Filter dateCreatedOperator(Workflowv3FilterOperator dateCreatedOperator) {
+  public Workflowv3Filter dateCreatedOperator(@javax.annotation.Nullable Workflowv3FilterOperator dateCreatedOperator) {
     this.dateCreatedOperator = dateCreatedOperator;
     return this;
   }
 
-   /**
+  /**
    * Get dateCreatedOperator
    * @return dateCreatedOperator
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3FilterOperator getDateCreatedOperator() {
     return dateCreatedOperator;
   }
 
-  public void setDateCreatedOperator(Workflowv3FilterOperator dateCreatedOperator) {
+  public void setDateCreatedOperator(@javax.annotation.Nullable Workflowv3FilterOperator dateCreatedOperator) {
     this.dateCreatedOperator = dateCreatedOperator;
   }
 
 
-  public Workflowv3Filter dateDue(OffsetDateTime dateDue) {
+  public Workflowv3Filter dateDue(@javax.annotation.Nullable OffsetDateTime dateDue) {
     this.dateDue = dateDue;
     return this;
   }
 
-   /**
+  /**
    * Optional: where Date Due meets criteria.
    * @return dateDue
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateDue() {
     return dateDue;
   }
 
-  public void setDateDue(OffsetDateTime dateDue) {
+  public void setDateDue(@javax.annotation.Nullable OffsetDateTime dateDue) {
     this.dateDue = dateDue;
   }
 
 
-  public Workflowv3Filter dateDueOperator(Workflowv3FilterOperator dateDueOperator) {
+  public Workflowv3Filter dateDueOperator(@javax.annotation.Nullable Workflowv3FilterOperator dateDueOperator) {
     this.dateDueOperator = dateDueOperator;
     return this;
   }
 
-   /**
+  /**
    * Get dateDueOperator
    * @return dateDueOperator
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3FilterOperator getDateDueOperator() {
     return dateDueOperator;
   }
 
-  public void setDateDueOperator(Workflowv3FilterOperator dateDueOperator) {
+  public void setDateDueOperator(@javax.annotation.Nullable Workflowv3FilterOperator dateDueOperator) {
     this.dateDueOperator = dateDueOperator;
   }
 
 
-  public Workflowv3Filter filterColumns(List<Workflowv3FilterColumn> filterColumns) {
+  public Workflowv3Filter filterColumns(@javax.annotation.Nullable List<Workflowv3FilterColumn> filterColumns) {
     this.filterColumns = filterColumns;
     return this;
   }
@@ -248,78 +264,78 @@ public class Workflowv3Filter {
     return this;
   }
 
-   /**
+  /**
    * Get filterColumns
    * @return filterColumns
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3FilterColumn> getFilterColumns() {
     return filterColumns;
   }
 
-  public void setFilterColumns(List<Workflowv3FilterColumn> filterColumns) {
+  public void setFilterColumns(@javax.annotation.Nullable List<Workflowv3FilterColumn> filterColumns) {
     this.filterColumns = filterColumns;
   }
 
 
-  public Workflowv3Filter priority(Workflowv3Priority priority) {
+  public Workflowv3Filter priority(@javax.annotation.Nullable Workflowv3Priority priority) {
     this.priority = priority;
     return this;
   }
 
-   /**
+  /**
    * Get priority
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Priority getPriority() {
     return priority;
   }
 
-  public void setPriority(Workflowv3Priority priority) {
+  public void setPriority(@javax.annotation.Nullable Workflowv3Priority priority) {
     this.priority = priority;
   }
 
 
-  public Workflowv3Filter priorityOperator(Workflowv3FilterOperator priorityOperator) {
+  public Workflowv3Filter priorityOperator(@javax.annotation.Nullable Workflowv3FilterOperator priorityOperator) {
     this.priorityOperator = priorityOperator;
     return this;
   }
 
-   /**
+  /**
    * Get priorityOperator
    * @return priorityOperator
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3FilterOperator getPriorityOperator() {
     return priorityOperator;
   }
 
-  public void setPriorityOperator(Workflowv3FilterOperator priorityOperator) {
+  public void setPriorityOperator(@javax.annotation.Nullable Workflowv3FilterOperator priorityOperator) {
     this.priorityOperator = priorityOperator;
   }
 
 
-  public Workflowv3Filter reportId(String reportId) {
+  public Workflowv3Filter reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Get reportId
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Workflowv3Filter scheduledJobId(List<String> scheduledJobId) {
+  public Workflowv3Filter scheduledJobId(@javax.annotation.Nullable List<String> scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
     return this;
   }
@@ -332,21 +348,21 @@ public class Workflowv3Filter {
     return this;
   }
 
-   /**
+  /**
    * Get scheduledJobId
    * @return scheduledJobId
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getScheduledJobId() {
     return scheduledJobId;
   }
 
-  public void setScheduledJobId(List<String> scheduledJobId) {
+  public void setScheduledJobId(@javax.annotation.Nullable List<String> scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
   }
 
 
-  public Workflowv3Filter scheduledTaskId(List<String> scheduledTaskId) {
+  public Workflowv3Filter scheduledTaskId(@javax.annotation.Nullable List<String> scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
     return this;
   }
@@ -359,59 +375,59 @@ public class Workflowv3Filter {
     return this;
   }
 
-   /**
+  /**
    * Get scheduledTaskId
    * @return scheduledTaskId
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getScheduledTaskId() {
     return scheduledTaskId;
   }
 
-  public void setScheduledTaskId(List<String> scheduledTaskId) {
+  public void setScheduledTaskId(@javax.annotation.Nullable List<String> scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
   }
 
 
-  public Workflowv3Filter status(Workflowv3Status status) {
+  public Workflowv3Filter status(@javax.annotation.Nullable Workflowv3Status status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Status getStatus() {
     return status;
   }
 
-  public void setStatus(Workflowv3Status status) {
+  public void setStatus(@javax.annotation.Nullable Workflowv3Status status) {
     this.status = status;
   }
 
 
-  public Workflowv3Filter statusOperator(Workflowv3FilterOperator statusOperator) {
+  public Workflowv3Filter statusOperator(@javax.annotation.Nullable Workflowv3FilterOperator statusOperator) {
     this.statusOperator = statusOperator;
     return this;
   }
 
-   /**
+  /**
    * Get statusOperator
    * @return statusOperator
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3FilterOperator getStatusOperator() {
     return statusOperator;
   }
 
-  public void setStatusOperator(Workflowv3FilterOperator statusOperator) {
+  public void setStatusOperator(@javax.annotation.Nullable Workflowv3FilterOperator statusOperator) {
     this.statusOperator = statusOperator;
   }
 
 
-  public Workflowv3Filter tags(List<String> tags) {
+  public Workflowv3Filter tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -424,16 +440,16 @@ public class Workflowv3Filter {
     return this;
   }
 
-   /**
+  /**
    * Get tags
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
@@ -510,37 +526,22 @@ public class Workflowv3Filter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assigned_to_me");
-    openapiFields.add("assigned_to_my_roles");
-    openapiFields.add("date_created");
-    openapiFields.add("date_created_operator");
-    openapiFields.add("date_due");
-    openapiFields.add("date_due_operator");
-    openapiFields.add("filter_columns");
-    openapiFields.add("priority");
-    openapiFields.add("priority_operator");
-    openapiFields.add("report_id");
-    openapiFields.add("scheduled_job_id");
-    openapiFields.add("scheduled_task_id");
-    openapiFields.add("status");
-    openapiFields.add("status_operator");
-    openapiFields.add("tags");
+    openapiFields = new HashSet<String>(Arrays.asList("assigned_to_me", "assigned_to_my_roles", "date_created", "date_created_operator", "date_due", "date_due_operator", "filter_columns", "priority", "priority_operator", "report_id", "scheduled_job_id", "scheduled_task_id", "status", "status_operator", "tags"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3Filter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3Filter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3Filter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3Filter is not found in the empty JSON string", Workflowv3Filter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3Filter is not found in the empty JSON string", Workflowv3Filter.openapiRequiredFields.toString()));
         }
       }
 
@@ -548,7 +549,7 @@ public class Workflowv3Filter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3Filter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3Filter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3Filter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -565,7 +566,7 @@ public class Workflowv3Filter {
         if (jsonArrayfilterColumns != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filter_columns").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filter_columns` to be an array in the JSON string but got `%s`", jsonObj.get("filter_columns").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter_columns` to be an array in the JSON string but got `%s`", jsonObj.get("filter_columns").toString()));
           }
 
           // validate the optional field `filter_columns` (array)
@@ -583,15 +584,15 @@ public class Workflowv3Filter {
         Workflowv3FilterOperator.validateJsonElement(jsonObj.get("priority_operator"));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("scheduled_job_id") != null && !jsonObj.get("scheduled_job_id").isJsonNull() && !jsonObj.get("scheduled_job_id").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_job_id` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_job_id` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("scheduled_task_id") != null && !jsonObj.get("scheduled_task_id").isJsonNull() && !jsonObj.get("scheduled_task_id").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_task_id` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_task_id` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
@@ -603,7 +604,7 @@ public class Workflowv3Filter {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
   }
 
@@ -636,22 +637,22 @@ public class Workflowv3Filter {
     }
   }
 
- /**
-  * Create an instance of Workflowv3Filter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3Filter
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3Filter
-  */
+  /**
+   * Create an instance of Workflowv3Filter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3Filter
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3Filter
+   */
   public static Workflowv3Filter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3Filter.class);
   }
 
- /**
-  * Convert an instance of Workflowv3Filter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3Filter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

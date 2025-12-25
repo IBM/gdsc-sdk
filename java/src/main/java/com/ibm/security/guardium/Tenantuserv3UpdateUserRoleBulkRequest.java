@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,36 +40,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateUserRoleBulkRequest provides needed information to update user role.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3UpdateUserRoleBulkRequest {
   public static final String SERIALIZED_NAME_ASSIGN_ROLE_ID = "assign_role_id";
   @SerializedName(SERIALIZED_NAME_ASSIGN_ROLE_ID)
+  @javax.annotation.Nullable
   private List<String> assignRoleId = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REMOVE_ROLE_ID = "remove_role_id";
   @SerializedName(SERIALIZED_NAME_REMOVE_ROLE_ID)
+  @javax.annotation.Nullable
   private List<String> removeRoleId = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_USER_ID = "user_id";
   @SerializedName(SERIALIZED_NAME_USER_ID)
+  @javax.annotation.Nullable
   private List<String> userId = new ArrayList<>();
 
   public Tenantuserv3UpdateUserRoleBulkRequest() {
   }
 
-  public Tenantuserv3UpdateUserRoleBulkRequest assignRoleId(List<String> assignRoleId) {
+  public Tenantuserv3UpdateUserRoleBulkRequest assignRoleId(@javax.annotation.Nullable List<String> assignRoleId) {
     this.assignRoleId = assignRoleId;
     return this;
   }
@@ -81,21 +85,21 @@ public class Tenantuserv3UpdateUserRoleBulkRequest {
     return this;
   }
 
-   /**
+  /**
    * Roles to add to the users above.
    * @return assignRoleId
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getAssignRoleId() {
     return assignRoleId;
   }
 
-  public void setAssignRoleId(List<String> assignRoleId) {
+  public void setAssignRoleId(@javax.annotation.Nullable List<String> assignRoleId) {
     this.assignRoleId = assignRoleId;
   }
 
 
-  public Tenantuserv3UpdateUserRoleBulkRequest removeRoleId(List<String> removeRoleId) {
+  public Tenantuserv3UpdateUserRoleBulkRequest removeRoleId(@javax.annotation.Nullable List<String> removeRoleId) {
     this.removeRoleId = removeRoleId;
     return this;
   }
@@ -108,21 +112,21 @@ public class Tenantuserv3UpdateUserRoleBulkRequest {
     return this;
   }
 
-   /**
+  /**
    * Roles to remove from the users above.
    * @return removeRoleId
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getRemoveRoleId() {
     return removeRoleId;
   }
 
-  public void setRemoveRoleId(List<String> removeRoleId) {
+  public void setRemoveRoleId(@javax.annotation.Nullable List<String> removeRoleId) {
     this.removeRoleId = removeRoleId;
   }
 
 
-  public Tenantuserv3UpdateUserRoleBulkRequest userId(List<String> userId) {
+  public Tenantuserv3UpdateUserRoleBulkRequest userId(@javax.annotation.Nullable List<String> userId) {
     this.userId = userId;
     return this;
   }
@@ -135,16 +139,16 @@ public class Tenantuserv3UpdateUserRoleBulkRequest {
     return this;
   }
 
-   /**
+  /**
    * Array of user_id to modify roles.
    * @return userId
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getUserId() {
     return userId;
   }
 
-  public void setUserId(List<String> userId) {
+  public void setUserId(@javax.annotation.Nullable List<String> userId) {
     this.userId = userId;
   }
 
@@ -197,25 +201,22 @@ public class Tenantuserv3UpdateUserRoleBulkRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assign_role_id");
-    openapiFields.add("remove_role_id");
-    openapiFields.add("user_id");
+    openapiFields = new HashSet<String>(Arrays.asList("assign_role_id", "remove_role_id", "user_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3UpdateUserRoleBulkRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3UpdateUserRoleBulkRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3UpdateUserRoleBulkRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3UpdateUserRoleBulkRequest is not found in the empty JSON string", Tenantuserv3UpdateUserRoleBulkRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3UpdateUserRoleBulkRequest is not found in the empty JSON string", Tenantuserv3UpdateUserRoleBulkRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,21 +224,21 @@ public class Tenantuserv3UpdateUserRoleBulkRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3UpdateUserRoleBulkRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3UpdateUserRoleBulkRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3UpdateUserRoleBulkRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("assign_role_id") != null && !jsonObj.get("assign_role_id").isJsonNull() && !jsonObj.get("assign_role_id").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assign_role_id` to be an array in the JSON string but got `%s`", jsonObj.get("assign_role_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assign_role_id` to be an array in the JSON string but got `%s`", jsonObj.get("assign_role_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("remove_role_id") != null && !jsonObj.get("remove_role_id").isJsonNull() && !jsonObj.get("remove_role_id").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `remove_role_id` to be an array in the JSON string but got `%s`", jsonObj.get("remove_role_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `remove_role_id` to be an array in the JSON string but got `%s`", jsonObj.get("remove_role_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("user_id") != null && !jsonObj.get("user_id").isJsonNull() && !jsonObj.get("user_id").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user_id` to be an array in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user_id` to be an array in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
       }
   }
 
@@ -270,22 +271,22 @@ public class Tenantuserv3UpdateUserRoleBulkRequest {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3UpdateUserRoleBulkRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3UpdateUserRoleBulkRequest
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3UpdateUserRoleBulkRequest
-  */
+  /**
+   * Create an instance of Tenantuserv3UpdateUserRoleBulkRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3UpdateUserRoleBulkRequest
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3UpdateUserRoleBulkRequest
+   */
   public static Tenantuserv3UpdateUserRoleBulkRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3UpdateUserRoleBulkRequest.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3UpdateUserRoleBulkRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3UpdateUserRoleBulkRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

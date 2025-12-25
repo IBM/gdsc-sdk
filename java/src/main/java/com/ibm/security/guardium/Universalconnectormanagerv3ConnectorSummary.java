@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,224 +43,236 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Part of GetConnectors response. Contains details about a Universal connector connection configuration.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3ConnectorSummary {
   public static final String SERIALIZED_NAME_COMBINED_CONFIGURATION = "combined_configuration";
   @SerializedName(SERIALIZED_NAME_COMBINED_CONFIGURATION)
+  @javax.annotation.Nullable
   private String combinedConfiguration;
 
   public static final String SERIALIZED_NAME_COMBINED_CONFIGURATION_STRINGS = "combined_configuration_strings";
   @SerializedName(SERIALIZED_NAME_COMBINED_CONFIGURATION_STRINGS)
+  @javax.annotation.Nullable
   private String combinedConfigurationStrings;
 
   public static final String SERIALIZED_NAME_CONNECTOR_NAME = "connector_name";
   @SerializedName(SERIALIZED_NAME_CONNECTOR_NAME)
+  @javax.annotation.Nullable
   private String connectorName;
 
   public static final String SERIALIZED_NAME_DEVELOPER = "developer";
   @SerializedName(SERIALIZED_NAME_DEVELOPER)
+  @javax.annotation.Nullable
   private String developer;
 
   public static final String SERIALIZED_NAME_FILTER_PLUGIN = "filter_plugin";
   @SerializedName(SERIALIZED_NAME_FILTER_PLUGIN)
+  @javax.annotation.Nullable
   private Universalconnectormanagerv3PluginDefinition filterPlugin;
 
   public static final String SERIALIZED_NAME_FILTER_PLUGIN_NAME = "filter_plugin_name";
   @SerializedName(SERIALIZED_NAME_FILTER_PLUGIN_NAME)
+  @javax.annotation.Nullable
   private String filterPluginName;
 
   public static final String SERIALIZED_NAME_INPUT_PLUGIN = "input_plugin";
   @SerializedName(SERIALIZED_NAME_INPUT_PLUGIN)
+  @javax.annotation.Nullable
   private Universalconnectormanagerv3PluginDefinition inputPlugin;
 
   public static final String SERIALIZED_NAME_INPUT_PLUGIN_NAME = "input_plugin_name";
   @SerializedName(SERIALIZED_NAME_INPUT_PLUGIN_NAME)
+  @javax.annotation.Nullable
   private String inputPluginName;
 
   public static final String SERIALIZED_NAME_SUPPORTED_DATASOURCES = "supported_datasources";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_DATASOURCES)
+  @javax.annotation.Nullable
   private List<Universalconnectormanagerv3DatasourceType> supportedDatasources = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUPPORTED_PLATFORMS = "supported_platforms";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_PLATFORMS)
+  @javax.annotation.Nullable
   private List<String> supportedPlatforms = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_UPLOAD_DATE = "upload_date";
   @SerializedName(SERIALIZED_NAME_UPLOAD_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime uploadDate;
 
   public static final String SERIALIZED_NAME_UPLOAD_USER = "upload_user";
   @SerializedName(SERIALIZED_NAME_UPLOAD_USER)
+  @javax.annotation.Nullable
   private String uploadUser;
 
   public Universalconnectormanagerv3ConnectorSummary() {
   }
 
-  public Universalconnectormanagerv3ConnectorSummary combinedConfiguration(String combinedConfiguration) {
+  public Universalconnectormanagerv3ConnectorSummary combinedConfiguration(@javax.annotation.Nullable String combinedConfiguration) {
     this.combinedConfiguration = combinedConfiguration;
     return this;
   }
 
-   /**
+  /**
    * Connector configuration parameters. A union of Input and Filter parameters.
    * @return combinedConfiguration
-  **/
+   */
   @javax.annotation.Nullable
   public String getCombinedConfiguration() {
     return combinedConfiguration;
   }
 
-  public void setCombinedConfiguration(String combinedConfiguration) {
+  public void setCombinedConfiguration(@javax.annotation.Nullable String combinedConfiguration) {
     this.combinedConfiguration = combinedConfiguration;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary combinedConfigurationStrings(String combinedConfigurationStrings) {
+  public Universalconnectormanagerv3ConnectorSummary combinedConfigurationStrings(@javax.annotation.Nullable String combinedConfigurationStrings) {
     this.combinedConfigurationStrings = combinedConfigurationStrings;
     return this;
   }
 
-   /**
+  /**
    * Connector configuration parameters strings, for UI.
    * @return combinedConfigurationStrings
-  **/
+   */
   @javax.annotation.Nullable
   public String getCombinedConfigurationStrings() {
     return combinedConfigurationStrings;
   }
 
-  public void setCombinedConfigurationStrings(String combinedConfigurationStrings) {
+  public void setCombinedConfigurationStrings(@javax.annotation.Nullable String combinedConfigurationStrings) {
     this.combinedConfigurationStrings = combinedConfigurationStrings;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary connectorName(String connectorName) {
+  public Universalconnectormanagerv3ConnectorSummary connectorName(@javax.annotation.Nullable String connectorName) {
     this.connectorName = connectorName;
     return this;
   }
 
-   /**
+  /**
    * ID of connector.
    * @return connectorName
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectorName() {
     return connectorName;
   }
 
-  public void setConnectorName(String connectorName) {
+  public void setConnectorName(@javax.annotation.Nullable String connectorName) {
     this.connectorName = connectorName;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary developer(String developer) {
+  public Universalconnectormanagerv3ConnectorSummary developer(@javax.annotation.Nullable String developer) {
     this.developer = developer;
     return this;
   }
 
-   /**
+  /**
    * The developer who developed the manifest.
    * @return developer
-  **/
+   */
   @javax.annotation.Nullable
   public String getDeveloper() {
     return developer;
   }
 
-  public void setDeveloper(String developer) {
+  public void setDeveloper(@javax.annotation.Nullable String developer) {
     this.developer = developer;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary filterPlugin(Universalconnectormanagerv3PluginDefinition filterPlugin) {
+  public Universalconnectormanagerv3ConnectorSummary filterPlugin(@javax.annotation.Nullable Universalconnectormanagerv3PluginDefinition filterPlugin) {
     this.filterPlugin = filterPlugin;
     return this;
   }
 
-   /**
+  /**
    * Get filterPlugin
    * @return filterPlugin
-  **/
+   */
   @javax.annotation.Nullable
   public Universalconnectormanagerv3PluginDefinition getFilterPlugin() {
     return filterPlugin;
   }
 
-  public void setFilterPlugin(Universalconnectormanagerv3PluginDefinition filterPlugin) {
+  public void setFilterPlugin(@javax.annotation.Nullable Universalconnectormanagerv3PluginDefinition filterPlugin) {
     this.filterPlugin = filterPlugin;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary filterPluginName(String filterPluginName) {
+  public Universalconnectormanagerv3ConnectorSummary filterPluginName(@javax.annotation.Nullable String filterPluginName) {
     this.filterPluginName = filterPluginName;
     return this;
   }
 
-   /**
+  /**
    * ID of filter plugin.
    * @return filterPluginName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFilterPluginName() {
     return filterPluginName;
   }
 
-  public void setFilterPluginName(String filterPluginName) {
+  public void setFilterPluginName(@javax.annotation.Nullable String filterPluginName) {
     this.filterPluginName = filterPluginName;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary inputPlugin(Universalconnectormanagerv3PluginDefinition inputPlugin) {
+  public Universalconnectormanagerv3ConnectorSummary inputPlugin(@javax.annotation.Nullable Universalconnectormanagerv3PluginDefinition inputPlugin) {
     this.inputPlugin = inputPlugin;
     return this;
   }
 
-   /**
+  /**
    * Get inputPlugin
    * @return inputPlugin
-  **/
+   */
   @javax.annotation.Nullable
   public Universalconnectormanagerv3PluginDefinition getInputPlugin() {
     return inputPlugin;
   }
 
-  public void setInputPlugin(Universalconnectormanagerv3PluginDefinition inputPlugin) {
+  public void setInputPlugin(@javax.annotation.Nullable Universalconnectormanagerv3PluginDefinition inputPlugin) {
     this.inputPlugin = inputPlugin;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary inputPluginName(String inputPluginName) {
+  public Universalconnectormanagerv3ConnectorSummary inputPluginName(@javax.annotation.Nullable String inputPluginName) {
     this.inputPluginName = inputPluginName;
     return this;
   }
 
-   /**
+  /**
    * ID of input plugin.
    * @return inputPluginName
-  **/
+   */
   @javax.annotation.Nullable
   public String getInputPluginName() {
     return inputPluginName;
   }
 
-  public void setInputPluginName(String inputPluginName) {
+  public void setInputPluginName(@javax.annotation.Nullable String inputPluginName) {
     this.inputPluginName = inputPluginName;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary supportedDatasources(List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
+  public Universalconnectormanagerv3ConnectorSummary supportedDatasources(@javax.annotation.Nullable List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
     this.supportedDatasources = supportedDatasources;
     return this;
   }
@@ -272,21 +285,21 @@ public class Universalconnectormanagerv3ConnectorSummary {
     return this;
   }
 
-   /**
+  /**
    * Supported data source types, according to the Filter plugin.
    * @return supportedDatasources
-  **/
+   */
   @javax.annotation.Nullable
   public List<Universalconnectormanagerv3DatasourceType> getSupportedDatasources() {
     return supportedDatasources;
   }
 
-  public void setSupportedDatasources(List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
+  public void setSupportedDatasources(@javax.annotation.Nullable List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
     this.supportedDatasources = supportedDatasources;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary supportedPlatforms(List<String> supportedPlatforms) {
+  public Universalconnectormanagerv3ConnectorSummary supportedPlatforms(@javax.annotation.Nullable List<String> supportedPlatforms) {
     this.supportedPlatforms = supportedPlatforms;
     return this;
   }
@@ -299,54 +312,54 @@ public class Universalconnectormanagerv3ConnectorSummary {
     return this;
   }
 
-   /**
+  /**
    * Array of supported platforms/environments. Examples: \&quot;on-premise\&quot;, \&quot;AWS\&quot;, \&quot;Azure\&quot;, \&quot;GCP\&quot;.
    * @return supportedPlatforms
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSupportedPlatforms() {
     return supportedPlatforms;
   }
 
-  public void setSupportedPlatforms(List<String> supportedPlatforms) {
+  public void setSupportedPlatforms(@javax.annotation.Nullable List<String> supportedPlatforms) {
     this.supportedPlatforms = supportedPlatforms;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary uploadDate(OffsetDateTime uploadDate) {
+  public Universalconnectormanagerv3ConnectorSummary uploadDate(@javax.annotation.Nullable OffsetDateTime uploadDate) {
     this.uploadDate = uploadDate;
     return this;
   }
 
-   /**
+  /**
    * Date connector manifest was uploaded.
    * @return uploadDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getUploadDate() {
     return uploadDate;
   }
 
-  public void setUploadDate(OffsetDateTime uploadDate) {
+  public void setUploadDate(@javax.annotation.Nullable OffsetDateTime uploadDate) {
     this.uploadDate = uploadDate;
   }
 
 
-  public Universalconnectormanagerv3ConnectorSummary uploadUser(String uploadUser) {
+  public Universalconnectormanagerv3ConnectorSummary uploadUser(@javax.annotation.Nullable String uploadUser) {
     this.uploadUser = uploadUser;
     return this;
   }
 
-   /**
+  /**
    * User who uploaded the manifest.
    * @return uploadUser
-  **/
+   */
   @javax.annotation.Nullable
   public String getUploadUser() {
     return uploadUser;
   }
 
-  public void setUploadUser(String uploadUser) {
+  public void setUploadUser(@javax.annotation.Nullable String uploadUser) {
     this.uploadUser = uploadUser;
   }
 
@@ -417,34 +430,22 @@ public class Universalconnectormanagerv3ConnectorSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("combined_configuration");
-    openapiFields.add("combined_configuration_strings");
-    openapiFields.add("connector_name");
-    openapiFields.add("developer");
-    openapiFields.add("filter_plugin");
-    openapiFields.add("filter_plugin_name");
-    openapiFields.add("input_plugin");
-    openapiFields.add("input_plugin_name");
-    openapiFields.add("supported_datasources");
-    openapiFields.add("supported_platforms");
-    openapiFields.add("upload_date");
-    openapiFields.add("upload_user");
+    openapiFields = new HashSet<String>(Arrays.asList("combined_configuration", "combined_configuration_strings", "connector_name", "developer", "filter_plugin", "filter_plugin_name", "input_plugin", "input_plugin_name", "supported_datasources", "supported_platforms", "upload_date", "upload_user"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ConnectorSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ConnectorSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3ConnectorSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3ConnectorSummary is not found in the empty JSON string", Universalconnectormanagerv3ConnectorSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3ConnectorSummary is not found in the empty JSON string", Universalconnectormanagerv3ConnectorSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -452,42 +453,42 @@ public class Universalconnectormanagerv3ConnectorSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3ConnectorSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ConnectorSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ConnectorSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("combined_configuration") != null && !jsonObj.get("combined_configuration").isJsonNull()) && !jsonObj.get("combined_configuration").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `combined_configuration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("combined_configuration").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `combined_configuration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("combined_configuration").toString()));
       }
       if ((jsonObj.get("combined_configuration_strings") != null && !jsonObj.get("combined_configuration_strings").isJsonNull()) && !jsonObj.get("combined_configuration_strings").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `combined_configuration_strings` to be a primitive type in the JSON string but got `%s`", jsonObj.get("combined_configuration_strings").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `combined_configuration_strings` to be a primitive type in the JSON string but got `%s`", jsonObj.get("combined_configuration_strings").toString()));
       }
       if ((jsonObj.get("connector_name") != null && !jsonObj.get("connector_name").isJsonNull()) && !jsonObj.get("connector_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connector_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connector_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connector_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connector_name").toString()));
       }
       if ((jsonObj.get("developer") != null && !jsonObj.get("developer").isJsonNull()) && !jsonObj.get("developer").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `developer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("developer").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `developer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("developer").toString()));
       }
       // validate the optional field `filter_plugin`
       if (jsonObj.get("filter_plugin") != null && !jsonObj.get("filter_plugin").isJsonNull()) {
         Universalconnectormanagerv3PluginDefinition.validateJsonElement(jsonObj.get("filter_plugin"));
       }
       if ((jsonObj.get("filter_plugin_name") != null && !jsonObj.get("filter_plugin_name").isJsonNull()) && !jsonObj.get("filter_plugin_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filter_plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_plugin_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter_plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_plugin_name").toString()));
       }
       // validate the optional field `input_plugin`
       if (jsonObj.get("input_plugin") != null && !jsonObj.get("input_plugin").isJsonNull()) {
         Universalconnectormanagerv3PluginDefinition.validateJsonElement(jsonObj.get("input_plugin"));
       }
       if ((jsonObj.get("input_plugin_name") != null && !jsonObj.get("input_plugin_name").isJsonNull()) && !jsonObj.get("input_plugin_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `input_plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input_plugin_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `input_plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input_plugin_name").toString()));
       }
       if (jsonObj.get("supported_datasources") != null && !jsonObj.get("supported_datasources").isJsonNull()) {
         JsonArray jsonArraysupportedDatasources = jsonObj.getAsJsonArray("supported_datasources");
         if (jsonArraysupportedDatasources != null) {
           // ensure the json data is an array
           if (!jsonObj.get("supported_datasources").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `supported_datasources` to be an array in the JSON string but got `%s`", jsonObj.get("supported_datasources").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `supported_datasources` to be an array in the JSON string but got `%s`", jsonObj.get("supported_datasources").toString()));
           }
 
           // validate the optional field `supported_datasources` (array)
@@ -498,10 +499,10 @@ public class Universalconnectormanagerv3ConnectorSummary {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("supported_platforms") != null && !jsonObj.get("supported_platforms").isJsonNull() && !jsonObj.get("supported_platforms").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `supported_platforms` to be an array in the JSON string but got `%s`", jsonObj.get("supported_platforms").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `supported_platforms` to be an array in the JSON string but got `%s`", jsonObj.get("supported_platforms").toString()));
       }
       if ((jsonObj.get("upload_user") != null && !jsonObj.get("upload_user").isJsonNull()) && !jsonObj.get("upload_user").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `upload_user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upload_user").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `upload_user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upload_user").toString()));
       }
   }
 
@@ -534,22 +535,22 @@ public class Universalconnectormanagerv3ConnectorSummary {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3ConnectorSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3ConnectorSummary
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ConnectorSummary
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3ConnectorSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3ConnectorSummary
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ConnectorSummary
+   */
   public static Universalconnectormanagerv3ConnectorSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3ConnectorSummary.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3ConnectorSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3ConnectorSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

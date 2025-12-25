@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Policybuilderv3PolicyGroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3PolicyGroups {
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private String groupId;
 
   public static final String SERIALIZED_NAME_POLICIES = "policies";
   @SerializedName(SERIALIZED_NAME_POLICIES)
+  @javax.annotation.Nullable
   private List<Policybuilderv3PolicyDetailsForGroups> policies = new ArrayList<>();
 
   public Policybuilderv3PolicyGroups() {
   }
 
-  public Policybuilderv3PolicyGroups groupId(String groupId) {
+  public Policybuilderv3PolicyGroups groupId(@javax.annotation.Nullable String groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * Get groupId
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public String getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(String groupId) {
+  public void setGroupId(@javax.annotation.Nullable String groupId) {
     this.groupId = groupId;
   }
 
 
-  public Policybuilderv3PolicyGroups policies(List<Policybuilderv3PolicyDetailsForGroups> policies) {
+  public Policybuilderv3PolicyGroups policies(@javax.annotation.Nullable List<Policybuilderv3PolicyDetailsForGroups> policies) {
     this.policies = policies;
     return this;
   }
@@ -97,16 +100,16 @@ public class Policybuilderv3PolicyGroups {
     return this;
   }
 
-   /**
+  /**
    * Get policies
    * @return policies
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3PolicyDetailsForGroups> getPolicies() {
     return policies;
   }
 
-  public void setPolicies(List<Policybuilderv3PolicyDetailsForGroups> policies) {
+  public void setPolicies(@javax.annotation.Nullable List<Policybuilderv3PolicyDetailsForGroups> policies) {
     this.policies = policies;
   }
 
@@ -157,24 +160,22 @@ public class Policybuilderv3PolicyGroups {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group_id");
-    openapiFields.add("policies");
+    openapiFields = new HashSet<String>(Arrays.asList("group_id", "policies"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3PolicyGroups
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3PolicyGroups
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3PolicyGroups.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3PolicyGroups is not found in the empty JSON string", Policybuilderv3PolicyGroups.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3PolicyGroups is not found in the empty JSON string", Policybuilderv3PolicyGroups.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,19 +183,19 @@ public class Policybuilderv3PolicyGroups {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3PolicyGroups.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3PolicyGroups` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3PolicyGroups` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("group_id") != null && !jsonObj.get("group_id").isJsonNull()) && !jsonObj.get("group_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_id").toString()));
       }
       if (jsonObj.get("policies") != null && !jsonObj.get("policies").isJsonNull()) {
         JsonArray jsonArraypolicies = jsonObj.getAsJsonArray("policies");
         if (jsonArraypolicies != null) {
           // ensure the json data is an array
           if (!jsonObj.get("policies").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `policies` to be an array in the JSON string but got `%s`", jsonObj.get("policies").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policies` to be an array in the JSON string but got `%s`", jsonObj.get("policies").toString()));
           }
 
           // validate the optional field `policies` (array)
@@ -234,22 +235,22 @@ public class Policybuilderv3PolicyGroups {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3PolicyGroups given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3PolicyGroups
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3PolicyGroups
-  */
+  /**
+   * Create an instance of Policybuilderv3PolicyGroups given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3PolicyGroups
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3PolicyGroups
+   */
   public static Policybuilderv3PolicyGroups fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3PolicyGroups.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3PolicyGroups to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3PolicyGroups to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

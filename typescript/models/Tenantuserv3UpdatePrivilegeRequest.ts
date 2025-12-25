@@ -40,6 +40,8 @@ export class Tenantuserv3UpdatePrivilegeRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "manageRoles",
@@ -85,4 +87,3 @@ export class Tenantuserv3UpdatePrivilegeRequest {
     public constructor() {
     }
 }
-

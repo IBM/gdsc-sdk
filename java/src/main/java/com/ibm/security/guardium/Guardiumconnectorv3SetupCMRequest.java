@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,44 +41,49 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SetupCMRequest is the argument type used to register a GDP Central Manager to GDSC.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3SetupCMRequest {
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3Attribute> attributes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CM_GID = "cm_gid";
   @SerializedName(SERIALIZED_NAME_CM_GID)
+  @javax.annotation.Nullable
   private String cmGid;
 
   public static final String SERIALIZED_NAME_CM_HOSTNAME = "cm_hostname";
   @SerializedName(SERIALIZED_NAME_CM_HOSTNAME)
+  @javax.annotation.Nullable
   private String cmHostname;
 
   public static final String SERIALIZED_NAME_CM_IP = "cm_ip";
   @SerializedName(SERIALIZED_NAME_CM_IP)
+  @javax.annotation.Nullable
   private String cmIp;
 
   public static final String SERIALIZED_NAME_PUSH_REGISTRATION = "push_registration";
   @SerializedName(SERIALIZED_NAME_PUSH_REGISTRATION)
+  @javax.annotation.Nullable
   private Boolean pushRegistration;
 
   public Guardiumconnectorv3SetupCMRequest() {
   }
 
-  public Guardiumconnectorv3SetupCMRequest attributes(List<Guardiumconnectorv3Attribute> attributes) {
+  public Guardiumconnectorv3SetupCMRequest attributes(@javax.annotation.Nullable List<Guardiumconnectorv3Attribute> attributes) {
     this.attributes = attributes;
     return this;
   }
@@ -90,92 +96,92 @@ public class Guardiumconnectorv3SetupCMRequest {
     return this;
   }
 
-   /**
+  /**
    * Attributes specific to the GDP Central Manager.
    * @return attributes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3Attribute> getAttributes() {
     return attributes;
   }
 
-  public void setAttributes(List<Guardiumconnectorv3Attribute> attributes) {
+  public void setAttributes(@javax.annotation.Nullable List<Guardiumconnectorv3Attribute> attributes) {
     this.attributes = attributes;
   }
 
 
-  public Guardiumconnectorv3SetupCMRequest cmGid(String cmGid) {
+  public Guardiumconnectorv3SetupCMRequest cmGid(@javax.annotation.Nullable String cmGid) {
     this.cmGid = cmGid;
     return this;
   }
 
-   /**
+  /**
    * Central Manager GID.
    * @return cmGid
-  **/
+   */
   @javax.annotation.Nullable
   public String getCmGid() {
     return cmGid;
   }
 
-  public void setCmGid(String cmGid) {
+  public void setCmGid(@javax.annotation.Nullable String cmGid) {
     this.cmGid = cmGid;
   }
 
 
-  public Guardiumconnectorv3SetupCMRequest cmHostname(String cmHostname) {
+  public Guardiumconnectorv3SetupCMRequest cmHostname(@javax.annotation.Nullable String cmHostname) {
     this.cmHostname = cmHostname;
     return this;
   }
 
-   /**
+  /**
    * Central Manager hostname.
    * @return cmHostname
-  **/
+   */
   @javax.annotation.Nullable
   public String getCmHostname() {
     return cmHostname;
   }
 
-  public void setCmHostname(String cmHostname) {
+  public void setCmHostname(@javax.annotation.Nullable String cmHostname) {
     this.cmHostname = cmHostname;
   }
 
 
-  public Guardiumconnectorv3SetupCMRequest cmIp(String cmIp) {
+  public Guardiumconnectorv3SetupCMRequest cmIp(@javax.annotation.Nullable String cmIp) {
     this.cmIp = cmIp;
     return this;
   }
 
-   /**
+  /**
    * Central Manager IP.
    * @return cmIp
-  **/
+   */
   @javax.annotation.Nullable
   public String getCmIp() {
     return cmIp;
   }
 
-  public void setCmIp(String cmIp) {
+  public void setCmIp(@javax.annotation.Nullable String cmIp) {
     this.cmIp = cmIp;
   }
 
 
-  public Guardiumconnectorv3SetupCMRequest pushRegistration(Boolean pushRegistration) {
+  public Guardiumconnectorv3SetupCMRequest pushRegistration(@javax.annotation.Nullable Boolean pushRegistration) {
     this.pushRegistration = pushRegistration;
     return this;
   }
 
-   /**
+  /**
    * Attribute used to distinguish between old mode (pull) and new SaaS mode (push) used during registration.
    * @return pushRegistration
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPushRegistration() {
     return pushRegistration;
   }
 
-  public void setPushRegistration(Boolean pushRegistration) {
+  public void setPushRegistration(@javax.annotation.Nullable Boolean pushRegistration) {
     this.pushRegistration = pushRegistration;
   }
 
@@ -232,27 +238,22 @@ public class Guardiumconnectorv3SetupCMRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("attributes");
-    openapiFields.add("cm_gid");
-    openapiFields.add("cm_hostname");
-    openapiFields.add("cm_ip");
-    openapiFields.add("push_registration");
+    openapiFields = new HashSet<String>(Arrays.asList("attributes", "cm_gid", "cm_hostname", "cm_ip", "push_registration"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3SetupCMRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3SetupCMRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3SetupCMRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3SetupCMRequest is not found in the empty JSON string", Guardiumconnectorv3SetupCMRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3SetupCMRequest is not found in the empty JSON string", Guardiumconnectorv3SetupCMRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -260,7 +261,7 @@ public class Guardiumconnectorv3SetupCMRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3SetupCMRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3SetupCMRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3SetupCMRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -269,7 +270,7 @@ public class Guardiumconnectorv3SetupCMRequest {
         if (jsonArrayattributes != null) {
           // ensure the json data is an array
           if (!jsonObj.get("attributes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
           }
 
           // validate the optional field `attributes` (array)
@@ -279,13 +280,13 @@ public class Guardiumconnectorv3SetupCMRequest {
         }
       }
       if ((jsonObj.get("cm_gid") != null && !jsonObj.get("cm_gid").isJsonNull()) && !jsonObj.get("cm_gid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cm_gid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_gid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cm_gid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_gid").toString()));
       }
       if ((jsonObj.get("cm_hostname") != null && !jsonObj.get("cm_hostname").isJsonNull()) && !jsonObj.get("cm_hostname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cm_hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_hostname").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cm_hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_hostname").toString()));
       }
       if ((jsonObj.get("cm_ip") != null && !jsonObj.get("cm_ip").isJsonNull()) && !jsonObj.get("cm_ip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cm_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_ip").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cm_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_ip").toString()));
       }
   }
 
@@ -318,22 +319,22 @@ public class Guardiumconnectorv3SetupCMRequest {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3SetupCMRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3SetupCMRequest
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3SetupCMRequest
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3SetupCMRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3SetupCMRequest
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3SetupCMRequest
+   */
   public static Guardiumconnectorv3SetupCMRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3SetupCMRequest.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3SetupCMRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3SetupCMRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

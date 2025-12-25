@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **description** | **str** | Multiline description of the case. | [optional] 
 **full_access** | **bool** | Access level. | [optional] 
 **origin** | [**Workflowv3Origin**](Workflowv3Origin.md) |  | [optional] 
-**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] 
-**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] 
+**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] [default to Workflowv3Priority.UNDEFINED_PRIORITY]
+**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] [default to Workflowv3Status.UNDEFINED_STATUS]
 **tasks** | [**List[Workflowv3Task]**](Workflowv3Task.md) | Sub-tasks that the current user has access to. | [optional] 
 **title** | **str** | Case title (subject). | [optional] 
 

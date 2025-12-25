@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,36 +41,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DatasetsFilter includes all fields used to filter the set of desired datasets list returned by a GET request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3DatasetsFilter {
   public static final String SERIALIZED_NAME_DATASET_NAMES = "dataset_names";
   @SerializedName(SERIALIZED_NAME_DATASET_NAMES)
+  @javax.annotation.Nullable
   private List<String> datasetNames = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public Ecosystemv3DatasetsFilter() {
   }
 
-  public Ecosystemv3DatasetsFilter datasetNames(List<String> datasetNames) {
+  public Ecosystemv3DatasetsFilter datasetNames(@javax.annotation.Nullable List<String> datasetNames) {
     this.datasetNames = datasetNames;
     return this;
   }
@@ -82,54 +86,54 @@ public class Ecosystemv3DatasetsFilter {
     return this;
   }
 
-   /**
+  /**
    * The state filter groups commonly paired states. Only returns records that include the specified names.
    * @return datasetNames
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDatasetNames() {
     return datasetNames;
   }
 
-  public void setDatasetNames(List<String> datasetNames) {
+  public void setDatasetNames(@javax.annotation.Nullable List<String> datasetNames) {
     this.datasetNames = datasetNames;
   }
 
 
-  public Ecosystemv3DatasetsFilter endTime(OffsetDateTime endTime) {
+  public Ecosystemv3DatasetsFilter endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * Return datasets created before this time (&lt;).
    * @return endTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public Ecosystemv3DatasetsFilter startTime(OffsetDateTime startTime) {
+  public Ecosystemv3DatasetsFilter startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * Return datasets created at this time or later (&gt;&#x3D;).
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
@@ -182,25 +186,22 @@ public class Ecosystemv3DatasetsFilter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dataset_names");
-    openapiFields.add("end_time");
-    openapiFields.add("start_time");
+    openapiFields = new HashSet<String>(Arrays.asList("dataset_names", "end_time", "start_time"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DatasetsFilter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DatasetsFilter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3DatasetsFilter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3DatasetsFilter is not found in the empty JSON string", Ecosystemv3DatasetsFilter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3DatasetsFilter is not found in the empty JSON string", Ecosystemv3DatasetsFilter.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,13 +209,13 @@ public class Ecosystemv3DatasetsFilter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3DatasetsFilter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3DatasetsFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3DatasetsFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("dataset_names") != null && !jsonObj.get("dataset_names").isJsonNull() && !jsonObj.get("dataset_names").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataset_names` to be an array in the JSON string but got `%s`", jsonObj.get("dataset_names").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataset_names` to be an array in the JSON string but got `%s`", jsonObj.get("dataset_names").toString()));
       }
   }
 
@@ -247,22 +248,22 @@ public class Ecosystemv3DatasetsFilter {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3DatasetsFilter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3DatasetsFilter
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DatasetsFilter
-  */
+  /**
+   * Create an instance of Ecosystemv3DatasetsFilter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3DatasetsFilter
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DatasetsFilter
+   */
   public static Ecosystemv3DatasetsFilter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3DatasetsFilter.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3DatasetsFilter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3DatasetsFilter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

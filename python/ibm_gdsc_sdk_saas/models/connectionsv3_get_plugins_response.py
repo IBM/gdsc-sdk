@@ -74,9 +74,9 @@ class Connectionsv3GetPluginsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in plugins (list)
         _items = []
         if self.plugins:
-            for _item in self.plugins:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_plugins in self.plugins:
+                if _item_plugins:
+                    _items.append(_item_plugins.to_dict())
             _dict['plugins'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,134 +39,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * A dataset record indicates the dataset name and creation time.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3DatasetRecord {
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_DATA_COUNT = "data_count";
   @SerializedName(SERIALIZED_NAME_DATA_COUNT)
+  @javax.annotation.Nullable
   private Long dataCount;
 
   public static final String SERIALIZED_NAME_DATASET_NAME = "dataset_name";
   @SerializedName(SERIALIZED_NAME_DATASET_NAME)
+  @javax.annotation.Nullable
   private String datasetName;
 
   public static final String SERIALIZED_NAME_EDITABLE = "editable";
   @SerializedName(SERIALIZED_NAME_EDITABLE)
+  @javax.annotation.Nullable
   private Boolean editable;
 
   public static final String SERIALIZED_NAME_LAST_UPDATED = "last_updated";
   @SerializedName(SERIALIZED_NAME_LAST_UPDATED)
+  @javax.annotation.Nullable
   private OffsetDateTime lastUpdated;
 
   public Ecosystemv3DatasetRecord() {
   }
 
-  public Ecosystemv3DatasetRecord creationTime(OffsetDateTime creationTime) {
+  public Ecosystemv3DatasetRecord creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * The time the dataset definition was created.
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Ecosystemv3DatasetRecord dataCount(Long dataCount) {
+  public Ecosystemv3DatasetRecord dataCount(@javax.annotation.Nullable Long dataCount) {
     this.dataCount = dataCount;
     return this;
   }
 
-   /**
+  /**
    * Row count on a dataset.
    * @return dataCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getDataCount() {
     return dataCount;
   }
 
-  public void setDataCount(Long dataCount) {
+  public void setDataCount(@javax.annotation.Nullable Long dataCount) {
     this.dataCount = dataCount;
   }
 
 
-  public Ecosystemv3DatasetRecord datasetName(String datasetName) {
+  public Ecosystemv3DatasetRecord datasetName(@javax.annotation.Nullable String datasetName) {
     this.datasetName = datasetName;
     return this;
   }
 
-   /**
+  /**
    * Dataset name, unique,  \&quot;\&quot; for new records, required for update.
    * @return datasetName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasetName() {
     return datasetName;
   }
 
-  public void setDatasetName(String datasetName) {
+  public void setDatasetName(@javax.annotation.Nullable String datasetName) {
     this.datasetName = datasetName;
   }
 
 
-  public Ecosystemv3DatasetRecord editable(Boolean editable) {
+  public Ecosystemv3DatasetRecord editable(@javax.annotation.Nullable Boolean editable) {
     this.editable = editable;
     return this;
   }
 
-   /**
+  /**
    * Can this data set schema be edited.
    * @return editable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getEditable() {
     return editable;
   }
 
-  public void setEditable(Boolean editable) {
+  public void setEditable(@javax.annotation.Nullable Boolean editable) {
     this.editable = editable;
   }
 
 
-  public Ecosystemv3DatasetRecord lastUpdated(OffsetDateTime lastUpdated) {
+  public Ecosystemv3DatasetRecord lastUpdated(@javax.annotation.Nullable OffsetDateTime lastUpdated) {
     this.lastUpdated = lastUpdated;
     return this;
   }
 
-   /**
+  /**
    * The last time the data is updated.
    * @return lastUpdated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastUpdated() {
     return lastUpdated;
   }
 
-  public void setLastUpdated(OffsetDateTime lastUpdated) {
+  public void setLastUpdated(@javax.annotation.Nullable OffsetDateTime lastUpdated) {
     this.lastUpdated = lastUpdated;
   }
 
@@ -222,27 +228,22 @@ public class Ecosystemv3DatasetRecord {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("creation_time");
-    openapiFields.add("data_count");
-    openapiFields.add("dataset_name");
-    openapiFields.add("editable");
-    openapiFields.add("last_updated");
+    openapiFields = new HashSet<String>(Arrays.asList("creation_time", "data_count", "dataset_name", "editable", "last_updated"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DatasetRecord
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DatasetRecord
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3DatasetRecord.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3DatasetRecord is not found in the empty JSON string", Ecosystemv3DatasetRecord.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3DatasetRecord is not found in the empty JSON string", Ecosystemv3DatasetRecord.openapiRequiredFields.toString()));
         }
       }
 
@@ -250,12 +251,12 @@ public class Ecosystemv3DatasetRecord {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3DatasetRecord.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3DatasetRecord` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3DatasetRecord` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dataset_name") != null && !jsonObj.get("dataset_name").isJsonNull()) && !jsonObj.get("dataset_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_name").toString()));
       }
   }
 
@@ -288,22 +289,22 @@ public class Ecosystemv3DatasetRecord {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3DatasetRecord given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3DatasetRecord
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DatasetRecord
-  */
+  /**
+   * Create an instance of Ecosystemv3DatasetRecord given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3DatasetRecord
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DatasetRecord
+   */
   public static Ecosystemv3DatasetRecord fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3DatasetRecord.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3DatasetRecord to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3DatasetRecord to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

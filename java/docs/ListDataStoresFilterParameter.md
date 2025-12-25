@@ -14,7 +14,7 @@
 |**cloudAccountIds** | **List&lt;String&gt;** |  |  [optional] |
 |**cloudRegions** | **List&lt;String&gt;** |  |  [optional] |
 |**labels** | **List&lt;String&gt;** |  |  [optional] |
-|**classificationStatuses** | **List&lt;ClassificationStatus&gt;** |  |  [optional] |
+|**classificationStatuses** | **List&lt;StoreClassificationStatus&gt;** |  |  [optional] |
 |**sensitivityTags** | **List&lt;String&gt;** |  |  [optional] |
 |**sensitivityCategories** | **List&lt;SensitivityCategory&gt;** |  |  [optional] |
 |**compliances** | **List&lt;Compliance&gt;** |  |  [optional] |

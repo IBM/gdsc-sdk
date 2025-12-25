@@ -77,9 +77,9 @@ class Healthcollectorv3MUDetailsObjGdp(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in agg_health_view_list (list)
         _items = []
         if self.agg_health_view_list:
-            for _item in self.agg_health_view_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_agg_health_view_list in self.agg_health_view_list:
+                if _item_agg_health_view_list:
+                    _items.append(_item_agg_health_view_list.to_dict())
             _dict['agg_health_view_list'] = _items
         # override the default output from pydantic by calling `to_dict()` of connectivity_details
         if self.connectivity_details:

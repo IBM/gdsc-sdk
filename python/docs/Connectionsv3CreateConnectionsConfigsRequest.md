@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **connection_id** | **str** | Optional: connection id. | [optional] 
 **stream_connection** | [**Connectionsv3StreamConnection**](Connectionsv3StreamConnection.md) |  | [optional] 
-**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] 
+**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] [default to Connectionsv3ConnectorType.UNDEFINED_TYPE]
 **uc_connection** | [**Connectionsv3UCConnectionSummary**](Connectionsv3UCConnectionSummary.md) |  | [optional] 
 
 ## Example

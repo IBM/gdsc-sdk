@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,124 +44,130 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetChartDataRequest is the argument of GetChartData API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3GetChartDataRequest {
   public static final String SERIALIZED_NAME_CHART_ID = "chart_id";
   @SerializedName(SERIALIZED_NAME_CHART_ID)
+  @javax.annotation.Nullable
   private String chartId;
 
   public static final String SERIALIZED_NAME_CHART_SETTINGS = "chart_settings";
   @SerializedName(SERIALIZED_NAME_CHART_SETTINGS)
+  @javax.annotation.Nullable
   private Reportsv3ChartSettings chartSettings;
 
   public static final String SERIALIZED_NAME_MODEL_TYPE = "model_type";
   @SerializedName(SERIALIZED_NAME_MODEL_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3ModelType modelType = Reportsv3ModelType.UNDEFINED_MODEL_TYPE;
 
   public static final String SERIALIZED_NAME_REPORT_DEFINITION = "report_definition";
   @SerializedName(SERIALIZED_NAME_REPORT_DEFINITION)
+  @javax.annotation.Nullable
   private Reportsv3ReportDefinition reportDefinition;
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAMETER_LIST = "runtime_parameter_list";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAMETER_LIST)
+  @javax.annotation.Nullable
   private List<Reportsv3RunTimeParameter> runtimeParameterList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TIME_ZONE = "time_zone";
   @SerializedName(SERIALIZED_NAME_TIME_ZONE)
+  @javax.annotation.Nullable
   private String timeZone;
 
   public Reportsrunnerv3GetChartDataRequest() {
   }
 
-  public Reportsrunnerv3GetChartDataRequest chartId(String chartId) {
+  public Reportsrunnerv3GetChartDataRequest chartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
     return this;
   }
 
-   /**
+  /**
    * Optional: the ID of the chart we wish to get its data.
    * @return chartId
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartId() {
     return chartId;
   }
 
-  public void setChartId(String chartId) {
+  public void setChartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
   }
 
 
-  public Reportsrunnerv3GetChartDataRequest chartSettings(Reportsv3ChartSettings chartSettings) {
+  public Reportsrunnerv3GetChartDataRequest chartSettings(@javax.annotation.Nullable Reportsv3ChartSettings chartSettings) {
     this.chartSettings = chartSettings;
     return this;
   }
 
-   /**
+  /**
    * Get chartSettings
    * @return chartSettings
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ChartSettings getChartSettings() {
     return chartSettings;
   }
 
-  public void setChartSettings(Reportsv3ChartSettings chartSettings) {
+  public void setChartSettings(@javax.annotation.Nullable Reportsv3ChartSettings chartSettings) {
     this.chartSettings = chartSettings;
   }
 
 
-  public Reportsrunnerv3GetChartDataRequest modelType(Reportsv3ModelType modelType) {
+  public Reportsrunnerv3GetChartDataRequest modelType(@javax.annotation.Nullable Reportsv3ModelType modelType) {
     this.modelType = modelType;
     return this;
   }
 
-   /**
+  /**
    * Get modelType
    * @return modelType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ModelType getModelType() {
     return modelType;
   }
 
-  public void setModelType(Reportsv3ModelType modelType) {
+  public void setModelType(@javax.annotation.Nullable Reportsv3ModelType modelType) {
     this.modelType = modelType;
   }
 
 
-  public Reportsrunnerv3GetChartDataRequest reportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public Reportsrunnerv3GetChartDataRequest reportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
     return this;
   }
 
-   /**
+  /**
    * Get reportDefinition
    * @return reportDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportDefinition getReportDefinition() {
     return reportDefinition;
   }
 
-  public void setReportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public void setReportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
   }
 
 
-  public Reportsrunnerv3GetChartDataRequest runtimeParameterList(List<Reportsv3RunTimeParameter> runtimeParameterList) {
+  public Reportsrunnerv3GetChartDataRequest runtimeParameterList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameterList) {
     this.runtimeParameterList = runtimeParameterList;
     return this;
   }
@@ -173,35 +180,35 @@ public class Reportsrunnerv3GetChartDataRequest {
     return this;
   }
 
-   /**
+  /**
    * Runtime parameters.
    * @return runtimeParameterList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3RunTimeParameter> getRuntimeParameterList() {
     return runtimeParameterList;
   }
 
-  public void setRuntimeParameterList(List<Reportsv3RunTimeParameter> runtimeParameterList) {
+  public void setRuntimeParameterList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameterList) {
     this.runtimeParameterList = runtimeParameterList;
   }
 
 
-  public Reportsrunnerv3GetChartDataRequest timeZone(String timeZone) {
+  public Reportsrunnerv3GetChartDataRequest timeZone(@javax.annotation.Nullable String timeZone) {
     this.timeZone = timeZone;
     return this;
   }
 
-   /**
+  /**
    * Optional: time zone.
    * @return timeZone
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimeZone() {
     return timeZone;
   }
 
-  public void setTimeZone(String timeZone) {
+  public void setTimeZone(@javax.annotation.Nullable String timeZone) {
     this.timeZone = timeZone;
   }
 
@@ -260,28 +267,22 @@ public class Reportsrunnerv3GetChartDataRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_id");
-    openapiFields.add("chart_settings");
-    openapiFields.add("model_type");
-    openapiFields.add("report_definition");
-    openapiFields.add("runtime_parameter_list");
-    openapiFields.add("time_zone");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_id", "chart_settings", "model_type", "report_definition", "runtime_parameter_list", "time_zone"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetChartDataRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetChartDataRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3GetChartDataRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3GetChartDataRequest is not found in the empty JSON string", Reportsrunnerv3GetChartDataRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3GetChartDataRequest is not found in the empty JSON string", Reportsrunnerv3GetChartDataRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -289,12 +290,12 @@ public class Reportsrunnerv3GetChartDataRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3GetChartDataRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetChartDataRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetChartDataRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("chart_id") != null && !jsonObj.get("chart_id").isJsonNull()) && !jsonObj.get("chart_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
       }
       // validate the optional field `chart_settings`
       if (jsonObj.get("chart_settings") != null && !jsonObj.get("chart_settings").isJsonNull()) {
@@ -313,7 +314,7 @@ public class Reportsrunnerv3GetChartDataRequest {
         if (jsonArrayruntimeParameterList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("runtime_parameter_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `runtime_parameter_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameter_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `runtime_parameter_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameter_list").toString()));
           }
 
           // validate the optional field `runtime_parameter_list` (array)
@@ -323,7 +324,7 @@ public class Reportsrunnerv3GetChartDataRequest {
         }
       }
       if ((jsonObj.get("time_zone") != null && !jsonObj.get("time_zone").isJsonNull()) && !jsonObj.get("time_zone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("time_zone").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("time_zone").toString()));
       }
   }
 
@@ -356,22 +357,22 @@ public class Reportsrunnerv3GetChartDataRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3GetChartDataRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3GetChartDataRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetChartDataRequest
-  */
+  /**
+   * Create an instance of Reportsrunnerv3GetChartDataRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3GetChartDataRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetChartDataRequest
+   */
   public static Reportsrunnerv3GetChartDataRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3GetChartDataRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3GetChartDataRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3GetChartDataRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

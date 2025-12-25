@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetFilenameResponse - returns file path name and name to be saved for a report result.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3GetFilenameResponse {
   public static final String SERIALIZED_NAME_FILE_NAME = "file_name";
   @SerializedName(SERIALIZED_NAME_FILE_NAME)
+  @javax.annotation.Nullable
   private String fileName;
 
   public static final String SERIALIZED_NAME_FRIENDLY_NAME = "friendly_name";
   @SerializedName(SERIALIZED_NAME_FRIENDLY_NAME)
+  @javax.annotation.Nullable
   private String friendlyName;
 
   public Workflowv3GetFilenameResponse() {
   }
 
-  public Workflowv3GetFilenameResponse fileName(String fileName) {
+  public Workflowv3GetFilenameResponse fileName(@javax.annotation.Nullable String fileName) {
     this.fileName = fileName;
     return this;
   }
 
-   /**
+  /**
    * File path name of result to be downloaded.
    * @return fileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFileName() {
     return fileName;
   }
 
-  public void setFileName(String fileName) {
+  public void setFileName(@javax.annotation.Nullable String fileName) {
     this.fileName = fileName;
   }
 
 
-  public Workflowv3GetFilenameResponse friendlyName(String friendlyName) {
+  public Workflowv3GetFilenameResponse friendlyName(@javax.annotation.Nullable String friendlyName) {
     this.friendlyName = friendlyName;
     return this;
   }
 
-   /**
+  /**
    * Friendly name for the file to be saved as.
    * @return friendlyName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFriendlyName() {
     return friendlyName;
   }
 
-  public void setFriendlyName(String friendlyName) {
+  public void setFriendlyName(@javax.annotation.Nullable String friendlyName) {
     this.friendlyName = friendlyName;
   }
 
@@ -146,24 +149,22 @@ public class Workflowv3GetFilenameResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("file_name");
-    openapiFields.add("friendly_name");
+    openapiFields = new HashSet<String>(Arrays.asList("file_name", "friendly_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3GetFilenameResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3GetFilenameResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3GetFilenameResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3GetFilenameResponse is not found in the empty JSON string", Workflowv3GetFilenameResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3GetFilenameResponse is not found in the empty JSON string", Workflowv3GetFilenameResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Workflowv3GetFilenameResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3GetFilenameResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3GetFilenameResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3GetFilenameResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("file_name") != null && !jsonObj.get("file_name").isJsonNull()) && !jsonObj.get("file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("file_name").toString()));
       }
       if ((jsonObj.get("friendly_name") != null && !jsonObj.get("friendly_name").isJsonNull()) && !jsonObj.get("friendly_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `friendly_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("friendly_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `friendly_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("friendly_name").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Workflowv3GetFilenameResponse {
     }
   }
 
- /**
-  * Create an instance of Workflowv3GetFilenameResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3GetFilenameResponse
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3GetFilenameResponse
-  */
+  /**
+   * Create an instance of Workflowv3GetFilenameResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3GetFilenameResponse
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3GetFilenameResponse
+   */
   public static Workflowv3GetFilenameResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3GetFilenameResponse.class);
   }
 
- /**
-  * Convert an instance of Workflowv3GetFilenameResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3GetFilenameResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

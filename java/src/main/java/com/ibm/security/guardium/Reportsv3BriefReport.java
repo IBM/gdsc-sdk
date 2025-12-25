@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,152 +43,165 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * BriefReport - a small-scale representation of a report.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3BriefReport {
   public static final String SERIALIZED_NAME_ACCESS_LEVEL = "access_level";
   @SerializedName(SERIALIZED_NAME_ACCESS_LEVEL)
+  @javax.annotation.Nullable
   private Integer accessLevel;
 
   public static final String SERIALIZED_NAME_CATEGORY_ID = "category_id";
   @SerializedName(SERIALIZED_NAME_CATEGORY_ID)
+  @javax.annotation.Nullable
   private String categoryId;
 
   public static final String SERIALIZED_NAME_CREATOR_USER_ID = "creator_user_id";
   @SerializedName(SERIALIZED_NAME_CREATOR_USER_ID)
+  @javax.annotation.Nullable
   private String creatorUserId;
 
   public static final String SERIALIZED_NAME_CREATOR_USER_NAME = "creator_user_name";
   @SerializedName(SERIALIZED_NAME_CREATOR_USER_NAME)
+  @javax.annotation.Nullable
   private String creatorUserName;
 
   public static final String SERIALIZED_NAME_GROUP_IDS_USED_IN_FILTER = "group_ids_used_in_filter";
   @SerializedName(SERIALIZED_NAME_GROUP_IDS_USED_IN_FILTER)
+  @javax.annotation.Nullable
   private List<String> groupIdsUsedInFilter = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HEADERS = "headers";
   @SerializedName(SERIALIZED_NAME_HEADERS)
+  @javax.annotation.Nullable
   private List<Reportsv3DisplayHeader> headers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IS_PINNED = "is_pinned";
   @SerializedName(SERIALIZED_NAME_IS_PINNED)
+  @javax.annotation.Nullable
   private Boolean isPinned;
 
   public static final String SERIALIZED_NAME_LAST_RUN_TIME = "last_run_time";
   @SerializedName(SERIALIZED_NAME_LAST_RUN_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime lastRunTime;
 
   public static final String SERIALIZED_NAME_REPORT_DESCRIPTION = "report_description";
   @SerializedName(SERIALIZED_NAME_REPORT_DESCRIPTION)
+  @javax.annotation.Nullable
   private String reportDescription;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_NAME = "report_name";
   @SerializedName(SERIALIZED_NAME_REPORT_NAME)
+  @javax.annotation.Nullable
   private String reportName;
 
   public static final String SERIALIZED_NAME_REPORT_TAGS = "report_tags";
   @SerializedName(SERIALIZED_NAME_REPORT_TAGS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportTag> reportTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public Reportsv3BriefReport() {
   }
 
-  public Reportsv3BriefReport accessLevel(Integer accessLevel) {
+  public Reportsv3BriefReport accessLevel(@javax.annotation.Nullable Integer accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
 
-   /**
+  /**
    * Calculated access-level.
    * @return accessLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getAccessLevel() {
     return accessLevel;
   }
 
-  public void setAccessLevel(Integer accessLevel) {
+  public void setAccessLevel(@javax.annotation.Nullable Integer accessLevel) {
     this.accessLevel = accessLevel;
   }
 
 
-  public Reportsv3BriefReport categoryId(String categoryId) {
+  public Reportsv3BriefReport categoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
     return this;
   }
 
-   /**
+  /**
    * The report&#39;s category ID.
    * @return categoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryId() {
     return categoryId;
   }
 
-  public void setCategoryId(String categoryId) {
+  public void setCategoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
   }
 
 
-  public Reportsv3BriefReport creatorUserId(String creatorUserId) {
+  public Reportsv3BriefReport creatorUserId(@javax.annotation.Nullable String creatorUserId) {
     this.creatorUserId = creatorUserId;
     return this;
   }
 
-   /**
+  /**
    * Author.
    * @return creatorUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreatorUserId() {
     return creatorUserId;
   }
 
-  public void setCreatorUserId(String creatorUserId) {
+  public void setCreatorUserId(@javax.annotation.Nullable String creatorUserId) {
     this.creatorUserId = creatorUserId;
   }
 
 
-  public Reportsv3BriefReport creatorUserName(String creatorUserName) {
+  public Reportsv3BriefReport creatorUserName(@javax.annotation.Nullable String creatorUserName) {
     this.creatorUserName = creatorUserName;
     return this;
   }
 
-   /**
+  /**
    * Author name.
    * @return creatorUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreatorUserName() {
     return creatorUserName;
   }
 
-  public void setCreatorUserName(String creatorUserName) {
+  public void setCreatorUserName(@javax.annotation.Nullable String creatorUserName) {
     this.creatorUserName = creatorUserName;
   }
 
 
-  public Reportsv3BriefReport groupIdsUsedInFilter(List<String> groupIdsUsedInFilter) {
+  public Reportsv3BriefReport groupIdsUsedInFilter(@javax.annotation.Nullable List<String> groupIdsUsedInFilter) {
     this.groupIdsUsedInFilter = groupIdsUsedInFilter;
     return this;
   }
@@ -200,21 +214,21 @@ public class Reportsv3BriefReport {
     return this;
   }
 
-   /**
+  /**
    * Get groupIdsUsedInFilter
    * @return groupIdsUsedInFilter
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getGroupIdsUsedInFilter() {
     return groupIdsUsedInFilter;
   }
 
-  public void setGroupIdsUsedInFilter(List<String> groupIdsUsedInFilter) {
+  public void setGroupIdsUsedInFilter(@javax.annotation.Nullable List<String> groupIdsUsedInFilter) {
     this.groupIdsUsedInFilter = groupIdsUsedInFilter;
   }
 
 
-  public Reportsv3BriefReport headers(List<Reportsv3DisplayHeader> headers) {
+  public Reportsv3BriefReport headers(@javax.annotation.Nullable List<Reportsv3DisplayHeader> headers) {
     this.headers = headers;
     return this;
   }
@@ -227,116 +241,116 @@ public class Reportsv3BriefReport {
     return this;
   }
 
-   /**
+  /**
    * The report&#39;s brief headers.
    * @return headers
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3DisplayHeader> getHeaders() {
     return headers;
   }
 
-  public void setHeaders(List<Reportsv3DisplayHeader> headers) {
+  public void setHeaders(@javax.annotation.Nullable List<Reportsv3DisplayHeader> headers) {
     this.headers = headers;
   }
 
 
-  public Reportsv3BriefReport isPinned(Boolean isPinned) {
+  public Reportsv3BriefReport isPinned(@javax.annotation.Nullable Boolean isPinned) {
     this.isPinned = isPinned;
     return this;
   }
 
-   /**
+  /**
    * Flag to determine weather the report is pinned or not.
    * @return isPinned
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsPinned() {
     return isPinned;
   }
 
-  public void setIsPinned(Boolean isPinned) {
+  public void setIsPinned(@javax.annotation.Nullable Boolean isPinned) {
     this.isPinned = isPinned;
   }
 
 
-  public Reportsv3BriefReport lastRunTime(OffsetDateTime lastRunTime) {
+  public Reportsv3BriefReport lastRunTime(@javax.annotation.Nullable OffsetDateTime lastRunTime) {
     this.lastRunTime = lastRunTime;
     return this;
   }
 
-   /**
+  /**
    * The report&#39;s last run time in format YYYY-MM-DDTHH:mm:ss.sssZ.
    * @return lastRunTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastRunTime() {
     return lastRunTime;
   }
 
-  public void setLastRunTime(OffsetDateTime lastRunTime) {
+  public void setLastRunTime(@javax.annotation.Nullable OffsetDateTime lastRunTime) {
     this.lastRunTime = lastRunTime;
   }
 
 
-  public Reportsv3BriefReport reportDescription(String reportDescription) {
+  public Reportsv3BriefReport reportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
     return this;
   }
 
-   /**
+  /**
    * The report description.
    * @return reportDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportDescription() {
     return reportDescription;
   }
 
-  public void setReportDescription(String reportDescription) {
+  public void setReportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
   }
 
 
-  public Reportsv3BriefReport reportId(String reportId) {
+  public Reportsv3BriefReport reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * The report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsv3BriefReport reportName(String reportName) {
+  public Reportsv3BriefReport reportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * The report name.
    * @return reportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(String reportName) {
+  public void setReportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
 
-  public Reportsv3BriefReport reportTags(List<Reportsv3ReportTag> reportTags) {
+  public Reportsv3BriefReport reportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
     return this;
   }
@@ -349,35 +363,35 @@ public class Reportsv3BriefReport {
     return this;
   }
 
-   /**
+  /**
    * The report tags.
    * @return reportTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportTag> getReportTags() {
     return reportTags;
   }
 
-  public void setReportTags(List<Reportsv3ReportTag> reportTags) {
+  public void setReportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
   }
 
 
-  public Reportsv3BriefReport tableName(String tableName) {
+  public Reportsv3BriefReport tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * Get tableName
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
@@ -450,35 +464,22 @@ public class Reportsv3BriefReport {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("access_level");
-    openapiFields.add("category_id");
-    openapiFields.add("creator_user_id");
-    openapiFields.add("creator_user_name");
-    openapiFields.add("group_ids_used_in_filter");
-    openapiFields.add("headers");
-    openapiFields.add("is_pinned");
-    openapiFields.add("last_run_time");
-    openapiFields.add("report_description");
-    openapiFields.add("report_id");
-    openapiFields.add("report_name");
-    openapiFields.add("report_tags");
-    openapiFields.add("table_name");
+    openapiFields = new HashSet<String>(Arrays.asList("access_level", "category_id", "creator_user_id", "creator_user_name", "group_ids_used_in_filter", "headers", "is_pinned", "last_run_time", "report_description", "report_id", "report_name", "report_tags", "table_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3BriefReport
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3BriefReport
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3BriefReport.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3BriefReport is not found in the empty JSON string", Reportsv3BriefReport.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3BriefReport is not found in the empty JSON string", Reportsv3BriefReport.openapiRequiredFields.toString()));
         }
       }
 
@@ -486,29 +487,29 @@ public class Reportsv3BriefReport {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3BriefReport.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3BriefReport` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3BriefReport` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("category_id") != null && !jsonObj.get("category_id").isJsonNull()) && !jsonObj.get("category_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
       }
       if ((jsonObj.get("creator_user_id") != null && !jsonObj.get("creator_user_id").isJsonNull()) && !jsonObj.get("creator_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `creator_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `creator_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_id").toString()));
       }
       if ((jsonObj.get("creator_user_name") != null && !jsonObj.get("creator_user_name").isJsonNull()) && !jsonObj.get("creator_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `creator_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `creator_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("group_ids_used_in_filter") != null && !jsonObj.get("group_ids_used_in_filter").isJsonNull() && !jsonObj.get("group_ids_used_in_filter").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group_ids_used_in_filter` to be an array in the JSON string but got `%s`", jsonObj.get("group_ids_used_in_filter").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group_ids_used_in_filter` to be an array in the JSON string but got `%s`", jsonObj.get("group_ids_used_in_filter").toString()));
       }
       if (jsonObj.get("headers") != null && !jsonObj.get("headers").isJsonNull()) {
         JsonArray jsonArrayheaders = jsonObj.getAsJsonArray("headers");
         if (jsonArrayheaders != null) {
           // ensure the json data is an array
           if (!jsonObj.get("headers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
           }
 
           // validate the optional field `headers` (array)
@@ -518,20 +519,20 @@ public class Reportsv3BriefReport {
         }
       }
       if ((jsonObj.get("report_description") != null && !jsonObj.get("report_description").isJsonNull()) && !jsonObj.get("report_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("report_name") != null && !jsonObj.get("report_name").isJsonNull()) && !jsonObj.get("report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
       }
       if (jsonObj.get("report_tags") != null && !jsonObj.get("report_tags").isJsonNull()) {
         JsonArray jsonArrayreportTags = jsonObj.getAsJsonArray("report_tags");
         if (jsonArrayreportTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
           }
 
           // validate the optional field `report_tags` (array)
@@ -541,7 +542,7 @@ public class Reportsv3BriefReport {
         }
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
   }
 
@@ -574,22 +575,22 @@ public class Reportsv3BriefReport {
     }
   }
 
- /**
-  * Create an instance of Reportsv3BriefReport given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3BriefReport
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3BriefReport
-  */
+  /**
+   * Create an instance of Reportsv3BriefReport given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3BriefReport
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3BriefReport
+   */
   public static Reportsv3BriefReport fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3BriefReport.class);
   }
 
- /**
-  * Convert an instance of Reportsv3BriefReport to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3BriefReport to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

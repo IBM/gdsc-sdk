@@ -14,11 +14,13 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ibm.security.guardium.Reportsv3AggregationType;
 import com.ibm.security.guardium.Reportsv3FieldName;
 import com.ibm.security.guardium.Reportsv3HeaderDescription;
 import java.io.IOException;
@@ -39,157 +41,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DisplayHeader that have the header name and the translated value.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3DisplayHeader {
+  public static final String SERIALIZED_NAME_AGGREGATION_TYPE = "aggregation_type";
+  @SerializedName(SERIALIZED_NAME_AGGREGATION_TYPE)
+  @javax.annotation.Nullable
+  private Reportsv3AggregationType aggregationType = Reportsv3AggregationType.UNDEFINED_AGG_TYPE;
+
   public static final String SERIALIZED_NAME_FIELD_NAME = "field_name";
   @SerializedName(SERIALIZED_NAME_FIELD_NAME)
+  @javax.annotation.Nullable
   private Reportsv3FieldName fieldName;
 
   public static final String SERIALIZED_NAME_HEADER_DESCRIPTION = "header_description";
   @SerializedName(SERIALIZED_NAME_HEADER_DESCRIPTION)
+  @javax.annotation.Nullable
   private Reportsv3HeaderDescription headerDescription;
 
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)
+  @javax.annotation.Nullable
   private String headerName;
 
   public static final String SERIALIZED_NAME_SEQUENCE = "sequence";
   @SerializedName(SERIALIZED_NAME_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer sequence;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public Reportsv3DisplayHeader() {
   }
 
-  public Reportsv3DisplayHeader fieldName(Reportsv3FieldName fieldName) {
+  public Reportsv3DisplayHeader aggregationType(@javax.annotation.Nullable Reportsv3AggregationType aggregationType) {
+    this.aggregationType = aggregationType;
+    return this;
+  }
+
+  /**
+   * Get aggregationType
+   * @return aggregationType
+   */
+  @javax.annotation.Nullable
+  public Reportsv3AggregationType getAggregationType() {
+    return aggregationType;
+  }
+
+  public void setAggregationType(@javax.annotation.Nullable Reportsv3AggregationType aggregationType) {
+    this.aggregationType = aggregationType;
+  }
+
+
+  public Reportsv3DisplayHeader fieldName(@javax.annotation.Nullable Reportsv3FieldName fieldName) {
     this.fieldName = fieldName;
     return this;
   }
 
-   /**
+  /**
    * Get fieldName
    * @return fieldName
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3FieldName getFieldName() {
     return fieldName;
   }
 
-  public void setFieldName(Reportsv3FieldName fieldName) {
+  public void setFieldName(@javax.annotation.Nullable Reportsv3FieldName fieldName) {
     this.fieldName = fieldName;
   }
 
 
-  public Reportsv3DisplayHeader headerDescription(Reportsv3HeaderDescription headerDescription) {
+  public Reportsv3DisplayHeader headerDescription(@javax.annotation.Nullable Reportsv3HeaderDescription headerDescription) {
     this.headerDescription = headerDescription;
     return this;
   }
 
-   /**
+  /**
    * Get headerDescription
    * @return headerDescription
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3HeaderDescription getHeaderDescription() {
     return headerDescription;
   }
 
-  public void setHeaderDescription(Reportsv3HeaderDescription headerDescription) {
+  public void setHeaderDescription(@javax.annotation.Nullable Reportsv3HeaderDescription headerDescription) {
     this.headerDescription = headerDescription;
   }
 
 
-  public Reportsv3DisplayHeader headerId(String headerId) {
+  public Reportsv3DisplayHeader headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * The header ID.
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Reportsv3DisplayHeader headerName(String headerName) {
+  public Reportsv3DisplayHeader headerName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
     return this;
   }
 
-   /**
+  /**
    * The header name.
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderName() {
     return headerName;
   }
 
-  public void setHeaderName(String headerName) {
+  public void setHeaderName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
   }
 
 
-  public Reportsv3DisplayHeader sequence(Integer sequence) {
+  public Reportsv3DisplayHeader sequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
+  /**
    * Sequence of the corresponding header.
    * @return sequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSequence() {
     return sequence;
   }
 
-  public void setSequence(Integer sequence) {
+  public void setSequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
   }
 
 
-  public Reportsv3DisplayHeader tableName(String tableName) {
+  public Reportsv3DisplayHeader tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * Table name.
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
@@ -204,7 +236,8 @@ public class Reportsv3DisplayHeader {
       return false;
     }
     Reportsv3DisplayHeader reportsv3DisplayHeader = (Reportsv3DisplayHeader) o;
-    return Objects.equals(this.fieldName, reportsv3DisplayHeader.fieldName) &&
+    return Objects.equals(this.aggregationType, reportsv3DisplayHeader.aggregationType) &&
+        Objects.equals(this.fieldName, reportsv3DisplayHeader.fieldName) &&
         Objects.equals(this.headerDescription, reportsv3DisplayHeader.headerDescription) &&
         Objects.equals(this.headerId, reportsv3DisplayHeader.headerId) &&
         Objects.equals(this.headerName, reportsv3DisplayHeader.headerName) &&
@@ -214,13 +247,14 @@ public class Reportsv3DisplayHeader {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fieldName, headerDescription, headerId, headerName, sequence, tableName);
+    return Objects.hash(aggregationType, fieldName, headerDescription, headerId, headerName, sequence, tableName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Reportsv3DisplayHeader {\n");
+    sb.append("    aggregationType: ").append(toIndentedString(aggregationType)).append("\n");
     sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
     sb.append("    headerDescription: ").append(toIndentedString(headerDescription)).append("\n");
     sb.append("    headerId: ").append(toIndentedString(headerId)).append("\n");
@@ -248,28 +282,22 @@ public class Reportsv3DisplayHeader {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("field_name");
-    openapiFields.add("header_description");
-    openapiFields.add("header_id");
-    openapiFields.add("header_name");
-    openapiFields.add("sequence");
-    openapiFields.add("table_name");
+    openapiFields = new HashSet<String>(Arrays.asList("aggregation_type", "field_name", "header_description", "header_id", "header_name", "sequence", "table_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3DisplayHeader
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3DisplayHeader
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3DisplayHeader.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3DisplayHeader is not found in the empty JSON string", Reportsv3DisplayHeader.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3DisplayHeader is not found in the empty JSON string", Reportsv3DisplayHeader.openapiRequiredFields.toString()));
         }
       }
 
@@ -277,10 +305,14 @@ public class Reportsv3DisplayHeader {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3DisplayHeader.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3DisplayHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3DisplayHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `aggregation_type`
+      if (jsonObj.get("aggregation_type") != null && !jsonObj.get("aggregation_type").isJsonNull()) {
+        Reportsv3AggregationType.validateJsonElement(jsonObj.get("aggregation_type"));
+      }
       // validate the optional field `field_name`
       if (jsonObj.get("field_name") != null && !jsonObj.get("field_name").isJsonNull()) {
         Reportsv3FieldName.validateJsonElement(jsonObj.get("field_name"));
@@ -290,13 +322,13 @@ public class Reportsv3DisplayHeader {
         Reportsv3HeaderDescription.validateJsonElement(jsonObj.get("header_description"));
       }
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       if ((jsonObj.get("header_name") != null && !jsonObj.get("header_name").isJsonNull()) && !jsonObj.get("header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
   }
 
@@ -329,22 +361,22 @@ public class Reportsv3DisplayHeader {
     }
   }
 
- /**
-  * Create an instance of Reportsv3DisplayHeader given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3DisplayHeader
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3DisplayHeader
-  */
+  /**
+   * Create an instance of Reportsv3DisplayHeader given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3DisplayHeader
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3DisplayHeader
+   */
   public static Reportsv3DisplayHeader fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3DisplayHeader.class);
   }
 
- /**
-  * Convert an instance of Reportsv3DisplayHeader to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3DisplayHeader to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

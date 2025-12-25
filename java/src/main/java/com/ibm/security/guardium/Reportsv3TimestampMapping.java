@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * TimestampMapping represents category related tables with level and timestamp.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3TimestampMapping {
   public static final String SERIALIZED_NAME_LEVEL = "level";
   @SerializedName(SERIALIZED_NAME_LEVEL)
+  @javax.annotation.Nullable
   private Integer level;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public static final String SERIALIZED_NAME_TIMESTAMP_HEADER_ID = "timestamp_header_id";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP_HEADER_ID)
+  @javax.annotation.Nullable
   private String timestampHeaderId;
 
   public static final String SERIALIZED_NAME_TIMESTAMP_HEADER_NAME = "timestamp_header_name";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP_HEADER_NAME)
+  @javax.annotation.Nullable
   private String timestampHeaderName;
 
   public Reportsv3TimestampMapping() {
   }
 
-  public Reportsv3TimestampMapping level(Integer level) {
+  public Reportsv3TimestampMapping level(@javax.annotation.Nullable Integer level) {
     this.level = level;
     return this;
   }
 
-   /**
+  /**
    * Level of the table.
    * @return level
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getLevel() {
     return level;
   }
 
-  public void setLevel(Integer level) {
+  public void setLevel(@javax.annotation.Nullable Integer level) {
     this.level = level;
   }
 
 
-  public Reportsv3TimestampMapping tableName(String tableName) {
+  public Reportsv3TimestampMapping tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * Table name.
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
 
-  public Reportsv3TimestampMapping timestampHeaderId(String timestampHeaderId) {
+  public Reportsv3TimestampMapping timestampHeaderId(@javax.annotation.Nullable String timestampHeaderId) {
     this.timestampHeaderId = timestampHeaderId;
     return this;
   }
 
-   /**
+  /**
    * The header id.
    * @return timestampHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimestampHeaderId() {
     return timestampHeaderId;
   }
 
-  public void setTimestampHeaderId(String timestampHeaderId) {
+  public void setTimestampHeaderId(@javax.annotation.Nullable String timestampHeaderId) {
     this.timestampHeaderId = timestampHeaderId;
   }
 
 
-  public Reportsv3TimestampMapping timestampHeaderName(String timestampHeaderName) {
+  public Reportsv3TimestampMapping timestampHeaderName(@javax.annotation.Nullable String timestampHeaderName) {
     this.timestampHeaderName = timestampHeaderName;
     return this;
   }
 
-   /**
+  /**
    * The table timestamp column.
    * @return timestampHeaderName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimestampHeaderName() {
     return timestampHeaderName;
   }
 
-  public void setTimestampHeaderName(String timestampHeaderName) {
+  public void setTimestampHeaderName(@javax.annotation.Nullable String timestampHeaderName) {
     this.timestampHeaderName = timestampHeaderName;
   }
 
@@ -196,26 +201,22 @@ public class Reportsv3TimestampMapping {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("level");
-    openapiFields.add("table_name");
-    openapiFields.add("timestamp_header_id");
-    openapiFields.add("timestamp_header_name");
+    openapiFields = new HashSet<String>(Arrays.asList("level", "table_name", "timestamp_header_id", "timestamp_header_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3TimestampMapping
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3TimestampMapping
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3TimestampMapping.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3TimestampMapping is not found in the empty JSON string", Reportsv3TimestampMapping.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3TimestampMapping is not found in the empty JSON string", Reportsv3TimestampMapping.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,18 +224,18 @@ public class Reportsv3TimestampMapping {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3TimestampMapping.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3TimestampMapping` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3TimestampMapping` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
       if ((jsonObj.get("timestamp_header_id") != null && !jsonObj.get("timestamp_header_id").isJsonNull()) && !jsonObj.get("timestamp_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timestamp_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timestamp_header_id").toString()));
       }
       if ((jsonObj.get("timestamp_header_name") != null && !jsonObj.get("timestamp_header_name").isJsonNull()) && !jsonObj.get("timestamp_header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `timestamp_header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timestamp_header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `timestamp_header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timestamp_header_name").toString()));
       }
   }
 
@@ -267,22 +268,22 @@ public class Reportsv3TimestampMapping {
     }
   }
 
- /**
-  * Create an instance of Reportsv3TimestampMapping given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3TimestampMapping
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3TimestampMapping
-  */
+  /**
+   * Create an instance of Reportsv3TimestampMapping given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3TimestampMapping
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3TimestampMapping
+   */
   public static Reportsv3TimestampMapping fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3TimestampMapping.class);
   }
 
- /**
-  * Convert an instance of Reportsv3TimestampMapping to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3TimestampMapping to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

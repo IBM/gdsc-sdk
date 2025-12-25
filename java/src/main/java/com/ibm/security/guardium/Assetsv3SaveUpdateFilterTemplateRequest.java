@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SaveUpdateFilterTemplateRequest - Save Filter Template request for save filters query as template.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3SaveUpdateFilterTemplateRequest {
   public static final String SERIALIZED_NAME_IS_DEFAULT = "is_default";
   @SerializedName(SERIALIZED_NAME_IS_DEFAULT)
+  @javax.annotation.Nullable
   private Boolean isDefault;
 
   public static final String SERIALIZED_NAME_TEMPLATE = "template";
   @SerializedName(SERIALIZED_NAME_TEMPLATE)
+  @javax.annotation.Nullable
   private Assetsv3FilterTemplate template;
 
   public static final String SERIALIZED_NAME_TEMPLATE_IDS_LIST = "template_ids_list";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_IDS_LIST)
+  @javax.annotation.Nullable
   private List<String> templateIdsList = new ArrayList<>();
 
   public Assetsv3SaveUpdateFilterTemplateRequest() {
   }
 
-  public Assetsv3SaveUpdateFilterTemplateRequest isDefault(Boolean isDefault) {
+  public Assetsv3SaveUpdateFilterTemplateRequest isDefault(@javax.annotation.Nullable Boolean isDefault) {
     this.isDefault = isDefault;
     return this;
   }
 
-   /**
+  /**
    * Get isDefault
    * @return isDefault
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsDefault() {
     return isDefault;
   }
 
-  public void setIsDefault(Boolean isDefault) {
+  public void setIsDefault(@javax.annotation.Nullable Boolean isDefault) {
     this.isDefault = isDefault;
   }
 
 
-  public Assetsv3SaveUpdateFilterTemplateRequest template(Assetsv3FilterTemplate template) {
+  public Assetsv3SaveUpdateFilterTemplateRequest template(@javax.annotation.Nullable Assetsv3FilterTemplate template) {
     this.template = template;
     return this;
   }
 
-   /**
+  /**
    * Get template
    * @return template
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3FilterTemplate getTemplate() {
     return template;
   }
 
-  public void setTemplate(Assetsv3FilterTemplate template) {
+  public void setTemplate(@javax.annotation.Nullable Assetsv3FilterTemplate template) {
     this.template = template;
   }
 
 
-  public Assetsv3SaveUpdateFilterTemplateRequest templateIdsList(List<String> templateIdsList) {
+  public Assetsv3SaveUpdateFilterTemplateRequest templateIdsList(@javax.annotation.Nullable List<String> templateIdsList) {
     this.templateIdsList = templateIdsList;
     return this;
   }
@@ -120,16 +124,16 @@ public class Assetsv3SaveUpdateFilterTemplateRequest {
     return this;
   }
 
-   /**
+  /**
    * Get templateIdsList
    * @return templateIdsList
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTemplateIdsList() {
     return templateIdsList;
   }
 
-  public void setTemplateIdsList(List<String> templateIdsList) {
+  public void setTemplateIdsList(@javax.annotation.Nullable List<String> templateIdsList) {
     this.templateIdsList = templateIdsList;
   }
 
@@ -182,25 +186,22 @@ public class Assetsv3SaveUpdateFilterTemplateRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("is_default");
-    openapiFields.add("template");
-    openapiFields.add("template_ids_list");
+    openapiFields = new HashSet<String>(Arrays.asList("is_default", "template", "template_ids_list"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3SaveUpdateFilterTemplateRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3SaveUpdateFilterTemplateRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3SaveUpdateFilterTemplateRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3SaveUpdateFilterTemplateRequest is not found in the empty JSON string", Assetsv3SaveUpdateFilterTemplateRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3SaveUpdateFilterTemplateRequest is not found in the empty JSON string", Assetsv3SaveUpdateFilterTemplateRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,7 +209,7 @@ public class Assetsv3SaveUpdateFilterTemplateRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3SaveUpdateFilterTemplateRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3SaveUpdateFilterTemplateRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3SaveUpdateFilterTemplateRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -218,7 +219,7 @@ public class Assetsv3SaveUpdateFilterTemplateRequest {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("template_ids_list") != null && !jsonObj.get("template_ids_list").isJsonNull() && !jsonObj.get("template_ids_list").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_ids_list` to be an array in the JSON string but got `%s`", jsonObj.get("template_ids_list").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_ids_list` to be an array in the JSON string but got `%s`", jsonObj.get("template_ids_list").toString()));
       }
   }
 
@@ -251,22 +252,22 @@ public class Assetsv3SaveUpdateFilterTemplateRequest {
     }
   }
 
- /**
-  * Create an instance of Assetsv3SaveUpdateFilterTemplateRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3SaveUpdateFilterTemplateRequest
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3SaveUpdateFilterTemplateRequest
-  */
+  /**
+   * Create an instance of Assetsv3SaveUpdateFilterTemplateRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3SaveUpdateFilterTemplateRequest
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3SaveUpdateFilterTemplateRequest
+   */
   public static Assetsv3SaveUpdateFilterTemplateRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3SaveUpdateFilterTemplateRequest.class);
   }
 
- /**
-  * Convert an instance of Assetsv3SaveUpdateFilterTemplateRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3SaveUpdateFilterTemplateRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

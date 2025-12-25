@@ -41,7 +41,7 @@ class Policybuilderv3RuleParameterMetadata(BaseModel):
     possible_values: Optional[List[Policybuilderv3PossibleValueObj]] = Field(default=None, description="Possible value length of the rule parameter.")
     relationships: Optional[List[Policybuilderv3ParameterRelationShip]] = Field(default=None, description="Parameter relationship object.")
     rule_category: Optional[StrictStr] = Field(default=None, description="Category of the rule.")
-    rule_type: Optional[Policybuilderv3RuleType] = None
+    rule_type: Optional[Policybuilderv3RuleType] = Policybuilderv3RuleType.ACCESS
     standalone_parameter: Optional[StrictBool] = Field(default=None, description="If the parameter is standalone.")
     supported_db_types: Optional[List[StrictStr]] = Field(default=None, description="Stores all the supported db types.")
     type: Optional[StrictStr] = Field(default=None, description="Type of parameter.")
@@ -90,16 +90,16 @@ class Policybuilderv3RuleParameterMetadata(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in possible_values (list)
         _items = []
         if self.possible_values:
-            for _item in self.possible_values:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_possible_values in self.possible_values:
+                if _item_possible_values:
+                    _items.append(_item_possible_values.to_dict())
             _dict['possible_values'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in relationships (list)
         _items = []
         if self.relationships:
-            for _item in self.relationships:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_relationships in self.relationships:
+                if _item_relationships:
+                    _items.append(_item_relationships.to_dict())
             _dict['relationships'] = _items
         return _dict
 
@@ -125,7 +125,7 @@ class Policybuilderv3RuleParameterMetadata(BaseModel):
             "possible_values": [Policybuilderv3PossibleValueObj.from_dict(_item) for _item in obj["possible_values"]] if obj.get("possible_values") is not None else None,
             "relationships": [Policybuilderv3ParameterRelationShip.from_dict(_item) for _item in obj["relationships"]] if obj.get("relationships") is not None else None,
             "rule_category": obj.get("rule_category"),
-            "rule_type": obj.get("rule_type"),
+            "rule_type": obj.get("rule_type") if obj.get("rule_type") is not None else Policybuilderv3RuleType.ACCESS,
             "standalone_parameter": obj.get("standalone_parameter"),
             "supported_db_types": obj.get("supported_db_types"),
             "type": obj.get("type"),

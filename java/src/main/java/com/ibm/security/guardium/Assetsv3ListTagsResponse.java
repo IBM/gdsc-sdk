@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,36 +43,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response for listing tags.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ListTagsResponse {
   public static final String SERIALIZED_NAME_ASSIGNED = "assigned";
   @SerializedName(SERIALIZED_NAME_ASSIGNED)
+  @javax.annotation.Nullable
   private List<Assetsv3AssignedTags> assigned = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUGGESTIONS = "suggestions";
   @SerializedName(SERIALIZED_NAME_SUGGESTIONS)
+  @javax.annotation.Nullable
   private List<Assetsv3SuggestionsTags> suggestions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_UNASSIGNED = "unassigned";
   @SerializedName(SERIALIZED_NAME_UNASSIGNED)
+  @javax.annotation.Nullable
   private List<Assetsv3UnassignedTags> unassigned = new ArrayList<>();
 
   public Assetsv3ListTagsResponse() {
   }
 
-  public Assetsv3ListTagsResponse assigned(List<Assetsv3AssignedTags> assigned) {
+  public Assetsv3ListTagsResponse assigned(@javax.annotation.Nullable List<Assetsv3AssignedTags> assigned) {
     this.assigned = assigned;
     return this;
   }
@@ -84,21 +88,21 @@ public class Assetsv3ListTagsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assigned
    * @return assigned
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssignedTags> getAssigned() {
     return assigned;
   }
 
-  public void setAssigned(List<Assetsv3AssignedTags> assigned) {
+  public void setAssigned(@javax.annotation.Nullable List<Assetsv3AssignedTags> assigned) {
     this.assigned = assigned;
   }
 
 
-  public Assetsv3ListTagsResponse suggestions(List<Assetsv3SuggestionsTags> suggestions) {
+  public Assetsv3ListTagsResponse suggestions(@javax.annotation.Nullable List<Assetsv3SuggestionsTags> suggestions) {
     this.suggestions = suggestions;
     return this;
   }
@@ -111,21 +115,21 @@ public class Assetsv3ListTagsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get suggestions
    * @return suggestions
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3SuggestionsTags> getSuggestions() {
     return suggestions;
   }
 
-  public void setSuggestions(List<Assetsv3SuggestionsTags> suggestions) {
+  public void setSuggestions(@javax.annotation.Nullable List<Assetsv3SuggestionsTags> suggestions) {
     this.suggestions = suggestions;
   }
 
 
-  public Assetsv3ListTagsResponse unassigned(List<Assetsv3UnassignedTags> unassigned) {
+  public Assetsv3ListTagsResponse unassigned(@javax.annotation.Nullable List<Assetsv3UnassignedTags> unassigned) {
     this.unassigned = unassigned;
     return this;
   }
@@ -138,16 +142,16 @@ public class Assetsv3ListTagsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get unassigned
    * @return unassigned
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3UnassignedTags> getUnassigned() {
     return unassigned;
   }
 
-  public void setUnassigned(List<Assetsv3UnassignedTags> unassigned) {
+  public void setUnassigned(@javax.annotation.Nullable List<Assetsv3UnassignedTags> unassigned) {
     this.unassigned = unassigned;
   }
 
@@ -200,25 +204,22 @@ public class Assetsv3ListTagsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assigned");
-    openapiFields.add("suggestions");
-    openapiFields.add("unassigned");
+    openapiFields = new HashSet<String>(Arrays.asList("assigned", "suggestions", "unassigned"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ListTagsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ListTagsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ListTagsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ListTagsResponse is not found in the empty JSON string", Assetsv3ListTagsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ListTagsResponse is not found in the empty JSON string", Assetsv3ListTagsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -226,7 +227,7 @@ public class Assetsv3ListTagsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ListTagsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ListTagsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ListTagsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -235,7 +236,7 @@ public class Assetsv3ListTagsResponse {
         if (jsonArrayassigned != null) {
           // ensure the json data is an array
           if (!jsonObj.get("assigned").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `assigned` to be an array in the JSON string but got `%s`", jsonObj.get("assigned").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assigned` to be an array in the JSON string but got `%s`", jsonObj.get("assigned").toString()));
           }
 
           // validate the optional field `assigned` (array)
@@ -249,7 +250,7 @@ public class Assetsv3ListTagsResponse {
         if (jsonArraysuggestions != null) {
           // ensure the json data is an array
           if (!jsonObj.get("suggestions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `suggestions` to be an array in the JSON string but got `%s`", jsonObj.get("suggestions").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `suggestions` to be an array in the JSON string but got `%s`", jsonObj.get("suggestions").toString()));
           }
 
           // validate the optional field `suggestions` (array)
@@ -263,7 +264,7 @@ public class Assetsv3ListTagsResponse {
         if (jsonArrayunassigned != null) {
           // ensure the json data is an array
           if (!jsonObj.get("unassigned").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `unassigned` to be an array in the JSON string but got `%s`", jsonObj.get("unassigned").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unassigned` to be an array in the JSON string but got `%s`", jsonObj.get("unassigned").toString()));
           }
 
           // validate the optional field `unassigned` (array)
@@ -303,22 +304,22 @@ public class Assetsv3ListTagsResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ListTagsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ListTagsResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ListTagsResponse
-  */
+  /**
+   * Create an instance of Assetsv3ListTagsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ListTagsResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ListTagsResponse
+   */
   public static Assetsv3ListTagsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ListTagsResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ListTagsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ListTagsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,105 +42,111 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Data source.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3DataSource {
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_LAST_USED = "last_used";
   @SerializedName(SERIALIZED_NAME_LAST_USED)
+  @javax.annotation.Nullable
   private OffsetDateTime lastUsed;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_OTHER_TYPES = "other_types";
   @SerializedName(SERIALIZED_NAME_OTHER_TYPES)
+  @javax.annotation.Nullable
   private List<String> otherTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STREAM_TYPE = "stream_type";
   @SerializedName(SERIALIZED_NAME_STREAM_TYPE)
+  @javax.annotation.Nullable
   private String streamType;
 
   public static final String SERIALIZED_NAME_TYPES = "types";
   @SerializedName(SERIALIZED_NAME_TYPES)
+  @javax.annotation.Nullable
   private List<Connectionsv3ConnectorType> types = new ArrayList<>();
 
   public Connectionsv3DataSource() {
   }
 
-  public Connectionsv3DataSource key(String key) {
+  public Connectionsv3DataSource key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * The key of the data source.
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Connectionsv3DataSource lastUsed(OffsetDateTime lastUsed) {
+  public Connectionsv3DataSource lastUsed(@javax.annotation.Nullable OffsetDateTime lastUsed) {
     this.lastUsed = lastUsed;
     return this;
   }
 
-   /**
+  /**
    * The last time it was used.
    * @return lastUsed
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastUsed() {
     return lastUsed;
   }
 
-  public void setLastUsed(OffsetDateTime lastUsed) {
+  public void setLastUsed(@javax.annotation.Nullable OffsetDateTime lastUsed) {
     this.lastUsed = lastUsed;
   }
 
 
-  public Connectionsv3DataSource name(String name) {
+  public Connectionsv3DataSource name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * The name of the data source.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Connectionsv3DataSource otherTypes(List<String> otherTypes) {
+  public Connectionsv3DataSource otherTypes(@javax.annotation.Nullable List<String> otherTypes) {
     this.otherTypes = otherTypes;
     return this;
   }
@@ -152,40 +159,40 @@ public class Connectionsv3DataSource {
     return this;
   }
 
-   /**
+  /**
    * Other types.
    * @return otherTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getOtherTypes() {
     return otherTypes;
   }
 
-  public void setOtherTypes(List<String> otherTypes) {
+  public void setOtherTypes(@javax.annotation.Nullable List<String> otherTypes) {
     this.otherTypes = otherTypes;
   }
 
 
-  public Connectionsv3DataSource streamType(String streamType) {
+  public Connectionsv3DataSource streamType(@javax.annotation.Nullable String streamType) {
     this.streamType = streamType;
     return this;
   }
 
-   /**
+  /**
    * The stream type of the data source.
    * @return streamType
-  **/
+   */
   @javax.annotation.Nullable
   public String getStreamType() {
     return streamType;
   }
 
-  public void setStreamType(String streamType) {
+  public void setStreamType(@javax.annotation.Nullable String streamType) {
     this.streamType = streamType;
   }
 
 
-  public Connectionsv3DataSource types(List<Connectionsv3ConnectorType> types) {
+  public Connectionsv3DataSource types(@javax.annotation.Nullable List<Connectionsv3ConnectorType> types) {
     this.types = types;
     return this;
   }
@@ -198,16 +205,16 @@ public class Connectionsv3DataSource {
     return this;
   }
 
-   /**
+  /**
    * The type of the environment.
    * @return types
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3ConnectorType> getTypes() {
     return types;
   }
 
-  public void setTypes(List<Connectionsv3ConnectorType> types) {
+  public void setTypes(@javax.annotation.Nullable List<Connectionsv3ConnectorType> types) {
     this.types = types;
   }
 
@@ -266,28 +273,22 @@ public class Connectionsv3DataSource {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("key");
-    openapiFields.add("last_used");
-    openapiFields.add("name");
-    openapiFields.add("other_types");
-    openapiFields.add("stream_type");
-    openapiFields.add("types");
+    openapiFields = new HashSet<String>(Arrays.asList("key", "last_used", "name", "other_types", "stream_type", "types"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3DataSource
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3DataSource
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3DataSource.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3DataSource is not found in the empty JSON string", Connectionsv3DataSource.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3DataSource is not found in the empty JSON string", Connectionsv3DataSource.openapiRequiredFields.toString()));
         }
       }
 
@@ -295,26 +296,26 @@ public class Connectionsv3DataSource {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3DataSource.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3DataSource` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3DataSource` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("other_types") != null && !jsonObj.get("other_types").isJsonNull() && !jsonObj.get("other_types").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `other_types` to be an array in the JSON string but got `%s`", jsonObj.get("other_types").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `other_types` to be an array in the JSON string but got `%s`", jsonObj.get("other_types").toString()));
       }
       if ((jsonObj.get("stream_type") != null && !jsonObj.get("stream_type").isJsonNull()) && !jsonObj.get("stream_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stream_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stream_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stream_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stream_type").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("types") != null && !jsonObj.get("types").isJsonNull() && !jsonObj.get("types").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `types` to be an array in the JSON string but got `%s`", jsonObj.get("types").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `types` to be an array in the JSON string but got `%s`", jsonObj.get("types").toString()));
       }
   }
 
@@ -347,22 +348,22 @@ public class Connectionsv3DataSource {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3DataSource given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3DataSource
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3DataSource
-  */
+  /**
+   * Create an instance of Connectionsv3DataSource given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3DataSource
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3DataSource
+   */
   public static Connectionsv3DataSource fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3DataSource.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3DataSource to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3DataSource to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

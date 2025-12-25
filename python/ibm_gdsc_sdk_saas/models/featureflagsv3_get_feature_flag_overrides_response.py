@@ -72,9 +72,9 @@ class Featureflagsv3GetFeatureFlagOverridesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in feature_flags (list)
         _items = []
         if self.feature_flags:
-            for _item in self.feature_flags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_feature_flags in self.feature_flags:
+                if _item_feature_flags:
+                    _items.append(_item_feature_flags.to_dict())
             _dict['feature_flags'] = _items
         return _dict
 

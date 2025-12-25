@@ -30,11 +30,11 @@ class Reportsv3DateRange(BaseModel):
     """ # noqa: E501
     end_date: Optional[StrictStr] = Field(default=None, description="If custom holds the date string.")
     end_number: Optional[StrictInt] = Field(default=None, description="If custom-relative -  holds the end number.")
-    end_unit: Optional[Reportsv3DateRangeUnit] = None
+    end_unit: Optional[Reportsv3DateRangeUnit] = Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE
     start_date: Optional[StrictStr] = Field(default=None, description="If custom holds the date string.")
     start_number: Optional[StrictInt] = Field(default=None, description="If custom-relative -  holds the start number.")
-    start_unit: Optional[Reportsv3DateRangeUnit] = None
-    type: Optional[Reportsv3DateRangeType] = None
+    start_unit: Optional[Reportsv3DateRangeUnit] = Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE
+    type: Optional[Reportsv3DateRangeType] = Reportsv3DateRangeType.UNDEFINED_DATE_RANGE_TYPE
     __properties: ClassVar[List[str]] = ["end_date", "end_number", "end_unit", "start_date", "start_number", "start_unit", "type"]
 
     model_config = ConfigDict(
@@ -90,11 +90,11 @@ class Reportsv3DateRange(BaseModel):
         _obj = cls.model_validate({
             "end_date": obj.get("end_date"),
             "end_number": obj.get("end_number"),
-            "end_unit": obj.get("end_unit"),
+            "end_unit": obj.get("end_unit") if obj.get("end_unit") is not None else Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE,
             "start_date": obj.get("start_date"),
             "start_number": obj.get("start_number"),
-            "start_unit": obj.get("start_unit"),
-            "type": obj.get("type")
+            "start_unit": obj.get("start_unit") if obj.get("start_unit") is not None else Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE,
+            "type": obj.get("type") if obj.get("type") is not None else Reportsv3DateRangeType.UNDEFINED_DATE_RANGE_TYPE
         })
         return _obj
 

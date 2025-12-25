@@ -28,6 +28,8 @@ export class Notificationsv3FilterField {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "filters",
@@ -49,4 +51,3 @@ export class Notificationsv3FilterField {
     public constructor() {
     }
 }
-

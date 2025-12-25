@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,122 +48,137 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Scheduled Task for Post v3/schedules api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3ScheduledTask {
   public static final String SERIALIZED_NAME_AUDIT_TYPE = "audit_type";
   @SerializedName(SERIALIZED_NAME_AUDIT_TYPE)
+  @javax.annotation.Nullable
   private Schedulerv3AuditType auditType = Schedulerv3AuditType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_DELIVERY_METHOD = "delivery_method";
   @SerializedName(SERIALIZED_NAME_DELIVERY_METHOD)
+  @javax.annotation.Nullable
   private Schedulerv3DeliveryMethod deliveryMethod;
 
   public static final String SERIALIZED_NAME_DISTRIBUTION_RULE_IDS = "distribution_rule_ids";
   @SerializedName(SERIALIZED_NAME_DISTRIBUTION_RULE_IDS)
+  @javax.annotation.Nullable
   private List<String> distributionRuleIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_EMAIL_SUBJECT = "email_subject";
   @SerializedName(SERIALIZED_NAME_EMAIL_SUBJECT)
+  @javax.annotation.Nullable
   private String emailSubject;
 
   public static final String SERIALIZED_NAME_INSTRUCTIONS = "instructions";
   @SerializedName(SERIALIZED_NAME_INSTRUCTIONS)
+  @javax.annotation.Nullable
   private String instructions;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PARAMETER = "parameter";
   @SerializedName(SERIALIZED_NAME_PARAMETER)
+  @javax.annotation.Nullable
   private Schedulerv3TaskParameter parameter;
 
   public static final String SERIALIZED_NAME_RECIPIENTS = "recipients";
   @SerializedName(SERIALIZED_NAME_RECIPIENTS)
+  @javax.annotation.Nullable
   private List<Schedulerv3Recipient> recipients = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_FILTERS = "report_filters";
   @SerializedName(SERIALIZED_NAME_REPORT_FILTERS)
+  @javax.annotation.Nullable
   private Reportsv3ReportFilterBrackets reportFilters;
 
   public static final String SERIALIZED_NAME_SCHEDULED_TASK_ID = "scheduled_task_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_TASK_ID)
+  @javax.annotation.Nullable
   private String scheduledTaskId;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Schedulerv3TaskType type = Schedulerv3TaskType.UNDEFINED_JOBTYPE;
 
   public static final String SERIALIZED_NAME_WORKFLOW_INVESTIGATION_LINKS = "workflow_investigation_links";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_INVESTIGATION_LINKS)
+  @javax.annotation.Nullable
   private List<Schedulerv3ConfigurationItem> workflowInvestigationLinks = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_WORKFLOW_RESPONSE_TEMPLATE = "workflow_response_template";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_RESPONSE_TEMPLATE)
+  @javax.annotation.Nullable
   private Schedulerv3ConfigurationItem workflowResponseTemplate;
 
   public static final String SERIALIZED_NAME_WORKFLOW_TYPE = "workflow_type";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_TYPE)
-  private Schedulerv3WorkflowType workflowType = Schedulerv3WorkflowType.NONE;
+  @javax.annotation.Nullable
+  private Schedulerv3WorkflowType workflowType = Schedulerv3WorkflowType.REVIEW_NONE;
 
   public static final String SERIALIZED_NAME_WORKFLOW_UNIQUE_FIELDS = "workflow_unique_fields";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_UNIQUE_FIELDS)
+  @javax.annotation.Nullable
   private List<String> workflowUniqueFields = new ArrayList<>();
 
   public Schedulerv3ScheduledTask() {
   }
 
-  public Schedulerv3ScheduledTask auditType(Schedulerv3AuditType auditType) {
+  public Schedulerv3ScheduledTask auditType(@javax.annotation.Nullable Schedulerv3AuditType auditType) {
     this.auditType = auditType;
     return this;
   }
 
-   /**
+  /**
    * Get auditType
    * @return auditType
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3AuditType getAuditType() {
     return auditType;
   }
 
-  public void setAuditType(Schedulerv3AuditType auditType) {
+  public void setAuditType(@javax.annotation.Nullable Schedulerv3AuditType auditType) {
     this.auditType = auditType;
   }
 
 
-  public Schedulerv3ScheduledTask deliveryMethod(Schedulerv3DeliveryMethod deliveryMethod) {
+  public Schedulerv3ScheduledTask deliveryMethod(@javax.annotation.Nullable Schedulerv3DeliveryMethod deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
     return this;
   }
 
-   /**
+  /**
    * Get deliveryMethod
    * @return deliveryMethod
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3DeliveryMethod getDeliveryMethod() {
     return deliveryMethod;
   }
 
-  public void setDeliveryMethod(Schedulerv3DeliveryMethod deliveryMethod) {
+  public void setDeliveryMethod(@javax.annotation.Nullable Schedulerv3DeliveryMethod deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
   }
 
 
-  public Schedulerv3ScheduledTask distributionRuleIds(List<String> distributionRuleIds) {
+  public Schedulerv3ScheduledTask distributionRuleIds(@javax.annotation.Nullable List<String> distributionRuleIds) {
     this.distributionRuleIds = distributionRuleIds;
     return this;
   }
@@ -175,97 +191,97 @@ public class Schedulerv3ScheduledTask {
     return this;
   }
 
-   /**
+  /**
    * Optional: Distribution rule IDs for a task. Will be populated by recipients on save.
    * @return distributionRuleIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDistributionRuleIds() {
     return distributionRuleIds;
   }
 
-  public void setDistributionRuleIds(List<String> distributionRuleIds) {
+  public void setDistributionRuleIds(@javax.annotation.Nullable List<String> distributionRuleIds) {
     this.distributionRuleIds = distributionRuleIds;
   }
 
 
-  public Schedulerv3ScheduledTask emailSubject(String emailSubject) {
+  public Schedulerv3ScheduledTask emailSubject(@javax.annotation.Nullable String emailSubject) {
     this.emailSubject = emailSubject;
     return this;
   }
 
-   /**
+  /**
    * Optional: Email subject with replaceable variables.
    * @return emailSubject
-  **/
+   */
   @javax.annotation.Nullable
   public String getEmailSubject() {
     return emailSubject;
   }
 
-  public void setEmailSubject(String emailSubject) {
+  public void setEmailSubject(@javax.annotation.Nullable String emailSubject) {
     this.emailSubject = emailSubject;
   }
 
 
-  public Schedulerv3ScheduledTask instructions(String instructions) {
+  public Schedulerv3ScheduledTask instructions(@javax.annotation.Nullable String instructions) {
     this.instructions = instructions;
     return this;
   }
 
-   /**
+  /**
    * Optional: Instructions for the task owner.
    * @return instructions
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstructions() {
     return instructions;
   }
 
-  public void setInstructions(String instructions) {
+  public void setInstructions(@javax.annotation.Nullable String instructions) {
     this.instructions = instructions;
   }
 
 
-  public Schedulerv3ScheduledTask name(String name) {
+  public Schedulerv3ScheduledTask name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Task name (usually the same as the report name).
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Schedulerv3ScheduledTask parameter(Schedulerv3TaskParameter parameter) {
+  public Schedulerv3ScheduledTask parameter(@javax.annotation.Nullable Schedulerv3TaskParameter parameter) {
     this.parameter = parameter;
     return this;
   }
 
-   /**
+  /**
    * Get parameter
    * @return parameter
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3TaskParameter getParameter() {
     return parameter;
   }
 
-  public void setParameter(Schedulerv3TaskParameter parameter) {
+  public void setParameter(@javax.annotation.Nullable Schedulerv3TaskParameter parameter) {
     this.parameter = parameter;
   }
 
 
-  public Schedulerv3ScheduledTask recipients(List<Schedulerv3Recipient> recipients) {
+  public Schedulerv3ScheduledTask recipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
     return this;
   }
@@ -278,78 +294,78 @@ public class Schedulerv3ScheduledTask {
     return this;
   }
 
-   /**
+  /**
    * Optional: Report result recipients.
    * @return recipients
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3Recipient> getRecipients() {
     return recipients;
   }
 
-  public void setRecipients(List<Schedulerv3Recipient> recipients) {
+  public void setRecipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
   }
 
 
-  public Schedulerv3ScheduledTask reportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public Schedulerv3ScheduledTask reportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
     return this;
   }
 
-   /**
+  /**
    * Get reportFilters
    * @return reportFilters
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportFilterBrackets getReportFilters() {
     return reportFilters;
   }
 
-  public void setReportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public void setReportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
   }
 
 
-  public Schedulerv3ScheduledTask scheduledTaskId(String scheduledTaskId) {
+  public Schedulerv3ScheduledTask scheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
     return this;
   }
 
-   /**
+  /**
    * Optional: Id for the task.
    * @return scheduledTaskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduledTaskId() {
     return scheduledTaskId;
   }
 
-  public void setScheduledTaskId(String scheduledTaskId) {
+  public void setScheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
   }
 
 
-  public Schedulerv3ScheduledTask type(Schedulerv3TaskType type) {
+  public Schedulerv3ScheduledTask type(@javax.annotation.Nullable Schedulerv3TaskType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3TaskType getType() {
     return type;
   }
 
-  public void setType(Schedulerv3TaskType type) {
+  public void setType(@javax.annotation.Nullable Schedulerv3TaskType type) {
     this.type = type;
   }
 
 
-  public Schedulerv3ScheduledTask workflowInvestigationLinks(List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
+  public Schedulerv3ScheduledTask workflowInvestigationLinks(@javax.annotation.Nullable List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
     this.workflowInvestigationLinks = workflowInvestigationLinks;
     return this;
   }
@@ -362,59 +378,59 @@ public class Schedulerv3ScheduledTask {
     return this;
   }
 
-   /**
+  /**
    * Get workflowInvestigationLinks
    * @return workflowInvestigationLinks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ConfigurationItem> getWorkflowInvestigationLinks() {
     return workflowInvestigationLinks;
   }
 
-  public void setWorkflowInvestigationLinks(List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
+  public void setWorkflowInvestigationLinks(@javax.annotation.Nullable List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
     this.workflowInvestigationLinks = workflowInvestigationLinks;
   }
 
 
-  public Schedulerv3ScheduledTask workflowResponseTemplate(Schedulerv3ConfigurationItem workflowResponseTemplate) {
+  public Schedulerv3ScheduledTask workflowResponseTemplate(@javax.annotation.Nullable Schedulerv3ConfigurationItem workflowResponseTemplate) {
     this.workflowResponseTemplate = workflowResponseTemplate;
     return this;
   }
 
-   /**
+  /**
    * Get workflowResponseTemplate
    * @return workflowResponseTemplate
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3ConfigurationItem getWorkflowResponseTemplate() {
     return workflowResponseTemplate;
   }
 
-  public void setWorkflowResponseTemplate(Schedulerv3ConfigurationItem workflowResponseTemplate) {
+  public void setWorkflowResponseTemplate(@javax.annotation.Nullable Schedulerv3ConfigurationItem workflowResponseTemplate) {
     this.workflowResponseTemplate = workflowResponseTemplate;
   }
 
 
-  public Schedulerv3ScheduledTask workflowType(Schedulerv3WorkflowType workflowType) {
+  public Schedulerv3ScheduledTask workflowType(@javax.annotation.Nullable Schedulerv3WorkflowType workflowType) {
     this.workflowType = workflowType;
     return this;
   }
 
-   /**
+  /**
    * Get workflowType
    * @return workflowType
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3WorkflowType getWorkflowType() {
     return workflowType;
   }
 
-  public void setWorkflowType(Schedulerv3WorkflowType workflowType) {
+  public void setWorkflowType(@javax.annotation.Nullable Schedulerv3WorkflowType workflowType) {
     this.workflowType = workflowType;
   }
 
 
-  public Schedulerv3ScheduledTask workflowUniqueFields(List<String> workflowUniqueFields) {
+  public Schedulerv3ScheduledTask workflowUniqueFields(@javax.annotation.Nullable List<String> workflowUniqueFields) {
     this.workflowUniqueFields = workflowUniqueFields;
     return this;
   }
@@ -427,16 +443,16 @@ public class Schedulerv3ScheduledTask {
     return this;
   }
 
-   /**
+  /**
    * Get workflowUniqueFields
    * @return workflowUniqueFields
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getWorkflowUniqueFields() {
     return workflowUniqueFields;
   }
 
-  public void setWorkflowUniqueFields(List<String> workflowUniqueFields) {
+  public void setWorkflowUniqueFields(@javax.annotation.Nullable List<String> workflowUniqueFields) {
     this.workflowUniqueFields = workflowUniqueFields;
   }
 
@@ -513,37 +529,22 @@ public class Schedulerv3ScheduledTask {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("audit_type");
-    openapiFields.add("delivery_method");
-    openapiFields.add("distribution_rule_ids");
-    openapiFields.add("email_subject");
-    openapiFields.add("instructions");
-    openapiFields.add("name");
-    openapiFields.add("parameter");
-    openapiFields.add("recipients");
-    openapiFields.add("report_filters");
-    openapiFields.add("scheduled_task_id");
-    openapiFields.add("type");
-    openapiFields.add("workflow_investigation_links");
-    openapiFields.add("workflow_response_template");
-    openapiFields.add("workflow_type");
-    openapiFields.add("workflow_unique_fields");
+    openapiFields = new HashSet<String>(Arrays.asList("audit_type", "delivery_method", "distribution_rule_ids", "email_subject", "instructions", "name", "parameter", "recipients", "report_filters", "scheduled_task_id", "type", "workflow_investigation_links", "workflow_response_template", "workflow_type", "workflow_unique_fields"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledTask
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledTask
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3ScheduledTask.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3ScheduledTask is not found in the empty JSON string", Schedulerv3ScheduledTask.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3ScheduledTask is not found in the empty JSON string", Schedulerv3ScheduledTask.openapiRequiredFields.toString()));
         }
       }
 
@@ -551,7 +552,7 @@ public class Schedulerv3ScheduledTask {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3ScheduledTask.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledTask` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledTask` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -565,16 +566,16 @@ public class Schedulerv3ScheduledTask {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("distribution_rule_ids") != null && !jsonObj.get("distribution_rule_ids").isJsonNull() && !jsonObj.get("distribution_rule_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `distribution_rule_ids` to be an array in the JSON string but got `%s`", jsonObj.get("distribution_rule_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `distribution_rule_ids` to be an array in the JSON string but got `%s`", jsonObj.get("distribution_rule_ids").toString()));
       }
       if ((jsonObj.get("email_subject") != null && !jsonObj.get("email_subject").isJsonNull()) && !jsonObj.get("email_subject").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `email_subject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email_subject").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `email_subject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email_subject").toString()));
       }
       if ((jsonObj.get("instructions") != null && !jsonObj.get("instructions").isJsonNull()) && !jsonObj.get("instructions").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `instructions` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instructions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `instructions` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instructions").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // validate the optional field `parameter`
       if (jsonObj.get("parameter") != null && !jsonObj.get("parameter").isJsonNull()) {
@@ -585,7 +586,7 @@ public class Schedulerv3ScheduledTask {
         if (jsonArrayrecipients != null) {
           // ensure the json data is an array
           if (!jsonObj.get("recipients").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
           }
 
           // validate the optional field `recipients` (array)
@@ -599,7 +600,7 @@ public class Schedulerv3ScheduledTask {
         Reportsv3ReportFilterBrackets.validateJsonElement(jsonObj.get("report_filters"));
       }
       if ((jsonObj.get("scheduled_task_id") != null && !jsonObj.get("scheduled_task_id").isJsonNull()) && !jsonObj.get("scheduled_task_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
@@ -610,7 +611,7 @@ public class Schedulerv3ScheduledTask {
         if (jsonArrayworkflowInvestigationLinks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("workflow_investigation_links").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `workflow_investigation_links` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_investigation_links").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `workflow_investigation_links` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_investigation_links").toString()));
           }
 
           // validate the optional field `workflow_investigation_links` (array)
@@ -629,7 +630,7 @@ public class Schedulerv3ScheduledTask {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("workflow_unique_fields") != null && !jsonObj.get("workflow_unique_fields").isJsonNull() && !jsonObj.get("workflow_unique_fields").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `workflow_unique_fields` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_unique_fields").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `workflow_unique_fields` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_unique_fields").toString()));
       }
   }
 
@@ -662,22 +663,22 @@ public class Schedulerv3ScheduledTask {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3ScheduledTask given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3ScheduledTask
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledTask
-  */
+  /**
+   * Create an instance of Schedulerv3ScheduledTask given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3ScheduledTask
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledTask
+   */
   public static Schedulerv3ScheduledTask fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3ScheduledTask.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3ScheduledTask to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3ScheduledTask to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

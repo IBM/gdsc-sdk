@@ -72,9 +72,9 @@ class Riskanalyticsmlclassificationv3GetClassificationsListResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in classifications (list)
         _items = []
         if self.classifications:
-            for _item in self.classifications:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_classifications in self.classifications:
+                if _item_classifications:
+                    _items.append(_item_classifications.to_dict())
             _dict['classifications'] = _items
         return _dict
 

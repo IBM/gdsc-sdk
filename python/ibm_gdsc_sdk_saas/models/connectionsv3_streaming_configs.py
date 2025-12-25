@@ -28,7 +28,7 @@ class Connectionsv3StreamingConfigs(BaseModel):
     """
     List of account configs and streaming connection configs.
     """ # noqa: E501
-    account_configs: Optional[List[Connectionsv3AccountConfig]] = Field(default=None, description="Accounts infomation.")
+    account_configs: Optional[List[Connectionsv3AccountConfig]] = Field(default=None, description="Accounts information.")
     instance_configs: Optional[List[Connectionsv3StreamConnectionConfig]] = Field(default=None, description="Streaming connections information.")
     __properties: ClassVar[List[str]] = ["account_configs", "instance_configs"]
 
@@ -74,16 +74,16 @@ class Connectionsv3StreamingConfigs(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in account_configs (list)
         _items = []
         if self.account_configs:
-            for _item in self.account_configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_account_configs in self.account_configs:
+                if _item_account_configs:
+                    _items.append(_item_account_configs.to_dict())
             _dict['account_configs'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in instance_configs (list)
         _items = []
         if self.instance_configs:
-            for _item in self.instance_configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_instance_configs in self.instance_configs:
+                if _item_instance_configs:
+                    _items.append(_item_instance_configs.to_dict())
             _dict['instance_configs'] = _items
         return _dict
 

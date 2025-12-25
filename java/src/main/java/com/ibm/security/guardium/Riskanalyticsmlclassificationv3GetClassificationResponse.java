@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetClassificationResponse message for the GetClassification api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsmlclassificationv3GetClassificationResponse {
   public static final String SERIALIZED_NAME_RISK = "risk";
   @SerializedName(SERIALIZED_NAME_RISK)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3Risk risk;
 
   public Riskanalyticsmlclassificationv3GetClassificationResponse() {
   }
 
-  public Riskanalyticsmlclassificationv3GetClassificationResponse risk(Riskanalyticsenginev3Risk risk) {
+  public Riskanalyticsmlclassificationv3GetClassificationResponse risk(@javax.annotation.Nullable Riskanalyticsenginev3Risk risk) {
     this.risk = risk;
     return this;
   }
 
-   /**
+  /**
    * Get risk
    * @return risk
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3Risk getRisk() {
     return risk;
   }
 
-  public void setRisk(Riskanalyticsenginev3Risk risk) {
+  public void setRisk(@javax.annotation.Nullable Riskanalyticsenginev3Risk risk) {
     this.risk = risk;
   }
 
@@ -122,23 +124,22 @@ public class Riskanalyticsmlclassificationv3GetClassificationResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("risk");
+    openapiFields = new HashSet<String>(Arrays.asList("risk"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsmlclassificationv3GetClassificationResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsmlclassificationv3GetClassificationResponse is not found in the empty JSON string", Riskanalyticsmlclassificationv3GetClassificationResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsmlclassificationv3GetClassificationResponse is not found in the empty JSON string", Riskanalyticsmlclassificationv3GetClassificationResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,7 +147,7 @@ public class Riskanalyticsmlclassificationv3GetClassificationResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsmlclassificationv3GetClassificationResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3GetClassificationResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3GetClassificationResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -185,22 +186,22 @@ public class Riskanalyticsmlclassificationv3GetClassificationResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsmlclassificationv3GetClassificationResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsmlclassificationv3GetClassificationResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationResponse
-  */
+  /**
+   * Create an instance of Riskanalyticsmlclassificationv3GetClassificationResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsmlclassificationv3GetClassificationResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationResponse
+   */
   public static Riskanalyticsmlclassificationv3GetClassificationResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsmlclassificationv3GetClassificationResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsmlclassificationv3GetClassificationResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsmlclassificationv3GetClassificationResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

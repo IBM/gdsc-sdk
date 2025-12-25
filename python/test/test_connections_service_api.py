@@ -222,6 +222,20 @@ class TestConnectionsServiceApi(unittest.TestCase):
         """
         pass
 
+    def test_connections_service_validate_azure_connection(self) -> None:
+        """Test case for connections_service_validate_azure_connection
+
+        Summary: Validate an Azure connection. Description: Validate an Azure connection.
+        """
+        pass
+
+    def test_connections_service_validate_gcp_connection(self) -> None:
+        """Test case for connections_service_validate_gcp_connection
+
+        Summary: Validate a GCP connection. Description: Validate a GCP connection.
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

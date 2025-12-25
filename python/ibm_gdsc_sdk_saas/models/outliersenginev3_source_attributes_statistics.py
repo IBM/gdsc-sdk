@@ -30,7 +30,7 @@ class Outliersenginev3SourceAttributesStatistics(BaseModel):
     """ # noqa: E501
     statistics: Optional[List[Outliersenginev3AttributeStatistics]] = None
     total_number_of_attributes: Optional[StrictInt] = None
-    type: Optional[Outliersenginev3SourceAttributeType] = None
+    type: Optional[Outliersenginev3SourceAttributeType] = Outliersenginev3SourceAttributeType.UNDEFINED_SOURCE_STATISTICS_TYPE
     __properties: ClassVar[List[str]] = ["statistics", "total_number_of_attributes", "type"]
 
     model_config = ConfigDict(
@@ -75,9 +75,9 @@ class Outliersenginev3SourceAttributesStatistics(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in statistics (list)
         _items = []
         if self.statistics:
-            for _item in self.statistics:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_statistics in self.statistics:
+                if _item_statistics:
+                    _items.append(_item_statistics.to_dict())
             _dict['statistics'] = _items
         return _dict
 
@@ -93,7 +93,7 @@ class Outliersenginev3SourceAttributesStatistics(BaseModel):
         _obj = cls.model_validate({
             "statistics": [Outliersenginev3AttributeStatistics.from_dict(_item) for _item in obj["statistics"]] if obj.get("statistics") is not None else None,
             "total_number_of_attributes": obj.get("total_number_of_attributes"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Outliersenginev3SourceAttributeType.UNDEFINED_SOURCE_STATISTICS_TYPE
         })
         return _obj
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StapLiveInfoObject gets additional information about S-TAP liveliness.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3StapLiveInfoObject {
   public static final String SERIALIZED_NAME_HAS_EVENT = "has_event";
   @SerializedName(SERIALIZED_NAME_HAS_EVENT)
+  @javax.annotation.Nullable
   private Boolean hasEvent;
 
   public static final String SERIALIZED_NAME_HEALTH_STATUS = "health_status";
   @SerializedName(SERIALIZED_NAME_HEALTH_STATUS)
+  @javax.annotation.Nullable
   private Integer healthStatus;
 
   public static final String SERIALIZED_NAME_LIVELINESS_STATE = "liveliness_state";
   @SerializedName(SERIALIZED_NAME_LIVELINESS_STATE)
+  @javax.annotation.Nullable
   private String livelinessState;
 
   public static final String SERIALIZED_NAME_STAP = "stap";
   @SerializedName(SERIALIZED_NAME_STAP)
+  @javax.annotation.Nullable
   private String stap;
 
   public Healthcollectorv3StapLiveInfoObject() {
   }
 
-  public Healthcollectorv3StapLiveInfoObject hasEvent(Boolean hasEvent) {
+  public Healthcollectorv3StapLiveInfoObject hasEvent(@javax.annotation.Nullable Boolean hasEvent) {
     this.hasEvent = hasEvent;
     return this;
   }
 
-   /**
+  /**
    * Event flag.
    * @return hasEvent
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHasEvent() {
     return hasEvent;
   }
 
-  public void setHasEvent(Boolean hasEvent) {
+  public void setHasEvent(@javax.annotation.Nullable Boolean hasEvent) {
     this.hasEvent = hasEvent;
   }
 
 
-  public Healthcollectorv3StapLiveInfoObject healthStatus(Integer healthStatus) {
+  public Healthcollectorv3StapLiveInfoObject healthStatus(@javax.annotation.Nullable Integer healthStatus) {
     this.healthStatus = healthStatus;
     return this;
   }
 
-   /**
+  /**
    * Health status.
    * @return healthStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getHealthStatus() {
     return healthStatus;
   }
 
-  public void setHealthStatus(Integer healthStatus) {
+  public void setHealthStatus(@javax.annotation.Nullable Integer healthStatus) {
     this.healthStatus = healthStatus;
   }
 
 
-  public Healthcollectorv3StapLiveInfoObject livelinessState(String livelinessState) {
+  public Healthcollectorv3StapLiveInfoObject livelinessState(@javax.annotation.Nullable String livelinessState) {
     this.livelinessState = livelinessState;
     return this;
   }
 
-   /**
+  /**
    * Liveliness state.
    * @return livelinessState
-  **/
+   */
   @javax.annotation.Nullable
   public String getLivelinessState() {
     return livelinessState;
   }
 
-  public void setLivelinessState(String livelinessState) {
+  public void setLivelinessState(@javax.annotation.Nullable String livelinessState) {
     this.livelinessState = livelinessState;
   }
 
 
-  public Healthcollectorv3StapLiveInfoObject stap(String stap) {
+  public Healthcollectorv3StapLiveInfoObject stap(@javax.annotation.Nullable String stap) {
     this.stap = stap;
     return this;
   }
 
-   /**
+  /**
    * S-TAP host name or IP address.
    * @return stap
-  **/
+   */
   @javax.annotation.Nullable
   public String getStap() {
     return stap;
   }
 
-  public void setStap(String stap) {
+  public void setStap(@javax.annotation.Nullable String stap) {
     this.stap = stap;
   }
 
@@ -196,26 +201,22 @@ public class Healthcollectorv3StapLiveInfoObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("has_event");
-    openapiFields.add("health_status");
-    openapiFields.add("liveliness_state");
-    openapiFields.add("stap");
+    openapiFields = new HashSet<String>(Arrays.asList("has_event", "health_status", "liveliness_state", "stap"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapLiveInfoObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapLiveInfoObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3StapLiveInfoObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3StapLiveInfoObject is not found in the empty JSON string", Healthcollectorv3StapLiveInfoObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3StapLiveInfoObject is not found in the empty JSON string", Healthcollectorv3StapLiveInfoObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,15 +224,15 @@ public class Healthcollectorv3StapLiveInfoObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3StapLiveInfoObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapLiveInfoObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapLiveInfoObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("liveliness_state") != null && !jsonObj.get("liveliness_state").isJsonNull()) && !jsonObj.get("liveliness_state").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `liveliness_state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("liveliness_state").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `liveliness_state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("liveliness_state").toString()));
       }
       if ((jsonObj.get("stap") != null && !jsonObj.get("stap").isJsonNull()) && !jsonObj.get("stap").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stap` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap").toString()));
       }
   }
 
@@ -264,22 +265,22 @@ public class Healthcollectorv3StapLiveInfoObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3StapLiveInfoObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3StapLiveInfoObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapLiveInfoObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3StapLiveInfoObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3StapLiveInfoObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapLiveInfoObject
+   */
   public static Healthcollectorv3StapLiveInfoObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3StapLiveInfoObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3StapLiveInfoObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3StapLiveInfoObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

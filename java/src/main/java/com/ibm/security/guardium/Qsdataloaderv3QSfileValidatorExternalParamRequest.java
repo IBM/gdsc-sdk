@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,157 +38,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qsdataloaderv3QSfileValidatorExternalParamRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qsdataloaderv3QSfileValidatorExternalParamRequest {
   public static final String SERIALIZED_NAME_APPLICATION_FILE_NAME = "application_file_name";
   @SerializedName(SERIALIZED_NAME_APPLICATION_FILE_NAME)
+  @javax.annotation.Nullable
   private String applicationFileName;
 
   public static final String SERIALIZED_NAME_BUCKET_NAME = "bucket_name";
   @SerializedName(SERIALIZED_NAME_BUCKET_NAME)
+  @javax.annotation.Nullable
   private String bucketName;
 
   public static final String SERIALIZED_NAME_EXPLORER_FILE_NAME = "explorer_file_name";
   @SerializedName(SERIALIZED_NAME_EXPLORER_FILE_NAME)
+  @javax.annotation.Nullable
   private String explorerFileName;
 
   public static final String SERIALIZED_NAME_FOLDER_NAME = "folder_name";
   @SerializedName(SERIALIZED_NAME_FOLDER_NAME)
+  @javax.annotation.Nullable
   private String folderName;
 
   public static final String SERIALIZED_NAME_NETWORK_FILE_NAME = "network_file_name";
   @SerializedName(SERIALIZED_NAME_NETWORK_FILE_NAME)
+  @javax.annotation.Nullable
   private String networkFileName;
 
   public static final String SERIALIZED_NAME_POLICY_FILE_NAME = "policy_file_name";
   @SerializedName(SERIALIZED_NAME_POLICY_FILE_NAME)
+  @javax.annotation.Nullable
   private String policyFileName;
 
   public Qsdataloaderv3QSfileValidatorExternalParamRequest() {
   }
 
-  public Qsdataloaderv3QSfileValidatorExternalParamRequest applicationFileName(String applicationFileName) {
+  public Qsdataloaderv3QSfileValidatorExternalParamRequest applicationFileName(@javax.annotation.Nullable String applicationFileName) {
     this.applicationFileName = applicationFileName;
     return this;
   }
 
-   /**
+  /**
    * Get applicationFileName
    * @return applicationFileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplicationFileName() {
     return applicationFileName;
   }
 
-  public void setApplicationFileName(String applicationFileName) {
+  public void setApplicationFileName(@javax.annotation.Nullable String applicationFileName) {
     this.applicationFileName = applicationFileName;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorExternalParamRequest bucketName(String bucketName) {
+  public Qsdataloaderv3QSfileValidatorExternalParamRequest bucketName(@javax.annotation.Nullable String bucketName) {
     this.bucketName = bucketName;
     return this;
   }
 
-   /**
+  /**
    * Get bucketName
    * @return bucketName
-  **/
+   */
   @javax.annotation.Nullable
   public String getBucketName() {
     return bucketName;
   }
 
-  public void setBucketName(String bucketName) {
+  public void setBucketName(@javax.annotation.Nullable String bucketName) {
     this.bucketName = bucketName;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorExternalParamRequest explorerFileName(String explorerFileName) {
+  public Qsdataloaderv3QSfileValidatorExternalParamRequest explorerFileName(@javax.annotation.Nullable String explorerFileName) {
     this.explorerFileName = explorerFileName;
     return this;
   }
 
-   /**
+  /**
    * Get explorerFileName
    * @return explorerFileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getExplorerFileName() {
     return explorerFileName;
   }
 
-  public void setExplorerFileName(String explorerFileName) {
+  public void setExplorerFileName(@javax.annotation.Nullable String explorerFileName) {
     this.explorerFileName = explorerFileName;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorExternalParamRequest folderName(String folderName) {
+  public Qsdataloaderv3QSfileValidatorExternalParamRequest folderName(@javax.annotation.Nullable String folderName) {
     this.folderName = folderName;
     return this;
   }
 
-   /**
+  /**
    * Get folderName
    * @return folderName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFolderName() {
     return folderName;
   }
 
-  public void setFolderName(String folderName) {
+  public void setFolderName(@javax.annotation.Nullable String folderName) {
     this.folderName = folderName;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorExternalParamRequest networkFileName(String networkFileName) {
+  public Qsdataloaderv3QSfileValidatorExternalParamRequest networkFileName(@javax.annotation.Nullable String networkFileName) {
     this.networkFileName = networkFileName;
     return this;
   }
 
-   /**
+  /**
    * Get networkFileName
    * @return networkFileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetworkFileName() {
     return networkFileName;
   }
 
-  public void setNetworkFileName(String networkFileName) {
+  public void setNetworkFileName(@javax.annotation.Nullable String networkFileName) {
     this.networkFileName = networkFileName;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorExternalParamRequest policyFileName(String policyFileName) {
+  public Qsdataloaderv3QSfileValidatorExternalParamRequest policyFileName(@javax.annotation.Nullable String policyFileName) {
     this.policyFileName = policyFileName;
     return this;
   }
 
-   /**
+  /**
    * Get policyFileName
    * @return policyFileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyFileName() {
     return policyFileName;
   }
 
-  public void setPolicyFileName(String policyFileName) {
+  public void setPolicyFileName(@javax.annotation.Nullable String policyFileName) {
     this.policyFileName = policyFileName;
   }
 
@@ -246,28 +253,22 @@ public class Qsdataloaderv3QSfileValidatorExternalParamRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("application_file_name");
-    openapiFields.add("bucket_name");
-    openapiFields.add("explorer_file_name");
-    openapiFields.add("folder_name");
-    openapiFields.add("network_file_name");
-    openapiFields.add("policy_file_name");
+    openapiFields = new HashSet<String>(Arrays.asList("application_file_name", "bucket_name", "explorer_file_name", "folder_name", "network_file_name", "policy_file_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qsdataloaderv3QSfileValidatorExternalParamRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qsdataloaderv3QSfileValidatorExternalParamRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qsdataloaderv3QSfileValidatorExternalParamRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qsdataloaderv3QSfileValidatorExternalParamRequest is not found in the empty JSON string", Qsdataloaderv3QSfileValidatorExternalParamRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qsdataloaderv3QSfileValidatorExternalParamRequest is not found in the empty JSON string", Qsdataloaderv3QSfileValidatorExternalParamRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -275,27 +276,27 @@ public class Qsdataloaderv3QSfileValidatorExternalParamRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qsdataloaderv3QSfileValidatorExternalParamRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qsdataloaderv3QSfileValidatorExternalParamRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qsdataloaderv3QSfileValidatorExternalParamRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("application_file_name") != null && !jsonObj.get("application_file_name").isJsonNull()) && !jsonObj.get("application_file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_file_name").toString()));
       }
       if ((jsonObj.get("bucket_name") != null && !jsonObj.get("bucket_name").isJsonNull()) && !jsonObj.get("bucket_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `bucket_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bucket_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `bucket_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bucket_name").toString()));
       }
       if ((jsonObj.get("explorer_file_name") != null && !jsonObj.get("explorer_file_name").isJsonNull()) && !jsonObj.get("explorer_file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `explorer_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("explorer_file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `explorer_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("explorer_file_name").toString()));
       }
       if ((jsonObj.get("folder_name") != null && !jsonObj.get("folder_name").isJsonNull()) && !jsonObj.get("folder_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `folder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `folder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_name").toString()));
       }
       if ((jsonObj.get("network_file_name") != null && !jsonObj.get("network_file_name").isJsonNull()) && !jsonObj.get("network_file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `network_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("network_file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `network_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("network_file_name").toString()));
       }
       if ((jsonObj.get("policy_file_name") != null && !jsonObj.get("policy_file_name").isJsonNull()) && !jsonObj.get("policy_file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_file_name").toString()));
       }
   }
 
@@ -328,22 +329,22 @@ public class Qsdataloaderv3QSfileValidatorExternalParamRequest {
     }
   }
 
- /**
-  * Create an instance of Qsdataloaderv3QSfileValidatorExternalParamRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qsdataloaderv3QSfileValidatorExternalParamRequest
-  * @throws IOException if the JSON string is invalid with respect to Qsdataloaderv3QSfileValidatorExternalParamRequest
-  */
+  /**
+   * Create an instance of Qsdataloaderv3QSfileValidatorExternalParamRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qsdataloaderv3QSfileValidatorExternalParamRequest
+   * @throws IOException if the JSON string is invalid with respect to Qsdataloaderv3QSfileValidatorExternalParamRequest
+   */
   public static Qsdataloaderv3QSfileValidatorExternalParamRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qsdataloaderv3QSfileValidatorExternalParamRequest.class);
   }
 
- /**
-  * Convert an instance of Qsdataloaderv3QSfileValidatorExternalParamRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qsdataloaderv3QSfileValidatorExternalParamRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

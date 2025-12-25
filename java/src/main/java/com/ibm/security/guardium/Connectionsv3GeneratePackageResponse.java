@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3GeneratePackageResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3GeneratePackageResponse {
   public static final String SERIALIZED_NAME_GDP_PACKAGE_LINK = "gdp_package_link";
   @SerializedName(SERIALIZED_NAME_GDP_PACKAGE_LINK)
+  @javax.annotation.Nullable
   private String gdpPackageLink;
 
   public static final String SERIALIZED_NAME_GI_PACKAGE_LINK = "gi_package_link";
   @SerializedName(SERIALIZED_NAME_GI_PACKAGE_LINK)
+  @javax.annotation.Nullable
   private String giPackageLink;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private GooglerpcStatus status;
 
   public Connectionsv3GeneratePackageResponse() {
   }
 
-  public Connectionsv3GeneratePackageResponse gdpPackageLink(String gdpPackageLink) {
+  public Connectionsv3GeneratePackageResponse gdpPackageLink(@javax.annotation.Nullable String gdpPackageLink) {
     this.gdpPackageLink = gdpPackageLink;
     return this;
   }
 
-   /**
+  /**
    * Get gdpPackageLink
    * @return gdpPackageLink
-  **/
+   */
   @javax.annotation.Nullable
   public String getGdpPackageLink() {
     return gdpPackageLink;
   }
 
-  public void setGdpPackageLink(String gdpPackageLink) {
+  public void setGdpPackageLink(@javax.annotation.Nullable String gdpPackageLink) {
     this.gdpPackageLink = gdpPackageLink;
   }
 
 
-  public Connectionsv3GeneratePackageResponse giPackageLink(String giPackageLink) {
+  public Connectionsv3GeneratePackageResponse giPackageLink(@javax.annotation.Nullable String giPackageLink) {
     this.giPackageLink = giPackageLink;
     return this;
   }
 
-   /**
+  /**
    * Get giPackageLink
    * @return giPackageLink
-  **/
+   */
   @javax.annotation.Nullable
   public String getGiPackageLink() {
     return giPackageLink;
   }
 
-  public void setGiPackageLink(String giPackageLink) {
+  public void setGiPackageLink(@javax.annotation.Nullable String giPackageLink) {
     this.giPackageLink = giPackageLink;
   }
 
 
-  public Connectionsv3GeneratePackageResponse status(GooglerpcStatus status) {
+  public Connectionsv3GeneratePackageResponse status(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public GooglerpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(GooglerpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
   }
 
@@ -172,25 +176,22 @@ public class Connectionsv3GeneratePackageResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("gdp_package_link");
-    openapiFields.add("gi_package_link");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("gdp_package_link", "gi_package_link", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GeneratePackageResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GeneratePackageResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3GeneratePackageResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3GeneratePackageResponse is not found in the empty JSON string", Connectionsv3GeneratePackageResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3GeneratePackageResponse is not found in the empty JSON string", Connectionsv3GeneratePackageResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,15 +199,15 @@ public class Connectionsv3GeneratePackageResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3GeneratePackageResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3GeneratePackageResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3GeneratePackageResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("gdp_package_link") != null && !jsonObj.get("gdp_package_link").isJsonNull()) && !jsonObj.get("gdp_package_link").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `gdp_package_link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gdp_package_link").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `gdp_package_link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gdp_package_link").toString()));
       }
       if ((jsonObj.get("gi_package_link") != null && !jsonObj.get("gi_package_link").isJsonNull()) && !jsonObj.get("gi_package_link").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `gi_package_link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gi_package_link").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `gi_package_link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gi_package_link").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
@@ -243,22 +244,22 @@ public class Connectionsv3GeneratePackageResponse {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3GeneratePackageResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3GeneratePackageResponse
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3GeneratePackageResponse
-  */
+  /**
+   * Create an instance of Connectionsv3GeneratePackageResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3GeneratePackageResponse
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3GeneratePackageResponse
+   */
   public static Connectionsv3GeneratePackageResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3GeneratePackageResponse.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3GeneratePackageResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3GeneratePackageResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

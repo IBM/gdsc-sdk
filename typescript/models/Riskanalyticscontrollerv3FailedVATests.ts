@@ -19,6 +19,8 @@ export class Riskanalyticscontrollerv3FailedVATests {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "severity",
@@ -46,4 +48,3 @@ export class Riskanalyticscontrollerv3FailedVATests {
     public constructor() {
     }
 }
-

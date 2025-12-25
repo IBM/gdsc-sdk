@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,364 +41,379 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Schedulerv3ScheduledJobRun
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3ScheduledJobRun {
   public static final String SERIALIZED_NAME_COLLECTION_ID = "collection_id";
   @SerializedName(SERIALIZED_NAME_COLLECTION_ID)
+  @javax.annotation.Nullable
   private String collectionId;
 
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String SERIALIZED_NAME_JOB_ID = "job_id";
   @SerializedName(SERIALIZED_NAME_JOB_ID)
+  @javax.annotation.Nullable
   private String jobId;
 
   public static final String SERIALIZED_NAME_PREVIOUS_JOB_ID = "previous_job_id";
   @SerializedName(SERIALIZED_NAME_PREVIOUS_JOB_ID)
+  @javax.annotation.Nullable
   private String previousJobId;
 
   public static final String SERIALIZED_NAME_QUERY_FROM = "query_from";
   @SerializedName(SERIALIZED_NAME_QUERY_FROM)
+  @javax.annotation.Nullable
   private String queryFrom;
 
   public static final String SERIALIZED_NAME_QUERY_TO = "query_to";
   @SerializedName(SERIALIZED_NAME_QUERY_TO)
+  @javax.annotation.Nullable
   private String queryTo;
 
   public static final String SERIALIZED_NAME_QUEUE_TIME = "queue_time";
   @SerializedName(SERIALIZED_NAME_QUEUE_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime queueTime;
 
   public static final String SERIALIZED_NAME_RESULT_SIZE = "result_size";
   @SerializedName(SERIALIZED_NAME_RESULT_SIZE)
+  @javax.annotation.Nullable
   private Long resultSize;
 
   public static final String SERIALIZED_NAME_RUN_DETAIL = "run_detail";
   @SerializedName(SERIALIZED_NAME_RUN_DETAIL)
+  @javax.annotation.Nullable
   private String runDetail;
 
   public static final String SERIALIZED_NAME_SCHEDULE_ID = "schedule_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULE_ID)
+  @javax.annotation.Nullable
   private String scheduleId;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Schedulerv3ExecutionStatus status = Schedulerv3ExecutionStatus.UNDEFINED;
 
   public static final String SERIALIZED_NAME_TASK_ID = "task_id";
   @SerializedName(SERIALIZED_NAME_TASK_ID)
+  @javax.annotation.Nullable
   private String taskId;
 
   public static final String SERIALIZED_NAME_TASK_NAME = "task_name";
   @SerializedName(SERIALIZED_NAME_TASK_NAME)
+  @javax.annotation.Nullable
   private String taskName;
 
   public static final String SERIALIZED_NAME_TASK_TYPE = "task_type";
   @SerializedName(SERIALIZED_NAME_TASK_TYPE)
+  @javax.annotation.Nullable
   private Schedulerv3TaskType taskType = Schedulerv3TaskType.UNDEFINED_JOBTYPE;
 
   public Schedulerv3ScheduledJobRun() {
   }
 
-  public Schedulerv3ScheduledJobRun collectionId(String collectionId) {
+  public Schedulerv3ScheduledJobRun collectionId(@javax.annotation.Nullable String collectionId) {
     this.collectionId = collectionId;
     return this;
   }
 
-   /**
+  /**
    * Get collectionId
    * @return collectionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCollectionId() {
     return collectionId;
   }
 
-  public void setCollectionId(String collectionId) {
+  public void setCollectionId(@javax.annotation.Nullable String collectionId) {
     this.collectionId = collectionId;
   }
 
 
-  public Schedulerv3ScheduledJobRun endTime(OffsetDateTime endTime) {
+  public Schedulerv3ScheduledJobRun endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * Get endTime
    * @return endTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public Schedulerv3ScheduledJobRun jobId(String jobId) {
+  public Schedulerv3ScheduledJobRun jobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * Get jobId
    * @return jobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getJobId() {
     return jobId;
   }
 
-  public void setJobId(String jobId) {
+  public void setJobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
   }
 
 
-  public Schedulerv3ScheduledJobRun previousJobId(String previousJobId) {
+  public Schedulerv3ScheduledJobRun previousJobId(@javax.annotation.Nullable String previousJobId) {
     this.previousJobId = previousJobId;
     return this;
   }
 
-   /**
+  /**
    * Get previousJobId
    * @return previousJobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPreviousJobId() {
     return previousJobId;
   }
 
-  public void setPreviousJobId(String previousJobId) {
+  public void setPreviousJobId(@javax.annotation.Nullable String previousJobId) {
     this.previousJobId = previousJobId;
   }
 
 
-  public Schedulerv3ScheduledJobRun queryFrom(String queryFrom) {
+  public Schedulerv3ScheduledJobRun queryFrom(@javax.annotation.Nullable String queryFrom) {
     this.queryFrom = queryFrom;
     return this;
   }
 
-   /**
+  /**
    * Get queryFrom
    * @return queryFrom
-  **/
+   */
   @javax.annotation.Nullable
   public String getQueryFrom() {
     return queryFrom;
   }
 
-  public void setQueryFrom(String queryFrom) {
+  public void setQueryFrom(@javax.annotation.Nullable String queryFrom) {
     this.queryFrom = queryFrom;
   }
 
 
-  public Schedulerv3ScheduledJobRun queryTo(String queryTo) {
+  public Schedulerv3ScheduledJobRun queryTo(@javax.annotation.Nullable String queryTo) {
     this.queryTo = queryTo;
     return this;
   }
 
-   /**
+  /**
    * Get queryTo
    * @return queryTo
-  **/
+   */
   @javax.annotation.Nullable
   public String getQueryTo() {
     return queryTo;
   }
 
-  public void setQueryTo(String queryTo) {
+  public void setQueryTo(@javax.annotation.Nullable String queryTo) {
     this.queryTo = queryTo;
   }
 
 
-  public Schedulerv3ScheduledJobRun queueTime(OffsetDateTime queueTime) {
+  public Schedulerv3ScheduledJobRun queueTime(@javax.annotation.Nullable OffsetDateTime queueTime) {
     this.queueTime = queueTime;
     return this;
   }
 
-   /**
+  /**
    * Get queueTime
    * @return queueTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getQueueTime() {
     return queueTime;
   }
 
-  public void setQueueTime(OffsetDateTime queueTime) {
+  public void setQueueTime(@javax.annotation.Nullable OffsetDateTime queueTime) {
     this.queueTime = queueTime;
   }
 
 
-  public Schedulerv3ScheduledJobRun resultSize(Long resultSize) {
+  public Schedulerv3ScheduledJobRun resultSize(@javax.annotation.Nullable Long resultSize) {
     this.resultSize = resultSize;
     return this;
   }
 
-   /**
+  /**
    * Get resultSize
    * @return resultSize
-  **/
+   */
   @javax.annotation.Nullable
   public Long getResultSize() {
     return resultSize;
   }
 
-  public void setResultSize(Long resultSize) {
+  public void setResultSize(@javax.annotation.Nullable Long resultSize) {
     this.resultSize = resultSize;
   }
 
 
-  public Schedulerv3ScheduledJobRun runDetail(String runDetail) {
+  public Schedulerv3ScheduledJobRun runDetail(@javax.annotation.Nullable String runDetail) {
     this.runDetail = runDetail;
     return this;
   }
 
-   /**
+  /**
    * Get runDetail
    * @return runDetail
-  **/
+   */
   @javax.annotation.Nullable
   public String getRunDetail() {
     return runDetail;
   }
 
-  public void setRunDetail(String runDetail) {
+  public void setRunDetail(@javax.annotation.Nullable String runDetail) {
     this.runDetail = runDetail;
   }
 
 
-  public Schedulerv3ScheduledJobRun scheduleId(String scheduleId) {
+  public Schedulerv3ScheduledJobRun scheduleId(@javax.annotation.Nullable String scheduleId) {
     this.scheduleId = scheduleId;
     return this;
   }
 
-   /**
+  /**
    * Get scheduleId
    * @return scheduleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduleId() {
     return scheduleId;
   }
 
-  public void setScheduleId(String scheduleId) {
+  public void setScheduleId(@javax.annotation.Nullable String scheduleId) {
     this.scheduleId = scheduleId;
   }
 
 
-  public Schedulerv3ScheduledJobRun startTime(OffsetDateTime startTime) {
+  public Schedulerv3ScheduledJobRun startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * Get startTime
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
 
-  public Schedulerv3ScheduledJobRun status(Schedulerv3ExecutionStatus status) {
+  public Schedulerv3ScheduledJobRun status(@javax.annotation.Nullable Schedulerv3ExecutionStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3ExecutionStatus getStatus() {
     return status;
   }
 
-  public void setStatus(Schedulerv3ExecutionStatus status) {
+  public void setStatus(@javax.annotation.Nullable Schedulerv3ExecutionStatus status) {
     this.status = status;
   }
 
 
-  public Schedulerv3ScheduledJobRun taskId(String taskId) {
+  public Schedulerv3ScheduledJobRun taskId(@javax.annotation.Nullable String taskId) {
     this.taskId = taskId;
     return this;
   }
 
-   /**
+  /**
    * Get taskId
    * @return taskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTaskId() {
     return taskId;
   }
 
-  public void setTaskId(String taskId) {
+  public void setTaskId(@javax.annotation.Nullable String taskId) {
     this.taskId = taskId;
   }
 
 
-  public Schedulerv3ScheduledJobRun taskName(String taskName) {
+  public Schedulerv3ScheduledJobRun taskName(@javax.annotation.Nullable String taskName) {
     this.taskName = taskName;
     return this;
   }
 
-   /**
+  /**
    * Get taskName
    * @return taskName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTaskName() {
     return taskName;
   }
 
-  public void setTaskName(String taskName) {
+  public void setTaskName(@javax.annotation.Nullable String taskName) {
     this.taskName = taskName;
   }
 
 
-  public Schedulerv3ScheduledJobRun taskType(Schedulerv3TaskType taskType) {
+  public Schedulerv3ScheduledJobRun taskType(@javax.annotation.Nullable Schedulerv3TaskType taskType) {
     this.taskType = taskType;
     return this;
   }
 
-   /**
+  /**
    * Get taskType
    * @return taskType
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3TaskType getTaskType() {
     return taskType;
   }
 
-  public void setTaskType(Schedulerv3TaskType taskType) {
+  public void setTaskType(@javax.annotation.Nullable Schedulerv3TaskType taskType) {
     this.taskType = taskType;
   }
 
@@ -474,37 +490,22 @@ public class Schedulerv3ScheduledJobRun {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("collection_id");
-    openapiFields.add("end_time");
-    openapiFields.add("job_id");
-    openapiFields.add("previous_job_id");
-    openapiFields.add("query_from");
-    openapiFields.add("query_to");
-    openapiFields.add("queue_time");
-    openapiFields.add("result_size");
-    openapiFields.add("run_detail");
-    openapiFields.add("schedule_id");
-    openapiFields.add("start_time");
-    openapiFields.add("status");
-    openapiFields.add("task_id");
-    openapiFields.add("task_name");
-    openapiFields.add("task_type");
+    openapiFields = new HashSet<String>(Arrays.asList("collection_id", "end_time", "job_id", "previous_job_id", "query_from", "query_to", "queue_time", "result_size", "run_detail", "schedule_id", "start_time", "status", "task_id", "task_name", "task_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobRun
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobRun
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3ScheduledJobRun.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3ScheduledJobRun is not found in the empty JSON string", Schedulerv3ScheduledJobRun.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3ScheduledJobRun is not found in the empty JSON string", Schedulerv3ScheduledJobRun.openapiRequiredFields.toString()));
         }
       }
 
@@ -512,40 +513,40 @@ public class Schedulerv3ScheduledJobRun {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3ScheduledJobRun.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobRun` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobRun` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("collection_id") != null && !jsonObj.get("collection_id").isJsonNull()) && !jsonObj.get("collection_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `collection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("collection_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `collection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("collection_id").toString()));
       }
       if ((jsonObj.get("job_id") != null && !jsonObj.get("job_id").isJsonNull()) && !jsonObj.get("job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
       }
       if ((jsonObj.get("previous_job_id") != null && !jsonObj.get("previous_job_id").isJsonNull()) && !jsonObj.get("previous_job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `previous_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("previous_job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `previous_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("previous_job_id").toString()));
       }
       if ((jsonObj.get("query_from") != null && !jsonObj.get("query_from").isJsonNull()) && !jsonObj.get("query_from").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `query_from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_from").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `query_from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_from").toString()));
       }
       if ((jsonObj.get("query_to") != null && !jsonObj.get("query_to").isJsonNull()) && !jsonObj.get("query_to").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `query_to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_to").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `query_to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_to").toString()));
       }
       if ((jsonObj.get("run_detail") != null && !jsonObj.get("run_detail").isJsonNull()) && !jsonObj.get("run_detail").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `run_detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("run_detail").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `run_detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("run_detail").toString()));
       }
       if ((jsonObj.get("schedule_id") != null && !jsonObj.get("schedule_id").isJsonNull()) && !jsonObj.get("schedule_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schedule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schedule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule_id").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
         Schedulerv3ExecutionStatus.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("task_id") != null && !jsonObj.get("task_id").isJsonNull()) && !jsonObj.get("task_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_id").toString()));
       }
       if ((jsonObj.get("task_name") != null && !jsonObj.get("task_name").isJsonNull()) && !jsonObj.get("task_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `task_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `task_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_name").toString()));
       }
       // validate the optional field `task_type`
       if (jsonObj.get("task_type") != null && !jsonObj.get("task_type").isJsonNull()) {
@@ -582,22 +583,22 @@ public class Schedulerv3ScheduledJobRun {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3ScheduledJobRun given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3ScheduledJobRun
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobRun
-  */
+  /**
+   * Create an instance of Schedulerv3ScheduledJobRun given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3ScheduledJobRun
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobRun
+   */
   public static Schedulerv3ScheduledJobRun fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3ScheduledJobRun.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3ScheduledJobRun to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3ScheduledJobRun to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

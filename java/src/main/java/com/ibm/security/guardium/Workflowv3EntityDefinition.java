@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,272 +39,283 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3EntityDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3EntityDefinition {
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)
+  @javax.annotation.Nullable
   private Boolean disabled;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
   @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @javax.annotation.Nullable
   private String entityId;
 
   public static final String SERIALIZED_NAME_ENTITY_LABEL = "entity_label";
   @SerializedName(SERIALIZED_NAME_ENTITY_LABEL)
+  @javax.annotation.Nullable
   private String entityLabel;
 
   public static final String SERIALIZED_NAME_FEATURE_FLAG = "feature_flag";
   @SerializedName(SERIALIZED_NAME_FEATURE_FLAG)
+  @javax.annotation.Nullable
   private String featureFlag;
 
   public static final String SERIALIZED_NAME_PREVENT_DELETE = "prevent_delete";
   @SerializedName(SERIALIZED_NAME_PREVENT_DELETE)
+  @javax.annotation.Nullable
   private Boolean preventDelete;
 
   public static final String SERIALIZED_NAME_PRIVILEGE_ID = "privilege_id";
   @SerializedName(SERIALIZED_NAME_PRIVILEGE_ID)
+  @javax.annotation.Nullable
   private String privilegeId;
 
   public static final String SERIALIZED_NAME_PRIVILEGE_TYPE = "privilege_type";
   @SerializedName(SERIALIZED_NAME_PRIVILEGE_TYPE)
+  @javax.annotation.Nullable
   private String privilegeType;
 
   public static final String SERIALIZED_NAME_PRODUCT_ID = "product_id";
   @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
+  @javax.annotation.Nullable
   private String productId;
 
   public static final String SERIALIZED_NAME_PRODUCT_LABEL = "product_label";
   @SerializedName(SERIALIZED_NAME_PRODUCT_LABEL)
+  @javax.annotation.Nullable
   private String productLabel;
 
   public static final String SERIALIZED_NAME_TEMPLATE_ORIGIN = "template_origin";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ORIGIN)
+  @javax.annotation.Nullable
   private String templateOrigin;
 
   public static final String SERIALIZED_NAME_WORKFLOW = "workflow";
   @SerializedName(SERIALIZED_NAME_WORKFLOW)
+  @javax.annotation.Nullable
   private Workflowv3ProductWorkflow workflow;
 
   public Workflowv3EntityDefinition() {
   }
 
-  public Workflowv3EntityDefinition disabled(Boolean disabled) {
+  public Workflowv3EntityDefinition disabled(@javax.annotation.Nullable Boolean disabled) {
     this.disabled = disabled;
     return this;
   }
 
-   /**
+  /**
    * Get disabled
    * @return disabled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDisabled() {
     return disabled;
   }
 
-  public void setDisabled(Boolean disabled) {
+  public void setDisabled(@javax.annotation.Nullable Boolean disabled) {
     this.disabled = disabled;
   }
 
 
-  public Workflowv3EntityDefinition entityId(String entityId) {
+  public Workflowv3EntityDefinition entityId(@javax.annotation.Nullable String entityId) {
     this.entityId = entityId;
     return this;
   }
 
-   /**
+  /**
    * Get entityId
    * @return entityId
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityId() {
     return entityId;
   }
 
-  public void setEntityId(String entityId) {
+  public void setEntityId(@javax.annotation.Nullable String entityId) {
     this.entityId = entityId;
   }
 
 
-  public Workflowv3EntityDefinition entityLabel(String entityLabel) {
+  public Workflowv3EntityDefinition entityLabel(@javax.annotation.Nullable String entityLabel) {
     this.entityLabel = entityLabel;
     return this;
   }
 
-   /**
+  /**
    * Get entityLabel
    * @return entityLabel
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityLabel() {
     return entityLabel;
   }
 
-  public void setEntityLabel(String entityLabel) {
+  public void setEntityLabel(@javax.annotation.Nullable String entityLabel) {
     this.entityLabel = entityLabel;
   }
 
 
-  public Workflowv3EntityDefinition featureFlag(String featureFlag) {
+  public Workflowv3EntityDefinition featureFlag(@javax.annotation.Nullable String featureFlag) {
     this.featureFlag = featureFlag;
     return this;
   }
 
-   /**
+  /**
    * Get featureFlag
    * @return featureFlag
-  **/
+   */
   @javax.annotation.Nullable
   public String getFeatureFlag() {
     return featureFlag;
   }
 
-  public void setFeatureFlag(String featureFlag) {
+  public void setFeatureFlag(@javax.annotation.Nullable String featureFlag) {
     this.featureFlag = featureFlag;
   }
 
 
-  public Workflowv3EntityDefinition preventDelete(Boolean preventDelete) {
+  public Workflowv3EntityDefinition preventDelete(@javax.annotation.Nullable Boolean preventDelete) {
     this.preventDelete = preventDelete;
     return this;
   }
 
-   /**
+  /**
    * Optional: if true, the product-entity cannot be deleted. But it can be updated.
    * @return preventDelete
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPreventDelete() {
     return preventDelete;
   }
 
-  public void setPreventDelete(Boolean preventDelete) {
+  public void setPreventDelete(@javax.annotation.Nullable Boolean preventDelete) {
     this.preventDelete = preventDelete;
   }
 
 
-  public Workflowv3EntityDefinition privilegeId(String privilegeId) {
+  public Workflowv3EntityDefinition privilegeId(@javax.annotation.Nullable String privilegeId) {
     this.privilegeId = privilegeId;
     return this;
   }
 
-   /**
+  /**
    * Get privilegeId
    * @return privilegeId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPrivilegeId() {
     return privilegeId;
   }
 
-  public void setPrivilegeId(String privilegeId) {
+  public void setPrivilegeId(@javax.annotation.Nullable String privilegeId) {
     this.privilegeId = privilegeId;
   }
 
 
-  public Workflowv3EntityDefinition privilegeType(String privilegeType) {
+  public Workflowv3EntityDefinition privilegeType(@javax.annotation.Nullable String privilegeType) {
     this.privilegeType = privilegeType;
     return this;
   }
 
-   /**
+  /**
    * Get privilegeType
    * @return privilegeType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPrivilegeType() {
     return privilegeType;
   }
 
-  public void setPrivilegeType(String privilegeType) {
+  public void setPrivilegeType(@javax.annotation.Nullable String privilegeType) {
     this.privilegeType = privilegeType;
   }
 
 
-  public Workflowv3EntityDefinition productId(String productId) {
+  public Workflowv3EntityDefinition productId(@javax.annotation.Nullable String productId) {
     this.productId = productId;
     return this;
   }
 
-   /**
+  /**
    * Get productId
    * @return productId
-  **/
+   */
   @javax.annotation.Nullable
   public String getProductId() {
     return productId;
   }
 
-  public void setProductId(String productId) {
+  public void setProductId(@javax.annotation.Nullable String productId) {
     this.productId = productId;
   }
 
 
-  public Workflowv3EntityDefinition productLabel(String productLabel) {
+  public Workflowv3EntityDefinition productLabel(@javax.annotation.Nullable String productLabel) {
     this.productLabel = productLabel;
     return this;
   }
 
-   /**
+  /**
    * Get productLabel
    * @return productLabel
-  **/
+   */
   @javax.annotation.Nullable
   public String getProductLabel() {
     return productLabel;
   }
 
-  public void setProductLabel(String productLabel) {
+  public void setProductLabel(@javax.annotation.Nullable String productLabel) {
     this.productLabel = productLabel;
   }
 
 
-  public Workflowv3EntityDefinition templateOrigin(String templateOrigin) {
+  public Workflowv3EntityDefinition templateOrigin(@javax.annotation.Nullable String templateOrigin) {
     this.templateOrigin = templateOrigin;
     return this;
   }
 
-   /**
+  /**
    * Get templateOrigin
    * @return templateOrigin
-  **/
+   */
   @javax.annotation.Nullable
   public String getTemplateOrigin() {
     return templateOrigin;
   }
 
-  public void setTemplateOrigin(String templateOrigin) {
+  public void setTemplateOrigin(@javax.annotation.Nullable String templateOrigin) {
     this.templateOrigin = templateOrigin;
   }
 
 
-  public Workflowv3EntityDefinition workflow(Workflowv3ProductWorkflow workflow) {
+  public Workflowv3EntityDefinition workflow(@javax.annotation.Nullable Workflowv3ProductWorkflow workflow) {
     this.workflow = workflow;
     return this;
   }
 
-   /**
+  /**
    * Get workflow
    * @return workflow
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3ProductWorkflow getWorkflow() {
     return workflow;
   }
 
-  public void setWorkflow(Workflowv3ProductWorkflow workflow) {
+  public void setWorkflow(@javax.annotation.Nullable Workflowv3ProductWorkflow workflow) {
     this.workflow = workflow;
   }
 
@@ -372,33 +384,22 @@ public class Workflowv3EntityDefinition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("disabled");
-    openapiFields.add("entity_id");
-    openapiFields.add("entity_label");
-    openapiFields.add("feature_flag");
-    openapiFields.add("prevent_delete");
-    openapiFields.add("privilege_id");
-    openapiFields.add("privilege_type");
-    openapiFields.add("product_id");
-    openapiFields.add("product_label");
-    openapiFields.add("template_origin");
-    openapiFields.add("workflow");
+    openapiFields = new HashSet<String>(Arrays.asList("disabled", "entity_id", "entity_label", "feature_flag", "prevent_delete", "privilege_id", "privilege_type", "product_id", "product_label", "template_origin", "workflow"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3EntityDefinition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3EntityDefinition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3EntityDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3EntityDefinition is not found in the empty JSON string", Workflowv3EntityDefinition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3EntityDefinition is not found in the empty JSON string", Workflowv3EntityDefinition.openapiRequiredFields.toString()));
         }
       }
 
@@ -406,33 +407,33 @@ public class Workflowv3EntityDefinition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3EntityDefinition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3EntityDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3EntityDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("entity_id") != null && !jsonObj.get("entity_id").isJsonNull()) && !jsonObj.get("entity_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
       }
       if ((jsonObj.get("entity_label") != null && !jsonObj.get("entity_label").isJsonNull()) && !jsonObj.get("entity_label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_label").toString()));
       }
       if ((jsonObj.get("feature_flag") != null && !jsonObj.get("feature_flag").isJsonNull()) && !jsonObj.get("feature_flag").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `feature_flag` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feature_flag").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `feature_flag` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feature_flag").toString()));
       }
       if ((jsonObj.get("privilege_id") != null && !jsonObj.get("privilege_id").isJsonNull()) && !jsonObj.get("privilege_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `privilege_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `privilege_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_id").toString()));
       }
       if ((jsonObj.get("privilege_type") != null && !jsonObj.get("privilege_type").isJsonNull()) && !jsonObj.get("privilege_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `privilege_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `privilege_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_type").toString()));
       }
       if ((jsonObj.get("product_id") != null && !jsonObj.get("product_id").isJsonNull()) && !jsonObj.get("product_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `product_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("product_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `product_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("product_id").toString()));
       }
       if ((jsonObj.get("product_label") != null && !jsonObj.get("product_label").isJsonNull()) && !jsonObj.get("product_label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `product_label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("product_label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `product_label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("product_label").toString()));
       }
       if ((jsonObj.get("template_origin") != null && !jsonObj.get("template_origin").isJsonNull()) && !jsonObj.get("template_origin").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_origin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_origin").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_origin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_origin").toString()));
       }
       // validate the optional field `workflow`
       if (jsonObj.get("workflow") != null && !jsonObj.get("workflow").isJsonNull()) {
@@ -469,22 +470,22 @@ public class Workflowv3EntityDefinition {
     }
   }
 
- /**
-  * Create an instance of Workflowv3EntityDefinition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3EntityDefinition
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3EntityDefinition
-  */
+  /**
+   * Create an instance of Workflowv3EntityDefinition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3EntityDefinition
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3EntityDefinition
+   */
   public static Workflowv3EntityDefinition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3EntityDefinition.class);
   }
 
- /**
-  * Convert an instance of Workflowv3EntityDefinition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3EntityDefinition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

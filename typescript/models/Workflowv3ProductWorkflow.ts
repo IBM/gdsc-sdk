@@ -23,6 +23,8 @@ export class Workflowv3ProductWorkflow {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "auditType",
@@ -62,6 +64,5 @@ export class Workflowv3ProductWorkflow {
     public constructor() {
     }
 }
-
 
 

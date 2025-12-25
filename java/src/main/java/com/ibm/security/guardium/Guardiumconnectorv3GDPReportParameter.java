@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Report parameter definition.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3GDPReportParameter {
   public static final String SERIALIZED_NAME_PARAMETER_VALUE = "parameter_value";
   @SerializedName(SERIALIZED_NAME_PARAMETER_VALUE)
+  @javax.annotation.Nullable
   private String parameterValue;
 
   public static final String SERIALIZED_NAME_PAREMETER_NAME = "paremeter_name";
   @SerializedName(SERIALIZED_NAME_PAREMETER_NAME)
+  @javax.annotation.Nullable
   private String paremeterName;
 
   public Guardiumconnectorv3GDPReportParameter() {
   }
 
-  public Guardiumconnectorv3GDPReportParameter parameterValue(String parameterValue) {
+  public Guardiumconnectorv3GDPReportParameter parameterValue(@javax.annotation.Nullable String parameterValue) {
     this.parameterValue = parameterValue;
     return this;
   }
 
-   /**
+  /**
    * Parameter value.
    * @return parameterValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getParameterValue() {
     return parameterValue;
   }
 
-  public void setParameterValue(String parameterValue) {
+  public void setParameterValue(@javax.annotation.Nullable String parameterValue) {
     this.parameterValue = parameterValue;
   }
 
 
-  public Guardiumconnectorv3GDPReportParameter paremeterName(String paremeterName) {
+  public Guardiumconnectorv3GDPReportParameter paremeterName(@javax.annotation.Nullable String paremeterName) {
     this.paremeterName = paremeterName;
     return this;
   }
 
-   /**
+  /**
    * Parameter name.
    * @return paremeterName
-  **/
+   */
   @javax.annotation.Nullable
   public String getParemeterName() {
     return paremeterName;
   }
 
-  public void setParemeterName(String paremeterName) {
+  public void setParemeterName(@javax.annotation.Nullable String paremeterName) {
     this.paremeterName = paremeterName;
   }
 
@@ -146,24 +149,22 @@ public class Guardiumconnectorv3GDPReportParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("parameter_value");
-    openapiFields.add("paremeter_name");
+    openapiFields = new HashSet<String>(Arrays.asList("parameter_value", "paremeter_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GDPReportParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GDPReportParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3GDPReportParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3GDPReportParameter is not found in the empty JSON string", Guardiumconnectorv3GDPReportParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3GDPReportParameter is not found in the empty JSON string", Guardiumconnectorv3GDPReportParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Guardiumconnectorv3GDPReportParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3GDPReportParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GDPReportParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GDPReportParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("parameter_value") != null && !jsonObj.get("parameter_value").isJsonNull()) && !jsonObj.get("parameter_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parameter_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameter_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_value").toString()));
       }
       if ((jsonObj.get("paremeter_name") != null && !jsonObj.get("paremeter_name").isJsonNull()) && !jsonObj.get("paremeter_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `paremeter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("paremeter_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `paremeter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("paremeter_name").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Guardiumconnectorv3GDPReportParameter {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3GDPReportParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3GDPReportParameter
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GDPReportParameter
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3GDPReportParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3GDPReportParameter
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GDPReportParameter
+   */
   public static Guardiumconnectorv3GDPReportParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3GDPReportParameter.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3GDPReportParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3GDPReportParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

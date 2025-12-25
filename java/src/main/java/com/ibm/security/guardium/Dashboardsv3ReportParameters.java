@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,87 +42,98 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportParameters - distinguishing features of a report card.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Dashboardsv3ReportParameters {
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)
+  @javax.annotation.Nullable
   private String end;
 
   public static final String SERIALIZED_NAME_GROUP_IDS = "group_ids";
   @SerializedName(SERIALIZED_NAME_GROUP_IDS)
+  @javax.annotation.Nullable
   private List<Integer> groupIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_LOCAL_TIME_FILTER = "local_time_filter";
   @SerializedName(SERIALIZED_NAME_LOCAL_TIME_FILTER)
+  @javax.annotation.Nullable
   private Dashboardsv3TimeRange localTimeFilter;
 
   public static final String SERIALIZED_NAME_MENU_ITEM = "menu_item";
   @SerializedName(SERIALIZED_NAME_MENU_ITEM)
+  @javax.annotation.Nullable
   private String menuItem;
 
   public static final String SERIALIZED_NAME_OVERRIDE = "override";
   @SerializedName(SERIALIZED_NAME_OVERRIDE)
+  @javax.annotation.Nullable
   private Boolean override;
 
   public static final String SERIALIZED_NAME_RANGE = "range";
   @SerializedName(SERIALIZED_NAME_RANGE)
+  @javax.annotation.Nullable
   private String range;
 
   public static final String SERIALIZED_NAME_REGULATION = "regulation";
   @SerializedName(SERIALIZED_NAME_REGULATION)
+  @javax.annotation.Nullable
   private String regulation;
 
   public static final String SERIALIZED_NAME_START = "start";
   @SerializedName(SERIALIZED_NAME_START)
+  @javax.annotation.Nullable
   private String start;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportTag> tags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public Dashboardsv3ReportParameters() {
   }
 
-  public Dashboardsv3ReportParameters end(String end) {
+  public Dashboardsv3ReportParameters end(@javax.annotation.Nullable String end) {
     this.end = end;
     return this;
   }
 
-   /**
+  /**
    * End.
    * @return end
-  **/
+   */
   @javax.annotation.Nullable
   public String getEnd() {
     return end;
   }
 
-  public void setEnd(String end) {
+  public void setEnd(@javax.annotation.Nullable String end) {
     this.end = end;
   }
 
 
-  public Dashboardsv3ReportParameters groupIds(List<Integer> groupIds) {
+  public Dashboardsv3ReportParameters groupIds(@javax.annotation.Nullable List<Integer> groupIds) {
     this.groupIds = groupIds;
     return this;
   }
@@ -134,154 +146,154 @@ public class Dashboardsv3ReportParameters {
     return this;
   }
 
-   /**
+  /**
    * Get groupIds
    * @return groupIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<Integer> getGroupIds() {
     return groupIds;
   }
 
-  public void setGroupIds(List<Integer> groupIds) {
+  public void setGroupIds(@javax.annotation.Nullable List<Integer> groupIds) {
     this.groupIds = groupIds;
   }
 
 
-  public Dashboardsv3ReportParameters id(String id) {
+  public Dashboardsv3ReportParameters id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Parameters id.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Dashboardsv3ReportParameters localTimeFilter(Dashboardsv3TimeRange localTimeFilter) {
+  public Dashboardsv3ReportParameters localTimeFilter(@javax.annotation.Nullable Dashboardsv3TimeRange localTimeFilter) {
     this.localTimeFilter = localTimeFilter;
     return this;
   }
 
-   /**
+  /**
    * Get localTimeFilter
    * @return localTimeFilter
-  **/
+   */
   @javax.annotation.Nullable
   public Dashboardsv3TimeRange getLocalTimeFilter() {
     return localTimeFilter;
   }
 
-  public void setLocalTimeFilter(Dashboardsv3TimeRange localTimeFilter) {
+  public void setLocalTimeFilter(@javax.annotation.Nullable Dashboardsv3TimeRange localTimeFilter) {
     this.localTimeFilter = localTimeFilter;
   }
 
 
-  public Dashboardsv3ReportParameters menuItem(String menuItem) {
+  public Dashboardsv3ReportParameters menuItem(@javax.annotation.Nullable String menuItem) {
     this.menuItem = menuItem;
     return this;
   }
 
-   /**
+  /**
    * Menu Item.
    * @return menuItem
-  **/
+   */
   @javax.annotation.Nullable
   public String getMenuItem() {
     return menuItem;
   }
 
-  public void setMenuItem(String menuItem) {
+  public void setMenuItem(@javax.annotation.Nullable String menuItem) {
     this.menuItem = menuItem;
   }
 
 
-  public Dashboardsv3ReportParameters override(Boolean override) {
+  public Dashboardsv3ReportParameters override(@javax.annotation.Nullable Boolean override) {
     this.override = override;
     return this;
   }
 
-   /**
+  /**
    * Use local parameters instead of global.
    * @return override
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getOverride() {
     return override;
   }
 
-  public void setOverride(Boolean override) {
+  public void setOverride(@javax.annotation.Nullable Boolean override) {
     this.override = override;
   }
 
 
-  public Dashboardsv3ReportParameters range(String range) {
+  public Dashboardsv3ReportParameters range(@javax.annotation.Nullable String range) {
     this.range = range;
     return this;
   }
 
-   /**
+  /**
    * Time range - Time range is no longer used.
    * @return range
-  **/
+   */
   @javax.annotation.Nullable
   public String getRange() {
     return range;
   }
 
-  public void setRange(String range) {
+  public void setRange(@javax.annotation.Nullable String range) {
     this.range = range;
   }
 
 
-  public Dashboardsv3ReportParameters regulation(String regulation) {
+  public Dashboardsv3ReportParameters regulation(@javax.annotation.Nullable String regulation) {
     this.regulation = regulation;
     return this;
   }
 
-   /**
+  /**
    * Regulation for isDataSecurity.
    * @return regulation
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegulation() {
     return regulation;
   }
 
-  public void setRegulation(String regulation) {
+  public void setRegulation(@javax.annotation.Nullable String regulation) {
     this.regulation = regulation;
   }
 
 
-  public Dashboardsv3ReportParameters start(String start) {
+  public Dashboardsv3ReportParameters start(@javax.annotation.Nullable String start) {
     this.start = start;
     return this;
   }
 
-   /**
+  /**
    * Start.
    * @return start
-  **/
+   */
   @javax.annotation.Nullable
   public String getStart() {
     return start;
   }
 
-  public void setStart(String start) {
+  public void setStart(@javax.annotation.Nullable String start) {
     this.start = start;
   }
 
 
-  public Dashboardsv3ReportParameters tags(List<Reportsv3ReportTag> tags) {
+  public Dashboardsv3ReportParameters tags(@javax.annotation.Nullable List<Reportsv3ReportTag> tags) {
     this.tags = tags;
     return this;
   }
@@ -294,35 +306,35 @@ public class Dashboardsv3ReportParameters {
     return this;
   }
 
-   /**
+  /**
    * Report tags.
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportTag> getTags() {
     return tags;
   }
 
-  public void setTags(List<Reportsv3ReportTag> tags) {
+  public void setTags(@javax.annotation.Nullable List<Reportsv3ReportTag> tags) {
     this.tags = tags;
   }
 
 
-  public Dashboardsv3ReportParameters title(String title) {
+  public Dashboardsv3ReportParameters title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Optional title of card.
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
@@ -391,33 +403,22 @@ public class Dashboardsv3ReportParameters {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("end");
-    openapiFields.add("group_ids");
-    openapiFields.add("id");
-    openapiFields.add("local_time_filter");
-    openapiFields.add("menu_item");
-    openapiFields.add("override");
-    openapiFields.add("range");
-    openapiFields.add("regulation");
-    openapiFields.add("start");
-    openapiFields.add("tags");
-    openapiFields.add("title");
+    openapiFields = new HashSet<String>(Arrays.asList("end", "group_ids", "id", "local_time_filter", "menu_item", "override", "range", "regulation", "start", "tags", "title"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3ReportParameters
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3ReportParameters
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Dashboardsv3ReportParameters.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Dashboardsv3ReportParameters is not found in the empty JSON string", Dashboardsv3ReportParameters.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Dashboardsv3ReportParameters is not found in the empty JSON string", Dashboardsv3ReportParameters.openapiRequiredFields.toString()));
         }
       }
 
@@ -425,42 +426,42 @@ public class Dashboardsv3ReportParameters {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Dashboardsv3ReportParameters.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Dashboardsv3ReportParameters` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Dashboardsv3ReportParameters` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("end") != null && !jsonObj.get("end").isJsonNull()) && !jsonObj.get("end").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `end` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `end` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("group_ids") != null && !jsonObj.get("group_ids").isJsonNull() && !jsonObj.get("group_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("group_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("group_ids").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       // validate the optional field `local_time_filter`
       if (jsonObj.get("local_time_filter") != null && !jsonObj.get("local_time_filter").isJsonNull()) {
         Dashboardsv3TimeRange.validateJsonElement(jsonObj.get("local_time_filter"));
       }
       if ((jsonObj.get("menu_item") != null && !jsonObj.get("menu_item").isJsonNull()) && !jsonObj.get("menu_item").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `menu_item` to be a primitive type in the JSON string but got `%s`", jsonObj.get("menu_item").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `menu_item` to be a primitive type in the JSON string but got `%s`", jsonObj.get("menu_item").toString()));
       }
       if ((jsonObj.get("range") != null && !jsonObj.get("range").isJsonNull()) && !jsonObj.get("range").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `range` to be a primitive type in the JSON string but got `%s`", jsonObj.get("range").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `range` to be a primitive type in the JSON string but got `%s`", jsonObj.get("range").toString()));
       }
       if ((jsonObj.get("regulation") != null && !jsonObj.get("regulation").isJsonNull()) && !jsonObj.get("regulation").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `regulation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("regulation").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `regulation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("regulation").toString()));
       }
       if ((jsonObj.get("start") != null && !jsonObj.get("start").isJsonNull()) && !jsonObj.get("start").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `start` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `start` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start").toString()));
       }
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull()) {
         JsonArray jsonArraytags = jsonObj.getAsJsonArray("tags");
         if (jsonArraytags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
           }
 
           // validate the optional field `tags` (array)
@@ -470,7 +471,7 @@ public class Dashboardsv3ReportParameters {
         }
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
   }
 
@@ -503,22 +504,22 @@ public class Dashboardsv3ReportParameters {
     }
   }
 
- /**
-  * Create an instance of Dashboardsv3ReportParameters given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Dashboardsv3ReportParameters
-  * @throws IOException if the JSON string is invalid with respect to Dashboardsv3ReportParameters
-  */
+  /**
+   * Create an instance of Dashboardsv3ReportParameters given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Dashboardsv3ReportParameters
+   * @throws IOException if the JSON string is invalid with respect to Dashboardsv3ReportParameters
+   */
   public static Dashboardsv3ReportParameters fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Dashboardsv3ReportParameters.class);
   }
 
- /**
-  * Convert an instance of Dashboardsv3ReportParameters to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Dashboardsv3ReportParameters to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

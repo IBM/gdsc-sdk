@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AssetRiskEvents
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetRiskEvents {
   public static final String SERIALIZED_NAME_ASSET_OPEN_RISK_EVENT_LIST = "asset_open_risk_event_list";
   @SerializedName(SERIALIZED_NAME_ASSET_OPEN_RISK_EVENT_LIST)
+  @javax.annotation.Nullable
   private List<Assetsv3AssetOpenRiskEventList> assetOpenRiskEventList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LAST_ACTIVITY = "last_activity";
   @SerializedName(SERIALIZED_NAME_LAST_ACTIVITY)
+  @javax.annotation.Nullable
   private String lastActivity;
 
   public Assetsv3AssetRiskEvents() {
   }
 
-  public Assetsv3AssetRiskEvents assetOpenRiskEventList(List<Assetsv3AssetOpenRiskEventList> assetOpenRiskEventList) {
+  public Assetsv3AssetRiskEvents assetOpenRiskEventList(@javax.annotation.Nullable List<Assetsv3AssetOpenRiskEventList> assetOpenRiskEventList) {
     this.assetOpenRiskEventList = assetOpenRiskEventList;
     return this;
   }
@@ -78,35 +81,35 @@ public class Assetsv3AssetRiskEvents {
     return this;
   }
 
-   /**
+  /**
    * Get assetOpenRiskEventList
    * @return assetOpenRiskEventList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssetOpenRiskEventList> getAssetOpenRiskEventList() {
     return assetOpenRiskEventList;
   }
 
-  public void setAssetOpenRiskEventList(List<Assetsv3AssetOpenRiskEventList> assetOpenRiskEventList) {
+  public void setAssetOpenRiskEventList(@javax.annotation.Nullable List<Assetsv3AssetOpenRiskEventList> assetOpenRiskEventList) {
     this.assetOpenRiskEventList = assetOpenRiskEventList;
   }
 
 
-  public Assetsv3AssetRiskEvents lastActivity(String lastActivity) {
+  public Assetsv3AssetRiskEvents lastActivity(@javax.annotation.Nullable String lastActivity) {
     this.lastActivity = lastActivity;
     return this;
   }
 
-   /**
+  /**
    * Get lastActivity
    * @return lastActivity
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastActivity() {
     return lastActivity;
   }
 
-  public void setLastActivity(String lastActivity) {
+  public void setLastActivity(@javax.annotation.Nullable String lastActivity) {
     this.lastActivity = lastActivity;
   }
 
@@ -157,24 +160,22 @@ public class Assetsv3AssetRiskEvents {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_open_risk_event_list");
-    openapiFields.add("last_activity");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_open_risk_event_list", "last_activity"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetRiskEvents
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetRiskEvents
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetRiskEvents.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetRiskEvents is not found in the empty JSON string", Assetsv3AssetRiskEvents.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetRiskEvents is not found in the empty JSON string", Assetsv3AssetRiskEvents.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Assetsv3AssetRiskEvents {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetRiskEvents.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetRiskEvents` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetRiskEvents` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Assetsv3AssetRiskEvents {
         if (jsonArrayassetOpenRiskEventList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("asset_open_risk_event_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `asset_open_risk_event_list` to be an array in the JSON string but got `%s`", jsonObj.get("asset_open_risk_event_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_open_risk_event_list` to be an array in the JSON string but got `%s`", jsonObj.get("asset_open_risk_event_list").toString()));
           }
 
           // validate the optional field `asset_open_risk_event_list` (array)
@@ -201,7 +202,7 @@ public class Assetsv3AssetRiskEvents {
         }
       }
       if ((jsonObj.get("last_activity") != null && !jsonObj.get("last_activity").isJsonNull()) && !jsonObj.get("last_activity").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_activity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_activity").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_activity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_activity").toString()));
       }
   }
 
@@ -234,22 +235,22 @@ public class Assetsv3AssetRiskEvents {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetRiskEvents given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetRiskEvents
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetRiskEvents
-  */
+  /**
+   * Create an instance of Assetsv3AssetRiskEvents given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetRiskEvents
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetRiskEvents
+   */
   public static Assetsv3AssetRiskEvents fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetRiskEvents.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetRiskEvents to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetRiskEvents to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,111 +39,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * InReportAdditionalParameter that holds dateRange information of subquery reports.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3InReportAdditionalParameter {
   public static final String SERIALIZED_NAME_DATE_RANGE = "date_range";
   @SerializedName(SERIALIZED_NAME_DATE_RANGE)
+  @javax.annotation.Nullable
   private Reportsv3DateRange dateRange;
 
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)
+  @javax.annotation.Nullable
   private String headerName;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public Reportsv3InReportAdditionalParameter() {
   }
 
-  public Reportsv3InReportAdditionalParameter dateRange(Reportsv3DateRange dateRange) {
+  public Reportsv3InReportAdditionalParameter dateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(Reportsv3DateRange dateRange) {
+  public void setDateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
   }
 
 
-  public Reportsv3InReportAdditionalParameter headerName(String headerName) {
+  public Reportsv3InReportAdditionalParameter headerName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
     return this;
   }
 
-   /**
+  /**
    * Header Name of subquery.
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderName() {
     return headerName;
   }
 
-  public void setHeaderName(String headerName) {
+  public void setHeaderName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
   }
 
 
-  public Reportsv3InReportAdditionalParameter reportId(String reportId) {
+  public Reportsv3InReportAdditionalParameter reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Report ID of subquery.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsv3InReportAdditionalParameter tableName(String tableName) {
+  public Reportsv3InReportAdditionalParameter tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * Table Name of subquery.
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
@@ -197,26 +202,22 @@ public class Reportsv3InReportAdditionalParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("date_range");
-    openapiFields.add("header_name");
-    openapiFields.add("report_id");
-    openapiFields.add("table_name");
+    openapiFields = new HashSet<String>(Arrays.asList("date_range", "header_name", "report_id", "table_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3InReportAdditionalParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3InReportAdditionalParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3InReportAdditionalParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3InReportAdditionalParameter is not found in the empty JSON string", Reportsv3InReportAdditionalParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3InReportAdditionalParameter is not found in the empty JSON string", Reportsv3InReportAdditionalParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -224,7 +225,7 @@ public class Reportsv3InReportAdditionalParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3InReportAdditionalParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3InReportAdditionalParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3InReportAdditionalParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -233,13 +234,13 @@ public class Reportsv3InReportAdditionalParameter {
         Reportsv3DateRange.validateJsonElement(jsonObj.get("date_range"));
       }
       if ((jsonObj.get("header_name") != null && !jsonObj.get("header_name").isJsonNull()) && !jsonObj.get("header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
   }
 
@@ -272,22 +273,22 @@ public class Reportsv3InReportAdditionalParameter {
     }
   }
 
- /**
-  * Create an instance of Reportsv3InReportAdditionalParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3InReportAdditionalParameter
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3InReportAdditionalParameter
-  */
+  /**
+   * Create an instance of Reportsv3InReportAdditionalParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3InReportAdditionalParameter
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3InReportAdditionalParameter
+   */
   public static Reportsv3InReportAdditionalParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3InReportAdditionalParameter.class);
   }
 
- /**
-  * Convert an instance of Reportsv3InReportAdditionalParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3InReportAdditionalParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -7,7 +7,7 @@ StapCommandRequest defines the message structure for STAP command request.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **command** | **str** | Specify STAP command. | [optional] 
-**operation** | [**Connectionsv3StapOperation**](Connectionsv3StapOperation.md) |  | [optional] 
+**operation** | [**Connectionsv3StapOperation**](Connectionsv3StapOperation.md) |  | [optional] [default to Connectionsv3StapOperation.STAP_REINITIALIZE_BUFFER]
 **stap_id** | **str** | Provide STAP identifier. | [optional] 
 
 ## Example

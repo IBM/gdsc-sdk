@@ -6,7 +6,7 @@ A policy alert action.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**notification_type** | [**Complianceacceleratorv3RecipientType**](Complianceacceleratorv3RecipientType.md) |  | [optional] 
+**notification_type** | [**Complianceacceleratorv3RecipientType**](Complianceacceleratorv3RecipientType.md) |  | [optional] [default to Complianceacceleratorv3RecipientType.UNDEFINED_RECTYPE]
 **user_ids** | **List[str]** | The emails for the action. | [optional] 
 
 ## Example

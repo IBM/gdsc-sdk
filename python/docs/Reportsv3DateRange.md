@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **end_date** | **str** | If custom holds the date string. | [optional] 
 **end_number** | **int** | If custom-relative -  holds the end number. | [optional] 
-**end_unit** | [**Reportsv3DateRangeUnit**](Reportsv3DateRangeUnit.md) |  | [optional] 
+**end_unit** | [**Reportsv3DateRangeUnit**](Reportsv3DateRangeUnit.md) |  | [optional] [default to Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE]
 **start_date** | **str** | If custom holds the date string. | [optional] 
 **start_number** | **int** | If custom-relative -  holds the start number. | [optional] 
-**start_unit** | [**Reportsv3DateRangeUnit**](Reportsv3DateRangeUnit.md) |  | [optional] 
-**type** | [**Reportsv3DateRangeType**](Reportsv3DateRangeType.md) |  | [optional] 
+**start_unit** | [**Reportsv3DateRangeUnit**](Reportsv3DateRangeUnit.md) |  | [optional] [default to Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE]
+**type** | [**Reportsv3DateRangeType**](Reportsv3DateRangeType.md) |  | [optional] [default to Reportsv3DateRangeType.UNDEFINED_DATE_RANGE_TYPE]
 
 ## Example
 

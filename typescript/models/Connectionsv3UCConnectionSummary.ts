@@ -63,6 +63,8 @@ export class Connectionsv3UCConnectionSummary {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "alias",
@@ -144,6 +146,5 @@ export class Connectionsv3UCConnectionSummary {
     public constructor() {
     }
 }
-
 
 

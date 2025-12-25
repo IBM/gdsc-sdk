@@ -27,7 +27,7 @@ class TestTenantuserv3GetUserTenantResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Tenantuserv3GetUserTenantResponse:
         """Test Tenantuserv3GetUserTenantResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Tenantuserv3GetUserTenantResponse`
@@ -62,6 +62,7 @@ class TestTenantuserv3GetUserTenantResponse(unittest.TestCase):
                         settings = {
                             'key' : ''
                             }, 
+                        status = '', 
                         tenant_capabilities = {
                             'key' : True
                             }, 
@@ -75,6 +76,7 @@ class TestTenantuserv3GetUserTenantResponse(unittest.TestCase):
                             is_ready = True, 
                             name = '', 
                             part_number = '', 
+                            status = '', 
                             tenant_capabilities = {
                                 'key' : True
                                 }, 

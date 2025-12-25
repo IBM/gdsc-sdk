@@ -77,9 +77,9 @@ class Healthcollectorv3MUDetailsObj(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in aggregation_details_list (list)
         _items = []
         if self.aggregation_details_list:
-            for _item in self.aggregation_details_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_aggregation_details_list in self.aggregation_details_list:
+                if _item_aggregation_details_list:
+                    _items.append(_item_aggregation_details_list.to_dict())
             _dict['aggregation_details_list'] = _items
         # override the default output from pydantic by calling `to_dict()` of connectivity_details
         if self.connectivity_details:

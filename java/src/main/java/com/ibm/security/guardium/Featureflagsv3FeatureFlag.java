@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * FeatureFlag feature flag model.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Featureflagsv3FeatureFlag {
   public static final String SERIALIZED_NAME_FLAG_NAME = "flag_name";
   @SerializedName(SERIALIZED_NAME_FLAG_NAME)
+  @javax.annotation.Nullable
   private String flagName;
 
   public static final String SERIALIZED_NAME_IS_ENABLED = "is_enabled";
   @SerializedName(SERIALIZED_NAME_IS_ENABLED)
+  @javax.annotation.Nullable
   private Boolean isEnabled;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public Featureflagsv3FeatureFlag() {
   }
 
-  public Featureflagsv3FeatureFlag flagName(String flagName) {
+  public Featureflagsv3FeatureFlag flagName(@javax.annotation.Nullable String flagName) {
     this.flagName = flagName;
     return this;
   }
 
-   /**
+  /**
    * Flag name.
    * @return flagName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFlagName() {
     return flagName;
   }
 
-  public void setFlagName(String flagName) {
+  public void setFlagName(@javax.annotation.Nullable String flagName) {
     this.flagName = flagName;
   }
 
 
-  public Featureflagsv3FeatureFlag isEnabled(Boolean isEnabled) {
+  public Featureflagsv3FeatureFlag isEnabled(@javax.annotation.Nullable Boolean isEnabled) {
     this.isEnabled = isEnabled;
     return this;
   }
 
-   /**
+  /**
    * Feature flag enabled or not.
    * @return isEnabled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsEnabled() {
     return isEnabled;
   }
 
-  public void setIsEnabled(Boolean isEnabled) {
+  public void setIsEnabled(@javax.annotation.Nullable Boolean isEnabled) {
     this.isEnabled = isEnabled;
   }
 
 
-  public Featureflagsv3FeatureFlag value(String value) {
+  public Featureflagsv3FeatureFlag value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Optional: additional value for the feature flag.
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public String getValue() {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
@@ -171,25 +175,22 @@ public class Featureflagsv3FeatureFlag {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("flag_name");
-    openapiFields.add("is_enabled");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("flag_name", "is_enabled", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Featureflagsv3FeatureFlag
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Featureflagsv3FeatureFlag
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Featureflagsv3FeatureFlag.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Featureflagsv3FeatureFlag is not found in the empty JSON string", Featureflagsv3FeatureFlag.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Featureflagsv3FeatureFlag is not found in the empty JSON string", Featureflagsv3FeatureFlag.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,15 +198,15 @@ public class Featureflagsv3FeatureFlag {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Featureflagsv3FeatureFlag.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Featureflagsv3FeatureFlag` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Featureflagsv3FeatureFlag` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("flag_name") != null && !jsonObj.get("flag_name").isJsonNull()) && !jsonObj.get("flag_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `flag_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("flag_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `flag_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("flag_name").toString()));
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -238,22 +239,22 @@ public class Featureflagsv3FeatureFlag {
     }
   }
 
- /**
-  * Create an instance of Featureflagsv3FeatureFlag given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Featureflagsv3FeatureFlag
-  * @throws IOException if the JSON string is invalid with respect to Featureflagsv3FeatureFlag
-  */
+  /**
+   * Create an instance of Featureflagsv3FeatureFlag given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Featureflagsv3FeatureFlag
+   * @throws IOException if the JSON string is invalid with respect to Featureflagsv3FeatureFlag
+   */
   public static Featureflagsv3FeatureFlag fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Featureflagsv3FeatureFlag.class);
   }
 
- /**
-  * Convert an instance of Featureflagsv3FeatureFlag to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Featureflagsv3FeatureFlag to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

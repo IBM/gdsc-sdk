@@ -108,13 +108,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateCaseCall(Workflowv3CreateCaseRequest workflowv3CreateCaseRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowCreateCaseCall(@javax.annotation.Nonnull Workflowv3CreateCaseRequest workflowv3CreateCaseRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -160,7 +161,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowCreateCaseValidateBeforeCall(Workflowv3CreateCaseRequest workflowv3CreateCaseRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowCreateCaseValidateBeforeCall(@javax.annotation.Nonnull Workflowv3CreateCaseRequest workflowv3CreateCaseRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'workflowv3CreateCaseRequest' is set
         if (workflowv3CreateCaseRequest == null) {
             throw new ApiException("Missing the required parameter 'workflowv3CreateCaseRequest' when calling workflowCreateCase(Async)");
@@ -177,13 +178,14 @@ public class WorkflowApi {
      * @return Workflowv3CreateCaseResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3CreateCaseResponse workflowCreateCase(Workflowv3CreateCaseRequest workflowv3CreateCaseRequest) throws ApiException {
+    public Workflowv3CreateCaseResponse workflowCreateCase(@javax.annotation.Nonnull Workflowv3CreateCaseRequest workflowv3CreateCaseRequest) throws ApiException {
         ApiResponse<Workflowv3CreateCaseResponse> localVarResp = workflowCreateCaseWithHttpInfo(workflowv3CreateCaseRequest);
         return localVarResp.getData();
     }
@@ -195,13 +197,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3CreateCaseResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3CreateCaseResponse> workflowCreateCaseWithHttpInfo(Workflowv3CreateCaseRequest workflowv3CreateCaseRequest) throws ApiException {
+    public ApiResponse<Workflowv3CreateCaseResponse> workflowCreateCaseWithHttpInfo(@javax.annotation.Nonnull Workflowv3CreateCaseRequest workflowv3CreateCaseRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowCreateCaseValidateBeforeCall(workflowv3CreateCaseRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3CreateCaseResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -215,13 +218,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateCaseAsync(Workflowv3CreateCaseRequest workflowv3CreateCaseRequest, final ApiCallback<Workflowv3CreateCaseResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowCreateCaseAsync(@javax.annotation.Nonnull Workflowv3CreateCaseRequest workflowv3CreateCaseRequest, final ApiCallback<Workflowv3CreateCaseResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowCreateCaseValidateBeforeCall(workflowv3CreateCaseRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3CreateCaseResponse>(){}.getType();
@@ -235,13 +239,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateProductEntityCall(Workflowv3ProductEntity workflowv3ProductEntity, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowCreateProductEntityCall(@javax.annotation.Nonnull Workflowv3ProductEntity workflowv3ProductEntity, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -287,7 +292,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowCreateProductEntityValidateBeforeCall(Workflowv3ProductEntity workflowv3ProductEntity, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowCreateProductEntityValidateBeforeCall(@javax.annotation.Nonnull Workflowv3ProductEntity workflowv3ProductEntity, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'workflowv3ProductEntity' is set
         if (workflowv3ProductEntity == null) {
             throw new ApiException("Missing the required parameter 'workflowv3ProductEntity' when calling workflowCreateProductEntity(Async)");
@@ -304,13 +309,14 @@ public class WorkflowApi {
      * @return Workflowv3CreateProductEntityResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3CreateProductEntityResponse workflowCreateProductEntity(Workflowv3ProductEntity workflowv3ProductEntity) throws ApiException {
+    public Workflowv3CreateProductEntityResponse workflowCreateProductEntity(@javax.annotation.Nonnull Workflowv3ProductEntity workflowv3ProductEntity) throws ApiException {
         ApiResponse<Workflowv3CreateProductEntityResponse> localVarResp = workflowCreateProductEntityWithHttpInfo(workflowv3ProductEntity);
         return localVarResp.getData();
     }
@@ -322,13 +328,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3CreateProductEntityResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3CreateProductEntityResponse> workflowCreateProductEntityWithHttpInfo(Workflowv3ProductEntity workflowv3ProductEntity) throws ApiException {
+    public ApiResponse<Workflowv3CreateProductEntityResponse> workflowCreateProductEntityWithHttpInfo(@javax.annotation.Nonnull Workflowv3ProductEntity workflowv3ProductEntity) throws ApiException {
         okhttp3.Call localVarCall = workflowCreateProductEntityValidateBeforeCall(workflowv3ProductEntity, null);
         Type localVarReturnType = new TypeToken<Workflowv3CreateProductEntityResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -342,13 +349,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateProductEntityAsync(Workflowv3ProductEntity workflowv3ProductEntity, final ApiCallback<Workflowv3CreateProductEntityResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowCreateProductEntityAsync(@javax.annotation.Nonnull Workflowv3ProductEntity workflowv3ProductEntity, final ApiCallback<Workflowv3CreateProductEntityResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowCreateProductEntityValidateBeforeCall(workflowv3ProductEntity, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3CreateProductEntityResponse>(){}.getType();
@@ -363,13 +371,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateTaskCall(String caseId, Workflowv3CreateTaskRequest workflowv3CreateTaskRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowCreateTaskCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3CreateTaskRequest workflowv3CreateTaskRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -416,7 +425,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowCreateTaskValidateBeforeCall(String caseId, Workflowv3CreateTaskRequest workflowv3CreateTaskRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowCreateTaskValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3CreateTaskRequest workflowv3CreateTaskRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowCreateTask(Async)");
@@ -439,13 +448,14 @@ public class WorkflowApi {
      * @return Workflowv3CreateTaskResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3CreateTaskResponse workflowCreateTask(String caseId, Workflowv3CreateTaskRequest workflowv3CreateTaskRequest) throws ApiException {
+    public Workflowv3CreateTaskResponse workflowCreateTask(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3CreateTaskRequest workflowv3CreateTaskRequest) throws ApiException {
         ApiResponse<Workflowv3CreateTaskResponse> localVarResp = workflowCreateTaskWithHttpInfo(caseId, workflowv3CreateTaskRequest);
         return localVarResp.getData();
     }
@@ -458,13 +468,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3CreateTaskResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3CreateTaskResponse> workflowCreateTaskWithHttpInfo(String caseId, Workflowv3CreateTaskRequest workflowv3CreateTaskRequest) throws ApiException {
+    public ApiResponse<Workflowv3CreateTaskResponse> workflowCreateTaskWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3CreateTaskRequest workflowv3CreateTaskRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowCreateTaskValidateBeforeCall(caseId, workflowv3CreateTaskRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3CreateTaskResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -479,13 +490,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateTaskAsync(String caseId, Workflowv3CreateTaskRequest workflowv3CreateTaskRequest, final ApiCallback<Workflowv3CreateTaskResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowCreateTaskAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3CreateTaskRequest workflowv3CreateTaskRequest, final ApiCallback<Workflowv3CreateTaskResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowCreateTaskValidateBeforeCall(caseId, workflowv3CreateTaskRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3CreateTaskResponse>(){}.getType();
@@ -499,13 +511,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateWorkflowEventCall(Workflowv3WorkflowEvent workflowv3WorkflowEvent, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowCreateWorkflowEventCall(@javax.annotation.Nonnull Workflowv3WorkflowEvent workflowv3WorkflowEvent, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -551,7 +564,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowCreateWorkflowEventValidateBeforeCall(Workflowv3WorkflowEvent workflowv3WorkflowEvent, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowCreateWorkflowEventValidateBeforeCall(@javax.annotation.Nonnull Workflowv3WorkflowEvent workflowv3WorkflowEvent, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'workflowv3WorkflowEvent' is set
         if (workflowv3WorkflowEvent == null) {
             throw new ApiException("Missing the required parameter 'workflowv3WorkflowEvent' when calling workflowCreateWorkflowEvent(Async)");
@@ -568,13 +581,14 @@ public class WorkflowApi {
      * @return Workflowv3WorkflowEventResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3WorkflowEventResponse workflowCreateWorkflowEvent(Workflowv3WorkflowEvent workflowv3WorkflowEvent) throws ApiException {
+    public Workflowv3WorkflowEventResponse workflowCreateWorkflowEvent(@javax.annotation.Nonnull Workflowv3WorkflowEvent workflowv3WorkflowEvent) throws ApiException {
         ApiResponse<Workflowv3WorkflowEventResponse> localVarResp = workflowCreateWorkflowEventWithHttpInfo(workflowv3WorkflowEvent);
         return localVarResp.getData();
     }
@@ -586,13 +600,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3WorkflowEventResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3WorkflowEventResponse> workflowCreateWorkflowEventWithHttpInfo(Workflowv3WorkflowEvent workflowv3WorkflowEvent) throws ApiException {
+    public ApiResponse<Workflowv3WorkflowEventResponse> workflowCreateWorkflowEventWithHttpInfo(@javax.annotation.Nonnull Workflowv3WorkflowEvent workflowv3WorkflowEvent) throws ApiException {
         okhttp3.Call localVarCall = workflowCreateWorkflowEventValidateBeforeCall(workflowv3WorkflowEvent, null);
         Type localVarReturnType = new TypeToken<Workflowv3WorkflowEventResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -606,13 +621,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowCreateWorkflowEventAsync(Workflowv3WorkflowEvent workflowv3WorkflowEvent, final ApiCallback<Workflowv3WorkflowEventResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowCreateWorkflowEventAsync(@javax.annotation.Nonnull Workflowv3WorkflowEvent workflowv3WorkflowEvent, final ApiCallback<Workflowv3WorkflowEventResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowCreateWorkflowEventValidateBeforeCall(workflowv3WorkflowEvent, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3WorkflowEventResponse>(){}.getType();
@@ -626,13 +642,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowDeleteProductEntityCall(String entityId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowDeleteProductEntityCall(@javax.annotation.Nonnull String entityId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -678,7 +695,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowDeleteProductEntityValidateBeforeCall(String entityId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowDeleteProductEntityValidateBeforeCall(@javax.annotation.Nonnull String entityId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'entityId' is set
         if (entityId == null) {
             throw new ApiException("Missing the required parameter 'entityId' when calling workflowDeleteProductEntity(Async)");
@@ -695,13 +712,14 @@ public class WorkflowApi {
      * @return Workflowv3DeleteProductEntityResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3DeleteProductEntityResponse workflowDeleteProductEntity(String entityId) throws ApiException {
+    public Workflowv3DeleteProductEntityResponse workflowDeleteProductEntity(@javax.annotation.Nonnull String entityId) throws ApiException {
         ApiResponse<Workflowv3DeleteProductEntityResponse> localVarResp = workflowDeleteProductEntityWithHttpInfo(entityId);
         return localVarResp.getData();
     }
@@ -713,13 +731,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3DeleteProductEntityResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3DeleteProductEntityResponse> workflowDeleteProductEntityWithHttpInfo(String entityId) throws ApiException {
+    public ApiResponse<Workflowv3DeleteProductEntityResponse> workflowDeleteProductEntityWithHttpInfo(@javax.annotation.Nonnull String entityId) throws ApiException {
         okhttp3.Call localVarCall = workflowDeleteProductEntityValidateBeforeCall(entityId, null);
         Type localVarReturnType = new TypeToken<Workflowv3DeleteProductEntityResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -733,13 +752,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowDeleteProductEntityAsync(String entityId, final ApiCallback<Workflowv3DeleteProductEntityResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowDeleteProductEntityAsync(@javax.annotation.Nonnull String entityId, final ApiCallback<Workflowv3DeleteProductEntityResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowDeleteProductEntityValidateBeforeCall(entityId, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3DeleteProductEntityResponse>(){}.getType();
@@ -756,13 +776,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetCasesCall(String caseId, String sortBy, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetCasesCall(@javax.annotation.Nullable String caseId, @javax.annotation.Nullable String sortBy, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -823,7 +844,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetCasesValidateBeforeCall(String caseId, String sortBy, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetCasesValidateBeforeCall(@javax.annotation.Nullable String caseId, @javax.annotation.Nullable String sortBy, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
         return workflowGetCasesCall(caseId, sortBy, offset, limit, _callback);
 
     }
@@ -838,13 +859,14 @@ public class WorkflowApi {
      * @return Workflowv3CaseListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3CaseListResponse workflowGetCases(String caseId, String sortBy, Integer offset, Integer limit) throws ApiException {
+    public Workflowv3CaseListResponse workflowGetCases(@javax.annotation.Nullable String caseId, @javax.annotation.Nullable String sortBy, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit) throws ApiException {
         ApiResponse<Workflowv3CaseListResponse> localVarResp = workflowGetCasesWithHttpInfo(caseId, sortBy, offset, limit);
         return localVarResp.getData();
     }
@@ -859,13 +881,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3CaseListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3CaseListResponse> workflowGetCasesWithHttpInfo(String caseId, String sortBy, Integer offset, Integer limit) throws ApiException {
+    public ApiResponse<Workflowv3CaseListResponse> workflowGetCasesWithHttpInfo(@javax.annotation.Nullable String caseId, @javax.annotation.Nullable String sortBy, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit) throws ApiException {
         okhttp3.Call localVarCall = workflowGetCasesValidateBeforeCall(caseId, sortBy, offset, limit, null);
         Type localVarReturnType = new TypeToken<Workflowv3CaseListResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -882,13 +905,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetCasesAsync(String caseId, String sortBy, Integer offset, Integer limit, final ApiCallback<Workflowv3CaseListResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetCasesAsync(@javax.annotation.Nullable String caseId, @javax.annotation.Nullable String sortBy, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback<Workflowv3CaseListResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetCasesValidateBeforeCall(caseId, sortBy, offset, limit, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3CaseListResponse>(){}.getType();
@@ -902,13 +926,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetCasesCountCall(Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetCasesCountCall(@javax.annotation.Nonnull Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -954,7 +979,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetCasesCountValidateBeforeCall(Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetCasesCountValidateBeforeCall(@javax.annotation.Nonnull Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'workflowv3GetCasesCountRequest' is set
         if (workflowv3GetCasesCountRequest == null) {
             throw new ApiException("Missing the required parameter 'workflowv3GetCasesCountRequest' when calling workflowGetCasesCount(Async)");
@@ -971,13 +996,14 @@ public class WorkflowApi {
      * @return Workflowv3GetCasesCountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3GetCasesCountResponse workflowGetCasesCount(Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest) throws ApiException {
+    public Workflowv3GetCasesCountResponse workflowGetCasesCount(@javax.annotation.Nonnull Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest) throws ApiException {
         ApiResponse<Workflowv3GetCasesCountResponse> localVarResp = workflowGetCasesCountWithHttpInfo(workflowv3GetCasesCountRequest);
         return localVarResp.getData();
     }
@@ -989,13 +1015,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3GetCasesCountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3GetCasesCountResponse> workflowGetCasesCountWithHttpInfo(Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest) throws ApiException {
+    public ApiResponse<Workflowv3GetCasesCountResponse> workflowGetCasesCountWithHttpInfo(@javax.annotation.Nonnull Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowGetCasesCountValidateBeforeCall(workflowv3GetCasesCountRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3GetCasesCountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1009,13 +1036,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetCasesCountAsync(Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest, final ApiCallback<Workflowv3GetCasesCountResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetCasesCountAsync(@javax.annotation.Nonnull Workflowv3GetCasesCountRequest workflowv3GetCasesCountRequest, final ApiCallback<Workflowv3GetCasesCountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetCasesCountValidateBeforeCall(workflowv3GetCasesCountRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3GetCasesCountResponse>(){}.getType();
@@ -1030,7 +1058,8 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1038,7 +1067,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call workflowGetFilenameCall(String caseId, String taskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetFilenameCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1086,7 +1115,7 @@ public class WorkflowApi {
 
     @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetFilenameValidateBeforeCall(String caseId, String taskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetFilenameValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowGetFilename(Async)");
@@ -1109,7 +1138,8 @@ public class WorkflowApi {
      * @return Workflowv3GetFilenameResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1117,7 +1147,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public Workflowv3GetFilenameResponse workflowGetFilename(String caseId, String taskId) throws ApiException {
+    public Workflowv3GetFilenameResponse workflowGetFilename(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId) throws ApiException {
         ApiResponse<Workflowv3GetFilenameResponse> localVarResp = workflowGetFilenameWithHttpInfo(caseId, taskId);
         return localVarResp.getData();
     }
@@ -1130,7 +1160,8 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3GetFilenameResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1138,7 +1169,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<Workflowv3GetFilenameResponse> workflowGetFilenameWithHttpInfo(String caseId, String taskId) throws ApiException {
+    public ApiResponse<Workflowv3GetFilenameResponse> workflowGetFilenameWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId) throws ApiException {
         okhttp3.Call localVarCall = workflowGetFilenameValidateBeforeCall(caseId, taskId, null);
         Type localVarReturnType = new TypeToken<Workflowv3GetFilenameResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1153,7 +1184,8 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1161,7 +1193,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call workflowGetFilenameAsync(String caseId, String taskId, final ApiCallback<Workflowv3GetFilenameResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetFilenameAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, final ApiCallback<Workflowv3GetFilenameResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetFilenameValidateBeforeCall(caseId, taskId, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3GetFilenameResponse>(){}.getType();
@@ -1176,13 +1208,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetJobsCountCall(String caseId, Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetJobsCountCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1229,7 +1262,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetJobsCountValidateBeforeCall(String caseId, Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetJobsCountValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowGetJobsCount(Async)");
@@ -1252,13 +1285,14 @@ public class WorkflowApi {
      * @return Workflowv3GetJobsCountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3GetJobsCountResponse workflowGetJobsCount(String caseId, Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest) throws ApiException {
+    public Workflowv3GetJobsCountResponse workflowGetJobsCount(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest) throws ApiException {
         ApiResponse<Workflowv3GetJobsCountResponse> localVarResp = workflowGetJobsCountWithHttpInfo(caseId, workflowv3GetJobsCountRequest);
         return localVarResp.getData();
     }
@@ -1271,13 +1305,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3GetJobsCountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3GetJobsCountResponse> workflowGetJobsCountWithHttpInfo(String caseId, Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest) throws ApiException {
+    public ApiResponse<Workflowv3GetJobsCountResponse> workflowGetJobsCountWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowGetJobsCountValidateBeforeCall(caseId, workflowv3GetJobsCountRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3GetJobsCountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1292,13 +1327,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetJobsCountAsync(String caseId, Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest, final ApiCallback<Workflowv3GetJobsCountResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetJobsCountAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetJobsCountRequest workflowv3GetJobsCountRequest, final ApiCallback<Workflowv3GetJobsCountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetJobsCountValidateBeforeCall(caseId, workflowv3GetJobsCountRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3GetJobsCountResponse>(){}.getType();
@@ -1313,13 +1349,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetProductEntitiesCall(Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetProductEntitiesCall(@javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1372,7 +1409,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetProductEntitiesValidateBeforeCall(Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetProductEntitiesValidateBeforeCall(@javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
         return workflowGetProductEntitiesCall(offset, limit, _callback);
 
     }
@@ -1385,13 +1422,14 @@ public class WorkflowApi {
      * @return Workflowv3GetProductEntitiesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3GetProductEntitiesResponse workflowGetProductEntities(Integer offset, Integer limit) throws ApiException {
+    public Workflowv3GetProductEntitiesResponse workflowGetProductEntities(@javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit) throws ApiException {
         ApiResponse<Workflowv3GetProductEntitiesResponse> localVarResp = workflowGetProductEntitiesWithHttpInfo(offset, limit);
         return localVarResp.getData();
     }
@@ -1404,13 +1442,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3GetProductEntitiesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3GetProductEntitiesResponse> workflowGetProductEntitiesWithHttpInfo(Integer offset, Integer limit) throws ApiException {
+    public ApiResponse<Workflowv3GetProductEntitiesResponse> workflowGetProductEntitiesWithHttpInfo(@javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit) throws ApiException {
         okhttp3.Call localVarCall = workflowGetProductEntitiesValidateBeforeCall(offset, limit, null);
         Type localVarReturnType = new TypeToken<Workflowv3GetProductEntitiesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1425,13 +1464,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetProductEntitiesAsync(Integer offset, Integer limit, final ApiCallback<Workflowv3GetProductEntitiesResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetProductEntitiesAsync(@javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback<Workflowv3GetProductEntitiesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetProductEntitiesValidateBeforeCall(offset, limit, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3GetProductEntitiesResponse>(){}.getType();
@@ -1445,13 +1485,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetProductEntityCall(String entityId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetProductEntityCall(@javax.annotation.Nonnull String entityId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1497,7 +1538,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetProductEntityValidateBeforeCall(String entityId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetProductEntityValidateBeforeCall(@javax.annotation.Nonnull String entityId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'entityId' is set
         if (entityId == null) {
             throw new ApiException("Missing the required parameter 'entityId' when calling workflowGetProductEntity(Async)");
@@ -1514,13 +1555,14 @@ public class WorkflowApi {
      * @return Workflowv3ProductEntity
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3ProductEntity workflowGetProductEntity(String entityId) throws ApiException {
+    public Workflowv3ProductEntity workflowGetProductEntity(@javax.annotation.Nonnull String entityId) throws ApiException {
         ApiResponse<Workflowv3ProductEntity> localVarResp = workflowGetProductEntityWithHttpInfo(entityId);
         return localVarResp.getData();
     }
@@ -1532,13 +1574,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3ProductEntity&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3ProductEntity> workflowGetProductEntityWithHttpInfo(String entityId) throws ApiException {
+    public ApiResponse<Workflowv3ProductEntity> workflowGetProductEntityWithHttpInfo(@javax.annotation.Nonnull String entityId) throws ApiException {
         okhttp3.Call localVarCall = workflowGetProductEntityValidateBeforeCall(entityId, null);
         Type localVarReturnType = new TypeToken<Workflowv3ProductEntity>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1552,13 +1595,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetProductEntityAsync(String entityId, final ApiCallback<Workflowv3ProductEntity> _callback) throws ApiException {
+    public okhttp3.Call workflowGetProductEntityAsync(@javax.annotation.Nonnull String entityId, final ApiCallback<Workflowv3ProductEntity> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetProductEntityValidateBeforeCall(entityId, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3ProductEntity>(){}.getType();
@@ -1575,7 +1619,8 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1583,7 +1628,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call workflowGetReportResultCall(String caseId, String taskId, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetReportResultCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1639,7 +1684,7 @@ public class WorkflowApi {
 
     @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetReportResultValidateBeforeCall(String caseId, String taskId, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetReportResultValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowGetReportResult(Async)");
@@ -1664,7 +1709,8 @@ public class WorkflowApi {
      * @return Workflowv3GetReportResultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1672,7 +1718,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public Workflowv3GetReportResultResponse workflowGetReportResult(String caseId, String taskId, Integer offset, Integer limit) throws ApiException {
+    public Workflowv3GetReportResultResponse workflowGetReportResult(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit) throws ApiException {
         ApiResponse<Workflowv3GetReportResultResponse> localVarResp = workflowGetReportResultWithHttpInfo(caseId, taskId, offset, limit);
         return localVarResp.getData();
     }
@@ -1687,7 +1733,8 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3GetReportResultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1695,7 +1742,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<Workflowv3GetReportResultResponse> workflowGetReportResultWithHttpInfo(String caseId, String taskId, Integer offset, Integer limit) throws ApiException {
+    public ApiResponse<Workflowv3GetReportResultResponse> workflowGetReportResultWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit) throws ApiException {
         okhttp3.Call localVarCall = workflowGetReportResultValidateBeforeCall(caseId, taskId, offset, limit, null);
         Type localVarReturnType = new TypeToken<Workflowv3GetReportResultResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1712,7 +1759,8 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1720,7 +1768,7 @@ public class WorkflowApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call workflowGetReportResultAsync(String caseId, String taskId, Integer offset, Integer limit, final ApiCallback<Workflowv3GetReportResultResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetReportResultAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nullable Integer offset, @javax.annotation.Nullable Integer limit, final ApiCallback<Workflowv3GetReportResultResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetReportResultValidateBeforeCall(caseId, taskId, offset, limit, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3GetReportResultResponse>(){}.getType();
@@ -1735,13 +1783,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetTasksCall(String caseId, String taskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetTasksCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nullable String taskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1791,7 +1840,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetTasksValidateBeforeCall(String caseId, String taskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetTasksValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nullable String taskId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowGetTasks(Async)");
@@ -1809,13 +1858,14 @@ public class WorkflowApi {
      * @return Workflowv3TaskListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3TaskListResponse workflowGetTasks(String caseId, String taskId) throws ApiException {
+    public Workflowv3TaskListResponse workflowGetTasks(@javax.annotation.Nonnull String caseId, @javax.annotation.Nullable String taskId) throws ApiException {
         ApiResponse<Workflowv3TaskListResponse> localVarResp = workflowGetTasksWithHttpInfo(caseId, taskId);
         return localVarResp.getData();
     }
@@ -1828,13 +1878,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3TaskListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3TaskListResponse> workflowGetTasksWithHttpInfo(String caseId, String taskId) throws ApiException {
+    public ApiResponse<Workflowv3TaskListResponse> workflowGetTasksWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nullable String taskId) throws ApiException {
         okhttp3.Call localVarCall = workflowGetTasksValidateBeforeCall(caseId, taskId, null);
         Type localVarReturnType = new TypeToken<Workflowv3TaskListResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1849,13 +1900,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetTasksAsync(String caseId, String taskId, final ApiCallback<Workflowv3TaskListResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetTasksAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nullable String taskId, final ApiCallback<Workflowv3TaskListResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetTasksValidateBeforeCall(caseId, taskId, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3TaskListResponse>(){}.getType();
@@ -1870,13 +1922,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetTasksCountCall(String caseId, Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowGetTasksCountCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1923,7 +1976,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowGetTasksCountValidateBeforeCall(String caseId, Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowGetTasksCountValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowGetTasksCount(Async)");
@@ -1946,13 +1999,14 @@ public class WorkflowApi {
      * @return Workflowv3GetTasksCountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3GetTasksCountResponse workflowGetTasksCount(String caseId, Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest) throws ApiException {
+    public Workflowv3GetTasksCountResponse workflowGetTasksCount(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest) throws ApiException {
         ApiResponse<Workflowv3GetTasksCountResponse> localVarResp = workflowGetTasksCountWithHttpInfo(caseId, workflowv3GetTasksCountRequest);
         return localVarResp.getData();
     }
@@ -1965,13 +2019,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3GetTasksCountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3GetTasksCountResponse> workflowGetTasksCountWithHttpInfo(String caseId, Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest) throws ApiException {
+    public ApiResponse<Workflowv3GetTasksCountResponse> workflowGetTasksCountWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowGetTasksCountValidateBeforeCall(caseId, workflowv3GetTasksCountRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3GetTasksCountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1986,13 +2041,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowGetTasksCountAsync(String caseId, Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest, final ApiCallback<Workflowv3GetTasksCountResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowGetTasksCountAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3GetTasksCountRequest workflowv3GetTasksCountRequest, final ApiCallback<Workflowv3GetTasksCountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowGetTasksCountValidateBeforeCall(caseId, workflowv3GetTasksCountRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3GetTasksCountResponse>(){}.getType();
@@ -2006,13 +2062,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowSearchCasesCall(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowSearchCasesCall(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2058,7 +2115,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowSearchCasesValidateBeforeCall(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowSearchCasesValidateBeforeCall(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'workflowv3SearchCasesRequest' is set
         if (workflowv3SearchCasesRequest == null) {
             throw new ApiException("Missing the required parameter 'workflowv3SearchCasesRequest' when calling workflowSearchCases(Async)");
@@ -2075,13 +2132,14 @@ public class WorkflowApi {
      * @return Workflowv3CaseListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3CaseListResponse workflowSearchCases(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
+    public Workflowv3CaseListResponse workflowSearchCases(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
         ApiResponse<Workflowv3CaseListResponse> localVarResp = workflowSearchCasesWithHttpInfo(workflowv3SearchCasesRequest);
         return localVarResp.getData();
     }
@@ -2093,13 +2151,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3CaseListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3CaseListResponse> workflowSearchCasesWithHttpInfo(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
+    public ApiResponse<Workflowv3CaseListResponse> workflowSearchCasesWithHttpInfo(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowSearchCasesValidateBeforeCall(workflowv3SearchCasesRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3CaseListResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2113,13 +2172,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowSearchCasesAsync(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback<Workflowv3CaseListResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowSearchCasesAsync(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback<Workflowv3CaseListResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowSearchCasesValidateBeforeCall(workflowv3SearchCasesRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3CaseListResponse>(){}.getType();
@@ -2133,13 +2193,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowSearchReportsCall(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowSearchReportsCall(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2185,7 +2246,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowSearchReportsValidateBeforeCall(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowSearchReportsValidateBeforeCall(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'workflowv3SearchCasesRequest' is set
         if (workflowv3SearchCasesRequest == null) {
             throw new ApiException("Missing the required parameter 'workflowv3SearchCasesRequest' when calling workflowSearchReports(Async)");
@@ -2202,13 +2263,14 @@ public class WorkflowApi {
      * @return Workflowv3SearchReportsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3SearchReportsResponse workflowSearchReports(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
+    public Workflowv3SearchReportsResponse workflowSearchReports(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
         ApiResponse<Workflowv3SearchReportsResponse> localVarResp = workflowSearchReportsWithHttpInfo(workflowv3SearchCasesRequest);
         return localVarResp.getData();
     }
@@ -2220,13 +2282,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3SearchReportsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3SearchReportsResponse> workflowSearchReportsWithHttpInfo(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
+    public ApiResponse<Workflowv3SearchReportsResponse> workflowSearchReportsWithHttpInfo(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowSearchReportsValidateBeforeCall(workflowv3SearchCasesRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3SearchReportsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2240,13 +2303,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowSearchReportsAsync(Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback<Workflowv3SearchReportsResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowSearchReportsAsync(@javax.annotation.Nonnull Workflowv3SearchCasesRequest workflowv3SearchCasesRequest, final ApiCallback<Workflowv3SearchReportsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowSearchReportsValidateBeforeCall(workflowv3SearchCasesRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3SearchReportsResponse>(){}.getType();
@@ -2261,13 +2325,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowSearchTasksCall(String caseId, Workflowv3SearchTasksRequest workflowv3SearchTasksRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowSearchTasksCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3SearchTasksRequest workflowv3SearchTasksRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2314,7 +2379,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowSearchTasksValidateBeforeCall(String caseId, Workflowv3SearchTasksRequest workflowv3SearchTasksRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowSearchTasksValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3SearchTasksRequest workflowv3SearchTasksRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowSearchTasks(Async)");
@@ -2337,13 +2402,14 @@ public class WorkflowApi {
      * @return Workflowv3TaskListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3TaskListResponse workflowSearchTasks(String caseId, Workflowv3SearchTasksRequest workflowv3SearchTasksRequest) throws ApiException {
+    public Workflowv3TaskListResponse workflowSearchTasks(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3SearchTasksRequest workflowv3SearchTasksRequest) throws ApiException {
         ApiResponse<Workflowv3TaskListResponse> localVarResp = workflowSearchTasksWithHttpInfo(caseId, workflowv3SearchTasksRequest);
         return localVarResp.getData();
     }
@@ -2356,13 +2422,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3TaskListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3TaskListResponse> workflowSearchTasksWithHttpInfo(String caseId, Workflowv3SearchTasksRequest workflowv3SearchTasksRequest) throws ApiException {
+    public ApiResponse<Workflowv3TaskListResponse> workflowSearchTasksWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3SearchTasksRequest workflowv3SearchTasksRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowSearchTasksValidateBeforeCall(caseId, workflowv3SearchTasksRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3TaskListResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2377,13 +2444,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowSearchTasksAsync(String caseId, Workflowv3SearchTasksRequest workflowv3SearchTasksRequest, final ApiCallback<Workflowv3TaskListResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowSearchTasksAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3SearchTasksRequest workflowv3SearchTasksRequest, final ApiCallback<Workflowv3TaskListResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowSearchTasksValidateBeforeCall(caseId, workflowv3SearchTasksRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3TaskListResponse>(){}.getType();
@@ -2397,13 +2465,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowUpdateCasesCall(Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowUpdateCasesCall(@javax.annotation.Nonnull Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2449,7 +2518,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowUpdateCasesValidateBeforeCall(Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowUpdateCasesValidateBeforeCall(@javax.annotation.Nonnull Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'workflowv3UpdateCasesRequest' is set
         if (workflowv3UpdateCasesRequest == null) {
             throw new ApiException("Missing the required parameter 'workflowv3UpdateCasesRequest' when calling workflowUpdateCases(Async)");
@@ -2466,13 +2535,14 @@ public class WorkflowApi {
      * @return Workflowv3UpdateCasesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3UpdateCasesResponse workflowUpdateCases(Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest) throws ApiException {
+    public Workflowv3UpdateCasesResponse workflowUpdateCases(@javax.annotation.Nonnull Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest) throws ApiException {
         ApiResponse<Workflowv3UpdateCasesResponse> localVarResp = workflowUpdateCasesWithHttpInfo(workflowv3UpdateCasesRequest);
         return localVarResp.getData();
     }
@@ -2484,13 +2554,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3UpdateCasesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3UpdateCasesResponse> workflowUpdateCasesWithHttpInfo(Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest) throws ApiException {
+    public ApiResponse<Workflowv3UpdateCasesResponse> workflowUpdateCasesWithHttpInfo(@javax.annotation.Nonnull Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowUpdateCasesValidateBeforeCall(workflowv3UpdateCasesRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3UpdateCasesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2504,13 +2575,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowUpdateCasesAsync(Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest, final ApiCallback<Workflowv3UpdateCasesResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowUpdateCasesAsync(@javax.annotation.Nonnull Workflowv3UpdateCasesRequest workflowv3UpdateCasesRequest, final ApiCallback<Workflowv3UpdateCasesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowUpdateCasesValidateBeforeCall(workflowv3UpdateCasesRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3UpdateCasesResponse>(){}.getType();
@@ -2525,13 +2597,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowUpdateProductEntityCall(String entityId, Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowUpdateProductEntityCall(@javax.annotation.Nonnull String entityId, @javax.annotation.Nonnull Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2578,7 +2651,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowUpdateProductEntityValidateBeforeCall(String entityId, Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowUpdateProductEntityValidateBeforeCall(@javax.annotation.Nonnull String entityId, @javax.annotation.Nonnull Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'entityId' is set
         if (entityId == null) {
             throw new ApiException("Missing the required parameter 'entityId' when calling workflowUpdateProductEntity(Async)");
@@ -2601,13 +2674,14 @@ public class WorkflowApi {
      * @return Workflowv3UpdateProductEntityResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3UpdateProductEntityResponse workflowUpdateProductEntity(String entityId, Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest) throws ApiException {
+    public Workflowv3UpdateProductEntityResponse workflowUpdateProductEntity(@javax.annotation.Nonnull String entityId, @javax.annotation.Nonnull Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest) throws ApiException {
         ApiResponse<Workflowv3UpdateProductEntityResponse> localVarResp = workflowUpdateProductEntityWithHttpInfo(entityId, workflowv3UpdateProductEntityRequest);
         return localVarResp.getData();
     }
@@ -2620,13 +2694,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3UpdateProductEntityResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3UpdateProductEntityResponse> workflowUpdateProductEntityWithHttpInfo(String entityId, Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest) throws ApiException {
+    public ApiResponse<Workflowv3UpdateProductEntityResponse> workflowUpdateProductEntityWithHttpInfo(@javax.annotation.Nonnull String entityId, @javax.annotation.Nonnull Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowUpdateProductEntityValidateBeforeCall(entityId, workflowv3UpdateProductEntityRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3UpdateProductEntityResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2641,13 +2716,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowUpdateProductEntityAsync(String entityId, Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest, final ApiCallback<Workflowv3UpdateProductEntityResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowUpdateProductEntityAsync(@javax.annotation.Nonnull String entityId, @javax.annotation.Nonnull Workflowv3UpdateProductEntityRequest workflowv3UpdateProductEntityRequest, final ApiCallback<Workflowv3UpdateProductEntityResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowUpdateProductEntityValidateBeforeCall(entityId, workflowv3UpdateProductEntityRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3UpdateProductEntityResponse>(){}.getType();
@@ -2662,13 +2738,14 @@ public class WorkflowApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowUpdateTasksCall(String caseId, Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call workflowUpdateTasksCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2715,7 +2792,7 @@ public class WorkflowApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call workflowUpdateTasksValidateBeforeCall(String caseId, Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call workflowUpdateTasksValidateBeforeCall(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'caseId' is set
         if (caseId == null) {
             throw new ApiException("Missing the required parameter 'caseId' when calling workflowUpdateTasks(Async)");
@@ -2738,13 +2815,14 @@ public class WorkflowApi {
      * @return Workflowv3UpdateTasksResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Workflowv3UpdateTasksResponse workflowUpdateTasks(String caseId, Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest) throws ApiException {
+    public Workflowv3UpdateTasksResponse workflowUpdateTasks(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest) throws ApiException {
         ApiResponse<Workflowv3UpdateTasksResponse> localVarResp = workflowUpdateTasksWithHttpInfo(caseId, workflowv3UpdateTasksRequest);
         return localVarResp.getData();
     }
@@ -2757,13 +2835,14 @@ public class WorkflowApi {
      * @return ApiResponse&lt;Workflowv3UpdateTasksResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Workflowv3UpdateTasksResponse> workflowUpdateTasksWithHttpInfo(String caseId, Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest) throws ApiException {
+    public ApiResponse<Workflowv3UpdateTasksResponse> workflowUpdateTasksWithHttpInfo(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest) throws ApiException {
         okhttp3.Call localVarCall = workflowUpdateTasksValidateBeforeCall(caseId, workflowv3UpdateTasksRequest, null);
         Type localVarReturnType = new TypeToken<Workflowv3UpdateTasksResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2778,13 +2857,14 @@ public class WorkflowApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call workflowUpdateTasksAsync(String caseId, Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest, final ApiCallback<Workflowv3UpdateTasksResponse> _callback) throws ApiException {
+    public okhttp3.Call workflowUpdateTasksAsync(@javax.annotation.Nonnull String caseId, @javax.annotation.Nonnull Workflowv3UpdateTasksRequest workflowv3UpdateTasksRequest, final ApiCallback<Workflowv3UpdateTasksResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = workflowUpdateTasksValidateBeforeCall(caseId, workflowv3UpdateTasksRequest, _callback);
         Type localVarReturnType = new TypeToken<Workflowv3UpdateTasksResponse>(){}.getType();

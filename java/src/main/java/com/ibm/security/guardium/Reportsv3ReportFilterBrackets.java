@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,90 +43,97 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportFilterBrackets represents a report filter bracket.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ReportFilterBrackets {
   public static final String SERIALIZED_NAME_BRACKETS_ID = "brackets_id";
   @SerializedName(SERIALIZED_NAME_BRACKETS_ID)
+  @javax.annotation.Nullable
   private Integer bracketsId;
 
   public static final String SERIALIZED_NAME_FILTER_NAME = "filter_name";
   @SerializedName(SERIALIZED_NAME_FILTER_NAME)
+  @javax.annotation.Nullable
   private String filterName;
 
   public static final String SERIALIZED_NAME_FILTERS_ARRAY = "filters_array";
   @SerializedName(SERIALIZED_NAME_FILTERS_ARRAY)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportFilter> filtersArray = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HAVING_ARRAY = "having_array";
   @SerializedName(SERIALIZED_NAME_HAVING_ARRAY)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportAggFilter> havingArray = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IS_CUSTOM = "is_custom";
   @SerializedName(SERIALIZED_NAME_IS_CUSTOM)
+  @javax.annotation.Nullable
   private Boolean isCustom;
 
   public static final String SERIALIZED_NAME_OPTION_TYPE = "option_type";
   @SerializedName(SERIALIZED_NAME_OPTION_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3OptionType optionType = Reportsv3OptionType.UNDEFINED_OPTION_TYPE;
 
   public static final String SERIALIZED_NAME_SEQUENCE = "sequence";
   @SerializedName(SERIALIZED_NAME_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer sequence;
 
   public Reportsv3ReportFilterBrackets() {
   }
 
-  public Reportsv3ReportFilterBrackets bracketsId(Integer bracketsId) {
+  public Reportsv3ReportFilterBrackets bracketsId(@javax.annotation.Nullable Integer bracketsId) {
     this.bracketsId = bracketsId;
     return this;
   }
 
-   /**
+  /**
    * Brackets ID.
    * @return bracketsId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getBracketsId() {
     return bracketsId;
   }
 
-  public void setBracketsId(Integer bracketsId) {
+  public void setBracketsId(@javax.annotation.Nullable Integer bracketsId) {
     this.bracketsId = bracketsId;
   }
 
 
-  public Reportsv3ReportFilterBrackets filterName(String filterName) {
+  public Reportsv3ReportFilterBrackets filterName(@javax.annotation.Nullable String filterName) {
     this.filterName = filterName;
     return this;
   }
 
-   /**
+  /**
    * Optional: Allow for naming of custom filters.
    * @return filterName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFilterName() {
     return filterName;
   }
 
-  public void setFilterName(String filterName) {
+  public void setFilterName(@javax.annotation.Nullable String filterName) {
     this.filterName = filterName;
   }
 
 
-  public Reportsv3ReportFilterBrackets filtersArray(List<Reportsv3ReportFilter> filtersArray) {
+  public Reportsv3ReportFilterBrackets filtersArray(@javax.annotation.Nullable List<Reportsv3ReportFilter> filtersArray) {
     this.filtersArray = filtersArray;
     return this;
   }
@@ -138,21 +146,21 @@ public class Reportsv3ReportFilterBrackets {
     return this;
   }
 
-   /**
+  /**
    * Filters Array.
    * @return filtersArray
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportFilter> getFiltersArray() {
     return filtersArray;
   }
 
-  public void setFiltersArray(List<Reportsv3ReportFilter> filtersArray) {
+  public void setFiltersArray(@javax.annotation.Nullable List<Reportsv3ReportFilter> filtersArray) {
     this.filtersArray = filtersArray;
   }
 
 
-  public Reportsv3ReportFilterBrackets havingArray(List<Reportsv3ReportAggFilter> havingArray) {
+  public Reportsv3ReportFilterBrackets havingArray(@javax.annotation.Nullable List<Reportsv3ReportAggFilter> havingArray) {
     this.havingArray = havingArray;
     return this;
   }
@@ -165,73 +173,73 @@ public class Reportsv3ReportFilterBrackets {
     return this;
   }
 
-   /**
+  /**
    * Get havingArray
    * @return havingArray
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportAggFilter> getHavingArray() {
     return havingArray;
   }
 
-  public void setHavingArray(List<Reportsv3ReportAggFilter> havingArray) {
+  public void setHavingArray(@javax.annotation.Nullable List<Reportsv3ReportAggFilter> havingArray) {
     this.havingArray = havingArray;
   }
 
 
-  public Reportsv3ReportFilterBrackets isCustom(Boolean isCustom) {
+  public Reportsv3ReportFilterBrackets isCustom(@javax.annotation.Nullable Boolean isCustom) {
     this.isCustom = isCustom;
     return this;
   }
 
-   /**
+  /**
    * Optional: Indicate if this is a custom filter in the UI.
    * @return isCustom
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsCustom() {
     return isCustom;
   }
 
-  public void setIsCustom(Boolean isCustom) {
+  public void setIsCustom(@javax.annotation.Nullable Boolean isCustom) {
     this.isCustom = isCustom;
   }
 
 
-  public Reportsv3ReportFilterBrackets optionType(Reportsv3OptionType optionType) {
+  public Reportsv3ReportFilterBrackets optionType(@javax.annotation.Nullable Reportsv3OptionType optionType) {
     this.optionType = optionType;
     return this;
   }
 
-   /**
+  /**
    * Get optionType
    * @return optionType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3OptionType getOptionType() {
     return optionType;
   }
 
-  public void setOptionType(Reportsv3OptionType optionType) {
+  public void setOptionType(@javax.annotation.Nullable Reportsv3OptionType optionType) {
     this.optionType = optionType;
   }
 
 
-  public Reportsv3ReportFilterBrackets sequence(Integer sequence) {
+  public Reportsv3ReportFilterBrackets sequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
+  /**
    * Filter sequence.
    * @return sequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSequence() {
     return sequence;
   }
 
-  public void setSequence(Integer sequence) {
+  public void setSequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
   }
 
@@ -292,29 +300,22 @@ public class Reportsv3ReportFilterBrackets {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("brackets_id");
-    openapiFields.add("filter_name");
-    openapiFields.add("filters_array");
-    openapiFields.add("having_array");
-    openapiFields.add("is_custom");
-    openapiFields.add("option_type");
-    openapiFields.add("sequence");
+    openapiFields = new HashSet<String>(Arrays.asList("brackets_id", "filter_name", "filters_array", "having_array", "is_custom", "option_type", "sequence"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportFilterBrackets
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportFilterBrackets
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ReportFilterBrackets.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ReportFilterBrackets is not found in the empty JSON string", Reportsv3ReportFilterBrackets.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ReportFilterBrackets is not found in the empty JSON string", Reportsv3ReportFilterBrackets.openapiRequiredFields.toString()));
         }
       }
 
@@ -322,19 +323,19 @@ public class Reportsv3ReportFilterBrackets {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ReportFilterBrackets.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ReportFilterBrackets` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ReportFilterBrackets` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("filter_name") != null && !jsonObj.get("filter_name").isJsonNull()) && !jsonObj.get("filter_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_name").toString()));
       }
       if (jsonObj.get("filters_array") != null && !jsonObj.get("filters_array").isJsonNull()) {
         JsonArray jsonArrayfiltersArray = jsonObj.getAsJsonArray("filters_array");
         if (jsonArrayfiltersArray != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters_array").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters_array` to be an array in the JSON string but got `%s`", jsonObj.get("filters_array").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters_array` to be an array in the JSON string but got `%s`", jsonObj.get("filters_array").toString()));
           }
 
           // validate the optional field `filters_array` (array)
@@ -348,7 +349,7 @@ public class Reportsv3ReportFilterBrackets {
         if (jsonArrayhavingArray != null) {
           // ensure the json data is an array
           if (!jsonObj.get("having_array").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `having_array` to be an array in the JSON string but got `%s`", jsonObj.get("having_array").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `having_array` to be an array in the JSON string but got `%s`", jsonObj.get("having_array").toString()));
           }
 
           // validate the optional field `having_array` (array)
@@ -392,22 +393,22 @@ public class Reportsv3ReportFilterBrackets {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ReportFilterBrackets given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ReportFilterBrackets
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportFilterBrackets
-  */
+  /**
+   * Create an instance of Reportsv3ReportFilterBrackets given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ReportFilterBrackets
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportFilterBrackets
+   */
   public static Reportsv3ReportFilterBrackets fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ReportFilterBrackets.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ReportFilterBrackets to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ReportFilterBrackets to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

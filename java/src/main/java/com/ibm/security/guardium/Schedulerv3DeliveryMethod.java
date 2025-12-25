@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DeliveryMethod configures who receives the report and how they receive it.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3DeliveryMethod {
   public static final String SERIALIZED_NAME_FILE_FORMAT = "file_format";
   @SerializedName(SERIALIZED_NAME_FILE_FORMAT)
+  @javax.annotation.Nullable
   private Schedulerv3FileFormat fileFormat = Schedulerv3FileFormat.UNDEFINED_FORMAT;
 
   public static final String SERIALIZED_NAME_REPORT_TIME_ZONE = "report_time_zone";
   @SerializedName(SERIALIZED_NAME_REPORT_TIME_ZONE)
+  @javax.annotation.Nullable
   private String reportTimeZone;
 
   public Schedulerv3DeliveryMethod() {
   }
 
-  public Schedulerv3DeliveryMethod fileFormat(Schedulerv3FileFormat fileFormat) {
+  public Schedulerv3DeliveryMethod fileFormat(@javax.annotation.Nullable Schedulerv3FileFormat fileFormat) {
     this.fileFormat = fileFormat;
     return this;
   }
 
-   /**
+  /**
    * Get fileFormat
    * @return fileFormat
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3FileFormat getFileFormat() {
     return fileFormat;
   }
 
-  public void setFileFormat(Schedulerv3FileFormat fileFormat) {
+  public void setFileFormat(@javax.annotation.Nullable Schedulerv3FileFormat fileFormat) {
     this.fileFormat = fileFormat;
   }
 
 
-  public Schedulerv3DeliveryMethod reportTimeZone(String reportTimeZone) {
+  public Schedulerv3DeliveryMethod reportTimeZone(@javax.annotation.Nullable String reportTimeZone) {
     this.reportTimeZone = reportTimeZone;
     return this;
   }
 
-   /**
+  /**
    * Optional: Preferred time zone to have all timestamps in.
    * @return reportTimeZone
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportTimeZone() {
     return reportTimeZone;
   }
 
-  public void setReportTimeZone(String reportTimeZone) {
+  public void setReportTimeZone(@javax.annotation.Nullable String reportTimeZone) {
     this.reportTimeZone = reportTimeZone;
   }
 
@@ -147,24 +150,22 @@ public class Schedulerv3DeliveryMethod {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("file_format");
-    openapiFields.add("report_time_zone");
+    openapiFields = new HashSet<String>(Arrays.asList("file_format", "report_time_zone"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3DeliveryMethod
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3DeliveryMethod
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3DeliveryMethod.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3DeliveryMethod is not found in the empty JSON string", Schedulerv3DeliveryMethod.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3DeliveryMethod is not found in the empty JSON string", Schedulerv3DeliveryMethod.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Schedulerv3DeliveryMethod {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3DeliveryMethod.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3DeliveryMethod` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3DeliveryMethod` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -181,7 +182,7 @@ public class Schedulerv3DeliveryMethod {
         Schedulerv3FileFormat.validateJsonElement(jsonObj.get("file_format"));
       }
       if ((jsonObj.get("report_time_zone") != null && !jsonObj.get("report_time_zone").isJsonNull()) && !jsonObj.get("report_time_zone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_time_zone").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_time_zone").toString()));
       }
   }
 
@@ -214,22 +215,22 @@ public class Schedulerv3DeliveryMethod {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3DeliveryMethod given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3DeliveryMethod
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3DeliveryMethod
-  */
+  /**
+   * Create an instance of Schedulerv3DeliveryMethod given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3DeliveryMethod
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3DeliveryMethod
+   */
   public static Schedulerv3DeliveryMethod fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3DeliveryMethod.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3DeliveryMethod to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3DeliveryMethod to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

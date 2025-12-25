@@ -68,6 +68,13 @@ class TestCloudAccountsApi(unittest.TestCase):
         """
         pass
 
+    def test_generate_salesforce_auth_url(self) -> None:
+        """Test case for generate_salesforce_auth_url
+
+        Generate a Salesforce consent URL
+        """
+        pass
+
     def test_generate_slack_auth_url(self) -> None:
         """Test case for generate_slack_auth_url
 
@@ -100,6 +107,13 @@ class TestCloudAccountsApi(unittest.TestCase):
         """Test case for get_cloud_account_installation_status
 
         Get the installation status of a cloud account
+        """
+        pass
+
+    def test_get_database_metadata(self) -> None:
+        """Test case for get_database_metadata
+
+        Get the metadata details of snowflake database.
         """
         pass
 
@@ -156,6 +170,13 @@ class TestCloudAccountsApi(unittest.TestCase):
         """Test case for submit_office365_tenant_info
 
         Submit Microsoft 365 customer information
+        """
+        pass
+
+    def test_submit_salesforce_auth_code(self) -> None:
+        """Test case for submit_salesforce_auth_code
+
+        Submit Salesforce customer information
         """
         pass
 

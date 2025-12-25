@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,180 +40,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SnifAssistResponse defines the message structure for response.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Snifassistv3SnifAssistResponse {
   public static final String SERIALIZED_NAME_BATCH_NUM = "batch_num";
   @SerializedName(SERIALIZED_NAME_BATCH_NUM)
+  @javax.annotation.Nullable
   private String batchNum;
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private byte[] data;
 
   public static final String SERIALIZED_NAME_DATA_CRC = "data_crc";
   @SerializedName(SERIALIZED_NAME_DATA_CRC)
+  @javax.annotation.Nullable
   private Long dataCrc;
 
   public static final String SERIALIZED_NAME_STAP_ID = "stap_id";
   @SerializedName(SERIALIZED_NAME_STAP_ID)
+  @javax.annotation.Nullable
   private String stapId;
 
   public static final String SERIALIZED_NAME_STAP_OPERATION = "stap_operation";
   @SerializedName(SERIALIZED_NAME_STAP_OPERATION)
-  private Snifassistv3StapOperation stapOperation = Snifassistv3StapOperation.REINITIALIZE_BUFFER;
+  @javax.annotation.Nullable
+  private Snifassistv3StapOperation stapOperation = Snifassistv3StapOperation.STAP_REINITIALIZE_BUFFER;
 
   public static final String SERIALIZED_NAME_STATUS_CODE = "status_code";
   @SerializedName(SERIALIZED_NAME_STATUS_CODE)
+  @javax.annotation.Nullable
   private Integer statusCode;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Snifassistv3SnifAssistType type = Snifassistv3SnifAssistType.VERSION_NOT_SUPPORTED;
 
   public Snifassistv3SnifAssistResponse() {
   }
 
-  public Snifassistv3SnifAssistResponse batchNum(String batchNum) {
+  public Snifassistv3SnifAssistResponse batchNum(@javax.annotation.Nullable String batchNum) {
     this.batchNum = batchNum;
     return this;
   }
 
-   /**
+  /**
    * Specify batch number if Type is POLICY or GROUP_UPDATE.
    * @return batchNum
-  **/
+   */
   @javax.annotation.Nullable
   public String getBatchNum() {
     return batchNum;
   }
 
-  public void setBatchNum(String batchNum) {
+  public void setBatchNum(@javax.annotation.Nullable String batchNum) {
     this.batchNum = batchNum;
   }
 
 
-  public Snifassistv3SnifAssistResponse data(byte[] data) {
+  public Snifassistv3SnifAssistResponse data(@javax.annotation.Nullable byte[] data) {
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Data field if any.
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public byte[] getData() {
     return data;
   }
 
-  public void setData(byte[] data) {
+  public void setData(@javax.annotation.Nullable byte[] data) {
     this.data = data;
   }
 
 
-  public Snifassistv3SnifAssistResponse dataCrc(Long dataCrc) {
+  public Snifassistv3SnifAssistResponse dataCrc(@javax.annotation.Nullable Long dataCrc) {
     this.dataCrc = dataCrc;
     return this;
   }
 
-   /**
+  /**
    * Provide CRC value of Response Data.
    * @return dataCrc
-  **/
+   */
   @javax.annotation.Nullable
   public Long getDataCrc() {
     return dataCrc;
   }
 
-  public void setDataCrc(Long dataCrc) {
+  public void setDataCrc(@javax.annotation.Nullable Long dataCrc) {
     this.dataCrc = dataCrc;
   }
 
 
-  public Snifassistv3SnifAssistResponse stapId(String stapId) {
+  public Snifassistv3SnifAssistResponse stapId(@javax.annotation.Nullable String stapId) {
     this.stapId = stapId;
     return this;
   }
 
-   /**
+  /**
    * Provide STAP identifer.
    * @return stapId
-  **/
+   */
   @javax.annotation.Nullable
   public String getStapId() {
     return stapId;
   }
 
-  public void setStapId(String stapId) {
+  public void setStapId(@javax.annotation.Nullable String stapId) {
     this.stapId = stapId;
   }
 
 
-  public Snifassistv3SnifAssistResponse stapOperation(Snifassistv3StapOperation stapOperation) {
+  public Snifassistv3SnifAssistResponse stapOperation(@javax.annotation.Nullable Snifassistv3StapOperation stapOperation) {
     this.stapOperation = stapOperation;
     return this;
   }
 
-   /**
+  /**
    * Get stapOperation
    * @return stapOperation
-  **/
+   */
   @javax.annotation.Nullable
   public Snifassistv3StapOperation getStapOperation() {
     return stapOperation;
   }
 
-  public void setStapOperation(Snifassistv3StapOperation stapOperation) {
+  public void setStapOperation(@javax.annotation.Nullable Snifassistv3StapOperation stapOperation) {
     this.stapOperation = stapOperation;
   }
 
 
-  public Snifassistv3SnifAssistResponse statusCode(Integer statusCode) {
+  public Snifassistv3SnifAssistResponse statusCode(@javax.annotation.Nullable Integer statusCode) {
     this.statusCode = statusCode;
     return this;
   }
 
-   /**
+  /**
    * Status code: 0 &#x3D; success; 1 &#x3D; failure.
    * @return statusCode
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatusCode() {
     return statusCode;
   }
 
-  public void setStatusCode(Integer statusCode) {
+  public void setStatusCode(@javax.annotation.Nullable Integer statusCode) {
     this.statusCode = statusCode;
   }
 
 
-  public Snifassistv3SnifAssistResponse type(Snifassistv3SnifAssistType type) {
+  public Snifassistv3SnifAssistResponse type(@javax.annotation.Nullable Snifassistv3SnifAssistType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Snifassistv3SnifAssistType getType() {
     return type;
   }
 
-  public void setType(Snifassistv3SnifAssistType type) {
+  public void setType(@javax.annotation.Nullable Snifassistv3SnifAssistType type) {
     this.type = type;
   }
 
@@ -273,29 +281,22 @@ public class Snifassistv3SnifAssistResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("batch_num");
-    openapiFields.add("data");
-    openapiFields.add("data_crc");
-    openapiFields.add("stap_id");
-    openapiFields.add("stap_operation");
-    openapiFields.add("status_code");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("batch_num", "data", "data_crc", "stap_id", "stap_operation", "status_code", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Snifassistv3SnifAssistResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Snifassistv3SnifAssistResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Snifassistv3SnifAssistResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Snifassistv3SnifAssistResponse is not found in the empty JSON string", Snifassistv3SnifAssistResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Snifassistv3SnifAssistResponse is not found in the empty JSON string", Snifassistv3SnifAssistResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -303,15 +304,15 @@ public class Snifassistv3SnifAssistResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Snifassistv3SnifAssistResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Snifassistv3SnifAssistResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Snifassistv3SnifAssistResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("batch_num") != null && !jsonObj.get("batch_num").isJsonNull()) && !jsonObj.get("batch_num").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `batch_num` to be a primitive type in the JSON string but got `%s`", jsonObj.get("batch_num").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `batch_num` to be a primitive type in the JSON string but got `%s`", jsonObj.get("batch_num").toString()));
       }
       if ((jsonObj.get("stap_id") != null && !jsonObj.get("stap_id").isJsonNull()) && !jsonObj.get("stap_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_id").toString()));
       }
       // validate the optional field `stap_operation`
       if (jsonObj.get("stap_operation") != null && !jsonObj.get("stap_operation").isJsonNull()) {
@@ -352,22 +353,22 @@ public class Snifassistv3SnifAssistResponse {
     }
   }
 
- /**
-  * Create an instance of Snifassistv3SnifAssistResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Snifassistv3SnifAssistResponse
-  * @throws IOException if the JSON string is invalid with respect to Snifassistv3SnifAssistResponse
-  */
+  /**
+   * Create an instance of Snifassistv3SnifAssistResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Snifassistv3SnifAssistResponse
+   * @throws IOException if the JSON string is invalid with respect to Snifassistv3SnifAssistResponse
+   */
   public static Snifassistv3SnifAssistResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Snifassistv3SnifAssistResponse.class);
   }
 
- /**
-  * Convert an instance of Snifassistv3SnifAssistResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Snifassistv3SnifAssistResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

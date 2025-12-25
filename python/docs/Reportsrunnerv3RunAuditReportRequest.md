@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **header_name** | **str** | The header name. | [optional] 
 **job_id** | **str** | Unique token identifying the export job. | [optional] 
 **offset** | **int** | The amount to offset the rows by for pagination. Required if report query uses offset and fetch_size parameters. | [optional] 
-**order_by** | [**Reportsv3OrderBy**](Reportsv3OrderBy.md) |  | [optional] 
+**order_by** | [**Reportsv3OrderBy**](Reportsv3OrderBy.md) |  | [optional] [default to Reportsv3OrderBy.UNDEFINED_ORDER_BY]
 **report_filters** | [**Reportsv3ReportFilterBrackets**](Reportsv3ReportFilterBrackets.md) |  | [optional] 
 **report_id** | **str** | The ID of the Report we wish to run (e.g. 000000000000000000000905). | [optional] 
 **schema_name** | **str** | The schema name to organize report task temp tables. | [optional] 

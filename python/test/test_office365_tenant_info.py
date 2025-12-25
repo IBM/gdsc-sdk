@@ -27,7 +27,7 @@ class TestOffice365TenantInfo(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Office365TenantInfo:
         """Test Office365TenantInfo
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Office365TenantInfo`

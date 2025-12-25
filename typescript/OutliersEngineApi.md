@@ -21,26 +21,25 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineGetSourceStatisticsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {
-  // string | server ip. (optional)
+const request: OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {
+    // server ip. (optional)
   sourceServerIp: "source.server_ip_example",
-  // string | database name. (optional)
+    // database name. (optional)
   sourceDatabaseName: "source.database_name_example",
-  // string | db user name (optional). (optional)
+    // db user name (optional). (optional)
   sourceDbUser: "source.db_user_example",
-  // number | The number of attributes to return for each SourceAttributeType - optional. (optional)
+    // The number of attributes to return for each SourceAttributeType - optional. (optional)
   attributesLimit: 1,
 };
 
-apiInstance.outliersEngineGetSourceStatistics(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineGetSourceStatistics(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -84,17 +83,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.outliersEngineGetStatistics(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineGetStatistics(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -132,17 +129,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.outliersEngineGetWorkingHoursPeriods(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineGetWorkingHoursPeriods(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -180,14 +175,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineRunSimulatorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineRunSimulatorRequest = {
-  // Outliersenginev3RunSimulatorRequest
+const request: OutliersEngineApiOutliersEngineRunSimulatorRequest = {
+  
   outliersenginev3RunSimulatorRequest: {
     configurationFilePath: "configurationFilePath_example",
     date: "date_example",
@@ -196,9 +191,8 @@ let body:.OutliersEngineApiOutliersEngineRunSimulatorRequest = {
   },
 };
 
-apiInstance.outliersEngineRunSimulator(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineRunSimulator(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -239,14 +233,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest = {
-  // Outliersenginev3UpdateWorkingHoursPeriodsRequest
+const request: OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest = {
+  
   outliersenginev3UpdateWorkingHoursPeriodsRequest: {
     period: {
       contiguous: true,
@@ -260,9 +254,8 @@ let body:.OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest = {
   },
 };
 
-apiInstance.outliersEngineUpdateWorkingHoursPeriods(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineUpdateWorkingHoursPeriods(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -303,20 +296,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest = {
-  // any
+const request: OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest = {
+  
   body: {},
 };
 
-apiInstance.outliersEngineUploadAndAnalyzePeriod(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineUploadAndAnalyzePeriod(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -357,20 +349,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineUserClusteringRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineUserClusteringRequest = {
-  // any
+const request: OutliersEngineApiOutliersEngineUserClusteringRequest = {
+  
   body: {},
 };
 
-apiInstance.outliersEngineUserClustering(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineUserClustering(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

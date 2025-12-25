@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,19 +38,19 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VendorCertificate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VendorCertificate {
   /**
    * The vendor certificate
@@ -68,6 +69,8 @@ public class VendorCertificate {
     
     LBA("LBA"),
     
+    GLBA("GLBA"),
+    
     ISO_27001("ISO 27001"),
     
     ISO_27018("ISO 27018"),
@@ -80,7 +83,7 @@ public class VendorCertificate {
     
     PCI_DSS("PCI DSS"),
     
-    FEDRAMP("FedRAMP");
+    FED_RAMP("FedRAMP");
 
     private String value;
 
@@ -127,26 +130,27 @@ public class VendorCertificate {
 
   public static final String SERIALIZED_NAME_CERTIFICATE_NAME = "certificateName";
   @SerializedName(SERIALIZED_NAME_CERTIFICATE_NAME)
+  @javax.annotation.Nonnull
   private CertificateNameEnum certificateName;
 
   public VendorCertificate() {
   }
 
-  public VendorCertificate certificateName(CertificateNameEnum certificateName) {
+  public VendorCertificate certificateName(@javax.annotation.Nonnull CertificateNameEnum certificateName) {
     this.certificateName = certificateName;
     return this;
   }
 
-   /**
+  /**
    * The vendor certificate
    * @return certificateName
-  **/
+   */
   @javax.annotation.Nonnull
   public CertificateNameEnum getCertificateName() {
     return certificateName;
   }
 
-  public void setCertificateName(CertificateNameEnum certificateName) {
+  public void setCertificateName(@javax.annotation.Nonnull CertificateNameEnum certificateName) {
     this.certificateName = certificateName;
   }
 
@@ -195,24 +199,22 @@ public class VendorCertificate {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("certificateName");
+    openapiFields = new HashSet<String>(Arrays.asList("certificateName"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("certificateName");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("certificateName"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VendorCertificate
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VendorCertificate
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VendorCertificate.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VendorCertificate is not found in the empty JSON string", VendorCertificate.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VendorCertificate is not found in the empty JSON string", VendorCertificate.openapiRequiredFields.toString()));
         }
       }
 
@@ -220,19 +222,19 @@ public class VendorCertificate {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VendorCertificate.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VendorCertificate` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VendorCertificate` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VendorCertificate.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("certificateName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `certificateName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("certificateName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `certificateName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("certificateName").toString()));
       }
       // validate the required field `certificateName`
       CertificateNameEnum.validateJsonElement(jsonObj.get("certificateName"));
@@ -267,22 +269,22 @@ public class VendorCertificate {
     }
   }
 
- /**
-  * Create an instance of VendorCertificate given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VendorCertificate
-  * @throws IOException if the JSON string is invalid with respect to VendorCertificate
-  */
+  /**
+   * Create an instance of VendorCertificate given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VendorCertificate
+   * @throws IOException if the JSON string is invalid with respect to VendorCertificate
+   */
   public static VendorCertificate fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VendorCertificate.class);
   }
 
- /**
-  * Convert an instance of VendorCertificate to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VendorCertificate to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

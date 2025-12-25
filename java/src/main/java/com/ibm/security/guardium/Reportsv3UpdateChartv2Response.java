@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateChartv2Response contains the chart id.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3UpdateChartv2Response {
   public static final String SERIALIZED_NAME_CHART_ID = "chart_id";
   @SerializedName(SERIALIZED_NAME_CHART_ID)
+  @javax.annotation.Nullable
   private String chartId;
 
   public Reportsv3UpdateChartv2Response() {
   }
 
-  public Reportsv3UpdateChartv2Response chartId(String chartId) {
+  public Reportsv3UpdateChartv2Response chartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
     return this;
   }
 
-   /**
+  /**
    * Unique chart ID.
    * @return chartId
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartId() {
     return chartId;
   }
 
-  public void setChartId(String chartId) {
+  public void setChartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
   }
 
@@ -121,23 +123,22 @@ public class Reportsv3UpdateChartv2Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_id");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateChartv2Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateChartv2Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3UpdateChartv2Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3UpdateChartv2Response is not found in the empty JSON string", Reportsv3UpdateChartv2Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3UpdateChartv2Response is not found in the empty JSON string", Reportsv3UpdateChartv2Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class Reportsv3UpdateChartv2Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3UpdateChartv2Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3UpdateChartv2Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3UpdateChartv2Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("chart_id") != null && !jsonObj.get("chart_id").isJsonNull()) && !jsonObj.get("chart_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class Reportsv3UpdateChartv2Response {
     }
   }
 
- /**
-  * Create an instance of Reportsv3UpdateChartv2Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3UpdateChartv2Response
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateChartv2Response
-  */
+  /**
+   * Create an instance of Reportsv3UpdateChartv2Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3UpdateChartv2Response
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateChartv2Response
+   */
   public static Reportsv3UpdateChartv2Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3UpdateChartv2Response.class);
   }
 
- /**
-  * Convert an instance of Reportsv3UpdateChartv2Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3UpdateChartv2Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

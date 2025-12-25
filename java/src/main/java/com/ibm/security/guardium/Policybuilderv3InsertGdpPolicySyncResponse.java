@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Policybuilderv3InsertGdpPolicySyncResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3InsertGdpPolicySyncResponse {
   public static final String SERIALIZED_NAME_GDP_POLICIES = "gdp_policies";
   @SerializedName(SERIALIZED_NAME_GDP_POLICIES)
+  @javax.annotation.Nullable
   private List<Policybuilderv3GdpPolicySyncRes> gdpPolicies = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Policybuilderv3StatusResponseBase status;
 
   public Policybuilderv3InsertGdpPolicySyncResponse() {
   }
 
-  public Policybuilderv3InsertGdpPolicySyncResponse gdpPolicies(List<Policybuilderv3GdpPolicySyncRes> gdpPolicies) {
+  public Policybuilderv3InsertGdpPolicySyncResponse gdpPolicies(@javax.annotation.Nullable List<Policybuilderv3GdpPolicySyncRes> gdpPolicies) {
     this.gdpPolicies = gdpPolicies;
     return this;
   }
@@ -79,35 +82,35 @@ public class Policybuilderv3InsertGdpPolicySyncResponse {
     return this;
   }
 
-   /**
+  /**
    * Get gdpPolicies
    * @return gdpPolicies
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3GdpPolicySyncRes> getGdpPolicies() {
     return gdpPolicies;
   }
 
-  public void setGdpPolicies(List<Policybuilderv3GdpPolicySyncRes> gdpPolicies) {
+  public void setGdpPolicies(@javax.annotation.Nullable List<Policybuilderv3GdpPolicySyncRes> gdpPolicies) {
     this.gdpPolicies = gdpPolicies;
   }
 
 
-  public Policybuilderv3InsertGdpPolicySyncResponse status(Policybuilderv3StatusResponseBase status) {
+  public Policybuilderv3InsertGdpPolicySyncResponse status(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Policybuilderv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -158,24 +161,22 @@ public class Policybuilderv3InsertGdpPolicySyncResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("gdp_policies");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("gdp_policies", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3InsertGdpPolicySyncResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3InsertGdpPolicySyncResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3InsertGdpPolicySyncResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3InsertGdpPolicySyncResponse is not found in the empty JSON string", Policybuilderv3InsertGdpPolicySyncResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3InsertGdpPolicySyncResponse is not found in the empty JSON string", Policybuilderv3InsertGdpPolicySyncResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Policybuilderv3InsertGdpPolicySyncResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3InsertGdpPolicySyncResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3InsertGdpPolicySyncResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3InsertGdpPolicySyncResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Policybuilderv3InsertGdpPolicySyncResponse {
         if (jsonArraygdpPolicies != null) {
           // ensure the json data is an array
           if (!jsonObj.get("gdp_policies").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `gdp_policies` to be an array in the JSON string but got `%s`", jsonObj.get("gdp_policies").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `gdp_policies` to be an array in the JSON string but got `%s`", jsonObj.get("gdp_policies").toString()));
           }
 
           // validate the optional field `gdp_policies` (array)
@@ -236,22 +237,22 @@ public class Policybuilderv3InsertGdpPolicySyncResponse {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3InsertGdpPolicySyncResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3InsertGdpPolicySyncResponse
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3InsertGdpPolicySyncResponse
-  */
+  /**
+   * Create an instance of Policybuilderv3InsertGdpPolicySyncResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3InsertGdpPolicySyncResponse
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3InsertGdpPolicySyncResponse
+   */
   public static Policybuilderv3InsertGdpPolicySyncResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3InsertGdpPolicySyncResponse.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3InsertGdpPolicySyncResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3InsertGdpPolicySyncResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

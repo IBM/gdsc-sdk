@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,203 +39,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * EmergingRiskDetails is the information for emerging risks.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3EmergingRiskDetails {
   public static final String SERIALIZED_NAME_END_MAX_TIME = "end_max_time";
   @SerializedName(SERIALIZED_NAME_END_MAX_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endMaxTime;
 
   public static final String SERIALIZED_NAME_END_MAX_VALUE = "end_max_value";
   @SerializedName(SERIALIZED_NAME_END_MAX_VALUE)
+  @javax.annotation.Nullable
   private Integer endMaxValue;
 
   public static final String SERIALIZED_NAME_PEAK_MAX_TIME = "peak_max_time";
   @SerializedName(SERIALIZED_NAME_PEAK_MAX_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime peakMaxTime;
 
   public static final String SERIALIZED_NAME_PEAK_MAX_VALUE = "peak_max_value";
   @SerializedName(SERIALIZED_NAME_PEAK_MAX_VALUE)
+  @javax.annotation.Nullable
   private Integer peakMaxValue;
 
   public static final String SERIALIZED_NAME_PREVIOUS_MAX_VALUE = "previous_max_value";
   @SerializedName(SERIALIZED_NAME_PREVIOUS_MAX_VALUE)
+  @javax.annotation.Nullable
   private Integer previousMaxValue;
 
   public static final String SERIALIZED_NAME_RISK_FEATURES = "risk_features";
   @SerializedName(SERIALIZED_NAME_RISK_FEATURES)
+  @javax.annotation.Nullable
   private String riskFeatures;
 
   public static final String SERIALIZED_NAME_START_MAX_TIME = "start_max_time";
   @SerializedName(SERIALIZED_NAME_START_MAX_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startMaxTime;
 
   public static final String SERIALIZED_NAME_START_MAX_VALUE = "start_max_value";
   @SerializedName(SERIALIZED_NAME_START_MAX_VALUE)
+  @javax.annotation.Nullable
   private Integer startMaxValue;
 
   public Riskanalyticscontrollerv3EmergingRiskDetails() {
   }
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails endMaxTime(OffsetDateTime endMaxTime) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails endMaxTime(@javax.annotation.Nullable OffsetDateTime endMaxTime) {
     this.endMaxTime = endMaxTime;
     return this;
   }
 
-   /**
+  /**
    * Time of the last max value.
    * @return endMaxTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndMaxTime() {
     return endMaxTime;
   }
 
-  public void setEndMaxTime(OffsetDateTime endMaxTime) {
+  public void setEndMaxTime(@javax.annotation.Nullable OffsetDateTime endMaxTime) {
     this.endMaxTime = endMaxTime;
   }
 
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails endMaxValue(Integer endMaxValue) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails endMaxValue(@javax.annotation.Nullable Integer endMaxValue) {
     this.endMaxValue = endMaxValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the last max value.
    * @return endMaxValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getEndMaxValue() {
     return endMaxValue;
   }
 
-  public void setEndMaxValue(Integer endMaxValue) {
+  public void setEndMaxValue(@javax.annotation.Nullable Integer endMaxValue) {
     this.endMaxValue = endMaxValue;
   }
 
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails peakMaxTime(OffsetDateTime peakMaxTime) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails peakMaxTime(@javax.annotation.Nullable OffsetDateTime peakMaxTime) {
     this.peakMaxTime = peakMaxTime;
     return this;
   }
 
-   /**
+  /**
    * Time of the peak max value.
    * @return peakMaxTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getPeakMaxTime() {
     return peakMaxTime;
   }
 
-  public void setPeakMaxTime(OffsetDateTime peakMaxTime) {
+  public void setPeakMaxTime(@javax.annotation.Nullable OffsetDateTime peakMaxTime) {
     this.peakMaxTime = peakMaxTime;
   }
 
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails peakMaxValue(Integer peakMaxValue) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails peakMaxValue(@javax.annotation.Nullable Integer peakMaxValue) {
     this.peakMaxValue = peakMaxValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the peak max value.
    * @return peakMaxValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPeakMaxValue() {
     return peakMaxValue;
   }
 
-  public void setPeakMaxValue(Integer peakMaxValue) {
+  public void setPeakMaxValue(@javax.annotation.Nullable Integer peakMaxValue) {
     this.peakMaxValue = peakMaxValue;
   }
 
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails previousMaxValue(Integer previousMaxValue) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails previousMaxValue(@javax.annotation.Nullable Integer previousMaxValue) {
     this.previousMaxValue = previousMaxValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the previous max value.
    * @return previousMaxValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPreviousMaxValue() {
     return previousMaxValue;
   }
 
-  public void setPreviousMaxValue(Integer previousMaxValue) {
+  public void setPreviousMaxValue(@javax.annotation.Nullable Integer previousMaxValue) {
     this.previousMaxValue = previousMaxValue;
   }
 
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails riskFeatures(String riskFeatures) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails riskFeatures(@javax.annotation.Nullable String riskFeatures) {
     this.riskFeatures = riskFeatures;
     return this;
   }
 
-   /**
+  /**
    * Features of the risk in JSON format.
    * @return riskFeatures
-  **/
+   */
   @javax.annotation.Nullable
   public String getRiskFeatures() {
     return riskFeatures;
   }
 
-  public void setRiskFeatures(String riskFeatures) {
+  public void setRiskFeatures(@javax.annotation.Nullable String riskFeatures) {
     this.riskFeatures = riskFeatures;
   }
 
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails startMaxTime(OffsetDateTime startMaxTime) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails startMaxTime(@javax.annotation.Nullable OffsetDateTime startMaxTime) {
     this.startMaxTime = startMaxTime;
     return this;
   }
 
-   /**
+  /**
    * Time of the first max value.
    * @return startMaxTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartMaxTime() {
     return startMaxTime;
   }
 
-  public void setStartMaxTime(OffsetDateTime startMaxTime) {
+  public void setStartMaxTime(@javax.annotation.Nullable OffsetDateTime startMaxTime) {
     this.startMaxTime = startMaxTime;
   }
 
 
-  public Riskanalyticscontrollerv3EmergingRiskDetails startMaxValue(Integer startMaxValue) {
+  public Riskanalyticscontrollerv3EmergingRiskDetails startMaxValue(@javax.annotation.Nullable Integer startMaxValue) {
     this.startMaxValue = startMaxValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the first max value.
    * @return startMaxValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStartMaxValue() {
     return startMaxValue;
   }
 
-  public void setStartMaxValue(Integer startMaxValue) {
+  public void setStartMaxValue(@javax.annotation.Nullable Integer startMaxValue) {
     this.startMaxValue = startMaxValue;
   }
 
@@ -297,30 +306,22 @@ public class Riskanalyticscontrollerv3EmergingRiskDetails {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("end_max_time");
-    openapiFields.add("end_max_value");
-    openapiFields.add("peak_max_time");
-    openapiFields.add("peak_max_value");
-    openapiFields.add("previous_max_value");
-    openapiFields.add("risk_features");
-    openapiFields.add("start_max_time");
-    openapiFields.add("start_max_value");
+    openapiFields = new HashSet<String>(Arrays.asList("end_max_time", "end_max_value", "peak_max_time", "peak_max_value", "previous_max_value", "risk_features", "start_max_time", "start_max_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3EmergingRiskDetails
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3EmergingRiskDetails
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3EmergingRiskDetails.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3EmergingRiskDetails is not found in the empty JSON string", Riskanalyticscontrollerv3EmergingRiskDetails.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3EmergingRiskDetails is not found in the empty JSON string", Riskanalyticscontrollerv3EmergingRiskDetails.openapiRequiredFields.toString()));
         }
       }
 
@@ -328,12 +329,12 @@ public class Riskanalyticscontrollerv3EmergingRiskDetails {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3EmergingRiskDetails.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3EmergingRiskDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3EmergingRiskDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("risk_features") != null && !jsonObj.get("risk_features").isJsonNull()) && !jsonObj.get("risk_features").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `risk_features` to be a primitive type in the JSON string but got `%s`", jsonObj.get("risk_features").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `risk_features` to be a primitive type in the JSON string but got `%s`", jsonObj.get("risk_features").toString()));
       }
   }
 
@@ -366,22 +367,22 @@ public class Riskanalyticscontrollerv3EmergingRiskDetails {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3EmergingRiskDetails given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3EmergingRiskDetails
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3EmergingRiskDetails
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3EmergingRiskDetails given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3EmergingRiskDetails
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3EmergingRiskDetails
+   */
   public static Riskanalyticscontrollerv3EmergingRiskDetails fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3EmergingRiskDetails.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3EmergingRiskDetails to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3EmergingRiskDetails to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

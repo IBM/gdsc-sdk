@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,64 +48,74 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3FetchAssetDashboardResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3FetchAssetDashboardResponse {
   public static final String SERIALIZED_NAME_ASSETS_WITH_OPEN_VULNERABILITIES = "assets_with_open_vulnerabilities";
   @SerializedName(SERIALIZED_NAME_ASSETS_WITH_OPEN_VULNERABILITIES)
+  @javax.annotation.Nullable
   private List<Assetsv3AssetsWithOpenVulnerabilities> assetsWithOpenVulnerabilities = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_SCAN_STATUS = "classification_scan_status";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_SCAN_STATUS)
+  @javax.annotation.Nullable
   private List<Assetsv3ClassificationScanStatus> classificationScanStatus = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private String count;
 
   public static final String SERIALIZED_NAME_HIGHEST_ASSET_TAG_COUNTS = "highest_asset_tag_counts";
   @SerializedName(SERIALIZED_NAME_HIGHEST_ASSET_TAG_COUNTS)
+  @javax.annotation.Nullable
   private List<Assetsv3HighestAssetTagCounts> highestAssetTagCounts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SELECTED_FILTERS = "selected_filters";
   @SerializedName(SERIALIZED_NAME_SELECTED_FILTERS)
+  @javax.annotation.Nullable
   private List<Assetsv3FilterCatagory> selectedFilters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TAG_CATEGORIES_DATA = "tag_categories_data";
   @SerializedName(SERIALIZED_NAME_TAG_CATEGORIES_DATA)
+  @javax.annotation.Nullable
   private List<Assetsv3TagCategoriesData> tagCategoriesData = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TAGS_FILTER_DATA = "tags_filter_data";
   @SerializedName(SERIALIZED_NAME_TAGS_FILTER_DATA)
+  @javax.annotation.Nullable
   private List<Assetsv3TagsFilterData> tagsFilterData = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+  @javax.annotation.Nullable
   private String templateId;
 
   public static final String SERIALIZED_NAME_VULNERABILITY_SCAN_STATUS = "vulnerability_scan_status";
   @SerializedName(SERIALIZED_NAME_VULNERABILITY_SCAN_STATUS)
+  @javax.annotation.Nullable
   private List<Assetsv3VulnerabilityScanStatus> vulnerabilityScanStatus = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_VULNERABILITY_TREND = "vulnerability_trend";
   @SerializedName(SERIALIZED_NAME_VULNERABILITY_TREND)
+  @javax.annotation.Nullable
   private List<Assetsv3VulnerabilityTrend> vulnerabilityTrend = new ArrayList<>();
 
   public Assetsv3FetchAssetDashboardResponse() {
   }
 
-  public Assetsv3FetchAssetDashboardResponse assetsWithOpenVulnerabilities(List<Assetsv3AssetsWithOpenVulnerabilities> assetsWithOpenVulnerabilities) {
+  public Assetsv3FetchAssetDashboardResponse assetsWithOpenVulnerabilities(@javax.annotation.Nullable List<Assetsv3AssetsWithOpenVulnerabilities> assetsWithOpenVulnerabilities) {
     this.assetsWithOpenVulnerabilities = assetsWithOpenVulnerabilities;
     return this;
   }
@@ -117,21 +128,21 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assetsWithOpenVulnerabilities
    * @return assetsWithOpenVulnerabilities
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssetsWithOpenVulnerabilities> getAssetsWithOpenVulnerabilities() {
     return assetsWithOpenVulnerabilities;
   }
 
-  public void setAssetsWithOpenVulnerabilities(List<Assetsv3AssetsWithOpenVulnerabilities> assetsWithOpenVulnerabilities) {
+  public void setAssetsWithOpenVulnerabilities(@javax.annotation.Nullable List<Assetsv3AssetsWithOpenVulnerabilities> assetsWithOpenVulnerabilities) {
     this.assetsWithOpenVulnerabilities = assetsWithOpenVulnerabilities;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse classificationScanStatus(List<Assetsv3ClassificationScanStatus> classificationScanStatus) {
+  public Assetsv3FetchAssetDashboardResponse classificationScanStatus(@javax.annotation.Nullable List<Assetsv3ClassificationScanStatus> classificationScanStatus) {
     this.classificationScanStatus = classificationScanStatus;
     return this;
   }
@@ -144,40 +155,40 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get classificationScanStatus
    * @return classificationScanStatus
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ClassificationScanStatus> getClassificationScanStatus() {
     return classificationScanStatus;
   }
 
-  public void setClassificationScanStatus(List<Assetsv3ClassificationScanStatus> classificationScanStatus) {
+  public void setClassificationScanStatus(@javax.annotation.Nullable List<Assetsv3ClassificationScanStatus> classificationScanStatus) {
     this.classificationScanStatus = classificationScanStatus;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse count(String count) {
+  public Assetsv3FetchAssetDashboardResponse count(@javax.annotation.Nullable String count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public String getCount() {
     return count;
   }
 
-  public void setCount(String count) {
+  public void setCount(@javax.annotation.Nullable String count) {
     this.count = count;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse highestAssetTagCounts(List<Assetsv3HighestAssetTagCounts> highestAssetTagCounts) {
+  public Assetsv3FetchAssetDashboardResponse highestAssetTagCounts(@javax.annotation.Nullable List<Assetsv3HighestAssetTagCounts> highestAssetTagCounts) {
     this.highestAssetTagCounts = highestAssetTagCounts;
     return this;
   }
@@ -190,21 +201,21 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get highestAssetTagCounts
    * @return highestAssetTagCounts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3HighestAssetTagCounts> getHighestAssetTagCounts() {
     return highestAssetTagCounts;
   }
 
-  public void setHighestAssetTagCounts(List<Assetsv3HighestAssetTagCounts> highestAssetTagCounts) {
+  public void setHighestAssetTagCounts(@javax.annotation.Nullable List<Assetsv3HighestAssetTagCounts> highestAssetTagCounts) {
     this.highestAssetTagCounts = highestAssetTagCounts;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse selectedFilters(List<Assetsv3FilterCatagory> selectedFilters) {
+  public Assetsv3FetchAssetDashboardResponse selectedFilters(@javax.annotation.Nullable List<Assetsv3FilterCatagory> selectedFilters) {
     this.selectedFilters = selectedFilters;
     return this;
   }
@@ -217,21 +228,21 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get selectedFilters
    * @return selectedFilters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3FilterCatagory> getSelectedFilters() {
     return selectedFilters;
   }
 
-  public void setSelectedFilters(List<Assetsv3FilterCatagory> selectedFilters) {
+  public void setSelectedFilters(@javax.annotation.Nullable List<Assetsv3FilterCatagory> selectedFilters) {
     this.selectedFilters = selectedFilters;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse tagCategoriesData(List<Assetsv3TagCategoriesData> tagCategoriesData) {
+  public Assetsv3FetchAssetDashboardResponse tagCategoriesData(@javax.annotation.Nullable List<Assetsv3TagCategoriesData> tagCategoriesData) {
     this.tagCategoriesData = tagCategoriesData;
     return this;
   }
@@ -244,21 +255,21 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get tagCategoriesData
    * @return tagCategoriesData
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3TagCategoriesData> getTagCategoriesData() {
     return tagCategoriesData;
   }
 
-  public void setTagCategoriesData(List<Assetsv3TagCategoriesData> tagCategoriesData) {
+  public void setTagCategoriesData(@javax.annotation.Nullable List<Assetsv3TagCategoriesData> tagCategoriesData) {
     this.tagCategoriesData = tagCategoriesData;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse tagsFilterData(List<Assetsv3TagsFilterData> tagsFilterData) {
+  public Assetsv3FetchAssetDashboardResponse tagsFilterData(@javax.annotation.Nullable List<Assetsv3TagsFilterData> tagsFilterData) {
     this.tagsFilterData = tagsFilterData;
     return this;
   }
@@ -271,40 +282,40 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get tagsFilterData
    * @return tagsFilterData
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3TagsFilterData> getTagsFilterData() {
     return tagsFilterData;
   }
 
-  public void setTagsFilterData(List<Assetsv3TagsFilterData> tagsFilterData) {
+  public void setTagsFilterData(@javax.annotation.Nullable List<Assetsv3TagsFilterData> tagsFilterData) {
     this.tagsFilterData = tagsFilterData;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse templateId(String templateId) {
+  public Assetsv3FetchAssetDashboardResponse templateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
+  /**
    * Get templateId
    * @return templateId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTemplateId() {
     return templateId;
   }
 
-  public void setTemplateId(String templateId) {
+  public void setTemplateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse vulnerabilityScanStatus(List<Assetsv3VulnerabilityScanStatus> vulnerabilityScanStatus) {
+  public Assetsv3FetchAssetDashboardResponse vulnerabilityScanStatus(@javax.annotation.Nullable List<Assetsv3VulnerabilityScanStatus> vulnerabilityScanStatus) {
     this.vulnerabilityScanStatus = vulnerabilityScanStatus;
     return this;
   }
@@ -317,21 +328,21 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get vulnerabilityScanStatus
    * @return vulnerabilityScanStatus
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3VulnerabilityScanStatus> getVulnerabilityScanStatus() {
     return vulnerabilityScanStatus;
   }
 
-  public void setVulnerabilityScanStatus(List<Assetsv3VulnerabilityScanStatus> vulnerabilityScanStatus) {
+  public void setVulnerabilityScanStatus(@javax.annotation.Nullable List<Assetsv3VulnerabilityScanStatus> vulnerabilityScanStatus) {
     this.vulnerabilityScanStatus = vulnerabilityScanStatus;
   }
 
 
-  public Assetsv3FetchAssetDashboardResponse vulnerabilityTrend(List<Assetsv3VulnerabilityTrend> vulnerabilityTrend) {
+  public Assetsv3FetchAssetDashboardResponse vulnerabilityTrend(@javax.annotation.Nullable List<Assetsv3VulnerabilityTrend> vulnerabilityTrend) {
     this.vulnerabilityTrend = vulnerabilityTrend;
     return this;
   }
@@ -344,16 +355,16 @@ public class Assetsv3FetchAssetDashboardResponse {
     return this;
   }
 
-   /**
+  /**
    * Get vulnerabilityTrend
    * @return vulnerabilityTrend
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3VulnerabilityTrend> getVulnerabilityTrend() {
     return vulnerabilityTrend;
   }
 
-  public void setVulnerabilityTrend(List<Assetsv3VulnerabilityTrend> vulnerabilityTrend) {
+  public void setVulnerabilityTrend(@javax.annotation.Nullable List<Assetsv3VulnerabilityTrend> vulnerabilityTrend) {
     this.vulnerabilityTrend = vulnerabilityTrend;
   }
 
@@ -420,32 +431,22 @@ public class Assetsv3FetchAssetDashboardResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assets_with_open_vulnerabilities");
-    openapiFields.add("classification_scan_status");
-    openapiFields.add("count");
-    openapiFields.add("highest_asset_tag_counts");
-    openapiFields.add("selected_filters");
-    openapiFields.add("tag_categories_data");
-    openapiFields.add("tags_filter_data");
-    openapiFields.add("template_id");
-    openapiFields.add("vulnerability_scan_status");
-    openapiFields.add("vulnerability_trend");
+    openapiFields = new HashSet<String>(Arrays.asList("assets_with_open_vulnerabilities", "classification_scan_status", "count", "highest_asset_tag_counts", "selected_filters", "tag_categories_data", "tags_filter_data", "template_id", "vulnerability_scan_status", "vulnerability_trend"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetDashboardResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetDashboardResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3FetchAssetDashboardResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3FetchAssetDashboardResponse is not found in the empty JSON string", Assetsv3FetchAssetDashboardResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3FetchAssetDashboardResponse is not found in the empty JSON string", Assetsv3FetchAssetDashboardResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -453,7 +454,7 @@ public class Assetsv3FetchAssetDashboardResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3FetchAssetDashboardResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetDashboardResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetDashboardResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -462,7 +463,7 @@ public class Assetsv3FetchAssetDashboardResponse {
         if (jsonArrayassetsWithOpenVulnerabilities != null) {
           // ensure the json data is an array
           if (!jsonObj.get("assets_with_open_vulnerabilities").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `assets_with_open_vulnerabilities` to be an array in the JSON string but got `%s`", jsonObj.get("assets_with_open_vulnerabilities").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assets_with_open_vulnerabilities` to be an array in the JSON string but got `%s`", jsonObj.get("assets_with_open_vulnerabilities").toString()));
           }
 
           // validate the optional field `assets_with_open_vulnerabilities` (array)
@@ -476,7 +477,7 @@ public class Assetsv3FetchAssetDashboardResponse {
         if (jsonArrayclassificationScanStatus != null) {
           // ensure the json data is an array
           if (!jsonObj.get("classification_scan_status").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `classification_scan_status` to be an array in the JSON string but got `%s`", jsonObj.get("classification_scan_status").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classification_scan_status` to be an array in the JSON string but got `%s`", jsonObj.get("classification_scan_status").toString()));
           }
 
           // validate the optional field `classification_scan_status` (array)
@@ -486,14 +487,14 @@ public class Assetsv3FetchAssetDashboardResponse {
         }
       }
       if ((jsonObj.get("count") != null && !jsonObj.get("count").isJsonNull()) && !jsonObj.get("count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
       }
       if (jsonObj.get("highest_asset_tag_counts") != null && !jsonObj.get("highest_asset_tag_counts").isJsonNull()) {
         JsonArray jsonArrayhighestAssetTagCounts = jsonObj.getAsJsonArray("highest_asset_tag_counts");
         if (jsonArrayhighestAssetTagCounts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("highest_asset_tag_counts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `highest_asset_tag_counts` to be an array in the JSON string but got `%s`", jsonObj.get("highest_asset_tag_counts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `highest_asset_tag_counts` to be an array in the JSON string but got `%s`", jsonObj.get("highest_asset_tag_counts").toString()));
           }
 
           // validate the optional field `highest_asset_tag_counts` (array)
@@ -507,7 +508,7 @@ public class Assetsv3FetchAssetDashboardResponse {
         if (jsonArrayselectedFilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("selected_filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `selected_filters` to be an array in the JSON string but got `%s`", jsonObj.get("selected_filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `selected_filters` to be an array in the JSON string but got `%s`", jsonObj.get("selected_filters").toString()));
           }
 
           // validate the optional field `selected_filters` (array)
@@ -521,7 +522,7 @@ public class Assetsv3FetchAssetDashboardResponse {
         if (jsonArraytagCategoriesData != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tag_categories_data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tag_categories_data` to be an array in the JSON string but got `%s`", jsonObj.get("tag_categories_data").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_categories_data` to be an array in the JSON string but got `%s`", jsonObj.get("tag_categories_data").toString()));
           }
 
           // validate the optional field `tag_categories_data` (array)
@@ -535,7 +536,7 @@ public class Assetsv3FetchAssetDashboardResponse {
         if (jsonArraytagsFilterData != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tags_filter_data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tags_filter_data` to be an array in the JSON string but got `%s`", jsonObj.get("tags_filter_data").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags_filter_data` to be an array in the JSON string but got `%s`", jsonObj.get("tags_filter_data").toString()));
           }
 
           // validate the optional field `tags_filter_data` (array)
@@ -545,14 +546,14 @@ public class Assetsv3FetchAssetDashboardResponse {
         }
       }
       if ((jsonObj.get("template_id") != null && !jsonObj.get("template_id").isJsonNull()) && !jsonObj.get("template_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
       }
       if (jsonObj.get("vulnerability_scan_status") != null && !jsonObj.get("vulnerability_scan_status").isJsonNull()) {
         JsonArray jsonArrayvulnerabilityScanStatus = jsonObj.getAsJsonArray("vulnerability_scan_status");
         if (jsonArrayvulnerabilityScanStatus != null) {
           // ensure the json data is an array
           if (!jsonObj.get("vulnerability_scan_status").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `vulnerability_scan_status` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerability_scan_status").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vulnerability_scan_status` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerability_scan_status").toString()));
           }
 
           // validate the optional field `vulnerability_scan_status` (array)
@@ -566,7 +567,7 @@ public class Assetsv3FetchAssetDashboardResponse {
         if (jsonArrayvulnerabilityTrend != null) {
           // ensure the json data is an array
           if (!jsonObj.get("vulnerability_trend").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `vulnerability_trend` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerability_trend").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vulnerability_trend` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerability_trend").toString()));
           }
 
           // validate the optional field `vulnerability_trend` (array)
@@ -606,22 +607,22 @@ public class Assetsv3FetchAssetDashboardResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3FetchAssetDashboardResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3FetchAssetDashboardResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetDashboardResponse
-  */
+  /**
+   * Create an instance of Assetsv3FetchAssetDashboardResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3FetchAssetDashboardResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetDashboardResponse
+   */
   public static Assetsv3FetchAssetDashboardResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3FetchAssetDashboardResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3FetchAssetDashboardResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3FetchAssetDashboardResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

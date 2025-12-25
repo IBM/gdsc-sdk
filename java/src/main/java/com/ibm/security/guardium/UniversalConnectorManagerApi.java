@@ -85,7 +85,8 @@ public class UniversalConnectorManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -147,7 +148,8 @@ public class UniversalConnectorManagerApi {
      * @return Universalconnectormanagerv3FileResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -164,7 +166,8 @@ public class UniversalConnectorManagerApi {
      * @return ApiResponse&lt;Universalconnectormanagerv3FileResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -183,7 +186,8 @@ public class UniversalConnectorManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -202,7 +206,8 @@ public class UniversalConnectorManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -264,7 +269,8 @@ public class UniversalConnectorManagerApi {
      * @return Universalconnectormanagerv3GetConnectorsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -281,7 +287,8 @@ public class UniversalConnectorManagerApi {
      * @return ApiResponse&lt;Universalconnectormanagerv3GetConnectorsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -300,7 +307,8 @@ public class UniversalConnectorManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -320,13 +328,14 @@ public class UniversalConnectorManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call universalConnectorManagerGetUCSetupCall(Integer pluginId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call universalConnectorManagerGetUCSetupCall(@javax.annotation.Nonnull Integer pluginId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -372,7 +381,7 @@ public class UniversalConnectorManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call universalConnectorManagerGetUCSetupValidateBeforeCall(Integer pluginId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call universalConnectorManagerGetUCSetupValidateBeforeCall(@javax.annotation.Nonnull Integer pluginId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pluginId' is set
         if (pluginId == null) {
             throw new ApiException("Missing the required parameter 'pluginId' when calling universalConnectorManagerGetUCSetup(Async)");
@@ -389,13 +398,14 @@ public class UniversalConnectorManagerApi {
      * @return Universalconnectormanagerv3GetUCSetupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Universalconnectormanagerv3GetUCSetupResponse universalConnectorManagerGetUCSetup(Integer pluginId) throws ApiException {
+    public Universalconnectormanagerv3GetUCSetupResponse universalConnectorManagerGetUCSetup(@javax.annotation.Nonnull Integer pluginId) throws ApiException {
         ApiResponse<Universalconnectormanagerv3GetUCSetupResponse> localVarResp = universalConnectorManagerGetUCSetupWithHttpInfo(pluginId);
         return localVarResp.getData();
     }
@@ -407,13 +417,14 @@ public class UniversalConnectorManagerApi {
      * @return ApiResponse&lt;Universalconnectormanagerv3GetUCSetupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Universalconnectormanagerv3GetUCSetupResponse> universalConnectorManagerGetUCSetupWithHttpInfo(Integer pluginId) throws ApiException {
+    public ApiResponse<Universalconnectormanagerv3GetUCSetupResponse> universalConnectorManagerGetUCSetupWithHttpInfo(@javax.annotation.Nonnull Integer pluginId) throws ApiException {
         okhttp3.Call localVarCall = universalConnectorManagerGetUCSetupValidateBeforeCall(pluginId, null);
         Type localVarReturnType = new TypeToken<Universalconnectormanagerv3GetUCSetupResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -427,13 +438,14 @@ public class UniversalConnectorManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call universalConnectorManagerGetUCSetupAsync(Integer pluginId, final ApiCallback<Universalconnectormanagerv3GetUCSetupResponse> _callback) throws ApiException {
+    public okhttp3.Call universalConnectorManagerGetUCSetupAsync(@javax.annotation.Nonnull Integer pluginId, final ApiCallback<Universalconnectormanagerv3GetUCSetupResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = universalConnectorManagerGetUCSetupValidateBeforeCall(pluginId, _callback);
         Type localVarReturnType = new TypeToken<Universalconnectormanagerv3GetUCSetupResponse>(){}.getType();
@@ -446,7 +458,8 @@ public class UniversalConnectorManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -508,7 +521,8 @@ public class UniversalConnectorManagerApi {
      * @return Universalconnectormanagerv3ListConnectionsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -525,7 +539,8 @@ public class UniversalConnectorManagerApi {
      * @return ApiResponse&lt;Universalconnectormanagerv3ListConnectionsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -544,7 +559,8 @@ public class UniversalConnectorManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -563,7 +579,8 @@ public class UniversalConnectorManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -625,7 +642,8 @@ public class UniversalConnectorManagerApi {
      * @return Universalconnectormanagerv3PluginsListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -642,7 +660,8 @@ public class UniversalConnectorManagerApi {
      * @return ApiResponse&lt;Universalconnectormanagerv3PluginsListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -661,7 +680,8 @@ public class UniversalConnectorManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -681,13 +701,14 @@ public class UniversalConnectorManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call universalConnectorManagerUploadPluginCall(Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call universalConnectorManagerUploadPluginCall(@javax.annotation.Nonnull Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -733,7 +754,7 @@ public class UniversalConnectorManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call universalConnectorManagerUploadPluginValidateBeforeCall(Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call universalConnectorManagerUploadPluginValidateBeforeCall(@javax.annotation.Nonnull Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'universalconnectormanagerv3UploadPluginRequest' is set
         if (universalconnectormanagerv3UploadPluginRequest == null) {
             throw new ApiException("Missing the required parameter 'universalconnectormanagerv3UploadPluginRequest' when calling universalConnectorManagerUploadPlugin(Async)");
@@ -750,13 +771,14 @@ public class UniversalConnectorManagerApi {
      * @return RpcStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public RpcStatus universalConnectorManagerUploadPlugin(Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest) throws ApiException {
+    public RpcStatus universalConnectorManagerUploadPlugin(@javax.annotation.Nonnull Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest) throws ApiException {
         ApiResponse<RpcStatus> localVarResp = universalConnectorManagerUploadPluginWithHttpInfo(universalconnectormanagerv3UploadPluginRequest);
         return localVarResp.getData();
     }
@@ -768,13 +790,14 @@ public class UniversalConnectorManagerApi {
      * @return ApiResponse&lt;RpcStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RpcStatus> universalConnectorManagerUploadPluginWithHttpInfo(Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest) throws ApiException {
+    public ApiResponse<RpcStatus> universalConnectorManagerUploadPluginWithHttpInfo(@javax.annotation.Nonnull Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest) throws ApiException {
         okhttp3.Call localVarCall = universalConnectorManagerUploadPluginValidateBeforeCall(universalconnectormanagerv3UploadPluginRequest, null);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -788,13 +811,14 @@ public class UniversalConnectorManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call universalConnectorManagerUploadPluginAsync(Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest, final ApiCallback<RpcStatus> _callback) throws ApiException {
+    public okhttp3.Call universalConnectorManagerUploadPluginAsync(@javax.annotation.Nonnull Universalconnectormanagerv3UploadPluginRequest universalconnectormanagerv3UploadPluginRequest, final ApiCallback<RpcStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = universalConnectorManagerUploadPluginValidateBeforeCall(universalconnectormanagerv3UploadPluginRequest, _callback);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();

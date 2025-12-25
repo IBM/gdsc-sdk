@@ -6,9 +6,9 @@ AssetControl - Asset Overview - Control Health widget data.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**encryption** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] 
+**encryption** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] [default to Assetsv3StatusType.NA]
 **last_response** | **str** |  | [optional] 
-**monitoring** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] 
+**monitoring** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] [default to Assetsv3StatusType.NA]
 **policy_applied_status** | [**Assetsv3PolicyApplied**](Assetsv3PolicyApplied.md) |  | [optional] 
 **stap_name** | **str** |  | [optional] 
 **version** | **str** |  | [optional] 

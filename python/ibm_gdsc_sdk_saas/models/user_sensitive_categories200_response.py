@@ -79,9 +79,9 @@ class UserSensitiveCategories200Response(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in sensitive_categories (list)
         _items = []
         if self.sensitive_categories:
-            for _item in self.sensitive_categories:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sensitive_categories in self.sensitive_categories:
+                if _item_sensitive_categories:
+                    _items.append(_item_sensitive_categories.to_dict())
             _dict['sensitiveCategories'] = _items
         return _dict
 

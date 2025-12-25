@@ -82,7 +82,8 @@ public class QsDataManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -144,7 +145,8 @@ public class QsDataManagerApi {
      * @return Qspmdatamanagerv3MasterDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -161,7 +163,8 @@ public class QsDataManagerApi {
      * @return ApiResponse&lt;Qspmdatamanagerv3MasterDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -180,7 +183,8 @@ public class QsDataManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -199,7 +203,8 @@ public class QsDataManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -261,7 +266,8 @@ public class QsDataManagerApi {
      * @return Qspmdatamanagerv3PluginDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -278,7 +284,8 @@ public class QsDataManagerApi {
      * @return ApiResponse&lt;Qspmdatamanagerv3PluginDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -297,7 +304,8 @@ public class QsDataManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -317,13 +325,14 @@ public class QsDataManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataManagerRegisterScanCall(Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSDataManagerRegisterScanCall(@javax.annotation.Nonnull Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -369,7 +378,7 @@ public class QsDataManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSDataManagerRegisterScanValidateBeforeCall(Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSDataManagerRegisterScanValidateBeforeCall(@javax.annotation.Nonnull Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'qspmdatamanagerv3ScanRequest' is set
         if (qspmdatamanagerv3ScanRequest == null) {
             throw new ApiException("Missing the required parameter 'qspmdatamanagerv3ScanRequest' when calling qSDataManagerRegisterScan(Async)");
@@ -386,13 +395,14 @@ public class QsDataManagerApi {
      * @return Qspmdatamanagerv3ScanResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qspmdatamanagerv3ScanResponse qSDataManagerRegisterScan(Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest) throws ApiException {
+    public Qspmdatamanagerv3ScanResponse qSDataManagerRegisterScan(@javax.annotation.Nonnull Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest) throws ApiException {
         ApiResponse<Qspmdatamanagerv3ScanResponse> localVarResp = qSDataManagerRegisterScanWithHttpInfo(qspmdatamanagerv3ScanRequest);
         return localVarResp.getData();
     }
@@ -404,13 +414,14 @@ public class QsDataManagerApi {
      * @return ApiResponse&lt;Qspmdatamanagerv3ScanResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qspmdatamanagerv3ScanResponse> qSDataManagerRegisterScanWithHttpInfo(Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest) throws ApiException {
+    public ApiResponse<Qspmdatamanagerv3ScanResponse> qSDataManagerRegisterScanWithHttpInfo(@javax.annotation.Nonnull Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest) throws ApiException {
         okhttp3.Call localVarCall = qSDataManagerRegisterScanValidateBeforeCall(qspmdatamanagerv3ScanRequest, null);
         Type localVarReturnType = new TypeToken<Qspmdatamanagerv3ScanResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -424,13 +435,14 @@ public class QsDataManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataManagerRegisterScanAsync(Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest, final ApiCallback<Qspmdatamanagerv3ScanResponse> _callback) throws ApiException {
+    public okhttp3.Call qSDataManagerRegisterScanAsync(@javax.annotation.Nonnull Qspmdatamanagerv3ScanRequest qspmdatamanagerv3ScanRequest, final ApiCallback<Qspmdatamanagerv3ScanResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSDataManagerRegisterScanValidateBeforeCall(qspmdatamanagerv3ScanRequest, _callback);
         Type localVarReturnType = new TypeToken<Qspmdatamanagerv3ScanResponse>(){}.getType();
@@ -444,13 +456,14 @@ public class QsDataManagerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataManagerRetrieveScanCall(String scanId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSDataManagerRetrieveScanCall(@javax.annotation.Nonnull String scanId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -496,7 +509,7 @@ public class QsDataManagerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSDataManagerRetrieveScanValidateBeforeCall(String scanId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSDataManagerRetrieveScanValidateBeforeCall(@javax.annotation.Nonnull String scanId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'scanId' is set
         if (scanId == null) {
             throw new ApiException("Missing the required parameter 'scanId' when calling qSDataManagerRetrieveScan(Async)");
@@ -513,13 +526,14 @@ public class QsDataManagerApi {
      * @return Qspmdatamanagerv3ScanResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qspmdatamanagerv3ScanResponse qSDataManagerRetrieveScan(String scanId) throws ApiException {
+    public Qspmdatamanagerv3ScanResponse qSDataManagerRetrieveScan(@javax.annotation.Nonnull String scanId) throws ApiException {
         ApiResponse<Qspmdatamanagerv3ScanResponse> localVarResp = qSDataManagerRetrieveScanWithHttpInfo(scanId);
         return localVarResp.getData();
     }
@@ -531,13 +545,14 @@ public class QsDataManagerApi {
      * @return ApiResponse&lt;Qspmdatamanagerv3ScanResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qspmdatamanagerv3ScanResponse> qSDataManagerRetrieveScanWithHttpInfo(String scanId) throws ApiException {
+    public ApiResponse<Qspmdatamanagerv3ScanResponse> qSDataManagerRetrieveScanWithHttpInfo(@javax.annotation.Nonnull String scanId) throws ApiException {
         okhttp3.Call localVarCall = qSDataManagerRetrieveScanValidateBeforeCall(scanId, null);
         Type localVarReturnType = new TypeToken<Qspmdatamanagerv3ScanResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -551,13 +566,14 @@ public class QsDataManagerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataManagerRetrieveScanAsync(String scanId, final ApiCallback<Qspmdatamanagerv3ScanResponse> _callback) throws ApiException {
+    public okhttp3.Call qSDataManagerRetrieveScanAsync(@javax.annotation.Nonnull String scanId, final ApiCallback<Qspmdatamanagerv3ScanResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSDataManagerRetrieveScanValidateBeforeCall(scanId, _callback);
         Type localVarReturnType = new TypeToken<Qspmdatamanagerv3ScanResponse>(){}.getType();

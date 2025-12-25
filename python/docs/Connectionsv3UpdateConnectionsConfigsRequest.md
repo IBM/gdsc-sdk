@@ -7,7 +7,7 @@ Request parameters for update connection.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stream_connection_configs** | [**List[Connectionsv3StreamConnectionConfig]**](Connectionsv3StreamConnectionConfig.md) | Optional: list of streaming connections. | [optional] 
-**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] 
+**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] [default to Connectionsv3ConnectorType.UNDEFINED_TYPE]
 **uc_connection_configs** | [**List[Connectionsv3UCConnectionConfig]**](Connectionsv3UCConnectionConfig.md) | Optional: list of UC connections. | [optional] 
 
 ## Example

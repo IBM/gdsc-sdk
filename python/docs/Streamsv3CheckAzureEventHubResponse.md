@@ -6,7 +6,7 @@ CheckAzureEventHubResponse defines response of CheckAzureEventHubRequest call.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**Streamsv3AzureCheckStatus**](Streamsv3AzureCheckStatus.md) |  | [optional] 
+**status** | [**Streamsv3AzureCheckStatus**](Streamsv3AzureCheckStatus.md) |  | [optional] [default to Streamsv3AzureCheckStatus.OK]
 
 ## Example
 

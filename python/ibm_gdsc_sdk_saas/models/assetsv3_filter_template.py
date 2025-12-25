@@ -83,16 +83,16 @@ class Assetsv3FilterTemplate(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in colummns_list (list)
         _items = []
         if self.colummns_list:
-            for _item in self.colummns_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_colummns_list in self.colummns_list:
+                if _item_colummns_list:
+                    _items.append(_item_colummns_list.to_dict())
             _dict['colummns_list'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in selected_filters (list)
         _items = []
         if self.selected_filters:
-            for _item in self.selected_filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_selected_filters in self.selected_filters:
+                if _item_selected_filters:
+                    _items.append(_item_selected_filters.to_dict())
             _dict['selected_filters'] = _items
         return _dict
 

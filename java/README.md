@@ -30,7 +30,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ibm.security.guardium</groupId>
   <artifactId>com.ibm.security.guardium.saas</artifactId>
-  <version>3.0.20250227</version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -46,7 +46,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ibm.security.guardium:com.ibm.security.guardium.saas:3.0.20250227"
+     implementation "com.ibm.security.guardium:com.ibm.security.guardium.saas:1.0.0"
   }
 ```
 
@@ -60,7 +60,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/com.ibm.security.guardium.saas-3.0.20250227.jar`
+* `target/com.ibm.security.guardium.saas-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -75,7 +75,7 @@ import com.ibm.security.ApiClient;
 import com.ibm.security.ApiException;
 import com.ibm.security.Configuration;
 import com.ibm.security.auth.*;
-import com.ibm.security.models.*;
+import com.ibm.security.guardium.*;
 import com.ibm.security.guardium.AssetsServiceApi;
 
 public class Example {
@@ -119,7 +119,9 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AssetsServiceApi* | [**assetsServiceAssetIngestion**](docs/AssetsServiceApi.md#assetsServiceAssetIngestion) | **POST** /api/v3/assets/ingestion | AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
 *AssetsServiceApi* | [**assetsServiceAssetIngestionManualTrigger**](docs/AssetsServiceApi.md#assetsServiceAssetIngestionManualTrigger) | **POST** /api/v3/assets/ingestion/trigger | AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
+*AssetsServiceApi* | [**assetsServiceCancelCSVImport**](docs/AssetsServiceApi.md#assetsServiceCancelCSVImport) | **DELETE** /api/v3/assets/csv/cancel/{csv_id} | CancelCSVImport - Cancel the import of CSV and update the status in import log table
 *AssetsServiceApi* | [**assetsServiceClonePolicy**](docs/AssetsServiceApi.md#assetsServiceClonePolicy) | **POST** /api/v3/assets/policies/{policy_id}/clone | ClonePolicy - Clone a policy.
+*AssetsServiceApi* | [**assetsServiceCompareCSVToExistingAssets**](docs/AssetsServiceApi.md#assetsServiceCompareCSVToExistingAssets) | **GET** /api/v3/assets/csv/compare/{csv_id} | CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
 *AssetsServiceApi* | [**assetsServiceCreateUpdatePolicy**](docs/AssetsServiceApi.md#assetsServiceCreateUpdatePolicy) | **POST** /api/v3/assets/policies | CreateUpdatePolicy - Create/update new Policy.
 *AssetsServiceApi* | [**assetsServiceDeleteFilterTemplateForAssets**](docs/AssetsServiceApi.md#assetsServiceDeleteFilterTemplateForAssets) | **DELETE** /api/v3/assets/filters/template/{template_id} | DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 *AssetsServiceApi* | [**assetsServiceDeletePolicies**](docs/AssetsServiceApi.md#assetsServiceDeletePolicies) | **DELETE** /api/v3/assets/policies | DeletePolicies - Delete Policy returns response code and message.
@@ -132,6 +134,7 @@ Class | Method | HTTP request | Description
 *AssetsServiceApi* | [**assetsServiceGetAssetTopology**](docs/AssetsServiceApi.md#assetsServiceGetAssetTopology) | **POST** /api/v3/assets/topology | GetAssetTopology- Get list of topology for a parent asset.
 *AssetsServiceApi* | [**assetsServiceGetFilterTemplateForAssets**](docs/AssetsServiceApi.md#assetsServiceGetFilterTemplateForAssets) | **GET** /api/v3/assets/filters/templates | GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
 *AssetsServiceApi* | [**assetsServiceGetFiltersForAssets**](docs/AssetsServiceApi.md#assetsServiceGetFiltersForAssets) | **GET** /api/v3/assets/filters | GetFiltersForAssets - Get a list of filters category and sub category with all data.
+*AssetsServiceApi* | [**assetsServiceImportCSV**](docs/AssetsServiceApi.md#assetsServiceImportCSV) | **POST** /api/v3/assets/csv/import/{csv_id} | ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
 *AssetsServiceApi* | [**assetsServiceListPolicy**](docs/AssetsServiceApi.md#assetsServiceListPolicy) | **GET** /api/v3/assets/policies | ListPolicy - List all policies.
 *AssetsServiceApi* | [**assetsServiceListRule**](docs/AssetsServiceApi.md#assetsServiceListRule) | **GET** /api/v3/assets/policies/{policy_id}/rules | ListRule - List all rules for a policy.
 *AssetsServiceApi* | [**assetsServiceListTagDomains**](docs/AssetsServiceApi.md#assetsServiceListTagDomains) | **GET** /api/v3/assets/tags/categories | ListTagDomains - Get Tag categories by request parameters .
@@ -152,27 +155,30 @@ Class | Method | HTTP request | Description
 *AuthServerServiceApi* | [**authServerServiceGetOauthClient**](docs/AuthServerServiceApi.md#authServerServiceGetOauthClient) | **GET** /api/v3/oauth/clients/{client_id} | Summary: Get Oauth client Description: Get registered Oauth client by clientId.
 *AuthServerServiceApi* | [**authServerServiceGetUser**](docs/AuthServerServiceApi.md#authServerServiceGetUser) | **GET** /api/v3/auth/user | Summary: Get user Description: Get user.
 *AuthServerServiceApi* | [**authServerServiceListOauthClient**](docs/AuthServerServiceApi.md#authServerServiceListOauthClient) | **GET** /api/v3/oauth/clients | Summary: List Oauth client Description: List all registered Oauth client.
-*CloudAccountsApi* | [**addAnalyzedRegion**](docs/CloudAccountsApi.md#addAnalyzedRegion) | **POST** /api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions | Add a new region for data classification
-*CloudAccountsApi* | [**addCloudAccounts**](docs/CloudAccountsApi.md#addCloudAccounts) | **POST** /api/v1/dspm/cloudAccounts/cloudProviders | Add cloud account connections to DSPM
-*CloudAccountsApi* | [**generateAtlassianConfluenceAuthUrl**](docs/CloudAccountsApi.md#generateAtlassianConfluenceAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl | Generate a Confluence authentication URL
-*CloudAccountsApi* | [**generateAtlassianJiraAuthUrl**](docs/CloudAccountsApi.md#generateAtlassianJiraAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl | Generate a JIRA authentication URL
-*CloudAccountsApi* | [**generateAzureAuthUrl**](docs/CloudAccountsApi.md#generateAzureAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/azure/generateAuthUrl | Generate azure authorization url
-*CloudAccountsApi* | [**generateOffice365AuthUrl**](docs/CloudAccountsApi.md#generateOffice365AuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/office365/generateAuthUrl | Generate a Microsoft 365 consent URL
-*CloudAccountsApi* | [**generateSlackAuthUrl**](docs/CloudAccountsApi.md#generateSlackAuthUrl) | **GET** /api/v1/dspm/cloudAccounts/saasApps/slack/generateAuthUrl | Generate a Slack authentication URL
-*CloudAccountsApi* | [**generateSnowflakeAuthUrl**](docs/CloudAccountsApi.md#generateSnowflakeAuthUrl) | **POST** /api/v1/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl | Validate and Generate a Snowflake OAuth URL
-*CloudAccountsApi* | [**getAnalyzedRegionStatus**](docs/CloudAccountsApi.md#getAnalyzedRegionStatus) | **GET** /api/v1/dspm/cloudAccounts/cloudProviders/analyzedRegions/status | Get the status of analyzer installation for a region
-*CloudAccountsApi* | [**getAzureAdminConsentStatus**](docs/CloudAccountsApi.md#getAzureAdminConsentStatus) | **GET** /api/v1/dspm/cloudAccounts/azure/getAdminConsentStatus | Get Azure admin consent status
-*CloudAccountsApi* | [**getCloudAccountInstallationStatus**](docs/CloudAccountsApi.md#getCloudAccountInstallationStatus) | **GET** /api/v1/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus | Get the installation status of a cloud account
-*CloudAccountsApi* | [**getRefreshTokenExpiry**](docs/CloudAccountsApi.md#getRefreshTokenExpiry) | **GET** /api/v1/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId} | Get Snowflake Refresh Token Expiry date
-*CloudAccountsApi* | [**listLinkedAccounts**](docs/CloudAccountsApi.md#listLinkedAccounts) | **GET** /api/v1/dspm/cloudAccounts/linkedAccounts | List cloud accounts connected to DSPM
-*CloudAccountsApi* | [**removeAccounts**](docs/CloudAccountsApi.md#removeAccounts) | **DELETE** /api/v1/dspm/cloudAccounts/removeAccounts | Post cloud account ID connections to be removed
-*CloudAccountsApi* | [**removeAccountsInstructions**](docs/CloudAccountsApi.md#removeAccountsInstructions) | **GET** /api/v1/dspm/cloudAccounts/removeAccountsInstructions | Post cloud account IDs and get instructions to remove the accounts
-*CloudAccountsApi* | [**retrieveServiceAccountId**](docs/CloudAccountsApi.md#retrieveServiceAccountId) | **GET** /api/v1/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId | Get Google Workspace authentication
-*CloudAccountsApi* | [**snowflakeIntegrationScript**](docs/CloudAccountsApi.md#snowflakeIntegrationScript) | **GET** /api/v1/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript | Generate Snowflake Integration Script
-*CloudAccountsApi* | [**submitGoogleWorkspaceAdminEmail**](docs/CloudAccountsApi.md#submitGoogleWorkspaceAdminEmail) | **POST** /api/v1/dspm/cloudAccounts/saasApps/google/submitAdminEmail | Submit email for service account authorization
-*CloudAccountsApi* | [**submitOffice365TenantInfo**](docs/CloudAccountsApi.md#submitOffice365TenantInfo) | **POST** /api/v1/dspm/cloudAccounts/saasApps/office365/submitTenantInfo | Submit Microsoft 365 customer information
-*CloudAccountsApi* | [**submitSlackAuthCode**](docs/CloudAccountsApi.md#submitSlackAuthCode) | **POST** /api/v1/dspm/cloudAccounts/saasApps/slack/submitAuthCode | Submit a Slack authentication code
-*CloudAccountsApi* | [**submitSnowflakeAuthCode**](docs/CloudAccountsApi.md#submitSnowflakeAuthCode) | **POST** /api/v1/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode | Submit Snowflake oAuth code
+*CloudAccountsApi* | [**addAnalyzedRegion**](docs/CloudAccountsApi.md#addAnalyzedRegion) | **POST** /api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions | Add a new region for data classification
+*CloudAccountsApi* | [**addCloudAccounts**](docs/CloudAccountsApi.md#addCloudAccounts) | **POST** /api/v2/dspm/cloudAccounts/cloudProviders | Add cloud account connections to DSPM
+*CloudAccountsApi* | [**generateAtlassianConfluenceAuthUrl**](docs/CloudAccountsApi.md#generateAtlassianConfluenceAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/atlassian-confluence/generateAuthUrl | Generate a Confluence authentication URL
+*CloudAccountsApi* | [**generateAtlassianJiraAuthUrl**](docs/CloudAccountsApi.md#generateAtlassianJiraAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/atlassian-jira/generateAuthUrl | Generate a JIRA authentication URL
+*CloudAccountsApi* | [**generateAzureAuthUrl**](docs/CloudAccountsApi.md#generateAzureAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/azure/generateAuthUrl | Generate azure authorization url
+*CloudAccountsApi* | [**generateOffice365AuthUrl**](docs/CloudAccountsApi.md#generateOffice365AuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/office365/generateAuthUrl | Generate a Microsoft 365 consent URL
+*CloudAccountsApi* | [**generateSalesforceAuthUrl**](docs/CloudAccountsApi.md#generateSalesforceAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/salesforce/generateAuthUrl | Generate a Salesforce consent URL
+*CloudAccountsApi* | [**generateSlackAuthUrl**](docs/CloudAccountsApi.md#generateSlackAuthUrl) | **GET** /api/v2/dspm/cloudAccounts/saasApps/slack/generateAuthUrl | Generate a Slack authentication URL
+*CloudAccountsApi* | [**generateSnowflakeAuthUrl**](docs/CloudAccountsApi.md#generateSnowflakeAuthUrl) | **POST** /api/v2/dspm/cloudAccounts/saasApps/snowflake/generateAuthUrl | Validate and Generate a Snowflake OAuth URL
+*CloudAccountsApi* | [**getAnalyzedRegionStatus**](docs/CloudAccountsApi.md#getAnalyzedRegionStatus) | **GET** /api/v2/dspm/cloudAccounts/cloudProviders/analyzedRegions/status | Get the status of analyzer installation for a region
+*CloudAccountsApi* | [**getAzureAdminConsentStatus**](docs/CloudAccountsApi.md#getAzureAdminConsentStatus) | **GET** /api/v2/dspm/cloudAccounts/azure/getAdminConsentStatus | Get Azure admin consent status
+*CloudAccountsApi* | [**getCloudAccountInstallationStatus**](docs/CloudAccountsApi.md#getCloudAccountInstallationStatus) | **GET** /api/v2/dspm/cloudAccounts/{cloudProvider}/{cloudAccountId}/installationStatus | Get the installation status of a cloud account
+*CloudAccountsApi* | [**getDatabaseMetadata**](docs/CloudAccountsApi.md#getDatabaseMetadata) | **POST** /api/v2/dspm/cloudAccounts/saasApps/snowflake/getDatabaseMetadata | Get the metadata details of snowflake database.
+*CloudAccountsApi* | [**getRefreshTokenExpiry**](docs/CloudAccountsApi.md#getRefreshTokenExpiry) | **GET** /api/v2/dspm/cloudAccounts/saasApps/snowflake/getRefreshTokenExpiry/{providerId} | Get Snowflake Refresh Token Expiry date
+*CloudAccountsApi* | [**listLinkedAccounts**](docs/CloudAccountsApi.md#listLinkedAccounts) | **GET** /api/v2/dspm/cloudAccounts/linkedAccounts | List cloud accounts connected to DSPM
+*CloudAccountsApi* | [**removeAccounts**](docs/CloudAccountsApi.md#removeAccounts) | **DELETE** /api/v2/dspm/cloudAccounts/removeAccounts | Post cloud account ID connections to be removed
+*CloudAccountsApi* | [**removeAccountsInstructions**](docs/CloudAccountsApi.md#removeAccountsInstructions) | **GET** /api/v2/dspm/cloudAccounts/removeAccountsInstructions | Post cloud account IDs and get instructions to remove the accounts
+*CloudAccountsApi* | [**retrieveServiceAccountId**](docs/CloudAccountsApi.md#retrieveServiceAccountId) | **GET** /api/v2/dspm/cloudAccounts/saasApps/google/retrieveServiceAccountId | Get Google Workspace authentication
+*CloudAccountsApi* | [**snowflakeIntegrationScript**](docs/CloudAccountsApi.md#snowflakeIntegrationScript) | **GET** /api/v2/dspm/cloudAccounts/saasApps/snowflake/snowflakeIntegrationScript | Generate Snowflake Integration Script
+*CloudAccountsApi* | [**submitGoogleWorkspaceAdminEmail**](docs/CloudAccountsApi.md#submitGoogleWorkspaceAdminEmail) | **POST** /api/v2/dspm/cloudAccounts/saasApps/google/submitAdminEmail | Submit email for service account authorization
+*CloudAccountsApi* | [**submitOffice365TenantInfo**](docs/CloudAccountsApi.md#submitOffice365TenantInfo) | **POST** /api/v2/dspm/cloudAccounts/saasApps/office365/submitTenantInfo | Submit Microsoft 365 customer information
+*CloudAccountsApi* | [**submitSalesforceAuthCode**](docs/CloudAccountsApi.md#submitSalesforceAuthCode) | **POST** /api/v2/dspm/cloudAccounts/saasApps/salesforce/submitAuthCodeInfo | Submit Salesforce customer information
+*CloudAccountsApi* | [**submitSlackAuthCode**](docs/CloudAccountsApi.md#submitSlackAuthCode) | **POST** /api/v2/dspm/cloudAccounts/saasApps/slack/submitAuthCode | Submit a Slack authentication code
+*CloudAccountsApi* | [**submitSnowflakeAuthCode**](docs/CloudAccountsApi.md#submitSnowflakeAuthCode) | **POST** /api/v2/dspm/cloudAccounts/saasApps/snowflake/submitAuthCode | Submit Snowflake oAuth code
 *ComplianceAcceleratorApi* | [**complianceAcceleratorCreateWorkspace**](docs/ComplianceAcceleratorApi.md#complianceAcceleratorCreateWorkspace) | **POST** /api/v3/compliance/workspace | Summary: Create workspace Description: Create a workspace.
 *ComplianceAcceleratorApi* | [**complianceAcceleratorDeleteComplianceWorkspaces**](docs/ComplianceAcceleratorApi.md#complianceAcceleratorDeleteComplianceWorkspaces) | **DELETE** /api/v3/compliance | Summary: Delete compliance workspaces Description: Delete workspaces.
 *ComplianceAcceleratorApi* | [**complianceAcceleratorGetComplianceInfo**](docs/ComplianceAcceleratorApi.md#complianceAcceleratorGetComplianceInfo) | **GET** /api/v3/compliance | Summary: Get compliance info Description: Return stored compliance data.
@@ -206,46 +212,48 @@ Class | Method | HTTP request | Description
 *ConnectionsServiceApi* | [**connectionsServiceUpdatePlugin**](docs/ConnectionsServiceApi.md#connectionsServiceUpdatePlugin) | **PUT** /api/v3/connections/plugins/{id} | Summary: Update plugin. Description: Update plugin.
 *ConnectionsServiceApi* | [**connectionsServiceUpdateSettings**](docs/ConnectionsServiceApi.md#connectionsServiceUpdateSettings) | **PUT** /api/v3/connections/settings | Summary: Update settings Description: Update Settings.
 *ConnectionsServiceApi* | [**connectionsServiceValidateAwsConnection**](docs/ConnectionsServiceApi.md#connectionsServiceValidateAwsConnection) | **POST** /api/v3/connections/validate/aws | Summary: Validate an AWS connection. Description: Validate an AWS connection.
+*ConnectionsServiceApi* | [**connectionsServiceValidateAzureConnection**](docs/ConnectionsServiceApi.md#connectionsServiceValidateAzureConnection) | **POST** /api/v3/connections/validate/azure | Summary: Validate an Azure connection. Description: Validate an Azure connection.
+*ConnectionsServiceApi* | [**connectionsServiceValidateGcpConnection**](docs/ConnectionsServiceApi.md#connectionsServiceValidateGcpConnection) | **POST** /api/v3/connections/validate/gcp | Summary: Validate a GCP connection. Description: Validate a GCP connection.
 *DashboardsServiceApi* | [**dashboardsServiceCreateDashboard**](docs/DashboardsServiceApi.md#dashboardsServiceCreateDashboard) | **POST** /api/v3/dashboards | Summary: Create dashboard Description: Create a unique dashboard.
 *DashboardsServiceApi* | [**dashboardsServiceDeleteDashboard**](docs/DashboardsServiceApi.md#dashboardsServiceDeleteDashboard) | **DELETE** /api/v3/dashboards/{dashboard_id} | Summary: Delete dashboard Description: Delete a unique dashboard.
 *DashboardsServiceApi* | [**dashboardsServiceGetDashboards**](docs/DashboardsServiceApi.md#dashboardsServiceGetDashboards) | **GET** /api/v3/dashboards | Summary: Get dashboards Description: Get a list of dashboards with all data.
 *DashboardsServiceApi* | [**dashboardsServiceUpdateDashboard**](docs/DashboardsServiceApi.md#dashboardsServiceUpdateDashboard) | **PUT** /api/v3/dashboards/{dashboard_id} | Summary: Update dashboard Description: Update a dashboard.
-*DataMovementsApi* | [**getActualFlow**](docs/DataMovementsApi.md#getActualFlow) | **GET** /api/v1/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
-*DataMovementsApi* | [**getActualFlowsSummary**](docs/DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v1/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
-*DataMovementsApi* | [**getPotentialFlow**](docs/DataMovementsApi.md#getPotentialFlow) | **GET** /api/v1/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
-*DataMovementsApi* | [**getPotentialFlowPath**](docs/DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
-*DataMovementsApi* | [**getPotentialFlowsSummary**](docs/DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v1/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
-*DataMovementsApi* | [**listActualFlowPaths**](docs/DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v1/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
-*DataMovementsApi* | [**listActualFlows**](docs/DataMovementsApi.md#listActualFlows) | **GET** /api/v1/dspm/dataMovements/actualFlows | List actual flows
-*DataMovementsApi* | [**listPotentialFlows**](docs/DataMovementsApi.md#listPotentialFlows) | **GET** /api/v1/dspm/dataMovements/potentialFlows | List potential flows
-*DataMovementsApi* | [**listPotentialFlowsPaths**](docs/DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths | List potential flow paths
-*DataResourcesApi* | [**getDataResource**](docs/DataResourcesApi.md#getDataResource) | **GET** /api/v1/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
-*DataResourcesApi* | [**getDataResourcesSummary**](docs/DataResourcesApi.md#getDataResourcesSummary) | **GET** /api/v1/dspm/dataResources/summary | Data resources summary
-*DataResourcesApi* | [**listDataResources**](docs/DataResourcesApi.md#listDataResources) | **GET** /api/v1/dspm/dataResources | List data resources that match a given filter
-*DataResourcesApi* | [**listDataResourcesNames**](docs/DataResourcesApi.md#listDataResourcesNames) | **GET** /api/v1/dspm/dataResources/names | List names of data resources
-*DataResourcesApi* | [**removeResource**](docs/DataResourcesApi.md#removeResource) | **DELETE** /api/v1/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
-*DataResourcesApi* | [**updateResourceReviewStatus**](docs/DataResourcesApi.md#updateResourceReviewStatus) | **PUT** /api/v1/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
-*DataSensitivitiesApi* | [**getSensitivitiesSummary**](docs/DataSensitivitiesApi.md#getSensitivitiesSummary) | **GET** /api/v1/dspm/sensitivities/summary | Get the summary of sensitivities
-*DataSensitivitiesApi* | [**getSensitivity**](docs/DataSensitivitiesApi.md#getSensitivity) | **GET** /api/v1/dspm/sensitivities/{sensitivityId} | Get sensitivity details by providing its ID
-*DataSensitivitiesApi* | [**listSensitivities**](docs/DataSensitivitiesApi.md#listSensitivities) | **GET** /api/v1/dspm/sensitivities | List sensitivities
-*DataStoresApi* | [**getDataStore**](docs/DataStoresApi.md#getDataStore) | **GET** /api/v1/dspm/dataStores/{dataStoreId} | Get a data store by its ID
-*DataStoresApi* | [**getDataStoresSummary**](docs/DataStoresApi.md#getDataStoresSummary) | **GET** /api/v1/dspm/dataStores/summary | Get summary of data stores
-*DataStoresApi* | [**listAllDataStoresLabels**](docs/DataStoresApi.md#listAllDataStoresLabels) | **GET** /api/v1/dspm/dataStores/labels | List labels of data stores.
-*DataStoresApi* | [**listDataStores**](docs/DataStoresApi.md#listDataStores) | **GET** /api/v1/dspm/dataStores | List data stores
-*DataStoresApi* | [**listDataStoresCloudTagsKeys**](docs/DataStoresApi.md#listDataStoresCloudTagsKeys) | **GET** /api/v1/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
-*DataStoresApi* | [**listDataStoresCloudTagsValues**](docs/DataStoresApi.md#listDataStoresCloudTagsValues) | **GET** /api/v1/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
-*DataStoresApi* | [**listDataStoresNames**](docs/DataStoresApi.md#listDataStoresNames) | **GET** /api/v1/dspm/dataStores/filters/name | List name of filterable data stores
-*DataStoresApi* | [**rescanDataStore**](docs/DataStoresApi.md#rescanDataStore) | **POST** /api/v1/dspm/dataStores/rescan | Post data store rescan request
-*DataStoresApi* | [**setDataStoreLabel**](docs/DataStoresApi.md#setDataStoreLabel) | **PUT** /api/v1/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
-*DataStoresApi* | [**updateDatastoreCustodian**](docs/DataStoresApi.md#updateDatastoreCustodian) | **POST** /api/v1/dspm/dataStores/custodian | Update the name of a Data store custodian
-*DataVulnerabilitiesApi* | [**addVulnerabilityStatusComment**](docs/DataVulnerabilitiesApi.md#addVulnerabilityStatusComment) | **POST** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments | Add vulnerability status comment
-*DataVulnerabilitiesApi* | [**getVulnerabilitiesSummary**](docs/DataVulnerabilitiesApi.md#getVulnerabilitiesSummary) | **GET** /api/v1/dspm/vulnerabilities/summary | Get vulnerabilities summary
-*DataVulnerabilitiesApi* | [**getVulnerability**](docs/DataVulnerabilitiesApi.md#getVulnerability) | **GET** /api/v1/dspm/vulnerabilities/{vulnerabilityId} | Get vulnerability details by ID
-*DataVulnerabilitiesApi* | [**listVulnerabilities**](docs/DataVulnerabilitiesApi.md#listVulnerabilities) | **GET** /api/v1/dspm/vulnerabilities | List vulnerabilities based on an applied filter
-*DataVulnerabilitiesApi* | [**listVulnerabilitiesByDataStore**](docs/DataVulnerabilitiesApi.md#listVulnerabilitiesByDataStore) | **GET** /api/v1/dspm/vulnerabilities/byDataStore | List vulnerabilities of data stores
-*DataVulnerabilitiesApi* | [**removeVulnerabilityStatusComment**](docs/DataVulnerabilitiesApi.md#removeVulnerabilityStatusComment) | **DELETE** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Delete vulnerability status comment
-*DataVulnerabilitiesApi* | [**setVulnerabilityStatus**](docs/DataVulnerabilitiesApi.md#setVulnerabilityStatus) | **POST** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses | Set status of a vulnerability
-*DataVulnerabilitiesApi* | [**updateVulnerabilityStatusComment**](docs/DataVulnerabilitiesApi.md#updateVulnerabilityStatusComment) | **PUT** /api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Set vulnerability status
+*DataMovementsApi* | [**getActualFlow**](docs/DataMovementsApi.md#getActualFlow) | **GET** /api/v2/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
+*DataMovementsApi* | [**getActualFlowsSummary**](docs/DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v2/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
+*DataMovementsApi* | [**getPotentialFlow**](docs/DataMovementsApi.md#getPotentialFlow) | **GET** /api/v2/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
+*DataMovementsApi* | [**getPotentialFlowPath**](docs/DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
+*DataMovementsApi* | [**getPotentialFlowsSummary**](docs/DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v2/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
+*DataMovementsApi* | [**listActualFlowPaths**](docs/DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v2/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
+*DataMovementsApi* | [**listActualFlows**](docs/DataMovementsApi.md#listActualFlows) | **GET** /api/v2/dspm/dataMovements/actualFlows | List actual flows
+*DataMovementsApi* | [**listPotentialFlows**](docs/DataMovementsApi.md#listPotentialFlows) | **GET** /api/v2/dspm/dataMovements/potentialFlows | List potential flows
+*DataMovementsApi* | [**listPotentialFlowsPaths**](docs/DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths | List potential flow paths
+*DataResourcesApi* | [**getDataResource**](docs/DataResourcesApi.md#getDataResource) | **GET** /api/v2/dspm/dataResources/{dataResourceId} | Get a specific data resource by its ID
+*DataResourcesApi* | [**getDataResourcesSummary**](docs/DataResourcesApi.md#getDataResourcesSummary) | **GET** /api/v2/dspm/dataResources/summary | Data resources summary
+*DataResourcesApi* | [**listDataResources**](docs/DataResourcesApi.md#listDataResources) | **GET** /api/v2/dspm/dataResources | List data resources that match a given filter
+*DataResourcesApi* | [**listDataResourcesNames**](docs/DataResourcesApi.md#listDataResourcesNames) | **GET** /api/v2/dspm/dataResources/names | List names of data resources
+*DataResourcesApi* | [**removeResource**](docs/DataResourcesApi.md#removeResource) | **DELETE** /api/v2/dspm/dataResources/{dataResourceId}/removeResource | Remove resource from DSPM
+*DataResourcesApi* | [**updateResourceReviewStatus**](docs/DataResourcesApi.md#updateResourceReviewStatus) | **PUT** /api/v2/dspm/dataResources/{dataResourceId}/reviewed | Set review status of a data resource
+*DataSensitivitiesApi* | [**getSensitivitiesSummary**](docs/DataSensitivitiesApi.md#getSensitivitiesSummary) | **GET** /api/v2/dspm/sensitivities/summary | Get the summary of sensitivities
+*DataSensitivitiesApi* | [**getSensitivity**](docs/DataSensitivitiesApi.md#getSensitivity) | **GET** /api/v2/dspm/sensitivities/{sensitivityId} | Get sensitivity details by providing its ID
+*DataSensitivitiesApi* | [**listSensitivities**](docs/DataSensitivitiesApi.md#listSensitivities) | **GET** /api/v2/dspm/sensitivities | List sensitivities
+*DataStoresApi* | [**getDataStore**](docs/DataStoresApi.md#getDataStore) | **GET** /api/v2/dspm/dataStores/{dataStoreId} | Get a data store by its ID
+*DataStoresApi* | [**getDataStoresSummary**](docs/DataStoresApi.md#getDataStoresSummary) | **GET** /api/v2/dspm/dataStores/summary | Get summary of data stores
+*DataStoresApi* | [**listAllDataStoresLabels**](docs/DataStoresApi.md#listAllDataStoresLabels) | **GET** /api/v2/dspm/dataStores/labels | List labels of data stores.
+*DataStoresApi* | [**listDataStores**](docs/DataStoresApi.md#listDataStores) | **GET** /api/v2/dspm/dataStores | List data stores
+*DataStoresApi* | [**listDataStoresCloudTagsKeys**](docs/DataStoresApi.md#listDataStoresCloudTagsKeys) | **GET** /api/v2/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
+*DataStoresApi* | [**listDataStoresCloudTagsValues**](docs/DataStoresApi.md#listDataStoresCloudTagsValues) | **GET** /api/v2/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
+*DataStoresApi* | [**listDataStoresNames**](docs/DataStoresApi.md#listDataStoresNames) | **GET** /api/v2/dspm/dataStores/filters/name | List name of filterable data stores
+*DataStoresApi* | [**rescanDataStore**](docs/DataStoresApi.md#rescanDataStore) | **POST** /api/v2/dspm/dataStores/rescan | Post data store rescan request
+*DataStoresApi* | [**setDataStoreLabel**](docs/DataStoresApi.md#setDataStoreLabel) | **PUT** /api/v2/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
+*DataStoresApi* | [**updateDatastoreCustodian**](docs/DataStoresApi.md#updateDatastoreCustodian) | **POST** /api/v2/dspm/dataStores/custodian | Update the name of a Data store custodian
+*DataVulnerabilitiesApi* | [**addVulnerabilityStatusComment**](docs/DataVulnerabilitiesApi.md#addVulnerabilityStatusComment) | **POST** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments | Add vulnerability status comment
+*DataVulnerabilitiesApi* | [**getVulnerabilitiesSummary**](docs/DataVulnerabilitiesApi.md#getVulnerabilitiesSummary) | **GET** /api/v2/dspm/vulnerabilities/summary | Get vulnerabilities summary
+*DataVulnerabilitiesApi* | [**getVulnerability**](docs/DataVulnerabilitiesApi.md#getVulnerability) | **GET** /api/v2/dspm/vulnerabilities/{vulnerabilityId} | Get vulnerability details by ID
+*DataVulnerabilitiesApi* | [**listVulnerabilities**](docs/DataVulnerabilitiesApi.md#listVulnerabilities) | **GET** /api/v2/dspm/vulnerabilities | List vulnerabilities based on an applied filter
+*DataVulnerabilitiesApi* | [**listVulnerabilitiesByDataStore**](docs/DataVulnerabilitiesApi.md#listVulnerabilitiesByDataStore) | **GET** /api/v2/dspm/vulnerabilities/byDataStore | List vulnerabilities of data stores
+*DataVulnerabilitiesApi* | [**removeVulnerabilityStatusComment**](docs/DataVulnerabilitiesApi.md#removeVulnerabilityStatusComment) | **DELETE** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Delete vulnerability status comment
+*DataVulnerabilitiesApi* | [**setVulnerabilityStatus**](docs/DataVulnerabilitiesApi.md#setVulnerabilityStatus) | **POST** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses | Set status of a vulnerability
+*DataVulnerabilitiesApi* | [**updateVulnerabilityStatusComment**](docs/DataVulnerabilitiesApi.md#updateVulnerabilityStatusComment) | **PUT** /api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId} | Set vulnerability status
 *DatabootstrapperServiceApi* | [**databootstrapperServiceLoadData**](docs/DatabootstrapperServiceApi.md#databootstrapperServiceLoadData) | **POST** /api/v3/databootstrapper/data | Summary: Load data Description: Load data for a tenant.
 *DatamartProcessorServiceApi* | [**datamartProcessorServiceGetDatamartInfo**](docs/DatamartProcessorServiceApi.md#datamartProcessorServiceGetDatamartInfo) | **GET** /api/v3/datamarts/info | Summary: Get datamarts Description: Return a list of files inside a datamart to the caller.
 *DatamartProcessorServiceApi* | [**datamartProcessorServiceGetDatamarts**](docs/DatamartProcessorServiceApi.md#datamartProcessorServiceGetDatamarts) | **GET** /api/v3/datamarts | Summary: Get datamarts Description: Return a list of datamarts for a time interval to the caller.
@@ -262,9 +270,6 @@ Class | Method | HTTP request | Description
 *EcosystemServiceApi* | [**ecosystemServiceGetPurgableRows**](docs/EcosystemServiceApi.md#ecosystemServiceGetPurgableRows) | **POST** /api/v3/integrations/purge | Summary: Get purgable rows Description: Check the number of rows that can be purged.
 *EcosystemServiceApi* | [**ecosystemServicePurgeData**](docs/EcosystemServiceApi.md#ecosystemServicePurgeData) | **DELETE** /api/v3/integrations/datasets/data | Summary: Purge data Description: Purge data.
 *EcosystemServiceApi* | [**ecosystemServiceTestIntegration**](docs/EcosystemServiceApi.md#ecosystemServiceTestIntegration) | **POST** /api/v3/integrations/setup/test | Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
-*EdgeSchedulerServiceApi* | [**edgeSchedulerServiceGetEdgeQueryStatus**](docs/EdgeSchedulerServiceApi.md#edgeSchedulerServiceGetEdgeQueryStatus) | **GET** /api/v3/edges/{edge_id}/query/status | Summary: Get edge query status Description: Get the status of a queued edge query
-*EdgeSchedulerServiceApi* | [**edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery**](docs/EdgeSchedulerServiceApi.md#edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery) | **GET** /api/v3/edges/query | Summary: Monitor for a pending edge query request Description: monitor edge query pending request
-*EdgeSchedulerServiceApi* | [**edgeSchedulerServiceScheduleEdgeQuery**](docs/EdgeSchedulerServiceApi.md#edgeSchedulerServiceScheduleEdgeQuery) | **POST** /api/v3/edges/{edge_id}/query/schedule | Summary: Schedule an edge query  Description: Schedule an edge query via data warehouse queue
 *FeatureFlagsServiceApi* | [**featureFlagsServiceDeleteFeatureFlagOverrides**](docs/FeatureFlagsServiceApi.md#featureFlagsServiceDeleteFeatureFlagOverrides) | **DELETE** /api/v3/feature_flags/overrides | Summary: Delete feature Flag overrides Description: Delete feature Flag overrides from database.
 *FeatureFlagsServiceApi* | [**featureFlagsServiceGetFeatureFlagOverrides**](docs/FeatureFlagsServiceApi.md#featureFlagsServiceGetFeatureFlagOverrides) | **GET** /api/v3/feature_flags/overrides | Summary: Get feature Flag overrides Description: Get feature Flag overrides by Feature Flag Name.
 *FeatureFlagsServiceApi* | [**featureFlagsServiceGetFeatureFlags**](docs/FeatureFlagsServiceApi.md#featureFlagsServiceGetFeatureFlags) | **GET** /api/v3/feature_flags | Summary: Get feature flags Description: Get feature flags by Feature Flag Name.
@@ -331,15 +336,22 @@ Class | Method | HTTP request | Description
 *HealthCollectorApi* | [**healthCollectorGetTopGDPCollectors**](docs/HealthCollectorApi.md#healthCollectorGetTopGDPCollectors) | **GET** /api/v3/metrics/collectors/{type} | Summary: Get the top GDP collectors which send data to GI Description: Get information about the top GDP collectors
 *HealthCollectorApi* | [**healthCollectorStoreHealthInfo**](docs/HealthCollectorApi.md#healthCollectorStoreHealthInfo) | **POST** /api/v3/health/central_managers/{central_manager_id}/health_info | Summary: Store health info Description: Store health info from GDP into GI. (This API is called from GDP only)
 *JumpboxServiceApi* | [**jumpboxServiceAuthorize**](docs/JumpboxServiceApi.md#jumpboxServiceAuthorize) | **POST** /api/v3/authorization | Summary: Authorize Description: Authenticate a user and return a JWT.
+*JumpboxServiceApi* | [**jumpboxServiceDeleteAccount**](docs/JumpboxServiceApi.md#jumpboxServiceDeleteAccount) | **DELETE** /api/v3/accounts/{account_id} | Summary: Delete account Description: Delete an account.
 *JumpboxServiceApi* | [**jumpboxServiceDeleteTenant**](docs/JumpboxServiceApi.md#jumpboxServiceDeleteTenant) | **DELETE** /api/v3/tenants/{tenant_id} | Summary: Delete tenant Description: Delete a tenant.
 *JumpboxServiceApi* | [**jumpboxServiceDeleteUser**](docs/JumpboxServiceApi.md#jumpboxServiceDeleteUser) | **DELETE** /api/v3/users/{user_id} | Summary: Delete user Description: Delete the user.
+*JumpboxServiceApi* | [**jumpboxServiceGetAccount**](docs/JumpboxServiceApi.md#jumpboxServiceGetAccount) | **GET** /api/v3/accounts/{account_id} | Summary: Get account Description: Get an account.
+*JumpboxServiceApi* | [**jumpboxServiceGetAccounts**](docs/JumpboxServiceApi.md#jumpboxServiceGetAccounts) | **GET** /api/v3/accounts | Summary: Get accounts Description: Get all accounts based on UID.
 *JumpboxServiceApi* | [**jumpboxServiceGetTenant**](docs/JumpboxServiceApi.md#jumpboxServiceGetTenant) | **GET** /api/v3/tenants/{tenant_id} | Summary: Get tenant Description: Get a tenant.
 *JumpboxServiceApi* | [**jumpboxServiceGetTenants**](docs/JumpboxServiceApi.md#jumpboxServiceGetTenants) | **GET** /api/v3/tenants | Summary: Get tenants Description: Get all tenant base on UID.
 *JumpboxServiceApi* | [**jumpboxServiceGetUsers**](docs/JumpboxServiceApi.md#jumpboxServiceGetUsers) | **GET** /api/v3/users | Summary: Get users Description: Get all users base on a tenantID.
+*JumpboxServiceApi* | [**jumpboxServicePostAccount**](docs/JumpboxServiceApi.md#jumpboxServicePostAccount) | **POST** /api/v3/accounts | Summary: Post account Description: Create an Account.
 *JumpboxServiceApi* | [**jumpboxServicePostTenants**](docs/JumpboxServiceApi.md#jumpboxServicePostTenants) | **POST** /api/v3/tenants | Summary: Post tenants Description: Create a tenant.
 *JumpboxServiceApi* | [**jumpboxServicePostUsers**](docs/JumpboxServiceApi.md#jumpboxServicePostUsers) | **POST** /api/v3/users | Summary: Post users Description: Create users.
+*JumpboxServiceApi* | [**jumpboxServiceResumeAccount**](docs/JumpboxServiceApi.md#jumpboxServiceResumeAccount) | **PATCH** /api/v3/accounts/{account_id}/resume | Summary: Resume account Description: Resume an account.
 *JumpboxServiceApi* | [**jumpboxServiceSearchUsers**](docs/JumpboxServiceApi.md#jumpboxServiceSearchUsers) | **POST** /api/v3/users/search | Summary: Search users Description: Search for all users matching the provided string.
+*JumpboxServiceApi* | [**jumpboxServiceSuspendAccount**](docs/JumpboxServiceApi.md#jumpboxServiceSuspendAccount) | **PATCH** /api/v3/accounts/{account_id}/suspend | Summary: Suspend Account Description: Suspend an account
 *JumpboxServiceApi* | [**jumpboxServiceTestUser**](docs/JumpboxServiceApi.md#jumpboxServiceTestUser) | **POST** /api/v3/users/test | Summary: Test user Description: Test a user lookup to a given LDAP.
+*JumpboxServiceApi* | [**jumpboxServiceUpdateAccount**](docs/JumpboxServiceApi.md#jumpboxServiceUpdateAccount) | **PATCH** /api/v3/accounts/{account_id} | Summary: Update Account Description: Updates an account.
 *JumpboxServiceApi* | [**jumpboxServiceUpdateTenant**](docs/JumpboxServiceApi.md#jumpboxServiceUpdateTenant) | **PATCH** /api/v3/tenants/{tenant_id} | Summary: Update tenant Description: Update a tenant.
 *JumpboxServiceApi* | [**jumpboxServiceUpdateUsers**](docs/JumpboxServiceApi.md#jumpboxServiceUpdateUsers) | **PATCH** /api/v3/users | Summary: Update users Description: Update an array of users.
 *NotificationsServiceApi* | [**notificationsServiceCreateTicket**](docs/NotificationsServiceApi.md#notificationsServiceCreateTicket) | **POST** /api/v3/integrations/ticket | Summary: Create ticket Description: Create ticket based on information passed in.
@@ -369,6 +381,8 @@ Class | Method | HTTP request | Description
 *PolicyBuilderApi* | [**policyBuilderGetPolicyDetails**](docs/PolicyBuilderApi.md#policyBuilderGetPolicyDetails) | **GET** /api/v3/policies/{policy_id}/details | Summary: Get policy details Description: Return a list of rules inside the policy.
 *PolicyBuilderApi* | [**policyBuilderGetPolicyNamesFromRuleIDs**](docs/PolicyBuilderApi.md#policyBuilderGetPolicyNamesFromRuleIDs) | **POST** /api/v3/policies/policy_names | Summary: GetPolicy names from rule IDs Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.
 *PolicyBuilderApi* | [**policyBuilderGetPolicySyncList**](docs/PolicyBuilderApi.md#policyBuilderGetPolicySyncList) | **GET** /api/v3/policies/sync_list | Summary: Get list of synced polices Description: Returns the list and status of sync entries
+*PolicyBuilderApi* | [**policyBuilderGetPolicyVersion**](docs/PolicyBuilderApi.md#policyBuilderGetPolicyVersion) | **GET** /api/v3/policies/{policy_id}/details/versions/{version} | Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+*PolicyBuilderApi* | [**policyBuilderGetPolicyVersionsInfo**](docs/PolicyBuilderApi.md#policyBuilderGetPolicyVersionsInfo) | **GET** /api/v3/policies/{policy_id}/versions/metdata | Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
 *PolicyBuilderApi* | [**policyBuilderGetReceivers**](docs/PolicyBuilderApi.md#policyBuilderGetReceivers) | **GET** /api/v3/policies/receivers | Summary: Get receivers Description: Get all the receivers associated with actions.
 *PolicyBuilderApi* | [**policyBuilderGetRuleMetadata**](docs/PolicyBuilderApi.md#policyBuilderGetRuleMetadata) | **GET** /api/v3/rules/metadata | Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
 *PolicyBuilderApi* | [**policyBuilderInsertGdpPolicy**](docs/PolicyBuilderApi.md#policyBuilderInsertGdpPolicy) | **POST** /api/v3/policies/sync_entry | Summary: Insert GDP policy sync entry Description: Inserts GDP policy&#39;s name into sync collection
@@ -378,6 +392,7 @@ Class | Method | HTTP request | Description
 *PolicyBuilderApi* | [**policyBuilderPoliciesGroups**](docs/PolicyBuilderApi.md#policyBuilderPoliciesGroups) | **GET** /api/v3/policies/groups | Summary: Policies groups Description: Get policy groups.
 *PolicyBuilderApi* | [**policyBuilderRuleValidation**](docs/PolicyBuilderApi.md#policyBuilderRuleValidation) | **POST** /api/v3/rules/validate | Summary: Rule validation Description: Validate a rule parameters and actions.
 *PolicyBuilderApi* | [**policyBuilderStorePoliciesGdp**](docs/PolicyBuilderApi.md#policyBuilderStorePoliciesGdp) | **POST** /api/v3/policies/{central_manager_id} | Summary: Store policies Gdp Description: Store policies.  (This API is called from GDP only)
+*PolicyBuilderApi* | [**policyBuilderUpdatePolicy**](docs/PolicyBuilderApi.md#policyBuilderUpdatePolicy) | **PUT** /api/v3/policies | Summary: Update policy Description: Update Policy returns response code and message.
 *QsDataLoaderApi* | [**qSDataLoaderQSfileValidator**](docs/QsDataLoaderApi.md#qSDataLoaderQSfileValidator) | **POST** /api/v3/data/validation | QSfileValidator - validate the files before insert happend .
 *QsDataLoaderApi* | [**qSDataLoaderUploadSyntheticDataLoader**](docs/QsDataLoaderApi.md#qSDataLoaderUploadSyntheticDataLoader) | **POST** /api/v3/data/synthetic | UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
 *QsDataManagerApi* | [**qSDataManagerGetMasterData**](docs/QsDataManagerApi.md#qSDataManagerGetMasterData) | **GET** /api/v3/datamanager/master-data | Summary: master data for all entities Description: Retrieves All Dimension and Fact tables data.
@@ -408,25 +423,42 @@ Class | Method | HTTP request | Description
 *ReportsServiceApi* | [**reportsServiceCreateChart**](docs/ReportsServiceApi.md#reportsServiceCreateChart) | **POST** /api/v3/charts | Summary: Create chart Description: Create custom chart based on provided properties.
 *ReportsServiceApi* | [**reportsServiceCreateChartTemplatev2**](docs/ReportsServiceApi.md#reportsServiceCreateChartTemplatev2) | **POST** /api/v3/flex-charts/templates | Summary: Create chart template v2 Description: Create custom VEGA chart template.
 *ReportsServiceApi* | [**reportsServiceCreateChartv2**](docs/ReportsServiceApi.md#reportsServiceCreateChartv2) | **POST** /api/v3/flex-charts | Summary: Create chart v2 Description: Create custom VEGA chart based on provided properties.
+*ReportsServiceApi* | [**reportsServiceCreateControl**](docs/ReportsServiceApi.md#reportsServiceCreateControl) | **POST** /api/v3/compliance/controls | Summary: Create Control. Description: Create a unique Control.
 *ReportsServiceApi* | [**reportsServiceCreateFieldsByCategory**](docs/ReportsServiceApi.md#reportsServiceCreateFieldsByCategory) | **POST** /api/v3/reports/fields | Summary - Create fields by category Description: Cteate category fields based on provided properties.
+*ReportsServiceApi* | [**reportsServiceCreateGrade**](docs/ReportsServiceApi.md#reportsServiceCreateGrade) | **POST** /api/v3/compliance/grades | Summary: Create Grade. Description: Create a unique Grade.
 *ReportsServiceApi* | [**reportsServiceCreateJoin**](docs/ReportsServiceApi.md#reportsServiceCreateJoin) | **POST** /api/v3/reports/categories/joins | Summary: Create a join Description: Create a custom report join
+*ReportsServiceApi* | [**reportsServiceCreateMeasure**](docs/ReportsServiceApi.md#reportsServiceCreateMeasure) | **POST** /api/v3/compliance/measures | Summary: Create measure. Description: Create a unique measure.
+*ReportsServiceApi* | [**reportsServiceCreateMetric**](docs/ReportsServiceApi.md#reportsServiceCreateMetric) | **POST** /api/v3/compliance/metrics | Summary: Create metric. Description: Create a unique metric.
+*ReportsServiceApi* | [**reportsServiceCreateProgram**](docs/ReportsServiceApi.md#reportsServiceCreateProgram) | **POST** /api/v3/compliance/programs | Summary: Create Program. Description: Create a unique Program.
 *ReportsServiceApi* | [**reportsServiceCreateReport**](docs/ReportsServiceApi.md#reportsServiceCreateReport) | **POST** /api/v3/reports | Summary: Create report Description: Create custom report based on provided properties.
+*ReportsServiceApi* | [**reportsServiceCreateRequirement**](docs/ReportsServiceApi.md#reportsServiceCreateRequirement) | **POST** /api/v3/compliance/requirements | Summary: Create Requirement. Description: Create a unique Requirement.
 *ReportsServiceApi* | [**reportsServiceCreateVariant**](docs/ReportsServiceApi.md#reportsServiceCreateVariant) | **POST** /api/v3/reports/variants | Summary: Create a variant Description: Create a variant for reports
 *ReportsServiceApi* | [**reportsServiceDeleteCategory**](docs/ReportsServiceApi.md#reportsServiceDeleteCategory) | **DELETE** /api/v3/reports/categories | Summary: Delete a category Description: Delete a report category
 *ReportsServiceApi* | [**reportsServiceDeleteChart**](docs/ReportsServiceApi.md#reportsServiceDeleteChart) | **DELETE** /api/v3/charts/{chart_id} | Summary: Delete chart Description: Delete a custom chart.
 *ReportsServiceApi* | [**reportsServiceDeleteChartTemplatev2**](docs/ReportsServiceApi.md#reportsServiceDeleteChartTemplatev2) | **DELETE** /api/v3/flex-charts/templates/{template_id} | Summary: Delete chart template v2 Description: Delete a custom VEGA chart template.
 *ReportsServiceApi* | [**reportsServiceDeleteChartv2**](docs/ReportsServiceApi.md#reportsServiceDeleteChartv2) | **DELETE** /api/v3/flex-charts/{chart_id} | Summary: Delete chart v2 Description: Delete a custom VEGA chart.
+*ReportsServiceApi* | [**reportsServiceDeleteControl**](docs/ReportsServiceApi.md#reportsServiceDeleteControl) | **DELETE** /api/v3/compliance/controls/{control_id} | Summary: Delete Control Description: Delete a Control.
 *ReportsServiceApi* | [**reportsServiceDeleteFieldsByCategory**](docs/ReportsServiceApi.md#reportsServiceDeleteFieldsByCategory) | **DELETE** /api/v3/reports/fields | Summary - Delete fields by category Description: Delete category fields based on provided properties.
+*ReportsServiceApi* | [**reportsServiceDeleteGrade**](docs/ReportsServiceApi.md#reportsServiceDeleteGrade) | **DELETE** /api/v3/compliance/grades/{grade_id} | Summary: Delete Grade Description: Delete a Grade.
 *ReportsServiceApi* | [**reportsServiceDeleteJoin**](docs/ReportsServiceApi.md#reportsServiceDeleteJoin) | **DELETE** /api/v3/reports/categories/joins/{join_id} | Summary: Delete a join Description: Delete a custom join
+*ReportsServiceApi* | [**reportsServiceDeleteMeasure**](docs/ReportsServiceApi.md#reportsServiceDeleteMeasure) | **DELETE** /api/v3/compliance/measures/{measure_id} | Summary: Delete measure Description: Delete a measure.
+*ReportsServiceApi* | [**reportsServiceDeleteMetric**](docs/ReportsServiceApi.md#reportsServiceDeleteMetric) | **DELETE** /api/v3/compliance/metrics/{metric_id} | Summary: Delete metric Description: Delete a metric.
+*ReportsServiceApi* | [**reportsServiceDeleteProgram**](docs/ReportsServiceApi.md#reportsServiceDeleteProgram) | **DELETE** /api/v3/compliance/programs/{program_id} | Summary: Delete Program Description: Delete a Program.
 *ReportsServiceApi* | [**reportsServiceDeleteReport**](docs/ReportsServiceApi.md#reportsServiceDeleteReport) | **DELETE** /api/v3/reports/{report_id} | Summary: Delete report Description: Delete a custom report.
+*ReportsServiceApi* | [**reportsServiceDeleteRequirement**](docs/ReportsServiceApi.md#reportsServiceDeleteRequirement) | **DELETE** /api/v3/compliance/requirements/{requirement_id} | Summary: Delete Requirement Description: Delete a Requirement.
 *ReportsServiceApi* | [**reportsServiceDeleteVariant**](docs/ReportsServiceApi.md#reportsServiceDeleteVariant) | **DELETE** /api/v3/reports/variants/{variant_id} | Summary: Delete a variant Description: Delete a variant
 *ReportsServiceApi* | [**reportsServiceGetCategories**](docs/ReportsServiceApi.md#reportsServiceGetCategories) | **GET** /api/v3/reports/categories | Summary:  Get all available report categories. Description: Get all category related fields or all possible fields.
 *ReportsServiceApi* | [**reportsServiceGetChartSettings**](docs/ReportsServiceApi.md#reportsServiceGetChartSettings) | **GET** /api/v3/charts | Summary: Get chart settings Description: Get a custom chart based on provided report id.
 *ReportsServiceApi* | [**reportsServiceGetChartSettingsv2**](docs/ReportsServiceApi.md#reportsServiceGetChartSettingsv2) | **GET** /api/v3/flex-charts | Summary: Get chart settings v2 Description: Get a custom VEGA chart based on provided report id.
 *ReportsServiceApi* | [**reportsServiceGetChartTemplatesv2**](docs/ReportsServiceApi.md#reportsServiceGetChartTemplatesv2) | **GET** /api/v3/flex-charts/templates | Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
+*ReportsServiceApi* | [**reportsServiceGetControls**](docs/ReportsServiceApi.md#reportsServiceGetControls) | **GET** /api/v3/compliance/controls | Summary: Get controls Description: Get a list of controls with all data.
 *ReportsServiceApi* | [**reportsServiceGetFieldsByCategories**](docs/ReportsServiceApi.md#reportsServiceGetFieldsByCategories) | **GET** /api/v3/reports/fields/categories | Summary: Get fields by categories Description: Get all category related fields or all possible fields based on a list of categories.
 *ReportsServiceApi* | [**reportsServiceGetFieldsByCategory**](docs/ReportsServiceApi.md#reportsServiceGetFieldsByCategory) | **GET** /api/v3/reports/fields | Summary: Get fields by category Description: Get all category related fields or all possible fields.
+*ReportsServiceApi* | [**reportsServiceGetGrades**](docs/ReportsServiceApi.md#reportsServiceGetGrades) | **GET** /api/v3/compliance/grades | Summary: Get grades Description: Get a list of grades with all data.
 *ReportsServiceApi* | [**reportsServiceGetJoins**](docs/ReportsServiceApi.md#reportsServiceGetJoins) | **GET** /api/v3/reports/categories/joins | Summary: Get all joins Description: Get all custom joins.
+*ReportsServiceApi* | [**reportsServiceGetMeasures**](docs/ReportsServiceApi.md#reportsServiceGetMeasures) | **GET** /api/v3/compliance/measures | Summary: Get measures Description: Get a list of measures with all data.
+*ReportsServiceApi* | [**reportsServiceGetMetrics**](docs/ReportsServiceApi.md#reportsServiceGetMetrics) | **GET** /api/v3/compliance/metrics | Summary: Get metrics Description: Get a list of metrics with all data.
+*ReportsServiceApi* | [**reportsServiceGetPrograms**](docs/ReportsServiceApi.md#reportsServiceGetPrograms) | **GET** /api/v3/compliance/programs | Summary: Get controls Description: Get a list of controls with all data.
 *ReportsServiceApi* | [**reportsServiceGetQueryByReportDefinition**](docs/ReportsServiceApi.md#reportsServiceGetQueryByReportDefinition) | **POST** /api/v3/reports/query/definition | Summary: Get query by report definition Description: Get query by report definition.
 *ReportsServiceApi* | [**reportsServiceGetQueryByReportID**](docs/ReportsServiceApi.md#reportsServiceGetQueryByReportID) | **POST** /api/v3/reports/query/id | Summary: Get query by report ID Description: Get query by report ID.
 *ReportsServiceApi* | [**reportsServiceGetReportDefinition**](docs/ReportsServiceApi.md#reportsServiceGetReportDefinition) | **GET** /api/v3/reports/{report_id}/definition | Summary: Get report definition Description: Get report definition.
@@ -436,51 +468,25 @@ Class | Method | HTTP request | Description
 *ReportsServiceApi* | [**reportsServiceGetReports**](docs/ReportsServiceApi.md#reportsServiceGetReports) | **GET** /api/v3/reports | Summary: Get reports Description: Get reports list.
 *ReportsServiceApi* | [**reportsServiceGetReportsForJoin**](docs/ReportsServiceApi.md#reportsServiceGetReportsForJoin) | **GET** /api/v3/reports/categories/joins/{join_id}/reports | Summary: Get the reports that use a join Description: Get the reports that use a join and the headers that are imported by the reports using the join
 *ReportsServiceApi* | [**reportsServiceGetReportsTags**](docs/ReportsServiceApi.md#reportsServiceGetReportsTags) | **GET** /api/v3/reports/tags | Summary: Get reports tags Description: Get all report distinct tags.
+*ReportsServiceApi* | [**reportsServiceGetRequirements**](docs/ReportsServiceApi.md#reportsServiceGetRequirements) | **GET** /api/v3/compliance/requirements | Summary: Get requirements Description: Get a list of requirements with all data.
 *ReportsServiceApi* | [**reportsServiceGetVariant**](docs/ReportsServiceApi.md#reportsServiceGetVariant) | **GET** /api/v3/reports/variants/{variant_id} | Summary: Get a variant Description: Get a given variant
 *ReportsServiceApi* | [**reportsServiceGetVariants**](docs/ReportsServiceApi.md#reportsServiceGetVariants) | **GET** /api/v3/reports/variants | Summary: Get all variants Description: Get all variants in reports
 *ReportsServiceApi* | [**reportsServicePartialChartUpdate**](docs/ReportsServiceApi.md#reportsServicePartialChartUpdate) | **PATCH** /api/v3/charts/{chart_id} | Summary: Partial chart update Description: Update a custom chart with partial information.
 *ReportsServiceApi* | [**reportsServicePartialReportUpdate**](docs/ReportsServiceApi.md#reportsServicePartialReportUpdate) | **PATCH** /api/v3/reports/{report_id} | Summary: Partial report update Description: Update a custom report with partial information.
+*ReportsServiceApi* | [**reportsServiceRunGrades**](docs/ReportsServiceApi.md#reportsServiceRunGrades) | **POST** /api/v3/compliance/grades/run | Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
 *ReportsServiceApi* | [**reportsServiceRunVariantOperation**](docs/ReportsServiceApi.md#reportsServiceRunVariantOperation) | **POST** /api/v3/reports/variants/run | Summary: Run a variant Description: Run the operations in a variant
 *ReportsServiceApi* | [**reportsServiceTranspose**](docs/ReportsServiceApi.md#reportsServiceTranspose) | **POST** /api/v3/reports/transpose | Summary: Transpose Description: Return the corresponding full sql data.
 *ReportsServiceApi* | [**reportsServiceUpdateChart**](docs/ReportsServiceApi.md#reportsServiceUpdateChart) | **PUT** /api/v3/charts/{chart_id} | Summary: Update chart Description: Update a custom chart.
 *ReportsServiceApi* | [**reportsServiceUpdateChartv2**](docs/ReportsServiceApi.md#reportsServiceUpdateChartv2) | **PUT** /api/v3/flex-charts/{chart_id} | Summary: Update chart v2 Description: Update a custom VEGA chart.
+*ReportsServiceApi* | [**reportsServiceUpdateControl**](docs/ReportsServiceApi.md#reportsServiceUpdateControl) | **PUT** /api/v3/compliance/controls/{control_id} | Summary: Update Control. Description: Update a Control.
+*ReportsServiceApi* | [**reportsServiceUpdateGrade**](docs/ReportsServiceApi.md#reportsServiceUpdateGrade) | **PUT** /api/v3/compliance/grades/{grade_id} | Summary: Update Grade. Description: Update a Grade.
 *ReportsServiceApi* | [**reportsServiceUpdateJoin**](docs/ReportsServiceApi.md#reportsServiceUpdateJoin) | **PUT** /api/v3/reports/categories/joins/{join_id} | Summary: Update a join Description: Update a custom join
+*ReportsServiceApi* | [**reportsServiceUpdateMeasure**](docs/ReportsServiceApi.md#reportsServiceUpdateMeasure) | **PUT** /api/v3/compliance/measures/{measure_id} | Summary: Update measure. Description: Update a measure.
+*ReportsServiceApi* | [**reportsServiceUpdateMetric**](docs/ReportsServiceApi.md#reportsServiceUpdateMetric) | **PUT** /api/v3/compliance/metrics/{metric_id} | Summary: Update metric. Description: Update a metric.
+*ReportsServiceApi* | [**reportsServiceUpdateProgram**](docs/ReportsServiceApi.md#reportsServiceUpdateProgram) | **PUT** /api/v3/compliance/programs/{program_id} | Summary: Update Program. Description: Update a Program.
 *ReportsServiceApi* | [**reportsServiceUpdateReport**](docs/ReportsServiceApi.md#reportsServiceUpdateReport) | **PUT** /api/v3/reports/{report_id} | Summary: Update report Description: Update a custom report.
+*ReportsServiceApi* | [**reportsServiceUpdateRequirement**](docs/ReportsServiceApi.md#reportsServiceUpdateRequirement) | **PUT** /api/v3/compliance/requirements/{requirement_id} | Summary: Update Requirement. Description: Update a Requirement.
 *ReportsServiceApi* | [**reportsServiceUpdateVariantOverride**](docs/ReportsServiceApi.md#reportsServiceUpdateVariantOverride) | **PUT** /api/v3/reports/variants/{variant_id} | Summary: Update a variant Description: Update a variant with a custom override
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceCreateController**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateController) | **POST** /api/v3/edge_manager/controllers | CreateController - Add a new controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceCreateHeartBeat**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeat) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat | CreateHeartBeat - Create a heartbeat for the controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceCreateHeartBeatEx**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateHeartBeatEx) | **POST** /api/v3/edge_manager/controllers/{controller_id}/heartbeat_ex | CreateHeartBeatEx - Create a heartbeat for the controller with extended information.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceCreateJob**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJob) | **POST** /api/v3/edge_manager/jobs | //////////////////////////////////////////////////////////////// Interface to the controllers and apps api in the App-Manager microservice CreateJob - Create a job definition. Files and secrets contained within will also be created.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceCreateJobExecution**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateJobExecution) | **POST** /api/v3/edge_manager/job_executions | CreateJobExecution - Create a job execution.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceCreateKeypair**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceCreateKeypair) | **POST** /api/v3/edge_manager/controllers/{controller_id}/keypair | CreateKeypair - Create a new keypair for the controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceDeleteController**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteController) | **DELETE** /api/v3/edge_manager/controllers/{controller_id} | DeleteController - Delete a controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceDeleteEdgeTenant**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenant) | **DELETE** /api/v3/edge_manager/tenants/{tenant_id} | DeleteEdgeTenant - deletes an edge tenant providing edge tenant id
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceDeleteEdgeTenantRequest**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteEdgeTenantRequest) | **DELETE** /api/v3/edges | DeleteEdgeTenantRequest to deletes gi and tnt CR on edge
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceDeleteJob**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDeleteJob) | **DELETE** /api/v3/edge_manager/jobs/{job_id} | DeleteJob - Delete a job.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceDownloadControllerLogs**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceDownloadControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs | DownloadControllerLogs - Download the controller logs for a running controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetControllerApps**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerApps) | **GET** /api/v3/edge_manager/controllers/{controller_id}/apps | GetControllerApps - Get the apps for the given controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetControllerCommands**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerCommands) | **GET** /api/v3/edge_manager/controllers/{controller_id}/commands | GetControllerCommands - Get the commands for the controller to execute.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetControllerJobs**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerJobs) | **GET** /api/v3/edge_manager/controllers/{controller_id}/jobs | GetControllerJobs - Get the jobs for the controller to execute.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetControllerStatus**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllerStatus) | **GET** /api/v3/edge_manager/controllers/{controller_id}/status | GetControllerStatus - Get the status for the given controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetControllers**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllers) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controllers | GetControllers - Get the controllers for the given tenant.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetControllersWithStatus**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetControllersWithStatus) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/controller_status | GetControllersWithStatus - Get the controllers for the given tenant with computed status.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetJob**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJob) | **GET** /api/v3/edge_manager/jobs/{job_id} | GetJob - Get the job.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetJobExecution**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecution) | **GET** /api/v3/edge_manager/job_executions/{jobexe_id} | GetJobExecution - Get a job execution.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetJobExecutions**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobExecutions) | **GET** /api/v3/edge_manager/jobs/{job_id}/executions | GetJobExecutions - Get the job executions.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetJobStatus**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetJobStatus) | **GET** /api/v3/edge_manager/jobs/{job_id}/status | GetJobStatus - Get the job&#39;s status.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetTenantApp**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApp) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps/{app_name} | GetTenantApp - Get a specific app for the given tenant.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetTenantApps**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantApps) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/apps | GetTenantApps - Get the apps for the given tenant.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetTenantJobs**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetTenantJobs) | **GET** /api/v3/edge_manager/tenants/{tenant_id}/jobs | GetTenantJobs - Get jobs for the given tenant.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceGetVersion**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceGetVersion) | **GET** /api/v3/edge_manager/system/version | GetVersion - Get the system version information for the service.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceInstallEdgeTenantRequest**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceInstallEdgeTenantRequest) | **POST** /api/v3/edges | InstallEdgeTenantRequest to Create gi and tnt CRs on edge
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceQueryControllerLogs**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceQueryControllerLogs) | **POST** /api/v3/edge_manager/controllers/{controller_id}/logs/query | QueryControllerLogs - Query for the controller logs for a running controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceUpdateCommand**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateCommand) | **PUT** /api/v3/edge_manager/commands/{id} | UpdateCommand - Update the command.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceUpdateController**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateController) | **PUT** /api/v3/edge_manager/controllers/{id} | UpdateController - Update an existing controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceUpdateControllerStatus**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateControllerStatus) | **PUT** /api/v3/edge_manager/controllers/{id}/status | UpdateControllerStatus - Updates the status for the given controller.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceUpdateEdgeTenantRequest**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateEdgeTenantRequest) | **PATCH** /api/v3/edges/{edge_id} | UpdateEdgeTenantRequest to update gi and tnt CRs on edge
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceUpdateJob**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJob) | **PUT** /api/v3/edge_manager/jobs/{id} | UpdateJob - Update a job.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceUpdateJobExecution**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobExecution) | **PUT** /api/v3/edge_manager/job_executions/{id} | UpdateJobExecution - Update a job execution.
-*ResourceControllerK8ServiceApi* | [**resourceControllerK8ServiceUpdateJobStatus**](docs/ResourceControllerK8ServiceApi.md#resourceControllerK8ServiceUpdateJobStatus) | **PUT** /api/v3/edge_manager/jobs/{job_id}/status | UpdateJobStatus - Updates the status for the given Job.
 *RiskAnalyticsControllerApi* | [**riskAnalyticsControllerEnableDisableRiskEventFeedback**](docs/RiskAnalyticsControllerApi.md#riskAnalyticsControllerEnableDisableRiskEventFeedback) | **PUT** /api/v3/risk_feedback/status | Summary: Enable disable risk rvent feedback Description: Enable or disable the collect feedback process.
 *RiskAnalyticsControllerApi* | [**riskAnalyticsControllerEnableDisableRiskEventProcess**](docs/RiskAnalyticsControllerApi.md#riskAnalyticsControllerEnableDisableRiskEventProcess) | **PUT** /api/v3/risk_process/status | Summary: Enable disable risk event process Description: Enable or disable the risk event process.
 *RiskAnalyticsControllerApi* | [**riskAnalyticsControllerGetAllClassificationsList**](docs/RiskAnalyticsControllerApi.md#riskAnalyticsControllerGetAllClassificationsList) | **GET** /api/v3/risk_events/classifications | Summary: Get all classifications Description: Get all possible classifications for a risk event.
@@ -522,19 +528,6 @@ Class | Method | HTTP request | Description
 *StreamsServiceApi* | [**streamsServiceCheckAzureStorageString**](docs/StreamsServiceApi.md#streamsServiceCheckAzureStorageString) | **POST** /api/v3/streams/azure_storage | Summary: Check Azure storage string Description: Service to verify Azure storage connection.
 *StreamsServiceApi* | [**streamsServiceGetAWSRegions**](docs/StreamsServiceApi.md#streamsServiceGetAWSRegions) | **GET** /api/v3/streams/regions | Summary: Get AWS regions Description: Service to get AWS regions.
 *StreamsServiceApi* | [**streamsServiceListAWSStreams**](docs/StreamsServiceApi.md#streamsServiceListAWSStreams) | **POST** /api/v3/streams | Summary: List AWS streams Description: Service to list AWS Kinesis streams.
-*TemplatesServiceApi* | [**templatesServiceCreateIntegration**](docs/TemplatesServiceApi.md#templatesServiceCreateIntegration) | **POST** /api/v3/templates/integration | Summary: Create integration Description: Create a set of new templates for a new integration.
-*TemplatesServiceApi* | [**templatesServiceCreateTemplate**](docs/TemplatesServiceApi.md#templatesServiceCreateTemplate) | **POST** /api/v3/templates | Summary: Create template Description: Create a new template.
-*TemplatesServiceApi* | [**templatesServiceDeleteIntegration**](docs/TemplatesServiceApi.md#templatesServiceDeleteIntegration) | **DELETE** /api/v3/templates/integrations/{integration_id} | Summary: Delete integration Description: Delete all templates associated with an integration.
-*TemplatesServiceApi* | [**templatesServiceDeleteTemplate**](docs/TemplatesServiceApi.md#templatesServiceDeleteTemplate) | **DELETE** /api/v3/templates/{template_id} | Summary: Delete template Description: Delete a specific template.
-*TemplatesServiceApi* | [**templatesServiceGetOriginDefaultContent**](docs/TemplatesServiceApi.md#templatesServiceGetOriginDefaultContent) | **GET** /api/v3/templates/origins/{origin}/content | Summary: Get origin default content Description: Return the default content for a template with a specified origin and MIME type.
-*TemplatesServiceApi* | [**templatesServiceGetOriginFields**](docs/TemplatesServiceApi.md#templatesServiceGetOriginFields) | **GET** /api/v3/templates/origins/{origin}/fields | Summary: Get origin fields Description: Return the fields available with a specific origin.
-*TemplatesServiceApi* | [**templatesServiceGetTemplate**](docs/TemplatesServiceApi.md#templatesServiceGetTemplate) | **GET** /api/v3/templates/{template_id} | Summary: Get template Description: Return a specific template by id.
-*TemplatesServiceApi* | [**templatesServiceGetTemplates**](docs/TemplatesServiceApi.md#templatesServiceGetTemplates) | **GET** /api/v3/templates | Summary: Get templates Description: Return all templates based on supplied filters.
-*TemplatesServiceApi* | [**templatesServiceGetTemplatesForEdge**](docs/TemplatesServiceApi.md#templatesServiceGetTemplatesForEdge) | **GET** /api/v3/templates/edge | Summary: Get templates for edge Description: Return all templates based on supplied filters.
-*TemplatesServiceApi* | [**templatesServiceTestTemplate**](docs/TemplatesServiceApi.md#templatesServiceTestTemplate) | **POST** /api/v3/templates/test | Summary: Test template Description: Analyze a specified template to ensure will function correctly when utilized.
-*TemplatesServiceApi* | [**templatesServiceTransformTemplate**](docs/TemplatesServiceApi.md#templatesServiceTransformTemplate) | **POST** /api/v3/templates/transform | Summary: Transform template Description: Process the specified template and returns the Title and Content based on supplied data.
-*TemplatesServiceApi* | [**templatesServiceTransformTemplateJSON**](docs/TemplatesServiceApi.md#templatesServiceTransformTemplateJSON) | **POST** /api/v3/templates/transformjson | Summary: Transform template JSON Description: Process the specified template and returns the Title and Content based on supplied json data string.
-*TemplatesServiceApi* | [**templatesServiceUpdateTemplate**](docs/TemplatesServiceApi.md#templatesServiceUpdateTemplate) | **PATCH** /api/v3/templates/{template_id} | Summary: Update template Description: Update a single template.
 *TenantuserApi* | [**tenantuserCreateAPIKey**](docs/TenantuserApi.md#tenantuserCreateAPIKey) | **POST** /api/v3/apikeys | Summary: Create API key Description: Create API Key.
 *TenantuserApi* | [**tenantuserDeleteAPIKey**](docs/TenantuserApi.md#tenantuserDeleteAPIKey) | **DELETE** /api/v3/apikeys/{id} | Summary: Delete API key Description: Delete APIKey Document based on the document id.
 *TenantuserApi* | [**tenantuserDeleteRole**](docs/TenantuserApi.md#tenantuserDeleteRole) | **DELETE** /api/v3/roles/{role_id} | Summary: Delete role Description: Delete a role.
@@ -553,17 +546,24 @@ Class | Method | HTTP request | Description
 *TenantuserApi* | [**tenantuserUpdatePrivilegesRoleBulk**](docs/TenantuserApi.md#tenantuserUpdatePrivilegesRoleBulk) | **PATCH** /api/v3/privileges | Summary: Update privileges role bulk Description: Perform bulk user update role.
 *TenantuserApi* | [**tenantuserUpdateRole**](docs/TenantuserApi.md#tenantuserUpdateRole) | **PATCH** /api/v3/roles/{role_id} | Summary: Update role Description: Update single role.
 *TenantuserApi* | [**tenantuserUpdateUserRoleBulk**](docs/TenantuserApi.md#tenantuserUpdateUserRoleBulk) | **PATCH** /api/v3/users/role | Summary: Update user role bulk Description: Perform bulk user add or remove role.
-*ThirdPartyVendorsApi* | [**getLinkedVendor**](docs/ThirdPartyVendorsApi.md#getLinkedVendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
-*ThirdPartyVendorsApi* | [**getSingleLinkedVendor**](docs/ThirdPartyVendorsApi.md#getSingleLinkedVendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId} | Get the third party vendors list
-*ThirdPartyVendorsApi* | [**listLinkedVendorDataStores**](docs/ThirdPartyVendorsApi.md#listLinkedVendorDataStores) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
-*ThirdPartyVendorsApi* | [**listLinkedVendors**](docs/ThirdPartyVendorsApi.md#listLinkedVendors) | **GET** /api/v1/dspm/linkedVendors | Get the summary of a third party vendor
-*ThirdPartyVendorsApi* | [**listTrustedAssets**](docs/ThirdPartyVendorsApi.md#listTrustedAssets) | **GET** /api/v1/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
+*ThirdPartyVendorsApi* | [**getLinkedVendor**](docs/ThirdPartyVendorsApi.md#getLinkedVendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
+*ThirdPartyVendorsApi* | [**getSingleLinkedVendor**](docs/ThirdPartyVendorsApi.md#getSingleLinkedVendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId} | Get the third party vendors list
+*ThirdPartyVendorsApi* | [**listLinkedVendorDataStores**](docs/ThirdPartyVendorsApi.md#listLinkedVendorDataStores) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
+*ThirdPartyVendorsApi* | [**listLinkedVendors**](docs/ThirdPartyVendorsApi.md#listLinkedVendors) | **GET** /api/v2/dspm/linkedVendors | Get the summary of a third party vendor
+*ThirdPartyVendorsApi* | [**listTrustedAssets**](docs/ThirdPartyVendorsApi.md#listTrustedAssets) | **GET** /api/v2/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
 *UniversalConnectorManagerApi* | [**universalConnectorManagerGetCertificate**](docs/UniversalConnectorManagerApi.md#universalConnectorManagerGetCertificate) | **GET** /api/v3/certificates | Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
 *UniversalConnectorManagerApi* | [**universalConnectorManagerGetConnectors**](docs/UniversalConnectorManagerApi.md#universalConnectorManagerGetConnectors) | **GET** /api/v3/connectors | Summary: Get connectors Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.
 *UniversalConnectorManagerApi* | [**universalConnectorManagerGetUCSetup**](docs/UniversalConnectorManagerApi.md#universalConnectorManagerGetUCSetup) | **GET** /api/v3/universal_connections/configurations/{plugin_id} | Gets information to setup the new Universal connection.
 *UniversalConnectorManagerApi* | [**universalConnectorManagerListConnectionsSummary**](docs/UniversalConnectorManagerApi.md#universalConnectorManagerListConnectionsSummary) | **GET** /api/v3/universal_connections | Summary: List connections summary Description: List a summary of Universal Connector configured connections (AKA datasources).
 *UniversalConnectorManagerApi* | [**universalConnectorManagerPluginsList**](docs/UniversalConnectorManagerApi.md#universalConnectorManagerPluginsList) | **GET** /api/v3/plugins | Summary: Plugins list Description: List of all universal connector plugins.
 *UniversalConnectorManagerApi* | [**universalConnectorManagerUploadPlugin**](docs/UniversalConnectorManagerApi.md#universalConnectorManagerUploadPlugin) | **POST** /api/v3/plugins | Summary: Upload plugin Description: Upload a plugin-package for Universal Connector.
+*VulnerabilityManagementServiceApi* | [**vulnerabilityManagementServiceCreateVulnerability**](docs/VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceCreateVulnerability) | **POST** /api/v3/vulnerabilities/ingestion | Summary: Create a vulnerability Description: Create a vulnerability based on request
+*VulnerabilityManagementServiceApi* | [**vulnerabilityManagementServiceGetFiltersForVulnerabilities**](docs/VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetFiltersForVulnerabilities) | **GET** /api/v3/vulnerabilities/filters/metadata | Summary: Get filters for vulnerabilities Description: Get a list of filters category and sub category with all data.
+*VulnerabilityManagementServiceApi* | [**vulnerabilityManagementServiceGetVulnerabilities**](docs/VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetVulnerabilities) | **POST** /api/v3/vulnerabilities/search | Summary: Get vulnerabilities Description: Returns a list of vulnerabilities.
+*VulnerabilityManagementServiceApi* | [**vulnerabilityManagementServiceGetVulnerabilitiesStats**](docs/VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetVulnerabilitiesStats) | **GET** /api/v3/vulnerabilities/stats/data | Summary: Get vulnerabilities stats Description: Get various vulnerabilities stats.
+*VulnerabilityManagementServiceApi* | [**vulnerabilityManagementServiceGetVulnerability**](docs/VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceGetVulnerability) | **GET** /api/v3/vulnerabilities/{vulnerability_id} | Summary: Get vulnerability Description: Returns a vulnerability based on vulnerability.
+*VulnerabilityManagementServiceApi* | [**vulnerabilityManagementServiceUpdateVulnerabilities**](docs/VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceUpdateVulnerabilities) | **PATCH** /api/v3/vulnerabilities | Updates comments, assignee, and status for vulnerabilities
+*VulnerabilityManagementServiceApi* | [**vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger**](docs/VulnerabilityManagementServiceApi.md#vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger) | **POST** /api/v3/vulnerabilities/ingestion/trigger | Summary: Vulnerability ingest manual trigger Description: Manual trigger for Scheduled Vulnerability Ingestion.
 *WorkflowApi* | [**workflowCreateCase**](docs/WorkflowApi.md#workflowCreateCase) | **POST** /api/v3/cases | Summary: Create case Description: Create single case.
 *WorkflowApi* | [**workflowCreateProductEntity**](docs/WorkflowApi.md#workflowCreateProductEntity) | **POST** /api/v3/workflow/productentities | Summary: Create product entity Description: Create single product entity.
 *WorkflowApi* | [**workflowCreateTask**](docs/WorkflowApi.md#workflowCreateTask) | **POST** /api/v3/cases/{case_id}/tasks | Summary: Create task Description: Create single task within a parent case.
@@ -612,7 +612,6 @@ Class | Method | HTTP request | Description
  - [Assetsv3AssetClassification](docs/Assetsv3AssetClassification.md)
  - [Assetsv3AssetControl](docs/Assetsv3AssetControl.md)
  - [Assetsv3AssetEndpoint](docs/Assetsv3AssetEndpoint.md)
- - [Assetsv3AssetFilterTemplateRequest](docs/Assetsv3AssetFilterTemplateRequest.md)
  - [Assetsv3AssetForMergeSplit](docs/Assetsv3AssetForMergeSplit.md)
  - [Assetsv3AssetInformation](docs/Assetsv3AssetInformation.md)
  - [Assetsv3AssetIngestionRequest](docs/Assetsv3AssetIngestionRequest.md)
@@ -631,11 +630,13 @@ Class | Method | HTTP request | Description
  - [Assetsv3AssignedTags](docs/Assetsv3AssignedTags.md)
  - [Assetsv3Attributes](docs/Assetsv3Attributes.md)
  - [Assetsv3BeforeAfter](docs/Assetsv3BeforeAfter.md)
+ - [Assetsv3CSVRow](docs/Assetsv3CSVRow.md)
  - [Assetsv3Category](docs/Assetsv3Category.md)
  - [Assetsv3ChildCategory](docs/Assetsv3ChildCategory.md)
  - [Assetsv3ClassificationData](docs/Assetsv3ClassificationData.md)
  - [Assetsv3ClassificationScanStatus](docs/Assetsv3ClassificationScanStatus.md)
  - [Assetsv3ClonePolicyRequest](docs/Assetsv3ClonePolicyRequest.md)
+ - [Assetsv3CompareCSVResponse](docs/Assetsv3CompareCSVResponse.md)
  - [Assetsv3ConnectionEdge](docs/Assetsv3ConnectionEdge.md)
  - [Assetsv3CreateUpdatePolicyRequest](docs/Assetsv3CreateUpdatePolicyRequest.md)
  - [Assetsv3CreateUpdatePolicyResponse](docs/Assetsv3CreateUpdatePolicyResponse.md)
@@ -664,6 +665,8 @@ Class | Method | HTTP request | Description
  - [Assetsv3HighestAssetTagCounts](docs/Assetsv3HighestAssetTagCounts.md)
  - [Assetsv3HostVertex](docs/Assetsv3HostVertex.md)
  - [Assetsv3IPVertex](docs/Assetsv3IPVertex.md)
+ - [Assetsv3ImportCSVRequest](docs/Assetsv3ImportCSVRequest.md)
+ - [Assetsv3ImportCSVResponse](docs/Assetsv3ImportCSVResponse.md)
  - [Assetsv3IpHost](docs/Assetsv3IpHost.md)
  - [Assetsv3Level](docs/Assetsv3Level.md)
  - [Assetsv3ListPolicyResponse](docs/Assetsv3ListPolicyResponse.md)
@@ -705,6 +708,7 @@ Class | Method | HTTP request | Description
  - [Assetsv3TagsAssigned](docs/Assetsv3TagsAssigned.md)
  - [Assetsv3TagsData](docs/Assetsv3TagsData.md)
  - [Assetsv3TagsFilterData](docs/Assetsv3TagsFilterData.md)
+ - [Assetsv3TemplateType](docs/Assetsv3TemplateType.md)
  - [Assetsv3TimelineDateRange](docs/Assetsv3TimelineDateRange.md)
  - [Assetsv3UnassignedTags](docs/Assetsv3UnassignedTags.md)
  - [Assetsv3UpdateAssetNameRequest](docs/Assetsv3UpdateAssetNameRequest.md)
@@ -733,7 +737,6 @@ Class | Method | HTTP request | Description
  - [AuthserverGetUserResponse](docs/AuthserverGetUserResponse.md)
  - [AuthserverListOauthClientResponse](docs/AuthserverListOauthClientResponse.md)
  - [AuthserverOauthClient](docs/AuthserverOauthClient.md)
- - [ClassificationStatus](docs/ClassificationStatus.md)
  - [ClientInfo](docs/ClientInfo.md)
  - [CloudAccountCountInner](docs/CloudAccountCountInner.md)
  - [CloudAccountDetails](docs/CloudAccountDetails.md)
@@ -847,7 +850,10 @@ Class | Method | HTTP request | Description
  - [Connectionsv3UpdatePluginResponse](docs/Connectionsv3UpdatePluginResponse.md)
  - [Connectionsv3UpdateSettingsRequest](docs/Connectionsv3UpdateSettingsRequest.md)
  - [Connectionsv3ValidateAwsConnectionRequest](docs/Connectionsv3ValidateAwsConnectionRequest.md)
+ - [Connectionsv3ValidateAzureConnectionRequest](docs/Connectionsv3ValidateAzureConnectionRequest.md)
  - [Connectionsv3ValidateConnectionResponse](docs/Connectionsv3ValidateConnectionResponse.md)
+ - [Connectionsv3ValidateGcpConnectionRequest](docs/Connectionsv3ValidateGcpConnectionRequest.md)
+ - [DBMetadataInfo](docs/DBMetadataInfo.md)
  - [Dashboardsv3Card](docs/Dashboardsv3Card.md)
  - [Dashboardsv3CardPosition](docs/Dashboardsv3CardPosition.md)
  - [Dashboardsv3CardType](docs/Dashboardsv3CardType.md)
@@ -886,6 +892,7 @@ Class | Method | HTTP request | Description
  - [Datamartprocessorv3GetDatamartResponse](docs/Datamartprocessorv3GetDatamartResponse.md)
  - [Datamartprocessorv3GetEarliestStartTimeResponse](docs/Datamartprocessorv3GetEarliestStartTimeResponse.md)
  - [Datamartprocessorv3StatusResponseBase](docs/Datamartprocessorv3StatusResponseBase.md)
+ - [DbInfo](docs/DbInfo.md)
  - [Ecosystemv3ColumnDefinition](docs/Ecosystemv3ColumnDefinition.md)
  - [Ecosystemv3CreateDatasetRequest](docs/Ecosystemv3CreateDatasetRequest.md)
  - [Ecosystemv3CreateDatasetResponse](docs/Ecosystemv3CreateDatasetResponse.md)
@@ -909,10 +916,6 @@ Class | Method | HTTP request | Description
  - [Ecosystemv3TestIntegrationRequest](docs/Ecosystemv3TestIntegrationRequest.md)
  - [Ecosystemv3TestIntegrationResponse](docs/Ecosystemv3TestIntegrationResponse.md)
  - [Ecosystemv3ValidateCSVContentResponse](docs/Ecosystemv3ValidateCSVContentResponse.md)
- - [Edgeschedulerv3GetEdgeQueryStatusResponse](docs/Edgeschedulerv3GetEdgeQueryStatusResponse.md)
- - [Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse](docs/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse.md)
- - [Edgeschedulerv3ScheduleEdgeQueryRequest](docs/Edgeschedulerv3ScheduleEdgeQueryRequest.md)
- - [Edgeschedulerv3ScheduleEdgeQueryResponse](docs/Edgeschedulerv3ScheduleEdgeQueryResponse.md)
  - [Environment](docs/Environment.md)
  - [Featureflagsv3DeleteFeatureFlagOverridesResponse](docs/Featureflagsv3DeleteFeatureFlagOverridesResponse.md)
  - [Featureflagsv3FeatureFlag](docs/Featureflagsv3FeatureFlag.md)
@@ -1104,19 +1107,28 @@ Class | Method | HTTP request | Description
  - [InviteUserBodyParams](docs/InviteUserBodyParams.md)
  - [Jumpboxv3AuthorizeRequest](docs/Jumpboxv3AuthorizeRequest.md)
  - [Jumpboxv3AuthorizeResponse](docs/Jumpboxv3AuthorizeResponse.md)
+ - [Jumpboxv3DeleteAccountResponse](docs/Jumpboxv3DeleteAccountResponse.md)
  - [Jumpboxv3DirectoryEntry](docs/Jumpboxv3DirectoryEntry.md)
  - [Jumpboxv3DisableUsersBulkResponse](docs/Jumpboxv3DisableUsersBulkResponse.md)
+ - [Jumpboxv3GetAccountResponse](docs/Jumpboxv3GetAccountResponse.md)
+ - [Jumpboxv3GetAccountsResponse](docs/Jumpboxv3GetAccountsResponse.md)
  - [Jumpboxv3GetTenantResponse](docs/Jumpboxv3GetTenantResponse.md)
  - [Jumpboxv3GetTenantsResponse](docs/Jumpboxv3GetTenantsResponse.md)
+ - [Jumpboxv3PostAccountRequest](docs/Jumpboxv3PostAccountRequest.md)
+ - [Jumpboxv3PostAccountResponse](docs/Jumpboxv3PostAccountResponse.md)
  - [Jumpboxv3PostTenantsRequest](docs/Jumpboxv3PostTenantsRequest.md)
  - [Jumpboxv3PostTenantsResponse](docs/Jumpboxv3PostTenantsResponse.md)
  - [Jumpboxv3PostUsersBulkRequest](docs/Jumpboxv3PostUsersBulkRequest.md)
  - [Jumpboxv3PostUsersBulkResponse](docs/Jumpboxv3PostUsersBulkResponse.md)
+ - [Jumpboxv3ResumeAccountResponse](docs/Jumpboxv3ResumeAccountResponse.md)
  - [Jumpboxv3SearchUsersRequest](docs/Jumpboxv3SearchUsersRequest.md)
  - [Jumpboxv3SearchUsersResponse](docs/Jumpboxv3SearchUsersResponse.md)
+ - [Jumpboxv3SuspendAccountResponse](docs/Jumpboxv3SuspendAccountResponse.md)
  - [Jumpboxv3Tenant](docs/Jumpboxv3Tenant.md)
  - [Jumpboxv3TestUserRequest](docs/Jumpboxv3TestUserRequest.md)
  - [Jumpboxv3TestUserResponse](docs/Jumpboxv3TestUserResponse.md)
+ - [Jumpboxv3UpdateAccountRequest](docs/Jumpboxv3UpdateAccountRequest.md)
+ - [Jumpboxv3UpdateAccountResponse](docs/Jumpboxv3UpdateAccountResponse.md)
  - [Jumpboxv3UpdateTenantRequest](docs/Jumpboxv3UpdateTenantRequest.md)
  - [Jumpboxv3UpdateTenantResponse](docs/Jumpboxv3UpdateTenantResponse.md)
  - [Jumpboxv3UpdateUsersBulkRequest](docs/Jumpboxv3UpdateUsersBulkRequest.md)
@@ -1167,6 +1179,7 @@ Class | Method | HTTP request | Description
  - [Notificationsv3NotificationRecordsFilter](docs/Notificationsv3NotificationRecordsFilter.md)
  - [Notificationsv3NotificationSeverity](docs/Notificationsv3NotificationSeverity.md)
  - [Notificationsv3NotificationState](docs/Notificationsv3NotificationState.md)
+ - [Notificationsv3Origin](docs/Notificationsv3Origin.md)
  - [Notificationsv3PipelineQueryOperator](docs/Notificationsv3PipelineQueryOperator.md)
  - [Notificationsv3PostNotificationRecordRequest](docs/Notificationsv3PostNotificationRecordRequest.md)
  - [Notificationsv3PostNotificationRecordResponse](docs/Notificationsv3PostNotificationRecordResponse.md)
@@ -1225,6 +1238,8 @@ Class | Method | HTTP request | Description
  - [Policybuilderv3GetPolicyNamesFromRuleIDsRequest](docs/Policybuilderv3GetPolicyNamesFromRuleIDsRequest.md)
  - [Policybuilderv3GetPolicyNamesFromRuleIDsResponse](docs/Policybuilderv3GetPolicyNamesFromRuleIDsResponse.md)
  - [Policybuilderv3GetPolicySyncListResponse](docs/Policybuilderv3GetPolicySyncListResponse.md)
+ - [Policybuilderv3GetPolicyVersionResponse](docs/Policybuilderv3GetPolicyVersionResponse.md)
+ - [Policybuilderv3GetPolicyVersionsInfoResponse](docs/Policybuilderv3GetPolicyVersionsInfoResponse.md)
  - [Policybuilderv3GetReceiversResponse](docs/Policybuilderv3GetReceiversResponse.md)
  - [Policybuilderv3GetRuleValidationRequest](docs/Policybuilderv3GetRuleValidationRequest.md)
  - [Policybuilderv3ImportIssue](docs/Policybuilderv3ImportIssue.md)
@@ -1243,6 +1258,7 @@ Class | Method | HTTP request | Description
  - [Policybuilderv3PolicyType](docs/Policybuilderv3PolicyType.md)
  - [Policybuilderv3PolicyUpdate](docs/Policybuilderv3PolicyUpdate.md)
  - [Policybuilderv3PossibleValueObj](docs/Policybuilderv3PossibleValueObj.md)
+ - [Policybuilderv3ProductType](docs/Policybuilderv3ProductType.md)
  - [Policybuilderv3RecipientType](docs/Policybuilderv3RecipientType.md)
  - [Policybuilderv3Rule](docs/Policybuilderv3Rule.md)
  - [Policybuilderv3RuleMetadataResponse](docs/Policybuilderv3RuleMetadataResponse.md)
@@ -1256,6 +1272,7 @@ Class | Method | HTTP request | Description
  - [Policybuilderv3StorePolicyGdpResponse](docs/Policybuilderv3StorePolicyGdpResponse.md)
  - [Policybuilderv3SyncStatusType](docs/Policybuilderv3SyncStatusType.md)
  - [Policybuilderv3TargetReceiver](docs/Policybuilderv3TargetReceiver.md)
+ - [Policybuilderv3VersionInfo](docs/Policybuilderv3VersionInfo.md)
  - [PotentialFlow](docs/PotentialFlow.md)
  - [PotentialFlowListItem](docs/PotentialFlowListItem.md)
  - [PotentialFlowPath](docs/PotentialFlowPath.md)
@@ -1334,6 +1351,8 @@ Class | Method | HTTP request | Description
  - [Reportsrunnerv3WriteResultsToFileResponse](docs/Reportsrunnerv3WriteResultsToFileResponse.md)
  - [Reportsrunnerv3WriteResultsToGroupResponse](docs/Reportsrunnerv3WriteResultsToGroupResponse.md)
  - [Reportsv3AggregationType](docs/Reportsv3AggregationType.md)
+ - [Reportsv3Artifact](docs/Reportsv3Artifact.md)
+ - [Reportsv3ArtifactType](docs/Reportsv3ArtifactType.md)
  - [Reportsv3BriefReport](docs/Reportsv3BriefReport.md)
  - [Reportsv3Category](docs/Reportsv3Category.md)
  - [Reportsv3CategoryDetail](docs/Reportsv3CategoryDetail.md)
@@ -1344,6 +1363,7 @@ Class | Method | HTTP request | Description
  - [Reportsv3ChartSettingsv2](docs/Reportsv3ChartSettingsv2.md)
  - [Reportsv3ChartType](docs/Reportsv3ChartType.md)
  - [Reportsv3ContributionPointersInfoObject](docs/Reportsv3ContributionPointersInfoObject.md)
+ - [Reportsv3Control](docs/Reportsv3Control.md)
  - [Reportsv3CreateCategoryRequest](docs/Reportsv3CreateCategoryRequest.md)
  - [Reportsv3CreateCategoryResponse](docs/Reportsv3CreateCategoryResponse.md)
  - [Reportsv3CreateChartRequest](docs/Reportsv3CreateChartRequest.md)
@@ -1352,12 +1372,24 @@ Class | Method | HTTP request | Description
  - [Reportsv3CreateChartTemplatev2Response](docs/Reportsv3CreateChartTemplatev2Response.md)
  - [Reportsv3CreateChartv2Request](docs/Reportsv3CreateChartv2Request.md)
  - [Reportsv3CreateChartv2Response](docs/Reportsv3CreateChartv2Response.md)
+ - [Reportsv3CreateControlRequest](docs/Reportsv3CreateControlRequest.md)
+ - [Reportsv3CreateControlResponse](docs/Reportsv3CreateControlResponse.md)
  - [Reportsv3CreateFieldsByCategoryRequest](docs/Reportsv3CreateFieldsByCategoryRequest.md)
  - [Reportsv3CreateFieldsByCategoryResponse](docs/Reportsv3CreateFieldsByCategoryResponse.md)
+ - [Reportsv3CreateGradeRequest](docs/Reportsv3CreateGradeRequest.md)
+ - [Reportsv3CreateGradeResponse](docs/Reportsv3CreateGradeResponse.md)
  - [Reportsv3CreateJoinRequest](docs/Reportsv3CreateJoinRequest.md)
  - [Reportsv3CreateJoinResponse](docs/Reportsv3CreateJoinResponse.md)
+ - [Reportsv3CreateMeasureRequest](docs/Reportsv3CreateMeasureRequest.md)
+ - [Reportsv3CreateMeasureResponse](docs/Reportsv3CreateMeasureResponse.md)
+ - [Reportsv3CreateMetricRequest](docs/Reportsv3CreateMetricRequest.md)
+ - [Reportsv3CreateMetricResponse](docs/Reportsv3CreateMetricResponse.md)
+ - [Reportsv3CreateProgramRequest](docs/Reportsv3CreateProgramRequest.md)
+ - [Reportsv3CreateProgramResponse](docs/Reportsv3CreateProgramResponse.md)
  - [Reportsv3CreateReportRequest](docs/Reportsv3CreateReportRequest.md)
  - [Reportsv3CreateReportResponse](docs/Reportsv3CreateReportResponse.md)
+ - [Reportsv3CreateRequirementRequest](docs/Reportsv3CreateRequirementRequest.md)
+ - [Reportsv3CreateRequirementResponse](docs/Reportsv3CreateRequirementResponse.md)
  - [Reportsv3CreateVariantRequest](docs/Reportsv3CreateVariantRequest.md)
  - [Reportsv3CreateVariantResponse](docs/Reportsv3CreateVariantResponse.md)
  - [Reportsv3CustomChartTemplatev2](docs/Reportsv3CustomChartTemplatev2.md)
@@ -1368,9 +1400,21 @@ Class | Method | HTTP request | Description
  - [Reportsv3DeleteChartResponse](docs/Reportsv3DeleteChartResponse.md)
  - [Reportsv3DeleteChartTemplatev2Response](docs/Reportsv3DeleteChartTemplatev2Response.md)
  - [Reportsv3DeleteChartv2Response](docs/Reportsv3DeleteChartv2Response.md)
+ - [Reportsv3DeleteControlRequest](docs/Reportsv3DeleteControlRequest.md)
+ - [Reportsv3DeleteControlResponse](docs/Reportsv3DeleteControlResponse.md)
  - [Reportsv3DeleteFieldsByCategoryResponse](docs/Reportsv3DeleteFieldsByCategoryResponse.md)
+ - [Reportsv3DeleteGradeRequest](docs/Reportsv3DeleteGradeRequest.md)
+ - [Reportsv3DeleteGradeResponse](docs/Reportsv3DeleteGradeResponse.md)
  - [Reportsv3DeleteJoinResponse](docs/Reportsv3DeleteJoinResponse.md)
+ - [Reportsv3DeleteMeasureRequest](docs/Reportsv3DeleteMeasureRequest.md)
+ - [Reportsv3DeleteMeasureResponse](docs/Reportsv3DeleteMeasureResponse.md)
+ - [Reportsv3DeleteMetricRequest](docs/Reportsv3DeleteMetricRequest.md)
+ - [Reportsv3DeleteMetricResponse](docs/Reportsv3DeleteMetricResponse.md)
+ - [Reportsv3DeleteProgramRequest](docs/Reportsv3DeleteProgramRequest.md)
+ - [Reportsv3DeleteProgramResponse](docs/Reportsv3DeleteProgramResponse.md)
  - [Reportsv3DeleteReportResponse](docs/Reportsv3DeleteReportResponse.md)
+ - [Reportsv3DeleteRequirementRequest](docs/Reportsv3DeleteRequirementRequest.md)
+ - [Reportsv3DeleteRequirementResponse](docs/Reportsv3DeleteRequirementResponse.md)
  - [Reportsv3DeleteVariantResponse](docs/Reportsv3DeleteVariantResponse.md)
  - [Reportsv3DisplayHeader](docs/Reportsv3DisplayHeader.md)
  - [Reportsv3FieldName](docs/Reportsv3FieldName.md)
@@ -1382,9 +1426,14 @@ Class | Method | HTTP request | Description
  - [Reportsv3GetChartSettingsResponse](docs/Reportsv3GetChartSettingsResponse.md)
  - [Reportsv3GetChartSettingsv2Response](docs/Reportsv3GetChartSettingsv2Response.md)
  - [Reportsv3GetChartTemplatesv2Response](docs/Reportsv3GetChartTemplatesv2Response.md)
+ - [Reportsv3GetControlsResponse](docs/Reportsv3GetControlsResponse.md)
  - [Reportsv3GetFieldsByCategoriesResponse](docs/Reportsv3GetFieldsByCategoriesResponse.md)
  - [Reportsv3GetFieldsByCategoryResponse](docs/Reportsv3GetFieldsByCategoryResponse.md)
+ - [Reportsv3GetGradesResponse](docs/Reportsv3GetGradesResponse.md)
  - [Reportsv3GetJoinsResponse](docs/Reportsv3GetJoinsResponse.md)
+ - [Reportsv3GetMeasuresResponse](docs/Reportsv3GetMeasuresResponse.md)
+ - [Reportsv3GetMetricsResponse](docs/Reportsv3GetMetricsResponse.md)
+ - [Reportsv3GetProgramsResponse](docs/Reportsv3GetProgramsResponse.md)
  - [Reportsv3GetQueryByReportDefinitionRequest](docs/Reportsv3GetQueryByReportDefinitionRequest.md)
  - [Reportsv3GetQueryByReportIDRequest](docs/Reportsv3GetQueryByReportIDRequest.md)
  - [Reportsv3GetReportDefinitionResponse](docs/Reportsv3GetReportDefinitionResponse.md)
@@ -1395,8 +1444,11 @@ Class | Method | HTTP request | Description
  - [Reportsv3GetReportsForJoinResponse](docs/Reportsv3GetReportsForJoinResponse.md)
  - [Reportsv3GetReportsResponse](docs/Reportsv3GetReportsResponse.md)
  - [Reportsv3GetReportsTagsResponse](docs/Reportsv3GetReportsTagsResponse.md)
+ - [Reportsv3GetRequirementsResponse](docs/Reportsv3GetRequirementsResponse.md)
  - [Reportsv3GetVariantResponse](docs/Reportsv3GetVariantResponse.md)
  - [Reportsv3GetVariantsResponse](docs/Reportsv3GetVariantsResponse.md)
+ - [Reportsv3Grade](docs/Reportsv3Grade.md)
+ - [Reportsv3GradeThreshold](docs/Reportsv3GradeThreshold.md)
  - [Reportsv3Header](docs/Reportsv3Header.md)
  - [Reportsv3HeaderDataType](docs/Reportsv3HeaderDataType.md)
  - [Reportsv3HeaderDescription](docs/Reportsv3HeaderDescription.md)
@@ -1407,6 +1459,11 @@ Class | Method | HTTP request | Description
  - [Reportsv3JoinDefinition](docs/Reportsv3JoinDefinition.md)
  - [Reportsv3JoinDefinitionWithID](docs/Reportsv3JoinDefinitionWithID.md)
  - [Reportsv3Literal](docs/Reportsv3Literal.md)
+ - [Reportsv3Measure](docs/Reportsv3Measure.md)
+ - [Reportsv3MeasureType](docs/Reportsv3MeasureType.md)
+ - [Reportsv3Metric](docs/Reportsv3Metric.md)
+ - [Reportsv3MetricType](docs/Reportsv3MetricType.md)
+ - [Reportsv3MetricsColumn](docs/Reportsv3MetricsColumn.md)
  - [Reportsv3ModelType](docs/Reportsv3ModelType.md)
  - [Reportsv3OperatorType](docs/Reportsv3OperatorType.md)
  - [Reportsv3OptionType](docs/Reportsv3OptionType.md)
@@ -1416,6 +1473,7 @@ Class | Method | HTTP request | Description
  - [Reportsv3PartialChartUpdateResponse](docs/Reportsv3PartialChartUpdateResponse.md)
  - [Reportsv3PartialReportUpdateRequest](docs/Reportsv3PartialReportUpdateRequest.md)
  - [Reportsv3PartialReportUpdateResponse](docs/Reportsv3PartialReportUpdateResponse.md)
+ - [Reportsv3Program](docs/Reportsv3Program.md)
  - [Reportsv3ReportAggFilter](docs/Reportsv3ReportAggFilter.md)
  - [Reportsv3ReportAggFilterCondition](docs/Reportsv3ReportAggFilterCondition.md)
  - [Reportsv3ReportDefinition](docs/Reportsv3ReportDefinition.md)
@@ -1427,6 +1485,9 @@ Class | Method | HTTP request | Description
  - [Reportsv3ReportResult](docs/Reportsv3ReportResult.md)
  - [Reportsv3ReportTag](docs/Reportsv3ReportTag.md)
  - [Reportsv3ReportUsedInJoin](docs/Reportsv3ReportUsedInJoin.md)
+ - [Reportsv3Requirement](docs/Reportsv3Requirement.md)
+ - [Reportsv3RunGradesRequest](docs/Reportsv3RunGradesRequest.md)
+ - [Reportsv3RunGradesResponse](docs/Reportsv3RunGradesResponse.md)
  - [Reportsv3RunReportResponse](docs/Reportsv3RunReportResponse.md)
  - [Reportsv3RunTimeParameter](docs/Reportsv3RunTimeParameter.md)
  - [Reportsv3RunVariantOperationRequest](docs/Reportsv3RunVariantOperationRequest.md)
@@ -1439,10 +1500,22 @@ Class | Method | HTTP request | Description
  - [Reportsv3UpdateChartResponse](docs/Reportsv3UpdateChartResponse.md)
  - [Reportsv3UpdateChartv2Request](docs/Reportsv3UpdateChartv2Request.md)
  - [Reportsv3UpdateChartv2Response](docs/Reportsv3UpdateChartv2Response.md)
+ - [Reportsv3UpdateControlRequest](docs/Reportsv3UpdateControlRequest.md)
+ - [Reportsv3UpdateControlResponse](docs/Reportsv3UpdateControlResponse.md)
+ - [Reportsv3UpdateGradeRequest](docs/Reportsv3UpdateGradeRequest.md)
+ - [Reportsv3UpdateGradeResponse](docs/Reportsv3UpdateGradeResponse.md)
  - [Reportsv3UpdateJoinRequest](docs/Reportsv3UpdateJoinRequest.md)
  - [Reportsv3UpdateJoinResponse](docs/Reportsv3UpdateJoinResponse.md)
+ - [Reportsv3UpdateMeasureRequest](docs/Reportsv3UpdateMeasureRequest.md)
+ - [Reportsv3UpdateMeasureResponse](docs/Reportsv3UpdateMeasureResponse.md)
+ - [Reportsv3UpdateMetricRequest](docs/Reportsv3UpdateMetricRequest.md)
+ - [Reportsv3UpdateMetricResponse](docs/Reportsv3UpdateMetricResponse.md)
+ - [Reportsv3UpdateProgramRequest](docs/Reportsv3UpdateProgramRequest.md)
+ - [Reportsv3UpdateProgramResponse](docs/Reportsv3UpdateProgramResponse.md)
  - [Reportsv3UpdateReportRequest](docs/Reportsv3UpdateReportRequest.md)
  - [Reportsv3UpdateReportResponse](docs/Reportsv3UpdateReportResponse.md)
+ - [Reportsv3UpdateRequirementRequest](docs/Reportsv3UpdateRequirementRequest.md)
+ - [Reportsv3UpdateRequirementResponse](docs/Reportsv3UpdateRequirementResponse.md)
  - [Reportsv3UpdateVariantOverrideRequest](docs/Reportsv3UpdateVariantOverrideRequest.md)
  - [Reportsv3UpdateVariantOverrideResponse](docs/Reportsv3UpdateVariantOverrideResponse.md)
  - [Reportsv3Variant](docs/Reportsv3Variant.md)
@@ -1452,67 +1525,11 @@ Class | Method | HTTP request | Description
  - [Reportsv3VariantRuleType](docs/Reportsv3VariantRuleType.md)
  - [RescanDataStoreRequest](docs/RescanDataStoreRequest.md)
  - [ResetPasswordRequest](docs/ResetPasswordRequest.md)
- - [Resourcecontrollerk8v3App](docs/Resourcecontrollerk8v3App.md)
- - [Resourcecontrollerk8v3AppDeployment](docs/Resourcecontrollerk8v3AppDeployment.md)
- - [Resourcecontrollerk8v3AppFile](docs/Resourcecontrollerk8v3AppFile.md)
- - [Resourcecontrollerk8v3AppHpa](docs/Resourcecontrollerk8v3AppHpa.md)
- - [Resourcecontrollerk8v3AppSecret](docs/Resourcecontrollerk8v3AppSecret.md)
- - [Resourcecontrollerk8v3Container](docs/Resourcecontrollerk8v3Container.md)
- - [Resourcecontrollerk8v3ContainerResources](docs/Resourcecontrollerk8v3ContainerResources.md)
- - [Resourcecontrollerk8v3ContainerResourcesQuantity](docs/Resourcecontrollerk8v3ContainerResourcesQuantity.md)
- - [Resourcecontrollerk8v3Controller](docs/Resourcecontrollerk8v3Controller.md)
- - [Resourcecontrollerk8v3ControllerApp](docs/Resourcecontrollerk8v3ControllerApp.md)
- - [Resourcecontrollerk8v3ControllerAppFile](docs/Resourcecontrollerk8v3ControllerAppFile.md)
- - [Resourcecontrollerk8v3ControllerAppSecret](docs/Resourcecontrollerk8v3ControllerAppSecret.md)
- - [Resourcecontrollerk8v3ControllerCommand](docs/Resourcecontrollerk8v3ControllerCommand.md)
- - [Resourcecontrollerk8v3ControllerHeartbeat](docs/Resourcecontrollerk8v3ControllerHeartbeat.md)
- - [Resourcecontrollerk8v3ControllerResources](docs/Resourcecontrollerk8v3ControllerResources.md)
- - [Resourcecontrollerk8v3ControllerStatus](docs/Resourcecontrollerk8v3ControllerStatus.md)
- - [Resourcecontrollerk8v3CreateControllerRequest](docs/Resourcecontrollerk8v3CreateControllerRequest.md)
- - [Resourcecontrollerk8v3CreateHeartBeatExResponse](docs/Resourcecontrollerk8v3CreateHeartBeatExResponse.md)
- - [Resourcecontrollerk8v3CreateHeartBeatRequest](docs/Resourcecontrollerk8v3CreateHeartBeatRequest.md)
- - [Resourcecontrollerk8v3CreateHeartBeatResponse](docs/Resourcecontrollerk8v3CreateHeartBeatResponse.md)
- - [Resourcecontrollerk8v3CreateKeypairRequest](docs/Resourcecontrollerk8v3CreateKeypairRequest.md)
- - [Resourcecontrollerk8v3CreateKeypairResponse](docs/Resourcecontrollerk8v3CreateKeypairResponse.md)
- - [Resourcecontrollerk8v3Cron](docs/Resourcecontrollerk8v3Cron.md)
- - [Resourcecontrollerk8v3DeleteControllerRequest](docs/Resourcecontrollerk8v3DeleteControllerRequest.md)
- - [Resourcecontrollerk8v3DeleteControllerResponse](docs/Resourcecontrollerk8v3DeleteControllerResponse.md)
- - [Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost](docs/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost.md)
- - [Resourcecontrollerk8v3DeleteEdgeTenantResponse](docs/Resourcecontrollerk8v3DeleteEdgeTenantResponse.md)
- - [Resourcecontrollerk8v3DeleteJobRequest](docs/Resourcecontrollerk8v3DeleteJobRequest.md)
- - [Resourcecontrollerk8v3DeleteJobResponse](docs/Resourcecontrollerk8v3DeleteJobResponse.md)
- - [Resourcecontrollerk8v3DownloadControllerLogsRequest](docs/Resourcecontrollerk8v3DownloadControllerLogsRequest.md)
- - [Resourcecontrollerk8v3DownloadControllerLogsResponse](docs/Resourcecontrollerk8v3DownloadControllerLogsResponse.md)
- - [Resourcecontrollerk8v3EdgeResourceResponse](docs/Resourcecontrollerk8v3EdgeResourceResponse.md)
- - [Resourcecontrollerk8v3EdgeTenantRequest](docs/Resourcecontrollerk8v3EdgeTenantRequest.md)
- - [Resourcecontrollerk8v3File](docs/Resourcecontrollerk8v3File.md)
  - [Resourcecontrollerk8v3GUCStatefulsetState](docs/Resourcecontrollerk8v3GUCStatefulsetState.md)
- - [Resourcecontrollerk8v3GetControllerAppsResponse](docs/Resourcecontrollerk8v3GetControllerAppsResponse.md)
- - [Resourcecontrollerk8v3GetControllerCommandsResponse](docs/Resourcecontrollerk8v3GetControllerCommandsResponse.md)
- - [Resourcecontrollerk8v3GetControllerJobsResponse](docs/Resourcecontrollerk8v3GetControllerJobsResponse.md)
- - [Resourcecontrollerk8v3GetControllersResponse](docs/Resourcecontrollerk8v3GetControllersResponse.md)
- - [Resourcecontrollerk8v3GetControllersWithStatusResponse](docs/Resourcecontrollerk8v3GetControllersWithStatusResponse.md)
- - [Resourcecontrollerk8v3GetJobExecutionsResponse](docs/Resourcecontrollerk8v3GetJobExecutionsResponse.md)
- - [Resourcecontrollerk8v3GetTenantAppsResponse](docs/Resourcecontrollerk8v3GetTenantAppsResponse.md)
- - [Resourcecontrollerk8v3GetTenantJobsResponse](docs/Resourcecontrollerk8v3GetTenantJobsResponse.md)
- - [Resourcecontrollerk8v3InitContainer](docs/Resourcecontrollerk8v3InitContainer.md)
- - [Resourcecontrollerk8v3Job](docs/Resourcecontrollerk8v3Job.md)
- - [Resourcecontrollerk8v3JobExecution](docs/Resourcecontrollerk8v3JobExecution.md)
- - [Resourcecontrollerk8v3JobStatusDTO](docs/Resourcecontrollerk8v3JobStatusDTO.md)
- - [Resourcecontrollerk8v3KeyPair](docs/Resourcecontrollerk8v3KeyPair.md)
- - [Resourcecontrollerk8v3QueryControllerLogsRequest](docs/Resourcecontrollerk8v3QueryControllerLogsRequest.md)
- - [Resourcecontrollerk8v3QueryControllerLogsResponse](docs/Resourcecontrollerk8v3QueryControllerLogsResponse.md)
- - [Resourcecontrollerk8v3QueryLogs](docs/Resourcecontrollerk8v3QueryLogs.md)
- - [Resourcecontrollerk8v3Rule](docs/Resourcecontrollerk8v3Rule.md)
- - [Resourcecontrollerk8v3Secret](docs/Resourcecontrollerk8v3Secret.md)
  - [Resourcecontrollerk8v3TenantGUCCreateResponse](docs/Resourcecontrollerk8v3TenantGUCCreateResponse.md)
  - [Resourcecontrollerk8v3TenantGUCStatusResponse](docs/Resourcecontrollerk8v3TenantGUCStatusResponse.md)
  - [Resourcecontrollerk8v3TenantLifecycleResponse](docs/Resourcecontrollerk8v3TenantLifecycleResponse.md)
  - [Resourcecontrollerk8v3TenantResourceResponse](docs/Resourcecontrollerk8v3TenantResourceResponse.md)
- - [Resourcecontrollerk8v3TextContent](docs/Resourcecontrollerk8v3TextContent.md)
- - [Resourcecontrollerk8v3UpdateJobExecutionRequest](docs/Resourcecontrollerk8v3UpdateJobExecutionRequest.md)
- - [Resourcecontrollerk8v3UpdateJobStatusRequest](docs/Resourcecontrollerk8v3UpdateJobStatusRequest.md)
- - [Resourcecontrollerk8v3Version](docs/Resourcecontrollerk8v3Version.md)
  - [Riskanalyticscontrollerv3Action](docs/Riskanalyticscontrollerv3Action.md)
  - [Riskanalyticscontrollerv3CardSettings](docs/Riskanalyticscontrollerv3CardSettings.md)
  - [Riskanalyticscontrollerv3DetailToCount](docs/Riskanalyticscontrollerv3DetailToCount.md)
@@ -1657,7 +1674,6 @@ Class | Method | HTTP request | Description
  - [SetQuestionBodyParams](docs/SetQuestionBodyParams.md)
  - [SetVulnerabilityStatusRequest](docs/SetVulnerabilityStatusRequest.md)
  - [SignupRequest](docs/SignupRequest.md)
- - [SimpleRecipientSimpleRecipientType](docs/SimpleRecipientSimpleRecipientType.md)
  - [Snifassistv3Feedback](docs/Snifassistv3Feedback.md)
  - [Snifassistv3FeedbackStatus](docs/Snifassistv3FeedbackStatus.md)
  - [Snifassistv3GetSnifConfigResponse](docs/Snifassistv3GetSnifConfigResponse.md)
@@ -1670,8 +1686,8 @@ Class | Method | HTTP request | Description
  - [Snifassistv3StatusResponseBase](docs/Snifassistv3StatusResponseBase.md)
  - [Snifassistv3TestRegexRequest](docs/Snifassistv3TestRegexRequest.md)
  - [SortOrder](docs/SortOrder.md)
+ - [StoreClassificationStatus](docs/StoreClassificationStatus.md)
  - [StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse](docs/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse.md)
- - [StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse](docs/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse.md)
  - [StreamResultOfReportsrunnerv3RunReportResponse](docs/StreamResultOfReportsrunnerv3RunReportResponse.md)
  - [Streamsv3AWSCheckStreamStatus](docs/Streamsv3AWSCheckStreamStatus.md)
  - [Streamsv3AuthType](docs/Streamsv3AuthType.md)
@@ -1692,31 +1708,6 @@ Class | Method | HTTP request | Description
  - [SubmitAuthCode](docs/SubmitAuthCode.md)
  - [SubmitPasswordRequest](docs/SubmitPasswordRequest.md)
  - [Tags](docs/Tags.md)
- - [Templatesv3CreateIntegrationRequest](docs/Templatesv3CreateIntegrationRequest.md)
- - [Templatesv3CreateIntegrationResponse](docs/Templatesv3CreateIntegrationResponse.md)
- - [Templatesv3CreateTemplateRequest](docs/Templatesv3CreateTemplateRequest.md)
- - [Templatesv3CreateTemplateResponse](docs/Templatesv3CreateTemplateResponse.md)
- - [Templatesv3DefaultContent](docs/Templatesv3DefaultContent.md)
- - [Templatesv3DeleteIntegrationResponse](docs/Templatesv3DeleteIntegrationResponse.md)
- - [Templatesv3DeleteTemplateResponse](docs/Templatesv3DeleteTemplateResponse.md)
- - [Templatesv3GetOriginDefaultContentResponse](docs/Templatesv3GetOriginDefaultContentResponse.md)
- - [Templatesv3GetOriginFieldsResponse](docs/Templatesv3GetOriginFieldsResponse.md)
- - [Templatesv3GetTemplateResponse](docs/Templatesv3GetTemplateResponse.md)
- - [Templatesv3GetTemplatesForEdgeResponse](docs/Templatesv3GetTemplatesForEdgeResponse.md)
- - [Templatesv3GetTemplatesResponse](docs/Templatesv3GetTemplatesResponse.md)
- - [Templatesv3Integration](docs/Templatesv3Integration.md)
- - [Templatesv3MIMEType](docs/Templatesv3MIMEType.md)
- - [Templatesv3Origin](docs/Templatesv3Origin.md)
- - [Templatesv3SimpleRecipient](docs/Templatesv3SimpleRecipient.md)
- - [Templatesv3Template](docs/Templatesv3Template.md)
- - [Templatesv3TestTemplateRequest](docs/Templatesv3TestTemplateRequest.md)
- - [Templatesv3TestTemplateResponse](docs/Templatesv3TestTemplateResponse.md)
- - [Templatesv3TransformTemplateJSONRequest](docs/Templatesv3TransformTemplateJSONRequest.md)
- - [Templatesv3TransformTemplateJSONResponse](docs/Templatesv3TransformTemplateJSONResponse.md)
- - [Templatesv3TransformTemplateRequest](docs/Templatesv3TransformTemplateRequest.md)
- - [Templatesv3TransformTemplateResponse](docs/Templatesv3TransformTemplateResponse.md)
- - [Templatesv3UpdateTemplateRequest](docs/Templatesv3UpdateTemplateRequest.md)
- - [Templatesv3UpdateTemplateResponse](docs/Templatesv3UpdateTemplateResponse.md)
  - [TenantInfo](docs/TenantInfo.md)
  - [Tenantuserv3Apikey](docs/Tenantuserv3Apikey.md)
  - [Tenantuserv3AuthResponse](docs/Tenantuserv3AuthResponse.md)
@@ -1804,6 +1795,29 @@ Class | Method | HTTP request | Description
  - [VendorCertificate](docs/VendorCertificate.md)
  - [VendorDataStore](docs/VendorDataStore.md)
  - [VendorSummary](docs/VendorSummary.md)
+ - [Vulmanagementv3ActionType](docs/Vulmanagementv3ActionType.md)
+ - [Vulmanagementv3AssetTags](docs/Vulmanagementv3AssetTags.md)
+ - [Vulmanagementv3Category](docs/Vulmanagementv3Category.md)
+ - [Vulmanagementv3ChildCategory](docs/Vulmanagementv3ChildCategory.md)
+ - [Vulmanagementv3CreateVulnerabilityRequest](docs/Vulmanagementv3CreateVulnerabilityRequest.md)
+ - [Vulmanagementv3CreateVulnerabilityResponse](docs/Vulmanagementv3CreateVulnerabilityResponse.md)
+ - [Vulmanagementv3FilterCategory](docs/Vulmanagementv3FilterCategory.md)
+ - [Vulmanagementv3GetFiltersDataResponse](docs/Vulmanagementv3GetFiltersDataResponse.md)
+ - [Vulmanagementv3GetVulnerabilitiesRequest](docs/Vulmanagementv3GetVulnerabilitiesRequest.md)
+ - [Vulmanagementv3GetVulnerabilitiesResponse](docs/Vulmanagementv3GetVulnerabilitiesResponse.md)
+ - [Vulmanagementv3GetVulnerabilityResponse](docs/Vulmanagementv3GetVulnerabilityResponse.md)
+ - [Vulmanagementv3Severity](docs/Vulmanagementv3Severity.md)
+ - [Vulmanagementv3SortOrder](docs/Vulmanagementv3SortOrder.md)
+ - [Vulmanagementv3SourceType](docs/Vulmanagementv3SourceType.md)
+ - [Vulmanagementv3Status](docs/Vulmanagementv3Status.md)
+ - [Vulmanagementv3SubCategory](docs/Vulmanagementv3SubCategory.md)
+ - [Vulmanagementv3UpdateVulnerabilitiesRequest](docs/Vulmanagementv3UpdateVulnerabilitiesRequest.md)
+ - [Vulmanagementv3UpdateVulnerabilitiesResponse](docs/Vulmanagementv3UpdateVulnerabilitiesResponse.md)
+ - [Vulmanagementv3VulnerabilitiesStatsDataResponse](docs/Vulmanagementv3VulnerabilitiesStatsDataResponse.md)
+ - [Vulmanagementv3Vulnerability](docs/Vulmanagementv3Vulnerability.md)
+ - [Vulmanagementv3VulnerabilityAudit](docs/Vulmanagementv3VulnerabilityAudit.md)
+ - [Vulmanagementv3VulnerabilityIngestionResponse](docs/Vulmanagementv3VulnerabilityIngestionResponse.md)
+ - [Vulmanagementv3VulnerabilityUpdate](docs/Vulmanagementv3VulnerabilityUpdate.md)
  - [VulnerabilitiesByDataStoreFilterOptions](docs/VulnerabilitiesByDataStoreFilterOptions.md)
  - [VulnerabilitiesCriticalityCountInner](docs/VulnerabilitiesCriticalityCountInner.md)
  - [VulnerabilitiesFilterOptions](docs/VulnerabilitiesFilterOptions.md)

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,40 +42,44 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connector.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3Connector {
   public static final String SERIALIZED_NAME_COLUMNS = "columns";
   @SerializedName(SERIALIZED_NAME_COLUMNS)
+  @javax.annotation.Nullable
   private List<Connectionsv3ConnectorColumn> columns = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Connectionsv3ConnectorType type = Connectionsv3ConnectorType.UNDEFINED_TYPE;
 
   public Connectionsv3Connector() {
   }
 
-  public Connectionsv3Connector columns(List<Connectionsv3ConnectorColumn> columns) {
+  public Connectionsv3Connector columns(@javax.annotation.Nullable List<Connectionsv3ConnectorColumn> columns) {
     this.columns = columns;
     return this;
   }
@@ -87,40 +92,40 @@ public class Connectionsv3Connector {
     return this;
   }
 
-   /**
+  /**
    * The columns.
    * @return columns
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3ConnectorColumn> getColumns() {
     return columns;
   }
 
-  public void setColumns(List<Connectionsv3ConnectorColumn> columns) {
+  public void setColumns(@javax.annotation.Nullable List<Connectionsv3ConnectorColumn> columns) {
     this.columns = columns;
   }
 
 
-  public Connectionsv3Connector id(String id) {
+  public Connectionsv3Connector id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * The id of the connector.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Connectionsv3Connector tags(List<String> tags) {
+  public Connectionsv3Connector tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -133,35 +138,35 @@ public class Connectionsv3Connector {
     return this;
   }
 
-   /**
+  /**
    * The tags that this connector has.
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
 
-  public Connectionsv3Connector type(Connectionsv3ConnectorType type) {
+  public Connectionsv3Connector type(@javax.annotation.Nullable Connectionsv3ConnectorType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3ConnectorType getType() {
     return type;
   }
 
-  public void setType(Connectionsv3ConnectorType type) {
+  public void setType(@javax.annotation.Nullable Connectionsv3ConnectorType type) {
     this.type = type;
   }
 
@@ -216,26 +221,22 @@ public class Connectionsv3Connector {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("columns");
-    openapiFields.add("id");
-    openapiFields.add("tags");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("columns", "id", "tags", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3Connector
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3Connector
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3Connector.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3Connector is not found in the empty JSON string", Connectionsv3Connector.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3Connector is not found in the empty JSON string", Connectionsv3Connector.openapiRequiredFields.toString()));
         }
       }
 
@@ -243,7 +244,7 @@ public class Connectionsv3Connector {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3Connector.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3Connector` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3Connector` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -252,7 +253,7 @@ public class Connectionsv3Connector {
         if (jsonArraycolumns != null) {
           // ensure the json data is an array
           if (!jsonObj.get("columns").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `columns` to be an array in the JSON string but got `%s`", jsonObj.get("columns").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `columns` to be an array in the JSON string but got `%s`", jsonObj.get("columns").toString()));
           }
 
           // validate the optional field `columns` (array)
@@ -262,11 +263,11 @@ public class Connectionsv3Connector {
         }
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
@@ -303,22 +304,22 @@ public class Connectionsv3Connector {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3Connector given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3Connector
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3Connector
-  */
+  /**
+   * Create an instance of Connectionsv3Connector given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3Connector
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3Connector
+   */
   public static Connectionsv3Connector fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3Connector.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3Connector to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3Connector to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

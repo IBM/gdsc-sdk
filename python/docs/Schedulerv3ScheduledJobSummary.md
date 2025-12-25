@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **description** | **str** | Optional: Description for the scheduledJob. | [optional] 
 **enabled** | **bool** | Enabled or disable the schedule. | [optional] 
 **expired** | **bool** | Optional: If this schedule is expired or continues forever. | [optional] 
-**frequency** | [**Schedulerv3Frequency**](Schedulerv3Frequency.md) |  | [optional] 
+**frequency** | [**Schedulerv3Frequency**](Schedulerv3Frequency.md) |  | [optional] [default to Schedulerv3Frequency.UNDEFINED_FREQUENCY]
 **last_modified_time** | **datetime** | Optional: Timestamp for the last time the scheduled job was modified. | [optional] 
 **last_run_duration** | **int** | Optional: Duration of the previous run. | [optional] 
 **last_run_start** | **datetime** | Optional: Timestamp for the previous run. | [optional] 

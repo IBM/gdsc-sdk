@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **integration_id** | **str** | Integration id for policy builder UI to display integration name. | [optional] 
 **template_id** | **str** | Template name. | [optional] 
-**type** | [**Policybuilderv3RecipientType**](Policybuilderv3RecipientType.md) |  | [optional] 
+**type** | [**Policybuilderv3RecipientType**](Policybuilderv3RecipientType.md) |  | [optional] [default to Policybuilderv3RecipientType.UNDEFINED_RECTYPE]
 **value** | **str** | Receiver value. | [optional] 
 
 ## Example

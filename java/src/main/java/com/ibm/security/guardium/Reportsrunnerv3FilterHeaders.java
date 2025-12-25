@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,36 +41,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsrunnerv3FilterHeaders
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3FilterHeaders {
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
+  @javax.annotation.Nullable
   private List<Reportsrunnerv3Filter> filters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HEADER_SEQUENCE = "header_sequence";
   @SerializedName(SERIALIZED_NAME_HEADER_SEQUENCE)
+  @javax.annotation.Nullable
   private String headerSequence;
 
   public static final String SERIALIZED_NAME_NLS_TRANSLATION = "nls_translation";
   @SerializedName(SERIALIZED_NAME_NLS_TRANSLATION)
+  @javax.annotation.Nullable
   private String nlsTranslation;
 
   public Reportsrunnerv3FilterHeaders() {
   }
 
-  public Reportsrunnerv3FilterHeaders filters(List<Reportsrunnerv3Filter> filters) {
+  public Reportsrunnerv3FilterHeaders filters(@javax.annotation.Nullable List<Reportsrunnerv3Filter> filters) {
     this.filters = filters;
     return this;
   }
@@ -82,54 +86,54 @@ public class Reportsrunnerv3FilterHeaders {
     return this;
   }
 
-   /**
+  /**
    * A list of filters.
    * @return filters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsrunnerv3Filter> getFilters() {
     return filters;
   }
 
-  public void setFilters(List<Reportsrunnerv3Filter> filters) {
+  public void setFilters(@javax.annotation.Nullable List<Reportsrunnerv3Filter> filters) {
     this.filters = filters;
   }
 
 
-  public Reportsrunnerv3FilterHeaders headerSequence(String headerSequence) {
+  public Reportsrunnerv3FilterHeaders headerSequence(@javax.annotation.Nullable String headerSequence) {
     this.headerSequence = headerSequence;
     return this;
   }
 
-   /**
+  /**
    * The filter header sequence corresponding to the header.
    * @return headerSequence
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderSequence() {
     return headerSequence;
   }
 
-  public void setHeaderSequence(String headerSequence) {
+  public void setHeaderSequence(@javax.annotation.Nullable String headerSequence) {
     this.headerSequence = headerSequence;
   }
 
 
-  public Reportsrunnerv3FilterHeaders nlsTranslation(String nlsTranslation) {
+  public Reportsrunnerv3FilterHeaders nlsTranslation(@javax.annotation.Nullable String nlsTranslation) {
     this.nlsTranslation = nlsTranslation;
     return this;
   }
 
-   /**
+  /**
    * The translated header.
    * @return nlsTranslation
-  **/
+   */
   @javax.annotation.Nullable
   public String getNlsTranslation() {
     return nlsTranslation;
   }
 
-  public void setNlsTranslation(String nlsTranslation) {
+  public void setNlsTranslation(@javax.annotation.Nullable String nlsTranslation) {
     this.nlsTranslation = nlsTranslation;
   }
 
@@ -182,25 +186,22 @@ public class Reportsrunnerv3FilterHeaders {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filters");
-    openapiFields.add("header_sequence");
-    openapiFields.add("nls_translation");
+    openapiFields = new HashSet<String>(Arrays.asList("filters", "header_sequence", "nls_translation"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3FilterHeaders
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3FilterHeaders
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3FilterHeaders.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3FilterHeaders is not found in the empty JSON string", Reportsrunnerv3FilterHeaders.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3FilterHeaders is not found in the empty JSON string", Reportsrunnerv3FilterHeaders.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,7 +209,7 @@ public class Reportsrunnerv3FilterHeaders {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3FilterHeaders.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3FilterHeaders` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3FilterHeaders` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -217,7 +218,7 @@ public class Reportsrunnerv3FilterHeaders {
         if (jsonArrayfilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
           }
 
           // validate the optional field `filters` (array)
@@ -227,10 +228,10 @@ public class Reportsrunnerv3FilterHeaders {
         }
       }
       if ((jsonObj.get("header_sequence") != null && !jsonObj.get("header_sequence").isJsonNull()) && !jsonObj.get("header_sequence").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_sequence` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_sequence").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_sequence` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_sequence").toString()));
       }
       if ((jsonObj.get("nls_translation") != null && !jsonObj.get("nls_translation").isJsonNull()) && !jsonObj.get("nls_translation").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nls_translation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_translation").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nls_translation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_translation").toString()));
       }
   }
 
@@ -263,22 +264,22 @@ public class Reportsrunnerv3FilterHeaders {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3FilterHeaders given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3FilterHeaders
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3FilterHeaders
-  */
+  /**
+   * Create an instance of Reportsrunnerv3FilterHeaders given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3FilterHeaders
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3FilterHeaders
+   */
   public static Reportsrunnerv3FilterHeaders fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3FilterHeaders.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3FilterHeaders to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3FilterHeaders to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

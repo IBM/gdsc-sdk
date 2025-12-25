@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,78 +41,82 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3ExtractionProfile
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3ExtractionProfile {
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
+  @javax.annotation.Nullable
   private String active;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @javax.annotation.Nullable
   private String category;
 
   public static final String SERIALIZED_NAME_DMS = "dms";
   @SerializedName(SERIALIZED_NAME_DMS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3Datamarts> dms = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PROFILE_NAME = "profile_name";
   @SerializedName(SERIALIZED_NAME_PROFILE_NAME)
+  @javax.annotation.Nullable
   private String profileName;
 
   public Guardiumconnectorv3ExtractionProfile() {
   }
 
-  public Guardiumconnectorv3ExtractionProfile active(String active) {
+  public Guardiumconnectorv3ExtractionProfile active(@javax.annotation.Nullable String active) {
     this.active = active;
     return this;
   }
 
-   /**
+  /**
    * Get active
    * @return active
-  **/
+   */
   @javax.annotation.Nullable
   public String getActive() {
     return active;
   }
 
-  public void setActive(String active) {
+  public void setActive(@javax.annotation.Nullable String active) {
     this.active = active;
   }
 
 
-  public Guardiumconnectorv3ExtractionProfile category(String category) {
+  public Guardiumconnectorv3ExtractionProfile category(@javax.annotation.Nullable String category) {
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategory() {
     return category;
   }
 
-  public void setCategory(String category) {
+  public void setCategory(@javax.annotation.Nullable String category) {
     this.category = category;
   }
 
 
-  public Guardiumconnectorv3ExtractionProfile dms(List<Guardiumconnectorv3Datamarts> dms) {
+  public Guardiumconnectorv3ExtractionProfile dms(@javax.annotation.Nullable List<Guardiumconnectorv3Datamarts> dms) {
     this.dms = dms;
     return this;
   }
@@ -124,35 +129,35 @@ public class Guardiumconnectorv3ExtractionProfile {
     return this;
   }
 
-   /**
+  /**
    * Get dms
    * @return dms
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3Datamarts> getDms() {
     return dms;
   }
 
-  public void setDms(List<Guardiumconnectorv3Datamarts> dms) {
+  public void setDms(@javax.annotation.Nullable List<Guardiumconnectorv3Datamarts> dms) {
     this.dms = dms;
   }
 
 
-  public Guardiumconnectorv3ExtractionProfile profileName(String profileName) {
+  public Guardiumconnectorv3ExtractionProfile profileName(@javax.annotation.Nullable String profileName) {
     this.profileName = profileName;
     return this;
   }
 
-   /**
+  /**
    * Get profileName
    * @return profileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getProfileName() {
     return profileName;
   }
 
-  public void setProfileName(String profileName) {
+  public void setProfileName(@javax.annotation.Nullable String profileName) {
     this.profileName = profileName;
   }
 
@@ -207,26 +212,22 @@ public class Guardiumconnectorv3ExtractionProfile {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("active");
-    openapiFields.add("category");
-    openapiFields.add("dms");
-    openapiFields.add("profile_name");
+    openapiFields = new HashSet<String>(Arrays.asList("active", "category", "dms", "profile_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3ExtractionProfile
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3ExtractionProfile
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3ExtractionProfile.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3ExtractionProfile is not found in the empty JSON string", Guardiumconnectorv3ExtractionProfile.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3ExtractionProfile is not found in the empty JSON string", Guardiumconnectorv3ExtractionProfile.openapiRequiredFields.toString()));
         }
       }
 
@@ -234,22 +235,22 @@ public class Guardiumconnectorv3ExtractionProfile {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3ExtractionProfile.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3ExtractionProfile` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3ExtractionProfile` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("active") != null && !jsonObj.get("active").isJsonNull()) && !jsonObj.get("active").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `active` to be a primitive type in the JSON string but got `%s`", jsonObj.get("active").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `active` to be a primitive type in the JSON string but got `%s`", jsonObj.get("active").toString()));
       }
       if ((jsonObj.get("category") != null && !jsonObj.get("category").isJsonNull()) && !jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
       if (jsonObj.get("dms") != null && !jsonObj.get("dms").isJsonNull()) {
         JsonArray jsonArraydms = jsonObj.getAsJsonArray("dms");
         if (jsonArraydms != null) {
           // ensure the json data is an array
           if (!jsonObj.get("dms").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `dms` to be an array in the JSON string but got `%s`", jsonObj.get("dms").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dms` to be an array in the JSON string but got `%s`", jsonObj.get("dms").toString()));
           }
 
           // validate the optional field `dms` (array)
@@ -259,7 +260,7 @@ public class Guardiumconnectorv3ExtractionProfile {
         }
       }
       if ((jsonObj.get("profile_name") != null && !jsonObj.get("profile_name").isJsonNull()) && !jsonObj.get("profile_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `profile_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("profile_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `profile_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("profile_name").toString()));
       }
   }
 
@@ -292,22 +293,22 @@ public class Guardiumconnectorv3ExtractionProfile {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3ExtractionProfile given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3ExtractionProfile
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3ExtractionProfile
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3ExtractionProfile given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3ExtractionProfile
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3ExtractionProfile
+   */
   public static Guardiumconnectorv3ExtractionProfile fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3ExtractionProfile.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3ExtractionProfile to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3ExtractionProfile to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

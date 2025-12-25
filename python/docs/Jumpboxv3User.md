@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **external_id** | **str** | External id of the user. | [optional] 
 **metadata** | **Dict[str, str]** | Metadata will contain all preferences. | [optional] 
 **roles** | **List[str]** | Roles. | [optional] 
-**state** | [**Jumpboxv3UserState**](Jumpboxv3UserState.md) |  | [optional] 
+**state** | [**Jumpboxv3UserState**](Jumpboxv3UserState.md) |  | [optional] [default to Jumpboxv3UserState.ACTIVE]
 **uid** | **str** | Email. | [optional] 
 **user_id** | **str** | Unique id for user. | [optional] 
 

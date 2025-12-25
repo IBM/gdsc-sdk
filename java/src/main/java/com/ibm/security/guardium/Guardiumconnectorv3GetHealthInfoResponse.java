@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,36 +43,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Returns the health status for a particular Central Manager.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3GetHealthInfoResponse {
   public static final String SERIALIZED_NAME_NODES = "nodes";
   @SerializedName(SERIALIZED_NAME_NODES)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3ManagedUnitObject> nodes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STAPS = "staps";
   @SerializedName(SERIALIZED_NAME_STAPS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3StapObject> staps = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Guardiumconnectorv3StatusResponseBase status;
 
   public Guardiumconnectorv3GetHealthInfoResponse() {
   }
 
-  public Guardiumconnectorv3GetHealthInfoResponse nodes(List<Guardiumconnectorv3ManagedUnitObject> nodes) {
+  public Guardiumconnectorv3GetHealthInfoResponse nodes(@javax.annotation.Nullable List<Guardiumconnectorv3ManagedUnitObject> nodes) {
     this.nodes = nodes;
     return this;
   }
@@ -84,21 +88,21 @@ public class Guardiumconnectorv3GetHealthInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * List of Guardium Data Protection systems.
    * @return nodes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3ManagedUnitObject> getNodes() {
     return nodes;
   }
 
-  public void setNodes(List<Guardiumconnectorv3ManagedUnitObject> nodes) {
+  public void setNodes(@javax.annotation.Nullable List<Guardiumconnectorv3ManagedUnitObject> nodes) {
     this.nodes = nodes;
   }
 
 
-  public Guardiumconnectorv3GetHealthInfoResponse staps(List<Guardiumconnectorv3StapObject> staps) {
+  public Guardiumconnectorv3GetHealthInfoResponse staps(@javax.annotation.Nullable List<Guardiumconnectorv3StapObject> staps) {
     this.staps = staps;
     return this;
   }
@@ -111,35 +115,35 @@ public class Guardiumconnectorv3GetHealthInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Details of S-TAPs for the system.
    * @return staps
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3StapObject> getStaps() {
     return staps;
   }
 
-  public void setStaps(List<Guardiumconnectorv3StapObject> staps) {
+  public void setStaps(@javax.annotation.Nullable List<Guardiumconnectorv3StapObject> staps) {
     this.staps = staps;
   }
 
 
-  public Guardiumconnectorv3GetHealthInfoResponse status(Guardiumconnectorv3StatusResponseBase status) {
+  public Guardiumconnectorv3GetHealthInfoResponse status(@javax.annotation.Nullable Guardiumconnectorv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Guardiumconnectorv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Guardiumconnectorv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Guardiumconnectorv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -192,25 +196,22 @@ public class Guardiumconnectorv3GetHealthInfoResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("nodes");
-    openapiFields.add("staps");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("nodes", "staps", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GetHealthInfoResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GetHealthInfoResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3GetHealthInfoResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3GetHealthInfoResponse is not found in the empty JSON string", Guardiumconnectorv3GetHealthInfoResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3GetHealthInfoResponse is not found in the empty JSON string", Guardiumconnectorv3GetHealthInfoResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -218,7 +219,7 @@ public class Guardiumconnectorv3GetHealthInfoResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3GetHealthInfoResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GetHealthInfoResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GetHealthInfoResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -227,7 +228,7 @@ public class Guardiumconnectorv3GetHealthInfoResponse {
         if (jsonArraynodes != null) {
           // ensure the json data is an array
           if (!jsonObj.get("nodes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `nodes` to be an array in the JSON string but got `%s`", jsonObj.get("nodes").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nodes` to be an array in the JSON string but got `%s`", jsonObj.get("nodes").toString()));
           }
 
           // validate the optional field `nodes` (array)
@@ -241,7 +242,7 @@ public class Guardiumconnectorv3GetHealthInfoResponse {
         if (jsonArraystaps != null) {
           // ensure the json data is an array
           if (!jsonObj.get("staps").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `staps` to be an array in the JSON string but got `%s`", jsonObj.get("staps").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `staps` to be an array in the JSON string but got `%s`", jsonObj.get("staps").toString()));
           }
 
           // validate the optional field `staps` (array)
@@ -285,22 +286,22 @@ public class Guardiumconnectorv3GetHealthInfoResponse {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3GetHealthInfoResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3GetHealthInfoResponse
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GetHealthInfoResponse
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3GetHealthInfoResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3GetHealthInfoResponse
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GetHealthInfoResponse
+   */
   public static Guardiumconnectorv3GetHealthInfoResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3GetHealthInfoResponse.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3GetHealthInfoResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3GetHealthInfoResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

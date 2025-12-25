@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,32 +40,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Universalconnectormanagerv3DatasourceType
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3DatasourceType {
   public static final String SERIALIZED_NAME_SUPPORTED_VERSIONS = "supported_versions";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_VERSIONS)
+  @javax.annotation.Nullable
   private List<String> supportedVersions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Universalconnectormanagerv3DatasourceType() {
   }
 
-  public Universalconnectormanagerv3DatasourceType supportedVersions(List<String> supportedVersions) {
+  public Universalconnectormanagerv3DatasourceType supportedVersions(@javax.annotation.Nullable List<String> supportedVersions) {
     this.supportedVersions = supportedVersions;
     return this;
   }
@@ -77,35 +80,35 @@ public class Universalconnectormanagerv3DatasourceType {
     return this;
   }
 
-   /**
+  /**
    * Collection of supported versions.
    * @return supportedVersions
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSupportedVersions() {
     return supportedVersions;
   }
 
-  public void setSupportedVersions(List<String> supportedVersions) {
+  public void setSupportedVersions(@javax.annotation.Nullable List<String> supportedVersions) {
     this.supportedVersions = supportedVersions;
   }
 
 
-  public Universalconnectormanagerv3DatasourceType type(String type) {
+  public Universalconnectormanagerv3DatasourceType type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Datasource type.
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -156,24 +159,22 @@ public class Universalconnectormanagerv3DatasourceType {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("supported_versions");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("supported_versions", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3DatasourceType
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3DatasourceType
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3DatasourceType.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3DatasourceType is not found in the empty JSON string", Universalconnectormanagerv3DatasourceType.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3DatasourceType is not found in the empty JSON string", Universalconnectormanagerv3DatasourceType.openapiRequiredFields.toString()));
         }
       }
 
@@ -181,16 +182,16 @@ public class Universalconnectormanagerv3DatasourceType {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3DatasourceType.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3DatasourceType` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3DatasourceType` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("supported_versions") != null && !jsonObj.get("supported_versions").isJsonNull() && !jsonObj.get("supported_versions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `supported_versions` to be an array in the JSON string but got `%s`", jsonObj.get("supported_versions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `supported_versions` to be an array in the JSON string but got `%s`", jsonObj.get("supported_versions").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -223,22 +224,22 @@ public class Universalconnectormanagerv3DatasourceType {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3DatasourceType given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3DatasourceType
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3DatasourceType
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3DatasourceType given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3DatasourceType
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3DatasourceType
+   */
   public static Universalconnectormanagerv3DatasourceType fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3DatasourceType.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3DatasourceType to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3DatasourceType to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

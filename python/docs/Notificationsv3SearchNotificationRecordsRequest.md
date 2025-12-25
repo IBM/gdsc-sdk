@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filters** | [**List[Notificationsv3NotificationRecordsFilter]**](Notificationsv3NotificationRecordsFilter.md) |  | [optional] 
-**operator** | [**Notificationsv3PipelineQueryOperator**](Notificationsv3PipelineQueryOperator.md) |  | [optional] 
+**operator** | [**Notificationsv3PipelineQueryOperator**](Notificationsv3PipelineQueryOperator.md) |  | [optional] [default to Notificationsv3PipelineQueryOperator.OPERATOR_AND]
 
 ## Example
 

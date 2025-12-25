@@ -36,7 +36,7 @@ class Reportsv3ReportFilterCondition(BaseModel):
     group_type_id: Optional[StrictInt] = None
     header_id: Optional[StrictStr] = None
     header_name: Optional[StrictStr] = None
-    header_type: Optional[Reportsv3HeaderType] = None
+    header_type: Optional[Reportsv3HeaderType] = Reportsv3HeaderType.UNDEFINED_TYPE
     in_report_date_range: Optional[Reportsv3DateRange] = None
     in_report_field_nls_key: Optional[StrictStr] = None
     in_report_header_id: Optional[StrictStr] = None
@@ -45,8 +45,8 @@ class Reportsv3ReportFilterCondition(BaseModel):
     in_report_name: Optional[StrictStr] = None
     in_report_table_name: Optional[StrictStr] = None
     is_tuple: Optional[StrictBool] = None
-    operator_type: Optional[Reportsv3OperatorType] = None
-    parameter_type: Optional[Reportsv3ParameterType] = None
+    operator_type: Optional[Reportsv3OperatorType] = Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE
+    parameter_type: Optional[Reportsv3ParameterType] = Reportsv3ParameterType.UNDEFINED_PARAM_TYPE
     schema_name: Optional[StrictStr] = None
     sequence: Optional[StrictInt] = None
     table_name: Optional[StrictStr] = None
@@ -114,7 +114,7 @@ class Reportsv3ReportFilterCondition(BaseModel):
             "group_type_id": obj.get("group_type_id"),
             "header_id": obj.get("header_id"),
             "header_name": obj.get("header_name"),
-            "header_type": obj.get("header_type"),
+            "header_type": obj.get("header_type") if obj.get("header_type") is not None else Reportsv3HeaderType.UNDEFINED_TYPE,
             "in_report_date_range": Reportsv3DateRange.from_dict(obj["in_report_date_range"]) if obj.get("in_report_date_range") is not None else None,
             "in_report_field_nls_key": obj.get("in_report_field_nls_key"),
             "in_report_header_id": obj.get("in_report_header_id"),
@@ -123,8 +123,8 @@ class Reportsv3ReportFilterCondition(BaseModel):
             "in_report_name": obj.get("in_report_name"),
             "in_report_table_name": obj.get("in_report_table_name"),
             "is_tuple": obj.get("is_tuple"),
-            "operator_type": obj.get("operator_type"),
-            "parameter_type": obj.get("parameter_type"),
+            "operator_type": obj.get("operator_type") if obj.get("operator_type") is not None else Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE,
+            "parameter_type": obj.get("parameter_type") if obj.get("parameter_type") is not None else Reportsv3ParameterType.UNDEFINED_PARAM_TYPE,
             "schema_name": obj.get("schema_name"),
             "sequence": obj.get("sequence"),
             "table_name": obj.get("table_name"),

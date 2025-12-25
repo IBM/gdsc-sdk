@@ -33,7 +33,7 @@ class Policybuilderv3ActionMetadata(BaseModel):
     label: Optional[StrictStr] = Field(default=None, description="Ui label for the action.")
     parameters: Optional[List[Policybuilderv3ActionParameterMetadata]] = Field(default=None, description="Action parameters.")
     rule_type: Optional[List[Policybuilderv3RuleType]] = Field(default=None, description="Rule type for the action.")
-    type: Optional[Policybuilderv3ActionType] = None
+    type: Optional[Policybuilderv3ActionType] = Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE
     __properties: ClassVar[List[str]] = ["action_name", "label", "parameters", "rule_type", "type"]
 
     model_config = ConfigDict(
@@ -78,9 +78,9 @@ class Policybuilderv3ActionMetadata(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in parameters (list)
         _items = []
         if self.parameters:
-            for _item in self.parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_parameters in self.parameters:
+                if _item_parameters:
+                    _items.append(_item_parameters.to_dict())
             _dict['parameters'] = _items
         return _dict
 
@@ -98,7 +98,7 @@ class Policybuilderv3ActionMetadata(BaseModel):
             "label": obj.get("label"),
             "parameters": [Policybuilderv3ActionParameterMetadata.from_dict(_item) for _item in obj["parameters"]] if obj.get("parameters") is not None else None,
             "rule_type": obj.get("rule_type"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE
         })
         return _obj
 

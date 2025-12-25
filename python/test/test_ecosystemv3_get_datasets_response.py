@@ -27,7 +27,7 @@ class TestEcosystemv3GetDatasetsResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Ecosystemv3GetDatasetsResponse:
         """Test Ecosystemv3GetDatasetsResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Ecosystemv3GetDatasetsResponse`

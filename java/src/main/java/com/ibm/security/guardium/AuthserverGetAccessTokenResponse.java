@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response parameters for get access token.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AuthserverGetAccessTokenResponse {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN = "access_token";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN)
+  @javax.annotation.Nullable
   private String accessToken;
 
   public static final String SERIALIZED_NAME_EXPIRES_IN = "expires_in";
   @SerializedName(SERIALIZED_NAME_EXPIRES_IN)
+  @javax.annotation.Nullable
   private String expiresIn;
 
   public static final String SERIALIZED_NAME_TOKEN_TYPE = "token_type";
   @SerializedName(SERIALIZED_NAME_TOKEN_TYPE)
+  @javax.annotation.Nullable
   private String tokenType;
 
   public AuthserverGetAccessTokenResponse() {
   }
 
-  public AuthserverGetAccessTokenResponse accessToken(String accessToken) {
+  public AuthserverGetAccessTokenResponse accessToken(@javax.annotation.Nullable String accessToken) {
     this.accessToken = accessToken;
     return this;
   }
 
-   /**
+  /**
    * Access token for requested clientID.
    * @return accessToken
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccessToken() {
     return accessToken;
   }
 
-  public void setAccessToken(String accessToken) {
+  public void setAccessToken(@javax.annotation.Nullable String accessToken) {
     this.accessToken = accessToken;
   }
 
 
-  public AuthserverGetAccessTokenResponse expiresIn(String expiresIn) {
+  public AuthserverGetAccessTokenResponse expiresIn(@javax.annotation.Nullable String expiresIn) {
     this.expiresIn = expiresIn;
     return this;
   }
 
-   /**
+  /**
    * Expiry time of Access token.
    * @return expiresIn
-  **/
+   */
   @javax.annotation.Nullable
   public String getExpiresIn() {
     return expiresIn;
   }
 
-  public void setExpiresIn(String expiresIn) {
+  public void setExpiresIn(@javax.annotation.Nullable String expiresIn) {
     this.expiresIn = expiresIn;
   }
 
 
-  public AuthserverGetAccessTokenResponse tokenType(String tokenType) {
+  public AuthserverGetAccessTokenResponse tokenType(@javax.annotation.Nullable String tokenType) {
     this.tokenType = tokenType;
     return this;
   }
 
-   /**
+  /**
    * Type of access token - generally it will be bearer.
    * @return tokenType
-  **/
+   */
   @javax.annotation.Nullable
   public String getTokenType() {
     return tokenType;
   }
 
-  public void setTokenType(String tokenType) {
+  public void setTokenType(@javax.annotation.Nullable String tokenType) {
     this.tokenType = tokenType;
   }
 
@@ -171,25 +175,22 @@ public class AuthserverGetAccessTokenResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("access_token");
-    openapiFields.add("expires_in");
-    openapiFields.add("token_type");
+    openapiFields = new HashSet<String>(Arrays.asList("access_token", "expires_in", "token_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AuthserverGetAccessTokenResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AuthserverGetAccessTokenResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AuthserverGetAccessTokenResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AuthserverGetAccessTokenResponse is not found in the empty JSON string", AuthserverGetAccessTokenResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AuthserverGetAccessTokenResponse is not found in the empty JSON string", AuthserverGetAccessTokenResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class AuthserverGetAccessTokenResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AuthserverGetAccessTokenResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AuthserverGetAccessTokenResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AuthserverGetAccessTokenResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("access_token") != null && !jsonObj.get("access_token").isJsonNull()) && !jsonObj.get("access_token").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `access_token` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_token").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `access_token` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_token").toString()));
       }
       if ((jsonObj.get("expires_in") != null && !jsonObj.get("expires_in").isJsonNull()) && !jsonObj.get("expires_in").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `expires_in` to be a primitive type in the JSON string but got `%s`", jsonObj.get("expires_in").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `expires_in` to be a primitive type in the JSON string but got `%s`", jsonObj.get("expires_in").toString()));
       }
       if ((jsonObj.get("token_type") != null && !jsonObj.get("token_type").isJsonNull()) && !jsonObj.get("token_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `token_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `token_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_type").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class AuthserverGetAccessTokenResponse {
     }
   }
 
- /**
-  * Create an instance of AuthserverGetAccessTokenResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AuthserverGetAccessTokenResponse
-  * @throws IOException if the JSON string is invalid with respect to AuthserverGetAccessTokenResponse
-  */
+  /**
+   * Create an instance of AuthserverGetAccessTokenResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AuthserverGetAccessTokenResponse
+   * @throws IOException if the JSON string is invalid with respect to AuthserverGetAccessTokenResponse
+   */
   public static AuthserverGetAccessTokenResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AuthserverGetAccessTokenResponse.class);
   }
 
- /**
-  * Convert an instance of AuthserverGetAccessTokenResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AuthserverGetAccessTokenResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

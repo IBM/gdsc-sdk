@@ -89,6 +89,20 @@ class TestPolicyBuilderApi(unittest.TestCase):
         """
         pass
 
+    def test_policy_builder_get_policy_version(self) -> None:
+        """Test case for policy_builder_get_policy_version
+
+        Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+        """
+        pass
+
+    def test_policy_builder_get_policy_versions_info(self) -> None:
+        """Test case for policy_builder_get_policy_versions_info
+
+        Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+        """
+        pass
+
     def test_policy_builder_get_receivers(self) -> None:
         """Test case for policy_builder_get_receivers
 
@@ -149,6 +163,13 @@ class TestPolicyBuilderApi(unittest.TestCase):
         """Test case for policy_builder_store_policies_gdp
 
         Summary: Store policies Gdp Description: Store policies.  (This API is called from GDP only)
+        """
+        pass
+
+    def test_policy_builder_update_policy(self) -> None:
+        """Test case for policy_builder_update_policy
+
+        Summary: Update policy Description: Update Policy returns response code and message.
         """
         pass
 

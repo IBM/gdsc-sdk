@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,101 +43,106 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Cards - a small-scale representation of a Dashboard Card.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Dashboardsv3Card {
   public static final String SERIALIZED_NAME_CARD_I_D = "card_ID";
   @SerializedName(SERIALIZED_NAME_CARD_I_D)
+  @javax.annotation.Nullable
   private String cardID;
 
   public static final String SERIALIZED_NAME_CARD_POSITION = "card_position";
   @SerializedName(SERIALIZED_NAME_CARD_POSITION)
+  @javax.annotation.Nullable
   private Dashboardsv3CardPosition cardPosition;
 
   public static final String SERIALIZED_NAME_CARD_TYPE = "card_type";
   @SerializedName(SERIALIZED_NAME_CARD_TYPE)
+  @javax.annotation.Nullable
   private Dashboardsv3CardType cardType = Dashboardsv3CardType.UNDEFINED_CARD_TYPE;
 
   public static final String SERIALIZED_NAME_EXCLUDED_GLOBAL_FILTER_IDS = "excluded_global_filter_ids";
   @SerializedName(SERIALIZED_NAME_EXCLUDED_GLOBAL_FILTER_IDS)
+  @javax.annotation.Nullable
   private List<String> excludedGlobalFilterIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_PARAMETERS = "report_parameters";
   @SerializedName(SERIALIZED_NAME_REPORT_PARAMETERS)
+  @javax.annotation.Nullable
   private Dashboardsv3ReportParameters reportParameters;
 
   public Dashboardsv3Card() {
   }
 
-  public Dashboardsv3Card cardID(String cardID) {
+  public Dashboardsv3Card cardID(@javax.annotation.Nullable String cardID) {
     this.cardID = cardID;
     return this;
   }
 
-   /**
+  /**
    * Card ID.
    * @return cardID
-  **/
+   */
   @javax.annotation.Nullable
   public String getCardID() {
     return cardID;
   }
 
-  public void setCardID(String cardID) {
+  public void setCardID(@javax.annotation.Nullable String cardID) {
     this.cardID = cardID;
   }
 
 
-  public Dashboardsv3Card cardPosition(Dashboardsv3CardPosition cardPosition) {
+  public Dashboardsv3Card cardPosition(@javax.annotation.Nullable Dashboardsv3CardPosition cardPosition) {
     this.cardPosition = cardPosition;
     return this;
   }
 
-   /**
+  /**
    * Get cardPosition
    * @return cardPosition
-  **/
+   */
   @javax.annotation.Nullable
   public Dashboardsv3CardPosition getCardPosition() {
     return cardPosition;
   }
 
-  public void setCardPosition(Dashboardsv3CardPosition cardPosition) {
+  public void setCardPosition(@javax.annotation.Nullable Dashboardsv3CardPosition cardPosition) {
     this.cardPosition = cardPosition;
   }
 
 
-  public Dashboardsv3Card cardType(Dashboardsv3CardType cardType) {
+  public Dashboardsv3Card cardType(@javax.annotation.Nullable Dashboardsv3CardType cardType) {
     this.cardType = cardType;
     return this;
   }
 
-   /**
+  /**
    * Get cardType
    * @return cardType
-  **/
+   */
   @javax.annotation.Nullable
   public Dashboardsv3CardType getCardType() {
     return cardType;
   }
 
-  public void setCardType(Dashboardsv3CardType cardType) {
+  public void setCardType(@javax.annotation.Nullable Dashboardsv3CardType cardType) {
     this.cardType = cardType;
   }
 
 
-  public Dashboardsv3Card excludedGlobalFilterIds(List<String> excludedGlobalFilterIds) {
+  public Dashboardsv3Card excludedGlobalFilterIds(@javax.annotation.Nullable List<String> excludedGlobalFilterIds) {
     this.excludedGlobalFilterIds = excludedGlobalFilterIds;
     return this;
   }
@@ -149,35 +155,35 @@ public class Dashboardsv3Card {
     return this;
   }
 
-   /**
+  /**
    * Get excludedGlobalFilterIds
    * @return excludedGlobalFilterIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getExcludedGlobalFilterIds() {
     return excludedGlobalFilterIds;
   }
 
-  public void setExcludedGlobalFilterIds(List<String> excludedGlobalFilterIds) {
+  public void setExcludedGlobalFilterIds(@javax.annotation.Nullable List<String> excludedGlobalFilterIds) {
     this.excludedGlobalFilterIds = excludedGlobalFilterIds;
   }
 
 
-  public Dashboardsv3Card reportParameters(Dashboardsv3ReportParameters reportParameters) {
+  public Dashboardsv3Card reportParameters(@javax.annotation.Nullable Dashboardsv3ReportParameters reportParameters) {
     this.reportParameters = reportParameters;
     return this;
   }
 
-   /**
+  /**
    * Get reportParameters
    * @return reportParameters
-  **/
+   */
   @javax.annotation.Nullable
   public Dashboardsv3ReportParameters getReportParameters() {
     return reportParameters;
   }
 
-  public void setReportParameters(Dashboardsv3ReportParameters reportParameters) {
+  public void setReportParameters(@javax.annotation.Nullable Dashboardsv3ReportParameters reportParameters) {
     this.reportParameters = reportParameters;
   }
 
@@ -234,27 +240,22 @@ public class Dashboardsv3Card {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("card_ID");
-    openapiFields.add("card_position");
-    openapiFields.add("card_type");
-    openapiFields.add("excluded_global_filter_ids");
-    openapiFields.add("report_parameters");
+    openapiFields = new HashSet<String>(Arrays.asList("card_ID", "card_position", "card_type", "excluded_global_filter_ids", "report_parameters"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3Card
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3Card
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Dashboardsv3Card.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Dashboardsv3Card is not found in the empty JSON string", Dashboardsv3Card.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Dashboardsv3Card is not found in the empty JSON string", Dashboardsv3Card.openapiRequiredFields.toString()));
         }
       }
 
@@ -262,12 +263,12 @@ public class Dashboardsv3Card {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Dashboardsv3Card.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Dashboardsv3Card` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Dashboardsv3Card` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("card_ID") != null && !jsonObj.get("card_ID").isJsonNull()) && !jsonObj.get("card_ID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `card_ID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_ID").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `card_ID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("card_ID").toString()));
       }
       // validate the optional field `card_position`
       if (jsonObj.get("card_position") != null && !jsonObj.get("card_position").isJsonNull()) {
@@ -279,7 +280,7 @@ public class Dashboardsv3Card {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("excluded_global_filter_ids") != null && !jsonObj.get("excluded_global_filter_ids").isJsonNull() && !jsonObj.get("excluded_global_filter_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `excluded_global_filter_ids` to be an array in the JSON string but got `%s`", jsonObj.get("excluded_global_filter_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `excluded_global_filter_ids` to be an array in the JSON string but got `%s`", jsonObj.get("excluded_global_filter_ids").toString()));
       }
       // validate the optional field `report_parameters`
       if (jsonObj.get("report_parameters") != null && !jsonObj.get("report_parameters").isJsonNull()) {
@@ -316,22 +317,22 @@ public class Dashboardsv3Card {
     }
   }
 
- /**
-  * Create an instance of Dashboardsv3Card given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Dashboardsv3Card
-  * @throws IOException if the JSON string is invalid with respect to Dashboardsv3Card
-  */
+  /**
+   * Create an instance of Dashboardsv3Card given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Dashboardsv3Card
+   * @throws IOException if the JSON string is invalid with respect to Dashboardsv3Card
+   */
   public static Dashboardsv3Card fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Dashboardsv3Card.class);
   }
 
- /**
-  * Convert an instance of Dashboardsv3Card to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Dashboardsv3Card to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,55 +41,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Add a new Central Manager.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3AddCMRequest {
   public static final String SERIALIZED_NAME_CM = "cm";
   @SerializedName(SERIALIZED_NAME_CM)
+  @javax.annotation.Nullable
   private Guardiumconnectorv3CM cm;
 
   public static final String SERIALIZED_NAME_EDIT_CM_ATTRIBUTES = "edit_cm_attributes";
   @SerializedName(SERIALIZED_NAME_EDIT_CM_ATTRIBUTES)
+  @javax.annotation.Nullable
   private List<String> editCmAttributes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IS_EDIT = "is_edit";
   @SerializedName(SERIALIZED_NAME_IS_EDIT)
+  @javax.annotation.Nullable
   private Boolean isEdit;
 
   public Guardiumconnectorv3AddCMRequest() {
   }
 
-  public Guardiumconnectorv3AddCMRequest cm(Guardiumconnectorv3CM cm) {
+  public Guardiumconnectorv3AddCMRequest cm(@javax.annotation.Nullable Guardiumconnectorv3CM cm) {
     this.cm = cm;
     return this;
   }
 
-   /**
+  /**
    * Get cm
    * @return cm
-  **/
+   */
   @javax.annotation.Nullable
   public Guardiumconnectorv3CM getCm() {
     return cm;
   }
 
-  public void setCm(Guardiumconnectorv3CM cm) {
+  public void setCm(@javax.annotation.Nullable Guardiumconnectorv3CM cm) {
     this.cm = cm;
   }
 
 
-  public Guardiumconnectorv3AddCMRequest editCmAttributes(List<String> editCmAttributes) {
+  public Guardiumconnectorv3AddCMRequest editCmAttributes(@javax.annotation.Nullable List<String> editCmAttributes) {
     this.editCmAttributes = editCmAttributes;
     return this;
   }
@@ -101,35 +105,35 @@ public class Guardiumconnectorv3AddCMRequest {
     return this;
   }
 
-   /**
+  /**
    * Central Manager edit attributes to get original values.
    * @return editCmAttributes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getEditCmAttributes() {
     return editCmAttributes;
   }
 
-  public void setEditCmAttributes(List<String> editCmAttributes) {
+  public void setEditCmAttributes(@javax.annotation.Nullable List<String> editCmAttributes) {
     this.editCmAttributes = editCmAttributes;
   }
 
 
-  public Guardiumconnectorv3AddCMRequest isEdit(Boolean isEdit) {
+  public Guardiumconnectorv3AddCMRequest isEdit(@javax.annotation.Nullable Boolean isEdit) {
     this.isEdit = isEdit;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate if the Central Manager is being edited.
    * @return isEdit
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsEdit() {
     return isEdit;
   }
 
-  public void setIsEdit(Boolean isEdit) {
+  public void setIsEdit(@javax.annotation.Nullable Boolean isEdit) {
     this.isEdit = isEdit;
   }
 
@@ -182,25 +186,22 @@ public class Guardiumconnectorv3AddCMRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cm");
-    openapiFields.add("edit_cm_attributes");
-    openapiFields.add("is_edit");
+    openapiFields = new HashSet<String>(Arrays.asList("cm", "edit_cm_attributes", "is_edit"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3AddCMRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3AddCMRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3AddCMRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3AddCMRequest is not found in the empty JSON string", Guardiumconnectorv3AddCMRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3AddCMRequest is not found in the empty JSON string", Guardiumconnectorv3AddCMRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,7 +209,7 @@ public class Guardiumconnectorv3AddCMRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3AddCMRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3AddCMRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3AddCMRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -218,7 +219,7 @@ public class Guardiumconnectorv3AddCMRequest {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("edit_cm_attributes") != null && !jsonObj.get("edit_cm_attributes").isJsonNull() && !jsonObj.get("edit_cm_attributes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `edit_cm_attributes` to be an array in the JSON string but got `%s`", jsonObj.get("edit_cm_attributes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `edit_cm_attributes` to be an array in the JSON string but got `%s`", jsonObj.get("edit_cm_attributes").toString()));
       }
   }
 
@@ -251,22 +252,22 @@ public class Guardiumconnectorv3AddCMRequest {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3AddCMRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3AddCMRequest
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3AddCMRequest
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3AddCMRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3AddCMRequest
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3AddCMRequest
+   */
   public static Guardiumconnectorv3AddCMRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3AddCMRequest.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3AddCMRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3AddCMRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

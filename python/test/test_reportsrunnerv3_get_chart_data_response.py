@@ -27,7 +27,7 @@ class TestReportsrunnerv3GetChartDataResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Reportsrunnerv3GetChartDataResponse:
         """Test Reportsrunnerv3GetChartDataResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Reportsrunnerv3GetChartDataResponse`
@@ -38,6 +38,7 @@ class TestReportsrunnerv3GetChartDataResponse(unittest.TestCase):
                 chart_layout = ibm_gdsc_sdk_saas.models.reportsv3_chart_display_layout.reportsv3ChartDisplayLayout(
                     chart_headers = [
                         ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                            aggregation_type = 'UNDEFINED_AGG_TYPE', 
                             field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                                 customized_value = '', 
                                 nls_key = '', 

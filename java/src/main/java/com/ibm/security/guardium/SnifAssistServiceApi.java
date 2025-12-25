@@ -87,13 +87,14 @@ public class SnifAssistServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServiceGetSnifConfigCall(String tenantId, String edgeId, String configType, String configId, Long configurationParametersCrc, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call snifAssistServiceGetSnifConfigCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable String configType, @javax.annotation.Nullable String configId, @javax.annotation.Nullable Long configurationParametersCrc, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -158,7 +159,7 @@ public class SnifAssistServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call snifAssistServiceGetSnifConfigValidateBeforeCall(String tenantId, String edgeId, String configType, String configId, Long configurationParametersCrc, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call snifAssistServiceGetSnifConfigValidateBeforeCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable String configType, @javax.annotation.Nullable String configId, @javax.annotation.Nullable Long configurationParametersCrc, final ApiCallback _callback) throws ApiException {
         return snifAssistServiceGetSnifConfigCall(tenantId, edgeId, configType, configId, configurationParametersCrc, _callback);
 
     }
@@ -174,13 +175,14 @@ public class SnifAssistServiceApi {
      * @return Snifassistv3GetSnifConfigResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Snifassistv3GetSnifConfigResponse snifAssistServiceGetSnifConfig(String tenantId, String edgeId, String configType, String configId, Long configurationParametersCrc) throws ApiException {
+    public Snifassistv3GetSnifConfigResponse snifAssistServiceGetSnifConfig(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable String configType, @javax.annotation.Nullable String configId, @javax.annotation.Nullable Long configurationParametersCrc) throws ApiException {
         ApiResponse<Snifassistv3GetSnifConfigResponse> localVarResp = snifAssistServiceGetSnifConfigWithHttpInfo(tenantId, edgeId, configType, configId, configurationParametersCrc);
         return localVarResp.getData();
     }
@@ -196,13 +198,14 @@ public class SnifAssistServiceApi {
      * @return ApiResponse&lt;Snifassistv3GetSnifConfigResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Snifassistv3GetSnifConfigResponse> snifAssistServiceGetSnifConfigWithHttpInfo(String tenantId, String edgeId, String configType, String configId, Long configurationParametersCrc) throws ApiException {
+    public ApiResponse<Snifassistv3GetSnifConfigResponse> snifAssistServiceGetSnifConfigWithHttpInfo(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable String configType, @javax.annotation.Nullable String configId, @javax.annotation.Nullable Long configurationParametersCrc) throws ApiException {
         okhttp3.Call localVarCall = snifAssistServiceGetSnifConfigValidateBeforeCall(tenantId, edgeId, configType, configId, configurationParametersCrc, null);
         Type localVarReturnType = new TypeToken<Snifassistv3GetSnifConfigResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -220,13 +223,14 @@ public class SnifAssistServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServiceGetSnifConfigAsync(String tenantId, String edgeId, String configType, String configId, Long configurationParametersCrc, final ApiCallback<Snifassistv3GetSnifConfigResponse> _callback) throws ApiException {
+    public okhttp3.Call snifAssistServiceGetSnifConfigAsync(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable String configType, @javax.annotation.Nullable String configId, @javax.annotation.Nullable Long configurationParametersCrc, final ApiCallback<Snifassistv3GetSnifConfigResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = snifAssistServiceGetSnifConfigValidateBeforeCall(tenantId, edgeId, configType, configId, configurationParametersCrc, _callback);
         Type localVarReturnType = new TypeToken<Snifassistv3GetSnifConfigResponse>(){}.getType();
@@ -242,13 +246,14 @@ public class SnifAssistServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServiceGetSnifPolicyCall(String tenantId, String edgeId, Long policyCrc, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call snifAssistServiceGetSnifPolicyCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable Long policyCrc, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -305,7 +310,7 @@ public class SnifAssistServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call snifAssistServiceGetSnifPolicyValidateBeforeCall(String tenantId, String edgeId, Long policyCrc, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call snifAssistServiceGetSnifPolicyValidateBeforeCall(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable Long policyCrc, final ApiCallback _callback) throws ApiException {
         return snifAssistServiceGetSnifPolicyCall(tenantId, edgeId, policyCrc, _callback);
 
     }
@@ -319,13 +324,14 @@ public class SnifAssistServiceApi {
      * @return Snifassistv3StatusResponseBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Snifassistv3StatusResponseBase snifAssistServiceGetSnifPolicy(String tenantId, String edgeId, Long policyCrc) throws ApiException {
+    public Snifassistv3StatusResponseBase snifAssistServiceGetSnifPolicy(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable Long policyCrc) throws ApiException {
         ApiResponse<Snifassistv3StatusResponseBase> localVarResp = snifAssistServiceGetSnifPolicyWithHttpInfo(tenantId, edgeId, policyCrc);
         return localVarResp.getData();
     }
@@ -339,13 +345,14 @@ public class SnifAssistServiceApi {
      * @return ApiResponse&lt;Snifassistv3StatusResponseBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Snifassistv3StatusResponseBase> snifAssistServiceGetSnifPolicyWithHttpInfo(String tenantId, String edgeId, Long policyCrc) throws ApiException {
+    public ApiResponse<Snifassistv3StatusResponseBase> snifAssistServiceGetSnifPolicyWithHttpInfo(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable Long policyCrc) throws ApiException {
         okhttp3.Call localVarCall = snifAssistServiceGetSnifPolicyValidateBeforeCall(tenantId, edgeId, policyCrc, null);
         Type localVarReturnType = new TypeToken<Snifassistv3StatusResponseBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -361,13 +368,14 @@ public class SnifAssistServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServiceGetSnifPolicyAsync(String tenantId, String edgeId, Long policyCrc, final ApiCallback<Snifassistv3StatusResponseBase> _callback) throws ApiException {
+    public okhttp3.Call snifAssistServiceGetSnifPolicyAsync(@javax.annotation.Nullable String tenantId, @javax.annotation.Nullable String edgeId, @javax.annotation.Nullable Long policyCrc, final ApiCallback<Snifassistv3StatusResponseBase> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = snifAssistServiceGetSnifPolicyValidateBeforeCall(tenantId, edgeId, policyCrc, _callback);
         Type localVarReturnType = new TypeToken<Snifassistv3StatusResponseBase>(){}.getType();
@@ -381,13 +389,14 @@ public class SnifAssistServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServicePostSnifFeedbackCall(Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call snifAssistServicePostSnifFeedbackCall(@javax.annotation.Nonnull Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -433,7 +442,7 @@ public class SnifAssistServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call snifAssistServicePostSnifFeedbackValidateBeforeCall(Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call snifAssistServicePostSnifFeedbackValidateBeforeCall(@javax.annotation.Nonnull Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'snifassistv3PostSnifFeedbackRequest' is set
         if (snifassistv3PostSnifFeedbackRequest == null) {
             throw new ApiException("Missing the required parameter 'snifassistv3PostSnifFeedbackRequest' when calling snifAssistServicePostSnifFeedback(Async)");
@@ -450,13 +459,14 @@ public class SnifAssistServiceApi {
      * @return Snifassistv3StatusResponseBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Snifassistv3StatusResponseBase snifAssistServicePostSnifFeedback(Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest) throws ApiException {
+    public Snifassistv3StatusResponseBase snifAssistServicePostSnifFeedback(@javax.annotation.Nonnull Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest) throws ApiException {
         ApiResponse<Snifassistv3StatusResponseBase> localVarResp = snifAssistServicePostSnifFeedbackWithHttpInfo(snifassistv3PostSnifFeedbackRequest);
         return localVarResp.getData();
     }
@@ -468,13 +478,14 @@ public class SnifAssistServiceApi {
      * @return ApiResponse&lt;Snifassistv3StatusResponseBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Snifassistv3StatusResponseBase> snifAssistServicePostSnifFeedbackWithHttpInfo(Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest) throws ApiException {
+    public ApiResponse<Snifassistv3StatusResponseBase> snifAssistServicePostSnifFeedbackWithHttpInfo(@javax.annotation.Nonnull Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest) throws ApiException {
         okhttp3.Call localVarCall = snifAssistServicePostSnifFeedbackValidateBeforeCall(snifassistv3PostSnifFeedbackRequest, null);
         Type localVarReturnType = new TypeToken<Snifassistv3StatusResponseBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -488,13 +499,14 @@ public class SnifAssistServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServicePostSnifFeedbackAsync(Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest, final ApiCallback<Snifassistv3StatusResponseBase> _callback) throws ApiException {
+    public okhttp3.Call snifAssistServicePostSnifFeedbackAsync(@javax.annotation.Nonnull Snifassistv3PostSnifFeedbackRequest snifassistv3PostSnifFeedbackRequest, final ApiCallback<Snifassistv3StatusResponseBase> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = snifAssistServicePostSnifFeedbackValidateBeforeCall(snifassistv3PostSnifFeedbackRequest, _callback);
         Type localVarReturnType = new TypeToken<Snifassistv3StatusResponseBase>(){}.getType();
@@ -508,13 +520,14 @@ public class SnifAssistServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServiceTestRegexCall(Snifassistv3TestRegexRequest snifassistv3TestRegexRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call snifAssistServiceTestRegexCall(@javax.annotation.Nonnull Snifassistv3TestRegexRequest snifassistv3TestRegexRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -560,7 +573,7 @@ public class SnifAssistServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call snifAssistServiceTestRegexValidateBeforeCall(Snifassistv3TestRegexRequest snifassistv3TestRegexRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call snifAssistServiceTestRegexValidateBeforeCall(@javax.annotation.Nonnull Snifassistv3TestRegexRequest snifassistv3TestRegexRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'snifassistv3TestRegexRequest' is set
         if (snifassistv3TestRegexRequest == null) {
             throw new ApiException("Missing the required parameter 'snifassistv3TestRegexRequest' when calling snifAssistServiceTestRegex(Async)");
@@ -577,13 +590,14 @@ public class SnifAssistServiceApi {
      * @return Snifassistv3StatusResponseBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Snifassistv3StatusResponseBase snifAssistServiceTestRegex(Snifassistv3TestRegexRequest snifassistv3TestRegexRequest) throws ApiException {
+    public Snifassistv3StatusResponseBase snifAssistServiceTestRegex(@javax.annotation.Nonnull Snifassistv3TestRegexRequest snifassistv3TestRegexRequest) throws ApiException {
         ApiResponse<Snifassistv3StatusResponseBase> localVarResp = snifAssistServiceTestRegexWithHttpInfo(snifassistv3TestRegexRequest);
         return localVarResp.getData();
     }
@@ -595,13 +609,14 @@ public class SnifAssistServiceApi {
      * @return ApiResponse&lt;Snifassistv3StatusResponseBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Snifassistv3StatusResponseBase> snifAssistServiceTestRegexWithHttpInfo(Snifassistv3TestRegexRequest snifassistv3TestRegexRequest) throws ApiException {
+    public ApiResponse<Snifassistv3StatusResponseBase> snifAssistServiceTestRegexWithHttpInfo(@javax.annotation.Nonnull Snifassistv3TestRegexRequest snifassistv3TestRegexRequest) throws ApiException {
         okhttp3.Call localVarCall = snifAssistServiceTestRegexValidateBeforeCall(snifassistv3TestRegexRequest, null);
         Type localVarReturnType = new TypeToken<Snifassistv3StatusResponseBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -615,13 +630,14 @@ public class SnifAssistServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call snifAssistServiceTestRegexAsync(Snifassistv3TestRegexRequest snifassistv3TestRegexRequest, final ApiCallback<Snifassistv3StatusResponseBase> _callback) throws ApiException {
+    public okhttp3.Call snifAssistServiceTestRegexAsync(@javax.annotation.Nonnull Snifassistv3TestRegexRequest snifassistv3TestRegexRequest, final ApiCallback<Snifassistv3StatusResponseBase> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = snifAssistServiceTestRegexValidateBeforeCall(snifassistv3TestRegexRequest, _callback);
         Type localVarReturnType = new TypeToken<Snifassistv3StatusResponseBase>(){}.getType();

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,82 +41,87 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AccountVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AccountVertex {
   public static final String SERIALIZED_NAME_ACCOUNT_TYPE = "account_type";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_TYPE)
+  @javax.annotation.Nullable
   private String accountType;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public Assetsv3AccountVertex() {
   }
 
-  public Assetsv3AccountVertex accountType(String accountType) {
+  public Assetsv3AccountVertex accountType(@javax.annotation.Nullable String accountType) {
     this.accountType = accountType;
     return this;
   }
 
-   /**
+  /**
    * Get accountType
    * @return accountType
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccountType() {
     return accountType;
   }
 
-  public void setAccountType(String accountType) {
+  public void setAccountType(@javax.annotation.Nullable String accountType) {
     this.accountType = accountType;
   }
 
 
-  public Assetsv3AccountVertex description(String description) {
+  public Assetsv3AccountVertex description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Assetsv3AccountVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3AccountVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -128,54 +134,54 @@ public class Assetsv3AccountVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3AccountVertex name(String name) {
+  public Assetsv3AccountVertex name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Assetsv3AccountVertex resolutionKey(String resolutionKey) {
+  public Assetsv3AccountVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
@@ -232,27 +238,22 @@ public class Assetsv3AccountVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("account_type");
-    openapiFields.add("description");
-    openapiFields.add("extended_properties");
-    openapiFields.add("name");
-    openapiFields.add("resolution_key");
+    openapiFields = new HashSet<String>(Arrays.asList("account_type", "description", "extended_properties", "name", "resolution_key"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AccountVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AccountVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AccountVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AccountVertex is not found in the empty JSON string", Assetsv3AccountVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AccountVertex is not found in the empty JSON string", Assetsv3AccountVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -260,22 +261,22 @@ public class Assetsv3AccountVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AccountVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AccountVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AccountVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("account_type") != null && !jsonObj.get("account_type").isJsonNull()) && !jsonObj.get("account_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `account_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `account_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_type").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("extended_properties") != null && !jsonObj.get("extended_properties").isJsonNull()) {
         JsonArray jsonArrayextendedProperties = jsonObj.getAsJsonArray("extended_properties");
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -285,10 +286,10 @@ public class Assetsv3AccountVertex {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
   }
 
@@ -321,22 +322,22 @@ public class Assetsv3AccountVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AccountVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AccountVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AccountVertex
-  */
+  /**
+   * Create an instance of Assetsv3AccountVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AccountVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AccountVertex
+   */
   public static Assetsv3AccountVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AccountVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AccountVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AccountVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

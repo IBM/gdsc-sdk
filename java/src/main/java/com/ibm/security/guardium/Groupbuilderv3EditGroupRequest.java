@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,75 +42,83 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * EditGroupRequest request an update to the group members of a specific group ID.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3EditGroupRequest {
   public static final String SERIALIZED_NAME_CLEAR_GROUP = "clear_group";
   @SerializedName(SERIALIZED_NAME_CLEAR_GROUP)
+  @javax.annotation.Nullable
   private Boolean clearGroup;
 
   public static final String SERIALIZED_NAME_DELETED_MEMBERS = "deleted_members";
   @SerializedName(SERIALIZED_NAME_DELETED_MEMBERS)
+  @javax.annotation.Nullable
   private List<String> deletedMembers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer groupId;
 
   public static final String SERIALIZED_NAME_LDAP_CONFIG = "ldap_config";
   @SerializedName(SERIALIZED_NAME_LDAP_CONFIG)
+  @javax.annotation.Nullable
   private Groupbuilderv3LdapConfig ldapConfig;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NEW_MEMBERS = "new_members";
   @SerializedName(SERIALIZED_NAME_NEW_MEMBERS)
+  @javax.annotation.Nullable
   private List<String> newMembers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_UPDATED_MEMBERS = "updated_members";
   @SerializedName(SERIALIZED_NAME_UPDATED_MEMBERS)
+  @javax.annotation.Nullable
   private List<Groupbuilderv3GroupMember> updatedMembers = new ArrayList<>();
 
   public Groupbuilderv3EditGroupRequest() {
   }
 
-  public Groupbuilderv3EditGroupRequest clearGroup(Boolean clearGroup) {
+  public Groupbuilderv3EditGroupRequest clearGroup(@javax.annotation.Nullable Boolean clearGroup) {
     this.clearGroup = clearGroup;
     return this;
   }
 
-   /**
+  /**
    * Clear the group member.
    * @return clearGroup
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getClearGroup() {
     return clearGroup;
   }
 
-  public void setClearGroup(Boolean clearGroup) {
+  public void setClearGroup(@javax.annotation.Nullable Boolean clearGroup) {
     this.clearGroup = clearGroup;
   }
 
 
-  public Groupbuilderv3EditGroupRequest deletedMembers(List<String> deletedMembers) {
+  public Groupbuilderv3EditGroupRequest deletedMembers(@javax.annotation.Nullable List<String> deletedMembers) {
     this.deletedMembers = deletedMembers;
     return this;
   }
@@ -122,97 +131,97 @@ public class Groupbuilderv3EditGroupRequest {
     return this;
   }
 
-   /**
+  /**
    * Group member ID to delete.
    * @return deletedMembers
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDeletedMembers() {
     return deletedMembers;
   }
 
-  public void setDeletedMembers(List<String> deletedMembers) {
+  public void setDeletedMembers(@javax.annotation.Nullable List<String> deletedMembers) {
     this.deletedMembers = deletedMembers;
   }
 
 
-  public Groupbuilderv3EditGroupRequest description(String description) {
+  public Groupbuilderv3EditGroupRequest description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Group description.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Groupbuilderv3EditGroupRequest groupId(Integer groupId) {
+  public Groupbuilderv3EditGroupRequest groupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * Group ID.
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(Integer groupId) {
+  public void setGroupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
   }
 
 
-  public Groupbuilderv3EditGroupRequest ldapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public Groupbuilderv3EditGroupRequest ldapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
     return this;
   }
 
-   /**
+  /**
    * Get ldapConfig
    * @return ldapConfig
-  **/
+   */
   @javax.annotation.Nullable
   public Groupbuilderv3LdapConfig getLdapConfig() {
     return ldapConfig;
   }
 
-  public void setLdapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public void setLdapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
   }
 
 
-  public Groupbuilderv3EditGroupRequest name(String name) {
+  public Groupbuilderv3EditGroupRequest name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Group name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Groupbuilderv3EditGroupRequest newMembers(List<String> newMembers) {
+  public Groupbuilderv3EditGroupRequest newMembers(@javax.annotation.Nullable List<String> newMembers) {
     this.newMembers = newMembers;
     return this;
   }
@@ -225,21 +234,21 @@ public class Groupbuilderv3EditGroupRequest {
     return this;
   }
 
-   /**
+  /**
    * New members to add.
    * @return newMembers
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getNewMembers() {
     return newMembers;
   }
 
-  public void setNewMembers(List<String> newMembers) {
+  public void setNewMembers(@javax.annotation.Nullable List<String> newMembers) {
     this.newMembers = newMembers;
   }
 
 
-  public Groupbuilderv3EditGroupRequest updatedMembers(List<Groupbuilderv3GroupMember> updatedMembers) {
+  public Groupbuilderv3EditGroupRequest updatedMembers(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> updatedMembers) {
     this.updatedMembers = updatedMembers;
     return this;
   }
@@ -252,16 +261,16 @@ public class Groupbuilderv3EditGroupRequest {
     return this;
   }
 
-   /**
+  /**
    * Group members to update.
    * @return updatedMembers
-  **/
+   */
   @javax.annotation.Nullable
   public List<Groupbuilderv3GroupMember> getUpdatedMembers() {
     return updatedMembers;
   }
 
-  public void setUpdatedMembers(List<Groupbuilderv3GroupMember> updatedMembers) {
+  public void setUpdatedMembers(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> updatedMembers) {
     this.updatedMembers = updatedMembers;
   }
 
@@ -324,30 +333,22 @@ public class Groupbuilderv3EditGroupRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("clear_group");
-    openapiFields.add("deleted_members");
-    openapiFields.add("description");
-    openapiFields.add("group_id");
-    openapiFields.add("ldap_config");
-    openapiFields.add("name");
-    openapiFields.add("new_members");
-    openapiFields.add("updated_members");
+    openapiFields = new HashSet<String>(Arrays.asList("clear_group", "deleted_members", "description", "group_id", "ldap_config", "name", "new_members", "updated_members"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3EditGroupRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3EditGroupRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3EditGroupRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3EditGroupRequest is not found in the empty JSON string", Groupbuilderv3EditGroupRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3EditGroupRequest is not found in the empty JSON string", Groupbuilderv3EditGroupRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -355,34 +356,34 @@ public class Groupbuilderv3EditGroupRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3EditGroupRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3EditGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3EditGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("deleted_members") != null && !jsonObj.get("deleted_members").isJsonNull() && !jsonObj.get("deleted_members").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `deleted_members` to be an array in the JSON string but got `%s`", jsonObj.get("deleted_members").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `deleted_members` to be an array in the JSON string but got `%s`", jsonObj.get("deleted_members").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       // validate the optional field `ldap_config`
       if (jsonObj.get("ldap_config") != null && !jsonObj.get("ldap_config").isJsonNull()) {
         Groupbuilderv3LdapConfig.validateJsonElement(jsonObj.get("ldap_config"));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("new_members") != null && !jsonObj.get("new_members").isJsonNull() && !jsonObj.get("new_members").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `new_members` to be an array in the JSON string but got `%s`", jsonObj.get("new_members").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `new_members` to be an array in the JSON string but got `%s`", jsonObj.get("new_members").toString()));
       }
       if (jsonObj.get("updated_members") != null && !jsonObj.get("updated_members").isJsonNull()) {
         JsonArray jsonArrayupdatedMembers = jsonObj.getAsJsonArray("updated_members");
         if (jsonArrayupdatedMembers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("updated_members").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `updated_members` to be an array in the JSON string but got `%s`", jsonObj.get("updated_members").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `updated_members` to be an array in the JSON string but got `%s`", jsonObj.get("updated_members").toString()));
           }
 
           // validate the optional field `updated_members` (array)
@@ -422,22 +423,22 @@ public class Groupbuilderv3EditGroupRequest {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3EditGroupRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3EditGroupRequest
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3EditGroupRequest
-  */
+  /**
+   * Create an instance of Groupbuilderv3EditGroupRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3EditGroupRequest
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3EditGroupRequest
+   */
   public static Groupbuilderv3EditGroupRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3EditGroupRequest.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3EditGroupRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3EditGroupRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

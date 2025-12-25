@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,122 +43,137 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3DatabaseVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3DatabaseVertex {
   public static final String SERIALIZED_NAME_CATALOG = "catalog";
   @SerializedName(SERIALIZED_NAME_CATALOG)
+  @javax.annotation.Nullable
   private String catalog;
 
   public static final String SERIALIZED_NAME_CRITICALITY = "criticality";
   @SerializedName(SERIALIZED_NAME_CRITICALITY)
-  private Assetsv3Level criticality = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level criticality = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_DATABASE_HOST = "database_host";
   @SerializedName(SERIALIZED_NAME_DATABASE_HOST)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> databaseHost = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATABASE_IP = "database_ip";
   @SerializedName(SERIALIZED_NAME_DATABASE_IP)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> databaseIp = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATABASE_NAME = "database_name";
   @SerializedName(SERIALIZED_NAME_DATABASE_NAME)
+  @javax.annotation.Nullable
   private String databaseName;
 
   public static final String SERIALIZED_NAME_DATABASE_SUB_TYPE = "database_sub_type";
   @SerializedName(SERIALIZED_NAME_DATABASE_SUB_TYPE)
+  @javax.annotation.Nullable
   private String databaseSubType;
 
   public static final String SERIALIZED_NAME_DATABASE_SUBSCRIPTION = "database_subscription";
   @SerializedName(SERIALIZED_NAME_DATABASE_SUBSCRIPTION)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> databaseSubscription = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATABASE_TYPE = "database_type";
   @SerializedName(SERIALIZED_NAME_DATABASE_TYPE)
+  @javax.annotation.Nullable
   private String databaseType;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)
+  @javax.annotation.Nullable
   private List<String> owner = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public static final String SERIALIZED_NAME_RISK_LEVEL = "risk_level";
   @SerializedName(SERIALIZED_NAME_RISK_LEVEL)
-  private Assetsv3Level riskLevel = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level riskLevel = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_SCHEMA_NAME = "schema_name";
   @SerializedName(SERIALIZED_NAME_SCHEMA_NAME)
+  @javax.annotation.Nullable
   private String schemaName;
 
   public static final String SERIALIZED_NAME_SERVICE_NAME = "service_name";
   @SerializedName(SERIALIZED_NAME_SERVICE_NAME)
+  @javax.annotation.Nullable
   private String serviceName;
 
   public Assetsv3DatabaseVertex() {
   }
 
-  public Assetsv3DatabaseVertex catalog(String catalog) {
+  public Assetsv3DatabaseVertex catalog(@javax.annotation.Nullable String catalog) {
     this.catalog = catalog;
     return this;
   }
 
-   /**
+  /**
    * Get catalog
    * @return catalog
-  **/
+   */
   @javax.annotation.Nullable
   public String getCatalog() {
     return catalog;
   }
 
-  public void setCatalog(String catalog) {
+  public void setCatalog(@javax.annotation.Nullable String catalog) {
     this.catalog = catalog;
   }
 
 
-  public Assetsv3DatabaseVertex criticality(Assetsv3Level criticality) {
+  public Assetsv3DatabaseVertex criticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
     return this;
   }
 
-   /**
+  /**
    * Get criticality
    * @return criticality
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getCriticality() {
     return criticality;
   }
 
-  public void setCriticality(Assetsv3Level criticality) {
+  public void setCriticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
   }
 
 
-  public Assetsv3DatabaseVertex databaseHost(List<Assetsv3ConnectionEdge> databaseHost) {
+  public Assetsv3DatabaseVertex databaseHost(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> databaseHost) {
     this.databaseHost = databaseHost;
     return this;
   }
@@ -170,21 +186,21 @@ public class Assetsv3DatabaseVertex {
     return this;
   }
 
-   /**
+  /**
    * Get databaseHost
    * @return databaseHost
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getDatabaseHost() {
     return databaseHost;
   }
 
-  public void setDatabaseHost(List<Assetsv3ConnectionEdge> databaseHost) {
+  public void setDatabaseHost(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> databaseHost) {
     this.databaseHost = databaseHost;
   }
 
 
-  public Assetsv3DatabaseVertex databaseIp(List<Assetsv3ConnectionEdge> databaseIp) {
+  public Assetsv3DatabaseVertex databaseIp(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> databaseIp) {
     this.databaseIp = databaseIp;
     return this;
   }
@@ -197,59 +213,59 @@ public class Assetsv3DatabaseVertex {
     return this;
   }
 
-   /**
+  /**
    * Get databaseIp
    * @return databaseIp
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getDatabaseIp() {
     return databaseIp;
   }
 
-  public void setDatabaseIp(List<Assetsv3ConnectionEdge> databaseIp) {
+  public void setDatabaseIp(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> databaseIp) {
     this.databaseIp = databaseIp;
   }
 
 
-  public Assetsv3DatabaseVertex databaseName(String databaseName) {
+  public Assetsv3DatabaseVertex databaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
     return this;
   }
 
-   /**
+  /**
    * Get databaseName
    * @return databaseName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseName() {
     return databaseName;
   }
 
-  public void setDatabaseName(String databaseName) {
+  public void setDatabaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
   }
 
 
-  public Assetsv3DatabaseVertex databaseSubType(String databaseSubType) {
+  public Assetsv3DatabaseVertex databaseSubType(@javax.annotation.Nullable String databaseSubType) {
     this.databaseSubType = databaseSubType;
     return this;
   }
 
-   /**
+  /**
    * Get databaseSubType
    * @return databaseSubType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseSubType() {
     return databaseSubType;
   }
 
-  public void setDatabaseSubType(String databaseSubType) {
+  public void setDatabaseSubType(@javax.annotation.Nullable String databaseSubType) {
     this.databaseSubType = databaseSubType;
   }
 
 
-  public Assetsv3DatabaseVertex databaseSubscription(List<Assetsv3ConnectionEdge> databaseSubscription) {
+  public Assetsv3DatabaseVertex databaseSubscription(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> databaseSubscription) {
     this.databaseSubscription = databaseSubscription;
     return this;
   }
@@ -262,59 +278,59 @@ public class Assetsv3DatabaseVertex {
     return this;
   }
 
-   /**
+  /**
    * Get databaseSubscription
    * @return databaseSubscription
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getDatabaseSubscription() {
     return databaseSubscription;
   }
 
-  public void setDatabaseSubscription(List<Assetsv3ConnectionEdge> databaseSubscription) {
+  public void setDatabaseSubscription(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> databaseSubscription) {
     this.databaseSubscription = databaseSubscription;
   }
 
 
-  public Assetsv3DatabaseVertex databaseType(String databaseType) {
+  public Assetsv3DatabaseVertex databaseType(@javax.annotation.Nullable String databaseType) {
     this.databaseType = databaseType;
     return this;
   }
 
-   /**
+  /**
    * Get databaseType
    * @return databaseType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseType() {
     return databaseType;
   }
 
-  public void setDatabaseType(String databaseType) {
+  public void setDatabaseType(@javax.annotation.Nullable String databaseType) {
     this.databaseType = databaseType;
   }
 
 
-  public Assetsv3DatabaseVertex description(String description) {
+  public Assetsv3DatabaseVertex description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Assetsv3DatabaseVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3DatabaseVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -327,21 +343,21 @@ public class Assetsv3DatabaseVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3DatabaseVertex owner(List<String> owner) {
+  public Assetsv3DatabaseVertex owner(@javax.annotation.Nullable List<String> owner) {
     this.owner = owner;
     return this;
   }
@@ -354,92 +370,92 @@ public class Assetsv3DatabaseVertex {
     return this;
   }
 
-   /**
+  /**
    * Get owner
    * @return owner
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getOwner() {
     return owner;
   }
 
-  public void setOwner(List<String> owner) {
+  public void setOwner(@javax.annotation.Nullable List<String> owner) {
     this.owner = owner;
   }
 
 
-  public Assetsv3DatabaseVertex resolutionKey(String resolutionKey) {
+  public Assetsv3DatabaseVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
 
-  public Assetsv3DatabaseVertex riskLevel(Assetsv3Level riskLevel) {
+  public Assetsv3DatabaseVertex riskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
     return this;
   }
 
-   /**
+  /**
    * Get riskLevel
    * @return riskLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getRiskLevel() {
     return riskLevel;
   }
 
-  public void setRiskLevel(Assetsv3Level riskLevel) {
+  public void setRiskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
   }
 
 
-  public Assetsv3DatabaseVertex schemaName(String schemaName) {
+  public Assetsv3DatabaseVertex schemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
     return this;
   }
 
-   /**
+  /**
    * Get schemaName
    * @return schemaName
-  **/
+   */
   @javax.annotation.Nullable
   public String getSchemaName() {
     return schemaName;
   }
 
-  public void setSchemaName(String schemaName) {
+  public void setSchemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
   }
 
 
-  public Assetsv3DatabaseVertex serviceName(String serviceName) {
+  public Assetsv3DatabaseVertex serviceName(@javax.annotation.Nullable String serviceName) {
     this.serviceName = serviceName;
     return this;
   }
 
-   /**
+  /**
    * Get serviceName
    * @return serviceName
-  **/
+   */
   @javax.annotation.Nullable
   public String getServiceName() {
     return serviceName;
   }
 
-  public void setServiceName(String serviceName) {
+  public void setServiceName(@javax.annotation.Nullable String serviceName) {
     this.serviceName = serviceName;
   }
 
@@ -516,37 +532,22 @@ public class Assetsv3DatabaseVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("catalog");
-    openapiFields.add("criticality");
-    openapiFields.add("database_host");
-    openapiFields.add("database_ip");
-    openapiFields.add("database_name");
-    openapiFields.add("database_sub_type");
-    openapiFields.add("database_subscription");
-    openapiFields.add("database_type");
-    openapiFields.add("description");
-    openapiFields.add("extended_properties");
-    openapiFields.add("owner");
-    openapiFields.add("resolution_key");
-    openapiFields.add("risk_level");
-    openapiFields.add("schema_name");
-    openapiFields.add("service_name");
+    openapiFields = new HashSet<String>(Arrays.asList("catalog", "criticality", "database_host", "database_ip", "database_name", "database_sub_type", "database_subscription", "database_type", "description", "extended_properties", "owner", "resolution_key", "risk_level", "schema_name", "service_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3DatabaseVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3DatabaseVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3DatabaseVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3DatabaseVertex is not found in the empty JSON string", Assetsv3DatabaseVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3DatabaseVertex is not found in the empty JSON string", Assetsv3DatabaseVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -554,12 +555,12 @@ public class Assetsv3DatabaseVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3DatabaseVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3DatabaseVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3DatabaseVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("catalog") != null && !jsonObj.get("catalog").isJsonNull()) && !jsonObj.get("catalog").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `catalog` to be a primitive type in the JSON string but got `%s`", jsonObj.get("catalog").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `catalog` to be a primitive type in the JSON string but got `%s`", jsonObj.get("catalog").toString()));
       }
       // validate the optional field `criticality`
       if (jsonObj.get("criticality") != null && !jsonObj.get("criticality").isJsonNull()) {
@@ -570,7 +571,7 @@ public class Assetsv3DatabaseVertex {
         if (jsonArraydatabaseHost != null) {
           // ensure the json data is an array
           if (!jsonObj.get("database_host").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `database_host` to be an array in the JSON string but got `%s`", jsonObj.get("database_host").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_host` to be an array in the JSON string but got `%s`", jsonObj.get("database_host").toString()));
           }
 
           // validate the optional field `database_host` (array)
@@ -584,7 +585,7 @@ public class Assetsv3DatabaseVertex {
         if (jsonArraydatabaseIp != null) {
           // ensure the json data is an array
           if (!jsonObj.get("database_ip").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `database_ip` to be an array in the JSON string but got `%s`", jsonObj.get("database_ip").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_ip` to be an array in the JSON string but got `%s`", jsonObj.get("database_ip").toString()));
           }
 
           // validate the optional field `database_ip` (array)
@@ -594,17 +595,17 @@ public class Assetsv3DatabaseVertex {
         }
       }
       if ((jsonObj.get("database_name") != null && !jsonObj.get("database_name").isJsonNull()) && !jsonObj.get("database_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
       }
       if ((jsonObj.get("database_sub_type") != null && !jsonObj.get("database_sub_type").isJsonNull()) && !jsonObj.get("database_sub_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_sub_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_sub_type").toString()));
       }
       if (jsonObj.get("database_subscription") != null && !jsonObj.get("database_subscription").isJsonNull()) {
         JsonArray jsonArraydatabaseSubscription = jsonObj.getAsJsonArray("database_subscription");
         if (jsonArraydatabaseSubscription != null) {
           // ensure the json data is an array
           if (!jsonObj.get("database_subscription").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `database_subscription` to be an array in the JSON string but got `%s`", jsonObj.get("database_subscription").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_subscription` to be an array in the JSON string but got `%s`", jsonObj.get("database_subscription").toString()));
           }
 
           // validate the optional field `database_subscription` (array)
@@ -614,17 +615,17 @@ public class Assetsv3DatabaseVertex {
         }
       }
       if ((jsonObj.get("database_type") != null && !jsonObj.get("database_type").isJsonNull()) && !jsonObj.get("database_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_type").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("extended_properties") != null && !jsonObj.get("extended_properties").isJsonNull()) {
         JsonArray jsonArrayextendedProperties = jsonObj.getAsJsonArray("extended_properties");
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -635,20 +636,20 @@ public class Assetsv3DatabaseVertex {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("owner") != null && !jsonObj.get("owner").isJsonNull() && !jsonObj.get("owner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `owner` to be an array in the JSON string but got `%s`", jsonObj.get("owner").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `owner` to be an array in the JSON string but got `%s`", jsonObj.get("owner").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
       // validate the optional field `risk_level`
       if (jsonObj.get("risk_level") != null && !jsonObj.get("risk_level").isJsonNull()) {
         Assetsv3Level.validateJsonElement(jsonObj.get("risk_level"));
       }
       if ((jsonObj.get("schema_name") != null && !jsonObj.get("schema_name").isJsonNull()) && !jsonObj.get("schema_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
       }
       if ((jsonObj.get("service_name") != null && !jsonObj.get("service_name").isJsonNull()) && !jsonObj.get("service_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `service_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `service_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_name").toString()));
       }
   }
 
@@ -681,22 +682,22 @@ public class Assetsv3DatabaseVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3DatabaseVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3DatabaseVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3DatabaseVertex
-  */
+  /**
+   * Create an instance of Assetsv3DatabaseVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3DatabaseVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3DatabaseVertex
+   */
   public static Assetsv3DatabaseVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3DatabaseVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3DatabaseVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3DatabaseVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

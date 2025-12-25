@@ -81,13 +81,14 @@ public class DatabootstrapperServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call databootstrapperServiceLoadDataCall(Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call databootstrapperServiceLoadDataCall(@javax.annotation.Nonnull Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -133,7 +134,7 @@ public class DatabootstrapperServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call databootstrapperServiceLoadDataValidateBeforeCall(Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call databootstrapperServiceLoadDataValidateBeforeCall(@javax.annotation.Nonnull Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'databootstrapperv3LoadDataRequest' is set
         if (databootstrapperv3LoadDataRequest == null) {
             throw new ApiException("Missing the required parameter 'databootstrapperv3LoadDataRequest' when calling databootstrapperServiceLoadData(Async)");
@@ -150,13 +151,14 @@ public class DatabootstrapperServiceApi {
      * @return Databootstrapperv3LoadDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Databootstrapperv3LoadDataResponse databootstrapperServiceLoadData(Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest) throws ApiException {
+    public Databootstrapperv3LoadDataResponse databootstrapperServiceLoadData(@javax.annotation.Nonnull Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest) throws ApiException {
         ApiResponse<Databootstrapperv3LoadDataResponse> localVarResp = databootstrapperServiceLoadDataWithHttpInfo(databootstrapperv3LoadDataRequest);
         return localVarResp.getData();
     }
@@ -168,13 +170,14 @@ public class DatabootstrapperServiceApi {
      * @return ApiResponse&lt;Databootstrapperv3LoadDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Databootstrapperv3LoadDataResponse> databootstrapperServiceLoadDataWithHttpInfo(Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest) throws ApiException {
+    public ApiResponse<Databootstrapperv3LoadDataResponse> databootstrapperServiceLoadDataWithHttpInfo(@javax.annotation.Nonnull Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest) throws ApiException {
         okhttp3.Call localVarCall = databootstrapperServiceLoadDataValidateBeforeCall(databootstrapperv3LoadDataRequest, null);
         Type localVarReturnType = new TypeToken<Databootstrapperv3LoadDataResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -188,13 +191,14 @@ public class DatabootstrapperServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call databootstrapperServiceLoadDataAsync(Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest, final ApiCallback<Databootstrapperv3LoadDataResponse> _callback) throws ApiException {
+    public okhttp3.Call databootstrapperServiceLoadDataAsync(@javax.annotation.Nonnull Databootstrapperv3LoadDataRequest databootstrapperv3LoadDataRequest, final ApiCallback<Databootstrapperv3LoadDataResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = databootstrapperServiceLoadDataValidateBeforeCall(databootstrapperv3LoadDataRequest, _callback);
         Type localVarReturnType = new TypeToken<Databootstrapperv3LoadDataResponse>(){}.getType();

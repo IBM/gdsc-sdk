@@ -28,6 +28,8 @@ export class Riskanalyticscontrollerv3UserUISettings {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "cardSettings",
@@ -49,4 +51,3 @@ export class Riskanalyticscontrollerv3UserUISettings {
     public constructor() {
     }
 }
-

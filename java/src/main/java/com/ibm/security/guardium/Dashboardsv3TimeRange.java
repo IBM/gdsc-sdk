@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Time range.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Dashboardsv3TimeRange {
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)
+  @javax.annotation.Nullable
   private String end;
 
   public static final String SERIALIZED_NAME_RANGE = "range";
   @SerializedName(SERIALIZED_NAME_RANGE)
+  @javax.annotation.Nullable
   private String range;
 
   public static final String SERIALIZED_NAME_START = "start";
   @SerializedName(SERIALIZED_NAME_START)
+  @javax.annotation.Nullable
   private String start;
 
   public Dashboardsv3TimeRange() {
   }
 
-  public Dashboardsv3TimeRange end(String end) {
+  public Dashboardsv3TimeRange end(@javax.annotation.Nullable String end) {
     this.end = end;
     return this;
   }
 
-   /**
+  /**
    * End.
    * @return end
-  **/
+   */
   @javax.annotation.Nullable
   public String getEnd() {
     return end;
   }
 
-  public void setEnd(String end) {
+  public void setEnd(@javax.annotation.Nullable String end) {
     this.end = end;
   }
 
 
-  public Dashboardsv3TimeRange range(String range) {
+  public Dashboardsv3TimeRange range(@javax.annotation.Nullable String range) {
     this.range = range;
     return this;
   }
 
-   /**
+  /**
    * Time range.
    * @return range
-  **/
+   */
   @javax.annotation.Nullable
   public String getRange() {
     return range;
   }
 
-  public void setRange(String range) {
+  public void setRange(@javax.annotation.Nullable String range) {
     this.range = range;
   }
 
 
-  public Dashboardsv3TimeRange start(String start) {
+  public Dashboardsv3TimeRange start(@javax.annotation.Nullable String start) {
     this.start = start;
     return this;
   }
 
-   /**
+  /**
    * Start.
    * @return start
-  **/
+   */
   @javax.annotation.Nullable
   public String getStart() {
     return start;
   }
 
-  public void setStart(String start) {
+  public void setStart(@javax.annotation.Nullable String start) {
     this.start = start;
   }
 
@@ -171,25 +175,22 @@ public class Dashboardsv3TimeRange {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("end");
-    openapiFields.add("range");
-    openapiFields.add("start");
+    openapiFields = new HashSet<String>(Arrays.asList("end", "range", "start"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3TimeRange
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3TimeRange
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Dashboardsv3TimeRange.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Dashboardsv3TimeRange is not found in the empty JSON string", Dashboardsv3TimeRange.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Dashboardsv3TimeRange is not found in the empty JSON string", Dashboardsv3TimeRange.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Dashboardsv3TimeRange {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Dashboardsv3TimeRange.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Dashboardsv3TimeRange` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Dashboardsv3TimeRange` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("end") != null && !jsonObj.get("end").isJsonNull()) && !jsonObj.get("end").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `end` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `end` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end").toString()));
       }
       if ((jsonObj.get("range") != null && !jsonObj.get("range").isJsonNull()) && !jsonObj.get("range").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `range` to be a primitive type in the JSON string but got `%s`", jsonObj.get("range").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `range` to be a primitive type in the JSON string but got `%s`", jsonObj.get("range").toString()));
       }
       if ((jsonObj.get("start") != null && !jsonObj.get("start").isJsonNull()) && !jsonObj.get("start").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `start` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `start` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Dashboardsv3TimeRange {
     }
   }
 
- /**
-  * Create an instance of Dashboardsv3TimeRange given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Dashboardsv3TimeRange
-  * @throws IOException if the JSON string is invalid with respect to Dashboardsv3TimeRange
-  */
+  /**
+   * Create an instance of Dashboardsv3TimeRange given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Dashboardsv3TimeRange
+   * @throws IOException if the JSON string is invalid with respect to Dashboardsv3TimeRange
+   */
   public static Dashboardsv3TimeRange fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Dashboardsv3TimeRange.class);
   }
 
- /**
-  * Convert an instance of Dashboardsv3TimeRange to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Dashboardsv3TimeRange to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

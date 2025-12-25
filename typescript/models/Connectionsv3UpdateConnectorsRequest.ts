@@ -21,6 +21,8 @@ export class Connectionsv3UpdateConnectorsRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "connectors",
@@ -36,4 +38,3 @@ export class Connectionsv3UpdateConnectorsRequest {
     public constructor() {
     }
 }
-

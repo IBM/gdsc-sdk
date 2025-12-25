@@ -19,6 +19,8 @@ export class Riskanalyticsmlclassificationv3ClassificationDefinition {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "classifications",
@@ -40,6 +42,5 @@ export class Riskanalyticsmlclassificationv3ClassificationDefinition {
     public constructor() {
     }
 }
-
 
 

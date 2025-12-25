@@ -30,7 +30,7 @@ class Workflowv3WorkflowEvent(BaseModel):
     data: Optional[Dict[str, StrictStr]] = None
     entity_id: Optional[StrictStr] = None
     href: Optional[StrictStr] = None
-    severity: Optional[Workflowv3Priority] = None
+    severity: Optional[Workflowv3Priority] = Workflowv3Priority.UNDEFINED_PRIORITY
     tenant_id: Optional[StrictStr] = None
     title: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["data", "entity_id", "href", "severity", "tenant_id", "title"]
@@ -89,7 +89,7 @@ class Workflowv3WorkflowEvent(BaseModel):
             "data": obj.get("data"),
             "entity_id": obj.get("entity_id"),
             "href": obj.get("href"),
-            "severity": obj.get("severity"),
+            "severity": obj.get("severity") if obj.get("severity") is not None else Workflowv3Priority.UNDEFINED_PRIORITY,
             "tenant_id": obj.get("tenant_id"),
             "title": obj.get("title")
         })

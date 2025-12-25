@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **catalog** | **str** |  | [optional] 
-**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 **database_host** | [**List[Assetsv3ConnectionEdge]**](Assetsv3ConnectionEdge.md) |  | [optional] 
 **database_ip** | [**List[Assetsv3ConnectionEdge]**](Assetsv3ConnectionEdge.md) |  | [optional] 
 **database_name** | **str** |  | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **extended_properties** | [**List[Assetsv3CustomProperty]**](Assetsv3CustomProperty.md) |  | [optional] 
 **owner** | **List[str]** |  | [optional] 
 **resolution_key** | **str** |  | [optional] 
-**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 **schema_name** | **str** |  | [optional] 
 **service_name** | **str** |  | [optional] 
 

@@ -30,7 +30,7 @@ class Assetsv3ModelVertex(BaseModel):
     """
     Assetsv3ModelVertex
     """ # noqa: E501
-    criticality: Optional[Assetsv3Level] = None
+    criticality: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     extended_properties: Optional[List[Assetsv3CustomProperty]] = None
     has_training_data: Optional[StrictBool] = None
     last_trained: Optional[datetime] = None
@@ -43,7 +43,7 @@ class Assetsv3ModelVertex(BaseModel):
     model_type: Optional[StrictStr] = None
     publisher: Optional[StrictStr] = None
     resolution_key: Optional[StrictStr] = None
-    risk_level: Optional[Assetsv3Level] = None
+    risk_level: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     version: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["criticality", "extended_properties", "has_training_data", "last_trained", "model_application", "model_deployment", "model_id", "model_name", "model_resources", "model_sub_type", "model_type", "publisher", "resolution_key", "risk_level", "version"]
 
@@ -89,30 +89,30 @@ class Assetsv3ModelVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in model_application (list)
         _items = []
         if self.model_application:
-            for _item in self.model_application:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_model_application in self.model_application:
+                if _item_model_application:
+                    _items.append(_item_model_application.to_dict())
             _dict['model_application'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in model_deployment (list)
         _items = []
         if self.model_deployment:
-            for _item in self.model_deployment:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_model_deployment in self.model_deployment:
+                if _item_model_deployment:
+                    _items.append(_item_model_deployment.to_dict())
             _dict['model_deployment'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in model_resources (list)
         _items = []
         if self.model_resources:
-            for _item in self.model_resources:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_model_resources in self.model_resources:
+                if _item_model_resources:
+                    _items.append(_item_model_resources.to_dict())
             _dict['model_resources'] = _items
         return _dict
 
@@ -126,7 +126,7 @@ class Assetsv3ModelVertex(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "criticality": obj.get("criticality"),
+            "criticality": obj.get("criticality") if obj.get("criticality") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "extended_properties": [Assetsv3CustomProperty.from_dict(_item) for _item in obj["extended_properties"]] if obj.get("extended_properties") is not None else None,
             "has_training_data": obj.get("has_training_data"),
             "last_trained": obj.get("last_trained"),
@@ -139,7 +139,7 @@ class Assetsv3ModelVertex(BaseModel):
             "model_type": obj.get("model_type"),
             "publisher": obj.get("publisher"),
             "resolution_key": obj.get("resolution_key"),
-            "risk_level": obj.get("risk_level"),
+            "risk_level": obj.get("risk_level") if obj.get("risk_level") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "version": obj.get("version")
         })
         return _obj

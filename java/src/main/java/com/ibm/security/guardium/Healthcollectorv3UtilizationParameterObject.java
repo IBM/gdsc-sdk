@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,364 +38,379 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UnitUtilizationParameterObject gets information about unit utilization.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3UtilizationParameterObject {
   public static final String SERIALIZED_NAME_ANALYZER_QUEUE_VALUE = "analyzer_queue_value";
   @SerializedName(SERIALIZED_NAME_ANALYZER_QUEUE_VALUE)
+  @javax.annotation.Nullable
   private Integer analyzerQueueValue;
 
   public static final String SERIALIZED_NAME_DETAILED_ERR_MESSAGE = "detailed_err_message";
   @SerializedName(SERIALIZED_NAME_DETAILED_ERR_MESSAGE)
+  @javax.annotation.Nullable
   private String detailedErrMessage;
 
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private Integer error;
 
   public static final String SERIALIZED_NAME_FREE_BUFFER_SPACE_VALUE = "free_buffer_space_value";
   @SerializedName(SERIALIZED_NAME_FREE_BUFFER_SPACE_VALUE)
+  @javax.annotation.Nullable
   private Integer freeBufferSpaceValue;
 
   public static final String SERIALIZED_NAME_LOGGER_QUEUE_VALUE = "logger_queue_value";
   @SerializedName(SERIALIZED_NAME_LOGGER_QUEUE_VALUE)
+  @javax.annotation.Nullable
   private Integer loggerQueueValue;
 
   public static final String SERIALIZED_NAME_MYSQL_DISK_USAGE_VALUE = "mysql_disk_usage_value";
   @SerializedName(SERIALIZED_NAME_MYSQL_DISK_USAGE_VALUE)
+  @javax.annotation.Nullable
   private Integer mysqlDiskUsageValue;
 
   public static final String SERIALIZED_NAME_NO_OF_EXCEPTIONS_VALUE = "no_of_exceptions_value";
   @SerializedName(SERIALIZED_NAME_NO_OF_EXCEPTIONS_VALUE)
+  @javax.annotation.Nullable
   private Integer noOfExceptionsValue;
 
   public static final String SERIALIZED_NAME_NO_OF_FLAT_LOG_REQUESTS_VALUE = "no_of_flat_log_requests_value";
   @SerializedName(SERIALIZED_NAME_NO_OF_FLAT_LOG_REQUESTS_VALUE)
+  @javax.annotation.Nullable
   private Integer noOfFlatLogRequestsValue;
 
   public static final String SERIALIZED_NAME_NO_OF_POLICY_VIOLATIONS_VALUE = "no_of_policy_violations_value";
   @SerializedName(SERIALIZED_NAME_NO_OF_POLICY_VIOLATIONS_VALUE)
+  @javax.annotation.Nullable
   private Integer noOfPolicyViolationsValue;
 
   public static final String SERIALIZED_NAME_NO_OF_REQUESTS_VALUE = "no_of_requests_value";
   @SerializedName(SERIALIZED_NAME_NO_OF_REQUESTS_VALUE)
+  @javax.annotation.Nullable
   private Integer noOfRequestsValue;
 
   public static final String SERIALIZED_NAME_NO_OF_RESTARTS_VALUE = "no_of_restarts_value";
   @SerializedName(SERIALIZED_NAME_NO_OF_RESTARTS_VALUE)
+  @javax.annotation.Nullable
   private Integer noOfRestartsValue;
 
   public static final String SERIALIZED_NAME_PREC_MYSQL_MEMORY_VALUE = "prec_mysql_memory_value";
   @SerializedName(SERIALIZED_NAME_PREC_MYSQL_MEMORY_VALUE)
+  @javax.annotation.Nullable
   private Integer precMysqlMemoryValue;
 
   public static final String SERIALIZED_NAME_SNIFFER_MEMORY_VALUE = "sniffer_memory_value";
   @SerializedName(SERIALIZED_NAME_SNIFFER_MEMORY_VALUE)
+  @javax.annotation.Nullable
   private Integer snifferMemoryValue;
 
   public static final String SERIALIZED_NAME_SYSTEM_CPU_LOAD_VALUE = "system_cpu_load_value";
   @SerializedName(SERIALIZED_NAME_SYSTEM_CPU_LOAD_VALUE)
+  @javax.annotation.Nullable
   private Integer systemCpuLoadValue;
 
   public static final String SERIALIZED_NAME_SYSTEM_VAR_DISK_USAGE_VALUE = "system_var_disk_usage_value";
   @SerializedName(SERIALIZED_NAME_SYSTEM_VAR_DISK_USAGE_VALUE)
+  @javax.annotation.Nullable
   private Integer systemVarDiskUsageValue;
 
   public Healthcollectorv3UtilizationParameterObject() {
   }
 
-  public Healthcollectorv3UtilizationParameterObject analyzerQueueValue(Integer analyzerQueueValue) {
+  public Healthcollectorv3UtilizationParameterObject analyzerQueueValue(@javax.annotation.Nullable Integer analyzerQueueValue) {
     this.analyzerQueueValue = analyzerQueueValue;
     return this;
   }
 
-   /**
+  /**
    * Analyzer queue value.
    * @return analyzerQueueValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getAnalyzerQueueValue() {
     return analyzerQueueValue;
   }
 
-  public void setAnalyzerQueueValue(Integer analyzerQueueValue) {
+  public void setAnalyzerQueueValue(@javax.annotation.Nullable Integer analyzerQueueValue) {
     this.analyzerQueueValue = analyzerQueueValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject detailedErrMessage(String detailedErrMessage) {
+  public Healthcollectorv3UtilizationParameterObject detailedErrMessage(@javax.annotation.Nullable String detailedErrMessage) {
     this.detailedErrMessage = detailedErrMessage;
     return this;
   }
 
-   /**
+  /**
    * Detailed error message.
    * @return detailedErrMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String getDetailedErrMessage() {
     return detailedErrMessage;
   }
 
-  public void setDetailedErrMessage(String detailedErrMessage) {
+  public void setDetailedErrMessage(@javax.annotation.Nullable String detailedErrMessage) {
     this.detailedErrMessage = detailedErrMessage;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject error(Integer error) {
+  public Healthcollectorv3UtilizationParameterObject error(@javax.annotation.Nullable Integer error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Error message.
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getError() {
     return error;
   }
 
-  public void setError(Integer error) {
+  public void setError(@javax.annotation.Nullable Integer error) {
     this.error = error;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject freeBufferSpaceValue(Integer freeBufferSpaceValue) {
+  public Healthcollectorv3UtilizationParameterObject freeBufferSpaceValue(@javax.annotation.Nullable Integer freeBufferSpaceValue) {
     this.freeBufferSpaceValue = freeBufferSpaceValue;
     return this;
   }
 
-   /**
+  /**
    * Free buffer space value.
    * @return freeBufferSpaceValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFreeBufferSpaceValue() {
     return freeBufferSpaceValue;
   }
 
-  public void setFreeBufferSpaceValue(Integer freeBufferSpaceValue) {
+  public void setFreeBufferSpaceValue(@javax.annotation.Nullable Integer freeBufferSpaceValue) {
     this.freeBufferSpaceValue = freeBufferSpaceValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject loggerQueueValue(Integer loggerQueueValue) {
+  public Healthcollectorv3UtilizationParameterObject loggerQueueValue(@javax.annotation.Nullable Integer loggerQueueValue) {
     this.loggerQueueValue = loggerQueueValue;
     return this;
   }
 
-   /**
+  /**
    * Logger queue value.
    * @return loggerQueueValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getLoggerQueueValue() {
     return loggerQueueValue;
   }
 
-  public void setLoggerQueueValue(Integer loggerQueueValue) {
+  public void setLoggerQueueValue(@javax.annotation.Nullable Integer loggerQueueValue) {
     this.loggerQueueValue = loggerQueueValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject mysqlDiskUsageValue(Integer mysqlDiskUsageValue) {
+  public Healthcollectorv3UtilizationParameterObject mysqlDiskUsageValue(@javax.annotation.Nullable Integer mysqlDiskUsageValue) {
     this.mysqlDiskUsageValue = mysqlDiskUsageValue;
     return this;
   }
 
-   /**
+  /**
    * MySQL Disk usage.
    * @return mysqlDiskUsageValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMysqlDiskUsageValue() {
     return mysqlDiskUsageValue;
   }
 
-  public void setMysqlDiskUsageValue(Integer mysqlDiskUsageValue) {
+  public void setMysqlDiskUsageValue(@javax.annotation.Nullable Integer mysqlDiskUsageValue) {
     this.mysqlDiskUsageValue = mysqlDiskUsageValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject noOfExceptionsValue(Integer noOfExceptionsValue) {
+  public Healthcollectorv3UtilizationParameterObject noOfExceptionsValue(@javax.annotation.Nullable Integer noOfExceptionsValue) {
     this.noOfExceptionsValue = noOfExceptionsValue;
     return this;
   }
 
-   /**
+  /**
    * Number of exceptions.
    * @return noOfExceptionsValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNoOfExceptionsValue() {
     return noOfExceptionsValue;
   }
 
-  public void setNoOfExceptionsValue(Integer noOfExceptionsValue) {
+  public void setNoOfExceptionsValue(@javax.annotation.Nullable Integer noOfExceptionsValue) {
     this.noOfExceptionsValue = noOfExceptionsValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject noOfFlatLogRequestsValue(Integer noOfFlatLogRequestsValue) {
+  public Healthcollectorv3UtilizationParameterObject noOfFlatLogRequestsValue(@javax.annotation.Nullable Integer noOfFlatLogRequestsValue) {
     this.noOfFlatLogRequestsValue = noOfFlatLogRequestsValue;
     return this;
   }
 
-   /**
+  /**
    * Flat log requests value.
    * @return noOfFlatLogRequestsValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNoOfFlatLogRequestsValue() {
     return noOfFlatLogRequestsValue;
   }
 
-  public void setNoOfFlatLogRequestsValue(Integer noOfFlatLogRequestsValue) {
+  public void setNoOfFlatLogRequestsValue(@javax.annotation.Nullable Integer noOfFlatLogRequestsValue) {
     this.noOfFlatLogRequestsValue = noOfFlatLogRequestsValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject noOfPolicyViolationsValue(Integer noOfPolicyViolationsValue) {
+  public Healthcollectorv3UtilizationParameterObject noOfPolicyViolationsValue(@javax.annotation.Nullable Integer noOfPolicyViolationsValue) {
     this.noOfPolicyViolationsValue = noOfPolicyViolationsValue;
     return this;
   }
 
-   /**
+  /**
    * Number of policy violations.
    * @return noOfPolicyViolationsValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNoOfPolicyViolationsValue() {
     return noOfPolicyViolationsValue;
   }
 
-  public void setNoOfPolicyViolationsValue(Integer noOfPolicyViolationsValue) {
+  public void setNoOfPolicyViolationsValue(@javax.annotation.Nullable Integer noOfPolicyViolationsValue) {
     this.noOfPolicyViolationsValue = noOfPolicyViolationsValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject noOfRequestsValue(Integer noOfRequestsValue) {
+  public Healthcollectorv3UtilizationParameterObject noOfRequestsValue(@javax.annotation.Nullable Integer noOfRequestsValue) {
     this.noOfRequestsValue = noOfRequestsValue;
     return this;
   }
 
-   /**
+  /**
    * Number of requests.
    * @return noOfRequestsValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNoOfRequestsValue() {
     return noOfRequestsValue;
   }
 
-  public void setNoOfRequestsValue(Integer noOfRequestsValue) {
+  public void setNoOfRequestsValue(@javax.annotation.Nullable Integer noOfRequestsValue) {
     this.noOfRequestsValue = noOfRequestsValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject noOfRestartsValue(Integer noOfRestartsValue) {
+  public Healthcollectorv3UtilizationParameterObject noOfRestartsValue(@javax.annotation.Nullable Integer noOfRestartsValue) {
     this.noOfRestartsValue = noOfRestartsValue;
     return this;
   }
 
-   /**
+  /**
    * Number of restarts.
    * @return noOfRestartsValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNoOfRestartsValue() {
     return noOfRestartsValue;
   }
 
-  public void setNoOfRestartsValue(Integer noOfRestartsValue) {
+  public void setNoOfRestartsValue(@javax.annotation.Nullable Integer noOfRestartsValue) {
     this.noOfRestartsValue = noOfRestartsValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject precMysqlMemoryValue(Integer precMysqlMemoryValue) {
+  public Healthcollectorv3UtilizationParameterObject precMysqlMemoryValue(@javax.annotation.Nullable Integer precMysqlMemoryValue) {
     this.precMysqlMemoryValue = precMysqlMemoryValue;
     return this;
   }
 
-   /**
+  /**
    * MySQL memory value.
    * @return precMysqlMemoryValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPrecMysqlMemoryValue() {
     return precMysqlMemoryValue;
   }
 
-  public void setPrecMysqlMemoryValue(Integer precMysqlMemoryValue) {
+  public void setPrecMysqlMemoryValue(@javax.annotation.Nullable Integer precMysqlMemoryValue) {
     this.precMysqlMemoryValue = precMysqlMemoryValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject snifferMemoryValue(Integer snifferMemoryValue) {
+  public Healthcollectorv3UtilizationParameterObject snifferMemoryValue(@javax.annotation.Nullable Integer snifferMemoryValue) {
     this.snifferMemoryValue = snifferMemoryValue;
     return this;
   }
 
-   /**
+  /**
    * Sniffer memory value.
    * @return snifferMemoryValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSnifferMemoryValue() {
     return snifferMemoryValue;
   }
 
-  public void setSnifferMemoryValue(Integer snifferMemoryValue) {
+  public void setSnifferMemoryValue(@javax.annotation.Nullable Integer snifferMemoryValue) {
     this.snifferMemoryValue = snifferMemoryValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject systemCpuLoadValue(Integer systemCpuLoadValue) {
+  public Healthcollectorv3UtilizationParameterObject systemCpuLoadValue(@javax.annotation.Nullable Integer systemCpuLoadValue) {
     this.systemCpuLoadValue = systemCpuLoadValue;
     return this;
   }
 
-   /**
+  /**
    * CPU load value.
    * @return systemCpuLoadValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSystemCpuLoadValue() {
     return systemCpuLoadValue;
   }
 
-  public void setSystemCpuLoadValue(Integer systemCpuLoadValue) {
+  public void setSystemCpuLoadValue(@javax.annotation.Nullable Integer systemCpuLoadValue) {
     this.systemCpuLoadValue = systemCpuLoadValue;
   }
 
 
-  public Healthcollectorv3UtilizationParameterObject systemVarDiskUsageValue(Integer systemVarDiskUsageValue) {
+  public Healthcollectorv3UtilizationParameterObject systemVarDiskUsageValue(@javax.annotation.Nullable Integer systemVarDiskUsageValue) {
     this.systemVarDiskUsageValue = systemVarDiskUsageValue;
     return this;
   }
 
-   /**
+  /**
    * System var disk usage value.
    * @return systemVarDiskUsageValue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSystemVarDiskUsageValue() {
     return systemVarDiskUsageValue;
   }
 
-  public void setSystemVarDiskUsageValue(Integer systemVarDiskUsageValue) {
+  public void setSystemVarDiskUsageValue(@javax.annotation.Nullable Integer systemVarDiskUsageValue) {
     this.systemVarDiskUsageValue = systemVarDiskUsageValue;
   }
 
@@ -471,37 +487,22 @@ public class Healthcollectorv3UtilizationParameterObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("analyzer_queue_value");
-    openapiFields.add("detailed_err_message");
-    openapiFields.add("error");
-    openapiFields.add("free_buffer_space_value");
-    openapiFields.add("logger_queue_value");
-    openapiFields.add("mysql_disk_usage_value");
-    openapiFields.add("no_of_exceptions_value");
-    openapiFields.add("no_of_flat_log_requests_value");
-    openapiFields.add("no_of_policy_violations_value");
-    openapiFields.add("no_of_requests_value");
-    openapiFields.add("no_of_restarts_value");
-    openapiFields.add("prec_mysql_memory_value");
-    openapiFields.add("sniffer_memory_value");
-    openapiFields.add("system_cpu_load_value");
-    openapiFields.add("system_var_disk_usage_value");
+    openapiFields = new HashSet<String>(Arrays.asList("analyzer_queue_value", "detailed_err_message", "error", "free_buffer_space_value", "logger_queue_value", "mysql_disk_usage_value", "no_of_exceptions_value", "no_of_flat_log_requests_value", "no_of_policy_violations_value", "no_of_requests_value", "no_of_restarts_value", "prec_mysql_memory_value", "sniffer_memory_value", "system_cpu_load_value", "system_var_disk_usage_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3UtilizationParameterObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3UtilizationParameterObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3UtilizationParameterObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3UtilizationParameterObject is not found in the empty JSON string", Healthcollectorv3UtilizationParameterObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3UtilizationParameterObject is not found in the empty JSON string", Healthcollectorv3UtilizationParameterObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -509,12 +510,12 @@ public class Healthcollectorv3UtilizationParameterObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3UtilizationParameterObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3UtilizationParameterObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3UtilizationParameterObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("detailed_err_message") != null && !jsonObj.get("detailed_err_message").isJsonNull()) && !jsonObj.get("detailed_err_message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `detailed_err_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detailed_err_message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `detailed_err_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detailed_err_message").toString()));
       }
   }
 
@@ -547,22 +548,22 @@ public class Healthcollectorv3UtilizationParameterObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3UtilizationParameterObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3UtilizationParameterObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3UtilizationParameterObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3UtilizationParameterObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3UtilizationParameterObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3UtilizationParameterObject
+   */
   public static Healthcollectorv3UtilizationParameterObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3UtilizationParameterObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3UtilizationParameterObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3UtilizationParameterObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

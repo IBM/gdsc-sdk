@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,36 +42,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3FetchAssetListResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3FetchAssetListResponse {
   public static final String SERIALIZED_NAME_ASSETS = "assets";
   @SerializedName(SERIALIZED_NAME_ASSETS)
+  @javax.annotation.Nullable
   private List<Assetsv3Asset> assets = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_GROUPS = "groups";
   @SerializedName(SERIALIZED_NAME_GROUPS)
+  @javax.annotation.Nullable
   private List<Assetsv3GroupedAsset> groups = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @javax.annotation.Nullable
   private Integer totalCount;
 
   public Assetsv3FetchAssetListResponse() {
   }
 
-  public Assetsv3FetchAssetListResponse assets(List<Assetsv3Asset> assets) {
+  public Assetsv3FetchAssetListResponse assets(@javax.annotation.Nullable List<Assetsv3Asset> assets) {
     this.assets = assets;
     return this;
   }
@@ -83,21 +87,21 @@ public class Assetsv3FetchAssetListResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assets
    * @return assets
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3Asset> getAssets() {
     return assets;
   }
 
-  public void setAssets(List<Assetsv3Asset> assets) {
+  public void setAssets(@javax.annotation.Nullable List<Assetsv3Asset> assets) {
     this.assets = assets;
   }
 
 
-  public Assetsv3FetchAssetListResponse groups(List<Assetsv3GroupedAsset> groups) {
+  public Assetsv3FetchAssetListResponse groups(@javax.annotation.Nullable List<Assetsv3GroupedAsset> groups) {
     this.groups = groups;
     return this;
   }
@@ -110,35 +114,35 @@ public class Assetsv3FetchAssetListResponse {
     return this;
   }
 
-   /**
+  /**
    * Get groups
    * @return groups
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3GroupedAsset> getGroups() {
     return groups;
   }
 
-  public void setGroups(List<Assetsv3GroupedAsset> groups) {
+  public void setGroups(@javax.annotation.Nullable List<Assetsv3GroupedAsset> groups) {
     this.groups = groups;
   }
 
 
-  public Assetsv3FetchAssetListResponse totalCount(Integer totalCount) {
+  public Assetsv3FetchAssetListResponse totalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
-   /**
+  /**
    * Get totalCount
    * @return totalCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(Integer totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
   }
 
@@ -191,25 +195,22 @@ public class Assetsv3FetchAssetListResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assets");
-    openapiFields.add("groups");
-    openapiFields.add("total_count");
+    openapiFields = new HashSet<String>(Arrays.asList("assets", "groups", "total_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetListResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetListResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3FetchAssetListResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3FetchAssetListResponse is not found in the empty JSON string", Assetsv3FetchAssetListResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3FetchAssetListResponse is not found in the empty JSON string", Assetsv3FetchAssetListResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -217,7 +218,7 @@ public class Assetsv3FetchAssetListResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3FetchAssetListResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetListResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetListResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -226,7 +227,7 @@ public class Assetsv3FetchAssetListResponse {
         if (jsonArrayassets != null) {
           // ensure the json data is an array
           if (!jsonObj.get("assets").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `assets` to be an array in the JSON string but got `%s`", jsonObj.get("assets").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assets` to be an array in the JSON string but got `%s`", jsonObj.get("assets").toString()));
           }
 
           // validate the optional field `assets` (array)
@@ -240,7 +241,7 @@ public class Assetsv3FetchAssetListResponse {
         if (jsonArraygroups != null) {
           // ensure the json data is an array
           if (!jsonObj.get("groups").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `groups` to be an array in the JSON string but got `%s`", jsonObj.get("groups").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `groups` to be an array in the JSON string but got `%s`", jsonObj.get("groups").toString()));
           }
 
           // validate the optional field `groups` (array)
@@ -280,22 +281,22 @@ public class Assetsv3FetchAssetListResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3FetchAssetListResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3FetchAssetListResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetListResponse
-  */
+  /**
+   * Create an instance of Assetsv3FetchAssetListResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3FetchAssetListResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetListResponse
+   */
   public static Assetsv3FetchAssetListResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3FetchAssetListResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3FetchAssetListResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3FetchAssetListResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -72,9 +72,9 @@ class Assetsv3SaveAssignedTagsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tags_assigned (list)
         _items = []
         if self.tags_assigned:
-            for _item in self.tags_assigned:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tags_assigned in self.tags_assigned:
+                if _item_tags_assigned:
+                    _items.append(_item_tags_assigned.to_dict())
             _dict['tags_assigned'] = _items
         return _dict
 

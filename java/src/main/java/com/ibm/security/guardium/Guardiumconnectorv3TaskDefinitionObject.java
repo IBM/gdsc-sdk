@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Object hold task definition info.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3TaskDefinitionObject {
   public static final String SERIALIZED_NAME_EXECUTION_TRIGGER = "execution_trigger";
   @SerializedName(SERIALIZED_NAME_EXECUTION_TRIGGER)
+  @javax.annotation.Nullable
   private Integer executionTrigger;
 
   public static final String SERIALIZED_NAME_INTERVAL = "interval";
   @SerializedName(SERIALIZED_NAME_INTERVAL)
+  @javax.annotation.Nullable
   private String interval;
 
   public static final String SERIALIZED_NAME_IS_BLOCKER_TASK = "is_blocker_task";
   @SerializedName(SERIALIZED_NAME_IS_BLOCKER_TASK)
+  @javax.annotation.Nullable
   private Integer isBlockerTask;
 
   public static final String SERIALIZED_NAME_TASK_TYPE = "task_type";
   @SerializedName(SERIALIZED_NAME_TASK_TYPE)
+  @javax.annotation.Nullable
   private String taskType;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Guardiumconnectorv3TaskDefinitionObject() {
   }
 
-  public Guardiumconnectorv3TaskDefinitionObject executionTrigger(Integer executionTrigger) {
+  public Guardiumconnectorv3TaskDefinitionObject executionTrigger(@javax.annotation.Nullable Integer executionTrigger) {
     this.executionTrigger = executionTrigger;
     return this;
   }
 
-   /**
+  /**
    * Tells GDP when to send data.
    * @return executionTrigger
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getExecutionTrigger() {
     return executionTrigger;
   }
 
-  public void setExecutionTrigger(Integer executionTrigger) {
+  public void setExecutionTrigger(@javax.annotation.Nullable Integer executionTrigger) {
     this.executionTrigger = executionTrigger;
   }
 
 
-  public Guardiumconnectorv3TaskDefinitionObject interval(String interval) {
+  public Guardiumconnectorv3TaskDefinitionObject interval(@javax.annotation.Nullable String interval) {
     this.interval = interval;
     return this;
   }
 
-   /**
+  /**
    * Task interval.
    * @return interval
-  **/
+   */
   @javax.annotation.Nullable
   public String getInterval() {
     return interval;
   }
 
-  public void setInterval(String interval) {
+  public void setInterval(@javax.annotation.Nullable String interval) {
     this.interval = interval;
   }
 
 
-  public Guardiumconnectorv3TaskDefinitionObject isBlockerTask(Integer isBlockerTask) {
+  public Guardiumconnectorv3TaskDefinitionObject isBlockerTask(@javax.annotation.Nullable Integer isBlockerTask) {
     this.isBlockerTask = isBlockerTask;
     return this;
   }
 
-   /**
+  /**
    * Is the task a blocker task.
    * @return isBlockerTask
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getIsBlockerTask() {
     return isBlockerTask;
   }
 
-  public void setIsBlockerTask(Integer isBlockerTask) {
+  public void setIsBlockerTask(@javax.annotation.Nullable Integer isBlockerTask) {
     this.isBlockerTask = isBlockerTask;
   }
 
 
-  public Guardiumconnectorv3TaskDefinitionObject taskType(String taskType) {
+  public Guardiumconnectorv3TaskDefinitionObject taskType(@javax.annotation.Nullable String taskType) {
     this.taskType = taskType;
     return this;
   }
 
-   /**
+  /**
    * Task type.
    * @return taskType
-  **/
+   */
   @javax.annotation.Nullable
   public String getTaskType() {
     return taskType;
   }
 
-  public void setTaskType(String taskType) {
+  public void setTaskType(@javax.annotation.Nullable String taskType) {
     this.taskType = taskType;
   }
 
 
-  public Guardiumconnectorv3TaskDefinitionObject version(String version) {
+  public Guardiumconnectorv3TaskDefinitionObject version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Task version.
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -221,27 +227,22 @@ public class Guardiumconnectorv3TaskDefinitionObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("execution_trigger");
-    openapiFields.add("interval");
-    openapiFields.add("is_blocker_task");
-    openapiFields.add("task_type");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("execution_trigger", "interval", "is_blocker_task", "task_type", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3TaskDefinitionObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3TaskDefinitionObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3TaskDefinitionObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3TaskDefinitionObject is not found in the empty JSON string", Guardiumconnectorv3TaskDefinitionObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3TaskDefinitionObject is not found in the empty JSON string", Guardiumconnectorv3TaskDefinitionObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,18 +250,18 @@ public class Guardiumconnectorv3TaskDefinitionObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3TaskDefinitionObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3TaskDefinitionObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3TaskDefinitionObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("interval") != null && !jsonObj.get("interval").isJsonNull()) && !jsonObj.get("interval").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `interval` to be a primitive type in the JSON string but got `%s`", jsonObj.get("interval").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `interval` to be a primitive type in the JSON string but got `%s`", jsonObj.get("interval").toString()));
       }
       if ((jsonObj.get("task_type") != null && !jsonObj.get("task_type").isJsonNull()) && !jsonObj.get("task_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `task_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `task_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_type").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -293,22 +294,22 @@ public class Guardiumconnectorv3TaskDefinitionObject {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3TaskDefinitionObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3TaskDefinitionObject
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3TaskDefinitionObject
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3TaskDefinitionObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3TaskDefinitionObject
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3TaskDefinitionObject
+   */
   public static Guardiumconnectorv3TaskDefinitionObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3TaskDefinitionObject.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3TaskDefinitionObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3TaskDefinitionObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

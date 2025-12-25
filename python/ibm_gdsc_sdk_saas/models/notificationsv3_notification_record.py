@@ -36,8 +36,8 @@ class Notificationsv3NotificationRecord(BaseModel):
     id: Optional[StrictStr] = Field(default=None, description="Unique ID for notification, \"\" for new records, required for update.")
     origin: Optional[StrictStr] = Field(default=None, description="Source of the notification (Predictive Analytics, Outlier Analytics, Analytic Preferences Changed, User Administration, etc).")
     origin_data: Optional[StrictStr] = Field(default=None, description="Data specifically related to the origin (an ID or description needed for further action).")
-    severity: Optional[Notificationsv3NotificationSeverity] = None
-    state: Optional[Notificationsv3NotificationState] = None
+    severity: Optional[Notificationsv3NotificationSeverity] = Notificationsv3NotificationSeverity.UNDEFINED
+    state: Optional[Notificationsv3NotificationState] = Notificationsv3NotificationState.UNREAD
     style: Optional[StrictStr] = Field(default=None, description="For future use: \"\", info, error, criticalAnalysis, normalAnalysis, infoAnalysis.")
     tenant_id: Optional[StrictStr] = Field(default=None, description="The unique id for the Tenant the notification is associated with.")
     text: Optional[StrictStr] = Field(default=None, description="Detailed description of the notification in HTML format (to be embedded in HTML container).")
@@ -105,8 +105,8 @@ class Notificationsv3NotificationRecord(BaseModel):
             "id": obj.get("id"),
             "origin": obj.get("origin"),
             "origin_data": obj.get("origin_data"),
-            "severity": obj.get("severity"),
-            "state": obj.get("state"),
+            "severity": obj.get("severity") if obj.get("severity") is not None else Notificationsv3NotificationSeverity.UNDEFINED,
+            "state": obj.get("state") if obj.get("state") is not None else Notificationsv3NotificationState.UNREAD,
             "style": obj.get("style"),
             "tenant_id": obj.get("tenant_id"),
             "text": obj.get("text"),

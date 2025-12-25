@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,90 +43,97 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RiskFeedback represent feedback object in status NEW that should be sent to UI.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3RiskFeedback {
   public static final String SERIALIZED_NAME_COMMENTS = "comments";
   @SerializedName(SERIALIZED_NAME_COMMENTS)
+  @javax.annotation.Nullable
   private String comments;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_FEATURES = "features";
   @SerializedName(SERIALIZED_NAME_FEATURES)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3Feature> features = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NEW_CLASSIFICATION = "new_classification";
   @SerializedName(SERIALIZED_NAME_NEW_CLASSIFICATION)
+  @javax.annotation.Nullable
   private String newClassification;
 
   public static final String SERIALIZED_NAME_NEW_SEVERITY = "new_severity";
   @SerializedName(SERIALIZED_NAME_NEW_SEVERITY)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3SeverityLevel newSeverity = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL;
 
   public static final String SERIALIZED_NAME_OLD_CLASSIFICATION = "old_classification";
   @SerializedName(SERIALIZED_NAME_OLD_CLASSIFICATION)
+  @javax.annotation.Nullable
   private String oldClassification;
 
   public static final String SERIALIZED_NAME_OLD_SEVERITY = "old_severity";
   @SerializedName(SERIALIZED_NAME_OLD_SEVERITY)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3SeverityLevel oldSeverity = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL;
 
   public Riskanalyticscontrollerv3RiskFeedback() {
   }
 
-  public Riskanalyticscontrollerv3RiskFeedback comments(String comments) {
+  public Riskanalyticscontrollerv3RiskFeedback comments(@javax.annotation.Nullable String comments) {
     this.comments = comments;
     return this;
   }
 
-   /**
+  /**
    * Feedback comments.
    * @return comments
-  **/
+   */
   @javax.annotation.Nullable
   public String getComments() {
     return comments;
   }
 
-  public void setComments(String comments) {
+  public void setComments(@javax.annotation.Nullable String comments) {
     this.comments = comments;
   }
 
 
-  public Riskanalyticscontrollerv3RiskFeedback creationTime(OffsetDateTime creationTime) {
+  public Riskanalyticscontrollerv3RiskFeedback creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * Feedback creation time.
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Riskanalyticscontrollerv3RiskFeedback features(List<Riskanalyticsenginev3Feature> features) {
+  public Riskanalyticscontrollerv3RiskFeedback features(@javax.annotation.Nullable List<Riskanalyticsenginev3Feature> features) {
     this.features = features;
     return this;
   }
@@ -138,92 +146,92 @@ public class Riskanalyticscontrollerv3RiskFeedback {
     return this;
   }
 
-   /**
+  /**
    * List of features for the risk that related to this feedback.
    * @return features
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3Feature> getFeatures() {
     return features;
   }
 
-  public void setFeatures(List<Riskanalyticsenginev3Feature> features) {
+  public void setFeatures(@javax.annotation.Nullable List<Riskanalyticsenginev3Feature> features) {
     this.features = features;
   }
 
 
-  public Riskanalyticscontrollerv3RiskFeedback newClassification(String newClassification) {
+  public Riskanalyticscontrollerv3RiskFeedback newClassification(@javax.annotation.Nullable String newClassification) {
     this.newClassification = newClassification;
     return this;
   }
 
-   /**
+  /**
    * Feedback classification.
    * @return newClassification
-  **/
+   */
   @javax.annotation.Nullable
   public String getNewClassification() {
     return newClassification;
   }
 
-  public void setNewClassification(String newClassification) {
+  public void setNewClassification(@javax.annotation.Nullable String newClassification) {
     this.newClassification = newClassification;
   }
 
 
-  public Riskanalyticscontrollerv3RiskFeedback newSeverity(Riskanalyticsenginev3SeverityLevel newSeverity) {
+  public Riskanalyticscontrollerv3RiskFeedback newSeverity(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel newSeverity) {
     this.newSeverity = newSeverity;
     return this;
   }
 
-   /**
+  /**
    * Get newSeverity
    * @return newSeverity
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3SeverityLevel getNewSeverity() {
     return newSeverity;
   }
 
-  public void setNewSeverity(Riskanalyticsenginev3SeverityLevel newSeverity) {
+  public void setNewSeverity(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel newSeverity) {
     this.newSeverity = newSeverity;
   }
 
 
-  public Riskanalyticscontrollerv3RiskFeedback oldClassification(String oldClassification) {
+  public Riskanalyticscontrollerv3RiskFeedback oldClassification(@javax.annotation.Nullable String oldClassification) {
     this.oldClassification = oldClassification;
     return this;
   }
 
-   /**
+  /**
    * Original classification.
    * @return oldClassification
-  **/
+   */
   @javax.annotation.Nullable
   public String getOldClassification() {
     return oldClassification;
   }
 
-  public void setOldClassification(String oldClassification) {
+  public void setOldClassification(@javax.annotation.Nullable String oldClassification) {
     this.oldClassification = oldClassification;
   }
 
 
-  public Riskanalyticscontrollerv3RiskFeedback oldSeverity(Riskanalyticsenginev3SeverityLevel oldSeverity) {
+  public Riskanalyticscontrollerv3RiskFeedback oldSeverity(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel oldSeverity) {
     this.oldSeverity = oldSeverity;
     return this;
   }
 
-   /**
+  /**
    * Get oldSeverity
    * @return oldSeverity
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3SeverityLevel getOldSeverity() {
     return oldSeverity;
   }
 
-  public void setOldSeverity(Riskanalyticsenginev3SeverityLevel oldSeverity) {
+  public void setOldSeverity(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel oldSeverity) {
     this.oldSeverity = oldSeverity;
   }
 
@@ -284,29 +292,22 @@ public class Riskanalyticscontrollerv3RiskFeedback {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("comments");
-    openapiFields.add("creation_time");
-    openapiFields.add("features");
-    openapiFields.add("new_classification");
-    openapiFields.add("new_severity");
-    openapiFields.add("old_classification");
-    openapiFields.add("old_severity");
+    openapiFields = new HashSet<String>(Arrays.asList("comments", "creation_time", "features", "new_classification", "new_severity", "old_classification", "old_severity"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskFeedback
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskFeedback
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3RiskFeedback.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3RiskFeedback is not found in the empty JSON string", Riskanalyticscontrollerv3RiskFeedback.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3RiskFeedback is not found in the empty JSON string", Riskanalyticscontrollerv3RiskFeedback.openapiRequiredFields.toString()));
         }
       }
 
@@ -314,19 +315,19 @@ public class Riskanalyticscontrollerv3RiskFeedback {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3RiskFeedback.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskFeedback` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskFeedback` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("comments") != null && !jsonObj.get("comments").isJsonNull()) && !jsonObj.get("comments").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `comments` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comments").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `comments` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comments").toString()));
       }
       if (jsonObj.get("features") != null && !jsonObj.get("features").isJsonNull()) {
         JsonArray jsonArrayfeatures = jsonObj.getAsJsonArray("features");
         if (jsonArrayfeatures != null) {
           // ensure the json data is an array
           if (!jsonObj.get("features").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `features` to be an array in the JSON string but got `%s`", jsonObj.get("features").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `features` to be an array in the JSON string but got `%s`", jsonObj.get("features").toString()));
           }
 
           // validate the optional field `features` (array)
@@ -336,14 +337,14 @@ public class Riskanalyticscontrollerv3RiskFeedback {
         }
       }
       if ((jsonObj.get("new_classification") != null && !jsonObj.get("new_classification").isJsonNull()) && !jsonObj.get("new_classification").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `new_classification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("new_classification").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `new_classification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("new_classification").toString()));
       }
       // validate the optional field `new_severity`
       if (jsonObj.get("new_severity") != null && !jsonObj.get("new_severity").isJsonNull()) {
         Riskanalyticsenginev3SeverityLevel.validateJsonElement(jsonObj.get("new_severity"));
       }
       if ((jsonObj.get("old_classification") != null && !jsonObj.get("old_classification").isJsonNull()) && !jsonObj.get("old_classification").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `old_classification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("old_classification").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `old_classification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("old_classification").toString()));
       }
       // validate the optional field `old_severity`
       if (jsonObj.get("old_severity") != null && !jsonObj.get("old_severity").isJsonNull()) {
@@ -380,22 +381,22 @@ public class Riskanalyticscontrollerv3RiskFeedback {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3RiskFeedback given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3RiskFeedback
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskFeedback
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3RiskFeedback given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3RiskFeedback
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskFeedback
+   */
   public static Riskanalyticscontrollerv3RiskFeedback fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3RiskFeedback.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3RiskFeedback to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3RiskFeedback to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

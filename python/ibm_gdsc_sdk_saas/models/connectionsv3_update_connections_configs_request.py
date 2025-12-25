@@ -30,7 +30,7 @@ class Connectionsv3UpdateConnectionsConfigsRequest(BaseModel):
     Request parameters for update connection.
     """ # noqa: E501
     stream_connection_configs: Optional[List[Connectionsv3StreamConnectionConfig]] = Field(default=None, description="Optional: list of streaming connections.")
-    type: Optional[Connectionsv3ConnectorType] = None
+    type: Optional[Connectionsv3ConnectorType] = Connectionsv3ConnectorType.UNDEFINED_TYPE
     uc_connection_configs: Optional[List[Connectionsv3UCConnectionConfig]] = Field(default=None, description="Optional: list of UC connections.")
     __properties: ClassVar[List[str]] = ["stream_connection_configs", "type", "uc_connection_configs"]
 
@@ -76,16 +76,16 @@ class Connectionsv3UpdateConnectionsConfigsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in stream_connection_configs (list)
         _items = []
         if self.stream_connection_configs:
-            for _item in self.stream_connection_configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_stream_connection_configs in self.stream_connection_configs:
+                if _item_stream_connection_configs:
+                    _items.append(_item_stream_connection_configs.to_dict())
             _dict['stream_connection_configs'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in uc_connection_configs (list)
         _items = []
         if self.uc_connection_configs:
-            for _item in self.uc_connection_configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_uc_connection_configs in self.uc_connection_configs:
+                if _item_uc_connection_configs:
+                    _items.append(_item_uc_connection_configs.to_dict())
             _dict['uc_connection_configs'] = _items
         return _dict
 
@@ -100,7 +100,7 @@ class Connectionsv3UpdateConnectionsConfigsRequest(BaseModel):
 
         _obj = cls.model_validate({
             "stream_connection_configs": [Connectionsv3StreamConnectionConfig.from_dict(_item) for _item in obj["stream_connection_configs"]] if obj.get("stream_connection_configs") is not None else None,
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Connectionsv3ConnectorType.UNDEFINED_TYPE,
             "uc_connection_configs": [Connectionsv3UCConnectionConfig.from_dict(_item) for _item in obj["uc_connection_configs"]] if obj.get("uc_connection_configs") is not None else None
         })
         return _obj

@@ -77,9 +77,9 @@ class Healthcollectorv3StapInformationObject(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in inspection_engine_details (list)
         _items = []
         if self.inspection_engine_details:
-            for _item in self.inspection_engine_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_inspection_engine_details in self.inspection_engine_details:
+                if _item_inspection_engine_details:
+                    _items.append(_item_inspection_engine_details.to_dict())
             _dict['inspection_engine_details'] = _items
         # override the default output from pydantic by calling `to_dict()` of stap
         if self.stap:

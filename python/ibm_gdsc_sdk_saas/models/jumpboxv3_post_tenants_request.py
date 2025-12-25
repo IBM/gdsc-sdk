@@ -77,9 +77,9 @@ class Jumpboxv3PostTenantsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in external_metadata (dict)
         _field_dict = {}
         if self.external_metadata:
-            for _key in self.external_metadata:
-                if self.external_metadata[_key]:
-                    _field_dict[_key] = self.external_metadata[_key].to_dict()
+            for _key_external_metadata in self.external_metadata:
+                if self.external_metadata[_key_external_metadata]:
+                    _field_dict[_key_external_metadata] = self.external_metadata[_key_external_metadata].to_dict()
             _dict['external_metadata'] = _field_dict
         return _dict
 

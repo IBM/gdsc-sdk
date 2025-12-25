@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,97 +40,101 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DirectoryEntry message for ICP directory search result.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3DirectoryEntry {
   public static final String SERIALIZED_NAME_DIRECTORY_ID = "directory_id";
   @SerializedName(SERIALIZED_NAME_DIRECTORY_ID)
+  @javax.annotation.Nullable
   private String directoryId;
 
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "display_name";
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  @javax.annotation.Nullable
   private String displayName;
 
   public static final String SERIALIZED_NAME_DISTINGUISHED_NAME = "distinguished_name";
   @SerializedName(SERIALIZED_NAME_DISTINGUISHED_NAME)
+  @javax.annotation.Nullable
   private String distinguishedName;
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
+  @javax.annotation.Nullable
   private Map<String, String> metadata = new HashMap<>();
 
   public Jumpboxv3DirectoryEntry() {
   }
 
-  public Jumpboxv3DirectoryEntry directoryId(String directoryId) {
+  public Jumpboxv3DirectoryEntry directoryId(@javax.annotation.Nullable String directoryId) {
     this.directoryId = directoryId;
     return this;
   }
 
-   /**
+  /**
    * Which directory did this user come from.
    * @return directoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDirectoryId() {
     return directoryId;
   }
 
-  public void setDirectoryId(String directoryId) {
+  public void setDirectoryId(@javax.annotation.Nullable String directoryId) {
     this.directoryId = directoryId;
   }
 
 
-  public Jumpboxv3DirectoryEntry displayName(String displayName) {
+  public Jumpboxv3DirectoryEntry displayName(@javax.annotation.Nullable String displayName) {
     this.displayName = displayName;
     return this;
   }
 
-   /**
+  /**
    * LDAP cn.
    * @return displayName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDisplayName() {
     return displayName;
   }
 
-  public void setDisplayName(String displayName) {
+  public void setDisplayName(@javax.annotation.Nullable String displayName) {
     this.displayName = displayName;
   }
 
 
-  public Jumpboxv3DirectoryEntry distinguishedName(String distinguishedName) {
+  public Jumpboxv3DirectoryEntry distinguishedName(@javax.annotation.Nullable String distinguishedName) {
     this.distinguishedName = distinguishedName;
     return this;
   }
 
-   /**
+  /**
    * LDAP dn&#x3D;  (needed to import user from LDAP into TenantUser).
    * @return distinguishedName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDistinguishedName() {
     return distinguishedName;
   }
 
-  public void setDistinguishedName(String distinguishedName) {
+  public void setDistinguishedName(@javax.annotation.Nullable String distinguishedName) {
     this.distinguishedName = distinguishedName;
   }
 
 
-  public Jumpboxv3DirectoryEntry metadata(Map<String, String> metadata) {
+  public Jumpboxv3DirectoryEntry metadata(@javax.annotation.Nullable Map<String, String> metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -142,16 +147,16 @@ public class Jumpboxv3DirectoryEntry {
     return this;
   }
 
-   /**
+  /**
    * Metadata will contain extra attributes returned from LDAP search.
    * @return metadata
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getMetadata() {
     return metadata;
   }
 
-  public void setMetadata(Map<String, String> metadata) {
+  public void setMetadata(@javax.annotation.Nullable Map<String, String> metadata) {
     this.metadata = metadata;
   }
 
@@ -206,26 +211,22 @@ public class Jumpboxv3DirectoryEntry {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("directory_id");
-    openapiFields.add("display_name");
-    openapiFields.add("distinguished_name");
-    openapiFields.add("metadata");
+    openapiFields = new HashSet<String>(Arrays.asList("directory_id", "display_name", "distinguished_name", "metadata"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3DirectoryEntry
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3DirectoryEntry
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3DirectoryEntry.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3DirectoryEntry is not found in the empty JSON string", Jumpboxv3DirectoryEntry.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3DirectoryEntry is not found in the empty JSON string", Jumpboxv3DirectoryEntry.openapiRequiredFields.toString()));
         }
       }
 
@@ -233,18 +234,18 @@ public class Jumpboxv3DirectoryEntry {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3DirectoryEntry.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3DirectoryEntry` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3DirectoryEntry` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("directory_id") != null && !jsonObj.get("directory_id").isJsonNull()) && !jsonObj.get("directory_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `directory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("directory_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `directory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("directory_id").toString()));
       }
       if ((jsonObj.get("display_name") != null && !jsonObj.get("display_name").isJsonNull()) && !jsonObj.get("display_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("display_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("display_name").toString()));
       }
       if ((jsonObj.get("distinguished_name") != null && !jsonObj.get("distinguished_name").isJsonNull()) && !jsonObj.get("distinguished_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `distinguished_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("distinguished_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `distinguished_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("distinguished_name").toString()));
       }
   }
 
@@ -277,22 +278,22 @@ public class Jumpboxv3DirectoryEntry {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3DirectoryEntry given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3DirectoryEntry
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3DirectoryEntry
-  */
+  /**
+   * Create an instance of Jumpboxv3DirectoryEntry given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3DirectoryEntry
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3DirectoryEntry
+   */
   public static Jumpboxv3DirectoryEntry fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3DirectoryEntry.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3DirectoryEntry to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3DirectoryEntry to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

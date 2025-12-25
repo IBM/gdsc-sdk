@@ -38,11 +38,11 @@ class Schedulerv3ScheduledJob(BaseModel):
     enabled: Optional[StrictBool] = Field(default=None, description="Enabled or disable the schedule.")
     expired: Optional[StrictBool] = Field(default=None, description="Optional: If this schedule is expired or continues forever.")
     instructions: Optional[StrictStr] = Field(default=None, description="Optional: Instructions for the recipient.")
-    internal_audit: Optional[Schedulerv3AuditType] = None
+    internal_audit: Optional[Schedulerv3AuditType] = Schedulerv3AuditType.UNDEFINED_TYPE
     last_modified_time: Optional[datetime] = Field(default=None, description="Optional: Timestamp for the last modified time.")
     name: Optional[StrictStr] = Field(default=None, description="Schedule name.")
     next_run: Optional[datetime] = Field(default=None, description="Optional: Timestamp for the next jobrun.")
-    notification: Optional[Schedulerv3NotificationType] = None
+    notification: Optional[Schedulerv3NotificationType] = Schedulerv3NotificationType.UNDEFINED_NOTIFICATION
     origin: Optional[StrictStr] = Field(default=None, description="Where does the schedule come from, ie the micro service name , REPORTS or SCHEDULER.")
     previous_run: Optional[datetime] = Field(default=None, description="Optional: Timestamp for the previous job run.")
     recipient: Optional[Schedulerv3Recipient] = None
@@ -99,9 +99,9 @@ class Schedulerv3ScheduledJob(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in recipients (list)
         _items = []
         if self.recipients:
-            for _item in self.recipients:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_recipients in self.recipients:
+                if _item_recipients:
+                    _items.append(_item_recipients.to_dict())
             _dict['recipients'] = _items
         # override the default output from pydantic by calling `to_dict()` of retention
         if self.retention:
@@ -112,9 +112,9 @@ class Schedulerv3ScheduledJob(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tasks (list)
         _items = []
         if self.tasks:
-            for _item in self.tasks:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tasks in self.tasks:
+                if _item_tasks:
+                    _items.append(_item_tasks.to_dict())
             _dict['tasks'] = _items
         return _dict
 
@@ -133,11 +133,11 @@ class Schedulerv3ScheduledJob(BaseModel):
             "enabled": obj.get("enabled"),
             "expired": obj.get("expired"),
             "instructions": obj.get("instructions"),
-            "internal_audit": obj.get("internal_audit"),
+            "internal_audit": obj.get("internal_audit") if obj.get("internal_audit") is not None else Schedulerv3AuditType.UNDEFINED_TYPE,
             "last_modified_time": obj.get("last_modified_time"),
             "name": obj.get("name"),
             "next_run": obj.get("next_run"),
-            "notification": obj.get("notification"),
+            "notification": obj.get("notification") if obj.get("notification") is not None else Schedulerv3NotificationType.UNDEFINED_NOTIFICATION,
             "origin": obj.get("origin"),
             "previous_run": obj.get("previous_run"),
             "recipient": Schedulerv3Recipient.from_dict(obj["recipient"]) if obj.get("recipient") is not None else None,

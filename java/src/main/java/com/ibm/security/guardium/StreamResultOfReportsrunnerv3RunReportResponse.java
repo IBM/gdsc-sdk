@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,65 +40,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StreamResultOfReportsrunnerv3RunReportResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class StreamResultOfReportsrunnerv3RunReportResponse {
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private RuntimeStreamError error;
 
   public static final String SERIALIZED_NAME_RESULT = "result";
   @SerializedName(SERIALIZED_NAME_RESULT)
+  @javax.annotation.Nullable
   private Reportsrunnerv3RunReportResponse result;
 
   public StreamResultOfReportsrunnerv3RunReportResponse() {
   }
 
-  public StreamResultOfReportsrunnerv3RunReportResponse error(RuntimeStreamError error) {
+  public StreamResultOfReportsrunnerv3RunReportResponse error(@javax.annotation.Nullable RuntimeStreamError error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Get error
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public RuntimeStreamError getError() {
     return error;
   }
 
-  public void setError(RuntimeStreamError error) {
+  public void setError(@javax.annotation.Nullable RuntimeStreamError error) {
     this.error = error;
   }
 
 
-  public StreamResultOfReportsrunnerv3RunReportResponse result(Reportsrunnerv3RunReportResponse result) {
+  public StreamResultOfReportsrunnerv3RunReportResponse result(@javax.annotation.Nullable Reportsrunnerv3RunReportResponse result) {
     this.result = result;
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsrunnerv3RunReportResponse getResult() {
     return result;
   }
 
-  public void setResult(Reportsrunnerv3RunReportResponse result) {
+  public void setResult(@javax.annotation.Nullable Reportsrunnerv3RunReportResponse result) {
     this.result = result;
   }
 
@@ -148,24 +151,22 @@ public class StreamResultOfReportsrunnerv3RunReportResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("error");
-    openapiFields.add("result");
+    openapiFields = new HashSet<String>(Arrays.asList("error", "result"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to StreamResultOfReportsrunnerv3RunReportResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to StreamResultOfReportsrunnerv3RunReportResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!StreamResultOfReportsrunnerv3RunReportResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in StreamResultOfReportsrunnerv3RunReportResponse is not found in the empty JSON string", StreamResultOfReportsrunnerv3RunReportResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in StreamResultOfReportsrunnerv3RunReportResponse is not found in the empty JSON string", StreamResultOfReportsrunnerv3RunReportResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -173,7 +174,7 @@ public class StreamResultOfReportsrunnerv3RunReportResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!StreamResultOfReportsrunnerv3RunReportResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `StreamResultOfReportsrunnerv3RunReportResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `StreamResultOfReportsrunnerv3RunReportResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -216,22 +217,22 @@ public class StreamResultOfReportsrunnerv3RunReportResponse {
     }
   }
 
- /**
-  * Create an instance of StreamResultOfReportsrunnerv3RunReportResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of StreamResultOfReportsrunnerv3RunReportResponse
-  * @throws IOException if the JSON string is invalid with respect to StreamResultOfReportsrunnerv3RunReportResponse
-  */
+  /**
+   * Create an instance of StreamResultOfReportsrunnerv3RunReportResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of StreamResultOfReportsrunnerv3RunReportResponse
+   * @throws IOException if the JSON string is invalid with respect to StreamResultOfReportsrunnerv3RunReportResponse
+   */
   public static StreamResultOfReportsrunnerv3RunReportResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, StreamResultOfReportsrunnerv3RunReportResponse.class);
   }
 
- /**
-  * Convert an instance of StreamResultOfReportsrunnerv3RunReportResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of StreamResultOfReportsrunnerv3RunReportResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,157 +40,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AssetControl - Asset Overview - Control Health widget data.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetControl {
   public static final String SERIALIZED_NAME_ENCRYPTION = "encryption";
   @SerializedName(SERIALIZED_NAME_ENCRYPTION)
+  @javax.annotation.Nullable
   private Assetsv3StatusType encryption = Assetsv3StatusType.NA;
 
   public static final String SERIALIZED_NAME_LAST_RESPONSE = "last_response";
   @SerializedName(SERIALIZED_NAME_LAST_RESPONSE)
+  @javax.annotation.Nullable
   private String lastResponse;
 
   public static final String SERIALIZED_NAME_MONITORING = "monitoring";
   @SerializedName(SERIALIZED_NAME_MONITORING)
+  @javax.annotation.Nullable
   private Assetsv3StatusType monitoring = Assetsv3StatusType.NA;
 
   public static final String SERIALIZED_NAME_POLICY_APPLIED_STATUS = "policy_applied_status";
   @SerializedName(SERIALIZED_NAME_POLICY_APPLIED_STATUS)
+  @javax.annotation.Nullable
   private Assetsv3PolicyApplied policyAppliedStatus;
 
   public static final String SERIALIZED_NAME_STAP_NAME = "stap_name";
   @SerializedName(SERIALIZED_NAME_STAP_NAME)
+  @javax.annotation.Nullable
   private String stapName;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Assetsv3AssetControl() {
   }
 
-  public Assetsv3AssetControl encryption(Assetsv3StatusType encryption) {
+  public Assetsv3AssetControl encryption(@javax.annotation.Nullable Assetsv3StatusType encryption) {
     this.encryption = encryption;
     return this;
   }
 
-   /**
+  /**
    * Get encryption
    * @return encryption
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3StatusType getEncryption() {
     return encryption;
   }
 
-  public void setEncryption(Assetsv3StatusType encryption) {
+  public void setEncryption(@javax.annotation.Nullable Assetsv3StatusType encryption) {
     this.encryption = encryption;
   }
 
 
-  public Assetsv3AssetControl lastResponse(String lastResponse) {
+  public Assetsv3AssetControl lastResponse(@javax.annotation.Nullable String lastResponse) {
     this.lastResponse = lastResponse;
     return this;
   }
 
-   /**
+  /**
    * Get lastResponse
    * @return lastResponse
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastResponse() {
     return lastResponse;
   }
 
-  public void setLastResponse(String lastResponse) {
+  public void setLastResponse(@javax.annotation.Nullable String lastResponse) {
     this.lastResponse = lastResponse;
   }
 
 
-  public Assetsv3AssetControl monitoring(Assetsv3StatusType monitoring) {
+  public Assetsv3AssetControl monitoring(@javax.annotation.Nullable Assetsv3StatusType monitoring) {
     this.monitoring = monitoring;
     return this;
   }
 
-   /**
+  /**
    * Get monitoring
    * @return monitoring
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3StatusType getMonitoring() {
     return monitoring;
   }
 
-  public void setMonitoring(Assetsv3StatusType monitoring) {
+  public void setMonitoring(@javax.annotation.Nullable Assetsv3StatusType monitoring) {
     this.monitoring = monitoring;
   }
 
 
-  public Assetsv3AssetControl policyAppliedStatus(Assetsv3PolicyApplied policyAppliedStatus) {
+  public Assetsv3AssetControl policyAppliedStatus(@javax.annotation.Nullable Assetsv3PolicyApplied policyAppliedStatus) {
     this.policyAppliedStatus = policyAppliedStatus;
     return this;
   }
 
-   /**
+  /**
    * Get policyAppliedStatus
    * @return policyAppliedStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3PolicyApplied getPolicyAppliedStatus() {
     return policyAppliedStatus;
   }
 
-  public void setPolicyAppliedStatus(Assetsv3PolicyApplied policyAppliedStatus) {
+  public void setPolicyAppliedStatus(@javax.annotation.Nullable Assetsv3PolicyApplied policyAppliedStatus) {
     this.policyAppliedStatus = policyAppliedStatus;
   }
 
 
-  public Assetsv3AssetControl stapName(String stapName) {
+  public Assetsv3AssetControl stapName(@javax.annotation.Nullable String stapName) {
     this.stapName = stapName;
     return this;
   }
 
-   /**
+  /**
    * Get stapName
    * @return stapName
-  **/
+   */
   @javax.annotation.Nullable
   public String getStapName() {
     return stapName;
   }
 
-  public void setStapName(String stapName) {
+  public void setStapName(@javax.annotation.Nullable String stapName) {
     this.stapName = stapName;
   }
 
 
-  public Assetsv3AssetControl version(String version) {
+  public Assetsv3AssetControl version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Get version
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -248,28 +255,22 @@ public class Assetsv3AssetControl {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("encryption");
-    openapiFields.add("last_response");
-    openapiFields.add("monitoring");
-    openapiFields.add("policy_applied_status");
-    openapiFields.add("stap_name");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("encryption", "last_response", "monitoring", "policy_applied_status", "stap_name", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetControl
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetControl
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetControl.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetControl is not found in the empty JSON string", Assetsv3AssetControl.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetControl is not found in the empty JSON string", Assetsv3AssetControl.openapiRequiredFields.toString()));
         }
       }
 
@@ -277,7 +278,7 @@ public class Assetsv3AssetControl {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetControl.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetControl` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetControl` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -286,7 +287,7 @@ public class Assetsv3AssetControl {
         Assetsv3StatusType.validateJsonElement(jsonObj.get("encryption"));
       }
       if ((jsonObj.get("last_response") != null && !jsonObj.get("last_response").isJsonNull()) && !jsonObj.get("last_response").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_response").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_response").toString()));
       }
       // validate the optional field `monitoring`
       if (jsonObj.get("monitoring") != null && !jsonObj.get("monitoring").isJsonNull()) {
@@ -297,10 +298,10 @@ public class Assetsv3AssetControl {
         Assetsv3PolicyApplied.validateJsonElement(jsonObj.get("policy_applied_status"));
       }
       if ((jsonObj.get("stap_name") != null && !jsonObj.get("stap_name").isJsonNull()) && !jsonObj.get("stap_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stap_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_name").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -333,22 +334,22 @@ public class Assetsv3AssetControl {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetControl given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetControl
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetControl
-  */
+  /**
+   * Create an instance of Assetsv3AssetControl given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetControl
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetControl
+   */
   public static Assetsv3AssetControl fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetControl.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetControl to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetControl to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

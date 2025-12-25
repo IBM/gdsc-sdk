@@ -73,9 +73,9 @@ class Tenantuserv3GetTenantPartNumbersDiffResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in tenant_capability_part_numbers_changes (dict)
         _field_dict = {}
         if self.tenant_capability_part_numbers_changes:
-            for _key in self.tenant_capability_part_numbers_changes:
-                if self.tenant_capability_part_numbers_changes[_key]:
-                    _field_dict[_key] = self.tenant_capability_part_numbers_changes[_key].to_dict()
+            for _key_tenant_capability_part_numbers_changes in self.tenant_capability_part_numbers_changes:
+                if self.tenant_capability_part_numbers_changes[_key_tenant_capability_part_numbers_changes]:
+                    _field_dict[_key_tenant_capability_part_numbers_changes] = self.tenant_capability_part_numbers_changes[_key_tenant_capability_part_numbers_changes].to_dict()
             _dict['tenant_capability_part_numbers_changes'] = _field_dict
         return _dict
 

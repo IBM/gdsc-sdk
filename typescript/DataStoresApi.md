@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDataStore**](DataStoresApi.md#getDataStore) | **GET** /api/v1/dspm/dataStores/{dataStoreId} | Get a data store by its ID
-[**getDataStoresSummary**](DataStoresApi.md#getDataStoresSummary) | **GET** /api/v1/dspm/dataStores/summary | Get summary of data stores
-[**listAllDataStoresLabels**](DataStoresApi.md#listAllDataStoresLabels) | **GET** /api/v1/dspm/dataStores/labels | List labels of data stores.
-[**listDataStores**](DataStoresApi.md#listDataStores) | **GET** /api/v1/dspm/dataStores | List data stores
-[**listDataStoresCloudTagsKeys**](DataStoresApi.md#listDataStoresCloudTagsKeys) | **GET** /api/v1/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
-[**listDataStoresCloudTagsValues**](DataStoresApi.md#listDataStoresCloudTagsValues) | **GET** /api/v1/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
-[**listDataStoresNames**](DataStoresApi.md#listDataStoresNames) | **GET** /api/v1/dspm/dataStores/filters/name | List name of filterable data stores
-[**rescanDataStore**](DataStoresApi.md#rescanDataStore) | **POST** /api/v1/dspm/dataStores/rescan | Post data store rescan request
-[**setDataStoreLabel**](DataStoresApi.md#setDataStoreLabel) | **PUT** /api/v1/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
-[**updateDatastoreCustodian**](DataStoresApi.md#updateDatastoreCustodian) | **POST** /api/v1/dspm/dataStores/custodian | Update the name of a Data store custodian
+[**getDataStore**](DataStoresApi.md#getDataStore) | **GET** /api/v2/dspm/dataStores/{dataStoreId} | Get a data store by its ID
+[**getDataStoresSummary**](DataStoresApi.md#getDataStoresSummary) | **GET** /api/v2/dspm/dataStores/summary | Get summary of data stores
+[**listAllDataStoresLabels**](DataStoresApi.md#listAllDataStoresLabels) | **GET** /api/v2/dspm/dataStores/labels | List labels of data stores.
+[**listDataStores**](DataStoresApi.md#listDataStores) | **GET** /api/v2/dspm/dataStores | List data stores
+[**listDataStoresCloudTagsKeys**](DataStoresApi.md#listDataStoresCloudTagsKeys) | **GET** /api/v2/dspm/dataStores/cloudTags/keys | List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
+[**listDataStoresCloudTagsValues**](DataStoresApi.md#listDataStoresCloudTagsValues) | **GET** /api/v2/dspm/dataStores/cloudTags/values | List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
+[**listDataStoresNames**](DataStoresApi.md#listDataStoresNames) | **GET** /api/v2/dspm/dataStores/filters/name | List name of filterable data stores
+[**rescanDataStore**](DataStoresApi.md#rescanDataStore) | **POST** /api/v2/dspm/dataStores/rescan | Post data store rescan request
+[**setDataStoreLabel**](DataStoresApi.md#setDataStoreLabel) | **PUT** /api/v2/dspm/dataStores/{dataStoreId}/labels | Label a data store with an existing or new label
+[**updateDatastoreCustodian**](DataStoresApi.md#updateDatastoreCustodian) | **POST** /api/v2/dspm/dataStores/custodian | Update the name of a Data store custodian
 
 
 # **getDataStore**
@@ -25,20 +25,19 @@ Get details of a specific data store by its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiGetDataStoreRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiGetDataStoreRequest = {
-  // string | ID of the data store
+const request: DataStoresApiGetDataStoreRequest = {
+    // ID of the data store
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
 };
 
-apiInstance.getDataStore(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataStore(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -80,14 +79,14 @@ Get a summary of all the data stores, that is, name of data resources, types of 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiGetDataStoresSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiGetDataStoresSummaryRequest = {
-  // ListDataStoresFilterParameter (optional)
+const request: DataStoresApiGetDataStoresSummaryRequest = {
+  
   filter: {
     storeTypesFamily: ["CLOUD"],
     storeNames: [
@@ -118,9 +117,8 @@ let body:.DataStoresApiGetDataStoresSummaryRequest = {
   },
 };
 
-apiInstance.getDataStoresSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataStoresSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -162,22 +160,21 @@ Get a list of all the labels of custom data stores.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListAllDataStoresLabelsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListAllDataStoresLabelsRequest = {
-  // string | Prefix of data store label (optional)
+const request: DataStoresApiListAllDataStoresLabelsRequest = {
+    // Prefix of data store label (optional)
   prefix: "test",
-  // number (optional)
+  
   maxResults: 10,
 };
 
-apiInstance.listAllDataStoresLabels(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listAllDataStoresLabels(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -220,14 +217,14 @@ List all data stores discovered by Guardium DSPM.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresRequest = {
-  // ListDataStoresFilterParameter (optional)
+const request: DataStoresApiListDataStoresRequest = {
+  
   filter: {
     storeTypesFamily: ["CLOUD"],
     storeNames: [
@@ -256,20 +253,19 @@ let body:.DataStoresApiListDataStoresRequest = {
     ],
     storePartialName: "storePartialName_example",
   },
-  // ListDataStoresSortParameter (optional)
+  
   sort: {
     sortBy: "name",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listDataStores(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStores(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -314,22 +310,21 @@ Get a list of the available cloud tag keys of data stores that can be filtered o
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresCloudTagsKeysRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresCloudTagsKeysRequest = {
-  // string | Prefix of cloud tag key
+const request: DataStoresApiListDataStoresCloudTagsKeysRequest = {
+    // Prefix of cloud tag key
   prefix: "environment",
-  // number (optional)
+  
   maxResults: 10,
 };
 
-apiInstance.listDataStoresCloudTagsKeys(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStoresCloudTagsKeys(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -372,24 +367,23 @@ Get a list of the available cloud tag values of data stores that can be filtered
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresCloudTagsValuesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresCloudTagsValuesRequest = {
-  // string | Prefix of cloud tag value
+const request: DataStoresApiListDataStoresCloudTagsValuesRequest = {
+    // Prefix of cloud tag value
   prefix: "comp",
-  // string
+  
   tagKey: "Production",
-  // number (optional)
+  
   maxResults: 10,
 };
 
-apiInstance.listDataStoresCloudTagsValues(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStoresCloudTagsValues(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -433,20 +427,19 @@ Lists the data stores that can be filtered or classified.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresNamesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresNamesRequest = {
-  // string | Prefix of data store name
+const request: DataStoresApiListDataStoresNamesRequest = {
+    // Prefix of data store name
   prefix: "polar",
 };
 
-apiInstance.listDataStoresNames(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStoresNames(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -488,22 +481,21 @@ Post the request for a data store rescan.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiRescanDataStoreRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiRescanDataStoreRequest = {
-  // RescanDataStoreRequest
+const request: DataStoresApiRescanDataStoreRequest = {
+  
   rescanDataStoreRequest: {
     dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
   },
 };
 
-apiInstance.rescanDataStore(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.rescanDataStore(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -545,24 +537,23 @@ Add or update a custom label for a data store.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiSetDataStoreLabelRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiSetDataStoreLabelRequest = {
-  // string | Data store ID
+const request: DataStoresApiSetDataStoreLabelRequest = {
+    // Data store ID
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
-  // SetDataStoreLabelRequest
+  
   setDataStoreLabelRequest: {
     label: "BI Team",
   },
 };
 
-apiInstance.setDataStoreLabel(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.setDataStoreLabel(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -605,23 +596,22 @@ Add or update the name of a specific data store.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiUpdateDatastoreCustodianRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiUpdateDatastoreCustodianRequest = {
-  // UpdateCustodianBody
+const request: DataStoresApiUpdateDatastoreCustodianRequest = {
+  
   updateCustodianBody: {
     dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
     custodian: "Avi",
   },
 };
 
-apiInstance.updateDatastoreCustodian(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.updateDatastoreCustodian(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

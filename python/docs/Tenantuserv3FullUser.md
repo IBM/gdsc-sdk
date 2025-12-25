@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **metadata** | **Dict[str, str]** | Metadata will contain all preferences   --&gt; this will contain all user-specific settings, including session time out. | [optional] 
 **privileges** | **Dict[str, bool]** | Cumulative privileges base on all roles. | [optional] 
 **roles** | **List[str]** | Roles. | [optional] 
-**state** | [**Tenantuserv3UserState**](Tenantuserv3UserState.md) |  | [optional] 
+**state** | [**Tenantuserv3UserState**](Tenantuserv3UserState.md) |  | [optional] [default to Tenantuserv3UserState.ACTIVE]
 **tenant_id** | **str** | Tenant this user belongs to. | [optional] 
 **uid** | **str** | Email. | [optional] 
 **user_id** | **str** | Unique id for user. | [optional] 

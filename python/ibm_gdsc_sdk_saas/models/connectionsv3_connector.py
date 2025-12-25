@@ -31,7 +31,7 @@ class Connectionsv3Connector(BaseModel):
     columns: Optional[List[Connectionsv3ConnectorColumn]] = Field(default=None, description="The columns.")
     id: Optional[StrictStr] = Field(default=None, description="The id of the connector.")
     tags: Optional[List[StrictStr]] = Field(default=None, description="The tags that this connector has.")
-    type: Optional[Connectionsv3ConnectorType] = None
+    type: Optional[Connectionsv3ConnectorType] = Connectionsv3ConnectorType.UNDEFINED_TYPE
     __properties: ClassVar[List[str]] = ["columns", "id", "tags", "type"]
 
     model_config = ConfigDict(
@@ -76,9 +76,9 @@ class Connectionsv3Connector(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in columns (list)
         _items = []
         if self.columns:
-            for _item in self.columns:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_columns in self.columns:
+                if _item_columns:
+                    _items.append(_item_columns.to_dict())
             _dict['columns'] = _items
         return _dict
 
@@ -95,7 +95,7 @@ class Connectionsv3Connector(BaseModel):
             "columns": [Connectionsv3ConnectorColumn.from_dict(_item) for _item in obj["columns"]] if obj.get("columns") is not None else None,
             "id": obj.get("id"),
             "tags": obj.get("tags"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Connectionsv3ConnectorType.UNDEFINED_TYPE
         })
         return _obj
 

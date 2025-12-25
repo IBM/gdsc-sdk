@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,134 +40,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3VariantRule
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3VariantRule {
   public static final String SERIALIZED_NAME_ACTION_IF_TYPE = "action_if_type";
   @SerializedName(SERIALIZED_NAME_ACTION_IF_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3VariantRuleCondition actionIfType = Reportsv3VariantRuleCondition.UNDEFINED_VARIANT_ACTION_IF;
 
   public static final String SERIALIZED_NAME_DELIMITER = "delimiter";
   @SerializedName(SERIALIZED_NAME_DELIMITER)
+  @javax.annotation.Nullable
   private String delimiter;
 
   public static final String SERIALIZED_NAME_EXTRACT_VALUE = "extract_value";
   @SerializedName(SERIALIZED_NAME_EXTRACT_VALUE)
+  @javax.annotation.Nullable
   private String extractValue;
 
   public static final String SERIALIZED_NAME_MATCHER = "matcher";
   @SerializedName(SERIALIZED_NAME_MATCHER)
+  @javax.annotation.Nullable
   private String matcher;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3VariantRuleType type = Reportsv3VariantRuleType.UNDEFINED_VARIANT_RULE_TYPE;
 
   public Reportsv3VariantRule() {
   }
 
-  public Reportsv3VariantRule actionIfType(Reportsv3VariantRuleCondition actionIfType) {
+  public Reportsv3VariantRule actionIfType(@javax.annotation.Nullable Reportsv3VariantRuleCondition actionIfType) {
     this.actionIfType = actionIfType;
     return this;
   }
 
-   /**
+  /**
    * Get actionIfType
    * @return actionIfType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3VariantRuleCondition getActionIfType() {
     return actionIfType;
   }
 
-  public void setActionIfType(Reportsv3VariantRuleCondition actionIfType) {
+  public void setActionIfType(@javax.annotation.Nullable Reportsv3VariantRuleCondition actionIfType) {
     this.actionIfType = actionIfType;
   }
 
 
-  public Reportsv3VariantRule delimiter(String delimiter) {
+  public Reportsv3VariantRule delimiter(@javax.annotation.Nullable String delimiter) {
     this.delimiter = delimiter;
     return this;
   }
 
-   /**
+  /**
    * Get delimiter
    * @return delimiter
-  **/
+   */
   @javax.annotation.Nullable
   public String getDelimiter() {
     return delimiter;
   }
 
-  public void setDelimiter(String delimiter) {
+  public void setDelimiter(@javax.annotation.Nullable String delimiter) {
     this.delimiter = delimiter;
   }
 
 
-  public Reportsv3VariantRule extractValue(String extractValue) {
+  public Reportsv3VariantRule extractValue(@javax.annotation.Nullable String extractValue) {
     this.extractValue = extractValue;
     return this;
   }
 
-   /**
+  /**
    * Get extractValue
    * @return extractValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getExtractValue() {
     return extractValue;
   }
 
-  public void setExtractValue(String extractValue) {
+  public void setExtractValue(@javax.annotation.Nullable String extractValue) {
     this.extractValue = extractValue;
   }
 
 
-  public Reportsv3VariantRule matcher(String matcher) {
+  public Reportsv3VariantRule matcher(@javax.annotation.Nullable String matcher) {
     this.matcher = matcher;
     return this;
   }
 
-   /**
+  /**
    * Get matcher
    * @return matcher
-  **/
+   */
   @javax.annotation.Nullable
   public String getMatcher() {
     return matcher;
   }
 
-  public void setMatcher(String matcher) {
+  public void setMatcher(@javax.annotation.Nullable String matcher) {
     this.matcher = matcher;
   }
 
 
-  public Reportsv3VariantRule type(Reportsv3VariantRuleType type) {
+  public Reportsv3VariantRule type(@javax.annotation.Nullable Reportsv3VariantRuleType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3VariantRuleType getType() {
     return type;
   }
 
-  public void setType(Reportsv3VariantRuleType type) {
+  public void setType(@javax.annotation.Nullable Reportsv3VariantRuleType type) {
     this.type = type;
   }
 
@@ -223,27 +229,22 @@ public class Reportsv3VariantRule {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action_if_type");
-    openapiFields.add("delimiter");
-    openapiFields.add("extract_value");
-    openapiFields.add("matcher");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("action_if_type", "delimiter", "extract_value", "matcher", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3VariantRule
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3VariantRule
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3VariantRule.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3VariantRule is not found in the empty JSON string", Reportsv3VariantRule.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3VariantRule is not found in the empty JSON string", Reportsv3VariantRule.openapiRequiredFields.toString()));
         }
       }
 
@@ -251,7 +252,7 @@ public class Reportsv3VariantRule {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3VariantRule.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3VariantRule` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3VariantRule` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -260,13 +261,13 @@ public class Reportsv3VariantRule {
         Reportsv3VariantRuleCondition.validateJsonElement(jsonObj.get("action_if_type"));
       }
       if ((jsonObj.get("delimiter") != null && !jsonObj.get("delimiter").isJsonNull()) && !jsonObj.get("delimiter").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `delimiter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("delimiter").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `delimiter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("delimiter").toString()));
       }
       if ((jsonObj.get("extract_value") != null && !jsonObj.get("extract_value").isJsonNull()) && !jsonObj.get("extract_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `extract_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("extract_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extract_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("extract_value").toString()));
       }
       if ((jsonObj.get("matcher") != null && !jsonObj.get("matcher").isJsonNull()) && !jsonObj.get("matcher").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `matcher` to be a primitive type in the JSON string but got `%s`", jsonObj.get("matcher").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `matcher` to be a primitive type in the JSON string but got `%s`", jsonObj.get("matcher").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
@@ -303,22 +304,22 @@ public class Reportsv3VariantRule {
     }
   }
 
- /**
-  * Create an instance of Reportsv3VariantRule given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3VariantRule
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3VariantRule
-  */
+  /**
+   * Create an instance of Reportsv3VariantRule given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3VariantRule
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3VariantRule
+   */
   public static Reportsv3VariantRule fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3VariantRule.class);
   }
 
- /**
-  * Convert an instance of Reportsv3VariantRule to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3VariantRule to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

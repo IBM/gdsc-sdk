@@ -19,6 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from ibm_gdsc_sdk_saas.models.reportsv3_aggregation_type import Reportsv3AggregationType
 from ibm_gdsc_sdk_saas.models.reportsv3_field_name import Reportsv3FieldName
 from ibm_gdsc_sdk_saas.models.reportsv3_header_description import Reportsv3HeaderDescription
 from typing import Optional, Set
@@ -28,13 +29,14 @@ class Reportsv3DisplayHeader(BaseModel):
     """
     DisplayHeader that have the header name and the translated value.
     """ # noqa: E501
+    aggregation_type: Optional[Reportsv3AggregationType] = Reportsv3AggregationType.UNDEFINED_AGG_TYPE
     field_name: Optional[Reportsv3FieldName] = None
     header_description: Optional[Reportsv3HeaderDescription] = None
     header_id: Optional[StrictStr] = Field(default=None, description="The header ID.")
     header_name: Optional[StrictStr] = Field(default=None, description="The header name.")
     sequence: Optional[StrictInt] = Field(default=None, description="Sequence of the corresponding header.")
     table_name: Optional[StrictStr] = Field(default=None, description="Table name.")
-    __properties: ClassVar[List[str]] = ["field_name", "header_description", "header_id", "header_name", "sequence", "table_name"]
+    __properties: ClassVar[List[str]] = ["aggregation_type", "field_name", "header_description", "header_id", "header_name", "sequence", "table_name"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -93,6 +95,7 @@ class Reportsv3DisplayHeader(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "aggregation_type": obj.get("aggregation_type") if obj.get("aggregation_type") is not None else Reportsv3AggregationType.UNDEFINED_AGG_TYPE,
             "field_name": Reportsv3FieldName.from_dict(obj["field_name"]) if obj.get("field_name") is not None else None,
             "header_description": Reportsv3HeaderDescription.from_dict(obj["header_description"]) if obj.get("header_description") is not None else None,
             "header_id": obj.get("header_id"),

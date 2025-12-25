@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3ReportAggFilter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ReportAggFilter {
   public static final String SERIALIZED_NAME_CONDITION = "condition";
   @SerializedName(SERIALIZED_NAME_CONDITION)
+  @javax.annotation.Nullable
   private Reportsv3ReportAggFilterCondition condition;
 
   public Reportsv3ReportAggFilter() {
   }
 
-  public Reportsv3ReportAggFilter condition(Reportsv3ReportAggFilterCondition condition) {
+  public Reportsv3ReportAggFilter condition(@javax.annotation.Nullable Reportsv3ReportAggFilterCondition condition) {
     this.condition = condition;
     return this;
   }
 
-   /**
+  /**
    * Get condition
    * @return condition
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportAggFilterCondition getCondition() {
     return condition;
   }
 
-  public void setCondition(Reportsv3ReportAggFilterCondition condition) {
+  public void setCondition(@javax.annotation.Nullable Reportsv3ReportAggFilterCondition condition) {
     this.condition = condition;
   }
 
@@ -122,23 +124,22 @@ public class Reportsv3ReportAggFilter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("condition");
+    openapiFields = new HashSet<String>(Arrays.asList("condition"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportAggFilter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportAggFilter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ReportAggFilter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ReportAggFilter is not found in the empty JSON string", Reportsv3ReportAggFilter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ReportAggFilter is not found in the empty JSON string", Reportsv3ReportAggFilter.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,7 +147,7 @@ public class Reportsv3ReportAggFilter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ReportAggFilter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ReportAggFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ReportAggFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -185,22 +186,22 @@ public class Reportsv3ReportAggFilter {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ReportAggFilter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ReportAggFilter
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportAggFilter
-  */
+  /**
+   * Create an instance of Reportsv3ReportAggFilter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ReportAggFilter
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportAggFilter
+   */
   public static Reportsv3ReportAggFilter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ReportAggFilter.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ReportAggFilter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ReportAggFilter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

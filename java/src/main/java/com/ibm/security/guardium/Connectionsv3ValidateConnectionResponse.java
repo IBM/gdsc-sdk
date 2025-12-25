@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3ValidateConnectionResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ValidateConnectionResponse {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private GooglerpcStatus status;
 
   public Connectionsv3ValidateConnectionResponse() {
   }
 
-  public Connectionsv3ValidateConnectionResponse description(String description) {
+  public Connectionsv3ValidateConnectionResponse description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Connectionsv3ValidateConnectionResponse status(GooglerpcStatus status) {
+  public Connectionsv3ValidateConnectionResponse status(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public GooglerpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(GooglerpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
   }
 
@@ -147,24 +150,22 @@ public class Connectionsv3ValidateConnectionResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("description");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("description", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateConnectionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateConnectionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ValidateConnectionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ValidateConnectionResponse is not found in the empty JSON string", Connectionsv3ValidateConnectionResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ValidateConnectionResponse is not found in the empty JSON string", Connectionsv3ValidateConnectionResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,12 +173,12 @@ public class Connectionsv3ValidateConnectionResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ValidateConnectionResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateConnectionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateConnectionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
@@ -214,22 +215,22 @@ public class Connectionsv3ValidateConnectionResponse {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ValidateConnectionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ValidateConnectionResponse
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateConnectionResponse
-  */
+  /**
+   * Create an instance of Connectionsv3ValidateConnectionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ValidateConnectionResponse
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateConnectionResponse
+   */
   public static Connectionsv3ValidateConnectionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ValidateConnectionResponse.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ValidateConnectionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ValidateConnectionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

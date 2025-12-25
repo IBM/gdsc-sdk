@@ -77,9 +77,9 @@ class Schedulerv3ReportParameter(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in runtime_parameters (list)
         _items = []
         if self.runtime_parameters:
-            for _item in self.runtime_parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_runtime_parameters in self.runtime_parameters:
+                if _item_runtime_parameters:
+                    _items.append(_item_runtime_parameters.to_dict())
             _dict['runtime_parameters'] = _items
         return _dict
 

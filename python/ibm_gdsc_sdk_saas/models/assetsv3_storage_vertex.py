@@ -31,7 +31,7 @@ class Assetsv3StorageVertex(BaseModel):
     """ # noqa: E501
     city: Optional[StrictStr] = None
     country: Optional[StrictStr] = None
-    criticality: Optional[Assetsv3Level] = None
+    criticality: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     data_center: Optional[StrictStr] = None
     dns: Optional[StrictStr] = None
     extended_properties: Optional[List[Assetsv3CustomProperty]] = None
@@ -39,7 +39,7 @@ class Assetsv3StorageVertex(BaseModel):
     owner: Optional[List[StrictStr]] = None
     region: Optional[StrictStr] = None
     resolution_key: Optional[StrictStr] = None
-    risk_level: Optional[Assetsv3Level] = None
+    risk_level: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     size: Optional[StrictStr] = None
     state: Optional[StrictStr] = None
     storage_account: Optional[List[Assetsv3ConnectionEdge]] = None
@@ -95,44 +95,44 @@ class Assetsv3StorageVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storage_account (list)
         _items = []
         if self.storage_account:
-            for _item in self.storage_account:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_storage_account in self.storage_account:
+                if _item_storage_account:
+                    _items.append(_item_storage_account.to_dict())
             _dict['storage_account'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storage_host (list)
         _items = []
         if self.storage_host:
-            for _item in self.storage_host:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_storage_host in self.storage_host:
+                if _item_storage_host:
+                    _items.append(_item_storage_host.to_dict())
             _dict['storage_host'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storage_ip (list)
         _items = []
         if self.storage_ip:
-            for _item in self.storage_ip:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_storage_ip in self.storage_ip:
+                if _item_storage_ip:
+                    _items.append(_item_storage_ip.to_dict())
             _dict['storage_ip'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storage_resources (list)
         _items = []
         if self.storage_resources:
-            for _item in self.storage_resources:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_storage_resources in self.storage_resources:
+                if _item_storage_resources:
+                    _items.append(_item_storage_resources.to_dict())
             _dict['storage_resources'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storage_subscription (list)
         _items = []
         if self.storage_subscription:
-            for _item in self.storage_subscription:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_storage_subscription in self.storage_subscription:
+                if _item_storage_subscription:
+                    _items.append(_item_storage_subscription.to_dict())
             _dict['storage_subscription'] = _items
         return _dict
 
@@ -148,7 +148,7 @@ class Assetsv3StorageVertex(BaseModel):
         _obj = cls.model_validate({
             "city": obj.get("city"),
             "country": obj.get("country"),
-            "criticality": obj.get("criticality"),
+            "criticality": obj.get("criticality") if obj.get("criticality") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "data_center": obj.get("data_center"),
             "dns": obj.get("dns"),
             "extended_properties": [Assetsv3CustomProperty.from_dict(_item) for _item in obj["extended_properties"]] if obj.get("extended_properties") is not None else None,
@@ -156,7 +156,7 @@ class Assetsv3StorageVertex(BaseModel):
             "owner": obj.get("owner"),
             "region": obj.get("region"),
             "resolution_key": obj.get("resolution_key"),
-            "risk_level": obj.get("risk_level"),
+            "risk_level": obj.get("risk_level") if obj.get("risk_level") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "size": obj.get("size"),
             "state": obj.get("state"),
             "storage_account": [Assetsv3ConnectionEdge.from_dict(_item) for _item in obj["storage_account"]] if obj.get("storage_account") is not None else None,

@@ -30,7 +30,7 @@ class Reportsv3ChartSettings(BaseModel):
     """ # noqa: E501
     chart_id: Optional[StrictStr] = Field(default=None, description="The chart id.")
     chart_title: Optional[StrictStr] = Field(default=None, description="The chart title.")
-    chart_type: Optional[Reportsv3ChartType] = None
+    chart_type: Optional[Reportsv3ChartType] = Reportsv3ChartType.UNDEFINED_CHART_TYPE
     creation_time: Optional[datetime] = Field(default=None, description="The chart's cration time in format YYYY-MM-DDTHH:mm:ss.sssZ.")
     creator_user_id: Optional[StrictStr] = Field(default=None, description="An identifier for the creator of the chart.")
     dataset_header_id: Optional[StrictStr] = Field(default=None, description="Header id for the dataset values.")
@@ -98,7 +98,7 @@ class Reportsv3ChartSettings(BaseModel):
         _obj = cls.model_validate({
             "chart_id": obj.get("chart_id"),
             "chart_title": obj.get("chart_title"),
-            "chart_type": obj.get("chart_type"),
+            "chart_type": obj.get("chart_type") if obj.get("chart_type") is not None else Reportsv3ChartType.UNDEFINED_CHART_TYPE,
             "creation_time": obj.get("creation_time"),
             "creator_user_id": obj.get("creator_user_id"),
             "dataset_header_id": obj.get("dataset_header_id"),

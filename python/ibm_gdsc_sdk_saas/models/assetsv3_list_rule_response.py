@@ -76,9 +76,9 @@ class Assetsv3ListRuleResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in rule_list (list)
         _items = []
         if self.rule_list:
-            for _item in self.rule_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rule_list in self.rule_list:
+                if _item_rule_list:
+                    _items.append(_item_rule_list.to_dict())
             _dict['rule_list'] = _items
         return _dict
 

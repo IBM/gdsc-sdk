@@ -35,8 +35,8 @@ class Reportsrunnerv3RunReportRequest(BaseModel):
     date_range: Optional[Reportsv3DateRange] = None
     default_chart_expanded: Optional[StrictBool] = Field(default=None, description="Optional: if report has chart -send  default_chart_expanded be saved in user settings collection per report and user.")
     fetch_size: Optional[StrictInt] = Field(default=None, description="The max amount of rows to return for pagination. Required if report query uses offset and fetch_size parameters.")
-    job_type: Optional[Reportsrunnerv3JobType] = None
-    model_type: Optional[Reportsv3ModelType] = None
+    job_type: Optional[Reportsrunnerv3JobType] = Reportsrunnerv3JobType.UNDEFINED_JOB_TYPE
+    model_type: Optional[Reportsv3ModelType] = Reportsv3ModelType.UNDEFINED_MODEL_TYPE
     offset: Optional[StrictInt] = Field(default=None, description="The amount to offset the rows by for pagination. Required if report query uses offset and fetch_size parameters.")
     query_id: Optional[StrictStr] = Field(default=None, description="Optional: query_id is used to uniquely identify a query. It can be later used to stop the same query.")
     report_definition: Optional[Reportsv3ReportDefinition] = None
@@ -95,9 +95,9 @@ class Reportsrunnerv3RunReportRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in runtime_parameter_list (list)
         _items = []
         if self.runtime_parameter_list:
-            for _item in self.runtime_parameter_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_runtime_parameter_list in self.runtime_parameter_list:
+                if _item_runtime_parameter_list:
+                    _items.append(_item_runtime_parameter_list.to_dict())
             _dict['runtime_parameter_list'] = _items
         return _dict
 
@@ -115,8 +115,8 @@ class Reportsrunnerv3RunReportRequest(BaseModel):
             "date_range": Reportsv3DateRange.from_dict(obj["date_range"]) if obj.get("date_range") is not None else None,
             "default_chart_expanded": obj.get("default_chart_expanded"),
             "fetch_size": obj.get("fetch_size"),
-            "job_type": obj.get("job_type"),
-            "model_type": obj.get("model_type"),
+            "job_type": obj.get("job_type") if obj.get("job_type") is not None else Reportsrunnerv3JobType.UNDEFINED_JOB_TYPE,
+            "model_type": obj.get("model_type") if obj.get("model_type") is not None else Reportsv3ModelType.UNDEFINED_MODEL_TYPE,
             "offset": obj.get("offset"),
             "query_id": obj.get("query_id"),
             "report_definition": Reportsv3ReportDefinition.from_dict(obj["report_definition"]) if obj.get("report_definition") is not None else None,

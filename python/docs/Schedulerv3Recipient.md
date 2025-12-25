@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **integration_id** | **str** | Optional: The integration unique id (configuration object id). | [optional] 
 **label** | **str** |  | [optional] 
 **template_id** | **str** | Optional: Id of the template to use when sending e-mail. | [optional] 
-**type** | [**Schedulerv3RecipientType**](Schedulerv3RecipientType.md) |  | [optional] 
+**type** | [**Schedulerv3RecipientType**](Schedulerv3RecipientType.md) |  | [optional] [default to Schedulerv3RecipientType.UNDEFINED_RECTYPE]
 **value** | **str** | Who to assign as the report result reviewer. | [optional] 
 
 ## Example

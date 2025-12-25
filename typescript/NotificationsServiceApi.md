@@ -24,14 +24,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceCreateTicketRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceCreateTicketRequest = {
-  // Notificationsv3CreateTicketRequest
+const request: NotificationsServiceApiNotificationsServiceCreateTicketRequest = {
+  
   notificationsv3CreateTicketRequest: {
     additionalData: {
       "key": "key_example",
@@ -43,9 +43,8 @@ let body:.NotificationsServiceApiNotificationsServiceCreateTicketRequest = {
   },
 };
 
-apiInstance.notificationsServiceCreateTicket(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceCreateTicket(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -86,23 +85,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetFoldersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetFoldersRequest = {
-  // Notificationsv3GetFoldersRequest
+const request: NotificationsServiceApiNotificationsServiceGetFoldersRequest = {
+  
   notificationsv3GetFoldersRequest: {
     folderName: "folderName_example",
     integrationId: "integrationId_example",
   },
 };
 
-apiInstance.notificationsServiceGetFolders(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetFolders(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -143,20 +141,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {
-  // string | Params are located in the requests context (tenant id, user email, notification id). (optional)
+const request: NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {
+    // Params are located in the requests context (tenant id, user email, notification id). (optional)
   notificationId: "notification_id_example",
 };
 
-apiInstance.notificationsServiceGetNotificationFilename(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetNotificationFilename(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -197,20 +194,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest = {
-  // string | ID for the record to return.
+const request: NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest = {
+    // ID for the record to return.
   notificationId: "notification_id_example",
 };
 
-apiInstance.notificationsServiceGetNotificationRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetNotificationRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -251,38 +247,37 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {
-  // Date | Return records created at this time or later (>=). (optional)
+const request: NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {
+    // Return records created at this time or later (>=). (optional)
   filterStartTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Return records created before this time (<). (optional)
+    // Return records created before this time (<). (optional)
   filterEndTime: new Date('1970-01-01T00:00:00.00Z'),
-  // 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE' | Only return record that include the specified state. (optional)
+    // Only return record that include the specified state. (optional)
   filterState: "INCLUDE_ALL",
-  // Array<string> | Only return record that includes the specified origins. (optional)
+    // Only return record that includes the specified origins. (optional)
   filterOrigins: [
     "filter.origins_example",
   ],
-  // string | Only return record that with the specified origin_data. (optional)
+    // Only return record that with the specified origin_data. (optional)
   filterOriginData: "filter.origin_data_example",
-  // number | The max amount of rows to return for this single query. (optional)
+    // The max amount of rows to return for this single query. (optional)
   filterLimit: 1,
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | Computing the filter counts is relatively expensive, only compute when needed. (optional)
+    // Computing the filter counts is relatively expensive, only compute when needed. (optional)
   includeFilterCounts: true,
 };
 
-apiInstance.notificationsServiceGetNotificationRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetNotificationRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -331,22 +326,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetTicketStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {
-  // string | The ID of the ticket to fetch. (optional)
+const request: NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {
+    // The ID of the ticket to fetch. (optional)
   ticketId: "ticket_id_example",
-  // string | The ID of the ticketing integration. (optional)
+    // The ID of the ticketing integration. (optional)
   integrationId: "integration_id_example",
 };
 
-apiInstance.notificationsServiceGetTicketStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetTicketStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -388,14 +382,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServicePostNotificationRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServicePostNotificationRecordRequest = {
-  // Notificationsv3PostNotificationRecordRequest
+const request: NotificationsServiceApiNotificationsServicePostNotificationRecordRequest = {
+  
   notificationsv3PostNotificationRecordRequest: {
     origin: "UNDEFINED_ORIGIN",
     originData: "originData_example",
@@ -415,9 +409,8 @@ let body:.NotificationsServiceApiNotificationsServicePostNotificationRecordReque
   },
 };
 
-apiInstance.notificationsServicePostNotificationRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServicePostNotificationRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -458,14 +451,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest = {
-  // Notificationsv3SearchNotificationRecordsRequest
+const request: NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest = {
+  
   notificationsv3SearchNotificationRecordsRequest: {
     filters: [
       {
@@ -483,9 +476,8 @@ let body:.NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRe
   },
 };
 
-apiInstance.notificationsServiceSearchNotificationRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceSearchNotificationRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -526,14 +518,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceTestIntegrationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceTestIntegrationRequest = {
-  // Notificationsv3TestIntegrationRequest
+const request: NotificationsServiceApiNotificationsServiceTestIntegrationRequest = {
+  
   notificationsv3TestIntegrationRequest: {
     integrationType: "integrationType_example",
     options: {
@@ -542,9 +534,8 @@ let body:.NotificationsServiceApiNotificationsServiceTestIntegrationRequest = {
   },
 };
 
-apiInstance.notificationsServiceTestIntegration(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceTestIntegration(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -585,14 +576,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest = {
-  // Notificationsv3UpdateNotificationRecordRequest
+const request: NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest = {
+  
   notificationsv3UpdateNotificationRecordRequest: {
     notificationId: [
       "notificationId_example",
@@ -608,9 +599,8 @@ let body:.NotificationsServiceApiNotificationsServiceUpdateNotificationRecordReq
   },
 };
 
-apiInstance.notificationsServiceUpdateNotificationRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceUpdateNotificationRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

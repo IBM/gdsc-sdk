@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ClientInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ClientInfo {
   public static final String SERIALIZED_NAME_CLIENT_ID = "clientId";
   @SerializedName(SERIALIZED_NAME_CLIENT_ID)
+  @javax.annotation.Nonnull
   private String clientId;
 
   public static final String SERIALIZED_NAME_CLIENT_SECRET = "clientSecret";
   @SerializedName(SERIALIZED_NAME_CLIENT_SECRET)
+  @javax.annotation.Nonnull
   private String clientSecret;
 
   public static final String SERIALIZED_NAME_AUTH_ENDPOINT = "authEndpoint";
   @SerializedName(SERIALIZED_NAME_AUTH_ENDPOINT)
+  @javax.annotation.Nonnull
   private String authEndpoint;
 
   public ClientInfo() {
   }
 
-  public ClientInfo clientId(String clientId) {
+  public ClientInfo clientId(@javax.annotation.Nonnull String clientId) {
     this.clientId = clientId;
     return this;
   }
 
-   /**
+  /**
    * Get clientId
    * @return clientId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getClientId() {
     return clientId;
   }
 
-  public void setClientId(String clientId) {
+  public void setClientId(@javax.annotation.Nonnull String clientId) {
     this.clientId = clientId;
   }
 
 
-  public ClientInfo clientSecret(String clientSecret) {
+  public ClientInfo clientSecret(@javax.annotation.Nonnull String clientSecret) {
     this.clientSecret = clientSecret;
     return this;
   }
 
-   /**
+  /**
    * Get clientSecret
    * @return clientSecret
-  **/
+   */
   @javax.annotation.Nonnull
   public String getClientSecret() {
     return clientSecret;
   }
 
-  public void setClientSecret(String clientSecret) {
+  public void setClientSecret(@javax.annotation.Nonnull String clientSecret) {
     this.clientSecret = clientSecret;
   }
 
 
-  public ClientInfo authEndpoint(String authEndpoint) {
+  public ClientInfo authEndpoint(@javax.annotation.Nonnull String authEndpoint) {
     this.authEndpoint = authEndpoint;
     return this;
   }
 
-   /**
+  /**
    * Get authEndpoint
    * @return authEndpoint
-  **/
+   */
   @javax.annotation.Nonnull
   public String getAuthEndpoint() {
     return authEndpoint;
   }
 
-  public void setAuthEndpoint(String authEndpoint) {
+  public void setAuthEndpoint(@javax.annotation.Nonnull String authEndpoint) {
     this.authEndpoint = authEndpoint;
   }
 
@@ -171,28 +175,22 @@ public class ClientInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("clientId");
-    openapiFields.add("clientSecret");
-    openapiFields.add("authEndpoint");
+    openapiFields = new HashSet<String>(Arrays.asList("clientId", "clientSecret", "authEndpoint"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("clientId");
-    openapiRequiredFields.add("clientSecret");
-    openapiRequiredFields.add("authEndpoint");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("clientId", "clientSecret", "authEndpoint"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ClientInfo
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ClientInfo
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ClientInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ClientInfo is not found in the empty JSON string", ClientInfo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ClientInfo is not found in the empty JSON string", ClientInfo.openapiRequiredFields.toString()));
         }
       }
 
@@ -200,25 +198,25 @@ public class ClientInfo {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ClientInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ClientInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ClientInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ClientInfo.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("clientId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `clientId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("clientId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `clientId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("clientId").toString()));
       }
       if (!jsonObj.get("clientSecret").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `clientSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("clientSecret").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `clientSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("clientSecret").toString()));
       }
       if (!jsonObj.get("authEndpoint").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `authEndpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("authEndpoint").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `authEndpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("authEndpoint").toString()));
       }
   }
 
@@ -251,22 +249,22 @@ public class ClientInfo {
     }
   }
 
- /**
-  * Create an instance of ClientInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ClientInfo
-  * @throws IOException if the JSON string is invalid with respect to ClientInfo
-  */
+  /**
+   * Create an instance of ClientInfo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ClientInfo
+   * @throws IOException if the JSON string is invalid with respect to ClientInfo
+   */
   public static ClientInfo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ClientInfo.class);
   }
 
- /**
-  * Convert an instance of ClientInfo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ClientInfo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

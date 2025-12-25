@@ -27,7 +27,7 @@ class Complianceacceleratorv3CreateWorkspaceResponse(BaseModel):
     """
     Response message to create compliance workspace.
     """ # noqa: E501
-    status: Optional[Complianceacceleratorv3WorkspaceCreationStatus] = None
+    status: Optional[Complianceacceleratorv3WorkspaceCreationStatus] = Complianceacceleratorv3WorkspaceCreationStatus.NO_ACTION
     title: Optional[StrictStr] = Field(default=None, description="More info of the step.")
     workspace_id: Optional[StrictStr] = Field(default=None, description="The id of the workspace.")
     __properties: ClassVar[List[str]] = ["status", "title", "workspace_id"]
@@ -83,7 +83,7 @@ class Complianceacceleratorv3CreateWorkspaceResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Complianceacceleratorv3WorkspaceCreationStatus.NO_ACTION,
             "title": obj.get("title"),
             "workspace_id": obj.get("workspace_id")
         })

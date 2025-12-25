@@ -83,23 +83,23 @@ class Assetsv3ResourcesVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in resources_account (list)
         _items = []
         if self.resources_account:
-            for _item in self.resources_account:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_resources_account in self.resources_account:
+                if _item_resources_account:
+                    _items.append(_item_resources_account.to_dict())
             _dict['resources_account'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in sensitivities (list)
         _items = []
         if self.sensitivities:
-            for _item in self.sensitivities:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sensitivities in self.sensitivities:
+                if _item_sensitivities:
+                    _items.append(_item_sensitivities.to_dict())
             _dict['sensitivities'] = _items
         return _dict
 

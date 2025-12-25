@@ -29,7 +29,7 @@ class Assetsv3EndpointVertex(BaseModel):
     """
     Assetsv3EndpointVertex
     """ # noqa: E501
-    criticality: Optional[Assetsv3Level] = None
+    criticality: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     endpoint_host: Optional[List[Assetsv3ConnectionEdge]] = None
     endpoint_ip: Optional[List[Assetsv3ConnectionEdge]] = None
     endpoint_name: Optional[StrictStr] = None
@@ -40,7 +40,7 @@ class Assetsv3EndpointVertex(BaseModel):
     os: Optional[StrictStr] = None
     owner: Optional[List[StrictStr]] = None
     resolution_key: Optional[StrictStr] = None
-    risk_level: Optional[Assetsv3Level] = None
+    risk_level: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     __properties: ClassVar[List[str]] = ["criticality", "endpoint_host", "endpoint_ip", "endpoint_name", "endpoint_sub_type", "endpoint_type", "extended_properties", "is_access_url", "os", "owner", "resolution_key", "risk_level"]
 
     model_config = ConfigDict(
@@ -85,23 +85,23 @@ class Assetsv3EndpointVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in endpoint_host (list)
         _items = []
         if self.endpoint_host:
-            for _item in self.endpoint_host:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_endpoint_host in self.endpoint_host:
+                if _item_endpoint_host:
+                    _items.append(_item_endpoint_host.to_dict())
             _dict['endpoint_host'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in endpoint_ip (list)
         _items = []
         if self.endpoint_ip:
-            for _item in self.endpoint_ip:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_endpoint_ip in self.endpoint_ip:
+                if _item_endpoint_ip:
+                    _items.append(_item_endpoint_ip.to_dict())
             _dict['endpoint_ip'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         return _dict
 
@@ -115,7 +115,7 @@ class Assetsv3EndpointVertex(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "criticality": obj.get("criticality"),
+            "criticality": obj.get("criticality") if obj.get("criticality") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "endpoint_host": [Assetsv3ConnectionEdge.from_dict(_item) for _item in obj["endpoint_host"]] if obj.get("endpoint_host") is not None else None,
             "endpoint_ip": [Assetsv3ConnectionEdge.from_dict(_item) for _item in obj["endpoint_ip"]] if obj.get("endpoint_ip") is not None else None,
             "endpoint_name": obj.get("endpoint_name"),
@@ -126,7 +126,7 @@ class Assetsv3EndpointVertex(BaseModel):
             "os": obj.get("os"),
             "owner": obj.get("owner"),
             "resolution_key": obj.get("resolution_key"),
-            "risk_level": obj.get("risk_level")
+            "risk_level": obj.get("risk_level") if obj.get("risk_level") is not None else Assetsv3Level.LEVEL_UNKNOWN
         })
         return _obj
 

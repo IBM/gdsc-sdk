@@ -31,6 +31,8 @@ export class Dashboardsv3TimeRange {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "end",
@@ -58,4 +60,3 @@ export class Dashboardsv3TimeRange {
     public constructor() {
     }
 }
-

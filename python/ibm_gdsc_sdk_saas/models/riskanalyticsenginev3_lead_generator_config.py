@@ -74,9 +74,9 @@ class Riskanalyticsenginev3LeadGeneratorConfig(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in lead_generator_params (list)
         _items = []
         if self.lead_generator_params:
-            for _item in self.lead_generator_params:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_lead_generator_params in self.lead_generator_params:
+                if _item_lead_generator_params:
+                    _items.append(_item_lead_generator_params.to_dict())
             _dict['lead_generator_params'] = _items
         return _dict
 

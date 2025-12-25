@@ -89,30 +89,30 @@ class Reportsv3ReportDisplayLayout(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in in_report_additional_parameter (list)
         _items = []
         if self.in_report_additional_parameter:
-            for _item in self.in_report_additional_parameter:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_in_report_additional_parameter in self.in_report_additional_parameter:
+                if _item_in_report_additional_parameter:
+                    _items.append(_item_in_report_additional_parameter.to_dict())
             _dict['in_report_additional_parameter'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in report_headers (list)
         _items = []
         if self.report_headers:
-            for _item in self.report_headers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_headers in self.report_headers:
+                if _item_report_headers:
+                    _items.append(_item_report_headers.to_dict())
             _dict['report_headers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in report_tags (list)
         _items = []
         if self.report_tags:
-            for _item in self.report_tags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_tags in self.report_tags:
+                if _item_report_tags:
+                    _items.append(_item_report_tags.to_dict())
             _dict['report_tags'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in runtime_param_list (list)
         _items = []
         if self.runtime_param_list:
-            for _item in self.runtime_param_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_runtime_param_list in self.runtime_param_list:
+                if _item_runtime_param_list:
+                    _items.append(_item_runtime_param_list.to_dict())
             _dict['runtime_param_list'] = _items
         return _dict
 

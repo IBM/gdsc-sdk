@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetDatasetDataResponse returns the data report on a dataset.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3GetDatasetDataResponse {
   public static final String SERIALIZED_NAME_RECORD_COUNT = "record_count";
   @SerializedName(SERIALIZED_NAME_RECORD_COUNT)
+  @javax.annotation.Nullable
   private Long recordCount;
 
   public static final String SERIALIZED_NAME_REPORT_RESULT = "report_result";
   @SerializedName(SERIALIZED_NAME_REPORT_RESULT)
+  @javax.annotation.Nullable
   private Workflowv3ReportResult reportResult;
 
   public Ecosystemv3GetDatasetDataResponse() {
   }
 
-  public Ecosystemv3GetDatasetDataResponse recordCount(Long recordCount) {
+  public Ecosystemv3GetDatasetDataResponse recordCount(@javax.annotation.Nullable Long recordCount) {
     this.recordCount = recordCount;
     return this;
   }
 
-   /**
+  /**
    * Total number of records associated with the filter.
    * @return recordCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getRecordCount() {
     return recordCount;
   }
 
-  public void setRecordCount(Long recordCount) {
+  public void setRecordCount(@javax.annotation.Nullable Long recordCount) {
     this.recordCount = recordCount;
   }
 
 
-  public Ecosystemv3GetDatasetDataResponse reportResult(Workflowv3ReportResult reportResult) {
+  public Ecosystemv3GetDatasetDataResponse reportResult(@javax.annotation.Nullable Workflowv3ReportResult reportResult) {
     this.reportResult = reportResult;
     return this;
   }
 
-   /**
+  /**
    * Get reportResult
    * @return reportResult
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3ReportResult getReportResult() {
     return reportResult;
   }
 
-  public void setReportResult(Workflowv3ReportResult reportResult) {
+  public void setReportResult(@javax.annotation.Nullable Workflowv3ReportResult reportResult) {
     this.reportResult = reportResult;
   }
 
@@ -147,24 +150,22 @@ public class Ecosystemv3GetDatasetDataResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("record_count");
-    openapiFields.add("report_result");
+    openapiFields = new HashSet<String>(Arrays.asList("record_count", "report_result"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3GetDatasetDataResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3GetDatasetDataResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3GetDatasetDataResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3GetDatasetDataResponse is not found in the empty JSON string", Ecosystemv3GetDatasetDataResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3GetDatasetDataResponse is not found in the empty JSON string", Ecosystemv3GetDatasetDataResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Ecosystemv3GetDatasetDataResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3GetDatasetDataResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3GetDatasetDataResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3GetDatasetDataResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -211,22 +212,22 @@ public class Ecosystemv3GetDatasetDataResponse {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3GetDatasetDataResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3GetDatasetDataResponse
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3GetDatasetDataResponse
-  */
+  /**
+   * Create an instance of Ecosystemv3GetDatasetDataResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3GetDatasetDataResponse
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3GetDatasetDataResponse
+   */
   public static Ecosystemv3GetDatasetDataResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3GetDatasetDataResponse.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3GetDatasetDataResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3GetDatasetDataResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

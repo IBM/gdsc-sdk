@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,134 +39,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetReportAuditCountRequest is the argument get audit report task count.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3GetAuditDataCountRequest {
   public static final String SERIALIZED_NAME_JOB_ID = "job_id";
   @SerializedName(SERIALIZED_NAME_JOB_ID)
+  @javax.annotation.Nullable
   private String jobId;
 
   public static final String SERIALIZED_NAME_REPORT_FILTERS = "report_filters";
   @SerializedName(SERIALIZED_NAME_REPORT_FILTERS)
+  @javax.annotation.Nullable
   private Reportsv3ReportFilterBrackets reportFilters;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_SCHEMA_NAME = "schema_name";
   @SerializedName(SERIALIZED_NAME_SCHEMA_NAME)
+  @javax.annotation.Nullable
   private String schemaName;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public Reportsrunnerv3GetAuditDataCountRequest() {
   }
 
-  public Reportsrunnerv3GetAuditDataCountRequest jobId(String jobId) {
+  public Reportsrunnerv3GetAuditDataCountRequest jobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * Unique token identifying the export job.
    * @return jobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getJobId() {
     return jobId;
   }
 
-  public void setJobId(String jobId) {
+  public void setJobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
   }
 
 
-  public Reportsrunnerv3GetAuditDataCountRequest reportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public Reportsrunnerv3GetAuditDataCountRequest reportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
     return this;
   }
 
-   /**
+  /**
    * Get reportFilters
    * @return reportFilters
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportFilterBrackets getReportFilters() {
     return reportFilters;
   }
 
-  public void setReportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public void setReportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
   }
 
 
-  public Reportsrunnerv3GetAuditDataCountRequest reportId(String reportId) {
+  public Reportsrunnerv3GetAuditDataCountRequest reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsrunnerv3GetAuditDataCountRequest schemaName(String schemaName) {
+  public Reportsrunnerv3GetAuditDataCountRequest schemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
     return this;
   }
 
-   /**
+  /**
    * The schema name to organize report task temp tables.
    * @return schemaName
-  **/
+   */
   @javax.annotation.Nullable
   public String getSchemaName() {
     return schemaName;
   }
 
-  public void setSchemaName(String schemaName) {
+  public void setSchemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
   }
 
 
-  public Reportsrunnerv3GetAuditDataCountRequest tableName(String tableName) {
+  public Reportsrunnerv3GetAuditDataCountRequest tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * The table name to save report task data(task_id).
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
@@ -222,27 +228,22 @@ public class Reportsrunnerv3GetAuditDataCountRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("job_id");
-    openapiFields.add("report_filters");
-    openapiFields.add("report_id");
-    openapiFields.add("schema_name");
-    openapiFields.add("table_name");
+    openapiFields = new HashSet<String>(Arrays.asList("job_id", "report_filters", "report_id", "schema_name", "table_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetAuditDataCountRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetAuditDataCountRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3GetAuditDataCountRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3GetAuditDataCountRequest is not found in the empty JSON string", Reportsrunnerv3GetAuditDataCountRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3GetAuditDataCountRequest is not found in the empty JSON string", Reportsrunnerv3GetAuditDataCountRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -250,25 +251,25 @@ public class Reportsrunnerv3GetAuditDataCountRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3GetAuditDataCountRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetAuditDataCountRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetAuditDataCountRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("job_id") != null && !jsonObj.get("job_id").isJsonNull()) && !jsonObj.get("job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
       }
       // validate the optional field `report_filters`
       if (jsonObj.get("report_filters") != null && !jsonObj.get("report_filters").isJsonNull()) {
         Reportsv3ReportFilterBrackets.validateJsonElement(jsonObj.get("report_filters"));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("schema_name") != null && !jsonObj.get("schema_name").isJsonNull()) && !jsonObj.get("schema_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
   }
 
@@ -301,22 +302,22 @@ public class Reportsrunnerv3GetAuditDataCountRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3GetAuditDataCountRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3GetAuditDataCountRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetAuditDataCountRequest
-  */
+  /**
+   * Create an instance of Reportsrunnerv3GetAuditDataCountRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3GetAuditDataCountRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetAuditDataCountRequest
+   */
   public static Reportsrunnerv3GetAuditDataCountRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3GetAuditDataCountRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3GetAuditDataCountRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3GetAuditDataCountRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

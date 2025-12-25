@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,109 +43,116 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UserSensitiveCategories200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class UserSensitiveCategories200Response {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
   private String type;
 
   public static final String SERIALIZED_NAME_PERMISSIONS = "permissions";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS)
+  @javax.annotation.Nonnull
   private List<AccessType> permissions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ACCOUNT_IDS = "accountIds";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_IDS)
+  @javax.annotation.Nonnull
   private List<String> accountIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVE_CATEGORIES = "sensitiveCategories";
   @SerializedName(SERIALIZED_NAME_SENSITIVE_CATEGORIES)
+  @javax.annotation.Nonnull
   private List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ACCESSIBLE_PERMISSION_CONFIGURATIONS = "accessiblePermissionConfigurations";
   @SerializedName(SERIALIZED_NAME_ACCESSIBLE_PERMISSION_CONFIGURATIONS)
+  @javax.annotation.Nonnull
   private BigDecimal accessiblePermissionConfigurations;
 
   public UserSensitiveCategories200Response() {
   }
 
-  public UserSensitiveCategories200Response id(String id) {
+  public UserSensitiveCategories200Response id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
 
-  public UserSensitiveCategories200Response name(String name) {
+  public UserSensitiveCategories200Response name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public UserSensitiveCategories200Response type(String type) {
+  public UserSensitiveCategories200Response type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
 
-  public UserSensitiveCategories200Response permissions(List<AccessType> permissions) {
+  public UserSensitiveCategories200Response permissions(@javax.annotation.Nonnull List<AccessType> permissions) {
     this.permissions = permissions;
     return this;
   }
@@ -157,21 +165,21 @@ public class UserSensitiveCategories200Response {
     return this;
   }
 
-   /**
+  /**
    * Get permissions
    * @return permissions
-  **/
+   */
   @javax.annotation.Nonnull
   public List<AccessType> getPermissions() {
     return permissions;
   }
 
-  public void setPermissions(List<AccessType> permissions) {
+  public void setPermissions(@javax.annotation.Nonnull List<AccessType> permissions) {
     this.permissions = permissions;
   }
 
 
-  public UserSensitiveCategories200Response accountIds(List<String> accountIds) {
+  public UserSensitiveCategories200Response accountIds(@javax.annotation.Nonnull List<String> accountIds) {
     this.accountIds = accountIds;
     return this;
   }
@@ -184,21 +192,21 @@ public class UserSensitiveCategories200Response {
     return this;
   }
 
-   /**
+  /**
    * Get accountIds
    * @return accountIds
-  **/
+   */
   @javax.annotation.Nonnull
   public List<String> getAccountIds() {
     return accountIds;
   }
 
-  public void setAccountIds(List<String> accountIds) {
+  public void setAccountIds(@javax.annotation.Nonnull List<String> accountIds) {
     this.accountIds = accountIds;
   }
 
 
-  public UserSensitiveCategories200Response sensitiveCategories(List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
+  public UserSensitiveCategories200Response sensitiveCategories(@javax.annotation.Nonnull List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
     this.sensitiveCategories = sensitiveCategories;
     return this;
   }
@@ -211,35 +219,35 @@ public class UserSensitiveCategories200Response {
     return this;
   }
 
-   /**
+  /**
    * Get sensitiveCategories
    * @return sensitiveCategories
-  **/
+   */
   @javax.annotation.Nonnull
   public List<UserSensitiveCategoriesSensitiveCategoriesInner> getSensitiveCategories() {
     return sensitiveCategories;
   }
 
-  public void setSensitiveCategories(List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
+  public void setSensitiveCategories(@javax.annotation.Nonnull List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
     this.sensitiveCategories = sensitiveCategories;
   }
 
 
-  public UserSensitiveCategories200Response accessiblePermissionConfigurations(BigDecimal accessiblePermissionConfigurations) {
+  public UserSensitiveCategories200Response accessiblePermissionConfigurations(@javax.annotation.Nonnull BigDecimal accessiblePermissionConfigurations) {
     this.accessiblePermissionConfigurations = accessiblePermissionConfigurations;
     return this;
   }
 
-   /**
+  /**
    * Get accessiblePermissionConfigurations
    * @return accessiblePermissionConfigurations
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getAccessiblePermissionConfigurations() {
     return accessiblePermissionConfigurations;
   }
 
-  public void setAccessiblePermissionConfigurations(BigDecimal accessiblePermissionConfigurations) {
+  public void setAccessiblePermissionConfigurations(@javax.annotation.Nonnull BigDecimal accessiblePermissionConfigurations) {
     this.accessiblePermissionConfigurations = accessiblePermissionConfigurations;
   }
 
@@ -300,36 +308,22 @@ public class UserSensitiveCategories200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("type");
-    openapiFields.add("permissions");
-    openapiFields.add("accountIds");
-    openapiFields.add("sensitiveCategories");
-    openapiFields.add("accessiblePermissionConfigurations");
+    openapiFields = new HashSet<String>(Arrays.asList("id", "name", "type", "permissions", "accountIds", "sensitiveCategories", "accessiblePermissionConfigurations"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("permissions");
-    openapiRequiredFields.add("accountIds");
-    openapiRequiredFields.add("sensitiveCategories");
-    openapiRequiredFields.add("accessiblePermissionConfigurations");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("id", "name", "type", "permissions", "accountIds", "sensitiveCategories", "accessiblePermissionConfigurations"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserSensitiveCategories200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserSensitiveCategories200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserSensitiveCategories200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UserSensitiveCategories200Response is not found in the empty JSON string", UserSensitiveCategories200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in UserSensitiveCategories200Response is not found in the empty JSON string", UserSensitiveCategories200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -337,41 +331,41 @@ public class UserSensitiveCategories200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!UserSensitiveCategories200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserSensitiveCategories200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `UserSensitiveCategories200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : UserSensitiveCategories200Response.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("permissions") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("permissions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("accountIds") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("accountIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accountIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accountIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountIds").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("sensitiveCategories").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitiveCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitiveCategories").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitiveCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitiveCategories").toString()));
       }
 
       JsonArray jsonArraysensitiveCategories = jsonObj.getAsJsonArray("sensitiveCategories");
@@ -410,22 +404,22 @@ public class UserSensitiveCategories200Response {
     }
   }
 
- /**
-  * Create an instance of UserSensitiveCategories200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserSensitiveCategories200Response
-  * @throws IOException if the JSON string is invalid with respect to UserSensitiveCategories200Response
-  */
+  /**
+   * Create an instance of UserSensitiveCategories200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserSensitiveCategories200Response
+   * @throws IOException if the JSON string is invalid with respect to UserSensitiveCategories200Response
+   */
   public static UserSensitiveCategories200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserSensitiveCategories200Response.class);
   }
 
- /**
-  * Convert an instance of UserSensitiveCategories200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserSensitiveCategories200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

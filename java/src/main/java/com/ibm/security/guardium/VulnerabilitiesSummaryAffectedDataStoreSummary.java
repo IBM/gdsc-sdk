@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,36 +43,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VulnerabilitiesSummaryAffectedDataStoreSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VulnerabilitiesSummaryAffectedDataStoreSummary {
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_IDS_COUNT = "cloudAccountIdsCount";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_IDS_COUNT)
+  @javax.annotation.Nonnull
   private List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner> cloudAccountIdsCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_REGIONS_COUNT = "cloudRegionsCount";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGIONS_COUNT)
+  @javax.annotation.Nonnull
   private List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudRegionsCountInner> cloudRegionsCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATA_STORE_TYPES = "dataStoreTypes";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_TYPES)
+  @javax.annotation.Nonnull
   private List<VulnerabilitiesSummaryAffectedDataStoreSummaryDataStoreTypesInner> dataStoreTypes = new ArrayList<>();
 
   public VulnerabilitiesSummaryAffectedDataStoreSummary() {
   }
 
-  public VulnerabilitiesSummaryAffectedDataStoreSummary cloudAccountIdsCount(List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner> cloudAccountIdsCount) {
+  public VulnerabilitiesSummaryAffectedDataStoreSummary cloudAccountIdsCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner> cloudAccountIdsCount) {
     this.cloudAccountIdsCount = cloudAccountIdsCount;
     return this;
   }
@@ -84,21 +88,21 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountIdsCount
    * @return cloudAccountIdsCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner> getCloudAccountIdsCount() {
     return cloudAccountIdsCount;
   }
 
-  public void setCloudAccountIdsCount(List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner> cloudAccountIdsCount) {
+  public void setCloudAccountIdsCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner> cloudAccountIdsCount) {
     this.cloudAccountIdsCount = cloudAccountIdsCount;
   }
 
 
-  public VulnerabilitiesSummaryAffectedDataStoreSummary cloudRegionsCount(List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudRegionsCountInner> cloudRegionsCount) {
+  public VulnerabilitiesSummaryAffectedDataStoreSummary cloudRegionsCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudRegionsCountInner> cloudRegionsCount) {
     this.cloudRegionsCount = cloudRegionsCount;
     return this;
   }
@@ -111,21 +115,21 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegionsCount
    * @return cloudRegionsCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudRegionsCountInner> getCloudRegionsCount() {
     return cloudRegionsCount;
   }
 
-  public void setCloudRegionsCount(List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudRegionsCountInner> cloudRegionsCount) {
+  public void setCloudRegionsCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryAffectedDataStoreSummaryCloudRegionsCountInner> cloudRegionsCount) {
     this.cloudRegionsCount = cloudRegionsCount;
   }
 
 
-  public VulnerabilitiesSummaryAffectedDataStoreSummary dataStoreTypes(List<VulnerabilitiesSummaryAffectedDataStoreSummaryDataStoreTypesInner> dataStoreTypes) {
+  public VulnerabilitiesSummaryAffectedDataStoreSummary dataStoreTypes(@javax.annotation.Nonnull List<VulnerabilitiesSummaryAffectedDataStoreSummaryDataStoreTypesInner> dataStoreTypes) {
     this.dataStoreTypes = dataStoreTypes;
     return this;
   }
@@ -138,16 +142,16 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreTypes
    * @return dataStoreTypes
-  **/
+   */
   @javax.annotation.Nonnull
   public List<VulnerabilitiesSummaryAffectedDataStoreSummaryDataStoreTypesInner> getDataStoreTypes() {
     return dataStoreTypes;
   }
 
-  public void setDataStoreTypes(List<VulnerabilitiesSummaryAffectedDataStoreSummaryDataStoreTypesInner> dataStoreTypes) {
+  public void setDataStoreTypes(@javax.annotation.Nonnull List<VulnerabilitiesSummaryAffectedDataStoreSummaryDataStoreTypesInner> dataStoreTypes) {
     this.dataStoreTypes = dataStoreTypes;
   }
 
@@ -200,28 +204,22 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cloudAccountIdsCount");
-    openapiFields.add("cloudRegionsCount");
-    openapiFields.add("dataStoreTypes");
+    openapiFields = new HashSet<String>(Arrays.asList("cloudAccountIdsCount", "cloudRegionsCount", "dataStoreTypes"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("cloudAccountIdsCount");
-    openapiRequiredFields.add("cloudRegionsCount");
-    openapiRequiredFields.add("dataStoreTypes");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("cloudAccountIdsCount", "cloudRegionsCount", "dataStoreTypes"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VulnerabilitiesSummaryAffectedDataStoreSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VulnerabilitiesSummaryAffectedDataStoreSummary is not found in the empty JSON string", VulnerabilitiesSummaryAffectedDataStoreSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VulnerabilitiesSummaryAffectedDataStoreSummary is not found in the empty JSON string", VulnerabilitiesSummaryAffectedDataStoreSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -229,20 +227,20 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VulnerabilitiesSummaryAffectedDataStoreSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryAffectedDataStoreSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryAffectedDataStoreSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VulnerabilitiesSummaryAffectedDataStoreSummary.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("cloudAccountIdsCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountIdsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountIdsCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountIdsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountIdsCount").toString()));
       }
 
       JsonArray jsonArraycloudAccountIdsCount = jsonObj.getAsJsonArray("cloudAccountIdsCount");
@@ -252,7 +250,7 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("cloudRegionsCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegionsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegionsCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegionsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegionsCount").toString()));
       }
 
       JsonArray jsonArraycloudRegionsCount = jsonObj.getAsJsonArray("cloudRegionsCount");
@@ -262,7 +260,7 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("dataStoreTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreTypes` to be an array in the JSON string but got `%s`", jsonObj.get("dataStoreTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreTypes` to be an array in the JSON string but got `%s`", jsonObj.get("dataStoreTypes").toString()));
       }
 
       JsonArray jsonArraydataStoreTypes = jsonObj.getAsJsonArray("dataStoreTypes");
@@ -301,22 +299,22 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummary {
     }
   }
 
- /**
-  * Create an instance of VulnerabilitiesSummaryAffectedDataStoreSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VulnerabilitiesSummaryAffectedDataStoreSummary
-  * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummary
-  */
+  /**
+   * Create an instance of VulnerabilitiesSummaryAffectedDataStoreSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VulnerabilitiesSummaryAffectedDataStoreSummary
+   * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummary
+   */
   public static VulnerabilitiesSummaryAffectedDataStoreSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VulnerabilitiesSummaryAffectedDataStoreSummary.class);
   }
 
- /**
-  * Convert an instance of VulnerabilitiesSummaryAffectedDataStoreSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VulnerabilitiesSummaryAffectedDataStoreSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

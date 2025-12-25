@@ -28,7 +28,7 @@ class Policybuilderv3RuleParameter(BaseModel):
     Message format for rule parameters.
     """ # noqa: E501
     parameter_name: Optional[StrictStr] = Field(default=None, description="Parameter Name.")
-    parameter_operator: Optional[Policybuilderv3ParameterOperator] = None
+    parameter_operator: Optional[Policybuilderv3ParameterOperator] = Policybuilderv3ParameterOperator.UNKNOWN_OPERATOR
     parameter_type: Optional[StrictStr] = Field(default=None, description="Type of the parameter.")
     parameter_value: Optional[StrictStr] = Field(default=None, description="The operator of the parameter.")
     parameter_value_label: Optional[StrictStr] = Field(default=None, description="Label of the value if the original value is some id referencing to external entity.")
@@ -87,7 +87,7 @@ class Policybuilderv3RuleParameter(BaseModel):
 
         _obj = cls.model_validate({
             "parameter_name": obj.get("parameter_name"),
-            "parameter_operator": obj.get("parameter_operator"),
+            "parameter_operator": obj.get("parameter_operator") if obj.get("parameter_operator") is not None else Policybuilderv3ParameterOperator.UNKNOWN_OPERATOR,
             "parameter_type": obj.get("parameter_type"),
             "parameter_value": obj.get("parameter_value"),
             "parameter_value_label": obj.get("parameter_value_label"),

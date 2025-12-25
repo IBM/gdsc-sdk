@@ -13,10 +13,10 @@ Name | Type | Description | Notes
 **exclude_group_id** | **str** |  | [optional] 
 **facet_selected_header** | [**Reportsv3ReportHeader**](Reportsv3ReportHeader.md) |  | [optional] 
 **filter_for_job_id** | **str** |  | [optional] 
-**job_type** | [**Reportsv3JobType**](Reportsv3JobType.md) |  | [optional] 
+**job_type** | [**Reportsv3JobType**](Reportsv3JobType.md) |  | [optional] [default to Reportsv3JobType.UNDEFINED_JOB_TYPE]
 **model_types** | [**List[Reportsv3ModelType]**](Reportsv3ModelType.md) |  | [optional] 
 **report_id** | **str** | The id of the Report we wish to run. | [optional] 
-**sql_type** | [**Reportsv3SqlType**](Reportsv3SqlType.md) |  | [optional] 
+**sql_type** | [**Reportsv3SqlType**](Reportsv3SqlType.md) |  | [optional] [default to Reportsv3SqlType.UNDEFINED_SQL_TYPE]
 **table_join_optimization** | **bool** | Optional: disable or enable the table join optimization. | [optional] 
 
 ## Example

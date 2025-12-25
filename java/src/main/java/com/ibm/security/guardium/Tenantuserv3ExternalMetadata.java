@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,56 +42,64 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ExternalMetadata external metadata.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3ExternalMetadata {
   public static final String SERIALIZED_NAME_ADD_ONS = "add_ons";
   @SerializedName(SERIALIZED_NAME_ADD_ONS)
+  @javax.annotation.Nullable
   private Map<String, Tenantuserv3Prometheus> addOns = new HashMap<>();
 
   public static final String SERIALIZED_NAME_CRN = "crn";
   @SerializedName(SERIALIZED_NAME_CRN)
+  @javax.annotation.Nullable
   private String crn;
 
   public static final String SERIALIZED_NAME_EXPIRATION_DATE = "expiration_date";
   @SerializedName(SERIALIZED_NAME_EXPIRATION_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime expirationDate;
 
   public static final String SERIALIZED_NAME_INSTANCE_ID = "instance_id";
   @SerializedName(SERIALIZED_NAME_INSTANCE_ID)
+  @javax.annotation.Nullable
   private String instanceId;
 
   public static final String SERIALIZED_NAME_PART_NUMBER = "part_number";
   @SerializedName(SERIALIZED_NAME_PART_NUMBER)
+  @javax.annotation.Nullable
   private String partNumber;
 
   public static final String SERIALIZED_NAME_PLAN_ID = "plan_id";
   @SerializedName(SERIALIZED_NAME_PLAN_ID)
+  @javax.annotation.Nullable
   private String planId;
 
   public static final String SERIALIZED_NAME_SERVICE_ID = "service_id";
   @SerializedName(SERIALIZED_NAME_SERVICE_ID)
+  @javax.annotation.Nullable
   private String serviceId;
 
   public static final String SERIALIZED_NAME_SUBSCRIPTION_ID = "subscription_id";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_ID)
+  @javax.annotation.Nullable
   private String subscriptionId;
 
   public Tenantuserv3ExternalMetadata() {
   }
 
-  public Tenantuserv3ExternalMetadata addOns(Map<String, Tenantuserv3Prometheus> addOns) {
+  public Tenantuserv3ExternalMetadata addOns(@javax.annotation.Nullable Map<String, Tenantuserv3Prometheus> addOns) {
     this.addOns = addOns;
     return this;
   }
@@ -103,149 +112,149 @@ public class Tenantuserv3ExternalMetadata {
     return this;
   }
 
-   /**
+  /**
    * Add ons.
    * @return addOns
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Tenantuserv3Prometheus> getAddOns() {
     return addOns;
   }
 
-  public void setAddOns(Map<String, Tenantuserv3Prometheus> addOns) {
+  public void setAddOns(@javax.annotation.Nullable Map<String, Tenantuserv3Prometheus> addOns) {
     this.addOns = addOns;
   }
 
 
-  public Tenantuserv3ExternalMetadata crn(String crn) {
+  public Tenantuserv3ExternalMetadata crn(@javax.annotation.Nullable String crn) {
     this.crn = crn;
     return this;
   }
 
-   /**
+  /**
    * Get crn
    * @return crn
-  **/
+   */
   @javax.annotation.Nullable
   public String getCrn() {
     return crn;
   }
 
-  public void setCrn(String crn) {
+  public void setCrn(@javax.annotation.Nullable String crn) {
     this.crn = crn;
   }
 
 
-  public Tenantuserv3ExternalMetadata expirationDate(OffsetDateTime expirationDate) {
+  public Tenantuserv3ExternalMetadata expirationDate(@javax.annotation.Nullable OffsetDateTime expirationDate) {
     this.expirationDate = expirationDate;
     return this;
   }
 
-   /**
+  /**
    * Get expirationDate
    * @return expirationDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getExpirationDate() {
     return expirationDate;
   }
 
-  public void setExpirationDate(OffsetDateTime expirationDate) {
+  public void setExpirationDate(@javax.annotation.Nullable OffsetDateTime expirationDate) {
     this.expirationDate = expirationDate;
   }
 
 
-  public Tenantuserv3ExternalMetadata instanceId(String instanceId) {
+  public Tenantuserv3ExternalMetadata instanceId(@javax.annotation.Nullable String instanceId) {
     this.instanceId = instanceId;
     return this;
   }
 
-   /**
+  /**
    * Instance id.
    * @return instanceId
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstanceId() {
     return instanceId;
   }
 
-  public void setInstanceId(String instanceId) {
+  public void setInstanceId(@javax.annotation.Nullable String instanceId) {
     this.instanceId = instanceId;
   }
 
 
-  public Tenantuserv3ExternalMetadata partNumber(String partNumber) {
+  public Tenantuserv3ExternalMetadata partNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
     return this;
   }
 
-   /**
+  /**
    * Part number.
    * @return partNumber
-  **/
+   */
   @javax.annotation.Nullable
   public String getPartNumber() {
     return partNumber;
   }
 
-  public void setPartNumber(String partNumber) {
+  public void setPartNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
   }
 
 
-  public Tenantuserv3ExternalMetadata planId(String planId) {
+  public Tenantuserv3ExternalMetadata planId(@javax.annotation.Nullable String planId) {
     this.planId = planId;
     return this;
   }
 
-   /**
+  /**
    * Plan id.
    * @return planId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPlanId() {
     return planId;
   }
 
-  public void setPlanId(String planId) {
+  public void setPlanId(@javax.annotation.Nullable String planId) {
     this.planId = planId;
   }
 
 
-  public Tenantuserv3ExternalMetadata serviceId(String serviceId) {
+  public Tenantuserv3ExternalMetadata serviceId(@javax.annotation.Nullable String serviceId) {
     this.serviceId = serviceId;
     return this;
   }
 
-   /**
+  /**
    * Service id.
    * @return serviceId
-  **/
+   */
   @javax.annotation.Nullable
   public String getServiceId() {
     return serviceId;
   }
 
-  public void setServiceId(String serviceId) {
+  public void setServiceId(@javax.annotation.Nullable String serviceId) {
     this.serviceId = serviceId;
   }
 
 
-  public Tenantuserv3ExternalMetadata subscriptionId(String subscriptionId) {
+  public Tenantuserv3ExternalMetadata subscriptionId(@javax.annotation.Nullable String subscriptionId) {
     this.subscriptionId = subscriptionId;
     return this;
   }
 
-   /**
+  /**
    * Subscription id.
    * @return subscriptionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSubscriptionId() {
     return subscriptionId;
   }
 
-  public void setSubscriptionId(String subscriptionId) {
+  public void setSubscriptionId(@javax.annotation.Nullable String subscriptionId) {
     this.subscriptionId = subscriptionId;
   }
 
@@ -308,30 +317,22 @@ public class Tenantuserv3ExternalMetadata {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("add_ons");
-    openapiFields.add("crn");
-    openapiFields.add("expiration_date");
-    openapiFields.add("instance_id");
-    openapiFields.add("part_number");
-    openapiFields.add("plan_id");
-    openapiFields.add("service_id");
-    openapiFields.add("subscription_id");
+    openapiFields = new HashSet<String>(Arrays.asList("add_ons", "crn", "expiration_date", "instance_id", "part_number", "plan_id", "service_id", "subscription_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3ExternalMetadata
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3ExternalMetadata
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3ExternalMetadata.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3ExternalMetadata is not found in the empty JSON string", Tenantuserv3ExternalMetadata.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3ExternalMetadata is not found in the empty JSON string", Tenantuserv3ExternalMetadata.openapiRequiredFields.toString()));
         }
       }
 
@@ -339,27 +340,27 @@ public class Tenantuserv3ExternalMetadata {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3ExternalMetadata.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3ExternalMetadata` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3ExternalMetadata` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("crn") != null && !jsonObj.get("crn").isJsonNull()) && !jsonObj.get("crn").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `crn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("crn").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `crn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("crn").toString()));
       }
       if ((jsonObj.get("instance_id") != null && !jsonObj.get("instance_id").isJsonNull()) && !jsonObj.get("instance_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `instance_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instance_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `instance_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instance_id").toString()));
       }
       if ((jsonObj.get("part_number") != null && !jsonObj.get("part_number").isJsonNull()) && !jsonObj.get("part_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
       }
       if ((jsonObj.get("plan_id") != null && !jsonObj.get("plan_id").isJsonNull()) && !jsonObj.get("plan_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plan_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plan_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plan_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plan_id").toString()));
       }
       if ((jsonObj.get("service_id") != null && !jsonObj.get("service_id").isJsonNull()) && !jsonObj.get("service_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `service_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `service_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_id").toString()));
       }
       if ((jsonObj.get("subscription_id") != null && !jsonObj.get("subscription_id").isJsonNull()) && !jsonObj.get("subscription_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `subscription_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `subscription_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_id").toString()));
       }
   }
 
@@ -392,22 +393,22 @@ public class Tenantuserv3ExternalMetadata {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3ExternalMetadata given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3ExternalMetadata
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3ExternalMetadata
-  */
+  /**
+   * Create an instance of Tenantuserv3ExternalMetadata given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3ExternalMetadata
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3ExternalMetadata
+   */
   public static Tenantuserv3ExternalMetadata fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3ExternalMetadata.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3ExternalMetadata to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3ExternalMetadata to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

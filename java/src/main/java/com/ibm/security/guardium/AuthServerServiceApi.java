@@ -85,13 +85,14 @@ public class AuthServerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authServerServiceCreateOauthClientCall(AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call authServerServiceCreateOauthClientCall(@javax.annotation.Nonnull AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -137,7 +138,7 @@ public class AuthServerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call authServerServiceCreateOauthClientValidateBeforeCall(AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call authServerServiceCreateOauthClientValidateBeforeCall(@javax.annotation.Nonnull AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'authserverCreateOauthClientRequest' is set
         if (authserverCreateOauthClientRequest == null) {
             throw new ApiException("Missing the required parameter 'authserverCreateOauthClientRequest' when calling authServerServiceCreateOauthClient(Async)");
@@ -154,13 +155,14 @@ public class AuthServerServiceApi {
      * @return AuthserverCreateOauthClientResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public AuthserverCreateOauthClientResponse authServerServiceCreateOauthClient(AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest) throws ApiException {
+    public AuthserverCreateOauthClientResponse authServerServiceCreateOauthClient(@javax.annotation.Nonnull AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest) throws ApiException {
         ApiResponse<AuthserverCreateOauthClientResponse> localVarResp = authServerServiceCreateOauthClientWithHttpInfo(authserverCreateOauthClientRequest);
         return localVarResp.getData();
     }
@@ -172,13 +174,14 @@ public class AuthServerServiceApi {
      * @return ApiResponse&lt;AuthserverCreateOauthClientResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AuthserverCreateOauthClientResponse> authServerServiceCreateOauthClientWithHttpInfo(AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest) throws ApiException {
+    public ApiResponse<AuthserverCreateOauthClientResponse> authServerServiceCreateOauthClientWithHttpInfo(@javax.annotation.Nonnull AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest) throws ApiException {
         okhttp3.Call localVarCall = authServerServiceCreateOauthClientValidateBeforeCall(authserverCreateOauthClientRequest, null);
         Type localVarReturnType = new TypeToken<AuthserverCreateOauthClientResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -192,13 +195,14 @@ public class AuthServerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authServerServiceCreateOauthClientAsync(AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest, final ApiCallback<AuthserverCreateOauthClientResponse> _callback) throws ApiException {
+    public okhttp3.Call authServerServiceCreateOauthClientAsync(@javax.annotation.Nonnull AuthserverCreateOauthClientRequest authserverCreateOauthClientRequest, final ApiCallback<AuthserverCreateOauthClientResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = authServerServiceCreateOauthClientValidateBeforeCall(authserverCreateOauthClientRequest, _callback);
         Type localVarReturnType = new TypeToken<AuthserverCreateOauthClientResponse>(){}.getType();
@@ -212,13 +216,14 @@ public class AuthServerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authServerServiceDeleteOauthClientCall(String clientId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call authServerServiceDeleteOauthClientCall(@javax.annotation.Nonnull String clientId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -264,7 +269,7 @@ public class AuthServerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call authServerServiceDeleteOauthClientValidateBeforeCall(String clientId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call authServerServiceDeleteOauthClientValidateBeforeCall(@javax.annotation.Nonnull String clientId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'clientId' is set
         if (clientId == null) {
             throw new ApiException("Missing the required parameter 'clientId' when calling authServerServiceDeleteOauthClient(Async)");
@@ -281,13 +286,14 @@ public class AuthServerServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object authServerServiceDeleteOauthClient(String clientId) throws ApiException {
+    public Object authServerServiceDeleteOauthClient(@javax.annotation.Nonnull String clientId) throws ApiException {
         ApiResponse<Object> localVarResp = authServerServiceDeleteOauthClientWithHttpInfo(clientId);
         return localVarResp.getData();
     }
@@ -299,13 +305,14 @@ public class AuthServerServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> authServerServiceDeleteOauthClientWithHttpInfo(String clientId) throws ApiException {
+    public ApiResponse<Object> authServerServiceDeleteOauthClientWithHttpInfo(@javax.annotation.Nonnull String clientId) throws ApiException {
         okhttp3.Call localVarCall = authServerServiceDeleteOauthClientValidateBeforeCall(clientId, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -319,13 +326,14 @@ public class AuthServerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authServerServiceDeleteOauthClientAsync(String clientId, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call authServerServiceDeleteOauthClientAsync(@javax.annotation.Nonnull String clientId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = authServerServiceDeleteOauthClientValidateBeforeCall(clientId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -338,7 +346,8 @@ public class AuthServerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -400,7 +409,8 @@ public class AuthServerServiceApi {
      * @return AuthserverGetAccessTokenResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -417,7 +427,8 @@ public class AuthServerServiceApi {
      * @return ApiResponse&lt;AuthserverGetAccessTokenResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -436,7 +447,8 @@ public class AuthServerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -456,13 +468,14 @@ public class AuthServerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authServerServiceGetOauthClientCall(String clientId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call authServerServiceGetOauthClientCall(@javax.annotation.Nonnull String clientId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -508,7 +521,7 @@ public class AuthServerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call authServerServiceGetOauthClientValidateBeforeCall(String clientId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call authServerServiceGetOauthClientValidateBeforeCall(@javax.annotation.Nonnull String clientId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'clientId' is set
         if (clientId == null) {
             throw new ApiException("Missing the required parameter 'clientId' when calling authServerServiceGetOauthClient(Async)");
@@ -525,13 +538,14 @@ public class AuthServerServiceApi {
      * @return AuthserverGetOauthClientResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public AuthserverGetOauthClientResponse authServerServiceGetOauthClient(String clientId) throws ApiException {
+    public AuthserverGetOauthClientResponse authServerServiceGetOauthClient(@javax.annotation.Nonnull String clientId) throws ApiException {
         ApiResponse<AuthserverGetOauthClientResponse> localVarResp = authServerServiceGetOauthClientWithHttpInfo(clientId);
         return localVarResp.getData();
     }
@@ -543,13 +557,14 @@ public class AuthServerServiceApi {
      * @return ApiResponse&lt;AuthserverGetOauthClientResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AuthserverGetOauthClientResponse> authServerServiceGetOauthClientWithHttpInfo(String clientId) throws ApiException {
+    public ApiResponse<AuthserverGetOauthClientResponse> authServerServiceGetOauthClientWithHttpInfo(@javax.annotation.Nonnull String clientId) throws ApiException {
         okhttp3.Call localVarCall = authServerServiceGetOauthClientValidateBeforeCall(clientId, null);
         Type localVarReturnType = new TypeToken<AuthserverGetOauthClientResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -563,13 +578,14 @@ public class AuthServerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authServerServiceGetOauthClientAsync(String clientId, final ApiCallback<AuthserverGetOauthClientResponse> _callback) throws ApiException {
+    public okhttp3.Call authServerServiceGetOauthClientAsync(@javax.annotation.Nonnull String clientId, final ApiCallback<AuthserverGetOauthClientResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = authServerServiceGetOauthClientValidateBeforeCall(clientId, _callback);
         Type localVarReturnType = new TypeToken<AuthserverGetOauthClientResponse>(){}.getType();
@@ -582,7 +598,8 @@ public class AuthServerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -644,7 +661,8 @@ public class AuthServerServiceApi {
      * @return AuthserverGetUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -661,7 +679,8 @@ public class AuthServerServiceApi {
      * @return ApiResponse&lt;AuthserverGetUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -680,7 +699,8 @@ public class AuthServerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -699,7 +719,8 @@ public class AuthServerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -761,7 +782,8 @@ public class AuthServerServiceApi {
      * @return AuthserverListOauthClientResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -778,7 +800,8 @@ public class AuthServerServiceApi {
      * @return ApiResponse&lt;AuthserverListOauthClientResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -797,7 +820,8 @@ public class AuthServerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>

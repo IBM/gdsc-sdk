@@ -75,16 +75,16 @@ class Riskanalyticscontrollerv3FindingDetails(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in counts (list)
         _items = []
         if self.counts:
-            for _item in self.counts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_counts in self.counts:
+                if _item_counts:
+                    _items.append(_item_counts.to_dict())
             _dict['counts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in finding_references (list)
         _items = []
         if self.finding_references:
-            for _item in self.finding_references:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_finding_references in self.finding_references:
+                if _item_finding_references:
+                    _items.append(_item_finding_references.to_dict())
             _dict['finding_references'] = _items
         return _dict
 

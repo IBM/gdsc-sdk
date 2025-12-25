@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,48 +41,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * TransposeRequest is the request type for the api call to get the SQls based on the constructIDs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3TransposeRequest {
   public static final String SERIALIZED_NAME_CONSTRUCT_IDS = "construct_ids";
   @SerializedName(SERIALIZED_NAME_CONSTRUCT_IDS)
+  @javax.annotation.Nullable
   private List<String> constructIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CONTRIBUTION_INDICATORS = "contribution_indicators";
   @SerializedName(SERIALIZED_NAME_CONTRIBUTION_INDICATORS)
+  @javax.annotation.Nullable
   private String contributionIndicators;
 
   public static final String SERIALIZED_NAME_CONTRIBUTION_POINTERS = "contribution_pointers";
   @SerializedName(SERIALIZED_NAME_CONTRIBUTION_POINTERS)
+  @javax.annotation.Nullable
   private List<Reportsv3ContributionPointersInfoObject> contributionPointers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
+  @javax.annotation.Nullable
   private String limit;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private String offset;
 
   public static final String SERIALIZED_NAME_SUMMARY = "summary";
   @SerializedName(SERIALIZED_NAME_SUMMARY)
+  @javax.annotation.Nullable
   private Boolean summary;
 
   public Reportsv3TransposeRequest() {
   }
 
-  public Reportsv3TransposeRequest constructIds(List<String> constructIds) {
+  public Reportsv3TransposeRequest constructIds(@javax.annotation.Nullable List<String> constructIds) {
     this.constructIds = constructIds;
     return this;
   }
@@ -94,40 +101,40 @@ public class Reportsv3TransposeRequest {
     return this;
   }
 
-   /**
+  /**
    * The list of construct IDs to get the SQLs for.
    * @return constructIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getConstructIds() {
     return constructIds;
   }
 
-  public void setConstructIds(List<String> constructIds) {
+  public void setConstructIds(@javax.annotation.Nullable List<String> constructIds) {
     this.constructIds = constructIds;
   }
 
 
-  public Reportsv3TransposeRequest contributionIndicators(String contributionIndicators) {
+  public Reportsv3TransposeRequest contributionIndicators(@javax.annotation.Nullable String contributionIndicators) {
     this.contributionIndicators = contributionIndicators;
     return this;
   }
 
-   /**
+  /**
    * The contribution indicators represented as a string.
    * @return contributionIndicators
-  **/
+   */
   @javax.annotation.Nullable
   public String getContributionIndicators() {
     return contributionIndicators;
   }
 
-  public void setContributionIndicators(String contributionIndicators) {
+  public void setContributionIndicators(@javax.annotation.Nullable String contributionIndicators) {
     this.contributionIndicators = contributionIndicators;
   }
 
 
-  public Reportsv3TransposeRequest contributionPointers(List<Reportsv3ContributionPointersInfoObject> contributionPointers) {
+  public Reportsv3TransposeRequest contributionPointers(@javax.annotation.Nullable List<Reportsv3ContributionPointersInfoObject> contributionPointers) {
     this.contributionPointers = contributionPointers;
     return this;
   }
@@ -140,73 +147,73 @@ public class Reportsv3TransposeRequest {
     return this;
   }
 
-   /**
+  /**
    * The list of contribution pointers.
    * @return contributionPointers
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ContributionPointersInfoObject> getContributionPointers() {
     return contributionPointers;
   }
 
-  public void setContributionPointers(List<Reportsv3ContributionPointersInfoObject> contributionPointers) {
+  public void setContributionPointers(@javax.annotation.Nullable List<Reportsv3ContributionPointersInfoObject> contributionPointers) {
     this.contributionPointers = contributionPointers;
   }
 
 
-  public Reportsv3TransposeRequest limit(String limit) {
+  public Reportsv3TransposeRequest limit(@javax.annotation.Nullable String limit) {
     this.limit = limit;
     return this;
   }
 
-   /**
+  /**
    * The max amount of rows to return for pagination. Required if report query uses offset and limit parameters.
    * @return limit
-  **/
+   */
   @javax.annotation.Nullable
   public String getLimit() {
     return limit;
   }
 
-  public void setLimit(String limit) {
+  public void setLimit(@javax.annotation.Nullable String limit) {
     this.limit = limit;
   }
 
 
-  public Reportsv3TransposeRequest offset(String offset) {
+  public Reportsv3TransposeRequest offset(@javax.annotation.Nullable String offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * The amount to offset the rows by for pagination. Required if report query uses offset and limit parameters.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public String getOffset() {
     return offset;
   }
 
-  public void setOffset(String offset) {
+  public void setOffset(@javax.annotation.Nullable String offset) {
     this.offset = offset;
   }
 
 
-  public Reportsv3TransposeRequest summary(Boolean summary) {
+  public Reportsv3TransposeRequest summary(@javax.annotation.Nullable Boolean summary) {
     this.summary = summary;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to run Summary query.
    * @return summary
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getSummary() {
     return summary;
   }
 
-  public void setSummary(Boolean summary) {
+  public void setSummary(@javax.annotation.Nullable Boolean summary) {
     this.summary = summary;
   }
 
@@ -265,28 +272,22 @@ public class Reportsv3TransposeRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("construct_ids");
-    openapiFields.add("contribution_indicators");
-    openapiFields.add("contribution_pointers");
-    openapiFields.add("limit");
-    openapiFields.add("offset");
-    openapiFields.add("summary");
+    openapiFields = new HashSet<String>(Arrays.asList("construct_ids", "contribution_indicators", "contribution_pointers", "limit", "offset", "summary"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3TransposeRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3TransposeRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3TransposeRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3TransposeRequest is not found in the empty JSON string", Reportsv3TransposeRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3TransposeRequest is not found in the empty JSON string", Reportsv3TransposeRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -294,23 +295,23 @@ public class Reportsv3TransposeRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3TransposeRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3TransposeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3TransposeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("construct_ids") != null && !jsonObj.get("construct_ids").isJsonNull() && !jsonObj.get("construct_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `construct_ids` to be an array in the JSON string but got `%s`", jsonObj.get("construct_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `construct_ids` to be an array in the JSON string but got `%s`", jsonObj.get("construct_ids").toString()));
       }
       if ((jsonObj.get("contribution_indicators") != null && !jsonObj.get("contribution_indicators").isJsonNull()) && !jsonObj.get("contribution_indicators").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `contribution_indicators` to be a primitive type in the JSON string but got `%s`", jsonObj.get("contribution_indicators").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `contribution_indicators` to be a primitive type in the JSON string but got `%s`", jsonObj.get("contribution_indicators").toString()));
       }
       if (jsonObj.get("contribution_pointers") != null && !jsonObj.get("contribution_pointers").isJsonNull()) {
         JsonArray jsonArraycontributionPointers = jsonObj.getAsJsonArray("contribution_pointers");
         if (jsonArraycontributionPointers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("contribution_pointers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `contribution_pointers` to be an array in the JSON string but got `%s`", jsonObj.get("contribution_pointers").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `contribution_pointers` to be an array in the JSON string but got `%s`", jsonObj.get("contribution_pointers").toString()));
           }
 
           // validate the optional field `contribution_pointers` (array)
@@ -320,10 +321,10 @@ public class Reportsv3TransposeRequest {
         }
       }
       if ((jsonObj.get("limit") != null && !jsonObj.get("limit").isJsonNull()) && !jsonObj.get("limit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `limit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("limit").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `limit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("limit").toString()));
       }
       if ((jsonObj.get("offset") != null && !jsonObj.get("offset").isJsonNull()) && !jsonObj.get("offset").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `offset` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offset").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `offset` to be a primitive type in the JSON string but got `%s`", jsonObj.get("offset").toString()));
       }
   }
 
@@ -356,22 +357,22 @@ public class Reportsv3TransposeRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3TransposeRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3TransposeRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3TransposeRequest
-  */
+  /**
+   * Create an instance of Reportsv3TransposeRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3TransposeRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3TransposeRequest
+   */
   public static Reportsv3TransposeRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3TransposeRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3TransposeRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3TransposeRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

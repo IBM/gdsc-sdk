@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Where to execute the block action - either against a Guardium system with a globalID, or a DBaaS instance with a configID.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3BlockWhere {
   public static final String SERIALIZED_NAME_CONFIG_ID = "config_id";
   @SerializedName(SERIALIZED_NAME_CONFIG_ID)
+  @javax.annotation.Nullable
   private String configId;
 
   public static final String SERIALIZED_NAME_GUARDIUM_ID = "guardium_id";
   @SerializedName(SERIALIZED_NAME_GUARDIUM_ID)
+  @javax.annotation.Nullable
   private String guardiumId;
 
   public Guardiumconnectorv3BlockWhere() {
   }
 
-  public Guardiumconnectorv3BlockWhere configId(String configId) {
+  public Guardiumconnectorv3BlockWhere configId(@javax.annotation.Nullable String configId) {
     this.configId = configId;
     return this;
   }
 
-   /**
+  /**
    * ID for AWS/Azure instance.
    * @return configId
-  **/
+   */
   @javax.annotation.Nullable
   public String getConfigId() {
     return configId;
   }
 
-  public void setConfigId(String configId) {
+  public void setConfigId(@javax.annotation.Nullable String configId) {
     this.configId = configId;
   }
 
 
-  public Guardiumconnectorv3BlockWhere guardiumId(String guardiumId) {
+  public Guardiumconnectorv3BlockWhere guardiumId(@javax.annotation.Nullable String guardiumId) {
     this.guardiumId = guardiumId;
     return this;
   }
 
-   /**
+  /**
    * ID for guardium instance.
    * @return guardiumId
-  **/
+   */
   @javax.annotation.Nullable
   public String getGuardiumId() {
     return guardiumId;
   }
 
-  public void setGuardiumId(String guardiumId) {
+  public void setGuardiumId(@javax.annotation.Nullable String guardiumId) {
     this.guardiumId = guardiumId;
   }
 
@@ -146,24 +149,22 @@ public class Guardiumconnectorv3BlockWhere {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("config_id");
-    openapiFields.add("guardium_id");
+    openapiFields = new HashSet<String>(Arrays.asList("config_id", "guardium_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3BlockWhere
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3BlockWhere
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3BlockWhere.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3BlockWhere is not found in the empty JSON string", Guardiumconnectorv3BlockWhere.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3BlockWhere is not found in the empty JSON string", Guardiumconnectorv3BlockWhere.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Guardiumconnectorv3BlockWhere {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3BlockWhere.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3BlockWhere` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3BlockWhere` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("config_id") != null && !jsonObj.get("config_id").isJsonNull()) && !jsonObj.get("config_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_id").toString()));
       }
       if ((jsonObj.get("guardium_id") != null && !jsonObj.get("guardium_id").isJsonNull()) && !jsonObj.get("guardium_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `guardium_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("guardium_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `guardium_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("guardium_id").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Guardiumconnectorv3BlockWhere {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3BlockWhere given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3BlockWhere
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3BlockWhere
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3BlockWhere given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3BlockWhere
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3BlockWhere
+   */
   public static Guardiumconnectorv3BlockWhere fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3BlockWhere.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3BlockWhere to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3BlockWhere to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,71 +41,78 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListDataResourcesFilterParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListDataResourcesFilterParameter {
   public static final String SERIALIZED_NAME_IS_REVIEWED = "isReviewed";
   @SerializedName(SERIALIZED_NAME_IS_REVIEWED)
+  @javax.annotation.Nullable
   private Boolean isReviewed;
 
   public static final String SERIALIZED_NAME_RESOURCE_OWNERS = "resourceOwners";
   @SerializedName(SERIALIZED_NAME_RESOURCE_OWNERS)
+  @javax.annotation.Nullable
   private List<String> resourceOwners = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RESOURCE_NAMES = "resourceNames";
   @SerializedName(SERIALIZED_NAME_RESOURCE_NAMES)
+  @javax.annotation.Nullable
   private List<String> resourceNames = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RESOURCE_TYPES = "resourceTypes";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPES)
+  @javax.annotation.Nullable
   private List<String> resourceTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVITY_TAGS = "sensitivityTags";
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_TAGS)
+  @javax.annotation.Nullable
   private List<String> sensitivityTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVITY_CATEGORIES = "sensitivityCategories";
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_CATEGORIES)
+  @javax.annotation.Nullable
   private List<SensitivityCategory> sensitivityCategories = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RESOURCE_PARTIAL_NAME = "resourcePartialName";
   @SerializedName(SERIALIZED_NAME_RESOURCE_PARTIAL_NAME)
+  @javax.annotation.Nullable
   private String resourcePartialName;
 
   public ListDataResourcesFilterParameter() {
   }
 
-  public ListDataResourcesFilterParameter isReviewed(Boolean isReviewed) {
+  public ListDataResourcesFilterParameter isReviewed(@javax.annotation.Nullable Boolean isReviewed) {
     this.isReviewed = isReviewed;
     return this;
   }
 
-   /**
+  /**
    * Get isReviewed
    * @return isReviewed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsReviewed() {
     return isReviewed;
   }
 
-  public void setIsReviewed(Boolean isReviewed) {
+  public void setIsReviewed(@javax.annotation.Nullable Boolean isReviewed) {
     this.isReviewed = isReviewed;
   }
 
 
-  public ListDataResourcesFilterParameter resourceOwners(List<String> resourceOwners) {
+  public ListDataResourcesFilterParameter resourceOwners(@javax.annotation.Nullable List<String> resourceOwners) {
     this.resourceOwners = resourceOwners;
     return this;
   }
@@ -117,21 +125,21 @@ public class ListDataResourcesFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get resourceOwners
    * @return resourceOwners
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getResourceOwners() {
     return resourceOwners;
   }
 
-  public void setResourceOwners(List<String> resourceOwners) {
+  public void setResourceOwners(@javax.annotation.Nullable List<String> resourceOwners) {
     this.resourceOwners = resourceOwners;
   }
 
 
-  public ListDataResourcesFilterParameter resourceNames(List<String> resourceNames) {
+  public ListDataResourcesFilterParameter resourceNames(@javax.annotation.Nullable List<String> resourceNames) {
     this.resourceNames = resourceNames;
     return this;
   }
@@ -144,21 +152,21 @@ public class ListDataResourcesFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get resourceNames
    * @return resourceNames
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getResourceNames() {
     return resourceNames;
   }
 
-  public void setResourceNames(List<String> resourceNames) {
+  public void setResourceNames(@javax.annotation.Nullable List<String> resourceNames) {
     this.resourceNames = resourceNames;
   }
 
 
-  public ListDataResourcesFilterParameter resourceTypes(List<String> resourceTypes) {
+  public ListDataResourcesFilterParameter resourceTypes(@javax.annotation.Nullable List<String> resourceTypes) {
     this.resourceTypes = resourceTypes;
     return this;
   }
@@ -171,21 +179,21 @@ public class ListDataResourcesFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get resourceTypes
    * @return resourceTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getResourceTypes() {
     return resourceTypes;
   }
 
-  public void setResourceTypes(List<String> resourceTypes) {
+  public void setResourceTypes(@javax.annotation.Nullable List<String> resourceTypes) {
     this.resourceTypes = resourceTypes;
   }
 
 
-  public ListDataResourcesFilterParameter sensitivityTags(List<String> sensitivityTags) {
+  public ListDataResourcesFilterParameter sensitivityTags(@javax.annotation.Nullable List<String> sensitivityTags) {
     this.sensitivityTags = sensitivityTags;
     return this;
   }
@@ -198,21 +206,21 @@ public class ListDataResourcesFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivityTags
    * @return sensitivityTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSensitivityTags() {
     return sensitivityTags;
   }
 
-  public void setSensitivityTags(List<String> sensitivityTags) {
+  public void setSensitivityTags(@javax.annotation.Nullable List<String> sensitivityTags) {
     this.sensitivityTags = sensitivityTags;
   }
 
 
-  public ListDataResourcesFilterParameter sensitivityCategories(List<SensitivityCategory> sensitivityCategories) {
+  public ListDataResourcesFilterParameter sensitivityCategories(@javax.annotation.Nullable List<SensitivityCategory> sensitivityCategories) {
     this.sensitivityCategories = sensitivityCategories;
     return this;
   }
@@ -225,35 +233,35 @@ public class ListDataResourcesFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivityCategories
    * @return sensitivityCategories
-  **/
+   */
   @javax.annotation.Nullable
   public List<SensitivityCategory> getSensitivityCategories() {
     return sensitivityCategories;
   }
 
-  public void setSensitivityCategories(List<SensitivityCategory> sensitivityCategories) {
+  public void setSensitivityCategories(@javax.annotation.Nullable List<SensitivityCategory> sensitivityCategories) {
     this.sensitivityCategories = sensitivityCategories;
   }
 
 
-  public ListDataResourcesFilterParameter resourcePartialName(String resourcePartialName) {
+  public ListDataResourcesFilterParameter resourcePartialName(@javax.annotation.Nullable String resourcePartialName) {
     this.resourcePartialName = resourcePartialName;
     return this;
   }
 
-   /**
+  /**
    * Get resourcePartialName
    * @return resourcePartialName
-  **/
+   */
   @javax.annotation.Nullable
   public String getResourcePartialName() {
     return resourcePartialName;
   }
 
-  public void setResourcePartialName(String resourcePartialName) {
+  public void setResourcePartialName(@javax.annotation.Nullable String resourcePartialName) {
     this.resourcePartialName = resourcePartialName;
   }
 
@@ -314,29 +322,22 @@ public class ListDataResourcesFilterParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("isReviewed");
-    openapiFields.add("resourceOwners");
-    openapiFields.add("resourceNames");
-    openapiFields.add("resourceTypes");
-    openapiFields.add("sensitivityTags");
-    openapiFields.add("sensitivityCategories");
-    openapiFields.add("resourcePartialName");
+    openapiFields = new HashSet<String>(Arrays.asList("isReviewed", "resourceOwners", "resourceNames", "resourceTypes", "sensitivityTags", "sensitivityCategories", "resourcePartialName"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListDataResourcesFilterParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListDataResourcesFilterParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListDataResourcesFilterParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListDataResourcesFilterParameter is not found in the empty JSON string", ListDataResourcesFilterParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListDataResourcesFilterParameter is not found in the empty JSON string", ListDataResourcesFilterParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -344,32 +345,32 @@ public class ListDataResourcesFilterParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListDataResourcesFilterParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListDataResourcesFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListDataResourcesFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("resourceOwners") != null && !jsonObj.get("resourceOwners").isJsonNull() && !jsonObj.get("resourceOwners").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resourceOwners` to be an array in the JSON string but got `%s`", jsonObj.get("resourceOwners").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resourceOwners` to be an array in the JSON string but got `%s`", jsonObj.get("resourceOwners").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("resourceNames") != null && !jsonObj.get("resourceNames").isJsonNull() && !jsonObj.get("resourceNames").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resourceNames` to be an array in the JSON string but got `%s`", jsonObj.get("resourceNames").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resourceNames` to be an array in the JSON string but got `%s`", jsonObj.get("resourceNames").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("resourceTypes") != null && !jsonObj.get("resourceTypes").isJsonNull() && !jsonObj.get("resourceTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resourceTypes` to be an array in the JSON string but got `%s`", jsonObj.get("resourceTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resourceTypes` to be an array in the JSON string but got `%s`", jsonObj.get("resourceTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sensitivityTags") != null && !jsonObj.get("sensitivityTags").isJsonNull() && !jsonObj.get("sensitivityTags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivityTags` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityTags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivityTags` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityTags").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sensitivityCategories") != null && !jsonObj.get("sensitivityCategories").isJsonNull() && !jsonObj.get("sensitivityCategories").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivityCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityCategories").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivityCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityCategories").toString()));
       }
       if ((jsonObj.get("resourcePartialName") != null && !jsonObj.get("resourcePartialName").isJsonNull()) && !jsonObj.get("resourcePartialName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resourcePartialName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourcePartialName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resourcePartialName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourcePartialName").toString()));
       }
   }
 
@@ -402,22 +403,22 @@ public class ListDataResourcesFilterParameter {
     }
   }
 
- /**
-  * Create an instance of ListDataResourcesFilterParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListDataResourcesFilterParameter
-  * @throws IOException if the JSON string is invalid with respect to ListDataResourcesFilterParameter
-  */
+  /**
+   * Create an instance of ListDataResourcesFilterParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListDataResourcesFilterParameter
+   * @throws IOException if the JSON string is invalid with respect to ListDataResourcesFilterParameter
+   */
   public static ListDataResourcesFilterParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListDataResourcesFilterParameter.class);
   }
 
- /**
-  * Convert an instance of ListDataResourcesFilterParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListDataResourcesFilterParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

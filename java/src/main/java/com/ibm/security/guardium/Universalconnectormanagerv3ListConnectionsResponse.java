@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Structure for a Summary of [Universal connector] Connections.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3ListConnectionsResponse {
   public static final String SERIALIZED_NAME_CONNECTIONS = "connections";
   @SerializedName(SERIALIZED_NAME_CONNECTIONS)
+  @javax.annotation.Nullable
   private List<Universalconnectormanagerv3ConnectionSummary> connections = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus status;
 
   public Universalconnectormanagerv3ListConnectionsResponse() {
   }
 
-  public Universalconnectormanagerv3ListConnectionsResponse connections(List<Universalconnectormanagerv3ConnectionSummary> connections) {
+  public Universalconnectormanagerv3ListConnectionsResponse connections(@javax.annotation.Nullable List<Universalconnectormanagerv3ConnectionSummary> connections) {
     this.connections = connections;
     return this;
   }
@@ -79,35 +82,35 @@ public class Universalconnectormanagerv3ListConnectionsResponse {
     return this;
   }
 
-   /**
+  /**
    * Summaries of Universal connector Connection cofigurations, along with their status.
    * @return connections
-  **/
+   */
   @javax.annotation.Nullable
   public List<Universalconnectormanagerv3ConnectionSummary> getConnections() {
     return connections;
   }
 
-  public void setConnections(List<Universalconnectormanagerv3ConnectionSummary> connections) {
+  public void setConnections(@javax.annotation.Nullable List<Universalconnectormanagerv3ConnectionSummary> connections) {
     this.connections = connections;
   }
 
 
-  public Universalconnectormanagerv3ListConnectionsResponse status(RpcStatus status) {
+  public Universalconnectormanagerv3ListConnectionsResponse status(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(RpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
   }
 
@@ -158,24 +161,22 @@ public class Universalconnectormanagerv3ListConnectionsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("connections");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("connections", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ListConnectionsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ListConnectionsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3ListConnectionsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3ListConnectionsResponse is not found in the empty JSON string", Universalconnectormanagerv3ListConnectionsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3ListConnectionsResponse is not found in the empty JSON string", Universalconnectormanagerv3ListConnectionsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Universalconnectormanagerv3ListConnectionsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3ListConnectionsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ListConnectionsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ListConnectionsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Universalconnectormanagerv3ListConnectionsResponse {
         if (jsonArrayconnections != null) {
           // ensure the json data is an array
           if (!jsonObj.get("connections").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `connections` to be an array in the JSON string but got `%s`", jsonObj.get("connections").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connections` to be an array in the JSON string but got `%s`", jsonObj.get("connections").toString()));
           }
 
           // validate the optional field `connections` (array)
@@ -236,22 +237,22 @@ public class Universalconnectormanagerv3ListConnectionsResponse {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3ListConnectionsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3ListConnectionsResponse
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ListConnectionsResponse
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3ListConnectionsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3ListConnectionsResponse
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ListConnectionsResponse
+   */
   public static Universalconnectormanagerv3ListConnectionsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3ListConnectionsResponse.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3ListConnectionsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3ListConnectionsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

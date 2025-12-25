@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,235 +43,245 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ActualFlowPath
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ActualFlowPath {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
   private String id;
 
   public static final String SERIALIZED_NAME_FLOW_ID = "flowId";
   @SerializedName(SERIALIZED_NAME_FLOW_ID)
+  @javax.annotation.Nonnull
   private String flowId;
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
+  @javax.annotation.Nonnull
   private FlowNode source;
 
   public static final String SERIALIZED_NAME_DESTINATION = "destination";
   @SerializedName(SERIALIZED_NAME_DESTINATION)
+  @javax.annotation.Nonnull
   private FlowNode destination;
 
   public static final String SERIALIZED_NAME_ACCESS_TYPE = "accessType";
   @SerializedName(SERIALIZED_NAME_ACCESS_TYPE)
+  @javax.annotation.Nonnull
   private AccessType accessType;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
+  @javax.annotation.Nullable
   private String username;
 
   public static final String SERIALIZED_NAME_TRUSTEE_ID = "trusteeId";
   @SerializedName(SERIALIZED_NAME_TRUSTEE_ID)
+  @javax.annotation.Nullable
   private String trusteeId;
 
   public static final String SERIALIZED_NAME_LAST_SEEN = "lastSeen";
   @SerializedName(SERIALIZED_NAME_LAST_SEEN)
+  @javax.annotation.Nonnull
   private BigDecimal lastSeen;
 
   public static final String SERIALIZED_NAME_FIRST_SEEN = "firstSeen";
   @SerializedName(SERIALIZED_NAME_FIRST_SEEN)
+  @javax.annotation.Nonnull
   private BigDecimal firstSeen;
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
+  @javax.annotation.Nonnull
   private List<FlowNode> path = new ArrayList<>();
 
   public ActualFlowPath() {
   }
 
-  public ActualFlowPath id(String id) {
+  public ActualFlowPath id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
 
-  public ActualFlowPath flowId(String flowId) {
+  public ActualFlowPath flowId(@javax.annotation.Nonnull String flowId) {
     this.flowId = flowId;
     return this;
   }
 
-   /**
+  /**
    * Get flowId
    * @return flowId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getFlowId() {
     return flowId;
   }
 
-  public void setFlowId(String flowId) {
+  public void setFlowId(@javax.annotation.Nonnull String flowId) {
     this.flowId = flowId;
   }
 
 
-  public ActualFlowPath source(FlowNode source) {
+  public ActualFlowPath source(@javax.annotation.Nonnull FlowNode source) {
     this.source = source;
     return this;
   }
 
-   /**
+  /**
    * Get source
    * @return source
-  **/
+   */
   @javax.annotation.Nonnull
   public FlowNode getSource() {
     return source;
   }
 
-  public void setSource(FlowNode source) {
+  public void setSource(@javax.annotation.Nonnull FlowNode source) {
     this.source = source;
   }
 
 
-  public ActualFlowPath destination(FlowNode destination) {
+  public ActualFlowPath destination(@javax.annotation.Nonnull FlowNode destination) {
     this.destination = destination;
     return this;
   }
 
-   /**
+  /**
    * Get destination
    * @return destination
-  **/
+   */
   @javax.annotation.Nonnull
   public FlowNode getDestination() {
     return destination;
   }
 
-  public void setDestination(FlowNode destination) {
+  public void setDestination(@javax.annotation.Nonnull FlowNode destination) {
     this.destination = destination;
   }
 
 
-  public ActualFlowPath accessType(AccessType accessType) {
+  public ActualFlowPath accessType(@javax.annotation.Nonnull AccessType accessType) {
     this.accessType = accessType;
     return this;
   }
 
-   /**
+  /**
    * Get accessType
    * @return accessType
-  **/
+   */
   @javax.annotation.Nonnull
   public AccessType getAccessType() {
     return accessType;
   }
 
-  public void setAccessType(AccessType accessType) {
+  public void setAccessType(@javax.annotation.Nonnull AccessType accessType) {
     this.accessType = accessType;
   }
 
 
-  public ActualFlowPath username(String username) {
+  public ActualFlowPath username(@javax.annotation.Nullable String username) {
     this.username = username;
     return this;
   }
 
-   /**
+  /**
    * Get username
    * @return username
-  **/
+   */
   @javax.annotation.Nullable
   public String getUsername() {
     return username;
   }
 
-  public void setUsername(String username) {
+  public void setUsername(@javax.annotation.Nullable String username) {
     this.username = username;
   }
 
 
-  public ActualFlowPath trusteeId(String trusteeId) {
+  public ActualFlowPath trusteeId(@javax.annotation.Nullable String trusteeId) {
     this.trusteeId = trusteeId;
     return this;
   }
 
-   /**
+  /**
    * Get trusteeId
    * @return trusteeId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTrusteeId() {
     return trusteeId;
   }
 
-  public void setTrusteeId(String trusteeId) {
+  public void setTrusteeId(@javax.annotation.Nullable String trusteeId) {
     this.trusteeId = trusteeId;
   }
 
 
-  public ActualFlowPath lastSeen(BigDecimal lastSeen) {
+  public ActualFlowPath lastSeen(@javax.annotation.Nonnull BigDecimal lastSeen) {
     this.lastSeen = lastSeen;
     return this;
   }
 
-   /**
+  /**
    * Epoch timestamp of the last time this path was seen
    * @return lastSeen
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getLastSeen() {
     return lastSeen;
   }
 
-  public void setLastSeen(BigDecimal lastSeen) {
+  public void setLastSeen(@javax.annotation.Nonnull BigDecimal lastSeen) {
     this.lastSeen = lastSeen;
   }
 
 
-  public ActualFlowPath firstSeen(BigDecimal firstSeen) {
+  public ActualFlowPath firstSeen(@javax.annotation.Nonnull BigDecimal firstSeen) {
     this.firstSeen = firstSeen;
     return this;
   }
 
-   /**
+  /**
    * Epoch timestamp of the first time this flow was seen
    * @return firstSeen
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getFirstSeen() {
     return firstSeen;
   }
 
-  public void setFirstSeen(BigDecimal firstSeen) {
+  public void setFirstSeen(@javax.annotation.Nonnull BigDecimal firstSeen) {
     this.firstSeen = firstSeen;
   }
 
 
-  public ActualFlowPath path(List<FlowNode> path) {
+  public ActualFlowPath path(@javax.annotation.Nonnull List<FlowNode> path) {
     this.path = path;
     return this;
   }
@@ -283,16 +294,16 @@ public class ActualFlowPath {
     return this;
   }
 
-   /**
+  /**
    * Get path
    * @return path
-  **/
+   */
   @javax.annotation.Nonnull
   public List<FlowNode> getPath() {
     return path;
   }
 
-  public void setPath(List<FlowNode> path) {
+  public void setPath(@javax.annotation.Nonnull List<FlowNode> path) {
     this.path = path;
   }
 
@@ -359,40 +370,22 @@ public class ActualFlowPath {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("flowId");
-    openapiFields.add("source");
-    openapiFields.add("destination");
-    openapiFields.add("accessType");
-    openapiFields.add("username");
-    openapiFields.add("trusteeId");
-    openapiFields.add("lastSeen");
-    openapiFields.add("firstSeen");
-    openapiFields.add("path");
+    openapiFields = new HashSet<String>(Arrays.asList("id", "flowId", "source", "destination", "accessType", "username", "trusteeId", "lastSeen", "firstSeen", "path"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("flowId");
-    openapiRequiredFields.add("source");
-    openapiRequiredFields.add("destination");
-    openapiRequiredFields.add("accessType");
-    openapiRequiredFields.add("lastSeen");
-    openapiRequiredFields.add("firstSeen");
-    openapiRequiredFields.add("path");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("id", "flowId", "source", "destination", "accessType", "lastSeen", "firstSeen", "path"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ActualFlowPath
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ActualFlowPath
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActualFlowPath.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ActualFlowPath is not found in the empty JSON string", ActualFlowPath.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ActualFlowPath is not found in the empty JSON string", ActualFlowPath.openapiRequiredFields.toString()));
         }
       }
 
@@ -400,22 +393,22 @@ public class ActualFlowPath {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ActualFlowPath.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ActualFlowPath` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ActualFlowPath` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ActualFlowPath.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if (!jsonObj.get("flowId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `flowId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("flowId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `flowId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("flowId").toString()));
       }
       // validate the required field `source`
       FlowNode.validateJsonElement(jsonObj.get("source"));
@@ -424,14 +417,14 @@ public class ActualFlowPath {
       // validate the required field `accessType`
       AccessType.validateJsonElement(jsonObj.get("accessType"));
       if ((jsonObj.get("username") != null && !jsonObj.get("username").isJsonNull()) && !jsonObj.get("username").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
       }
       if ((jsonObj.get("trusteeId") != null && !jsonObj.get("trusteeId").isJsonNull()) && !jsonObj.get("trusteeId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `trusteeId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("trusteeId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `trusteeId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("trusteeId").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("path").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `path` to be an array in the JSON string but got `%s`", jsonObj.get("path").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `path` to be an array in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
 
       JsonArray jsonArraypath = jsonObj.getAsJsonArray("path");
@@ -470,22 +463,22 @@ public class ActualFlowPath {
     }
   }
 
- /**
-  * Create an instance of ActualFlowPath given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ActualFlowPath
-  * @throws IOException if the JSON string is invalid with respect to ActualFlowPath
-  */
+  /**
+   * Create an instance of ActualFlowPath given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ActualFlowPath
+   * @throws IOException if the JSON string is invalid with respect to ActualFlowPath
+   */
   public static ActualFlowPath fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ActualFlowPath.class);
   }
 
- /**
-  * Convert an instance of ActualFlowPath to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ActualFlowPath to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

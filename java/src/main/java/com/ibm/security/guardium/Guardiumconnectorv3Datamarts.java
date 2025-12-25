@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3Datamarts
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3Datamarts {
   public static final String SERIALIZED_NAME_DM = "dm";
   @SerializedName(SERIALIZED_NAME_DM)
+  @javax.annotation.Nullable
   private String dm;
 
   public static final String SERIALIZED_NAME_DM_CURRENT_TYPE = "dm_current_type";
   @SerializedName(SERIALIZED_NAME_DM_CURRENT_TYPE)
+  @javax.annotation.Nullable
   private String dmCurrentType;
 
   public static final String SERIALIZED_NAME_DM_DEFAULT_TYPE = "dm_default_type";
   @SerializedName(SERIALIZED_NAME_DM_DEFAULT_TYPE)
+  @javax.annotation.Nullable
   private String dmDefaultType;
 
   public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
   @SerializedName(SERIALIZED_NAME_SCHEDULE)
+  @javax.annotation.Nullable
   private String schedule;
 
   public static final String SERIALIZED_NAME_UNIT_TYPES = "unit_types";
   @SerializedName(SERIALIZED_NAME_UNIT_TYPES)
+  @javax.annotation.Nullable
   private String unitTypes;
 
   public Guardiumconnectorv3Datamarts() {
   }
 
-  public Guardiumconnectorv3Datamarts dm(String dm) {
+  public Guardiumconnectorv3Datamarts dm(@javax.annotation.Nullable String dm) {
     this.dm = dm;
     return this;
   }
 
-   /**
+  /**
    * Get dm
    * @return dm
-  **/
+   */
   @javax.annotation.Nullable
   public String getDm() {
     return dm;
   }
 
-  public void setDm(String dm) {
+  public void setDm(@javax.annotation.Nullable String dm) {
     this.dm = dm;
   }
 
 
-  public Guardiumconnectorv3Datamarts dmCurrentType(String dmCurrentType) {
+  public Guardiumconnectorv3Datamarts dmCurrentType(@javax.annotation.Nullable String dmCurrentType) {
     this.dmCurrentType = dmCurrentType;
     return this;
   }
 
-   /**
+  /**
    * Get dmCurrentType
    * @return dmCurrentType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDmCurrentType() {
     return dmCurrentType;
   }
 
-  public void setDmCurrentType(String dmCurrentType) {
+  public void setDmCurrentType(@javax.annotation.Nullable String dmCurrentType) {
     this.dmCurrentType = dmCurrentType;
   }
 
 
-  public Guardiumconnectorv3Datamarts dmDefaultType(String dmDefaultType) {
+  public Guardiumconnectorv3Datamarts dmDefaultType(@javax.annotation.Nullable String dmDefaultType) {
     this.dmDefaultType = dmDefaultType;
     return this;
   }
 
-   /**
+  /**
    * Get dmDefaultType
    * @return dmDefaultType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDmDefaultType() {
     return dmDefaultType;
   }
 
-  public void setDmDefaultType(String dmDefaultType) {
+  public void setDmDefaultType(@javax.annotation.Nullable String dmDefaultType) {
     this.dmDefaultType = dmDefaultType;
   }
 
 
-  public Guardiumconnectorv3Datamarts schedule(String schedule) {
+  public Guardiumconnectorv3Datamarts schedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
     return this;
   }
 
-   /**
+  /**
    * Get schedule
    * @return schedule
-  **/
+   */
   @javax.annotation.Nullable
   public String getSchedule() {
     return schedule;
   }
 
-  public void setSchedule(String schedule) {
+  public void setSchedule(@javax.annotation.Nullable String schedule) {
     this.schedule = schedule;
   }
 
 
-  public Guardiumconnectorv3Datamarts unitTypes(String unitTypes) {
+  public Guardiumconnectorv3Datamarts unitTypes(@javax.annotation.Nullable String unitTypes) {
     this.unitTypes = unitTypes;
     return this;
   }
 
-   /**
+  /**
    * Get unitTypes
    * @return unitTypes
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnitTypes() {
     return unitTypes;
   }
 
-  public void setUnitTypes(String unitTypes) {
+  public void setUnitTypes(@javax.annotation.Nullable String unitTypes) {
     this.unitTypes = unitTypes;
   }
 
@@ -221,27 +227,22 @@ public class Guardiumconnectorv3Datamarts {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dm");
-    openapiFields.add("dm_current_type");
-    openapiFields.add("dm_default_type");
-    openapiFields.add("schedule");
-    openapiFields.add("unit_types");
+    openapiFields = new HashSet<String>(Arrays.asList("dm", "dm_current_type", "dm_default_type", "schedule", "unit_types"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Datamarts
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Datamarts
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3Datamarts.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3Datamarts is not found in the empty JSON string", Guardiumconnectorv3Datamarts.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3Datamarts is not found in the empty JSON string", Guardiumconnectorv3Datamarts.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Guardiumconnectorv3Datamarts {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3Datamarts.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Datamarts` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Datamarts` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dm") != null && !jsonObj.get("dm").isJsonNull()) && !jsonObj.get("dm").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm").toString()));
       }
       if ((jsonObj.get("dm_current_type") != null && !jsonObj.get("dm_current_type").isJsonNull()) && !jsonObj.get("dm_current_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dm_current_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_current_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dm_current_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_current_type").toString()));
       }
       if ((jsonObj.get("dm_default_type") != null && !jsonObj.get("dm_default_type").isJsonNull()) && !jsonObj.get("dm_default_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dm_default_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_default_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dm_default_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_default_type").toString()));
       }
       if ((jsonObj.get("schedule") != null && !jsonObj.get("schedule").isJsonNull()) && !jsonObj.get("schedule").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schedule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule").toString()));
       }
       if ((jsonObj.get("unit_types") != null && !jsonObj.get("unit_types").isJsonNull()) && !jsonObj.get("unit_types").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `unit_types` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_types").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unit_types` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_types").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Guardiumconnectorv3Datamarts {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3Datamarts given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3Datamarts
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Datamarts
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3Datamarts given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3Datamarts
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Datamarts
+   */
   public static Guardiumconnectorv3Datamarts fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3Datamarts.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3Datamarts to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3Datamarts to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

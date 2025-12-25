@@ -28,10 +28,10 @@ class Reportsv3ReportAggFilterCondition(BaseModel):
     """
     ReportAggFilterCondition represents a report aggregate filter condition.
     """ # noqa: E501
-    aggregation_type: Optional[Reportsv3AggregationType] = None
+    aggregation_type: Optional[Reportsv3AggregationType] = Reportsv3AggregationType.UNDEFINED_AGG_TYPE
     header_id: Optional[StrictStr] = None
     header_name: Optional[StrictStr] = None
-    operator_type: Optional[Reportsv3OperatorType] = None
+    operator_type: Optional[Reportsv3OperatorType] = Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE
     table_name: Optional[StrictStr] = None
     value: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["aggregation_type", "header_id", "header_name", "operator_type", "table_name", "value"]
@@ -87,10 +87,10 @@ class Reportsv3ReportAggFilterCondition(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "aggregation_type": obj.get("aggregation_type"),
+            "aggregation_type": obj.get("aggregation_type") if obj.get("aggregation_type") is not None else Reportsv3AggregationType.UNDEFINED_AGG_TYPE,
             "header_id": obj.get("header_id"),
             "header_name": obj.get("header_name"),
-            "operator_type": obj.get("operator_type"),
+            "operator_type": obj.get("operator_type") if obj.get("operator_type") is not None else Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE,
             "table_name": obj.get("table_name"),
             "value": obj.get("value")
         })

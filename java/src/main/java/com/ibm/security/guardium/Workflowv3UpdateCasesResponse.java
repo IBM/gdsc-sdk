@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Returns the ids of the cases updated.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3UpdateCasesResponse {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private GooglerpcStatus status;
 
   public static final String SERIALIZED_NAME_UPDATED = "updated";
   @SerializedName(SERIALIZED_NAME_UPDATED)
+  @javax.annotation.Nullable
   private String updated;
 
   public Workflowv3UpdateCasesResponse() {
   }
 
-  public Workflowv3UpdateCasesResponse status(GooglerpcStatus status) {
+  public Workflowv3UpdateCasesResponse status(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public GooglerpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(GooglerpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
   }
 
 
-  public Workflowv3UpdateCasesResponse updated(String updated) {
+  public Workflowv3UpdateCasesResponse updated(@javax.annotation.Nullable String updated) {
     this.updated = updated;
     return this;
   }
 
-   /**
+  /**
    * Number of cases that were updated.
    * @return updated
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdated() {
     return updated;
   }
 
-  public void setUpdated(String updated) {
+  public void setUpdated(@javax.annotation.Nullable String updated) {
     this.updated = updated;
   }
 
@@ -147,24 +150,22 @@ public class Workflowv3UpdateCasesResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("updated");
+    openapiFields = new HashSet<String>(Arrays.asList("status", "updated"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3UpdateCasesResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3UpdateCasesResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3UpdateCasesResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3UpdateCasesResponse is not found in the empty JSON string", Workflowv3UpdateCasesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3UpdateCasesResponse is not found in the empty JSON string", Workflowv3UpdateCasesResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Workflowv3UpdateCasesResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3UpdateCasesResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3UpdateCasesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3UpdateCasesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -181,7 +182,7 @@ public class Workflowv3UpdateCasesResponse {
         GooglerpcStatus.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("updated") != null && !jsonObj.get("updated").isJsonNull()) && !jsonObj.get("updated").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `updated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `updated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("updated").toString()));
       }
   }
 
@@ -214,22 +215,22 @@ public class Workflowv3UpdateCasesResponse {
     }
   }
 
- /**
-  * Create an instance of Workflowv3UpdateCasesResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3UpdateCasesResponse
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3UpdateCasesResponse
-  */
+  /**
+   * Create an instance of Workflowv3UpdateCasesResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3UpdateCasesResponse
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3UpdateCasesResponse
+   */
   public static Workflowv3UpdateCasesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3UpdateCasesResponse.class);
   }
 
- /**
-  * Convert an instance of Workflowv3UpdateCasesResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3UpdateCasesResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

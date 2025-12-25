@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Collector configuration.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3CollectorConfig {
   public static final String SERIALIZED_NAME_DATAMART_START_DATE_COLLECTOR = "datamart_start_date_collector";
   @SerializedName(SERIALIZED_NAME_DATAMART_START_DATE_COLLECTOR)
+  @javax.annotation.Nullable
   private String datamartStartDateCollector;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
+  @javax.annotation.Nullable
   private String host;
 
   public static final String SERIALIZED_NAME_UNIT_TYPE = "unit_type";
   @SerializedName(SERIALIZED_NAME_UNIT_TYPE)
+  @javax.annotation.Nullable
   private String unitType;
 
   public Guardiumconnectorv3CollectorConfig() {
   }
 
-  public Guardiumconnectorv3CollectorConfig datamartStartDateCollector(String datamartStartDateCollector) {
+  public Guardiumconnectorv3CollectorConfig datamartStartDateCollector(@javax.annotation.Nullable String datamartStartDateCollector) {
     this.datamartStartDateCollector = datamartStartDateCollector;
     return this;
   }
 
-   /**
+  /**
    * Datamart start date.
    * @return datamartStartDateCollector
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatamartStartDateCollector() {
     return datamartStartDateCollector;
   }
 
-  public void setDatamartStartDateCollector(String datamartStartDateCollector) {
+  public void setDatamartStartDateCollector(@javax.annotation.Nullable String datamartStartDateCollector) {
     this.datamartStartDateCollector = datamartStartDateCollector;
   }
 
 
-  public Guardiumconnectorv3CollectorConfig host(String host) {
+  public Guardiumconnectorv3CollectorConfig host(@javax.annotation.Nullable String host) {
     this.host = host;
     return this;
   }
 
-   /**
+  /**
    * Hostname of collector.
    * @return host
-  **/
+   */
   @javax.annotation.Nullable
   public String getHost() {
     return host;
   }
 
-  public void setHost(String host) {
+  public void setHost(@javax.annotation.Nullable String host) {
     this.host = host;
   }
 
 
-  public Guardiumconnectorv3CollectorConfig unitType(String unitType) {
+  public Guardiumconnectorv3CollectorConfig unitType(@javax.annotation.Nullable String unitType) {
     this.unitType = unitType;
     return this;
   }
 
-   /**
+  /**
    * Unit type.
    * @return unitType
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnitType() {
     return unitType;
   }
 
-  public void setUnitType(String unitType) {
+  public void setUnitType(@javax.annotation.Nullable String unitType) {
     this.unitType = unitType;
   }
 
@@ -171,25 +175,22 @@ public class Guardiumconnectorv3CollectorConfig {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("datamart_start_date_collector");
-    openapiFields.add("host");
-    openapiFields.add("unit_type");
+    openapiFields = new HashSet<String>(Arrays.asList("datamart_start_date_collector", "host", "unit_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3CollectorConfig
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3CollectorConfig
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3CollectorConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3CollectorConfig is not found in the empty JSON string", Guardiumconnectorv3CollectorConfig.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3CollectorConfig is not found in the empty JSON string", Guardiumconnectorv3CollectorConfig.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Guardiumconnectorv3CollectorConfig {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3CollectorConfig.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3CollectorConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3CollectorConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("datamart_start_date_collector") != null && !jsonObj.get("datamart_start_date_collector").isJsonNull()) && !jsonObj.get("datamart_start_date_collector").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datamart_start_date_collector` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datamart_start_date_collector").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datamart_start_date_collector` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datamart_start_date_collector").toString()));
       }
       if ((jsonObj.get("host") != null && !jsonObj.get("host").isJsonNull()) && !jsonObj.get("host").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host").toString()));
       }
       if ((jsonObj.get("unit_type") != null && !jsonObj.get("unit_type").isJsonNull()) && !jsonObj.get("unit_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `unit_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unit_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_type").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Guardiumconnectorv3CollectorConfig {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3CollectorConfig given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3CollectorConfig
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3CollectorConfig
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3CollectorConfig given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3CollectorConfig
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3CollectorConfig
+   */
   public static Guardiumconnectorv3CollectorConfig fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3CollectorConfig.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3CollectorConfig to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3CollectorConfig to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generator version: 7.6.0
+# ! Generator version: 7.16.0
 # !
 # !
 # ! Installation:
@@ -299,7 +299,9 @@ case $state in
     _values "Operations" \
             "assetsServiceAssetIngestion[AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.]" \
             "assetsServiceAssetIngestionManualTrigger[AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.]" \
+            "assetsServiceCancelCSVImport[CancelCSVImport - Cancel the import of CSV and update the status in import log table]" \
             "assetsServiceClonePolicy[ClonePolicy - Clone a policy.]" \
+            "assetsServiceCompareCSVToExistingAssets[CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.]" \
             "assetsServiceCreateUpdatePolicy[CreateUpdatePolicy - Create/update new Policy.]" \
             "assetsServiceDeleteFilterTemplateForAssets[DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.]" \
             "assetsServiceDeletePolicies[DeletePolicies - Delete Policy returns response code and message.]" \
@@ -312,6 +314,7 @@ case $state in
             "assetsServiceGetAssetTopology[GetAssetTopology- Get list of topology for a parent asset.]" \
             "assetsServiceGetFilterTemplateForAssets[GetFilterTemplateForAssets - Get list of filters query templates for manage assets.]" \
             "assetsServiceGetFiltersForAssets[GetFiltersForAssets - Get a list of filters category and sub category with all data.]" \
+            "assetsServiceImportCSV[ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.]" \
             "assetsServiceListPolicy[ListPolicy - List all policies.]" \
             "assetsServiceListRule[ListRule - List all rules for a policy.]" \
             "assetsServiceListTagDomains[ListTagDomains - Get Tag categories by request parameters .]" \
@@ -346,11 +349,13 @@ Description: List all registered Oauth client.]"             "addAnalyzedRegion[
             "generateAtlassianJiraAuthUrl[Generate a JIRA authentication URL]" \
             "generateAzureAuthUrl[Generate azure authorization url]" \
             "generateOffice365AuthUrl[Generate a Microsoft 365 consent URL]" \
+            "generateSalesforceAuthUrl[Generate a Salesforce consent URL]" \
             "generateSlackAuthUrl[Generate a Slack authentication URL]" \
             "generateSnowflakeAuthUrl[Validate and Generate a Snowflake OAuth URL]" \
             "getAnalyzedRegionStatus[Get the status of analyzer installation for a region]" \
             "getAzureAdminConsentStatus[Get Azure admin consent status]" \
             "getCloudAccountInstallationStatus[Get the installation status of a cloud account]" \
+            "getDatabaseMetadata[Get the metadata details of snowflake database.]" \
             "getRefreshTokenExpiry[Get Snowflake Refresh Token Expiry date]" \
             "listLinkedAccounts[List cloud accounts connected to DSPM]" \
             "removeAccounts[Post cloud account ID connections to be removed]" \
@@ -359,6 +364,7 @@ Description: List all registered Oauth client.]"             "addAnalyzedRegion[
             "snowflakeIntegrationScript[Generate Snowflake Integration Script]" \
             "submitGoogleWorkspaceAdminEmail[Submit email for service account authorization]" \
             "submitOffice365TenantInfo[Submit Microsoft 365 customer information]" \
+            "submitSalesforceAuthCode[Submit Salesforce customer information]" \
             "submitSlackAuthCode[Submit a Slack authentication code]" \
             "submitSnowflakeAuthCode[Submit Snowflake oAuth code]"             "complianceAcceleratorCreateWorkspace[Summary: Create workspace
 Description: Create a workspace.]" \
@@ -423,7 +429,11 @@ Description: Update plugin.]" \
             "connectionsServiceUpdateSettings[Summary: Update settings
 Description: Update Settings.]" \
             "connectionsServiceValidateAwsConnection[Summary: Validate an AWS connection.
-Description: Validate an AWS connection.]"             "dashboardsServiceCreateDashboard[Summary: Create dashboard
+Description: Validate an AWS connection.]" \
+            "connectionsServiceValidateAzureConnection[Summary: Validate an Azure connection.
+Description: Validate an Azure connection.]" \
+            "connectionsServiceValidateGcpConnection[Summary: Validate a GCP connection.
+Description: Validate a GCP connection.]"             "dashboardsServiceCreateDashboard[Summary: Create dashboard
 Description: Create a unique dashboard.]" \
             "dashboardsServiceDeleteDashboard[Summary: Delete dashboard
 Description: Delete a unique dashboard.]" \
@@ -491,12 +501,7 @@ Description: Purge data.]" \
             "ecosystemServiceTestIntegration[Summary: Test integration
 Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible
 a test message is sent to the integration to ensure it is functional.
-Currently this API only supports API_IMPORT type integrations]"             "edgeSchedulerServiceGetEdgeQueryStatus[Summary: Get edge query status
-Description: Get the status of a queued edge query]" \
-            "edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery[Summary: Monitor for a pending edge query request
-Description: monitor edge query pending request]" \
-            "edgeSchedulerServiceScheduleEdgeQuery[Summary: Schedule an edge query 
-Description: Schedule an edge query via data warehouse queue]"             "featureFlagsServiceDeleteFeatureFlagOverrides[Summary: Delete feature Flag overrides
+Currently this API only supports API_IMPORT type integrations]"             "featureFlagsServiceDeleteFeatureFlagOverrides[Summary: Delete feature Flag overrides
 Description: Delete feature Flag overrides from database.]" \
             "featureFlagsServiceGetFeatureFlagOverrides[Summary: Get feature Flag overrides
 Description: Get feature Flag overrides by Feature Flag Name.]" \
@@ -620,24 +625,38 @@ Description: Get information about the top GDP collectors]" \
             "healthCollectorStoreHealthInfo[Summary: Store health info
 Description: Store health info from GDP into GI. (This API is called from GDP only)]"             "jumpboxServiceAuthorize[Summary: Authorize
 Description: Authenticate a user and return a JWT.]" \
+            "jumpboxServiceDeleteAccount[Summary: Delete account
+Description: Delete an account.]" \
             "jumpboxServiceDeleteTenant[Summary: Delete tenant
 Description: Delete a tenant.]" \
             "jumpboxServiceDeleteUser[Summary: Delete user
 Description: Delete the user.]" \
+            "jumpboxServiceGetAccount[Summary: Get account
+Description: Get an account.]" \
+            "jumpboxServiceGetAccounts[Summary: Get accounts
+Description: Get all accounts based on UID.]" \
             "jumpboxServiceGetTenant[Summary: Get tenant
 Description: Get a tenant.]" \
             "jumpboxServiceGetTenants[Summary: Get tenants
 Description: Get all tenant base on UID.]" \
             "jumpboxServiceGetUsers[Summary: Get users
 Description: Get all users base on a tenantID.]" \
+            "jumpboxServicePostAccount[Summary: Post account
+Description: Create an Account.]" \
             "jumpboxServicePostTenants[Summary: Post tenants
 Description: Create a tenant.]" \
             "jumpboxServicePostUsers[Summary: Post users
 Description: Create users.]" \
+            "jumpboxServiceResumeAccount[Summary: Resume account
+Description: Resume an account.]" \
             "jumpboxServiceSearchUsers[Summary: Search users
 Description: Search for all users matching the provided string.]" \
+            "jumpboxServiceSuspendAccount[Summary: Suspend Account
+Description: Suspend an account]" \
             "jumpboxServiceTestUser[Summary: Test user
 Description: Test a user lookup to a given LDAP.]" \
+            "jumpboxServiceUpdateAccount[Summary: Update Account
+Description: Updates an account.]" \
             "jumpboxServiceUpdateTenant[Summary: Update tenant
 Description: Update a tenant.]" \
             "jumpboxServiceUpdateUsers[Summary: Update users
@@ -696,6 +715,10 @@ Description: Return a list of rules inside the policy.]" \
 Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.]" \
             "policyBuilderGetPolicySyncList[Summary: Get list of synced polices
 Description: Returns the list and status of sync entries]" \
+            "policyBuilderGetPolicyVersion[Summary: Get a particular version of the policy
+Description: Returns a particular version of policy and response code and message]" \
+            "policyBuilderGetPolicyVersionsInfo[Summary: Gets policy versions info
+Description: Returns information of all versions of a policy and response code and message]" \
             "policyBuilderGetReceivers[Summary: Get receivers
 Description: Get all the receivers associated with actions.]" \
             "policyBuilderGetRuleMetadata[Summary: Get rule metadata
@@ -713,7 +736,9 @@ Description: Get policy groups.]" \
             "policyBuilderRuleValidation[Summary: Rule validation
 Description: Validate a rule parameters and actions.]" \
             "policyBuilderStorePoliciesGdp[Summary: Store policies Gdp
-Description: Store policies.  (This API is called from GDP only)]"             "qSDataLoaderQSfileValidator[QSfileValidator - validate the files before insert happend .]" \
+Description: Store policies.  (This API is called from GDP only)]" \
+            "policyBuilderUpdatePolicy[Summary: Update policy
+Description: Update Policy returns response code and message.]"             "qSDataLoaderQSfileValidator[QSfileValidator - validate the files before insert happend .]" \
             "qSDataLoaderUploadSyntheticDataLoader[UploadSyntheticDataLoader - Insert data into Db after read from .sql file .]"             "qSDataManagerGetMasterData[Summary: master data for all entities
 Description: Retrieves All Dimension and Fact tables data.]" \
             "qSDataManagerGetPluginData[Summary: Plugins Details
@@ -759,12 +784,24 @@ Description: Create custom chart based on provided properties.]" \
 Description: Create custom VEGA chart template.]" \
             "reportsServiceCreateChartv2[Summary: Create chart v2
 Description: Create custom VEGA chart based on provided properties.]" \
+            "reportsServiceCreateControl[Summary: Create Control.
+Description: Create a unique Control.]" \
             "reportsServiceCreateFieldsByCategory[Summary - Create fields by category
 Description: Cteate category fields based on provided properties.]" \
+            "reportsServiceCreateGrade[Summary: Create Grade.
+Description: Create a unique Grade.]" \
             "reportsServiceCreateJoin[Summary: Create a join
 Description: Create a custom report join]" \
+            "reportsServiceCreateMeasure[Summary: Create measure.
+Description: Create a unique measure.]" \
+            "reportsServiceCreateMetric[Summary: Create metric.
+Description: Create a unique metric.]" \
+            "reportsServiceCreateProgram[Summary: Create Program.
+Description: Create a unique Program.]" \
             "reportsServiceCreateReport[Summary: Create report
 Description: Create custom report based on provided properties.]" \
+            "reportsServiceCreateRequirement[Summary: Create Requirement.
+Description: Create a unique Requirement.]" \
             "reportsServiceCreateVariant[Summary: Create a variant
 Description: Create a variant for reports]" \
             "reportsServiceDeleteCategory[Summary: Delete a category
@@ -775,12 +812,24 @@ Description: Delete a custom chart.]" \
 Description: Delete a custom VEGA chart template.]" \
             "reportsServiceDeleteChartv2[Summary: Delete chart v2
 Description: Delete a custom VEGA chart.]" \
+            "reportsServiceDeleteControl[Summary: Delete Control
+Description: Delete a Control.]" \
             "reportsServiceDeleteFieldsByCategory[Summary - Delete fields by category
 Description: Delete category fields based on provided properties.]" \
+            "reportsServiceDeleteGrade[Summary: Delete Grade
+Description: Delete a Grade.]" \
             "reportsServiceDeleteJoin[Summary: Delete a join
 Description: Delete a custom join]" \
+            "reportsServiceDeleteMeasure[Summary: Delete measure
+Description: Delete a measure.]" \
+            "reportsServiceDeleteMetric[Summary: Delete metric
+Description: Delete a metric.]" \
+            "reportsServiceDeleteProgram[Summary: Delete Program
+Description: Delete a Program.]" \
             "reportsServiceDeleteReport[Summary: Delete report
 Description: Delete a custom report.]" \
+            "reportsServiceDeleteRequirement[Summary: Delete Requirement
+Description: Delete a Requirement.]" \
             "reportsServiceDeleteVariant[Summary: Delete a variant
 Description: Delete a variant]" \
             "reportsServiceGetCategories[Summary:  Get all available report categories.
@@ -791,12 +840,22 @@ Description: Get a custom chart based on provided report id.]" \
 Description: Get a custom VEGA chart based on provided report id.]" \
             "reportsServiceGetChartTemplatesv2[Summary: Get chart template v2
 Description: Get all custom VEGA chart templates.]" \
+            "reportsServiceGetControls[Summary: Get controls
+Description: Get a list of controls with all data.]" \
             "reportsServiceGetFieldsByCategories[Summary: Get fields by categories
 Description: Get all category related fields or all possible fields based on a list of categories.]" \
             "reportsServiceGetFieldsByCategory[Summary: Get fields by category
 Description: Get all category related fields or all possible fields.]" \
+            "reportsServiceGetGrades[Summary: Get grades
+Description: Get a list of grades with all data.]" \
             "reportsServiceGetJoins[Summary: Get all joins
 Description: Get all custom joins.]" \
+            "reportsServiceGetMeasures[Summary: Get measures
+Description: Get a list of measures with all data.]" \
+            "reportsServiceGetMetrics[Summary: Get metrics
+Description: Get a list of metrics with all data.]" \
+            "reportsServiceGetPrograms[Summary: Get controls
+Description: Get a list of controls with all data.]" \
             "reportsServiceGetQueryByReportDefinition[Summary: Get query by report definition
 Description: Get query by report definition.]" \
             "reportsServiceGetQueryByReportID[Summary: Get query by report ID
@@ -815,6 +874,8 @@ Description: Get reports list.]" \
 Description: Get the reports that use a join and the headers that are imported by the reports using the join]" \
             "reportsServiceGetReportsTags[Summary: Get reports tags
 Description: Get all report distinct tags.]" \
+            "reportsServiceGetRequirements[Summary: Get requirements
+Description: Get a list of requirements with all data.]" \
             "reportsServiceGetVariant[Summary: Get a variant
 Description: Get a given variant]" \
             "reportsServiceGetVariants[Summary: Get all variants
@@ -823,6 +884,8 @@ Description: Get all variants in reports]" \
 Description: Update a custom chart with partial information.]" \
             "reportsServicePartialReportUpdate[Summary: Partial report update
 Description: Update a custom report with partial information.]" \
+            "reportsServiceRunGrades[Summary: Refresh metrics via grades.
+Description: Refresh metrics via grades.]" \
             "reportsServiceRunVariantOperation[Summary: Run a variant
 Description: Run the operations in a variant]" \
             "reportsServiceTranspose[Summary: Transpose
@@ -831,47 +894,24 @@ Description: Return the corresponding full sql data.]" \
 Description: Update a custom chart.]" \
             "reportsServiceUpdateChartv2[Summary: Update chart v2
 Description: Update a custom VEGA chart.]" \
+            "reportsServiceUpdateControl[Summary: Update Control.
+Description: Update a Control.]" \
+            "reportsServiceUpdateGrade[Summary: Update Grade.
+Description: Update a Grade.]" \
             "reportsServiceUpdateJoin[Summary: Update a join
 Description: Update a custom join]" \
+            "reportsServiceUpdateMeasure[Summary: Update measure.
+Description: Update a measure.]" \
+            "reportsServiceUpdateMetric[Summary: Update metric.
+Description: Update a metric.]" \
+            "reportsServiceUpdateProgram[Summary: Update Program.
+Description: Update a Program.]" \
             "reportsServiceUpdateReport[Summary: Update report
 Description: Update a custom report.]" \
+            "reportsServiceUpdateRequirement[Summary: Update Requirement.
+Description: Update a Requirement.]" \
             "reportsServiceUpdateVariantOverride[Summary: Update a variant
-Description: Update a variant with a custom override]"             "resourceControllerK8ServiceCreateController[CreateController - Add a new controller.]" \
-            "resourceControllerK8ServiceCreateHeartBeat[CreateHeartBeat - Create a heartbeat for the controller.]" \
-            "resourceControllerK8ServiceCreateHeartBeatEx[CreateHeartBeatEx - Create a heartbeat for the controller with extended information.]" \
-            "resourceControllerK8ServiceCreateJob[////////////////////////////////////////////////////////////////
-Interface to the controllers and apps api in the App-Manager microservice
-CreateJob - Create a job definition. Files and secrets contained within will also be created.]" \
-            "resourceControllerK8ServiceCreateJobExecution[CreateJobExecution - Create a job execution.]" \
-            "resourceControllerK8ServiceCreateKeypair[CreateKeypair - Create a new keypair for the controller.]" \
-            "resourceControllerK8ServiceDeleteController[DeleteController - Delete a controller.]" \
-            "resourceControllerK8ServiceDeleteEdgeTenant[DeleteEdgeTenant - deletes an edge tenant providing edge tenant id]" \
-            "resourceControllerK8ServiceDeleteEdgeTenantRequest[DeleteEdgeTenantRequest to deletes gi and tnt CR on edge]" \
-            "resourceControllerK8ServiceDeleteJob[DeleteJob - Delete a job.]" \
-            "resourceControllerK8ServiceDownloadControllerLogs[DownloadControllerLogs - Download the controller logs for a running controller.]" \
-            "resourceControllerK8ServiceGetControllerApps[GetControllerApps - Get the apps for the given controller.]" \
-            "resourceControllerK8ServiceGetControllerCommands[GetControllerCommands - Get the commands for the controller to execute.]" \
-            "resourceControllerK8ServiceGetControllerJobs[GetControllerJobs - Get the jobs for the controller to execute.]" \
-            "resourceControllerK8ServiceGetControllerStatus[GetControllerStatus - Get the status for the given controller.]" \
-            "resourceControllerK8ServiceGetControllers[GetControllers - Get the controllers for the given tenant.]" \
-            "resourceControllerK8ServiceGetControllersWithStatus[GetControllersWithStatus - Get the controllers for the given tenant with computed status.]" \
-            "resourceControllerK8ServiceGetJob[GetJob - Get the job.]" \
-            "resourceControllerK8ServiceGetJobExecution[GetJobExecution - Get a job execution.]" \
-            "resourceControllerK8ServiceGetJobExecutions[GetJobExecutions - Get the job executions.]" \
-            "resourceControllerK8ServiceGetJobStatus[GetJobStatus - Get the job's status.]" \
-            "resourceControllerK8ServiceGetTenantApp[GetTenantApp - Get a specific app for the given tenant.]" \
-            "resourceControllerK8ServiceGetTenantApps[GetTenantApps - Get the apps for the given tenant.]" \
-            "resourceControllerK8ServiceGetTenantJobs[GetTenantJobs - Get jobs for the given tenant.]" \
-            "resourceControllerK8ServiceGetVersion[GetVersion - Get the system version information for the service.]" \
-            "resourceControllerK8ServiceInstallEdgeTenantRequest[InstallEdgeTenantRequest to Create gi and tnt CRs on edge]" \
-            "resourceControllerK8ServiceQueryControllerLogs[QueryControllerLogs - Query for the controller logs for a running controller.]" \
-            "resourceControllerK8ServiceUpdateCommand[UpdateCommand - Update the command.]" \
-            "resourceControllerK8ServiceUpdateController[UpdateController - Update an existing controller.]" \
-            "resourceControllerK8ServiceUpdateControllerStatus[UpdateControllerStatus - Updates the status for the given controller.]" \
-            "resourceControllerK8ServiceUpdateEdgeTenantRequest[UpdateEdgeTenantRequest to update gi and tnt CRs on edge]" \
-            "resourceControllerK8ServiceUpdateJob[UpdateJob - Update a job.]" \
-            "resourceControllerK8ServiceUpdateJobExecution[UpdateJobExecution - Update a job execution.]" \
-            "resourceControllerK8ServiceUpdateJobStatus[UpdateJobStatus - Updates the status for the given Job.]"             "riskAnalyticsControllerEnableDisableRiskEventFeedback[Summary: Enable disable risk rvent feedback
+Description: Update a variant with a custom override]"             "riskAnalyticsControllerEnableDisableRiskEventFeedback[Summary: Enable disable risk rvent feedback
 Description: Enable or disable the collect feedback process.]" \
             "riskAnalyticsControllerEnableDisableRiskEventProcess[Summary: Enable disable risk event process
 Description: Enable or disable the risk event process.]" \
@@ -948,32 +988,7 @@ Description: Service to verify Azure storage connection.]" \
             "streamsServiceGetAWSRegions[Summary: Get AWS regions
 Description: Service to get AWS regions.]" \
             "streamsServiceListAWSStreams[Summary: List AWS streams
-Description: Service to list AWS Kinesis streams.]"             "templatesServiceCreateIntegration[Summary: Create integration
-Description: Create a set of new templates for a new integration.]" \
-            "templatesServiceCreateTemplate[Summary: Create template
-Description: Create a new template.]" \
-            "templatesServiceDeleteIntegration[Summary: Delete integration
-Description: Delete all templates associated with an integration.]" \
-            "templatesServiceDeleteTemplate[Summary: Delete template
-Description: Delete a specific template.]" \
-            "templatesServiceGetOriginDefaultContent[Summary: Get origin default content
-Description: Return the default content for a template with a specified origin and MIME type.]" \
-            "templatesServiceGetOriginFields[Summary: Get origin fields
-Description: Return the fields available with a specific origin.]" \
-            "templatesServiceGetTemplate[Summary: Get template
-Description: Return a specific template by id.]" \
-            "templatesServiceGetTemplates[Summary: Get templates
-Description: Return all templates based on supplied filters.]" \
-            "templatesServiceGetTemplatesForEdge[Summary: Get templates for edge
-Description: Return all templates based on supplied filters.]" \
-            "templatesServiceTestTemplate[Summary: Test template
-Description: Analyze a specified template to ensure will function correctly when utilized.]" \
-            "templatesServiceTransformTemplate[Summary: Transform template
-Description: Process the specified template and returns the Title and Content based on supplied data.]" \
-            "templatesServiceTransformTemplateJSON[Summary: Transform template JSON
-Description: Process the specified template and returns the Title and Content based on supplied json data string.]" \
-            "templatesServiceUpdateTemplate[Summary: Update template
-Description: Update a single template.]"             "tenantuserCreateAPIKey[Summary: Create API key
+Description: Service to list AWS Kinesis streams.]"             "tenantuserCreateAPIKey[Summary: Create API key
 Description: Create API Key.]" \
             "tenantuserDeleteAPIKey[Summary: Delete API key
 Description: Delete APIKey Document based on the document id.]" \
@@ -1023,7 +1038,19 @@ Description: List a summary of Universal Connector configured connections (AKA d
             "universalConnectorManagerPluginsList[Summary: Plugins list
 Description: List of all universal connector plugins.]" \
             "universalConnectorManagerUploadPlugin[Summary: Upload plugin
-Description: Upload a plugin-package for Universal Connector.]"             "workflowCreateCase[Summary: Create case
+Description: Upload a plugin-package for Universal Connector.]"             "vulnerabilityManagementServiceCreateVulnerability[Summary: Create a vulnerability
+Description: Create a vulnerability based on request]" \
+            "vulnerabilityManagementServiceGetFiltersForVulnerabilities[Summary: Get filters for vulnerabilities
+Description: Get a list of filters category and sub category with all data.]" \
+            "vulnerabilityManagementServiceGetVulnerabilities[Summary: Get vulnerabilities
+Description: Returns a list of vulnerabilities.]" \
+            "vulnerabilityManagementServiceGetVulnerabilitiesStats[Summary: Get vulnerabilities stats
+Description: Get various vulnerabilities stats.]" \
+            "vulnerabilityManagementServiceGetVulnerability[Summary: Get vulnerability
+Description: Returns a vulnerability based on vulnerability.]" \
+            "vulnerabilityManagementServiceUpdateVulnerabilities[Updates comments, assignee, and status for vulnerabilities]" \
+            "vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger[Summary: Vulnerability ingest manual trigger
+Description: Manual trigger for Scheduled Vulnerability Ingestion.]"             "workflowCreateCase[Summary: Create case
 Description: Create single case.]" \
             "workflowCreateProductEntity[Summary: Create product entity
 Description: Create single product entity.]" \
@@ -1082,11 +1109,31 @@ Description: Update multiple tasks for the same parent in one request.]" \
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      assetsServiceCancelCSVImport)
+        local -a _op_arguments
+        _op_arguments=(
+          "csv_id=:[PATH] unique id of the csv"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       assetsServiceClonePolicy)
         local -a _op_arguments
         _op_arguments=(
           "policy_id=:[PATH] Policy id that needs to be cloned."
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      assetsServiceCompareCSVToExistingAssets)
+        local -a _op_arguments
+        _op_arguments=(
+          "csv_id=:[PATH] unique id of the csv"
+          "rows_required=:[QUERY] which rows are required, existing or new or all."
+"page_number=:[QUERY] page number."
+"page_size=:[QUERY] page size."
+"template_type=:[QUERY] Asset CSV template type.
+
+ - DATABASE: Template for database"
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       assetsServiceCreateUpdatePolicy)
@@ -1172,7 +1219,7 @@ Description: Update multiple tasks for the same parent in one request.]" \
 "ip=:[QUERY] Asset IP."
 "host=:[QUERY] Asset Host."
 "database=:[QUERY] Database Name."
-"asset_entity_type=:[QUERY] asset ntity type."
+"asset_entity_type=:[QUERY] asset entity type."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1193,6 +1240,13 @@ Description: Update multiple tasks for the same parent in one request.]" \
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      assetsServiceImportCSV)
+        local -a _op_arguments
+        _op_arguments=(
+          "csv_id=:[PATH] unique id of the csv"
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       assetsServiceListPolicy)
@@ -1373,6 +1427,12 @@ Description: Update multiple tasks for the same parent in one request.]" \
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      generateSalesforceAuthUrl)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       generateSlackAuthUrl)
         local -a _op_arguments
         _op_arguments=(
@@ -1405,6 +1465,12 @@ Description: Update multiple tasks for the same parent in one request.]" \
           "cloudProvider=:[PATH] The cloud provider of the cloud account"
 "cloudAccountId=:[PATH] The cloud account identifier"
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getDatabaseMetadata)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getRefreshTokenExpiry)
@@ -1455,6 +1521,12 @@ Description: Update multiple tasks for the same parent in one request.]" \
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       submitOffice365TenantInfo)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      submitSalesforceAuthCode)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1681,6 +1753,18 @@ Description: Update multiple tasks for the same parent in one request.]" \
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       connectionsServiceValidateAwsConnection)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      connectionsServiceValidateAzureConnection)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      connectionsServiceValidateGcpConnection)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2119,28 +2203,6 @@ Only returns records that include the specified names."
         local -a _op_arguments
         _op_arguments=(
                               )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      edgeSchedulerServiceGetEdgeQueryStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "edge_id=:[PATH] the id of the edge"
-          "edge_result_report_id=:[QUERY] the id of the UC report being queried for."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      edgeSchedulerServiceMonitoringPendingRequestForEdgeQuery)
-        local -a _op_arguments
-        _op_arguments=(
-                    "client_id=:[QUERY] edge client id to monitor edge query requests for."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      edgeSchedulerServiceScheduleEdgeQuery)
-        local -a _op_arguments
-        _op_arguments=(
-          "edge_id=:[PATH] the id of the edge"
-                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       featureFlagsServiceDeleteFeatureFlagOverrides)
@@ -2620,6 +2682,13 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      jumpboxServiceDeleteAccount)
+        local -a _op_arguments
+        _op_arguments=(
+          "account_id=:[PATH] Account id."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       jumpboxServiceDeleteTenant)
         local -a _op_arguments
         _op_arguments=(
@@ -2636,6 +2705,29 @@ Only returns records that include the specified names."
         _op_arguments=(
           "user_id=:[PATH] The user id."
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      jumpboxServiceGetAccount)
+        local -a _op_arguments
+        _op_arguments=(
+          "account_id=:[PATH] Account id."
+          "include_inactive=true:[QUERY] Include inactive."
+          "include_inactive=false:[QUERY] Include inactive."
+"include_not_ready=true:[QUERY] Include tenants that are not ready(are in state of being created or deleted)."
+          "include_not_ready=false:[QUERY] Include tenants that are not ready(are in state of being created or deleted)."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      jumpboxServiceGetAccounts)
+        local -a _op_arguments
+        _op_arguments=(
+                    "uid=:[QUERY] Email."
+"external_id=:[QUERY] External id."
+"include_inactive=true:[QUERY] Include inactive."
+          "include_inactive=false:[QUERY] Include inactive."
+"include_not_ready=true:[QUERY] Include tenants that are not ready(are in state of being created or deleted)."
+          "include_not_ready=false:[QUERY] Include tenants that are not ready(are in state of being created or deleted)."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       jumpboxServiceGetTenant)
@@ -2668,6 +2760,12 @@ Only returns records that include the specified names."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      jumpboxServicePostAccount)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       jumpboxServicePostTenants)
         local -a _op_arguments
         _op_arguments=(
@@ -2680,16 +2778,37 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      jumpboxServiceResumeAccount)
+        local -a _op_arguments
+        _op_arguments=(
+          "account_id=:[PATH] account_id represents the user&#39;s account ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       jumpboxServiceSearchUsers)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      jumpboxServiceSuspendAccount)
+        local -a _op_arguments
+        _op_arguments=(
+          "account_id=:[PATH] account_id represents the user&#39;s account ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       jumpboxServiceTestUser)
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      jumpboxServiceUpdateAccount)
+        local -a _op_arguments
+        _op_arguments=(
+          "account_id=:[PATH] Account id."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       jumpboxServiceUpdateTenant)
@@ -2891,6 +3010,21 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      policyBuilderGetPolicyVersion)
+        local -a _op_arguments
+        _op_arguments=(
+          "policy_id=:[PATH] Policy id of the requested policy"
+"version=:[PATH] Requested version number of the policy"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      policyBuilderGetPolicyVersionsInfo)
+        local -a _op_arguments
+        _op_arguments=(
+          "policy_id=:[PATH] Policy id of the requested policy"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       policyBuilderGetReceivers)
         local -a _op_arguments
         _op_arguments=(
@@ -2952,6 +3086,12 @@ Only returns records that include the specified names."
         _op_arguments=(
           "central_manager_id=:[PATH] ID of central manager."
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      policyBuilderUpdatePolicy)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       qSDataLoaderQSfileValidator)
@@ -3142,7 +3282,19 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceCreateControl)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceCreateFieldsByCategory)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceCreateGrade)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -3154,7 +3306,31 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceCreateMeasure)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceCreateMetric)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceCreateProgram)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceCreateReport)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceCreateRequirement)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -3195,12 +3371,26 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceDeleteControl)
+        local -a _op_arguments
+        _op_arguments=(
+          "control_id=:[PATH] The ID of the control to delete"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceDeleteFieldsByCategory)
         local -a _op_arguments
         _op_arguments=(
                     "header_ids=:[QUERY] Header ids."
 "table_name=:[QUERY] table name."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceDeleteGrade)
+        local -a _op_arguments
+        _op_arguments=(
+          "grade_id=:[PATH] The id of the grade to be deleted."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       reportsServiceDeleteJoin)
@@ -3210,10 +3400,38 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceDeleteMeasure)
+        local -a _op_arguments
+        _op_arguments=(
+          "measure_id=:[PATH] The id of the measure to be deleted."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceDeleteMetric)
+        local -a _op_arguments
+        _op_arguments=(
+          "metric_id=:[PATH] The id of the metric to be deleted."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceDeleteProgram)
+        local -a _op_arguments
+        _op_arguments=(
+          "program_id=:[PATH] The ID of the program to delete"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceDeleteReport)
         local -a _op_arguments
         _op_arguments=(
           "report_id=:[PATH] The id of the Report to be deleted."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceDeleteRequirement)
+        local -a _op_arguments
+        _op_arguments=(
+          "requirement_id=:[PATH] The requirement to delete&#39;s ID"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -3253,6 +3471,12 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceGetControls)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceGetFieldsByCategories)
         local -a _op_arguments
         _op_arguments=(
@@ -3269,11 +3493,35 @@ Only returns records that include the specified names."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceGetGrades)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceGetJoins)
         local -a _op_arguments
         _op_arguments=(
                     "category_id=:[QUERY] Category ID (Optional)."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceGetMeasures)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceGetMetrics)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceGetPrograms)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       reportsServiceGetQueryByReportDefinition)
@@ -3338,6 +3586,12 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceGetRequirements)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceGetVariant)
         local -a _op_arguments
         _op_arguments=(
@@ -3363,6 +3617,12 @@ Only returns records that include the specified names."
         _op_arguments=(
           "report_id=:[PATH] Unique Report ID."
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceRunGrades)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       reportsServiceRunVariantOperation)
@@ -3391,10 +3651,45 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceUpdateControl)
+        local -a _op_arguments
+        _op_arguments=(
+          "control_id=:[PATH] The id of the control that was updated."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceUpdateGrade)
+        local -a _op_arguments
+        _op_arguments=(
+          "grade_id=:[PATH] The id of the grade that was updated."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceUpdateJoin)
         local -a _op_arguments
         _op_arguments=(
           "join_id=:[PATH] Unique join ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceUpdateMeasure)
+        local -a _op_arguments
+        _op_arguments=(
+          "measure_id=:[PATH] The id of the measure that was updated."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceUpdateMetric)
+        local -a _op_arguments
+        _op_arguments=(
+          "metric_id=:[PATH] The id of the metric that was updated."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      reportsServiceUpdateProgram)
+        local -a _op_arguments
+        _op_arguments=(
+          "program_id=:[PATH] The id of the programs that was updated."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -3405,257 +3700,17 @@ Only returns records that include the specified names."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      reportsServiceUpdateRequirement)
+        local -a _op_arguments
+        _op_arguments=(
+          "requirement_id=:[PATH] The id of the requirements that was updated."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       reportsServiceUpdateVariantOverride)
         local -a _op_arguments
         _op_arguments=(
           "variant_id=:[PATH] The variant id"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceCreateController)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceCreateHeartBeat)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to invoke a heartbeat on."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceCreateHeartBeatEx)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] Optional: controller id"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceCreateJob)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceCreateJobExecution)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceCreateKeypair)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to get app tests for."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceDeleteController)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to get the status."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceDeleteEdgeTenant)
-        local -a _op_arguments
-        _op_arguments=(
-          "tenant_id=:[PATH] ID of the tenant to delete"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceDeleteEdgeTenantRequest)
-        local -a _op_arguments
-        _op_arguments=(
-                    "tenant_id=:[QUERY] Tenant ID for the redge request."
-"edge_id=:[QUERY] ID of the edge system."
-"edge_name=:[QUERY] Edge gateway ID."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceDeleteJob)
-        local -a _op_arguments
-        _op_arguments=(
-          "job_id=:[PATH] ID of the job that needs to be deleted."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceDownloadControllerLogs)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to download logs for."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetControllerApps)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to get apps for."
-          "modified_since=:[QUERY] Only get the apps if any were modified since the given date."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetControllerCommands)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to get commands for."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetControllerJobs)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to get jobs for."
-          "modified_since=:[QUERY] Optional: Only get the jobs if any were modified since the given date."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetControllerStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to get the status."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetControllers)
-        local -a _op_arguments
-        _op_arguments=(
-          "tenant_id=:[PATH] The ID of the tenant to get controllers for."
-          "want_local=true:[QUERY] Used to indicate the caller wants the local controller."
-          "want_local=false:[QUERY] Used to indicate the caller wants the local controller."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetControllersWithStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "tenant_id=:[PATH] The ID of the tenant to get controllers for."
-          "want_local=true:[QUERY] Used to indicate the caller wants the local controller."
-          "want_local=false:[QUERY] Used to indicate the caller wants the local controller."
-"controller_id=:[QUERY] \&quot;ALL\&quot;: for getting all controllers; &lt;controller_id&gt;: for getting single controller."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetJob)
-        local -a _op_arguments
-        _op_arguments=(
-          "job_id=:[PATH] The ID of the job to get."
-          "want_secret_values=true:[QUERY] Optional: True to return secret values, false otherwise."
-          "want_secret_values=false:[QUERY] Optional: True to return secret values, false otherwise."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetJobExecution)
-        local -a _op_arguments
-        _op_arguments=(
-          "jobexe_id=:[PATH] The ID of the job execution to get."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetJobExecutions)
-        local -a _op_arguments
-        _op_arguments=(
-          "job_id=:[PATH] The ID of the job to get status."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetJobStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "job_id=:[PATH] The ID of the job to get status."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetTenantApp)
-        local -a _op_arguments
-        _op_arguments=(
-          "tenant_id=:[PATH] The ID of the tenant to get apps for."
-"app_name=:[PATH] The name of the app to get."
-          "return_level=:[QUERY] Optional: specify a return level for the data. This will control the amount of data returned."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetTenantApps)
-        local -a _op_arguments
-        _op_arguments=(
-          "tenant_id=:[PATH] The ID of the tenant to get apps for."
-          "return_level=:[QUERY] Optional: specify a return level for the data. This will control the amount of data returned."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetTenantJobs)
-        local -a _op_arguments
-        _op_arguments=(
-          "tenant_id=:[PATH] The ID of the tenant to get jobs for."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceGetVersion)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceInstallEdgeTenantRequest)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceQueryControllerLogs)
-        local -a _op_arguments
-        _op_arguments=(
-          "controller_id=:[PATH] The ID of the controller to get logs for."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceUpdateCommand)
-        local -a _op_arguments
-        _op_arguments=(
-          "id=:[PATH] The ID of the command."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceUpdateController)
-        local -a _op_arguments
-        _op_arguments=(
-          "id=:[PATH] Optional: The internal ID of the controller."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceUpdateControllerStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "id=:[PATH] The internal ID of the controller."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceUpdateEdgeTenantRequest)
-        local -a _op_arguments
-        _op_arguments=(
-          "edge_id=:[PATH] ID of the edge system"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceUpdateJob)
-        local -a _op_arguments
-        _op_arguments=(
-          "id=:[PATH] The ID of the job."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceUpdateJobExecution)
-        local -a _op_arguments
-        _op_arguments=(
-          "id=:[PATH] The ID of the job execution to update."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      resourceControllerK8ServiceUpdateJobStatus)
-        local -a _op_arguments
-        _op_arguments=(
-          "job_id=:[PATH] The ID of the job to get status."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -3942,111 +3997,6 @@ Only returns records that include the specified names."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      templatesServiceCreateIntegration)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceCreateTemplate)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceDeleteIntegration)
-        local -a _op_arguments
-        _op_arguments=(
-          "integration_id=:[PATH] Delete the templates associated with the specified integration ID."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceDeleteTemplate)
-        local -a _op_arguments
-        _op_arguments=(
-          "template_id=:[PATH] Delete the template with the specified unique ID."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceGetOriginDefaultContent)
-        local -a _op_arguments
-        _op_arguments=(
-          "origin=:[PATH] Origin for the desired content."
-          "integration=:[QUERY] Integration provides the context for the Request."
-"mime_type=:[QUERY] MIME type for the desired content."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceGetOriginFields)
-        local -a _op_arguments
-        _op_arguments=(
-          "origin=:[PATH] Origin for the desired fields."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceGetTemplate)
-        local -a _op_arguments
-        _op_arguments=(
-          "template_id=:[PATH] The unique ID for the template to fetch."
-          "include_integration_name=true:[QUERY] Include the Integration name in the returned template."
-          "include_integration_name=false:[QUERY] Include the Integration name in the returned template."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceGetTemplates)
-        local -a _op_arguments
-        _op_arguments=(
-                    "integration_id=:[QUERY] Filter on templates associated with a specific integration."
-"filter_integration=:[QUERY] Filter on a set of integrations; ignored if empty."
-"filter_origin=:[QUERY] Filter on a specific set of data origins; ignored if empty."
-"filter_mime_type=:[QUERY] Filter on specific mime types; ignored if empty."
-"filter_tags=:[QUERY] Filter on specific tags; ignored if empty."
-"filter_enabled_only=true:[QUERY] Filter on all templates instead of just the enabled templates."
-          "filter_enabled_only=false:[QUERY] Filter on all templates instead of just the enabled templates."
-"include_integration_name=true:[QUERY] Include the Integration name in the returned templates."
-          "include_integration_name=false:[QUERY] Include the Integration name in the returned templates."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceGetTemplatesForEdge)
-        local -a _op_arguments
-        _op_arguments=(
-                    "integration_id=:[QUERY] Templates associated with a specific integration."
-"filter_origin=:[QUERY] Filter on a specific set of data origins; ignored if empty."
-"filter_enabled_only=true:[QUERY] Filter on all templates instead of just the enabled templates."
-          "filter_enabled_only=false:[QUERY] Filter on all templates instead of just the enabled templates."
-"include_integration_name=true:[QUERY] Include the Integration name in the returned templates."
-          "include_integration_name=false:[QUERY] Include the Integration name in the returned templates."
-"transform_to_gdp_format=true:[QUERY] Tranform template format to GDP style format."
-          "transform_to_gdp_format=false:[QUERY] Tranform template format to GDP style format."
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceTestTemplate)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceTransformTemplate)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceTransformTemplateJSON)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      templatesServiceUpdateTemplate)
-        local -a _op_arguments
-        _op_arguments=(
-          "template_id=:[PATH] The template id to update."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       tenantuserCreateAPIKey)
         local -a _op_arguments
         _op_arguments=(
@@ -4236,6 +4186,49 @@ Only returns records that include the specified names."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       universalConnectorManagerUploadPlugin)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      vulnerabilityManagementServiceCreateVulnerability)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      vulnerabilityManagementServiceGetFiltersForVulnerabilities)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      vulnerabilityManagementServiceGetVulnerabilities)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      vulnerabilityManagementServiceGetVulnerabilitiesStats)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      vulnerabilityManagementServiceGetVulnerability)
+        local -a _op_arguments
+        _op_arguments=(
+          "vulnerability_id=:[PATH] ID for the record to return."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      vulnerabilityManagementServiceUpdateVulnerabilities)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger)
         local -a _op_arguments
         _op_arguments=(
                               )

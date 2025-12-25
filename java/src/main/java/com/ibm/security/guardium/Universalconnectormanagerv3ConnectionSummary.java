@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,249 +42,259 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Structure for [Universal connector] Connection response.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3ConnectionSummary {
   public static final String SERIALIZED_NAME_CONNECTION_ALIAS = "connection_alias";
   @SerializedName(SERIALIZED_NAME_CONNECTION_ALIAS)
+  @javax.annotation.Nullable
   private String connectionAlias;
 
   public static final String SERIALIZED_NAME_CONNECTION_CHANGED = "connection_changed";
   @SerializedName(SERIALIZED_NAME_CONNECTION_CHANGED)
+  @javax.annotation.Nullable
   private OffsetDateTime connectionChanged;
 
   public static final String SERIALIZED_NAME_CONNECTION_CONFIG_ID = "connection_config_id";
   @SerializedName(SERIALIZED_NAME_CONNECTION_CONFIG_ID)
+  @javax.annotation.Nullable
   private String connectionConfigId;
 
   public static final String SERIALIZED_NAME_CONNECTION_CONFIGURATION_NOTE = "connection_configuration_note";
   @SerializedName(SERIALIZED_NAME_CONNECTION_CONFIGURATION_NOTE)
+  @javax.annotation.Nullable
   private String connectionConfigurationNote;
 
   public static final String SERIALIZED_NAME_CONNECTION_FILTER_ALIAS = "connection_filter_alias";
   @SerializedName(SERIALIZED_NAME_CONNECTION_FILTER_ALIAS)
+  @javax.annotation.Nullable
   private String connectionFilterAlias;
 
   public static final String SERIALIZED_NAME_CONNECTION_ID = "connection_id";
   @SerializedName(SERIALIZED_NAME_CONNECTION_ID)
+  @javax.annotation.Nullable
   private String connectionId;
 
   public static final String SERIALIZED_NAME_CONNECTION_INPUT_ALIAS = "connection_input_alias";
   @SerializedName(SERIALIZED_NAME_CONNECTION_INPUT_ALIAS)
+  @javax.annotation.Nullable
   private String connectionInputAlias;
 
   public static final String SERIALIZED_NAME_CONNECTION_ROUTE = "connection_route";
   @SerializedName(SERIALIZED_NAME_CONNECTION_ROUTE)
+  @javax.annotation.Nullable
   private Universalconnectormanagerv3ConnectionRoute connectionRoute;
 
   public static final String SERIALIZED_NAME_CONNECTION_STATUS = "connection_status";
   @SerializedName(SERIALIZED_NAME_CONNECTION_STATUS)
+  @javax.annotation.Nullable
   private Universalconnectormanagerv3ConnectionStatus connectionStatus;
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
+  @javax.annotation.Nullable
   private Universalconnectormanagerv3User user;
 
   public Universalconnectormanagerv3ConnectionSummary() {
   }
 
-  public Universalconnectormanagerv3ConnectionSummary connectionAlias(String connectionAlias) {
+  public Universalconnectormanagerv3ConnectionSummary connectionAlias(@javax.annotation.Nullable String connectionAlias) {
     this.connectionAlias = connectionAlias;
     return this;
   }
 
-   /**
+  /**
    * Connection configuration nickname, set by dev/user (optional).
    * @return connectionAlias
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionAlias() {
     return connectionAlias;
   }
 
-  public void setConnectionAlias(String connectionAlias) {
+  public void setConnectionAlias(@javax.annotation.Nullable String connectionAlias) {
     this.connectionAlias = connectionAlias;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionChanged(OffsetDateTime connectionChanged) {
+  public Universalconnectormanagerv3ConnectionSummary connectionChanged(@javax.annotation.Nullable OffsetDateTime connectionChanged) {
     this.connectionChanged = connectionChanged;
     return this;
   }
 
-   /**
+  /**
    * Date changed; used to defer tenant status queries immediately after creation.
    * @return connectionChanged
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getConnectionChanged() {
     return connectionChanged;
   }
 
-  public void setConnectionChanged(OffsetDateTime connectionChanged) {
+  public void setConnectionChanged(@javax.annotation.Nullable OffsetDateTime connectionChanged) {
     this.connectionChanged = connectionChanged;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionConfigId(String connectionConfigId) {
+  public Universalconnectormanagerv3ConnectionSummary connectionConfigId(@javax.annotation.Nullable String connectionConfigId) {
     this.connectionConfigId = connectionConfigId;
     return this;
   }
 
-   /**
+  /**
    * Foreign key to the saved connection configuration by the user.
    * @return connectionConfigId
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionConfigId() {
     return connectionConfigId;
   }
 
-  public void setConnectionConfigId(String connectionConfigId) {
+  public void setConnectionConfigId(@javax.annotation.Nullable String connectionConfigId) {
     this.connectionConfigId = connectionConfigId;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionConfigurationNote(String connectionConfigurationNote) {
+  public Universalconnectormanagerv3ConnectionSummary connectionConfigurationNote(@javax.annotation.Nullable String connectionConfigurationNote) {
     this.connectionConfigurationNote = connectionConfigurationNote;
     return this;
   }
 
-   /**
+  /**
    * Datasource configuration note, by plugin developers, intended for user.
    * @return connectionConfigurationNote
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionConfigurationNote() {
     return connectionConfigurationNote;
   }
 
-  public void setConnectionConfigurationNote(String connectionConfigurationNote) {
+  public void setConnectionConfigurationNote(@javax.annotation.Nullable String connectionConfigurationNote) {
     this.connectionConfigurationNote = connectionConfigurationNote;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionFilterAlias(String connectionFilterAlias) {
+  public Universalconnectormanagerv3ConnectionSummary connectionFilterAlias(@javax.annotation.Nullable String connectionFilterAlias) {
     this.connectionFilterAlias = connectionFilterAlias;
     return this;
   }
 
-   /**
+  /**
    * Connector filter plugin alias (datasource, usually, like \&quot;MongoDB\&quot;).
    * @return connectionFilterAlias
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionFilterAlias() {
     return connectionFilterAlias;
   }
 
-  public void setConnectionFilterAlias(String connectionFilterAlias) {
+  public void setConnectionFilterAlias(@javax.annotation.Nullable String connectionFilterAlias) {
     this.connectionFilterAlias = connectionFilterAlias;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionId(String connectionId) {
+  public Universalconnectormanagerv3ConnectionSummary connectionId(@javax.annotation.Nullable String connectionId) {
     this.connectionId = connectionId;
     return this;
   }
 
-   /**
+  /**
    * Connection configuration id.
    * @return connectionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionId() {
     return connectionId;
   }
 
-  public void setConnectionId(String connectionId) {
+  public void setConnectionId(@javax.annotation.Nullable String connectionId) {
     this.connectionId = connectionId;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionInputAlias(String connectionInputAlias) {
+  public Universalconnectormanagerv3ConnectionSummary connectionInputAlias(@javax.annotation.Nullable String connectionInputAlias) {
     this.connectionInputAlias = connectionInputAlias;
     return this;
   }
 
-   /**
+  /**
    * Connection input plugin alias, like \&quot;Filebeat\&quot;.
    * @return connectionInputAlias
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionInputAlias() {
     return connectionInputAlias;
   }
 
-  public void setConnectionInputAlias(String connectionInputAlias) {
+  public void setConnectionInputAlias(@javax.annotation.Nullable String connectionInputAlias) {
     this.connectionInputAlias = connectionInputAlias;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionRoute(Universalconnectormanagerv3ConnectionRoute connectionRoute) {
+  public Universalconnectormanagerv3ConnectionSummary connectionRoute(@javax.annotation.Nullable Universalconnectormanagerv3ConnectionRoute connectionRoute) {
     this.connectionRoute = connectionRoute;
     return this;
   }
 
-   /**
+  /**
    * Get connectionRoute
    * @return connectionRoute
-  **/
+   */
   @javax.annotation.Nullable
   public Universalconnectormanagerv3ConnectionRoute getConnectionRoute() {
     return connectionRoute;
   }
 
-  public void setConnectionRoute(Universalconnectormanagerv3ConnectionRoute connectionRoute) {
+  public void setConnectionRoute(@javax.annotation.Nullable Universalconnectormanagerv3ConnectionRoute connectionRoute) {
     this.connectionRoute = connectionRoute;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary connectionStatus(Universalconnectormanagerv3ConnectionStatus connectionStatus) {
+  public Universalconnectormanagerv3ConnectionSummary connectionStatus(@javax.annotation.Nullable Universalconnectormanagerv3ConnectionStatus connectionStatus) {
     this.connectionStatus = connectionStatus;
     return this;
   }
 
-   /**
+  /**
    * Get connectionStatus
    * @return connectionStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Universalconnectormanagerv3ConnectionStatus getConnectionStatus() {
     return connectionStatus;
   }
 
-  public void setConnectionStatus(Universalconnectormanagerv3ConnectionStatus connectionStatus) {
+  public void setConnectionStatus(@javax.annotation.Nullable Universalconnectormanagerv3ConnectionStatus connectionStatus) {
     this.connectionStatus = connectionStatus;
   }
 
 
-  public Universalconnectormanagerv3ConnectionSummary user(Universalconnectormanagerv3User user) {
+  public Universalconnectormanagerv3ConnectionSummary user(@javax.annotation.Nullable Universalconnectormanagerv3User user) {
     this.user = user;
     return this;
   }
 
-   /**
+  /**
    * Get user
    * @return user
-  **/
+   */
   @javax.annotation.Nullable
   public Universalconnectormanagerv3User getUser() {
     return user;
   }
 
-  public void setUser(Universalconnectormanagerv3User user) {
+  public void setUser(@javax.annotation.Nullable Universalconnectormanagerv3User user) {
     this.user = user;
   }
 
@@ -350,32 +361,22 @@ public class Universalconnectormanagerv3ConnectionSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("connection_alias");
-    openapiFields.add("connection_changed");
-    openapiFields.add("connection_config_id");
-    openapiFields.add("connection_configuration_note");
-    openapiFields.add("connection_filter_alias");
-    openapiFields.add("connection_id");
-    openapiFields.add("connection_input_alias");
-    openapiFields.add("connection_route");
-    openapiFields.add("connection_status");
-    openapiFields.add("user");
+    openapiFields = new HashSet<String>(Arrays.asList("connection_alias", "connection_changed", "connection_config_id", "connection_configuration_note", "connection_filter_alias", "connection_id", "connection_input_alias", "connection_route", "connection_status", "user"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ConnectionSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ConnectionSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3ConnectionSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3ConnectionSummary is not found in the empty JSON string", Universalconnectormanagerv3ConnectionSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3ConnectionSummary is not found in the empty JSON string", Universalconnectormanagerv3ConnectionSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -383,27 +384,27 @@ public class Universalconnectormanagerv3ConnectionSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3ConnectionSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ConnectionSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ConnectionSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("connection_alias") != null && !jsonObj.get("connection_alias").isJsonNull()) && !jsonObj.get("connection_alias").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_alias").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_alias").toString()));
       }
       if ((jsonObj.get("connection_config_id") != null && !jsonObj.get("connection_config_id").isJsonNull()) && !jsonObj.get("connection_config_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_config_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_config_id").toString()));
       }
       if ((jsonObj.get("connection_configuration_note") != null && !jsonObj.get("connection_configuration_note").isJsonNull()) && !jsonObj.get("connection_configuration_note").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_configuration_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_configuration_note").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_configuration_note` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_configuration_note").toString()));
       }
       if ((jsonObj.get("connection_filter_alias") != null && !jsonObj.get("connection_filter_alias").isJsonNull()) && !jsonObj.get("connection_filter_alias").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_filter_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_filter_alias").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_filter_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_filter_alias").toString()));
       }
       if ((jsonObj.get("connection_id") != null && !jsonObj.get("connection_id").isJsonNull()) && !jsonObj.get("connection_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_id").toString()));
       }
       if ((jsonObj.get("connection_input_alias") != null && !jsonObj.get("connection_input_alias").isJsonNull()) && !jsonObj.get("connection_input_alias").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_input_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_input_alias").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_input_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_input_alias").toString()));
       }
       // validate the optional field `connection_route`
       if (jsonObj.get("connection_route") != null && !jsonObj.get("connection_route").isJsonNull()) {
@@ -448,22 +449,22 @@ public class Universalconnectormanagerv3ConnectionSummary {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3ConnectionSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3ConnectionSummary
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ConnectionSummary
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3ConnectionSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3ConnectionSummary
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ConnectionSummary
+   */
   public static Universalconnectormanagerv3ConnectionSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3ConnectionSummary.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3ConnectionSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3ConnectionSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

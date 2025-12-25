@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,249 +40,259 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmdatamanagerv3MasterDataModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmdatamanagerv3MasterDataModel {
   public static final String SERIALIZED_NAME_CREATION_TS = "creation_ts";
   @SerializedName(SERIALIZED_NAME_CREATION_TS)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTs;
 
   public static final String SERIALIZED_NAME_REF_DESC = "ref_desc";
   @SerializedName(SERIALIZED_NAME_REF_DESC)
+  @javax.annotation.Nullable
   private String refDesc;
 
   public static final String SERIALIZED_NAME_REF_HAS_SCHEMA = "ref_has_schema";
   @SerializedName(SERIALIZED_NAME_REF_HAS_SCHEMA)
+  @javax.annotation.Nullable
   private Boolean refHasSchema;
 
   public static final String SERIALIZED_NAME_REF_ID = "ref_id";
   @SerializedName(SERIALIZED_NAME_REF_ID)
+  @javax.annotation.Nullable
   private String refId;
 
   public static final String SERIALIZED_NAME_REF_NAME = "ref_name";
   @SerializedName(SERIALIZED_NAME_REF_NAME)
+  @javax.annotation.Nullable
   private String refName;
 
   public static final String SERIALIZED_NAME_REF_SCHEMA = "ref_schema";
   @SerializedName(SERIALIZED_NAME_REF_SCHEMA)
+  @javax.annotation.Nullable
   private ProtobufAny refSchema;
 
   public static final String SERIALIZED_NAME_REF_TYPE = "ref_type";
   @SerializedName(SERIALIZED_NAME_REF_TYPE)
+  @javax.annotation.Nullable
   private String refType;
 
   public static final String SERIALIZED_NAME_REF_VALUE = "ref_value";
   @SerializedName(SERIALIZED_NAME_REF_VALUE)
+  @javax.annotation.Nullable
   private String refValue;
 
   public static final String SERIALIZED_NAME_REF_VERSION = "ref_version";
   @SerializedName(SERIALIZED_NAME_REF_VERSION)
+  @javax.annotation.Nullable
   private String refVersion;
 
   public static final String SERIALIZED_NAME_UPDATION_TS = "updation_ts";
   @SerializedName(SERIALIZED_NAME_UPDATION_TS)
+  @javax.annotation.Nullable
   private OffsetDateTime updationTs;
 
   public Qspmdatamanagerv3MasterDataModel() {
   }
 
-  public Qspmdatamanagerv3MasterDataModel creationTs(OffsetDateTime creationTs) {
+  public Qspmdatamanagerv3MasterDataModel creationTs(@javax.annotation.Nullable OffsetDateTime creationTs) {
     this.creationTs = creationTs;
     return this;
   }
 
-   /**
+  /**
    * Get creationTs
    * @return creationTs
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTs() {
     return creationTs;
   }
 
-  public void setCreationTs(OffsetDateTime creationTs) {
+  public void setCreationTs(@javax.annotation.Nullable OffsetDateTime creationTs) {
     this.creationTs = creationTs;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refDesc(String refDesc) {
+  public Qspmdatamanagerv3MasterDataModel refDesc(@javax.annotation.Nullable String refDesc) {
     this.refDesc = refDesc;
     return this;
   }
 
-   /**
+  /**
    * Get refDesc
    * @return refDesc
-  **/
+   */
   @javax.annotation.Nullable
   public String getRefDesc() {
     return refDesc;
   }
 
-  public void setRefDesc(String refDesc) {
+  public void setRefDesc(@javax.annotation.Nullable String refDesc) {
     this.refDesc = refDesc;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refHasSchema(Boolean refHasSchema) {
+  public Qspmdatamanagerv3MasterDataModel refHasSchema(@javax.annotation.Nullable Boolean refHasSchema) {
     this.refHasSchema = refHasSchema;
     return this;
   }
 
-   /**
+  /**
    * Get refHasSchema
    * @return refHasSchema
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getRefHasSchema() {
     return refHasSchema;
   }
 
-  public void setRefHasSchema(Boolean refHasSchema) {
+  public void setRefHasSchema(@javax.annotation.Nullable Boolean refHasSchema) {
     this.refHasSchema = refHasSchema;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refId(String refId) {
+  public Qspmdatamanagerv3MasterDataModel refId(@javax.annotation.Nullable String refId) {
     this.refId = refId;
     return this;
   }
 
-   /**
+  /**
    * Get refId
    * @return refId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRefId() {
     return refId;
   }
 
-  public void setRefId(String refId) {
+  public void setRefId(@javax.annotation.Nullable String refId) {
     this.refId = refId;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refName(String refName) {
+  public Qspmdatamanagerv3MasterDataModel refName(@javax.annotation.Nullable String refName) {
     this.refName = refName;
     return this;
   }
 
-   /**
+  /**
    * Get refName
    * @return refName
-  **/
+   */
   @javax.annotation.Nullable
   public String getRefName() {
     return refName;
   }
 
-  public void setRefName(String refName) {
+  public void setRefName(@javax.annotation.Nullable String refName) {
     this.refName = refName;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refSchema(ProtobufAny refSchema) {
+  public Qspmdatamanagerv3MasterDataModel refSchema(@javax.annotation.Nullable ProtobufAny refSchema) {
     this.refSchema = refSchema;
     return this;
   }
 
-   /**
+  /**
    * Get refSchema
    * @return refSchema
-  **/
+   */
   @javax.annotation.Nullable
   public ProtobufAny getRefSchema() {
     return refSchema;
   }
 
-  public void setRefSchema(ProtobufAny refSchema) {
+  public void setRefSchema(@javax.annotation.Nullable ProtobufAny refSchema) {
     this.refSchema = refSchema;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refType(String refType) {
+  public Qspmdatamanagerv3MasterDataModel refType(@javax.annotation.Nullable String refType) {
     this.refType = refType;
     return this;
   }
 
-   /**
+  /**
    * Get refType
    * @return refType
-  **/
+   */
   @javax.annotation.Nullable
   public String getRefType() {
     return refType;
   }
 
-  public void setRefType(String refType) {
+  public void setRefType(@javax.annotation.Nullable String refType) {
     this.refType = refType;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refValue(String refValue) {
+  public Qspmdatamanagerv3MasterDataModel refValue(@javax.annotation.Nullable String refValue) {
     this.refValue = refValue;
     return this;
   }
 
-   /**
+  /**
    * Get refValue
    * @return refValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getRefValue() {
     return refValue;
   }
 
-  public void setRefValue(String refValue) {
+  public void setRefValue(@javax.annotation.Nullable String refValue) {
     this.refValue = refValue;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel refVersion(String refVersion) {
+  public Qspmdatamanagerv3MasterDataModel refVersion(@javax.annotation.Nullable String refVersion) {
     this.refVersion = refVersion;
     return this;
   }
 
-   /**
+  /**
    * Get refVersion
    * @return refVersion
-  **/
+   */
   @javax.annotation.Nullable
   public String getRefVersion() {
     return refVersion;
   }
 
-  public void setRefVersion(String refVersion) {
+  public void setRefVersion(@javax.annotation.Nullable String refVersion) {
     this.refVersion = refVersion;
   }
 
 
-  public Qspmdatamanagerv3MasterDataModel updationTs(OffsetDateTime updationTs) {
+  public Qspmdatamanagerv3MasterDataModel updationTs(@javax.annotation.Nullable OffsetDateTime updationTs) {
     this.updationTs = updationTs;
     return this;
   }
 
-   /**
+  /**
    * Get updationTs
    * @return updationTs
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getUpdationTs() {
     return updationTs;
   }
 
-  public void setUpdationTs(OffsetDateTime updationTs) {
+  public void setUpdationTs(@javax.annotation.Nullable OffsetDateTime updationTs) {
     this.updationTs = updationTs;
   }
 
@@ -348,32 +359,22 @@ public class Qspmdatamanagerv3MasterDataModel {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("creation_ts");
-    openapiFields.add("ref_desc");
-    openapiFields.add("ref_has_schema");
-    openapiFields.add("ref_id");
-    openapiFields.add("ref_name");
-    openapiFields.add("ref_schema");
-    openapiFields.add("ref_type");
-    openapiFields.add("ref_value");
-    openapiFields.add("ref_version");
-    openapiFields.add("updation_ts");
+    openapiFields = new HashSet<String>(Arrays.asList("creation_ts", "ref_desc", "ref_has_schema", "ref_id", "ref_name", "ref_schema", "ref_type", "ref_value", "ref_version", "updation_ts"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3MasterDataModel
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3MasterDataModel
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmdatamanagerv3MasterDataModel.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmdatamanagerv3MasterDataModel is not found in the empty JSON string", Qspmdatamanagerv3MasterDataModel.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmdatamanagerv3MasterDataModel is not found in the empty JSON string", Qspmdatamanagerv3MasterDataModel.openapiRequiredFields.toString()));
         }
       }
 
@@ -381,31 +382,31 @@ public class Qspmdatamanagerv3MasterDataModel {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmdatamanagerv3MasterDataModel.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3MasterDataModel` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3MasterDataModel` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("ref_desc") != null && !jsonObj.get("ref_desc").isJsonNull()) && !jsonObj.get("ref_desc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_desc").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ref_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_desc").toString()));
       }
       if ((jsonObj.get("ref_id") != null && !jsonObj.get("ref_id").isJsonNull()) && !jsonObj.get("ref_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ref_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_id").toString()));
       }
       if ((jsonObj.get("ref_name") != null && !jsonObj.get("ref_name").isJsonNull()) && !jsonObj.get("ref_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ref_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_name").toString()));
       }
       // validate the optional field `ref_schema`
       if (jsonObj.get("ref_schema") != null && !jsonObj.get("ref_schema").isJsonNull()) {
         ProtobufAny.validateJsonElement(jsonObj.get("ref_schema"));
       }
       if ((jsonObj.get("ref_type") != null && !jsonObj.get("ref_type").isJsonNull()) && !jsonObj.get("ref_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ref_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_type").toString()));
       }
       if ((jsonObj.get("ref_value") != null && !jsonObj.get("ref_value").isJsonNull()) && !jsonObj.get("ref_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ref_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_value").toString()));
       }
       if ((jsonObj.get("ref_version") != null && !jsonObj.get("ref_version").isJsonNull()) && !jsonObj.get("ref_version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ref_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref_version").toString()));
       }
   }
 
@@ -438,22 +439,22 @@ public class Qspmdatamanagerv3MasterDataModel {
     }
   }
 
- /**
-  * Create an instance of Qspmdatamanagerv3MasterDataModel given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmdatamanagerv3MasterDataModel
-  * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3MasterDataModel
-  */
+  /**
+   * Create an instance of Qspmdatamanagerv3MasterDataModel given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmdatamanagerv3MasterDataModel
+   * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3MasterDataModel
+   */
   public static Qspmdatamanagerv3MasterDataModel fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmdatamanagerv3MasterDataModel.class);
   }
 
- /**
-  * Convert an instance of Qspmdatamanagerv3MasterDataModel to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmdatamanagerv3MasterDataModel to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

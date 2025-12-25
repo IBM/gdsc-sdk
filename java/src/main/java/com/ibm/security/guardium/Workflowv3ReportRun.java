@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,364 +41,379 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Information about the report run.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3ReportRun {
   public static final String SERIALIZED_NAME_DATE_END = "date_end";
   @SerializedName(SERIALIZED_NAME_DATE_END)
+  @javax.annotation.Nullable
   private OffsetDateTime dateEnd;
 
   public static final String SERIALIZED_NAME_DATE_START = "date_start";
   @SerializedName(SERIALIZED_NAME_DATE_START)
+  @javax.annotation.Nullable
   private OffsetDateTime dateStart;
 
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
+  @javax.annotation.Nullable
   private String detail;
 
   public static final String SERIALIZED_NAME_QUERY_FROM = "query_from";
   @SerializedName(SERIALIZED_NAME_QUERY_FROM)
+  @javax.annotation.Nullable
   private String queryFrom;
 
   public static final String SERIALIZED_NAME_QUERY_TO = "query_to";
   @SerializedName(SERIALIZED_NAME_QUERY_TO)
+  @javax.annotation.Nullable
   private String queryTo;
 
   public static final String SERIALIZED_NAME_REPORT_FILTERS = "report_filters";
   @SerializedName(SERIALIZED_NAME_REPORT_FILTERS)
+  @javax.annotation.Nullable
   private Reportsv3ReportFilterBrackets reportFilters;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_NAME = "report_name";
   @SerializedName(SERIALIZED_NAME_REPORT_NAME)
+  @javax.annotation.Nullable
   private String reportName;
 
   public static final String SERIALIZED_NAME_REPORT_RESULT_FILE_NAME = "report_result_file_name";
   @SerializedName(SERIALIZED_NAME_REPORT_RESULT_FILE_NAME)
+  @javax.annotation.Nullable
   private String reportResultFileName;
 
   public static final String SERIALIZED_NAME_RUN_ID = "run_id";
   @SerializedName(SERIALIZED_NAME_RUN_ID)
+  @javax.annotation.Nullable
   private String runId;
 
   public static final String SERIALIZED_NAME_SCHEDULED_JOB_ID = "scheduled_job_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_JOB_ID)
+  @javax.annotation.Nullable
   private String scheduledJobId;
 
   public static final String SERIALIZED_NAME_SCHEDULED_JOB_NAME = "scheduled_job_name";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_JOB_NAME)
+  @javax.annotation.Nullable
   private String scheduledJobName;
 
   public static final String SERIALIZED_NAME_SCHEDULED_TASK_ID = "scheduled_task_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_TASK_ID)
+  @javax.annotation.Nullable
   private String scheduledTaskId;
 
   public static final String SERIALIZED_NAME_SCHEDULED_TASK_TYPE = "scheduled_task_type";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_TASK_TYPE)
+  @javax.annotation.Nullable
   private Schedulerv3TaskType scheduledTaskType = Schedulerv3TaskType.UNDEFINED_JOBTYPE;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Integer status;
 
   public Workflowv3ReportRun() {
   }
 
-  public Workflowv3ReportRun dateEnd(OffsetDateTime dateEnd) {
+  public Workflowv3ReportRun dateEnd(@javax.annotation.Nullable OffsetDateTime dateEnd) {
     this.dateEnd = dateEnd;
     return this;
   }
 
-   /**
+  /**
    * When the job finished.
    * @return dateEnd
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateEnd() {
     return dateEnd;
   }
 
-  public void setDateEnd(OffsetDateTime dateEnd) {
+  public void setDateEnd(@javax.annotation.Nullable OffsetDateTime dateEnd) {
     this.dateEnd = dateEnd;
   }
 
 
-  public Workflowv3ReportRun dateStart(OffsetDateTime dateStart) {
+  public Workflowv3ReportRun dateStart(@javax.annotation.Nullable OffsetDateTime dateStart) {
     this.dateStart = dateStart;
     return this;
   }
 
-   /**
+  /**
    * When the job started.
    * @return dateStart
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateStart() {
     return dateStart;
   }
 
-  public void setDateStart(OffsetDateTime dateStart) {
+  public void setDateStart(@javax.annotation.Nullable OffsetDateTime dateStart) {
     this.dateStart = dateStart;
   }
 
 
-  public Workflowv3ReportRun detail(String detail) {
+  public Workflowv3ReportRun detail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
     return this;
   }
 
-   /**
+  /**
    * Job status detail.
    * @return detail
-  **/
+   */
   @javax.annotation.Nullable
   public String getDetail() {
     return detail;
   }
 
-  public void setDetail(String detail) {
+  public void setDetail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
   }
 
 
-  public Workflowv3ReportRun queryFrom(String queryFrom) {
+  public Workflowv3ReportRun queryFrom(@javax.annotation.Nullable String queryFrom) {
     this.queryFrom = queryFrom;
     return this;
   }
 
-   /**
+  /**
    * Absolute value of the runtime parameter for time period (time from).
    * @return queryFrom
-  **/
+   */
   @javax.annotation.Nullable
   public String getQueryFrom() {
     return queryFrom;
   }
 
-  public void setQueryFrom(String queryFrom) {
+  public void setQueryFrom(@javax.annotation.Nullable String queryFrom) {
     this.queryFrom = queryFrom;
   }
 
 
-  public Workflowv3ReportRun queryTo(String queryTo) {
+  public Workflowv3ReportRun queryTo(@javax.annotation.Nullable String queryTo) {
     this.queryTo = queryTo;
     return this;
   }
 
-   /**
+  /**
    * Absolute value of the runtime parameter for time period (time to).
    * @return queryTo
-  **/
+   */
   @javax.annotation.Nullable
   public String getQueryTo() {
     return queryTo;
   }
 
-  public void setQueryTo(String queryTo) {
+  public void setQueryTo(@javax.annotation.Nullable String queryTo) {
     this.queryTo = queryTo;
   }
 
 
-  public Workflowv3ReportRun reportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public Workflowv3ReportRun reportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
     return this;
   }
 
-   /**
+  /**
    * Get reportFilters
    * @return reportFilters
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportFilterBrackets getReportFilters() {
     return reportFilters;
   }
 
-  public void setReportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public void setReportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
   }
 
 
-  public Workflowv3ReportRun reportId(String reportId) {
+  public Workflowv3ReportRun reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Workflowv3ReportRun reportName(String reportName) {
+  public Workflowv3ReportRun reportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * Report name.
    * @return reportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(String reportName) {
+  public void setReportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
 
-  public Workflowv3ReportRun reportResultFileName(String reportResultFileName) {
+  public Workflowv3ReportRun reportResultFileName(@javax.annotation.Nullable String reportResultFileName) {
     this.reportResultFileName = reportResultFileName;
     return this;
   }
 
-   /**
+  /**
    * The report result file name.
    * @return reportResultFileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportResultFileName() {
     return reportResultFileName;
   }
 
-  public void setReportResultFileName(String reportResultFileName) {
+  public void setReportResultFileName(@javax.annotation.Nullable String reportResultFileName) {
     this.reportResultFileName = reportResultFileName;
   }
 
 
-  public Workflowv3ReportRun runId(String runId) {
+  public Workflowv3ReportRun runId(@javax.annotation.Nullable String runId) {
     this.runId = runId;
     return this;
   }
 
-   /**
+  /**
    * The identifier of the run.
    * @return runId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRunId() {
     return runId;
   }
 
-  public void setRunId(String runId) {
+  public void setRunId(@javax.annotation.Nullable String runId) {
     this.runId = runId;
   }
 
 
-  public Workflowv3ReportRun scheduledJobId(String scheduledJobId) {
+  public Workflowv3ReportRun scheduledJobId(@javax.annotation.Nullable String scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
     return this;
   }
 
-   /**
+  /**
    * The ScheduledJob identifier.
    * @return scheduledJobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduledJobId() {
     return scheduledJobId;
   }
 
-  public void setScheduledJobId(String scheduledJobId) {
+  public void setScheduledJobId(@javax.annotation.Nullable String scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
   }
 
 
-  public Workflowv3ReportRun scheduledJobName(String scheduledJobName) {
+  public Workflowv3ReportRun scheduledJobName(@javax.annotation.Nullable String scheduledJobName) {
     this.scheduledJobName = scheduledJobName;
     return this;
   }
 
-   /**
+  /**
    * The ScheduledJob name identifier.
    * @return scheduledJobName
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduledJobName() {
     return scheduledJobName;
   }
 
-  public void setScheduledJobName(String scheduledJobName) {
+  public void setScheduledJobName(@javax.annotation.Nullable String scheduledJobName) {
     this.scheduledJobName = scheduledJobName;
   }
 
 
-  public Workflowv3ReportRun scheduledTaskId(String scheduledTaskId) {
+  public Workflowv3ReportRun scheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
     return this;
   }
 
-   /**
+  /**
    * The task within the ScheduledJob.
    * @return scheduledTaskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduledTaskId() {
     return scheduledTaskId;
   }
 
-  public void setScheduledTaskId(String scheduledTaskId) {
+  public void setScheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
   }
 
 
-  public Workflowv3ReportRun scheduledTaskType(Schedulerv3TaskType scheduledTaskType) {
+  public Workflowv3ReportRun scheduledTaskType(@javax.annotation.Nullable Schedulerv3TaskType scheduledTaskType) {
     this.scheduledTaskType = scheduledTaskType;
     return this;
   }
 
-   /**
+  /**
    * Get scheduledTaskType
    * @return scheduledTaskType
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3TaskType getScheduledTaskType() {
     return scheduledTaskType;
   }
 
-  public void setScheduledTaskType(Schedulerv3TaskType scheduledTaskType) {
+  public void setScheduledTaskType(@javax.annotation.Nullable Schedulerv3TaskType scheduledTaskType) {
     this.scheduledTaskType = scheduledTaskType;
   }
 
 
-  public Workflowv3ReportRun status(Integer status) {
+  public Workflowv3ReportRun status(@javax.annotation.Nullable Integer status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Job status.
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatus() {
     return status;
   }
 
-  public void setStatus(Integer status) {
+  public void setStatus(@javax.annotation.Nullable Integer status) {
     this.status = status;
   }
 
@@ -474,37 +490,22 @@ public class Workflowv3ReportRun {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("date_end");
-    openapiFields.add("date_start");
-    openapiFields.add("detail");
-    openapiFields.add("query_from");
-    openapiFields.add("query_to");
-    openapiFields.add("report_filters");
-    openapiFields.add("report_id");
-    openapiFields.add("report_name");
-    openapiFields.add("report_result_file_name");
-    openapiFields.add("run_id");
-    openapiFields.add("scheduled_job_id");
-    openapiFields.add("scheduled_job_name");
-    openapiFields.add("scheduled_task_id");
-    openapiFields.add("scheduled_task_type");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("date_end", "date_start", "detail", "query_from", "query_to", "report_filters", "report_id", "report_name", "report_result_file_name", "run_id", "scheduled_job_id", "scheduled_job_name", "scheduled_task_id", "scheduled_task_type", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3ReportRun
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3ReportRun
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3ReportRun.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3ReportRun is not found in the empty JSON string", Workflowv3ReportRun.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3ReportRun is not found in the empty JSON string", Workflowv3ReportRun.openapiRequiredFields.toString()));
         }
       }
 
@@ -512,43 +513,43 @@ public class Workflowv3ReportRun {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3ReportRun.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3ReportRun` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3ReportRun` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonNull()) && !jsonObj.get("detail").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
       }
       if ((jsonObj.get("query_from") != null && !jsonObj.get("query_from").isJsonNull()) && !jsonObj.get("query_from").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `query_from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_from").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `query_from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_from").toString()));
       }
       if ((jsonObj.get("query_to") != null && !jsonObj.get("query_to").isJsonNull()) && !jsonObj.get("query_to").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `query_to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_to").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `query_to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_to").toString()));
       }
       // validate the optional field `report_filters`
       if (jsonObj.get("report_filters") != null && !jsonObj.get("report_filters").isJsonNull()) {
         Reportsv3ReportFilterBrackets.validateJsonElement(jsonObj.get("report_filters"));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("report_name") != null && !jsonObj.get("report_name").isJsonNull()) && !jsonObj.get("report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
       }
       if ((jsonObj.get("report_result_file_name") != null && !jsonObj.get("report_result_file_name").isJsonNull()) && !jsonObj.get("report_result_file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_result_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_result_file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_result_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_result_file_name").toString()));
       }
       if ((jsonObj.get("run_id") != null && !jsonObj.get("run_id").isJsonNull()) && !jsonObj.get("run_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `run_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("run_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `run_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("run_id").toString()));
       }
       if ((jsonObj.get("scheduled_job_id") != null && !jsonObj.get("scheduled_job_id").isJsonNull()) && !jsonObj.get("scheduled_job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
       }
       if ((jsonObj.get("scheduled_job_name") != null && !jsonObj.get("scheduled_job_name").isJsonNull()) && !jsonObj.get("scheduled_job_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_job_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_job_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_job_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_job_name").toString()));
       }
       if ((jsonObj.get("scheduled_task_id") != null && !jsonObj.get("scheduled_task_id").isJsonNull()) && !jsonObj.get("scheduled_task_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
       }
       // validate the optional field `scheduled_task_type`
       if (jsonObj.get("scheduled_task_type") != null && !jsonObj.get("scheduled_task_type").isJsonNull()) {
@@ -585,22 +586,22 @@ public class Workflowv3ReportRun {
     }
   }
 
- /**
-  * Create an instance of Workflowv3ReportRun given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3ReportRun
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3ReportRun
-  */
+  /**
+   * Create an instance of Workflowv3ReportRun given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3ReportRun
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3ReportRun
+   */
   public static Workflowv3ReportRun fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3ReportRun.class);
   }
 
- /**
-  * Convert an instance of Workflowv3ReportRun to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3ReportRun to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetChartTemplatesv2Response is the return for GetChartTemplatesv2() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetChartTemplatesv2Response {
   public static final String SERIALIZED_NAME_TEMPLATES = "templates";
   @SerializedName(SERIALIZED_NAME_TEMPLATES)
+  @javax.annotation.Nullable
   private List<Reportsv3CustomChartTemplatev2> templates = new ArrayList<>();
 
   public Reportsv3GetChartTemplatesv2Response() {
   }
 
-  public Reportsv3GetChartTemplatesv2Response templates(List<Reportsv3CustomChartTemplatev2> templates) {
+  public Reportsv3GetChartTemplatesv2Response templates(@javax.annotation.Nullable List<Reportsv3CustomChartTemplatev2> templates) {
     this.templates = templates;
     return this;
   }
@@ -74,16 +76,16 @@ public class Reportsv3GetChartTemplatesv2Response {
     return this;
   }
 
-   /**
+  /**
    * List of all custom chart templates.
    * @return templates
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3CustomChartTemplatev2> getTemplates() {
     return templates;
   }
 
-  public void setTemplates(List<Reportsv3CustomChartTemplatev2> templates) {
+  public void setTemplates(@javax.annotation.Nullable List<Reportsv3CustomChartTemplatev2> templates) {
     this.templates = templates;
   }
 
@@ -132,23 +134,22 @@ public class Reportsv3GetChartTemplatesv2Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("templates");
+    openapiFields = new HashSet<String>(Arrays.asList("templates"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetChartTemplatesv2Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetChartTemplatesv2Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetChartTemplatesv2Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetChartTemplatesv2Response is not found in the empty JSON string", Reportsv3GetChartTemplatesv2Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetChartTemplatesv2Response is not found in the empty JSON string", Reportsv3GetChartTemplatesv2Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Reportsv3GetChartTemplatesv2Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetChartTemplatesv2Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetChartTemplatesv2Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetChartTemplatesv2Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Reportsv3GetChartTemplatesv2Response {
         if (jsonArraytemplates != null) {
           // ensure the json data is an array
           if (!jsonObj.get("templates").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `templates` to be an array in the JSON string but got `%s`", jsonObj.get("templates").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `templates` to be an array in the JSON string but got `%s`", jsonObj.get("templates").toString()));
           }
 
           // validate the optional field `templates` (array)
@@ -205,22 +206,22 @@ public class Reportsv3GetChartTemplatesv2Response {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetChartTemplatesv2Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetChartTemplatesv2Response
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetChartTemplatesv2Response
-  */
+  /**
+   * Create an instance of Reportsv3GetChartTemplatesv2Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetChartTemplatesv2Response
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetChartTemplatesv2Response
+   */
   public static Reportsv3GetChartTemplatesv2Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetChartTemplatesv2Response.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetChartTemplatesv2Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetChartTemplatesv2Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

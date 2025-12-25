@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,272 +43,283 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StatisticsResponse is the message for the result from getStatistics.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3StatisticsResponse {
   public static final String SERIALIZED_NAME_ANALYSIS_STATISTICS = "analysis_statistics";
   @SerializedName(SERIALIZED_NAME_ANALYSIS_STATISTICS)
+  @javax.annotation.Nullable
   private Outliersenginev3AnalysisStatisticsMessage analysisStatistics;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_CLUSTERS = "number_of_clusters";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_CLUSTERS)
+  @javax.annotation.Nullable
   private Integer numberOfClusters;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_COMPLETED_PERIODS = "number_of_completed_periods";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_COMPLETED_PERIODS)
+  @javax.annotation.Nullable
   private Integer numberOfCompletedPeriods;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_OUTLIERS_DETAILS = "number_of_outliers_details";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_OUTLIERS_DETAILS)
+  @javax.annotation.Nullable
   private Integer numberOfOutliersDetails;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_OUTLIERS_SUMMARY = "number_of_outliers_summary";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_OUTLIERS_SUMMARY)
+  @javax.annotation.Nullable
   private Integer numberOfOutliersSummary;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_SOURCES = "number_of_sources";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_SOURCES)
+  @javax.annotation.Nullable
   private Integer numberOfSources;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_UNCOMPLETED_PERIODS = "number_of_uncompleted_periods";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_UNCOMPLETED_PERIODS)
+  @javax.annotation.Nullable
   private Integer numberOfUncompletedPeriods;
 
   public static final String SERIALIZED_NAME_OUTLIERS_STATS = "outliers_stats";
   @SerializedName(SERIALIZED_NAME_OUTLIERS_STATS)
+  @javax.annotation.Nullable
   private Outliersenginev3OutliersStats outliersStats;
 
   public static final String SERIALIZED_NAME_QUEUE_STATISTICS = "queue_statistics";
   @SerializedName(SERIALIZED_NAME_QUEUE_STATISTICS)
+  @javax.annotation.Nullable
   private Outliersenginev3QueueStatisticsMessage queueStatistics;
 
   public static final String SERIALIZED_NAME_SOURCES_STATS = "sources_stats";
   @SerializedName(SERIALIZED_NAME_SOURCES_STATS)
+  @javax.annotation.Nullable
   private Outliersenginev3SourcesStats sourcesStats;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus status;
 
   public Outliersenginev3StatisticsResponse() {
   }
 
-  public Outliersenginev3StatisticsResponse analysisStatistics(Outliersenginev3AnalysisStatisticsMessage analysisStatistics) {
+  public Outliersenginev3StatisticsResponse analysisStatistics(@javax.annotation.Nullable Outliersenginev3AnalysisStatisticsMessage analysisStatistics) {
     this.analysisStatistics = analysisStatistics;
     return this;
   }
 
-   /**
+  /**
    * Get analysisStatistics
    * @return analysisStatistics
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3AnalysisStatisticsMessage getAnalysisStatistics() {
     return analysisStatistics;
   }
 
-  public void setAnalysisStatistics(Outliersenginev3AnalysisStatisticsMessage analysisStatistics) {
+  public void setAnalysisStatistics(@javax.annotation.Nullable Outliersenginev3AnalysisStatisticsMessage analysisStatistics) {
     this.analysisStatistics = analysisStatistics;
   }
 
 
-  public Outliersenginev3StatisticsResponse numberOfClusters(Integer numberOfClusters) {
+  public Outliersenginev3StatisticsResponse numberOfClusters(@javax.annotation.Nullable Integer numberOfClusters) {
     this.numberOfClusters = numberOfClusters;
     return this;
   }
 
-   /**
+  /**
    * Number of clusters.
    * @return numberOfClusters
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNumberOfClusters() {
     return numberOfClusters;
   }
 
-  public void setNumberOfClusters(Integer numberOfClusters) {
+  public void setNumberOfClusters(@javax.annotation.Nullable Integer numberOfClusters) {
     this.numberOfClusters = numberOfClusters;
   }
 
 
-  public Outliersenginev3StatisticsResponse numberOfCompletedPeriods(Integer numberOfCompletedPeriods) {
+  public Outliersenginev3StatisticsResponse numberOfCompletedPeriods(@javax.annotation.Nullable Integer numberOfCompletedPeriods) {
     this.numberOfCompletedPeriods = numberOfCompletedPeriods;
     return this;
   }
 
-   /**
+  /**
    * Number of completed periods.
    * @return numberOfCompletedPeriods
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNumberOfCompletedPeriods() {
     return numberOfCompletedPeriods;
   }
 
-  public void setNumberOfCompletedPeriods(Integer numberOfCompletedPeriods) {
+  public void setNumberOfCompletedPeriods(@javax.annotation.Nullable Integer numberOfCompletedPeriods) {
     this.numberOfCompletedPeriods = numberOfCompletedPeriods;
   }
 
 
-  public Outliersenginev3StatisticsResponse numberOfOutliersDetails(Integer numberOfOutliersDetails) {
+  public Outliersenginev3StatisticsResponse numberOfOutliersDetails(@javax.annotation.Nullable Integer numberOfOutliersDetails) {
     this.numberOfOutliersDetails = numberOfOutliersDetails;
     return this;
   }
 
-   /**
+  /**
    * Number of outliers in details table.
    * @return numberOfOutliersDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNumberOfOutliersDetails() {
     return numberOfOutliersDetails;
   }
 
-  public void setNumberOfOutliersDetails(Integer numberOfOutliersDetails) {
+  public void setNumberOfOutliersDetails(@javax.annotation.Nullable Integer numberOfOutliersDetails) {
     this.numberOfOutliersDetails = numberOfOutliersDetails;
   }
 
 
-  public Outliersenginev3StatisticsResponse numberOfOutliersSummary(Integer numberOfOutliersSummary) {
+  public Outliersenginev3StatisticsResponse numberOfOutliersSummary(@javax.annotation.Nullable Integer numberOfOutliersSummary) {
     this.numberOfOutliersSummary = numberOfOutliersSummary;
     return this;
   }
 
-   /**
+  /**
    * Number of outliers in summary table.
    * @return numberOfOutliersSummary
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNumberOfOutliersSummary() {
     return numberOfOutliersSummary;
   }
 
-  public void setNumberOfOutliersSummary(Integer numberOfOutliersSummary) {
+  public void setNumberOfOutliersSummary(@javax.annotation.Nullable Integer numberOfOutliersSummary) {
     this.numberOfOutliersSummary = numberOfOutliersSummary;
   }
 
 
-  public Outliersenginev3StatisticsResponse numberOfSources(Integer numberOfSources) {
+  public Outliersenginev3StatisticsResponse numberOfSources(@javax.annotation.Nullable Integer numberOfSources) {
     this.numberOfSources = numberOfSources;
     return this;
   }
 
-   /**
+  /**
    * Number of sources.
    * @return numberOfSources
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNumberOfSources() {
     return numberOfSources;
   }
 
-  public void setNumberOfSources(Integer numberOfSources) {
+  public void setNumberOfSources(@javax.annotation.Nullable Integer numberOfSources) {
     this.numberOfSources = numberOfSources;
   }
 
 
-  public Outliersenginev3StatisticsResponse numberOfUncompletedPeriods(Integer numberOfUncompletedPeriods) {
+  public Outliersenginev3StatisticsResponse numberOfUncompletedPeriods(@javax.annotation.Nullable Integer numberOfUncompletedPeriods) {
     this.numberOfUncompletedPeriods = numberOfUncompletedPeriods;
     return this;
   }
 
-   /**
+  /**
    * Number of uncompleted periods.
    * @return numberOfUncompletedPeriods
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNumberOfUncompletedPeriods() {
     return numberOfUncompletedPeriods;
   }
 
-  public void setNumberOfUncompletedPeriods(Integer numberOfUncompletedPeriods) {
+  public void setNumberOfUncompletedPeriods(@javax.annotation.Nullable Integer numberOfUncompletedPeriods) {
     this.numberOfUncompletedPeriods = numberOfUncompletedPeriods;
   }
 
 
-  public Outliersenginev3StatisticsResponse outliersStats(Outliersenginev3OutliersStats outliersStats) {
+  public Outliersenginev3StatisticsResponse outliersStats(@javax.annotation.Nullable Outliersenginev3OutliersStats outliersStats) {
     this.outliersStats = outliersStats;
     return this;
   }
 
-   /**
+  /**
    * Get outliersStats
    * @return outliersStats
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3OutliersStats getOutliersStats() {
     return outliersStats;
   }
 
-  public void setOutliersStats(Outliersenginev3OutliersStats outliersStats) {
+  public void setOutliersStats(@javax.annotation.Nullable Outliersenginev3OutliersStats outliersStats) {
     this.outliersStats = outliersStats;
   }
 
 
-  public Outliersenginev3StatisticsResponse queueStatistics(Outliersenginev3QueueStatisticsMessage queueStatistics) {
+  public Outliersenginev3StatisticsResponse queueStatistics(@javax.annotation.Nullable Outliersenginev3QueueStatisticsMessage queueStatistics) {
     this.queueStatistics = queueStatistics;
     return this;
   }
 
-   /**
+  /**
    * Get queueStatistics
    * @return queueStatistics
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3QueueStatisticsMessage getQueueStatistics() {
     return queueStatistics;
   }
 
-  public void setQueueStatistics(Outliersenginev3QueueStatisticsMessage queueStatistics) {
+  public void setQueueStatistics(@javax.annotation.Nullable Outliersenginev3QueueStatisticsMessage queueStatistics) {
     this.queueStatistics = queueStatistics;
   }
 
 
-  public Outliersenginev3StatisticsResponse sourcesStats(Outliersenginev3SourcesStats sourcesStats) {
+  public Outliersenginev3StatisticsResponse sourcesStats(@javax.annotation.Nullable Outliersenginev3SourcesStats sourcesStats) {
     this.sourcesStats = sourcesStats;
     return this;
   }
 
-   /**
+  /**
    * Get sourcesStats
    * @return sourcesStats
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3SourcesStats getSourcesStats() {
     return sourcesStats;
   }
 
-  public void setSourcesStats(Outliersenginev3SourcesStats sourcesStats) {
+  public void setSourcesStats(@javax.annotation.Nullable Outliersenginev3SourcesStats sourcesStats) {
     this.sourcesStats = sourcesStats;
   }
 
 
-  public Outliersenginev3StatisticsResponse status(RpcStatus status) {
+  public Outliersenginev3StatisticsResponse status(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(RpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
   }
 
@@ -376,33 +388,22 @@ public class Outliersenginev3StatisticsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("analysis_statistics");
-    openapiFields.add("number_of_clusters");
-    openapiFields.add("number_of_completed_periods");
-    openapiFields.add("number_of_outliers_details");
-    openapiFields.add("number_of_outliers_summary");
-    openapiFields.add("number_of_sources");
-    openapiFields.add("number_of_uncompleted_periods");
-    openapiFields.add("outliers_stats");
-    openapiFields.add("queue_statistics");
-    openapiFields.add("sources_stats");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("analysis_statistics", "number_of_clusters", "number_of_completed_periods", "number_of_outliers_details", "number_of_outliers_summary", "number_of_sources", "number_of_uncompleted_periods", "outliers_stats", "queue_statistics", "sources_stats", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3StatisticsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3StatisticsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3StatisticsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3StatisticsResponse is not found in the empty JSON string", Outliersenginev3StatisticsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3StatisticsResponse is not found in the empty JSON string", Outliersenginev3StatisticsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -410,7 +411,7 @@ public class Outliersenginev3StatisticsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3StatisticsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3StatisticsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3StatisticsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -465,22 +466,22 @@ public class Outliersenginev3StatisticsResponse {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3StatisticsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3StatisticsResponse
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3StatisticsResponse
-  */
+  /**
+   * Create an instance of Outliersenginev3StatisticsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3StatisticsResponse
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3StatisticsResponse
+   */
   public static Outliersenginev3StatisticsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3StatisticsResponse.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3StatisticsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3StatisticsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

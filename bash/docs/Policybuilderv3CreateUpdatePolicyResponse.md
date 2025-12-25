@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activationUnderscorestatus** | **integer** |  | [optional] [default to null]
-**edgeUnderscoreactivationUnderscoreinfo** | [**Policybuilderv3EdgeActivationObject**](Policybuilderv3EdgeActivationObject.md) |  | [optional] [default to null]
+**edgeUnderscoreactivationUnderscoreinfo** | [**array[Policybuilderv3EdgeActivationObject]**](Policybuilderv3EdgeActivationObject.md) | Activation info for the policy on all edges, it is activated on | [optional] [default to null]
 **installedUnderscoreflag** | **boolean** |  | [optional] [default to null]
 **policyUnderscoreid** | **string** |  | [optional] [default to null]
 **policyUnderscorename** | **string** |  | [optional] [default to null]

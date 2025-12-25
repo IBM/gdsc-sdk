@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,293 +42,308 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Plugin definition based on UCPluginDefinition.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3PluginDefinition {
   public static final String SERIALIZED_NAME_PLUGIN_J_D_B_C_DRIVER_REQUIRED = "plugin_JDBC_driver_required";
   @SerializedName(SERIALIZED_NAME_PLUGIN_J_D_B_C_DRIVER_REQUIRED)
+  @javax.annotation.Nullable
   private Boolean pluginJDBCDriverRequired;
 
   public static final String SERIALIZED_NAME_PLUGIN_ALIAS = "plugin_alias";
   @SerializedName(SERIALIZED_NAME_PLUGIN_ALIAS)
+  @javax.annotation.Nullable
   private String pluginAlias;
 
   public static final String SERIALIZED_NAME_PLUGIN_CONFIGURATION_NOTES = "plugin_configuration_notes";
   @SerializedName(SERIALIZED_NAME_PLUGIN_CONFIGURATION_NOTES)
+  @javax.annotation.Nullable
   private String pluginConfigurationNotes;
 
   public static final String SERIALIZED_NAME_PLUGIN_DESCRIPTION = "plugin_description";
   @SerializedName(SERIALIZED_NAME_PLUGIN_DESCRIPTION)
+  @javax.annotation.Nullable
   private String pluginDescription;
 
   public static final String SERIALIZED_NAME_PLUGIN_DEVELOPER = "plugin_developer";
   @SerializedName(SERIALIZED_NAME_PLUGIN_DEVELOPER)
+  @javax.annotation.Nullable
   private String pluginDeveloper;
 
   public static final String SERIALIZED_NAME_PLUGIN_DOCUMENTATION_PATH = "plugin_documentation_path";
   @SerializedName(SERIALIZED_NAME_PLUGIN_DOCUMENTATION_PATH)
+  @javax.annotation.Nullable
   private String pluginDocumentationPath;
 
   public static final String SERIALIZED_NAME_PLUGIN_LICENSE = "plugin_license";
   @SerializedName(SERIALIZED_NAME_PLUGIN_LICENSE)
+  @javax.annotation.Nullable
   private String pluginLicense;
 
   public static final String SERIALIZED_NAME_PLUGIN_NAME = "plugin_name";
   @SerializedName(SERIALIZED_NAME_PLUGIN_NAME)
+  @javax.annotation.Nullable
   private String pluginName;
 
   public static final String SERIALIZED_NAME_PLUGIN_PIPELINE_TYPE = "plugin_pipeline_type";
   @SerializedName(SERIALIZED_NAME_PLUGIN_PIPELINE_TYPE)
+  @javax.annotation.Nullable
   private String pluginPipelineType;
 
   public static final String SERIALIZED_NAME_PLUGIN_TYPE = "plugin_type";
   @SerializedName(SERIALIZED_NAME_PLUGIN_TYPE)
+  @javax.annotation.Nullable
   private String pluginType;
 
   public static final String SERIALIZED_NAME_PLUGIN_VERSION = "plugin_version";
   @SerializedName(SERIALIZED_NAME_PLUGIN_VERSION)
+  @javax.annotation.Nullable
   private String pluginVersion;
 
   public static final String SERIALIZED_NAME_SUPPORTED_INPUT_PLUGINS = "supportedInputPlugins";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_INPUT_PLUGINS)
+  @javax.annotation.Nullable
   private List<String> supportedInputPlugins = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUPPORTED_DATASOURCES = "supported_datasources";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_DATASOURCES)
+  @javax.annotation.Nullable
   private List<Universalconnectormanagerv3DatasourceType> supportedDatasources = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_UPLOAD_DATE = "upload_date";
   @SerializedName(SERIALIZED_NAME_UPLOAD_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime uploadDate;
 
   public static final String SERIALIZED_NAME_UPLOAD_USER = "upload_user";
   @SerializedName(SERIALIZED_NAME_UPLOAD_USER)
+  @javax.annotation.Nullable
   private String uploadUser;
 
   public Universalconnectormanagerv3PluginDefinition() {
   }
 
-  public Universalconnectormanagerv3PluginDefinition pluginJDBCDriverRequired(Boolean pluginJDBCDriverRequired) {
+  public Universalconnectormanagerv3PluginDefinition pluginJDBCDriverRequired(@javax.annotation.Nullable Boolean pluginJDBCDriverRequired) {
     this.pluginJDBCDriverRequired = pluginJDBCDriverRequired;
     return this;
   }
 
-   /**
+  /**
    * Get pluginJDBCDriverRequired
    * @return pluginJDBCDriverRequired
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPluginJDBCDriverRequired() {
     return pluginJDBCDriverRequired;
   }
 
-  public void setPluginJDBCDriverRequired(Boolean pluginJDBCDriverRequired) {
+  public void setPluginJDBCDriverRequired(@javax.annotation.Nullable Boolean pluginJDBCDriverRequired) {
     this.pluginJDBCDriverRequired = pluginJDBCDriverRequired;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginAlias(String pluginAlias) {
+  public Universalconnectormanagerv3PluginDefinition pluginAlias(@javax.annotation.Nullable String pluginAlias) {
     this.pluginAlias = pluginAlias;
     return this;
   }
 
-   /**
+  /**
    * mongoDB.
    * @return pluginAlias
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginAlias() {
     return pluginAlias;
   }
 
-  public void setPluginAlias(String pluginAlias) {
+  public void setPluginAlias(@javax.annotation.Nullable String pluginAlias) {
     this.pluginAlias = pluginAlias;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginConfigurationNotes(String pluginConfigurationNotes) {
+  public Universalconnectormanagerv3PluginDefinition pluginConfigurationNotes(@javax.annotation.Nullable String pluginConfigurationNotes) {
     this.pluginConfigurationNotes = pluginConfigurationNotes;
     return this;
   }
 
-   /**
+  /**
    * Config noted.
    * @return pluginConfigurationNotes
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginConfigurationNotes() {
     return pluginConfigurationNotes;
   }
 
-  public void setPluginConfigurationNotes(String pluginConfigurationNotes) {
+  public void setPluginConfigurationNotes(@javax.annotation.Nullable String pluginConfigurationNotes) {
     this.pluginConfigurationNotes = pluginConfigurationNotes;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginDescription(String pluginDescription) {
+  public Universalconnectormanagerv3PluginDefinition pluginDescription(@javax.annotation.Nullable String pluginDescription) {
     this.pluginDescription = pluginDescription;
     return this;
   }
 
-   /**
+  /**
    * Description.
    * @return pluginDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginDescription() {
     return pluginDescription;
   }
 
-  public void setPluginDescription(String pluginDescription) {
+  public void setPluginDescription(@javax.annotation.Nullable String pluginDescription) {
     this.pluginDescription = pluginDescription;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginDeveloper(String pluginDeveloper) {
+  public Universalconnectormanagerv3PluginDefinition pluginDeveloper(@javax.annotation.Nullable String pluginDeveloper) {
     this.pluginDeveloper = pluginDeveloper;
     return this;
   }
 
-   /**
+  /**
    * Developer.
    * @return pluginDeveloper
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginDeveloper() {
     return pluginDeveloper;
   }
 
-  public void setPluginDeveloper(String pluginDeveloper) {
+  public void setPluginDeveloper(@javax.annotation.Nullable String pluginDeveloper) {
     this.pluginDeveloper = pluginDeveloper;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginDocumentationPath(String pluginDocumentationPath) {
+  public Universalconnectormanagerv3PluginDefinition pluginDocumentationPath(@javax.annotation.Nullable String pluginDocumentationPath) {
     this.pluginDocumentationPath = pluginDocumentationPath;
     return this;
   }
 
-   /**
+  /**
    * Documentation path.
    * @return pluginDocumentationPath
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginDocumentationPath() {
     return pluginDocumentationPath;
   }
 
-  public void setPluginDocumentationPath(String pluginDocumentationPath) {
+  public void setPluginDocumentationPath(@javax.annotation.Nullable String pluginDocumentationPath) {
     this.pluginDocumentationPath = pluginDocumentationPath;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginLicense(String pluginLicense) {
+  public Universalconnectormanagerv3PluginDefinition pluginLicense(@javax.annotation.Nullable String pluginLicense) {
     this.pluginLicense = pluginLicense;
     return this;
   }
 
-   /**
+  /**
    * License.
    * @return pluginLicense
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginLicense() {
     return pluginLicense;
   }
 
-  public void setPluginLicense(String pluginLicense) {
+  public void setPluginLicense(@javax.annotation.Nullable String pluginLicense) {
     this.pluginLicense = pluginLicense;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginName(String pluginName) {
+  public Universalconnectormanagerv3PluginDefinition pluginName(@javax.annotation.Nullable String pluginName) {
     this.pluginName = pluginName;
     return this;
   }
 
-   /**
+  /**
    * Name.
    * @return pluginName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginName() {
     return pluginName;
   }
 
-  public void setPluginName(String pluginName) {
+  public void setPluginName(@javax.annotation.Nullable String pluginName) {
     this.pluginName = pluginName;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginPipelineType(String pluginPipelineType) {
+  public Universalconnectormanagerv3PluginDefinition pluginPipelineType(@javax.annotation.Nullable String pluginPipelineType) {
     this.pluginPipelineType = pluginPipelineType;
     return this;
   }
 
-   /**
+  /**
    * Pipeline type.
    * @return pluginPipelineType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginPipelineType() {
     return pluginPipelineType;
   }
 
-  public void setPluginPipelineType(String pluginPipelineType) {
+  public void setPluginPipelineType(@javax.annotation.Nullable String pluginPipelineType) {
     this.pluginPipelineType = pluginPipelineType;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginType(String pluginType) {
+  public Universalconnectormanagerv3PluginDefinition pluginType(@javax.annotation.Nullable String pluginType) {
     this.pluginType = pluginType;
     return this;
   }
 
-   /**
+  /**
    * Filter/input.
    * @return pluginType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginType() {
     return pluginType;
   }
 
-  public void setPluginType(String pluginType) {
+  public void setPluginType(@javax.annotation.Nullable String pluginType) {
     this.pluginType = pluginType;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition pluginVersion(String pluginVersion) {
+  public Universalconnectormanagerv3PluginDefinition pluginVersion(@javax.annotation.Nullable String pluginVersion) {
     this.pluginVersion = pluginVersion;
     return this;
   }
 
-   /**
+  /**
    * Plugin version.
    * @return pluginVersion
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginVersion() {
     return pluginVersion;
   }
 
-  public void setPluginVersion(String pluginVersion) {
+  public void setPluginVersion(@javax.annotation.Nullable String pluginVersion) {
     this.pluginVersion = pluginVersion;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition supportedInputPlugins(List<String> supportedInputPlugins) {
+  public Universalconnectormanagerv3PluginDefinition supportedInputPlugins(@javax.annotation.Nullable List<String> supportedInputPlugins) {
     this.supportedInputPlugins = supportedInputPlugins;
     return this;
   }
@@ -340,21 +356,21 @@ public class Universalconnectormanagerv3PluginDefinition {
     return this;
   }
 
-   /**
+  /**
    * Collection of supported input plugins.
    * @return supportedInputPlugins
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSupportedInputPlugins() {
     return supportedInputPlugins;
   }
 
-  public void setSupportedInputPlugins(List<String> supportedInputPlugins) {
+  public void setSupportedInputPlugins(@javax.annotation.Nullable List<String> supportedInputPlugins) {
     this.supportedInputPlugins = supportedInputPlugins;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition supportedDatasources(List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
+  public Universalconnectormanagerv3PluginDefinition supportedDatasources(@javax.annotation.Nullable List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
     this.supportedDatasources = supportedDatasources;
     return this;
   }
@@ -367,54 +383,54 @@ public class Universalconnectormanagerv3PluginDefinition {
     return this;
   }
 
-   /**
+  /**
    * Collection of DatasourceType.
    * @return supportedDatasources
-  **/
+   */
   @javax.annotation.Nullable
   public List<Universalconnectormanagerv3DatasourceType> getSupportedDatasources() {
     return supportedDatasources;
   }
 
-  public void setSupportedDatasources(List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
+  public void setSupportedDatasources(@javax.annotation.Nullable List<Universalconnectormanagerv3DatasourceType> supportedDatasources) {
     this.supportedDatasources = supportedDatasources;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition uploadDate(OffsetDateTime uploadDate) {
+  public Universalconnectormanagerv3PluginDefinition uploadDate(@javax.annotation.Nullable OffsetDateTime uploadDate) {
     this.uploadDate = uploadDate;
     return this;
   }
 
-   /**
+  /**
    * Datetime of plugin upload.
    * @return uploadDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getUploadDate() {
     return uploadDate;
   }
 
-  public void setUploadDate(OffsetDateTime uploadDate) {
+  public void setUploadDate(@javax.annotation.Nullable OffsetDateTime uploadDate) {
     this.uploadDate = uploadDate;
   }
 
 
-  public Universalconnectormanagerv3PluginDefinition uploadUser(String uploadUser) {
+  public Universalconnectormanagerv3PluginDefinition uploadUser(@javax.annotation.Nullable String uploadUser) {
     this.uploadUser = uploadUser;
     return this;
   }
 
-   /**
+  /**
    * Plugin user upload.
    * @return uploadUser
-  **/
+   */
   @javax.annotation.Nullable
   public String getUploadUser() {
     return uploadUser;
   }
 
-  public void setUploadUser(String uploadUser) {
+  public void setUploadUser(@javax.annotation.Nullable String uploadUser) {
     this.uploadUser = uploadUser;
   }
 
@@ -491,37 +507,22 @@ public class Universalconnectormanagerv3PluginDefinition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("plugin_JDBC_driver_required");
-    openapiFields.add("plugin_alias");
-    openapiFields.add("plugin_configuration_notes");
-    openapiFields.add("plugin_description");
-    openapiFields.add("plugin_developer");
-    openapiFields.add("plugin_documentation_path");
-    openapiFields.add("plugin_license");
-    openapiFields.add("plugin_name");
-    openapiFields.add("plugin_pipeline_type");
-    openapiFields.add("plugin_type");
-    openapiFields.add("plugin_version");
-    openapiFields.add("supportedInputPlugins");
-    openapiFields.add("supported_datasources");
-    openapiFields.add("upload_date");
-    openapiFields.add("upload_user");
+    openapiFields = new HashSet<String>(Arrays.asList("plugin_JDBC_driver_required", "plugin_alias", "plugin_configuration_notes", "plugin_description", "plugin_developer", "plugin_documentation_path", "plugin_license", "plugin_name", "plugin_pipeline_type", "plugin_type", "plugin_version", "supportedInputPlugins", "supported_datasources", "upload_date", "upload_user"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3PluginDefinition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3PluginDefinition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3PluginDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3PluginDefinition is not found in the empty JSON string", Universalconnectormanagerv3PluginDefinition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3PluginDefinition is not found in the empty JSON string", Universalconnectormanagerv3PluginDefinition.openapiRequiredFields.toString()));
         }
       }
 
@@ -529,50 +530,50 @@ public class Universalconnectormanagerv3PluginDefinition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3PluginDefinition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3PluginDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3PluginDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("plugin_alias") != null && !jsonObj.get("plugin_alias").isJsonNull()) && !jsonObj.get("plugin_alias").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_alias").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_alias").toString()));
       }
       if ((jsonObj.get("plugin_configuration_notes") != null && !jsonObj.get("plugin_configuration_notes").isJsonNull()) && !jsonObj.get("plugin_configuration_notes").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_configuration_notes` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_configuration_notes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_configuration_notes` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_configuration_notes").toString()));
       }
       if ((jsonObj.get("plugin_description") != null && !jsonObj.get("plugin_description").isJsonNull()) && !jsonObj.get("plugin_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_description").toString()));
       }
       if ((jsonObj.get("plugin_developer") != null && !jsonObj.get("plugin_developer").isJsonNull()) && !jsonObj.get("plugin_developer").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_developer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_developer").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_developer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_developer").toString()));
       }
       if ((jsonObj.get("plugin_documentation_path") != null && !jsonObj.get("plugin_documentation_path").isJsonNull()) && !jsonObj.get("plugin_documentation_path").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_documentation_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_documentation_path").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_documentation_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_documentation_path").toString()));
       }
       if ((jsonObj.get("plugin_license") != null && !jsonObj.get("plugin_license").isJsonNull()) && !jsonObj.get("plugin_license").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_license` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_license").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_license` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_license").toString()));
       }
       if ((jsonObj.get("plugin_name") != null && !jsonObj.get("plugin_name").isJsonNull()) && !jsonObj.get("plugin_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_name").toString()));
       }
       if ((jsonObj.get("plugin_pipeline_type") != null && !jsonObj.get("plugin_pipeline_type").isJsonNull()) && !jsonObj.get("plugin_pipeline_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_pipeline_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_pipeline_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_pipeline_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_pipeline_type").toString()));
       }
       if ((jsonObj.get("plugin_type") != null && !jsonObj.get("plugin_type").isJsonNull()) && !jsonObj.get("plugin_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_type").toString()));
       }
       if ((jsonObj.get("plugin_version") != null && !jsonObj.get("plugin_version").isJsonNull()) && !jsonObj.get("plugin_version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_version").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("supportedInputPlugins") != null && !jsonObj.get("supportedInputPlugins").isJsonNull() && !jsonObj.get("supportedInputPlugins").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `supportedInputPlugins` to be an array in the JSON string but got `%s`", jsonObj.get("supportedInputPlugins").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `supportedInputPlugins` to be an array in the JSON string but got `%s`", jsonObj.get("supportedInputPlugins").toString()));
       }
       if (jsonObj.get("supported_datasources") != null && !jsonObj.get("supported_datasources").isJsonNull()) {
         JsonArray jsonArraysupportedDatasources = jsonObj.getAsJsonArray("supported_datasources");
         if (jsonArraysupportedDatasources != null) {
           // ensure the json data is an array
           if (!jsonObj.get("supported_datasources").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `supported_datasources` to be an array in the JSON string but got `%s`", jsonObj.get("supported_datasources").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `supported_datasources` to be an array in the JSON string but got `%s`", jsonObj.get("supported_datasources").toString()));
           }
 
           // validate the optional field `supported_datasources` (array)
@@ -582,7 +583,7 @@ public class Universalconnectormanagerv3PluginDefinition {
         }
       }
       if ((jsonObj.get("upload_user") != null && !jsonObj.get("upload_user").isJsonNull()) && !jsonObj.get("upload_user").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `upload_user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upload_user").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `upload_user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("upload_user").toString()));
       }
   }
 
@@ -615,22 +616,22 @@ public class Universalconnectormanagerv3PluginDefinition {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3PluginDefinition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3PluginDefinition
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3PluginDefinition
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3PluginDefinition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3PluginDefinition
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3PluginDefinition
+   */
   public static Universalconnectormanagerv3PluginDefinition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3PluginDefinition.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3PluginDefinition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3PluginDefinition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

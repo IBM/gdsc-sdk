@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3GetDataSourcesResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3GetDataSourcesResponse {
   public static final String SERIALIZED_NAME_DATA_SOURCES = "data_sources";
   @SerializedName(SERIALIZED_NAME_DATA_SOURCES)
+  @javax.annotation.Nullable
   private List<Connectionsv3DataSource> dataSources = new ArrayList<>();
 
   public Connectionsv3GetDataSourcesResponse() {
   }
 
-  public Connectionsv3GetDataSourcesResponse dataSources(List<Connectionsv3DataSource> dataSources) {
+  public Connectionsv3GetDataSourcesResponse dataSources(@javax.annotation.Nullable List<Connectionsv3DataSource> dataSources) {
     this.dataSources = dataSources;
     return this;
   }
@@ -74,16 +76,16 @@ public class Connectionsv3GetDataSourcesResponse {
     return this;
   }
 
-   /**
+  /**
    * Get dataSources
    * @return dataSources
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3DataSource> getDataSources() {
     return dataSources;
   }
 
-  public void setDataSources(List<Connectionsv3DataSource> dataSources) {
+  public void setDataSources(@javax.annotation.Nullable List<Connectionsv3DataSource> dataSources) {
     this.dataSources = dataSources;
   }
 
@@ -132,23 +134,22 @@ public class Connectionsv3GetDataSourcesResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data_sources");
+    openapiFields = new HashSet<String>(Arrays.asList("data_sources"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetDataSourcesResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetDataSourcesResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3GetDataSourcesResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3GetDataSourcesResponse is not found in the empty JSON string", Connectionsv3GetDataSourcesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3GetDataSourcesResponse is not found in the empty JSON string", Connectionsv3GetDataSourcesResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Connectionsv3GetDataSourcesResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3GetDataSourcesResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3GetDataSourcesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3GetDataSourcesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Connectionsv3GetDataSourcesResponse {
         if (jsonArraydataSources != null) {
           // ensure the json data is an array
           if (!jsonObj.get("data_sources").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `data_sources` to be an array in the JSON string but got `%s`", jsonObj.get("data_sources").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `data_sources` to be an array in the JSON string but got `%s`", jsonObj.get("data_sources").toString()));
           }
 
           // validate the optional field `data_sources` (array)
@@ -205,22 +206,22 @@ public class Connectionsv3GetDataSourcesResponse {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3GetDataSourcesResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3GetDataSourcesResponse
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetDataSourcesResponse
-  */
+  /**
+   * Create an instance of Connectionsv3GetDataSourcesResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3GetDataSourcesResponse
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetDataSourcesResponse
+   */
   public static Connectionsv3GetDataSourcesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3GetDataSourcesResponse.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3GetDataSourcesResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3GetDataSourcesResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

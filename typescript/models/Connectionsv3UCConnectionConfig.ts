@@ -14,7 +14,7 @@ import { Connectionsv3UCConnectionSummary } from '../models/Connectionsv3UCConne
 import { HttpFile } from '../http/http';
 
 /**
-* UC connection config with connecion id.
+* UC connection config with connection id.
 */
 export class Connectionsv3UCConnectionConfig {
     /**
@@ -24,6 +24,8 @@ export class Connectionsv3UCConnectionConfig {
     'ucConnectionSummary'?: Connectionsv3UCConnectionSummary;
 
     static readonly discriminator: string | undefined = undefined;
+
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
@@ -46,4 +48,3 @@ export class Connectionsv3UCConnectionConfig {
     public constructor() {
     }
 }
-

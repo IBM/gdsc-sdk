@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,63 +42,68 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3ProductWorkflow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3ProductWorkflow {
   public static final String SERIALIZED_NAME_AUDIT_TYPE = "audit_type";
   @SerializedName(SERIALIZED_NAME_AUDIT_TYPE)
+  @javax.annotation.Nullable
   private Schedulerv3AuditType auditType = Schedulerv3AuditType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_CONFIG_TYPES = "config_types";
   @SerializedName(SERIALIZED_NAME_CONFIG_TYPES)
+  @javax.annotation.Nullable
   private List<String> configTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_WORKFLOW_INVESTIGATION_LINKS = "workflow_investigation_links";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_INVESTIGATION_LINKS)
+  @javax.annotation.Nullable
   private List<Schedulerv3ConfigurationItem> workflowInvestigationLinks = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_WORKFLOW_RESPONSE_TEMPLATE = "workflow_response_template";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_RESPONSE_TEMPLATE)
+  @javax.annotation.Nullable
   private Schedulerv3ConfigurationItem workflowResponseTemplate;
 
   public static final String SERIALIZED_NAME_WORKFLOW_UNIQUE_FIELDS = "workflow_unique_fields";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_UNIQUE_FIELDS)
+  @javax.annotation.Nullable
   private List<String> workflowUniqueFields = new ArrayList<>();
 
   public Workflowv3ProductWorkflow() {
   }
 
-  public Workflowv3ProductWorkflow auditType(Schedulerv3AuditType auditType) {
+  public Workflowv3ProductWorkflow auditType(@javax.annotation.Nullable Schedulerv3AuditType auditType) {
     this.auditType = auditType;
     return this;
   }
 
-   /**
+  /**
    * Get auditType
    * @return auditType
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3AuditType getAuditType() {
     return auditType;
   }
 
-  public void setAuditType(Schedulerv3AuditType auditType) {
+  public void setAuditType(@javax.annotation.Nullable Schedulerv3AuditType auditType) {
     this.auditType = auditType;
   }
 
 
-  public Workflowv3ProductWorkflow configTypes(List<String> configTypes) {
+  public Workflowv3ProductWorkflow configTypes(@javax.annotation.Nullable List<String> configTypes) {
     this.configTypes = configTypes;
     return this;
   }
@@ -110,21 +116,21 @@ public class Workflowv3ProductWorkflow {
     return this;
   }
 
-   /**
+  /**
    * Get configTypes
    * @return configTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getConfigTypes() {
     return configTypes;
   }
 
-  public void setConfigTypes(List<String> configTypes) {
+  public void setConfigTypes(@javax.annotation.Nullable List<String> configTypes) {
     this.configTypes = configTypes;
   }
 
 
-  public Workflowv3ProductWorkflow workflowInvestigationLinks(List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
+  public Workflowv3ProductWorkflow workflowInvestigationLinks(@javax.annotation.Nullable List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
     this.workflowInvestigationLinks = workflowInvestigationLinks;
     return this;
   }
@@ -137,40 +143,40 @@ public class Workflowv3ProductWorkflow {
     return this;
   }
 
-   /**
+  /**
    * Get workflowInvestigationLinks
    * @return workflowInvestigationLinks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ConfigurationItem> getWorkflowInvestigationLinks() {
     return workflowInvestigationLinks;
   }
 
-  public void setWorkflowInvestigationLinks(List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
+  public void setWorkflowInvestigationLinks(@javax.annotation.Nullable List<Schedulerv3ConfigurationItem> workflowInvestigationLinks) {
     this.workflowInvestigationLinks = workflowInvestigationLinks;
   }
 
 
-  public Workflowv3ProductWorkflow workflowResponseTemplate(Schedulerv3ConfigurationItem workflowResponseTemplate) {
+  public Workflowv3ProductWorkflow workflowResponseTemplate(@javax.annotation.Nullable Schedulerv3ConfigurationItem workflowResponseTemplate) {
     this.workflowResponseTemplate = workflowResponseTemplate;
     return this;
   }
 
-   /**
+  /**
    * Get workflowResponseTemplate
    * @return workflowResponseTemplate
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3ConfigurationItem getWorkflowResponseTemplate() {
     return workflowResponseTemplate;
   }
 
-  public void setWorkflowResponseTemplate(Schedulerv3ConfigurationItem workflowResponseTemplate) {
+  public void setWorkflowResponseTemplate(@javax.annotation.Nullable Schedulerv3ConfigurationItem workflowResponseTemplate) {
     this.workflowResponseTemplate = workflowResponseTemplate;
   }
 
 
-  public Workflowv3ProductWorkflow workflowUniqueFields(List<String> workflowUniqueFields) {
+  public Workflowv3ProductWorkflow workflowUniqueFields(@javax.annotation.Nullable List<String> workflowUniqueFields) {
     this.workflowUniqueFields = workflowUniqueFields;
     return this;
   }
@@ -183,16 +189,16 @@ public class Workflowv3ProductWorkflow {
     return this;
   }
 
-   /**
+  /**
    * Get workflowUniqueFields
    * @return workflowUniqueFields
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getWorkflowUniqueFields() {
     return workflowUniqueFields;
   }
 
-  public void setWorkflowUniqueFields(List<String> workflowUniqueFields) {
+  public void setWorkflowUniqueFields(@javax.annotation.Nullable List<String> workflowUniqueFields) {
     this.workflowUniqueFields = workflowUniqueFields;
   }
 
@@ -249,27 +255,22 @@ public class Workflowv3ProductWorkflow {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("audit_type");
-    openapiFields.add("config_types");
-    openapiFields.add("workflow_investigation_links");
-    openapiFields.add("workflow_response_template");
-    openapiFields.add("workflow_unique_fields");
+    openapiFields = new HashSet<String>(Arrays.asList("audit_type", "config_types", "workflow_investigation_links", "workflow_response_template", "workflow_unique_fields"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3ProductWorkflow
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3ProductWorkflow
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3ProductWorkflow.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3ProductWorkflow is not found in the empty JSON string", Workflowv3ProductWorkflow.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3ProductWorkflow is not found in the empty JSON string", Workflowv3ProductWorkflow.openapiRequiredFields.toString()));
         }
       }
 
@@ -277,7 +278,7 @@ public class Workflowv3ProductWorkflow {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3ProductWorkflow.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3ProductWorkflow` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3ProductWorkflow` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -287,14 +288,14 @@ public class Workflowv3ProductWorkflow {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("config_types") != null && !jsonObj.get("config_types").isJsonNull() && !jsonObj.get("config_types").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `config_types` to be an array in the JSON string but got `%s`", jsonObj.get("config_types").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `config_types` to be an array in the JSON string but got `%s`", jsonObj.get("config_types").toString()));
       }
       if (jsonObj.get("workflow_investigation_links") != null && !jsonObj.get("workflow_investigation_links").isJsonNull()) {
         JsonArray jsonArrayworkflowInvestigationLinks = jsonObj.getAsJsonArray("workflow_investigation_links");
         if (jsonArrayworkflowInvestigationLinks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("workflow_investigation_links").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `workflow_investigation_links` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_investigation_links").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `workflow_investigation_links` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_investigation_links").toString()));
           }
 
           // validate the optional field `workflow_investigation_links` (array)
@@ -309,7 +310,7 @@ public class Workflowv3ProductWorkflow {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("workflow_unique_fields") != null && !jsonObj.get("workflow_unique_fields").isJsonNull() && !jsonObj.get("workflow_unique_fields").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `workflow_unique_fields` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_unique_fields").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `workflow_unique_fields` to be an array in the JSON string but got `%s`", jsonObj.get("workflow_unique_fields").toString()));
       }
   }
 
@@ -342,22 +343,22 @@ public class Workflowv3ProductWorkflow {
     }
   }
 
- /**
-  * Create an instance of Workflowv3ProductWorkflow given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3ProductWorkflow
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3ProductWorkflow
-  */
+  /**
+   * Create an instance of Workflowv3ProductWorkflow given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3ProductWorkflow
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3ProductWorkflow
+   */
   public static Workflowv3ProductWorkflow fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3ProductWorkflow.class);
   }
 
- /**
-  * Convert an instance of Workflowv3ProductWorkflow to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3ProductWorkflow to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

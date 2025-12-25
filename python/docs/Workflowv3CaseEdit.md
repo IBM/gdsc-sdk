@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **comment** | **str** | Optional: Comment - this text will be added to the comments history. | [optional] 
 **date_due** | **datetime** | Optional: Date due. | [optional] 
 **description** | **str** | Optional: Multiline description of the case. | [optional] 
-**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] 
-**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] 
+**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] [default to Workflowv3Priority.UNDEFINED_PRIORITY]
+**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] [default to Workflowv3Status.UNDEFINED_STATUS]
 **title** | **str** | Optional: Case title (subject). | [optional] 
 
 ## Example

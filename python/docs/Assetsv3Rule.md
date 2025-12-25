@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **policy_id** | **str** | Policy ID. | [optional] 
 **rule_id** | **str** | Rule ID. | [optional] 
 **rule_name** | **str** | Rule Name. | [optional] 
-**rule_type** | [**Assetsv3RuleType**](Assetsv3RuleType.md) |  | [optional] 
+**rule_type** | [**Assetsv3RuleType**](Assetsv3RuleType.md) |  | [optional] [default to Assetsv3RuleType.ACCESS]
 
 ## Example
 

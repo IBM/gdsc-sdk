@@ -77,9 +77,9 @@ class Complianceacceleratorv3ComplianceInfo(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in workspaces (dict)
         _field_dict = {}
         if self.workspaces:
-            for _key in self.workspaces:
-                if self.workspaces[_key]:
-                    _field_dict[_key] = self.workspaces[_key].to_dict()
+            for _key_workspaces in self.workspaces:
+                if self.workspaces[_key_workspaces]:
+                    _field_dict[_key_workspaces] = self.workspaces[_key_workspaces].to_dict()
             _dict['workspaces'] = _field_dict
         return _dict
 

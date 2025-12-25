@@ -29,12 +29,12 @@ class Riskanalyticsenginev3Pivot(BaseModel):
     Pivot is the subject of the lead / risk.
     """ # noqa: E501
     database: Optional[StrictStr] = Field(default=None, description="Optional database - if pivot is db user / database.")
-    database_source_field: Optional[Riskanalyticsenginev3DatabaseSourceField] = None
+    database_source_field: Optional[Riskanalyticsenginev3DatabaseSourceField] = Riskanalyticsenginev3DatabaseSourceField.UNDEFINED
     db_user: Optional[StrictStr] = Field(default=None, description="Optional db_user - if pivot is db user.")
     id: Optional[StrictStr] = Field(default=None, description="Pivot id -  all pivot fields separated by semicolon.")
     os_user: Optional[StrictStr] = Field(default=None, description="Optional os_user - if pivot is os user.")
     server_ip: Optional[StrictStr] = Field(default=None, description="Optional server_ip - if pivot is db user / database.")
-    type: Optional[Riskanalyticsenginev3PivotType] = None
+    type: Optional[Riskanalyticsenginev3PivotType] = Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE
     __properties: ClassVar[List[str]] = ["database", "database_source_field", "db_user", "id", "os_user", "server_ip", "type"]
 
     model_config = ConfigDict(
@@ -89,12 +89,12 @@ class Riskanalyticsenginev3Pivot(BaseModel):
 
         _obj = cls.model_validate({
             "database": obj.get("database"),
-            "database_source_field": obj.get("database_source_field"),
+            "database_source_field": obj.get("database_source_field") if obj.get("database_source_field") is not None else Riskanalyticsenginev3DatabaseSourceField.UNDEFINED,
             "db_user": obj.get("db_user"),
             "id": obj.get("id"),
             "os_user": obj.get("os_user"),
             "server_ip": obj.get("server_ip"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE
         })
         return _obj
 

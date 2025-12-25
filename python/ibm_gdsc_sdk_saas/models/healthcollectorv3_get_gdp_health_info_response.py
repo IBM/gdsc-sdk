@@ -74,9 +74,9 @@ class Healthcollectorv3GetGDPHealthInfoResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in all_nodes (list)
         _items = []
         if self.all_nodes:
-            for _item in self.all_nodes:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_all_nodes in self.all_nodes:
+                if _item_all_nodes:
+                    _items.append(_item_all_nodes.to_dict())
             _dict['all_nodes'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

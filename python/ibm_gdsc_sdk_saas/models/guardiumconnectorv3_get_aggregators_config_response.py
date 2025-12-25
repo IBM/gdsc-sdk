@@ -72,9 +72,9 @@ class Guardiumconnectorv3GetAggregatorsConfigResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in managed_units_config (list)
         _items = []
         if self.managed_units_config:
-            for _item in self.managed_units_config:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_managed_units_config in self.managed_units_config:
+                if _item_managed_units_config:
+                    _items.append(_item_managed_units_config.to_dict())
             _dict['managed_units_config'] = _items
         return _dict
 

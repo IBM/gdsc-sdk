@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CurrentUserTenant contains a list of tenant id and tenant name.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3CurrentUserTenant {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PART_NUMBER = "part_number";
   @SerializedName(SERIALIZED_NAME_PART_NUMBER)
+  @javax.annotation.Nullable
   private String partNumber;
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public Tenantuserv3CurrentUserTenant() {
   }
 
-  public Tenantuserv3CurrentUserTenant name(String name) {
+  public Tenantuserv3CurrentUserTenant name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of tenant.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Tenantuserv3CurrentUserTenant partNumber(String partNumber) {
+  public Tenantuserv3CurrentUserTenant partNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
     return this;
   }
 
-   /**
+  /**
    * Part number.
    * @return partNumber
-  **/
+   */
   @javax.annotation.Nullable
   public String getPartNumber() {
     return partNumber;
   }
 
-  public void setPartNumber(String partNumber) {
+  public void setPartNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
   }
 
 
-  public Tenantuserv3CurrentUserTenant tenantId(String tenantId) {
+  public Tenantuserv3CurrentUserTenant tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * The tenant id.
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
@@ -171,25 +175,22 @@ public class Tenantuserv3CurrentUserTenant {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("name");
-    openapiFields.add("part_number");
-    openapiFields.add("tenant_id");
+    openapiFields = new HashSet<String>(Arrays.asList("name", "part_number", "tenant_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3CurrentUserTenant
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3CurrentUserTenant
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3CurrentUserTenant.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3CurrentUserTenant is not found in the empty JSON string", Tenantuserv3CurrentUserTenant.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3CurrentUserTenant is not found in the empty JSON string", Tenantuserv3CurrentUserTenant.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Tenantuserv3CurrentUserTenant {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3CurrentUserTenant.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3CurrentUserTenant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3CurrentUserTenant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("part_number") != null && !jsonObj.get("part_number").isJsonNull()) && !jsonObj.get("part_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Tenantuserv3CurrentUserTenant {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3CurrentUserTenant given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3CurrentUserTenant
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3CurrentUserTenant
-  */
+  /**
+   * Create an instance of Tenantuserv3CurrentUserTenant given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3CurrentUserTenant
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3CurrentUserTenant
+   */
   public static Tenantuserv3CurrentUserTenant fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3CurrentUserTenant.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3CurrentUserTenant to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3CurrentUserTenant to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

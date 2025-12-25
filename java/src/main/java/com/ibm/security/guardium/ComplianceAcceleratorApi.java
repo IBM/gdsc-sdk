@@ -87,13 +87,14 @@ public class ComplianceAcceleratorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorCreateWorkspaceCall(Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorCreateWorkspaceCall(@javax.annotation.Nonnull Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -139,7 +140,7 @@ public class ComplianceAcceleratorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call complianceAcceleratorCreateWorkspaceValidateBeforeCall(Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call complianceAcceleratorCreateWorkspaceValidateBeforeCall(@javax.annotation.Nonnull Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'complianceacceleratorv3CreateWorkspaceRequest' is set
         if (complianceacceleratorv3CreateWorkspaceRequest == null) {
             throw new ApiException("Missing the required parameter 'complianceacceleratorv3CreateWorkspaceRequest' when calling complianceAcceleratorCreateWorkspace(Async)");
@@ -156,13 +157,14 @@ public class ComplianceAcceleratorApi {
      * @return StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse complianceAcceleratorCreateWorkspace(Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest) throws ApiException {
+    public StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse complianceAcceleratorCreateWorkspace(@javax.annotation.Nonnull Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest) throws ApiException {
         ApiResponse<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse> localVarResp = complianceAcceleratorCreateWorkspaceWithHttpInfo(complianceacceleratorv3CreateWorkspaceRequest);
         return localVarResp.getData();
     }
@@ -174,13 +176,14 @@ public class ComplianceAcceleratorApi {
      * @return ApiResponse&lt;StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse> complianceAcceleratorCreateWorkspaceWithHttpInfo(Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest) throws ApiException {
+    public ApiResponse<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse> complianceAcceleratorCreateWorkspaceWithHttpInfo(@javax.annotation.Nonnull Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest) throws ApiException {
         okhttp3.Call localVarCall = complianceAcceleratorCreateWorkspaceValidateBeforeCall(complianceacceleratorv3CreateWorkspaceRequest, null);
         Type localVarReturnType = new TypeToken<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -194,13 +197,14 @@ public class ComplianceAcceleratorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response.(streaming responses) </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorCreateWorkspaceAsync(Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest, final ApiCallback<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse> _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorCreateWorkspaceAsync(@javax.annotation.Nonnull Complianceacceleratorv3CreateWorkspaceRequest complianceacceleratorv3CreateWorkspaceRequest, final ApiCallback<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = complianceAcceleratorCreateWorkspaceValidateBeforeCall(complianceacceleratorv3CreateWorkspaceRequest, _callback);
         Type localVarReturnType = new TypeToken<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse>(){}.getType();
@@ -215,13 +219,14 @@ public class ComplianceAcceleratorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorDeleteComplianceWorkspacesCall(List<String> regulations, Boolean deleteAll, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorDeleteComplianceWorkspacesCall(@javax.annotation.Nullable List<String> regulations, @javax.annotation.Nullable Boolean deleteAll, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -274,7 +279,7 @@ public class ComplianceAcceleratorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call complianceAcceleratorDeleteComplianceWorkspacesValidateBeforeCall(List<String> regulations, Boolean deleteAll, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call complianceAcceleratorDeleteComplianceWorkspacesValidateBeforeCall(@javax.annotation.Nullable List<String> regulations, @javax.annotation.Nullable Boolean deleteAll, final ApiCallback _callback) throws ApiException {
         return complianceAcceleratorDeleteComplianceWorkspacesCall(regulations, deleteAll, _callback);
 
     }
@@ -287,13 +292,14 @@ public class ComplianceAcceleratorApi {
      * @return Complianceacceleratorv3DeleteComplianceWorkspacesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Complianceacceleratorv3DeleteComplianceWorkspacesResponse complianceAcceleratorDeleteComplianceWorkspaces(List<String> regulations, Boolean deleteAll) throws ApiException {
+    public Complianceacceleratorv3DeleteComplianceWorkspacesResponse complianceAcceleratorDeleteComplianceWorkspaces(@javax.annotation.Nullable List<String> regulations, @javax.annotation.Nullable Boolean deleteAll) throws ApiException {
         ApiResponse<Complianceacceleratorv3DeleteComplianceWorkspacesResponse> localVarResp = complianceAcceleratorDeleteComplianceWorkspacesWithHttpInfo(regulations, deleteAll);
         return localVarResp.getData();
     }
@@ -306,13 +312,14 @@ public class ComplianceAcceleratorApi {
      * @return ApiResponse&lt;Complianceacceleratorv3DeleteComplianceWorkspacesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Complianceacceleratorv3DeleteComplianceWorkspacesResponse> complianceAcceleratorDeleteComplianceWorkspacesWithHttpInfo(List<String> regulations, Boolean deleteAll) throws ApiException {
+    public ApiResponse<Complianceacceleratorv3DeleteComplianceWorkspacesResponse> complianceAcceleratorDeleteComplianceWorkspacesWithHttpInfo(@javax.annotation.Nullable List<String> regulations, @javax.annotation.Nullable Boolean deleteAll) throws ApiException {
         okhttp3.Call localVarCall = complianceAcceleratorDeleteComplianceWorkspacesValidateBeforeCall(regulations, deleteAll, null);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3DeleteComplianceWorkspacesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -327,13 +334,14 @@ public class ComplianceAcceleratorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorDeleteComplianceWorkspacesAsync(List<String> regulations, Boolean deleteAll, final ApiCallback<Complianceacceleratorv3DeleteComplianceWorkspacesResponse> _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorDeleteComplianceWorkspacesAsync(@javax.annotation.Nullable List<String> regulations, @javax.annotation.Nullable Boolean deleteAll, final ApiCallback<Complianceacceleratorv3DeleteComplianceWorkspacesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = complianceAcceleratorDeleteComplianceWorkspacesValidateBeforeCall(regulations, deleteAll, _callback);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3DeleteComplianceWorkspacesResponse>(){}.getType();
@@ -347,13 +355,14 @@ public class ComplianceAcceleratorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorGetComplianceInfoCall(Boolean isBrief, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorGetComplianceInfoCall(@javax.annotation.Nullable Boolean isBrief, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -402,7 +411,7 @@ public class ComplianceAcceleratorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call complianceAcceleratorGetComplianceInfoValidateBeforeCall(Boolean isBrief, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call complianceAcceleratorGetComplianceInfoValidateBeforeCall(@javax.annotation.Nullable Boolean isBrief, final ApiCallback _callback) throws ApiException {
         return complianceAcceleratorGetComplianceInfoCall(isBrief, _callback);
 
     }
@@ -414,13 +423,14 @@ public class ComplianceAcceleratorApi {
      * @return Complianceacceleratorv3GetComplianceInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Complianceacceleratorv3GetComplianceInfoResponse complianceAcceleratorGetComplianceInfo(Boolean isBrief) throws ApiException {
+    public Complianceacceleratorv3GetComplianceInfoResponse complianceAcceleratorGetComplianceInfo(@javax.annotation.Nullable Boolean isBrief) throws ApiException {
         ApiResponse<Complianceacceleratorv3GetComplianceInfoResponse> localVarResp = complianceAcceleratorGetComplianceInfoWithHttpInfo(isBrief);
         return localVarResp.getData();
     }
@@ -432,13 +442,14 @@ public class ComplianceAcceleratorApi {
      * @return ApiResponse&lt;Complianceacceleratorv3GetComplianceInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Complianceacceleratorv3GetComplianceInfoResponse> complianceAcceleratorGetComplianceInfoWithHttpInfo(Boolean isBrief) throws ApiException {
+    public ApiResponse<Complianceacceleratorv3GetComplianceInfoResponse> complianceAcceleratorGetComplianceInfoWithHttpInfo(@javax.annotation.Nullable Boolean isBrief) throws ApiException {
         okhttp3.Call localVarCall = complianceAcceleratorGetComplianceInfoValidateBeforeCall(isBrief, null);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3GetComplianceInfoResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -452,13 +463,14 @@ public class ComplianceAcceleratorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorGetComplianceInfoAsync(Boolean isBrief, final ApiCallback<Complianceacceleratorv3GetComplianceInfoResponse> _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorGetComplianceInfoAsync(@javax.annotation.Nullable Boolean isBrief, final ApiCallback<Complianceacceleratorv3GetComplianceInfoResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = complianceAcceleratorGetComplianceInfoValidateBeforeCall(isBrief, _callback);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3GetComplianceInfoResponse>(){}.getType();
@@ -472,7 +484,8 @@ public class ComplianceAcceleratorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -480,7 +493,7 @@ public class ComplianceAcceleratorApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call complianceAcceleratorHydrateWorkspaceCall(Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorHydrateWorkspaceCall(@javax.annotation.Nonnull Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -527,7 +540,7 @@ public class ComplianceAcceleratorApi {
 
     @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call complianceAcceleratorHydrateWorkspaceValidateBeforeCall(Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call complianceAcceleratorHydrateWorkspaceValidateBeforeCall(@javax.annotation.Nonnull Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'complianceacceleratorv3HydrateComplianceWorkspacesRequest' is set
         if (complianceacceleratorv3HydrateComplianceWorkspacesRequest == null) {
             throw new ApiException("Missing the required parameter 'complianceacceleratorv3HydrateComplianceWorkspacesRequest' when calling complianceAcceleratorHydrateWorkspace(Async)");
@@ -544,7 +557,8 @@ public class ComplianceAcceleratorApi {
      * @return Complianceacceleratorv3HydrateComplianceWorkspacesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -552,7 +566,7 @@ public class ComplianceAcceleratorApi {
      * @deprecated
      */
     @Deprecated
-    public Complianceacceleratorv3HydrateComplianceWorkspacesResponse complianceAcceleratorHydrateWorkspace(Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest) throws ApiException {
+    public Complianceacceleratorv3HydrateComplianceWorkspacesResponse complianceAcceleratorHydrateWorkspace(@javax.annotation.Nonnull Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest) throws ApiException {
         ApiResponse<Complianceacceleratorv3HydrateComplianceWorkspacesResponse> localVarResp = complianceAcceleratorHydrateWorkspaceWithHttpInfo(complianceacceleratorv3HydrateComplianceWorkspacesRequest);
         return localVarResp.getData();
     }
@@ -564,7 +578,8 @@ public class ComplianceAcceleratorApi {
      * @return ApiResponse&lt;Complianceacceleratorv3HydrateComplianceWorkspacesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -572,7 +587,7 @@ public class ComplianceAcceleratorApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<Complianceacceleratorv3HydrateComplianceWorkspacesResponse> complianceAcceleratorHydrateWorkspaceWithHttpInfo(Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest) throws ApiException {
+    public ApiResponse<Complianceacceleratorv3HydrateComplianceWorkspacesResponse> complianceAcceleratorHydrateWorkspaceWithHttpInfo(@javax.annotation.Nonnull Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest) throws ApiException {
         okhttp3.Call localVarCall = complianceAcceleratorHydrateWorkspaceValidateBeforeCall(complianceacceleratorv3HydrateComplianceWorkspacesRequest, null);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3HydrateComplianceWorkspacesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -586,7 +601,8 @@ public class ComplianceAcceleratorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -594,7 +610,7 @@ public class ComplianceAcceleratorApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call complianceAcceleratorHydrateWorkspaceAsync(Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest, final ApiCallback<Complianceacceleratorv3HydrateComplianceWorkspacesResponse> _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorHydrateWorkspaceAsync(@javax.annotation.Nonnull Complianceacceleratorv3HydrateComplianceWorkspacesRequest complianceacceleratorv3HydrateComplianceWorkspacesRequest, final ApiCallback<Complianceacceleratorv3HydrateComplianceWorkspacesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = complianceAcceleratorHydrateWorkspaceValidateBeforeCall(complianceacceleratorv3HydrateComplianceWorkspacesRequest, _callback);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3HydrateComplianceWorkspacesResponse>(){}.getType();
@@ -608,13 +624,14 @@ public class ComplianceAcceleratorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorStoreComplianceInfoCall(Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorStoreComplianceInfoCall(@javax.annotation.Nonnull Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -660,7 +677,7 @@ public class ComplianceAcceleratorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call complianceAcceleratorStoreComplianceInfoValidateBeforeCall(Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call complianceAcceleratorStoreComplianceInfoValidateBeforeCall(@javax.annotation.Nonnull Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'complianceacceleratorv3StoreComplianceInfoRequest' is set
         if (complianceacceleratorv3StoreComplianceInfoRequest == null) {
             throw new ApiException("Missing the required parameter 'complianceacceleratorv3StoreComplianceInfoRequest' when calling complianceAcceleratorStoreComplianceInfo(Async)");
@@ -677,13 +694,14 @@ public class ComplianceAcceleratorApi {
      * @return Complianceacceleratorv3StoreComplianceInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Complianceacceleratorv3StoreComplianceInfoResponse complianceAcceleratorStoreComplianceInfo(Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest) throws ApiException {
+    public Complianceacceleratorv3StoreComplianceInfoResponse complianceAcceleratorStoreComplianceInfo(@javax.annotation.Nonnull Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest) throws ApiException {
         ApiResponse<Complianceacceleratorv3StoreComplianceInfoResponse> localVarResp = complianceAcceleratorStoreComplianceInfoWithHttpInfo(complianceacceleratorv3StoreComplianceInfoRequest);
         return localVarResp.getData();
     }
@@ -695,13 +713,14 @@ public class ComplianceAcceleratorApi {
      * @return ApiResponse&lt;Complianceacceleratorv3StoreComplianceInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Complianceacceleratorv3StoreComplianceInfoResponse> complianceAcceleratorStoreComplianceInfoWithHttpInfo(Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest) throws ApiException {
+    public ApiResponse<Complianceacceleratorv3StoreComplianceInfoResponse> complianceAcceleratorStoreComplianceInfoWithHttpInfo(@javax.annotation.Nonnull Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest) throws ApiException {
         okhttp3.Call localVarCall = complianceAcceleratorStoreComplianceInfoValidateBeforeCall(complianceacceleratorv3StoreComplianceInfoRequest, null);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3StoreComplianceInfoResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -715,13 +734,14 @@ public class ComplianceAcceleratorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call complianceAcceleratorStoreComplianceInfoAsync(Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest, final ApiCallback<Complianceacceleratorv3StoreComplianceInfoResponse> _callback) throws ApiException {
+    public okhttp3.Call complianceAcceleratorStoreComplianceInfoAsync(@javax.annotation.Nonnull Complianceacceleratorv3StoreComplianceInfoRequest complianceacceleratorv3StoreComplianceInfoRequest, final ApiCallback<Complianceacceleratorv3StoreComplianceInfoResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = complianceAcceleratorStoreComplianceInfoValidateBeforeCall(complianceacceleratorv3StoreComplianceInfoRequest, _callback);
         Type localVarReturnType = new TypeToken<Complianceacceleratorv3StoreComplianceInfoResponse>(){}.getType();

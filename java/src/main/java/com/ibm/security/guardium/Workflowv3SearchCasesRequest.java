@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,111 +39,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Request cases by filtering on specific values.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3SearchCasesRequest {
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
+  @javax.annotation.Nullable
   private Workflowv3Filter filter;
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
+  @javax.annotation.Nullable
   private Integer limit;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Integer offset;
 
   public static final String SERIALIZED_NAME_WITH_LATEST = "with_latest";
   @SerializedName(SERIALIZED_NAME_WITH_LATEST)
+  @javax.annotation.Nullable
   private Boolean withLatest;
 
   public Workflowv3SearchCasesRequest() {
   }
 
-  public Workflowv3SearchCasesRequest filter(Workflowv3Filter filter) {
+  public Workflowv3SearchCasesRequest filter(@javax.annotation.Nullable Workflowv3Filter filter) {
     this.filter = filter;
     return this;
   }
 
-   /**
+  /**
    * Get filter
    * @return filter
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Filter getFilter() {
     return filter;
   }
 
-  public void setFilter(Workflowv3Filter filter) {
+  public void setFilter(@javax.annotation.Nullable Workflowv3Filter filter) {
     this.filter = filter;
   }
 
 
-  public Workflowv3SearchCasesRequest limit(Integer limit) {
+  public Workflowv3SearchCasesRequest limit(@javax.annotation.Nullable Integer limit) {
     this.limit = limit;
     return this;
   }
 
-   /**
+  /**
    * Optional: The max amount of cases to return for pagination.
    * @return limit
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getLimit() {
     return limit;
   }
 
-  public void setLimit(Integer limit) {
+  public void setLimit(@javax.annotation.Nullable Integer limit) {
     this.limit = limit;
   }
 
 
-  public Workflowv3SearchCasesRequest offset(Integer offset) {
+  public Workflowv3SearchCasesRequest offset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * Optional: The amount to offset the cases for pagination.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOffset() {
     return offset;
   }
 
-  public void setOffset(Integer offset) {
+  public void setOffset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
   }
 
 
-  public Workflowv3SearchCasesRequest withLatest(Boolean withLatest) {
+  public Workflowv3SearchCasesRequest withLatest(@javax.annotation.Nullable Boolean withLatest) {
     this.withLatest = withLatest;
     return this;
   }
 
-   /**
+  /**
    * Optional: Cases that runs most latestly.
    * @return withLatest
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getWithLatest() {
     return withLatest;
   }
 
-  public void setWithLatest(Boolean withLatest) {
+  public void setWithLatest(@javax.annotation.Nullable Boolean withLatest) {
     this.withLatest = withLatest;
   }
 
@@ -197,26 +202,22 @@ public class Workflowv3SearchCasesRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filter");
-    openapiFields.add("limit");
-    openapiFields.add("offset");
-    openapiFields.add("with_latest");
+    openapiFields = new HashSet<String>(Arrays.asList("filter", "limit", "offset", "with_latest"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3SearchCasesRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3SearchCasesRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3SearchCasesRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3SearchCasesRequest is not found in the empty JSON string", Workflowv3SearchCasesRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3SearchCasesRequest is not found in the empty JSON string", Workflowv3SearchCasesRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -224,7 +225,7 @@ public class Workflowv3SearchCasesRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3SearchCasesRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3SearchCasesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3SearchCasesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -263,22 +264,22 @@ public class Workflowv3SearchCasesRequest {
     }
   }
 
- /**
-  * Create an instance of Workflowv3SearchCasesRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3SearchCasesRequest
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3SearchCasesRequest
-  */
+  /**
+   * Create an instance of Workflowv3SearchCasesRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3SearchCasesRequest
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3SearchCasesRequest
+   */
   public static Workflowv3SearchCasesRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3SearchCasesRequest.class);
   }
 
- /**
-  * Convert an instance of Workflowv3SearchCasesRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3SearchCasesRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner {
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_ID = "cloudAccountId";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_ID)
+  @javax.annotation.Nonnull
   private String cloudAccountId;
 
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nonnull
   private BigDecimal count;
 
   public VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner() {
   }
 
-  public VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner cloudAccountId(String cloudAccountId) {
+  public VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner cloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountId
    * @return cloudAccountId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCloudAccountId() {
     return cloudAccountId;
   }
 
-  public void setCloudAccountId(String cloudAccountId) {
+  public void setCloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
   }
 
 
-  public VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner count(BigDecimal count) {
+  public VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner count(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getCount() {
     return count;
   }
 
-  public void setCount(BigDecimal count) {
+  public void setCount(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
   }
 
@@ -147,26 +150,22 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountI
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cloudAccountId");
-    openapiFields.add("count");
+    openapiFields = new HashSet<String>(Arrays.asList("cloudAccountId", "count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("cloudAccountId");
-    openapiRequiredFields.add("count");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("cloudAccountId", "count"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner is not found in the empty JSON string", VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner is not found in the empty JSON string", VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner.openapiRequiredFields.toString()));
         }
       }
 
@@ -174,19 +173,19 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountI
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("cloudAccountId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
       }
   }
 
@@ -219,22 +218,22 @@ public class VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountI
     }
   }
 
- /**
-  * Create an instance of VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner
-  * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner
-  */
+  /**
+   * Create an instance of VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner
+   * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner
+   */
   public static VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner.class);
   }
 
- /**
-  * Convert an instance of VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VulnerabilitiesSummaryAffectedDataStoreSummaryCloudAccountIdsCountInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -20,6 +20,8 @@ export class Connectionsv3GeneratePackageResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "gdpPackageLink",
@@ -47,4 +49,3 @@ export class Connectionsv3GeneratePackageResponse {
     public constructor() {
     }
 }
-

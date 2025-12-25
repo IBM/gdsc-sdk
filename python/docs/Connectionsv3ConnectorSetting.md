@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **headers** | **List[str]** | The headers used when this setting is active. | [optional] 
 **id** | **str** | The id of the setting. | [optional] 
 **name** | **str** | The name of the Preset. | [optional] 
-**order** | [**Connectionsv3OrderType**](Connectionsv3OrderType.md) |  | [optional] 
+**order** | [**Connectionsv3OrderType**](Connectionsv3OrderType.md) |  | [optional] [default to Connectionsv3OrderType.NONE]
 **sorted_by** | **str** | The header key used for sorting. | [optional] 
 
 ## Example

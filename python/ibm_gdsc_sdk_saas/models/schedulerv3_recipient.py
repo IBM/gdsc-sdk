@@ -30,7 +30,7 @@ class Schedulerv3Recipient(BaseModel):
     integration_id: Optional[StrictStr] = Field(default=None, description="Optional: The integration unique id (configuration object id).")
     label: Optional[StrictStr] = None
     template_id: Optional[StrictStr] = Field(default=None, description="Optional: Id of the template to use when sending e-mail.")
-    type: Optional[Schedulerv3RecipientType] = None
+    type: Optional[Schedulerv3RecipientType] = Schedulerv3RecipientType.UNDEFINED_RECTYPE
     value: Optional[StrictStr] = Field(default=None, description="Who to assign as the report result reviewer.")
     __properties: ClassVar[List[str]] = ["integration_id", "label", "template_id", "type", "value"]
 
@@ -88,7 +88,7 @@ class Schedulerv3Recipient(BaseModel):
             "integration_id": obj.get("integration_id"),
             "label": obj.get("label"),
             "template_id": obj.get("template_id"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Schedulerv3RecipientType.UNDEFINED_RECTYPE,
             "value": obj.get("value")
         })
         return _obj

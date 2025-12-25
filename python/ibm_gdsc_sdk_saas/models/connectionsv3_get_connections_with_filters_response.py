@@ -77,23 +77,23 @@ class Connectionsv3GetConnectionsWithFiltersResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in connectors (list)
         _items = []
         if self.connectors:
-            for _item in self.connectors:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_connectors in self.connectors:
+                if _item_connectors:
+                    _items.append(_item_connectors.to_dict())
             _dict['connectors'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in facets (list)
         _items = []
         if self.facets:
-            for _item in self.facets:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_facets in self.facets:
+                if _item_facets:
+                    _items.append(_item_facets.to_dict())
             _dict['facets'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in preset_stats (list)
         _items = []
         if self.preset_stats:
-            for _item in self.preset_stats:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_preset_stats in self.preset_stats:
+                if _item_preset_stats:
+                    _items.append(_item_preset_stats.to_dict())
             _dict['preset_stats'] = _items
         return _dict
 

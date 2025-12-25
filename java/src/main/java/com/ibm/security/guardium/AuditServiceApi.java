@@ -94,7 +94,8 @@ public class AuditServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -102,7 +103,7 @@ public class AuditServiceApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call auditServiceGetActivityRecordsCall(OffsetDateTime startTime, OffsetDateTime endTime, String uid, String actionTaken, String context, String changesMade, String performedBy, String contextDescription, String query, Long offset, Long limit, Boolean filter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call auditServiceGetActivityRecordsCall(@javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, @javax.annotation.Nullable String uid, @javax.annotation.Nullable String actionTaken, @javax.annotation.Nullable String context, @javax.annotation.Nullable String changesMade, @javax.annotation.Nullable String performedBy, @javax.annotation.Nullable String contextDescription, @javax.annotation.Nullable String query, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean filter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -196,7 +197,7 @@ public class AuditServiceApi {
 
     @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call auditServiceGetActivityRecordsValidateBeforeCall(OffsetDateTime startTime, OffsetDateTime endTime, String uid, String actionTaken, String context, String changesMade, String performedBy, String contextDescription, String query, Long offset, Long limit, Boolean filter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call auditServiceGetActivityRecordsValidateBeforeCall(@javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, @javax.annotation.Nullable String uid, @javax.annotation.Nullable String actionTaken, @javax.annotation.Nullable String context, @javax.annotation.Nullable String changesMade, @javax.annotation.Nullable String performedBy, @javax.annotation.Nullable String contextDescription, @javax.annotation.Nullable String query, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean filter, final ApiCallback _callback) throws ApiException {
         return auditServiceGetActivityRecordsCall(startTime, endTime, uid, actionTaken, context, changesMade, performedBy, contextDescription, query, offset, limit, filter, _callback);
 
     }
@@ -219,7 +220,8 @@ public class AuditServiceApi {
      * @return Auditv3GetActivityRecordsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -227,7 +229,7 @@ public class AuditServiceApi {
      * @deprecated
      */
     @Deprecated
-    public Auditv3GetActivityRecordsResponse auditServiceGetActivityRecords(OffsetDateTime startTime, OffsetDateTime endTime, String uid, String actionTaken, String context, String changesMade, String performedBy, String contextDescription, String query, Long offset, Long limit, Boolean filter) throws ApiException {
+    public Auditv3GetActivityRecordsResponse auditServiceGetActivityRecords(@javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, @javax.annotation.Nullable String uid, @javax.annotation.Nullable String actionTaken, @javax.annotation.Nullable String context, @javax.annotation.Nullable String changesMade, @javax.annotation.Nullable String performedBy, @javax.annotation.Nullable String contextDescription, @javax.annotation.Nullable String query, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean filter) throws ApiException {
         ApiResponse<Auditv3GetActivityRecordsResponse> localVarResp = auditServiceGetActivityRecordsWithHttpInfo(startTime, endTime, uid, actionTaken, context, changesMade, performedBy, contextDescription, query, offset, limit, filter);
         return localVarResp.getData();
     }
@@ -250,7 +252,8 @@ public class AuditServiceApi {
      * @return ApiResponse&lt;Auditv3GetActivityRecordsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -258,7 +261,7 @@ public class AuditServiceApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<Auditv3GetActivityRecordsResponse> auditServiceGetActivityRecordsWithHttpInfo(OffsetDateTime startTime, OffsetDateTime endTime, String uid, String actionTaken, String context, String changesMade, String performedBy, String contextDescription, String query, Long offset, Long limit, Boolean filter) throws ApiException {
+    public ApiResponse<Auditv3GetActivityRecordsResponse> auditServiceGetActivityRecordsWithHttpInfo(@javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, @javax.annotation.Nullable String uid, @javax.annotation.Nullable String actionTaken, @javax.annotation.Nullable String context, @javax.annotation.Nullable String changesMade, @javax.annotation.Nullable String performedBy, @javax.annotation.Nullable String contextDescription, @javax.annotation.Nullable String query, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean filter) throws ApiException {
         okhttp3.Call localVarCall = auditServiceGetActivityRecordsValidateBeforeCall(startTime, endTime, uid, actionTaken, context, changesMade, performedBy, contextDescription, query, offset, limit, filter, null);
         Type localVarReturnType = new TypeToken<Auditv3GetActivityRecordsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -283,7 +286,8 @@ public class AuditServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -291,7 +295,7 @@ public class AuditServiceApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call auditServiceGetActivityRecordsAsync(OffsetDateTime startTime, OffsetDateTime endTime, String uid, String actionTaken, String context, String changesMade, String performedBy, String contextDescription, String query, Long offset, Long limit, Boolean filter, final ApiCallback<Auditv3GetActivityRecordsResponse> _callback) throws ApiException {
+    public okhttp3.Call auditServiceGetActivityRecordsAsync(@javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, @javax.annotation.Nullable String uid, @javax.annotation.Nullable String actionTaken, @javax.annotation.Nullable String context, @javax.annotation.Nullable String changesMade, @javax.annotation.Nullable String performedBy, @javax.annotation.Nullable String contextDescription, @javax.annotation.Nullable String query, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean filter, final ApiCallback<Auditv3GetActivityRecordsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = auditServiceGetActivityRecordsValidateBeforeCall(startTime, endTime, uid, actionTaken, context, changesMade, performedBy, contextDescription, query, offset, limit, filter, _callback);
         Type localVarReturnType = new TypeToken<Auditv3GetActivityRecordsResponse>(){}.getType();
@@ -305,13 +309,14 @@ public class AuditServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call auditServicePutDownloadActivityRecordCall(Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call auditServicePutDownloadActivityRecordCall(@javax.annotation.Nonnull Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -357,7 +362,7 @@ public class AuditServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call auditServicePutDownloadActivityRecordValidateBeforeCall(Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call auditServicePutDownloadActivityRecordValidateBeforeCall(@javax.annotation.Nonnull Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'auditv3PutActivityRecordRequest' is set
         if (auditv3PutActivityRecordRequest == null) {
             throw new ApiException("Missing the required parameter 'auditv3PutActivityRecordRequest' when calling auditServicePutDownloadActivityRecord(Async)");
@@ -374,13 +379,14 @@ public class AuditServiceApi {
      * @return Auditv3PutActivityRecordResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Auditv3PutActivityRecordResponse auditServicePutDownloadActivityRecord(Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest) throws ApiException {
+    public Auditv3PutActivityRecordResponse auditServicePutDownloadActivityRecord(@javax.annotation.Nonnull Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest) throws ApiException {
         ApiResponse<Auditv3PutActivityRecordResponse> localVarResp = auditServicePutDownloadActivityRecordWithHttpInfo(auditv3PutActivityRecordRequest);
         return localVarResp.getData();
     }
@@ -392,13 +398,14 @@ public class AuditServiceApi {
      * @return ApiResponse&lt;Auditv3PutActivityRecordResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Auditv3PutActivityRecordResponse> auditServicePutDownloadActivityRecordWithHttpInfo(Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest) throws ApiException {
+    public ApiResponse<Auditv3PutActivityRecordResponse> auditServicePutDownloadActivityRecordWithHttpInfo(@javax.annotation.Nonnull Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest) throws ApiException {
         okhttp3.Call localVarCall = auditServicePutDownloadActivityRecordValidateBeforeCall(auditv3PutActivityRecordRequest, null);
         Type localVarReturnType = new TypeToken<Auditv3PutActivityRecordResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -412,13 +419,14 @@ public class AuditServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call auditServicePutDownloadActivityRecordAsync(Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest, final ApiCallback<Auditv3PutActivityRecordResponse> _callback) throws ApiException {
+    public okhttp3.Call auditServicePutDownloadActivityRecordAsync(@javax.annotation.Nonnull Auditv3PutActivityRecordRequest auditv3PutActivityRecordRequest, final ApiCallback<Auditv3PutActivityRecordResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = auditServicePutDownloadActivityRecordValidateBeforeCall(auditv3PutActivityRecordRequest, _callback);
         Type localVarReturnType = new TypeToken<Auditv3PutActivityRecordResponse>(){}.getType();

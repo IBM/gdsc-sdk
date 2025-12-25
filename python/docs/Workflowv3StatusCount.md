@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] 
+**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] [default to Workflowv3Status.UNDEFINED_STATUS]
 **total** | **int** |  | [optional] 
 
 ## Example

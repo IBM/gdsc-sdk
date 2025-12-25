@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **batch_num** | **str** | Specify batch number uniquely associated with a policy or group update message. | [optional] 
 **message** | **str** | Description of the status. | [optional] 
-**status** | [**Snifassistv3FeedbackStatus**](Snifassistv3FeedbackStatus.md) |  | [optional] 
+**status** | [**Snifassistv3FeedbackStatus**](Snifassistv3FeedbackStatus.md) |  | [optional] [default to Snifassistv3FeedbackStatus.SUCCEEDED]
 
 ## Example
 

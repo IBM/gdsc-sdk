@@ -74,9 +74,9 @@ class Assetsv3AssetClassification(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in classification (list)
         _items = []
         if self.classification:
-            for _item in self.classification:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_classification in self.classification:
+                if _item_classification:
+                    _items.append(_item_classification.to_dict())
             _dict['classification'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,157 +39,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3Variant
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Variant {
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_LAST_RUN = "last_run";
   @SerializedName(SERIALIZED_NAME_LAST_RUN)
+  @javax.annotation.Nullable
   private OffsetDateTime lastRun;
 
   public static final String SERIALIZED_NAME_LAST_RUN_ERROR = "last_run_error";
   @SerializedName(SERIALIZED_NAME_LAST_RUN_ERROR)
+  @javax.annotation.Nullable
   private String lastRunError;
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @javax.annotation.Nullable
   private Integer totalCount;
 
   public static final String SERIALIZED_NAME_VARIANT_ID = "variant_id";
   @SerializedName(SERIALIZED_NAME_VARIANT_ID)
+  @javax.annotation.Nullable
   private String variantId;
 
   public static final String SERIALIZED_NAME_VARIANT_NAME = "variant_name";
   @SerializedName(SERIALIZED_NAME_VARIANT_NAME)
+  @javax.annotation.Nullable
   private String variantName;
 
   public Reportsv3Variant() {
   }
 
-  public Reportsv3Variant headerId(String headerId) {
+  public Reportsv3Variant headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * Get headerId
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Reportsv3Variant lastRun(OffsetDateTime lastRun) {
+  public Reportsv3Variant lastRun(@javax.annotation.Nullable OffsetDateTime lastRun) {
     this.lastRun = lastRun;
     return this;
   }
 
-   /**
+  /**
    * Get lastRun
    * @return lastRun
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastRun() {
     return lastRun;
   }
 
-  public void setLastRun(OffsetDateTime lastRun) {
+  public void setLastRun(@javax.annotation.Nullable OffsetDateTime lastRun) {
     this.lastRun = lastRun;
   }
 
 
-  public Reportsv3Variant lastRunError(String lastRunError) {
+  public Reportsv3Variant lastRunError(@javax.annotation.Nullable String lastRunError) {
     this.lastRunError = lastRunError;
     return this;
   }
 
-   /**
+  /**
    * Get lastRunError
    * @return lastRunError
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastRunError() {
     return lastRunError;
   }
 
-  public void setLastRunError(String lastRunError) {
+  public void setLastRunError(@javax.annotation.Nullable String lastRunError) {
     this.lastRunError = lastRunError;
   }
 
 
-  public Reportsv3Variant totalCount(Integer totalCount) {
+  public Reportsv3Variant totalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
-   /**
+  /**
    * Get totalCount
    * @return totalCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(Integer totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
   }
 
 
-  public Reportsv3Variant variantId(String variantId) {
+  public Reportsv3Variant variantId(@javax.annotation.Nullable String variantId) {
     this.variantId = variantId;
     return this;
   }
 
-   /**
+  /**
    * Get variantId
    * @return variantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getVariantId() {
     return variantId;
   }
 
-  public void setVariantId(String variantId) {
+  public void setVariantId(@javax.annotation.Nullable String variantId) {
     this.variantId = variantId;
   }
 
 
-  public Reportsv3Variant variantName(String variantName) {
+  public Reportsv3Variant variantName(@javax.annotation.Nullable String variantName) {
     this.variantName = variantName;
     return this;
   }
 
-   /**
+  /**
    * Get variantName
    * @return variantName
-  **/
+   */
   @javax.annotation.Nullable
   public String getVariantName() {
     return variantName;
   }
 
-  public void setVariantName(String variantName) {
+  public void setVariantName(@javax.annotation.Nullable String variantName) {
     this.variantName = variantName;
   }
 
@@ -247,28 +254,22 @@ public class Reportsv3Variant {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("header_id");
-    openapiFields.add("last_run");
-    openapiFields.add("last_run_error");
-    openapiFields.add("total_count");
-    openapiFields.add("variant_id");
-    openapiFields.add("variant_name");
+    openapiFields = new HashSet<String>(Arrays.asList("header_id", "last_run", "last_run_error", "total_count", "variant_id", "variant_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Variant
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Variant
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Variant.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Variant is not found in the empty JSON string", Reportsv3Variant.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Variant is not found in the empty JSON string", Reportsv3Variant.openapiRequiredFields.toString()));
         }
       }
 
@@ -276,21 +277,21 @@ public class Reportsv3Variant {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Variant.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Variant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Variant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       if ((jsonObj.get("last_run_error") != null && !jsonObj.get("last_run_error").isJsonNull()) && !jsonObj.get("last_run_error").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_run_error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_run_error").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_run_error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_run_error").toString()));
       }
       if ((jsonObj.get("variant_id") != null && !jsonObj.get("variant_id").isJsonNull()) && !jsonObj.get("variant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `variant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `variant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_id").toString()));
       }
       if ((jsonObj.get("variant_name") != null && !jsonObj.get("variant_name").isJsonNull()) && !jsonObj.get("variant_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `variant_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `variant_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_name").toString()));
       }
   }
 
@@ -323,22 +324,22 @@ public class Reportsv3Variant {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Variant given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Variant
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Variant
-  */
+  /**
+   * Create an instance of Reportsv3Variant given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Variant
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Variant
+   */
   public static Reportsv3Variant fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Variant.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Variant to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Variant to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

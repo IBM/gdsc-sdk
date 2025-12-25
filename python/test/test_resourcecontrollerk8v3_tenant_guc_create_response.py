@@ -27,7 +27,7 @@ class TestResourcecontrollerk8v3TenantGUCCreateResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Resourcecontrollerk8v3TenantGUCCreateResponse:
         """Test Resourcecontrollerk8v3TenantGUCCreateResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Resourcecontrollerk8v3TenantGUCCreateResponse`

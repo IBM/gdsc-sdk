@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * A policy alert action.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3Action {
   public static final String SERIALIZED_NAME_NOTIFICATION_TYPE = "notification_type";
   @SerializedName(SERIALIZED_NAME_NOTIFICATION_TYPE)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3RecipientType notificationType = Complianceacceleratorv3RecipientType.UNDEFINED_RECTYPE;
 
   public static final String SERIALIZED_NAME_USER_IDS = "user_ids";
   @SerializedName(SERIALIZED_NAME_USER_IDS)
+  @javax.annotation.Nullable
   private List<String> userIds = new ArrayList<>();
 
   public Complianceacceleratorv3Action() {
   }
 
-  public Complianceacceleratorv3Action notificationType(Complianceacceleratorv3RecipientType notificationType) {
+  public Complianceacceleratorv3Action notificationType(@javax.annotation.Nullable Complianceacceleratorv3RecipientType notificationType) {
     this.notificationType = notificationType;
     return this;
   }
 
-   /**
+  /**
    * Get notificationType
    * @return notificationType
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3RecipientType getNotificationType() {
     return notificationType;
   }
 
-  public void setNotificationType(Complianceacceleratorv3RecipientType notificationType) {
+  public void setNotificationType(@javax.annotation.Nullable Complianceacceleratorv3RecipientType notificationType) {
     this.notificationType = notificationType;
   }
 
 
-  public Complianceacceleratorv3Action userIds(List<String> userIds) {
+  public Complianceacceleratorv3Action userIds(@javax.annotation.Nullable List<String> userIds) {
     this.userIds = userIds;
     return this;
   }
@@ -97,16 +100,16 @@ public class Complianceacceleratorv3Action {
     return this;
   }
 
-   /**
+  /**
    * The emails for the action.
    * @return userIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getUserIds() {
     return userIds;
   }
 
-  public void setUserIds(List<String> userIds) {
+  public void setUserIds(@javax.annotation.Nullable List<String> userIds) {
     this.userIds = userIds;
   }
 
@@ -157,24 +160,22 @@ public class Complianceacceleratorv3Action {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("notification_type");
-    openapiFields.add("user_ids");
+    openapiFields = new HashSet<String>(Arrays.asList("notification_type", "user_ids"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Action
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Action
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3Action.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3Action is not found in the empty JSON string", Complianceacceleratorv3Action.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3Action is not found in the empty JSON string", Complianceacceleratorv3Action.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Complianceacceleratorv3Action {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3Action.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Complianceacceleratorv3Action {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("user_ids") != null && !jsonObj.get("user_ids").isJsonNull() && !jsonObj.get("user_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user_ids` to be an array in the JSON string but got `%s`", jsonObj.get("user_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user_ids` to be an array in the JSON string but got `%s`", jsonObj.get("user_ids").toString()));
       }
   }
 
@@ -225,22 +226,22 @@ public class Complianceacceleratorv3Action {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3Action given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3Action
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Action
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3Action given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3Action
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Action
+   */
   public static Complianceacceleratorv3Action fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3Action.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3Action to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3Action to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

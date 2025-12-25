@@ -105,23 +105,23 @@ class Reportsv3ReportDefinition(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_headers (list)
         _items = []
         if self.report_headers:
-            for _item in self.report_headers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_headers in self.report_headers:
+                if _item_report_headers:
+                    _items.append(_item_report_headers.to_dict())
             _dict['report_headers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in report_tags (list)
         _items = []
         if self.report_tags:
-            for _item in self.report_tags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_tags in self.report_tags:
+                if _item_report_tags:
+                    _items.append(_item_report_tags.to_dict())
             _dict['report_tags'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in runtime_parameters (list)
         _items = []
         if self.runtime_parameters:
-            for _item in self.runtime_parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_runtime_parameters in self.runtime_parameters:
+                if _item_runtime_parameters:
+                    _items.append(_item_runtime_parameters.to_dict())
             _dict['runtime_parameters'] = _items
         return _dict
 

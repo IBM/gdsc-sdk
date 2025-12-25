@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetExportGroupRequest is the argument type of the GetExportGroupRequest API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3GetExportGroupRequest {
   public static final String SERIALIZED_NAME_EXPORT_HIERARCHY = "export_hierarchy";
   @SerializedName(SERIALIZED_NAME_EXPORT_HIERARCHY)
+  @javax.annotation.Nullable
   private Boolean exportHierarchy;
 
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer groupId;
 
   public Groupbuilderv3GetExportGroupRequest() {
   }
 
-  public Groupbuilderv3GetExportGroupRequest exportHierarchy(Boolean exportHierarchy) {
+  public Groupbuilderv3GetExportGroupRequest exportHierarchy(@javax.annotation.Nullable Boolean exportHierarchy) {
     this.exportHierarchy = exportHierarchy;
     return this;
   }
 
-   /**
+  /**
    * Export full hierarchy of nested group.
    * @return exportHierarchy
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getExportHierarchy() {
     return exportHierarchy;
   }
 
-  public void setExportHierarchy(Boolean exportHierarchy) {
+  public void setExportHierarchy(@javax.annotation.Nullable Boolean exportHierarchy) {
     this.exportHierarchy = exportHierarchy;
   }
 
 
-  public Groupbuilderv3GetExportGroupRequest groupId(Integer groupId) {
+  public Groupbuilderv3GetExportGroupRequest groupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * Group ID.
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(Integer groupId) {
+  public void setGroupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
   }
 
@@ -146,24 +149,22 @@ public class Groupbuilderv3GetExportGroupRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("export_hierarchy");
-    openapiFields.add("group_id");
+    openapiFields = new HashSet<String>(Arrays.asList("export_hierarchy", "group_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3GetExportGroupRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3GetExportGroupRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3GetExportGroupRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3GetExportGroupRequest is not found in the empty JSON string", Groupbuilderv3GetExportGroupRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3GetExportGroupRequest is not found in the empty JSON string", Groupbuilderv3GetExportGroupRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,7 +172,7 @@ public class Groupbuilderv3GetExportGroupRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3GetExportGroupRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3GetExportGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3GetExportGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -206,22 +207,22 @@ public class Groupbuilderv3GetExportGroupRequest {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3GetExportGroupRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3GetExportGroupRequest
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3GetExportGroupRequest
-  */
+  /**
+   * Create an instance of Groupbuilderv3GetExportGroupRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3GetExportGroupRequest
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3GetExportGroupRequest
+   */
   public static Groupbuilderv3GetExportGroupRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3GetExportGroupRequest.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3GetExportGroupRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3GetExportGroupRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

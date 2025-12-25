@@ -35,6 +35,8 @@ export class Policybuilderv3RuleMetadataResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "actionMetadata",
@@ -68,4 +70,3 @@ export class Policybuilderv3RuleMetadataResponse {
     public constructor() {
     }
 }
-

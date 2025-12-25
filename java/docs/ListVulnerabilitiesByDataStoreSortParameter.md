@@ -16,8 +16,8 @@
 
 | Name | Value |
 |---- | -----|
-| VULNERABILITIESCOUNT | &quot;vulnerabilitiesCount&quot; |
-| CRITICALITIESSCORE | &quot;criticalitiesScore&quot; |
+| VULNERABILITIES_COUNT | &quot;vulnerabilitiesCount&quot; |
+| CRITICALITIES_SCORE | &quot;criticalitiesScore&quot; |
 
 
 

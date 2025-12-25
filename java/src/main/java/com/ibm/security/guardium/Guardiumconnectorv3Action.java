@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,78 +42,82 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3Action
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3Action {
   public static final String SERIALIZED_NAME_ACTION_CODE = "action_code";
   @SerializedName(SERIALIZED_NAME_ACTION_CODE)
+  @javax.annotation.Nullable
   private Integer actionCode;
 
   public static final String SERIALIZED_NAME_ACTION_NAME = "action_name";
   @SerializedName(SERIALIZED_NAME_ACTION_NAME)
+  @javax.annotation.Nullable
   private String actionName;
 
   public static final String SERIALIZED_NAME_NOTIFICATIONS = "notifications";
   @SerializedName(SERIALIZED_NAME_NOTIFICATIONS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3ActionNotifications> notifications = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
   @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3ActionParameter> parameters = new ArrayList<>();
 
   public Guardiumconnectorv3Action() {
   }
 
-  public Guardiumconnectorv3Action actionCode(Integer actionCode) {
+  public Guardiumconnectorv3Action actionCode(@javax.annotation.Nullable Integer actionCode) {
     this.actionCode = actionCode;
     return this;
   }
 
-   /**
+  /**
    * Get actionCode
    * @return actionCode
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getActionCode() {
     return actionCode;
   }
 
-  public void setActionCode(Integer actionCode) {
+  public void setActionCode(@javax.annotation.Nullable Integer actionCode) {
     this.actionCode = actionCode;
   }
 
 
-  public Guardiumconnectorv3Action actionName(String actionName) {
+  public Guardiumconnectorv3Action actionName(@javax.annotation.Nullable String actionName) {
     this.actionName = actionName;
     return this;
   }
 
-   /**
+  /**
    * Get actionName
    * @return actionName
-  **/
+   */
   @javax.annotation.Nullable
   public String getActionName() {
     return actionName;
   }
 
-  public void setActionName(String actionName) {
+  public void setActionName(@javax.annotation.Nullable String actionName) {
     this.actionName = actionName;
   }
 
 
-  public Guardiumconnectorv3Action notifications(List<Guardiumconnectorv3ActionNotifications> notifications) {
+  public Guardiumconnectorv3Action notifications(@javax.annotation.Nullable List<Guardiumconnectorv3ActionNotifications> notifications) {
     this.notifications = notifications;
     return this;
   }
@@ -125,21 +130,21 @@ public class Guardiumconnectorv3Action {
     return this;
   }
 
-   /**
+  /**
    * Get notifications
    * @return notifications
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3ActionNotifications> getNotifications() {
     return notifications;
   }
 
-  public void setNotifications(List<Guardiumconnectorv3ActionNotifications> notifications) {
+  public void setNotifications(@javax.annotation.Nullable List<Guardiumconnectorv3ActionNotifications> notifications) {
     this.notifications = notifications;
   }
 
 
-  public Guardiumconnectorv3Action parameters(List<Guardiumconnectorv3ActionParameter> parameters) {
+  public Guardiumconnectorv3Action parameters(@javax.annotation.Nullable List<Guardiumconnectorv3ActionParameter> parameters) {
     this.parameters = parameters;
     return this;
   }
@@ -152,16 +157,16 @@ public class Guardiumconnectorv3Action {
     return this;
   }
 
-   /**
+  /**
    * Get parameters
    * @return parameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3ActionParameter> getParameters() {
     return parameters;
   }
 
-  public void setParameters(List<Guardiumconnectorv3ActionParameter> parameters) {
+  public void setParameters(@javax.annotation.Nullable List<Guardiumconnectorv3ActionParameter> parameters) {
     this.parameters = parameters;
   }
 
@@ -216,26 +221,22 @@ public class Guardiumconnectorv3Action {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action_code");
-    openapiFields.add("action_name");
-    openapiFields.add("notifications");
-    openapiFields.add("parameters");
+    openapiFields = new HashSet<String>(Arrays.asList("action_code", "action_name", "notifications", "parameters"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Action
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Action
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3Action.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3Action is not found in the empty JSON string", Guardiumconnectorv3Action.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3Action is not found in the empty JSON string", Guardiumconnectorv3Action.openapiRequiredFields.toString()));
         }
       }
 
@@ -243,19 +244,19 @@ public class Guardiumconnectorv3Action {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3Action.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action_name") != null && !jsonObj.get("action_name").isJsonNull()) && !jsonObj.get("action_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `action_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `action_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_name").toString()));
       }
       if (jsonObj.get("notifications") != null && !jsonObj.get("notifications").isJsonNull()) {
         JsonArray jsonArraynotifications = jsonObj.getAsJsonArray("notifications");
         if (jsonArraynotifications != null) {
           // ensure the json data is an array
           if (!jsonObj.get("notifications").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `notifications` to be an array in the JSON string but got `%s`", jsonObj.get("notifications").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `notifications` to be an array in the JSON string but got `%s`", jsonObj.get("notifications").toString()));
           }
 
           // validate the optional field `notifications` (array)
@@ -269,7 +270,7 @@ public class Guardiumconnectorv3Action {
         if (jsonArrayparameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
           }
 
           // validate the optional field `parameters` (array)
@@ -309,22 +310,22 @@ public class Guardiumconnectorv3Action {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3Action given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3Action
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Action
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3Action given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3Action
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Action
+   */
   public static Guardiumconnectorv3Action fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3Action.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3Action to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3Action to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

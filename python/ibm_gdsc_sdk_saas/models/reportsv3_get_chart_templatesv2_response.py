@@ -72,9 +72,9 @@ class Reportsv3GetChartTemplatesv2Response(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in templates (list)
         _items = []
         if self.templates:
-            for _item in self.templates:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_templates in self.templates:
+                if _item_templates:
+                    _items.append(_item_templates.to_dict())
             _dict['templates'] = _items
         return _dict
 

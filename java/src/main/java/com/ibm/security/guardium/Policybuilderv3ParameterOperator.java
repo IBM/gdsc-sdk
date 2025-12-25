@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -39,7 +41,9 @@ public enum Policybuilderv3ParameterOperator {
   
   NOT_IN_GROUP("NOT_IN_GROUP"),
   
-  EVERY_MEMBER_IN_GROUP("EVERY_MEMBER_IN_GROUP");
+  EVERY_MEMBER_IN_GROUP("EVERY_MEMBER_IN_GROUP"),
+  
+  IN_REPORT("IN_REPORT");
 
   private String value;
 

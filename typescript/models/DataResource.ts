@@ -26,8 +26,11 @@ export class DataResource {
     'isReviewed'?: boolean;
     'link'?: string;
     'stats'?: DataResourceStats;
+    'path'?: string;
 
     static readonly discriminator: string | undefined = undefined;
+
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
@@ -101,6 +104,12 @@ export class DataResource {
             "baseName": "stats",
             "type": "DataResourceStats",
             "format": ""
+        },
+        {
+            "name": "path",
+            "baseName": "path",
+            "type": "string",
+            "format": ""
         }    ];
 
     static getAttributeTypeMap() {
@@ -110,4 +119,3 @@ export class DataResource {
     public constructor() {
     }
 }
-

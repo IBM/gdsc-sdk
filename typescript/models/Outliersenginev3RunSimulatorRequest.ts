@@ -35,6 +35,8 @@ export class Outliersenginev3RunSimulatorRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "configurationFilePath",
@@ -68,4 +70,3 @@ export class Outliersenginev3RunSimulatorRequest {
     public constructor() {
     }
 }
-

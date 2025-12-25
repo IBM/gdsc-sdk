@@ -72,9 +72,9 @@ class Healthcollectorv3GetTopGDPCollectorsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in top_gdp_collectors (list)
         _items = []
         if self.top_gdp_collectors:
-            for _item in self.top_gdp_collectors:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_top_gdp_collectors in self.top_gdp_collectors:
+                if _item_top_gdp_collectors:
+                    _items.append(_item_top_gdp_collectors.to_dict())
             _dict['top_gdp_collectors'] = _items
         return _dict
 

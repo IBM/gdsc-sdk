@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -29,17 +31,17 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(Assetsv3Level.Adapter.class)
 public enum Assetsv3Level {
   
-  UNKNOWN("LEVEL_UNKNOWN"),
+  LEVEL_UNKNOWN("LEVEL_UNKNOWN"),
   
-  NONE("LEVEL_NONE"),
+  LEVEL_NONE("LEVEL_NONE"),
   
-  LOW("LEVEL_LOW"),
+  LEVEL_LOW("LEVEL_LOW"),
   
-  MEDIUM("LEVEL_MEDIUM"),
+  LEVEL_MEDIUM("LEVEL_MEDIUM"),
   
-  HIGH("LEVEL_HIGH"),
+  LEVEL_HIGH("LEVEL_HIGH"),
   
-  CRITICAL("LEVEL_CRITICAL");
+  LEVEL_CRITICAL("LEVEL_CRITICAL");
 
   private String value;
 

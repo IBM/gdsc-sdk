@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,124 +45,130 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsrunnerv3GetReportColumnFacetRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3GetReportColumnFacetRequest {
   public static final String SERIALIZED_NAME_DATE_RANGE = "date_range";
   @SerializedName(SERIALIZED_NAME_DATE_RANGE)
+  @javax.annotation.Nullable
   private Reportsv3DateRange dateRange;
 
   public static final String SERIALIZED_NAME_FACET_SELECTED_HEADER = "facet_selected_header";
   @SerializedName(SERIALIZED_NAME_FACET_SELECTED_HEADER)
+  @javax.annotation.Nullable
   private Reportsv3ReportHeader facetSelectedHeader;
 
   public static final String SERIALIZED_NAME_MODEL_TYPE = "model_type";
   @SerializedName(SERIALIZED_NAME_MODEL_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3ModelType modelType = Reportsv3ModelType.UNDEFINED_MODEL_TYPE;
 
   public static final String SERIALIZED_NAME_REPORT_DEFINITION = "report_definition";
   @SerializedName(SERIALIZED_NAME_REPORT_DEFINITION)
+  @javax.annotation.Nullable
   private Reportsv3ReportDefinition reportDefinition;
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAMETER_LIST = "runtime_parameter_list";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAMETER_LIST)
+  @javax.annotation.Nullable
   private List<Reportsv3RunTimeParameter> runtimeParameterList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TIME_ZONE = "time_zone";
   @SerializedName(SERIALIZED_NAME_TIME_ZONE)
+  @javax.annotation.Nullable
   private String timeZone;
 
   public Reportsrunnerv3GetReportColumnFacetRequest() {
   }
 
-  public Reportsrunnerv3GetReportColumnFacetRequest dateRange(Reportsv3DateRange dateRange) {
+  public Reportsrunnerv3GetReportColumnFacetRequest dateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(Reportsv3DateRange dateRange) {
+  public void setDateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
   }
 
 
-  public Reportsrunnerv3GetReportColumnFacetRequest facetSelectedHeader(Reportsv3ReportHeader facetSelectedHeader) {
+  public Reportsrunnerv3GetReportColumnFacetRequest facetSelectedHeader(@javax.annotation.Nullable Reportsv3ReportHeader facetSelectedHeader) {
     this.facetSelectedHeader = facetSelectedHeader;
     return this;
   }
 
-   /**
+  /**
    * Get facetSelectedHeader
    * @return facetSelectedHeader
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportHeader getFacetSelectedHeader() {
     return facetSelectedHeader;
   }
 
-  public void setFacetSelectedHeader(Reportsv3ReportHeader facetSelectedHeader) {
+  public void setFacetSelectedHeader(@javax.annotation.Nullable Reportsv3ReportHeader facetSelectedHeader) {
     this.facetSelectedHeader = facetSelectedHeader;
   }
 
 
-  public Reportsrunnerv3GetReportColumnFacetRequest modelType(Reportsv3ModelType modelType) {
+  public Reportsrunnerv3GetReportColumnFacetRequest modelType(@javax.annotation.Nullable Reportsv3ModelType modelType) {
     this.modelType = modelType;
     return this;
   }
 
-   /**
+  /**
    * Get modelType
    * @return modelType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ModelType getModelType() {
     return modelType;
   }
 
-  public void setModelType(Reportsv3ModelType modelType) {
+  public void setModelType(@javax.annotation.Nullable Reportsv3ModelType modelType) {
     this.modelType = modelType;
   }
 
 
-  public Reportsrunnerv3GetReportColumnFacetRequest reportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public Reportsrunnerv3GetReportColumnFacetRequest reportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
     return this;
   }
 
-   /**
+  /**
    * Get reportDefinition
    * @return reportDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportDefinition getReportDefinition() {
     return reportDefinition;
   }
 
-  public void setReportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public void setReportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
   }
 
 
-  public Reportsrunnerv3GetReportColumnFacetRequest runtimeParameterList(List<Reportsv3RunTimeParameter> runtimeParameterList) {
+  public Reportsrunnerv3GetReportColumnFacetRequest runtimeParameterList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameterList) {
     this.runtimeParameterList = runtimeParameterList;
     return this;
   }
@@ -174,35 +181,35 @@ public class Reportsrunnerv3GetReportColumnFacetRequest {
     return this;
   }
 
-   /**
+  /**
    * List of runtime parameter if needed.
    * @return runtimeParameterList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3RunTimeParameter> getRuntimeParameterList() {
     return runtimeParameterList;
   }
 
-  public void setRuntimeParameterList(List<Reportsv3RunTimeParameter> runtimeParameterList) {
+  public void setRuntimeParameterList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameterList) {
     this.runtimeParameterList = runtimeParameterList;
   }
 
 
-  public Reportsrunnerv3GetReportColumnFacetRequest timeZone(String timeZone) {
+  public Reportsrunnerv3GetReportColumnFacetRequest timeZone(@javax.annotation.Nullable String timeZone) {
     this.timeZone = timeZone;
     return this;
   }
 
-   /**
+  /**
    * Time zone.
    * @return timeZone
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimeZone() {
     return timeZone;
   }
 
-  public void setTimeZone(String timeZone) {
+  public void setTimeZone(@javax.annotation.Nullable String timeZone) {
     this.timeZone = timeZone;
   }
 
@@ -261,28 +268,22 @@ public class Reportsrunnerv3GetReportColumnFacetRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("date_range");
-    openapiFields.add("facet_selected_header");
-    openapiFields.add("model_type");
-    openapiFields.add("report_definition");
-    openapiFields.add("runtime_parameter_list");
-    openapiFields.add("time_zone");
+    openapiFields = new HashSet<String>(Arrays.asList("date_range", "facet_selected_header", "model_type", "report_definition", "runtime_parameter_list", "time_zone"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetReportColumnFacetRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetReportColumnFacetRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3GetReportColumnFacetRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3GetReportColumnFacetRequest is not found in the empty JSON string", Reportsrunnerv3GetReportColumnFacetRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3GetReportColumnFacetRequest is not found in the empty JSON string", Reportsrunnerv3GetReportColumnFacetRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -290,7 +291,7 @@ public class Reportsrunnerv3GetReportColumnFacetRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3GetReportColumnFacetRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetReportColumnFacetRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetReportColumnFacetRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -315,7 +316,7 @@ public class Reportsrunnerv3GetReportColumnFacetRequest {
         if (jsonArrayruntimeParameterList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("runtime_parameter_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `runtime_parameter_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameter_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `runtime_parameter_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameter_list").toString()));
           }
 
           // validate the optional field `runtime_parameter_list` (array)
@@ -325,7 +326,7 @@ public class Reportsrunnerv3GetReportColumnFacetRequest {
         }
       }
       if ((jsonObj.get("time_zone") != null && !jsonObj.get("time_zone").isJsonNull()) && !jsonObj.get("time_zone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("time_zone").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("time_zone").toString()));
       }
   }
 
@@ -358,22 +359,22 @@ public class Reportsrunnerv3GetReportColumnFacetRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3GetReportColumnFacetRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3GetReportColumnFacetRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetReportColumnFacetRequest
-  */
+  /**
+   * Create an instance of Reportsrunnerv3GetReportColumnFacetRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3GetReportColumnFacetRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetReportColumnFacetRequest
+   */
   public static Reportsrunnerv3GetReportColumnFacetRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3GetReportColumnFacetRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3GetReportColumnFacetRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3GetReportColumnFacetRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

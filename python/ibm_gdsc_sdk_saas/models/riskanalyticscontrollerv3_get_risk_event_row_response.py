@@ -73,9 +73,9 @@ class Riskanalyticscontrollerv3GetRiskEventRowResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in risk_event_rows (list)
         _items = []
         if self.risk_event_rows:
-            for _item in self.risk_event_rows:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_risk_event_rows in self.risk_event_rows:
+                if _item_risk_event_rows:
+                    _items.append(_item_risk_event_rows.to_dict())
             _dict['risk_event_rows'] = _items
         return _dict
 

@@ -17,5 +17,7 @@
 
 * `EVERY_MEMBER_IN_GROUP` (value: `"EVERY_MEMBER_IN_GROUP"`)
 
+* `IN_REPORT` (value: `"IN_REPORT"`)
+
 
 

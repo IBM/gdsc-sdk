@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **limit** | **int** | Optional: The max amount of cases to return for pagination. | [optional] 
 **offset** | **int** | Optional: The amount to offset the cases for pagination. | [optional] 
 **sort_field** | **str** |  | [optional] 
-**sort_order** | [**Reportsv3OrderBy**](Reportsv3OrderBy.md) |  | [optional] 
+**sort_order** | [**Reportsv3OrderBy**](Reportsv3OrderBy.md) |  | [optional] [default to Reportsv3OrderBy.UNDEFINED_ORDER_BY]
 **task_id** | **str** |  | [optional] 
 
 ## Example

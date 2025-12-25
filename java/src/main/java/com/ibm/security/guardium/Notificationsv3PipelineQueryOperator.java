@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -29,9 +31,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(Notificationsv3PipelineQueryOperator.Adapter.class)
 public enum Notificationsv3PipelineQueryOperator {
   
-  AND("OPERATOR_AND"),
+  OPERATOR_AND("OPERATOR_AND"),
   
-  OR("OPERATOR_OR");
+  OPERATOR_OR("OPERATOR_OR");
 
   private String value;
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CreateGroupRequest requests creation of a new group.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3CreateGroupRequest {
   public static final String SERIALIZED_NAME_COPY_GROUP_ID = "copy_group_id";
   @SerializedName(SERIALIZED_NAME_COPY_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer copyGroupId;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_GROUP_TYPE_ID = "group_type_id";
   @SerializedName(SERIALIZED_NAME_GROUP_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer groupTypeId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NESTED = "nested";
   @SerializedName(SERIALIZED_NAME_NESTED)
+  @javax.annotation.Nullable
   private Boolean nested;
 
   public Groupbuilderv3CreateGroupRequest() {
   }
 
-  public Groupbuilderv3CreateGroupRequest copyGroupId(Integer copyGroupId) {
+  public Groupbuilderv3CreateGroupRequest copyGroupId(@javax.annotation.Nullable Integer copyGroupId) {
     this.copyGroupId = copyGroupId;
     return this;
   }
 
-   /**
+  /**
    * Group ID to copy.
    * @return copyGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getCopyGroupId() {
     return copyGroupId;
   }
 
-  public void setCopyGroupId(Integer copyGroupId) {
+  public void setCopyGroupId(@javax.annotation.Nullable Integer copyGroupId) {
     this.copyGroupId = copyGroupId;
   }
 
 
-  public Groupbuilderv3CreateGroupRequest description(String description) {
+  public Groupbuilderv3CreateGroupRequest description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Group description.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Groupbuilderv3CreateGroupRequest groupTypeId(Integer groupTypeId) {
+  public Groupbuilderv3CreateGroupRequest groupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
     return this;
   }
 
-   /**
+  /**
    * Group type ID.
    * @return groupTypeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupTypeId() {
     return groupTypeId;
   }
 
-  public void setGroupTypeId(Integer groupTypeId) {
+  public void setGroupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
   }
 
 
-  public Groupbuilderv3CreateGroupRequest name(String name) {
+  public Groupbuilderv3CreateGroupRequest name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Group name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Groupbuilderv3CreateGroupRequest nested(Boolean nested) {
+  public Groupbuilderv3CreateGroupRequest nested(@javax.annotation.Nullable Boolean nested) {
     this.nested = nested;
     return this;
   }
 
-   /**
+  /**
    * Nested (hierarchical).
    * @return nested
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getNested() {
     return nested;
   }
 
-  public void setNested(Boolean nested) {
+  public void setNested(@javax.annotation.Nullable Boolean nested) {
     this.nested = nested;
   }
 
@@ -221,27 +227,22 @@ public class Groupbuilderv3CreateGroupRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("copy_group_id");
-    openapiFields.add("description");
-    openapiFields.add("group_type_id");
-    openapiFields.add("name");
-    openapiFields.add("nested");
+    openapiFields = new HashSet<String>(Arrays.asList("copy_group_id", "description", "group_type_id", "name", "nested"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3CreateGroupRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3CreateGroupRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3CreateGroupRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3CreateGroupRequest is not found in the empty JSON string", Groupbuilderv3CreateGroupRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3CreateGroupRequest is not found in the empty JSON string", Groupbuilderv3CreateGroupRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,15 +250,15 @@ public class Groupbuilderv3CreateGroupRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3CreateGroupRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3CreateGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3CreateGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -290,22 +291,22 @@ public class Groupbuilderv3CreateGroupRequest {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3CreateGroupRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3CreateGroupRequest
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3CreateGroupRequest
-  */
+  /**
+   * Create an instance of Groupbuilderv3CreateGroupRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3CreateGroupRequest
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3CreateGroupRequest
+   */
   public static Groupbuilderv3CreateGroupRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3CreateGroupRequest.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3CreateGroupRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3CreateGroupRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

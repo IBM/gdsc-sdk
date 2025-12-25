@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AddCloudAccounts200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AddCloudAccounts200Response {
   public static final String SERIALIZED_NAME_INSTALLATION_URL = "installationUrl";
   @SerializedName(SERIALIZED_NAME_INSTALLATION_URL)
+  @javax.annotation.Nullable
   private String installationUrl;
 
   public static final String SERIALIZED_NAME_INSTALLATION_SCRIPT = "installationScript";
   @SerializedName(SERIALIZED_NAME_INSTALLATION_SCRIPT)
+  @javax.annotation.Nullable
   private String installationScript;
 
   public AddCloudAccounts200Response() {
   }
 
-  public AddCloudAccounts200Response installationUrl(String installationUrl) {
+  public AddCloudAccounts200Response installationUrl(@javax.annotation.Nullable String installationUrl) {
     this.installationUrl = installationUrl;
     return this;
   }
 
-   /**
+  /**
    * Use this URL to download the installation script.
    * @return installationUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstallationUrl() {
     return installationUrl;
   }
 
-  public void setInstallationUrl(String installationUrl) {
+  public void setInstallationUrl(@javax.annotation.Nullable String installationUrl) {
     this.installationUrl = installationUrl;
   }
 
 
-  public AddCloudAccounts200Response installationScript(String installationScript) {
+  public AddCloudAccounts200Response installationScript(@javax.annotation.Nullable String installationScript) {
     this.installationScript = installationScript;
     return this;
   }
 
-   /**
+  /**
    * Use this URL to download the installation script
    * @return installationScript
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstallationScript() {
     return installationScript;
   }
 
-  public void setInstallationScript(String installationScript) {
+  public void setInstallationScript(@javax.annotation.Nullable String installationScript) {
     this.installationScript = installationScript;
   }
 
@@ -146,24 +149,22 @@ public class AddCloudAccounts200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("installationUrl");
-    openapiFields.add("installationScript");
+    openapiFields = new HashSet<String>(Arrays.asList("installationUrl", "installationScript"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddCloudAccounts200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddCloudAccounts200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddCloudAccounts200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddCloudAccounts200Response is not found in the empty JSON string", AddCloudAccounts200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AddCloudAccounts200Response is not found in the empty JSON string", AddCloudAccounts200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class AddCloudAccounts200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AddCloudAccounts200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddCloudAccounts200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AddCloudAccounts200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("installationUrl") != null && !jsonObj.get("installationUrl").isJsonNull()) && !jsonObj.get("installationUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `installationUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installationUrl").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `installationUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installationUrl").toString()));
       }
       if ((jsonObj.get("installationScript") != null && !jsonObj.get("installationScript").isJsonNull()) && !jsonObj.get("installationScript").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `installationScript` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installationScript").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `installationScript` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installationScript").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class AddCloudAccounts200Response {
     }
   }
 
- /**
-  * Create an instance of AddCloudAccounts200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddCloudAccounts200Response
-  * @throws IOException if the JSON string is invalid with respect to AddCloudAccounts200Response
-  */
+  /**
+   * Create an instance of AddCloudAccounts200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddCloudAccounts200Response
+   * @throws IOException if the JSON string is invalid with respect to AddCloudAccounts200Response
+   */
   public static AddCloudAccounts200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddCloudAccounts200Response.class);
   }
 
- /**
-  * Convert an instance of AddCloudAccounts200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddCloudAccounts200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

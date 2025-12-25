@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,140 +42,150 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3GetConnectionsWithFiltersRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3GetConnectionsWithFiltersRequest {
   public static final String SERIALIZED_NAME_CALCULATE_FACETS = "calculate_facets";
   @SerializedName(SERIALIZED_NAME_CALCULATE_FACETS)
+  @javax.annotation.Nullable
   private Boolean calculateFacets;
 
   public static final String SERIALIZED_NAME_CALCULATE_PRESET_STATS = "calculate_preset_stats";
   @SerializedName(SERIALIZED_NAME_CALCULATE_PRESET_STATS)
+  @javax.annotation.Nullable
   private Boolean calculatePresetStats;
 
   public static final String SERIALIZED_NAME_CALCULATE_TOTAL = "calculate_total";
   @SerializedName(SERIALIZED_NAME_CALCULATE_TOTAL)
+  @javax.annotation.Nullable
   private Boolean calculateTotal;
 
   public static final String SERIALIZED_NAME_FETCH_SIZE = "fetch_size";
   @SerializedName(SERIALIZED_NAME_FETCH_SIZE)
+  @javax.annotation.Nullable
   private Integer fetchSize;
 
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
+  @javax.annotation.Nullable
   private List<Connectionsv3HeaderFilter> filters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HEADERS = "headers";
   @SerializedName(SERIALIZED_NAME_HEADERS)
+  @javax.annotation.Nullable
   private List<String> headers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Integer offset;
 
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
+  @javax.annotation.Nullable
   private Connectionsv3OrderType order = Connectionsv3OrderType.NONE;
 
   public static final String SERIALIZED_NAME_SEARCH = "search";
   @SerializedName(SERIALIZED_NAME_SEARCH)
+  @javax.annotation.Nullable
   private String search;
 
   public static final String SERIALIZED_NAME_SORT_BY = "sort_by";
   @SerializedName(SERIALIZED_NAME_SORT_BY)
+  @javax.annotation.Nullable
   private String sortBy;
 
   public Connectionsv3GetConnectionsWithFiltersRequest() {
   }
 
-  public Connectionsv3GetConnectionsWithFiltersRequest calculateFacets(Boolean calculateFacets) {
+  public Connectionsv3GetConnectionsWithFiltersRequest calculateFacets(@javax.annotation.Nullable Boolean calculateFacets) {
     this.calculateFacets = calculateFacets;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to calculate facets.
    * @return calculateFacets
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCalculateFacets() {
     return calculateFacets;
   }
 
-  public void setCalculateFacets(Boolean calculateFacets) {
+  public void setCalculateFacets(@javax.annotation.Nullable Boolean calculateFacets) {
     this.calculateFacets = calculateFacets;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest calculatePresetStats(Boolean calculatePresetStats) {
+  public Connectionsv3GetConnectionsWithFiltersRequest calculatePresetStats(@javax.annotation.Nullable Boolean calculatePresetStats) {
     this.calculatePresetStats = calculatePresetStats;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to calculate preset stats.
    * @return calculatePresetStats
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCalculatePresetStats() {
     return calculatePresetStats;
   }
 
-  public void setCalculatePresetStats(Boolean calculatePresetStats) {
+  public void setCalculatePresetStats(@javax.annotation.Nullable Boolean calculatePresetStats) {
     this.calculatePresetStats = calculatePresetStats;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest calculateTotal(Boolean calculateTotal) {
+  public Connectionsv3GetConnectionsWithFiltersRequest calculateTotal(@javax.annotation.Nullable Boolean calculateTotal) {
     this.calculateTotal = calculateTotal;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to calculate total.
    * @return calculateTotal
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCalculateTotal() {
     return calculateTotal;
   }
 
-  public void setCalculateTotal(Boolean calculateTotal) {
+  public void setCalculateTotal(@javax.annotation.Nullable Boolean calculateTotal) {
     this.calculateTotal = calculateTotal;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest fetchSize(Integer fetchSize) {
+  public Connectionsv3GetConnectionsWithFiltersRequest fetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
     return this;
   }
 
-   /**
+  /**
    * The max amount of rows to return for pagination.
    * @return fetchSize
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFetchSize() {
     return fetchSize;
   }
 
-  public void setFetchSize(Integer fetchSize) {
+  public void setFetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest filters(List<Connectionsv3HeaderFilter> filters) {
+  public Connectionsv3GetConnectionsWithFiltersRequest filters(@javax.annotation.Nullable List<Connectionsv3HeaderFilter> filters) {
     this.filters = filters;
     return this;
   }
@@ -187,21 +198,21 @@ public class Connectionsv3GetConnectionsWithFiltersRequest {
     return this;
   }
 
-   /**
+  /**
    * The filters to apply.
    * @return filters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3HeaderFilter> getFilters() {
     return filters;
   }
 
-  public void setFilters(List<Connectionsv3HeaderFilter> filters) {
+  public void setFilters(@javax.annotation.Nullable List<Connectionsv3HeaderFilter> filters) {
     this.filters = filters;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest headers(List<String> headers) {
+  public Connectionsv3GetConnectionsWithFiltersRequest headers(@javax.annotation.Nullable List<String> headers) {
     this.headers = headers;
     return this;
   }
@@ -214,92 +225,92 @@ public class Connectionsv3GetConnectionsWithFiltersRequest {
     return this;
   }
 
-   /**
+  /**
    * The headers used.
    * @return headers
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getHeaders() {
     return headers;
   }
 
-  public void setHeaders(List<String> headers) {
+  public void setHeaders(@javax.annotation.Nullable List<String> headers) {
     this.headers = headers;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest offset(Integer offset) {
+  public Connectionsv3GetConnectionsWithFiltersRequest offset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * The amount to offset the rows by for pagination.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOffset() {
     return offset;
   }
 
-  public void setOffset(Integer offset) {
+  public void setOffset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest order(Connectionsv3OrderType order) {
+  public Connectionsv3GetConnectionsWithFiltersRequest order(@javax.annotation.Nullable Connectionsv3OrderType order) {
     this.order = order;
     return this;
   }
 
-   /**
+  /**
    * Get order
    * @return order
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3OrderType getOrder() {
     return order;
   }
 
-  public void setOrder(Connectionsv3OrderType order) {
+  public void setOrder(@javax.annotation.Nullable Connectionsv3OrderType order) {
     this.order = order;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest search(String search) {
+  public Connectionsv3GetConnectionsWithFiltersRequest search(@javax.annotation.Nullable String search) {
     this.search = search;
     return this;
   }
 
-   /**
+  /**
    * The text to search.
    * @return search
-  **/
+   */
   @javax.annotation.Nullable
   public String getSearch() {
     return search;
   }
 
-  public void setSearch(String search) {
+  public void setSearch(@javax.annotation.Nullable String search) {
     this.search = search;
   }
 
 
-  public Connectionsv3GetConnectionsWithFiltersRequest sortBy(String sortBy) {
+  public Connectionsv3GetConnectionsWithFiltersRequest sortBy(@javax.annotation.Nullable String sortBy) {
     this.sortBy = sortBy;
     return this;
   }
 
-   /**
+  /**
    * The header key used for sorting.
    * @return sortBy
-  **/
+   */
   @javax.annotation.Nullable
   public String getSortBy() {
     return sortBy;
   }
 
-  public void setSortBy(String sortBy) {
+  public void setSortBy(@javax.annotation.Nullable String sortBy) {
     this.sortBy = sortBy;
   }
 
@@ -366,32 +377,22 @@ public class Connectionsv3GetConnectionsWithFiltersRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("calculate_facets");
-    openapiFields.add("calculate_preset_stats");
-    openapiFields.add("calculate_total");
-    openapiFields.add("fetch_size");
-    openapiFields.add("filters");
-    openapiFields.add("headers");
-    openapiFields.add("offset");
-    openapiFields.add("order");
-    openapiFields.add("search");
-    openapiFields.add("sort_by");
+    openapiFields = new HashSet<String>(Arrays.asList("calculate_facets", "calculate_preset_stats", "calculate_total", "fetch_size", "filters", "headers", "offset", "order", "search", "sort_by"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetConnectionsWithFiltersRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetConnectionsWithFiltersRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3GetConnectionsWithFiltersRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3GetConnectionsWithFiltersRequest is not found in the empty JSON string", Connectionsv3GetConnectionsWithFiltersRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3GetConnectionsWithFiltersRequest is not found in the empty JSON string", Connectionsv3GetConnectionsWithFiltersRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -399,7 +400,7 @@ public class Connectionsv3GetConnectionsWithFiltersRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3GetConnectionsWithFiltersRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3GetConnectionsWithFiltersRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3GetConnectionsWithFiltersRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -408,7 +409,7 @@ public class Connectionsv3GetConnectionsWithFiltersRequest {
         if (jsonArrayfilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
           }
 
           // validate the optional field `filters` (array)
@@ -419,17 +420,17 @@ public class Connectionsv3GetConnectionsWithFiltersRequest {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("headers") != null && !jsonObj.get("headers").isJsonNull() && !jsonObj.get("headers").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
       }
       // validate the optional field `order`
       if (jsonObj.get("order") != null && !jsonObj.get("order").isJsonNull()) {
         Connectionsv3OrderType.validateJsonElement(jsonObj.get("order"));
       }
       if ((jsonObj.get("search") != null && !jsonObj.get("search").isJsonNull()) && !jsonObj.get("search").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `search` to be a primitive type in the JSON string but got `%s`", jsonObj.get("search").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `search` to be a primitive type in the JSON string but got `%s`", jsonObj.get("search").toString()));
       }
       if ((jsonObj.get("sort_by") != null && !jsonObj.get("sort_by").isJsonNull()) && !jsonObj.get("sort_by").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sort_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sort_by").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sort_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sort_by").toString()));
       }
   }
 
@@ -462,22 +463,22 @@ public class Connectionsv3GetConnectionsWithFiltersRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3GetConnectionsWithFiltersRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3GetConnectionsWithFiltersRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetConnectionsWithFiltersRequest
-  */
+  /**
+   * Create an instance of Connectionsv3GetConnectionsWithFiltersRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3GetConnectionsWithFiltersRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetConnectionsWithFiltersRequest
+   */
   public static Connectionsv3GetConnectionsWithFiltersRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3GetConnectionsWithFiltersRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3GetConnectionsWithFiltersRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3GetConnectionsWithFiltersRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

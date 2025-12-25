@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,78 +41,82 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3CategoryDetail
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3CategoryDetail {
   public static final String SERIALIZED_NAME_CATEGORY_DESCRIPTION = "category_description";
   @SerializedName(SERIALIZED_NAME_CATEGORY_DESCRIPTION)
+  @javax.annotation.Nullable
   private String categoryDescription;
 
   public static final String SERIALIZED_NAME_CATEGORY_NAME = "category_name";
   @SerializedName(SERIALIZED_NAME_CATEGORY_NAME)
+  @javax.annotation.Nullable
   private String categoryName;
 
   public static final String SERIALIZED_NAME_CATEGORY_TABLES = "category_tables";
   @SerializedName(SERIALIZED_NAME_CATEGORY_TABLES)
+  @javax.annotation.Nullable
   private List<String> categoryTables = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TIMESTAMP_MAPPING = "timestamp_mapping";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP_MAPPING)
+  @javax.annotation.Nullable
   private List<Reportsv3TimestampMapping> timestampMapping = new ArrayList<>();
 
   public Reportsv3CategoryDetail() {
   }
 
-  public Reportsv3CategoryDetail categoryDescription(String categoryDescription) {
+  public Reportsv3CategoryDetail categoryDescription(@javax.annotation.Nullable String categoryDescription) {
     this.categoryDescription = categoryDescription;
     return this;
   }
 
-   /**
+  /**
    * The category description.
    * @return categoryDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryDescription() {
     return categoryDescription;
   }
 
-  public void setCategoryDescription(String categoryDescription) {
+  public void setCategoryDescription(@javax.annotation.Nullable String categoryDescription) {
     this.categoryDescription = categoryDescription;
   }
 
 
-  public Reportsv3CategoryDetail categoryName(String categoryName) {
+  public Reportsv3CategoryDetail categoryName(@javax.annotation.Nullable String categoryName) {
     this.categoryName = categoryName;
     return this;
   }
 
-   /**
+  /**
    * Identifies the NLS translated string.
    * @return categoryName
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryName() {
     return categoryName;
   }
 
-  public void setCategoryName(String categoryName) {
+  public void setCategoryName(@javax.annotation.Nullable String categoryName) {
     this.categoryName = categoryName;
   }
 
 
-  public Reportsv3CategoryDetail categoryTables(List<String> categoryTables) {
+  public Reportsv3CategoryDetail categoryTables(@javax.annotation.Nullable List<String> categoryTables) {
     this.categoryTables = categoryTables;
     return this;
   }
@@ -124,21 +129,21 @@ public class Reportsv3CategoryDetail {
     return this;
   }
 
-   /**
+  /**
    * Get categoryTables
    * @return categoryTables
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getCategoryTables() {
     return categoryTables;
   }
 
-  public void setCategoryTables(List<String> categoryTables) {
+  public void setCategoryTables(@javax.annotation.Nullable List<String> categoryTables) {
     this.categoryTables = categoryTables;
   }
 
 
-  public Reportsv3CategoryDetail timestampMapping(List<Reportsv3TimestampMapping> timestampMapping) {
+  public Reportsv3CategoryDetail timestampMapping(@javax.annotation.Nullable List<Reportsv3TimestampMapping> timestampMapping) {
     this.timestampMapping = timestampMapping;
     return this;
   }
@@ -151,16 +156,16 @@ public class Reportsv3CategoryDetail {
     return this;
   }
 
-   /**
+  /**
    * Get timestampMapping
    * @return timestampMapping
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3TimestampMapping> getTimestampMapping() {
     return timestampMapping;
   }
 
-  public void setTimestampMapping(List<Reportsv3TimestampMapping> timestampMapping) {
+  public void setTimestampMapping(@javax.annotation.Nullable List<Reportsv3TimestampMapping> timestampMapping) {
     this.timestampMapping = timestampMapping;
   }
 
@@ -215,26 +220,22 @@ public class Reportsv3CategoryDetail {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("category_description");
-    openapiFields.add("category_name");
-    openapiFields.add("category_tables");
-    openapiFields.add("timestamp_mapping");
+    openapiFields = new HashSet<String>(Arrays.asList("category_description", "category_name", "category_tables", "timestamp_mapping"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3CategoryDetail
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3CategoryDetail
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3CategoryDetail.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3CategoryDetail is not found in the empty JSON string", Reportsv3CategoryDetail.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3CategoryDetail is not found in the empty JSON string", Reportsv3CategoryDetail.openapiRequiredFields.toString()));
         }
       }
 
@@ -242,26 +243,26 @@ public class Reportsv3CategoryDetail {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3CategoryDetail.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3CategoryDetail` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3CategoryDetail` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("category_description") != null && !jsonObj.get("category_description").isJsonNull()) && !jsonObj.get("category_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_description").toString()));
       }
       if ((jsonObj.get("category_name") != null && !jsonObj.get("category_name").isJsonNull()) && !jsonObj.get("category_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("category_tables") != null && !jsonObj.get("category_tables").isJsonNull() && !jsonObj.get("category_tables").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_tables` to be an array in the JSON string but got `%s`", jsonObj.get("category_tables").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_tables` to be an array in the JSON string but got `%s`", jsonObj.get("category_tables").toString()));
       }
       if (jsonObj.get("timestamp_mapping") != null && !jsonObj.get("timestamp_mapping").isJsonNull()) {
         JsonArray jsonArraytimestampMapping = jsonObj.getAsJsonArray("timestamp_mapping");
         if (jsonArraytimestampMapping != null) {
           // ensure the json data is an array
           if (!jsonObj.get("timestamp_mapping").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `timestamp_mapping` to be an array in the JSON string but got `%s`", jsonObj.get("timestamp_mapping").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `timestamp_mapping` to be an array in the JSON string but got `%s`", jsonObj.get("timestamp_mapping").toString()));
           }
 
           // validate the optional field `timestamp_mapping` (array)
@@ -301,22 +302,22 @@ public class Reportsv3CategoryDetail {
     }
   }
 
- /**
-  * Create an instance of Reportsv3CategoryDetail given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3CategoryDetail
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3CategoryDetail
-  */
+  /**
+   * Create an instance of Reportsv3CategoryDetail given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3CategoryDetail
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3CategoryDetail
+   */
   public static Reportsv3CategoryDetail fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3CategoryDetail.class);
   }
 
- /**
-  * Convert an instance of Reportsv3CategoryDetail to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3CategoryDetail to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

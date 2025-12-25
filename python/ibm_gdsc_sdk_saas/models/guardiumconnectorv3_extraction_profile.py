@@ -75,9 +75,9 @@ class Guardiumconnectorv3ExtractionProfile(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in dms (list)
         _items = []
         if self.dms:
-            for _item in self.dms:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_dms in self.dms:
+                if _item_dms:
+                    _items.append(_item_dms.to_dict())
             _dict['dms'] = _items
         return _dict
 

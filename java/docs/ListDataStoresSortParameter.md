@@ -17,13 +17,13 @@
 | Name | Value |
 |---- | -----|
 | NAME | &quot;name&quot; |
-| STORETYPE | &quot;storeType&quot; |
-| CLOUDREGION | &quot;cloudRegion&quot; |
-| CLOUDACCOUNTID | &quot;cloudAccountId&quot; |
-| SENSITIVITIESCOUNT | &quot;sensitivitiesCount&quot; |
-| RESOURCESCOUNT | &quot;resourcesCount&quot; |
-| APPFLOWSCOUNT | &quot;appFlowsCount&quot; |
-| CONFIGFLOWSCOUNT | &quot;configFlowsCount&quot; |
+| STORE_TYPE | &quot;storeType&quot; |
+| CLOUD_REGION | &quot;cloudRegion&quot; |
+| CLOUD_ACCOUNT_ID | &quot;cloudAccountId&quot; |
+| SENSITIVITIES_COUNT | &quot;sensitivitiesCount&quot; |
+| RESOURCES_COUNT | &quot;resourcesCount&quot; |
+| APP_FLOWS_COUNT | &quot;appFlowsCount&quot; |
+| CONFIG_FLOWS_COUNT | &quot;configFlowsCount&quot; |
 
 
 

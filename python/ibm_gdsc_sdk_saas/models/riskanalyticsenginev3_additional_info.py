@@ -28,7 +28,7 @@ class Riskanalyticsenginev3AdditionalInfo(BaseModel):
     Additional info message.
     """ # noqa: E501
     key: Optional[StrictStr] = Field(default=None, description="Additional info key.")
-    type: Optional[Riskanalyticsenginev3FieldType] = None
+    type: Optional[Riskanalyticsenginev3FieldType] = Riskanalyticsenginev3FieldType.UNDEFINED_TYPE
     value: Optional[StrictStr] = Field(default=None, description="Additional info value.")
     __properties: ClassVar[List[str]] = ["key", "type", "value"]
 
@@ -84,7 +84,7 @@ class Riskanalyticsenginev3AdditionalInfo(BaseModel):
 
         _obj = cls.model_validate({
             "key": obj.get("key"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Riskanalyticsenginev3FieldType.UNDEFINED_TYPE,
             "value": obj.get("value")
         })
         return _obj

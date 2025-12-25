@@ -30,7 +30,7 @@ class Assetsv3DatabaseVertex(BaseModel):
     Assetsv3DatabaseVertex
     """ # noqa: E501
     catalog: Optional[StrictStr] = None
-    criticality: Optional[Assetsv3Level] = None
+    criticality: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     database_host: Optional[List[Assetsv3ConnectionEdge]] = None
     database_ip: Optional[List[Assetsv3ConnectionEdge]] = None
     database_name: Optional[StrictStr] = None
@@ -41,7 +41,7 @@ class Assetsv3DatabaseVertex(BaseModel):
     extended_properties: Optional[List[Assetsv3CustomProperty]] = None
     owner: Optional[List[StrictStr]] = None
     resolution_key: Optional[StrictStr] = None
-    risk_level: Optional[Assetsv3Level] = None
+    risk_level: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     schema_name: Optional[StrictStr] = None
     service_name: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["catalog", "criticality", "database_host", "database_ip", "database_name", "database_sub_type", "database_subscription", "database_type", "description", "extended_properties", "owner", "resolution_key", "risk_level", "schema_name", "service_name"]
@@ -88,30 +88,30 @@ class Assetsv3DatabaseVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in database_host (list)
         _items = []
         if self.database_host:
-            for _item in self.database_host:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_database_host in self.database_host:
+                if _item_database_host:
+                    _items.append(_item_database_host.to_dict())
             _dict['database_host'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in database_ip (list)
         _items = []
         if self.database_ip:
-            for _item in self.database_ip:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_database_ip in self.database_ip:
+                if _item_database_ip:
+                    _items.append(_item_database_ip.to_dict())
             _dict['database_ip'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in database_subscription (list)
         _items = []
         if self.database_subscription:
-            for _item in self.database_subscription:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_database_subscription in self.database_subscription:
+                if _item_database_subscription:
+                    _items.append(_item_database_subscription.to_dict())
             _dict['database_subscription'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         return _dict
 
@@ -126,7 +126,7 @@ class Assetsv3DatabaseVertex(BaseModel):
 
         _obj = cls.model_validate({
             "catalog": obj.get("catalog"),
-            "criticality": obj.get("criticality"),
+            "criticality": obj.get("criticality") if obj.get("criticality") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "database_host": [Assetsv3ConnectionEdge.from_dict(_item) for _item in obj["database_host"]] if obj.get("database_host") is not None else None,
             "database_ip": [Assetsv3ConnectionEdge.from_dict(_item) for _item in obj["database_ip"]] if obj.get("database_ip") is not None else None,
             "database_name": obj.get("database_name"),
@@ -137,7 +137,7 @@ class Assetsv3DatabaseVertex(BaseModel):
             "extended_properties": [Assetsv3CustomProperty.from_dict(_item) for _item in obj["extended_properties"]] if obj.get("extended_properties") is not None else None,
             "owner": obj.get("owner"),
             "resolution_key": obj.get("resolution_key"),
-            "risk_level": obj.get("risk_level"),
+            "risk_level": obj.get("risk_level") if obj.get("risk_level") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "schema_name": obj.get("schema_name"),
             "service_name": obj.get("service_name")
         })

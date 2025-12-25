@@ -73,9 +73,9 @@ class SensitivitiesSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in sensitivities_summary (list)
         _items = []
         if self.sensitivities_summary:
-            for _item in self.sensitivities_summary:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sensitivities_summary in self.sensitivities_summary:
+                if _item_sensitivities_summary:
+                    _items.append(_item_sensitivities_summary.to_dict())
             _dict['sensitivitiesSummary'] = _items
         return _dict
 

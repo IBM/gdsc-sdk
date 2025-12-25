@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,40 +41,44 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Partial connector.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3PartialConnector {
   public static final String SERIALIZED_NAME_COLUMNS = "columns";
   @SerializedName(SERIALIZED_NAME_COLUMNS)
+  @javax.annotation.Nullable
   private List<Connectionsv3ConnectorColumn> columns = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_LAST_RESPONSE = "last_response";
   @SerializedName(SERIALIZED_NAME_LAST_RESPONSE)
+  @javax.annotation.Nullable
   private String lastResponse;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public Connectionsv3PartialConnector() {
   }
 
-  public Connectionsv3PartialConnector columns(List<Connectionsv3ConnectorColumn> columns) {
+  public Connectionsv3PartialConnector columns(@javax.annotation.Nullable List<Connectionsv3ConnectorColumn> columns) {
     this.columns = columns;
     return this;
   }
@@ -86,59 +91,59 @@ public class Connectionsv3PartialConnector {
     return this;
   }
 
-   /**
+  /**
    * The updated columns.
    * @return columns
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3ConnectorColumn> getColumns() {
     return columns;
   }
 
-  public void setColumns(List<Connectionsv3ConnectorColumn> columns) {
+  public void setColumns(@javax.annotation.Nullable List<Connectionsv3ConnectorColumn> columns) {
     this.columns = columns;
   }
 
 
-  public Connectionsv3PartialConnector id(String id) {
+  public Connectionsv3PartialConnector id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * The id of the connector.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Connectionsv3PartialConnector lastResponse(String lastResponse) {
+  public Connectionsv3PartialConnector lastResponse(@javax.annotation.Nullable String lastResponse) {
     this.lastResponse = lastResponse;
     return this;
   }
 
-   /**
+  /**
    * The heartbeat.
    * @return lastResponse
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastResponse() {
     return lastResponse;
   }
 
-  public void setLastResponse(String lastResponse) {
+  public void setLastResponse(@javax.annotation.Nullable String lastResponse) {
     this.lastResponse = lastResponse;
   }
 
 
-  public Connectionsv3PartialConnector tags(List<String> tags) {
+  public Connectionsv3PartialConnector tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -151,16 +156,16 @@ public class Connectionsv3PartialConnector {
     return this;
   }
 
-   /**
+  /**
    * The updated tags.
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
@@ -215,26 +220,22 @@ public class Connectionsv3PartialConnector {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("columns");
-    openapiFields.add("id");
-    openapiFields.add("last_response");
-    openapiFields.add("tags");
+    openapiFields = new HashSet<String>(Arrays.asList("columns", "id", "last_response", "tags"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3PartialConnector
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3PartialConnector
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3PartialConnector.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3PartialConnector is not found in the empty JSON string", Connectionsv3PartialConnector.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3PartialConnector is not found in the empty JSON string", Connectionsv3PartialConnector.openapiRequiredFields.toString()));
         }
       }
 
@@ -242,7 +243,7 @@ public class Connectionsv3PartialConnector {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3PartialConnector.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3PartialConnector` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3PartialConnector` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -251,7 +252,7 @@ public class Connectionsv3PartialConnector {
         if (jsonArraycolumns != null) {
           // ensure the json data is an array
           if (!jsonObj.get("columns").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `columns` to be an array in the JSON string but got `%s`", jsonObj.get("columns").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `columns` to be an array in the JSON string but got `%s`", jsonObj.get("columns").toString()));
           }
 
           // validate the optional field `columns` (array)
@@ -261,14 +262,14 @@ public class Connectionsv3PartialConnector {
         }
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("last_response") != null && !jsonObj.get("last_response").isJsonNull()) && !jsonObj.get("last_response").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_response").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_response").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
   }
 
@@ -301,22 +302,22 @@ public class Connectionsv3PartialConnector {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3PartialConnector given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3PartialConnector
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3PartialConnector
-  */
+  /**
+   * Create an instance of Connectionsv3PartialConnector given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3PartialConnector
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3PartialConnector
+   */
   public static Connectionsv3PartialConnector fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3PartialConnector.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3PartialConnector to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3PartialConnector to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

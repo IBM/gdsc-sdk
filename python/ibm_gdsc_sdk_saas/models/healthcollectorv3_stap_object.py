@@ -88,9 +88,9 @@ class Healthcollectorv3StapObject(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in ie_details (list)
         _items = []
         if self.ie_details:
-            for _item in self.ie_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_ie_details in self.ie_details:
+                if _item_ie_details:
+                    _items.append(_item_ie_details.to_dict())
             _dict['ie_details'] = _items
         return _dict
 

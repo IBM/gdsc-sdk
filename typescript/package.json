@@ -1,9 +1,9 @@
 {
   "name":"@ibm-gdsc/ibm-gdsc-sdk-saas",
-  "version": "3.0.20250227",
+  "version": "1.0.0",
   "description": "IBM Guardium Data Security Center SDK",
   "author": "IBM GDSC Team <c3cvp8ch@ca.ibm.com>",
-"homepage": "https://github.com/IBM/gdsc-sdk/tree/main",
+"homepage": "https://github.ibm.com/Activity-Insights/guardium-sdk/tree/release-v1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM/gdsc-sdk.git"
@@ -23,6 +23,9 @@
       "types": "./dist/index.d.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
@@ -30,11 +33,17 @@
   },
   "dependencies": {
     "whatwg-fetch": "^3.0.0",
-    "es6-promise": "^4.2.4",
-    "url-parse": "^1.4.3"
+    "es6-promise": "^4.2.4"
   },
   "devDependencies": {
+    "typescript": "^4.0"
+  }
+,
+  "devDependencies": {
     "typescript": "^4.0",
-    "@types/url-parse": "1.4.4"
+    "@types/node": "^18.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://na.artifactory.swg-devops.com/artifactory/api/npm/sec-common-npm-local/"
   }
 }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,203 +39,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AddAnalyzedRegion200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AddAnalyzedRegion200Response {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
+  @javax.annotation.Nullable
   private String url;
 
   public static final String SERIALIZED_NAME_USER_DATA = "userData";
   @SerializedName(SERIALIZED_NAME_USER_DATA)
+  @javax.annotation.Nullable
   private String userData;
 
   public static final String SERIALIZED_NAME_IMAGE_ID = "imageId";
   @SerializedName(SERIALIZED_NAME_IMAGE_ID)
+  @javax.annotation.Nullable
   private String imageId;
 
   public static final String SERIALIZED_NAME_SUBNET_ID = "subnetId";
   @SerializedName(SERIALIZED_NAME_SUBNET_ID)
+  @javax.annotation.Nullable
   private String subnetId;
 
   public static final String SERIALIZED_NAME_VPC_ID = "vpcId";
   @SerializedName(SERIALIZED_NAME_VPC_ID)
+  @javax.annotation.Nullable
   private String vpcId;
 
   public static final String SERIALIZED_NAME_AVAILABILITY_ZONE = "availabilityZone";
   @SerializedName(SERIALIZED_NAME_AVAILABILITY_ZONE)
+  @javax.annotation.Nullable
   private String availabilityZone;
 
   public static final String SERIALIZED_NAME_INSTALLATION_SCRIPT = "installationScript";
   @SerializedName(SERIALIZED_NAME_INSTALLATION_SCRIPT)
+  @javax.annotation.Nullable
   private String installationScript;
 
   public static final String SERIALIZED_NAME_VALIDATION_RESULTS = "validationResults";
   @SerializedName(SERIALIZED_NAME_VALIDATION_RESULTS)
+  @javax.annotation.Nullable
   private AnalyzedRegionValidationResults validationResults;
 
   public AddAnalyzedRegion200Response() {
   }
 
-  public AddAnalyzedRegion200Response url(String url) {
+  public AddAnalyzedRegion200Response url(@javax.annotation.Nullable String url) {
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * Get url
    * @return url
-  **/
+   */
   @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }
 
-  public void setUrl(String url) {
+  public void setUrl(@javax.annotation.Nullable String url) {
     this.url = url;
   }
 
 
-  public AddAnalyzedRegion200Response userData(String userData) {
+  public AddAnalyzedRegion200Response userData(@javax.annotation.Nullable String userData) {
     this.userData = userData;
     return this;
   }
 
-   /**
+  /**
    * Get userData
    * @return userData
-  **/
+   */
   @javax.annotation.Nullable
   public String getUserData() {
     return userData;
   }
 
-  public void setUserData(String userData) {
+  public void setUserData(@javax.annotation.Nullable String userData) {
     this.userData = userData;
   }
 
 
-  public AddAnalyzedRegion200Response imageId(String imageId) {
+  public AddAnalyzedRegion200Response imageId(@javax.annotation.Nullable String imageId) {
     this.imageId = imageId;
     return this;
   }
 
-   /**
+  /**
    * Get imageId
    * @return imageId
-  **/
+   */
   @javax.annotation.Nullable
   public String getImageId() {
     return imageId;
   }
 
-  public void setImageId(String imageId) {
+  public void setImageId(@javax.annotation.Nullable String imageId) {
     this.imageId = imageId;
   }
 
 
-  public AddAnalyzedRegion200Response subnetId(String subnetId) {
+  public AddAnalyzedRegion200Response subnetId(@javax.annotation.Nullable String subnetId) {
     this.subnetId = subnetId;
     return this;
   }
 
-   /**
+  /**
    * Get subnetId
    * @return subnetId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSubnetId() {
     return subnetId;
   }
 
-  public void setSubnetId(String subnetId) {
+  public void setSubnetId(@javax.annotation.Nullable String subnetId) {
     this.subnetId = subnetId;
   }
 
 
-  public AddAnalyzedRegion200Response vpcId(String vpcId) {
+  public AddAnalyzedRegion200Response vpcId(@javax.annotation.Nullable String vpcId) {
     this.vpcId = vpcId;
     return this;
   }
 
-   /**
+  /**
    * Get vpcId
    * @return vpcId
-  **/
+   */
   @javax.annotation.Nullable
   public String getVpcId() {
     return vpcId;
   }
 
-  public void setVpcId(String vpcId) {
+  public void setVpcId(@javax.annotation.Nullable String vpcId) {
     this.vpcId = vpcId;
   }
 
 
-  public AddAnalyzedRegion200Response availabilityZone(String availabilityZone) {
+  public AddAnalyzedRegion200Response availabilityZone(@javax.annotation.Nullable String availabilityZone) {
     this.availabilityZone = availabilityZone;
     return this;
   }
 
-   /**
+  /**
    * Get availabilityZone
    * @return availabilityZone
-  **/
+   */
   @javax.annotation.Nullable
   public String getAvailabilityZone() {
     return availabilityZone;
   }
 
-  public void setAvailabilityZone(String availabilityZone) {
+  public void setAvailabilityZone(@javax.annotation.Nullable String availabilityZone) {
     this.availabilityZone = availabilityZone;
   }
 
 
-  public AddAnalyzedRegion200Response installationScript(String installationScript) {
+  public AddAnalyzedRegion200Response installationScript(@javax.annotation.Nullable String installationScript) {
     this.installationScript = installationScript;
     return this;
   }
 
-   /**
+  /**
    * Get installationScript
    * @return installationScript
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstallationScript() {
     return installationScript;
   }
 
-  public void setInstallationScript(String installationScript) {
+  public void setInstallationScript(@javax.annotation.Nullable String installationScript) {
     this.installationScript = installationScript;
   }
 
 
-  public AddAnalyzedRegion200Response validationResults(AnalyzedRegionValidationResults validationResults) {
+  public AddAnalyzedRegion200Response validationResults(@javax.annotation.Nullable AnalyzedRegionValidationResults validationResults) {
     this.validationResults = validationResults;
     return this;
   }
 
-   /**
+  /**
    * Get validationResults
    * @return validationResults
-  **/
+   */
   @javax.annotation.Nullable
   public AnalyzedRegionValidationResults getValidationResults() {
     return validationResults;
   }
 
-  public void setValidationResults(AnalyzedRegionValidationResults validationResults) {
+  public void setValidationResults(@javax.annotation.Nullable AnalyzedRegionValidationResults validationResults) {
     this.validationResults = validationResults;
   }
 
@@ -297,30 +306,22 @@ public class AddAnalyzedRegion200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("url");
-    openapiFields.add("userData");
-    openapiFields.add("imageId");
-    openapiFields.add("subnetId");
-    openapiFields.add("vpcId");
-    openapiFields.add("availabilityZone");
-    openapiFields.add("installationScript");
-    openapiFields.add("validationResults");
+    openapiFields = new HashSet<String>(Arrays.asList("url", "userData", "imageId", "subnetId", "vpcId", "availabilityZone", "installationScript", "validationResults"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddAnalyzedRegion200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddAnalyzedRegion200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddAnalyzedRegion200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddAnalyzedRegion200Response is not found in the empty JSON string", AddAnalyzedRegion200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AddAnalyzedRegion200Response is not found in the empty JSON string", AddAnalyzedRegion200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -328,30 +329,30 @@ public class AddAnalyzedRegion200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AddAnalyzedRegion200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddAnalyzedRegion200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AddAnalyzedRegion200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
       }
       if ((jsonObj.get("userData") != null && !jsonObj.get("userData").isJsonNull()) && !jsonObj.get("userData").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `userData` to be a primitive type in the JSON string but got `%s`", jsonObj.get("userData").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `userData` to be a primitive type in the JSON string but got `%s`", jsonObj.get("userData").toString()));
       }
       if ((jsonObj.get("imageId") != null && !jsonObj.get("imageId").isJsonNull()) && !jsonObj.get("imageId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `imageId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("imageId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `imageId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("imageId").toString()));
       }
       if ((jsonObj.get("subnetId") != null && !jsonObj.get("subnetId").isJsonNull()) && !jsonObj.get("subnetId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `subnetId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subnetId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `subnetId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subnetId").toString()));
       }
       if ((jsonObj.get("vpcId") != null && !jsonObj.get("vpcId").isJsonNull()) && !jsonObj.get("vpcId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vpcId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vpcId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vpcId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vpcId").toString()));
       }
       if ((jsonObj.get("availabilityZone") != null && !jsonObj.get("availabilityZone").isJsonNull()) && !jsonObj.get("availabilityZone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `availabilityZone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("availabilityZone").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `availabilityZone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("availabilityZone").toString()));
       }
       if ((jsonObj.get("installationScript") != null && !jsonObj.get("installationScript").isJsonNull()) && !jsonObj.get("installationScript").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `installationScript` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installationScript").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `installationScript` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installationScript").toString()));
       }
       // validate the optional field `validationResults`
       if (jsonObj.get("validationResults") != null && !jsonObj.get("validationResults").isJsonNull()) {
@@ -388,22 +389,22 @@ public class AddAnalyzedRegion200Response {
     }
   }
 
- /**
-  * Create an instance of AddAnalyzedRegion200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddAnalyzedRegion200Response
-  * @throws IOException if the JSON string is invalid with respect to AddAnalyzedRegion200Response
-  */
+  /**
+   * Create an instance of AddAnalyzedRegion200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddAnalyzedRegion200Response
+   * @throws IOException if the JSON string is invalid with respect to AddAnalyzedRegion200Response
+   */
   public static AddAnalyzedRegion200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddAnalyzedRegion200Response.class);
   }
 
- /**
-  * Convert an instance of AddAnalyzedRegion200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddAnalyzedRegion200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

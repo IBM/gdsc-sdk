@@ -73,9 +73,9 @@ class Tenantuserv3UpdatePrivilegesBulkRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in privilege (list)
         _items = []
         if self.privilege:
-            for _item in self.privilege:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_privilege in self.privilege:
+                if _item_privilege:
+                    _items.append(_item_privilege.to_dict())
             _dict['privilege'] = _items
         return _dict
 

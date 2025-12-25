@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Object holding task info.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3TaskObject {
   public static final String SERIALIZED_NAME_SUB_TASKS = "sub_tasks";
   @SerializedName(SERIALIZED_NAME_SUB_TASKS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3SubTaskObject> subTasks = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TASK_DEFINITION = "task_definition";
   @SerializedName(SERIALIZED_NAME_TASK_DEFINITION)
+  @javax.annotation.Nullable
   private Guardiumconnectorv3TaskDefinitionObject taskDefinition;
 
   public Guardiumconnectorv3TaskObject() {
   }
 
-  public Guardiumconnectorv3TaskObject subTasks(List<Guardiumconnectorv3SubTaskObject> subTasks) {
+  public Guardiumconnectorv3TaskObject subTasks(@javax.annotation.Nullable List<Guardiumconnectorv3SubTaskObject> subTasks) {
     this.subTasks = subTasks;
     return this;
   }
@@ -79,35 +82,35 @@ public class Guardiumconnectorv3TaskObject {
     return this;
   }
 
-   /**
+  /**
    * Sub tasks.
    * @return subTasks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3SubTaskObject> getSubTasks() {
     return subTasks;
   }
 
-  public void setSubTasks(List<Guardiumconnectorv3SubTaskObject> subTasks) {
+  public void setSubTasks(@javax.annotation.Nullable List<Guardiumconnectorv3SubTaskObject> subTasks) {
     this.subTasks = subTasks;
   }
 
 
-  public Guardiumconnectorv3TaskObject taskDefinition(Guardiumconnectorv3TaskDefinitionObject taskDefinition) {
+  public Guardiumconnectorv3TaskObject taskDefinition(@javax.annotation.Nullable Guardiumconnectorv3TaskDefinitionObject taskDefinition) {
     this.taskDefinition = taskDefinition;
     return this;
   }
 
-   /**
+  /**
    * Get taskDefinition
    * @return taskDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public Guardiumconnectorv3TaskDefinitionObject getTaskDefinition() {
     return taskDefinition;
   }
 
-  public void setTaskDefinition(Guardiumconnectorv3TaskDefinitionObject taskDefinition) {
+  public void setTaskDefinition(@javax.annotation.Nullable Guardiumconnectorv3TaskDefinitionObject taskDefinition) {
     this.taskDefinition = taskDefinition;
   }
 
@@ -158,24 +161,22 @@ public class Guardiumconnectorv3TaskObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("sub_tasks");
-    openapiFields.add("task_definition");
+    openapiFields = new HashSet<String>(Arrays.asList("sub_tasks", "task_definition"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3TaskObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3TaskObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3TaskObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3TaskObject is not found in the empty JSON string", Guardiumconnectorv3TaskObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3TaskObject is not found in the empty JSON string", Guardiumconnectorv3TaskObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Guardiumconnectorv3TaskObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3TaskObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3TaskObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3TaskObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Guardiumconnectorv3TaskObject {
         if (jsonArraysubTasks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("sub_tasks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `sub_tasks` to be an array in the JSON string but got `%s`", jsonObj.get("sub_tasks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_tasks` to be an array in the JSON string but got `%s`", jsonObj.get("sub_tasks").toString()));
           }
 
           // validate the optional field `sub_tasks` (array)
@@ -236,22 +237,22 @@ public class Guardiumconnectorv3TaskObject {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3TaskObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3TaskObject
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3TaskObject
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3TaskObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3TaskObject
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3TaskObject
+   */
   public static Guardiumconnectorv3TaskObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3TaskObject.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3TaskObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3TaskObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

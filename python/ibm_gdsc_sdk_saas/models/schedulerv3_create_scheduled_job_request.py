@@ -35,9 +35,9 @@ class Schedulerv3CreateScheduledJobRequest(BaseModel):
     description: Optional[StrictStr] = Field(default=None, description="Optional: Description for the scheduledJob.")
     enabled: Optional[StrictBool] = Field(default=None, description="Optional: Enable or disable.")
     instructions: Optional[StrictStr] = Field(default=None, description="Optional: The instructions for the recipient.")
-    internal_audit: Optional[Schedulerv3AuditType] = None
+    internal_audit: Optional[Schedulerv3AuditType] = Schedulerv3AuditType.UNDEFINED_TYPE
     name: Optional[StrictStr] = Field(default=None, description="Name of the schedule.")
-    notification: Optional[Schedulerv3NotificationType] = None
+    notification: Optional[Schedulerv3NotificationType] = Schedulerv3NotificationType.UNDEFINED_NOTIFICATION
     origin: Optional[StrictStr] = None
     recipient: Optional[Schedulerv3Recipient] = None
     recipients: Optional[List[Schedulerv3Recipient]] = None
@@ -92,9 +92,9 @@ class Schedulerv3CreateScheduledJobRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in recipients (list)
         _items = []
         if self.recipients:
-            for _item in self.recipients:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_recipients in self.recipients:
+                if _item_recipients:
+                    _items.append(_item_recipients.to_dict())
             _dict['recipients'] = _items
         # override the default output from pydantic by calling `to_dict()` of retention
         if self.retention:
@@ -105,9 +105,9 @@ class Schedulerv3CreateScheduledJobRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tasks (list)
         _items = []
         if self.tasks:
-            for _item in self.tasks:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tasks in self.tasks:
+                if _item_tasks:
+                    _items.append(_item_tasks.to_dict())
             _dict['tasks'] = _items
         return _dict
 
@@ -124,9 +124,9 @@ class Schedulerv3CreateScheduledJobRequest(BaseModel):
             "description": obj.get("description"),
             "enabled": obj.get("enabled"),
             "instructions": obj.get("instructions"),
-            "internal_audit": obj.get("internal_audit"),
+            "internal_audit": obj.get("internal_audit") if obj.get("internal_audit") is not None else Schedulerv3AuditType.UNDEFINED_TYPE,
             "name": obj.get("name"),
-            "notification": obj.get("notification"),
+            "notification": obj.get("notification") if obj.get("notification") is not None else Schedulerv3NotificationType.UNDEFINED_NOTIFICATION,
             "origin": obj.get("origin"),
             "recipient": Schedulerv3Recipient.from_dict(obj["recipient"]) if obj.get("recipient") is not None else None,
             "recipients": [Schedulerv3Recipient.from_dict(_item) for _item in obj["recipients"]] if obj.get("recipients") is not None else None,

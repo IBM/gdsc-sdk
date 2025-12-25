@@ -88,13 +88,14 @@ public class DataResourcesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataResourceCall(String dataResourceId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDataResourceCall(@javax.annotation.Nonnull String dataResourceId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -111,7 +112,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/{dataResourceId}"
+        String localVarPath = "/api/v2/dspm/dataResources/{dataResourceId}"
             .replace("{" + "dataResourceId" + "}", localVarApiClient.escapeString(dataResourceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -140,7 +141,7 @@ public class DataResourcesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDataResourceValidateBeforeCall(String dataResourceId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDataResourceValidateBeforeCall(@javax.annotation.Nonnull String dataResourceId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'dataResourceId' is set
         if (dataResourceId == null) {
             throw new ApiException("Missing the required parameter 'dataResourceId' when calling getDataResource(Async)");
@@ -157,13 +158,14 @@ public class DataResourcesApi {
      * @return DataResource
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public DataResource getDataResource(String dataResourceId) throws ApiException {
+    public DataResource getDataResource(@javax.annotation.Nonnull String dataResourceId) throws ApiException {
         ApiResponse<DataResource> localVarResp = getDataResourceWithHttpInfo(dataResourceId);
         return localVarResp.getData();
     }
@@ -175,13 +177,14 @@ public class DataResourcesApi {
      * @return ApiResponse&lt;DataResource&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<DataResource> getDataResourceWithHttpInfo(String dataResourceId) throws ApiException {
+    public ApiResponse<DataResource> getDataResourceWithHttpInfo(@javax.annotation.Nonnull String dataResourceId) throws ApiException {
         okhttp3.Call localVarCall = getDataResourceValidateBeforeCall(dataResourceId, null);
         Type localVarReturnType = new TypeToken<DataResource>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -195,13 +198,14 @@ public class DataResourcesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataResourceAsync(String dataResourceId, final ApiCallback<DataResource> _callback) throws ApiException {
+    public okhttp3.Call getDataResourceAsync(@javax.annotation.Nonnull String dataResourceId, final ApiCallback<DataResource> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDataResourceValidateBeforeCall(dataResourceId, _callback);
         Type localVarReturnType = new TypeToken<DataResource>(){}.getType();
@@ -216,13 +220,14 @@ public class DataResourcesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataResourcesSummaryCall(String dataStoreId, ListDataResourcesFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDataResourcesSummaryCall(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -239,7 +244,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/summary";
+        String localVarPath = "/api/v2/dspm/dataResources/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -275,7 +280,7 @@ public class DataResourcesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDataResourcesSummaryValidateBeforeCall(String dataStoreId, ListDataResourcesFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDataResourcesSummaryValidateBeforeCall(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, final ApiCallback _callback) throws ApiException {
         return getDataResourcesSummaryCall(dataStoreId, filter, _callback);
 
     }
@@ -288,13 +293,14 @@ public class DataResourcesApi {
      * @return DataResourcesSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public DataResourcesSummary getDataResourcesSummary(String dataStoreId, ListDataResourcesFilterParameter filter) throws ApiException {
+    public DataResourcesSummary getDataResourcesSummary(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter) throws ApiException {
         ApiResponse<DataResourcesSummary> localVarResp = getDataResourcesSummaryWithHttpInfo(dataStoreId, filter);
         return localVarResp.getData();
     }
@@ -307,13 +313,14 @@ public class DataResourcesApi {
      * @return ApiResponse&lt;DataResourcesSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<DataResourcesSummary> getDataResourcesSummaryWithHttpInfo(String dataStoreId, ListDataResourcesFilterParameter filter) throws ApiException {
+    public ApiResponse<DataResourcesSummary> getDataResourcesSummaryWithHttpInfo(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter) throws ApiException {
         okhttp3.Call localVarCall = getDataResourcesSummaryValidateBeforeCall(dataStoreId, filter, null);
         Type localVarReturnType = new TypeToken<DataResourcesSummary>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -328,13 +335,14 @@ public class DataResourcesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataResourcesSummaryAsync(String dataStoreId, ListDataResourcesFilterParameter filter, final ApiCallback<DataResourcesSummary> _callback) throws ApiException {
+    public okhttp3.Call getDataResourcesSummaryAsync(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, final ApiCallback<DataResourcesSummary> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDataResourcesSummaryValidateBeforeCall(dataStoreId, filter, _callback);
         Type localVarReturnType = new TypeToken<DataResourcesSummary>(){}.getType();
@@ -352,13 +360,14 @@ public class DataResourcesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listDataResourcesCall(String dataStoreId, ListDataResourcesFilterParameter filter, ListDataResourcesSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listDataResourcesCall(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, @javax.annotation.Nullable ListDataResourcesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -375,7 +384,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources";
+        String localVarPath = "/api/v2/dspm/dataResources";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -423,7 +432,7 @@ public class DataResourcesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listDataResourcesValidateBeforeCall(String dataStoreId, ListDataResourcesFilterParameter filter, ListDataResourcesSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listDataResourcesValidateBeforeCall(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, @javax.annotation.Nullable ListDataResourcesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listDataResourcesCall(dataStoreId, filter, sort, pageSize, nextToken, _callback);
 
     }
@@ -439,13 +448,14 @@ public class DataResourcesApi {
      * @return ListDataResources200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListDataResources200Response listDataResources(String dataStoreId, ListDataResourcesFilterParameter filter, ListDataResourcesSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListDataResources200Response listDataResources(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, @javax.annotation.Nullable ListDataResourcesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListDataResources200Response> localVarResp = listDataResourcesWithHttpInfo(dataStoreId, filter, sort, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -461,13 +471,14 @@ public class DataResourcesApi {
      * @return ApiResponse&lt;ListDataResources200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListDataResources200Response> listDataResourcesWithHttpInfo(String dataStoreId, ListDataResourcesFilterParameter filter, ListDataResourcesSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListDataResources200Response> listDataResourcesWithHttpInfo(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, @javax.annotation.Nullable ListDataResourcesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listDataResourcesValidateBeforeCall(dataStoreId, filter, sort, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListDataResources200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -485,13 +496,14 @@ public class DataResourcesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listDataResourcesAsync(String dataStoreId, ListDataResourcesFilterParameter filter, ListDataResourcesSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback<ListDataResources200Response> _callback) throws ApiException {
+    public okhttp3.Call listDataResourcesAsync(@javax.annotation.Nullable String dataStoreId, @javax.annotation.Nullable ListDataResourcesFilterParameter filter, @javax.annotation.Nullable ListDataResourcesSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListDataResources200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listDataResourcesValidateBeforeCall(dataStoreId, filter, sort, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListDataResources200Response>(){}.getType();
@@ -506,13 +518,14 @@ public class DataResourcesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listDataResourcesNamesCall(String prefix, String dataStoreId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listDataResourcesNamesCall(@javax.annotation.Nonnull String prefix, @javax.annotation.Nullable String dataStoreId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -529,7 +542,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/names";
+        String localVarPath = "/api/v2/dspm/dataResources/names";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -565,7 +578,7 @@ public class DataResourcesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listDataResourcesNamesValidateBeforeCall(String prefix, String dataStoreId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listDataResourcesNamesValidateBeforeCall(@javax.annotation.Nonnull String prefix, @javax.annotation.Nullable String dataStoreId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'prefix' is set
         if (prefix == null) {
             throw new ApiException("Missing the required parameter 'prefix' when calling listDataResourcesNames(Async)");
@@ -583,13 +596,14 @@ public class DataResourcesApi {
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public List<String> listDataResourcesNames(String prefix, String dataStoreId) throws ApiException {
+    public List<String> listDataResourcesNames(@javax.annotation.Nonnull String prefix, @javax.annotation.Nullable String dataStoreId) throws ApiException {
         ApiResponse<List<String>> localVarResp = listDataResourcesNamesWithHttpInfo(prefix, dataStoreId);
         return localVarResp.getData();
     }
@@ -602,13 +616,14 @@ public class DataResourcesApi {
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<List<String>> listDataResourcesNamesWithHttpInfo(String prefix, String dataStoreId) throws ApiException {
+    public ApiResponse<List<String>> listDataResourcesNamesWithHttpInfo(@javax.annotation.Nonnull String prefix, @javax.annotation.Nullable String dataStoreId) throws ApiException {
         okhttp3.Call localVarCall = listDataResourcesNamesValidateBeforeCall(prefix, dataStoreId, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -623,13 +638,14 @@ public class DataResourcesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listDataResourcesNamesAsync(String prefix, String dataStoreId, final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call listDataResourcesNamesAsync(@javax.annotation.Nonnull String prefix, @javax.annotation.Nullable String dataStoreId, final ApiCallback<List<String>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listDataResourcesNamesValidateBeforeCall(prefix, dataStoreId, _callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
@@ -644,13 +660,14 @@ public class DataResourcesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeResourceCall(String dataResourceId, String dataStoreId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call removeResourceCall(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull String dataStoreId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -667,7 +684,7 @@ public class DataResourcesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/{dataResourceId}/removeResource"
+        String localVarPath = "/api/v2/dspm/dataResources/{dataResourceId}/removeResource"
             .replace("{" + "dataResourceId" + "}", localVarApiClient.escapeString(dataResourceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -700,7 +717,7 @@ public class DataResourcesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call removeResourceValidateBeforeCall(String dataResourceId, String dataStoreId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call removeResourceValidateBeforeCall(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull String dataStoreId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'dataResourceId' is set
         if (dataResourceId == null) {
             throw new ApiException("Missing the required parameter 'dataResourceId' when calling removeResource(Async)");
@@ -723,13 +740,14 @@ public class DataResourcesApi {
      * @return RemoveResource200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public RemoveResource200Response removeResource(String dataResourceId, String dataStoreId) throws ApiException {
+    public RemoveResource200Response removeResource(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull String dataStoreId) throws ApiException {
         ApiResponse<RemoveResource200Response> localVarResp = removeResourceWithHttpInfo(dataResourceId, dataStoreId);
         return localVarResp.getData();
     }
@@ -742,13 +760,14 @@ public class DataResourcesApi {
      * @return ApiResponse&lt;RemoveResource200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<RemoveResource200Response> removeResourceWithHttpInfo(String dataResourceId, String dataStoreId) throws ApiException {
+    public ApiResponse<RemoveResource200Response> removeResourceWithHttpInfo(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull String dataStoreId) throws ApiException {
         okhttp3.Call localVarCall = removeResourceValidateBeforeCall(dataResourceId, dataStoreId, null);
         Type localVarReturnType = new TypeToken<RemoveResource200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -763,13 +782,14 @@ public class DataResourcesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeResourceAsync(String dataResourceId, String dataStoreId, final ApiCallback<RemoveResource200Response> _callback) throws ApiException {
+    public okhttp3.Call removeResourceAsync(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull String dataStoreId, final ApiCallback<RemoveResource200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = removeResourceValidateBeforeCall(dataResourceId, dataStoreId, _callback);
         Type localVarReturnType = new TypeToken<RemoveResource200Response>(){}.getType();
@@ -784,12 +804,13 @@ public class DataResourcesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateResourceReviewStatusCall(String dataResourceId, UpdateResourceReviewBody updateResourceReviewBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateResourceReviewStatusCall(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull UpdateResourceReviewBody updateResourceReviewBody, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -806,7 +827,7 @@ public class DataResourcesApi {
         Object localVarPostBody = updateResourceReviewBody;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataResources/{dataResourceId}/reviewed"
+        String localVarPath = "/api/v2/dspm/dataResources/{dataResourceId}/reviewed"
             .replace("{" + "dataResourceId" + "}", localVarApiClient.escapeString(dataResourceId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -836,7 +857,7 @@ public class DataResourcesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateResourceReviewStatusValidateBeforeCall(String dataResourceId, UpdateResourceReviewBody updateResourceReviewBody, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateResourceReviewStatusValidateBeforeCall(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull UpdateResourceReviewBody updateResourceReviewBody, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'dataResourceId' is set
         if (dataResourceId == null) {
             throw new ApiException("Missing the required parameter 'dataResourceId' when calling updateResourceReviewStatus(Async)");
@@ -859,12 +880,13 @@ public class DataResourcesApi {
      * @return UpdateResourceReviewStatus200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
      </table>
      */
-    public UpdateResourceReviewStatus200Response updateResourceReviewStatus(String dataResourceId, UpdateResourceReviewBody updateResourceReviewBody) throws ApiException {
+    public UpdateResourceReviewStatus200Response updateResourceReviewStatus(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull UpdateResourceReviewBody updateResourceReviewBody) throws ApiException {
         ApiResponse<UpdateResourceReviewStatus200Response> localVarResp = updateResourceReviewStatusWithHttpInfo(dataResourceId, updateResourceReviewBody);
         return localVarResp.getData();
     }
@@ -877,12 +899,13 @@ public class DataResourcesApi {
      * @return ApiResponse&lt;UpdateResourceReviewStatus200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UpdateResourceReviewStatus200Response> updateResourceReviewStatusWithHttpInfo(String dataResourceId, UpdateResourceReviewBody updateResourceReviewBody) throws ApiException {
+    public ApiResponse<UpdateResourceReviewStatus200Response> updateResourceReviewStatusWithHttpInfo(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull UpdateResourceReviewBody updateResourceReviewBody) throws ApiException {
         okhttp3.Call localVarCall = updateResourceReviewStatusValidateBeforeCall(dataResourceId, updateResourceReviewBody, null);
         Type localVarReturnType = new TypeToken<UpdateResourceReviewStatus200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -897,12 +920,13 @@ public class DataResourcesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateResourceReviewStatusAsync(String dataResourceId, UpdateResourceReviewBody updateResourceReviewBody, final ApiCallback<UpdateResourceReviewStatus200Response> _callback) throws ApiException {
+    public okhttp3.Call updateResourceReviewStatusAsync(@javax.annotation.Nonnull String dataResourceId, @javax.annotation.Nonnull UpdateResourceReviewBody updateResourceReviewBody, final ApiCallback<UpdateResourceReviewStatus200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateResourceReviewStatusValidateBeforeCall(dataResourceId, updateResourceReviewBody, _callback);
         Type localVarReturnType = new TypeToken<UpdateResourceReviewStatus200Response>(){}.getType();

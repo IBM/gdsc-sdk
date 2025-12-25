@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **data** | **Dict[str, str]** |  | [optional] 
 **entity_id** | **str** |  | [optional] 
 **href** | **str** |  | [optional] 
-**severity** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] 
+**severity** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] [default to Workflowv3Priority.UNDEFINED_PRIORITY]
 **tenant_id** | **str** |  | [optional] 
 **title** | **str** |  | [optional] 
 

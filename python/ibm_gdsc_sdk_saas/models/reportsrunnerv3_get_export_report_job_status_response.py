@@ -33,7 +33,7 @@ class Reportsrunnerv3GetExportReportJobStatusResponse(BaseModel):
     job_duration: Optional[StrictInt] = Field(default=None, description="Duration of the export job in minutes.")
     job_id: Optional[StrictStr] = Field(default=None, description="Token that identifies the export job.")
     job_start_time: Optional[StrictStr] = Field(default=None, description="The start time of the export job.")
-    job_status: Optional[Reportsrunnerv3ExportJobStatus] = None
+    job_status: Optional[Reportsrunnerv3ExportJobStatus] = Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS
     message: Optional[StrictStr] = Field(default=None, description="An error message in case of failure while retriving the export job status.")
     result_size: Optional[StrictInt] = Field(default=None, description="The size of the exported file in MB.")
     tenant_id: Optional[StrictStr] = Field(default=None, description="The unique tenant ID that the executing job is running against.")
@@ -98,7 +98,7 @@ class Reportsrunnerv3GetExportReportJobStatusResponse(BaseModel):
             "job_duration": obj.get("job_duration"),
             "job_id": obj.get("job_id"),
             "job_start_time": obj.get("job_start_time"),
-            "job_status": obj.get("job_status"),
+            "job_status": obj.get("job_status") if obj.get("job_status") is not None else Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS,
             "message": obj.get("message"),
             "result_size": obj.get("result_size"),
             "tenant_id": obj.get("tenant_id")

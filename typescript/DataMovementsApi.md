@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getActualFlow**](DataMovementsApi.md#getActualFlow) | **GET** /api/v1/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
-[**getActualFlowsSummary**](DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v1/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
-[**getPotentialFlow**](DataMovementsApi.md#getPotentialFlow) | **GET** /api/v1/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
-[**getPotentialFlowPath**](DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
-[**getPotentialFlowsSummary**](DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v1/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
-[**listActualFlowPaths**](DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v1/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
-[**listActualFlows**](DataMovementsApi.md#listActualFlows) | **GET** /api/v1/dspm/dataMovements/actualFlows | List actual flows
-[**listPotentialFlows**](DataMovementsApi.md#listPotentialFlows) | **GET** /api/v1/dspm/dataMovements/potentialFlows | List potential flows
-[**listPotentialFlowsPaths**](DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v1/dspm/dataMovements/potentialFlows/paths | List potential flow paths
+[**getActualFlow**](DataMovementsApi.md#getActualFlow) | **GET** /api/v2/dspm/dataMovements/actualFlows/{id} | Get actual flow by providing its ID
+[**getActualFlowsSummary**](DataMovementsApi.md#getActualFlowsSummary) | **GET** /api/v2/dspm/dataMovements/actualFlows/summary | Get summary of actual flows
+[**getPotentialFlow**](DataMovementsApi.md#getPotentialFlow) | **GET** /api/v2/dspm/dataMovements/potentialFlows/{flowId} | Get potential flow by providing its ID
+[**getPotentialFlowPath**](DataMovementsApi.md#getPotentialFlowPath) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId} | Get potential flow path by providing its ID
+[**getPotentialFlowsSummary**](DataMovementsApi.md#getPotentialFlowsSummary) | **GET** /api/v2/dspm/dataMovements/potentialFlows/summary | Get summary of potential flows according to the filter applied
+[**listActualFlowPaths**](DataMovementsApi.md#listActualFlowPaths) | **GET** /api/v2/dspm/dataMovements/actualFlowPaths | Get summary of actual flows according to the filter applied
+[**listActualFlows**](DataMovementsApi.md#listActualFlows) | **GET** /api/v2/dspm/dataMovements/actualFlows | List actual flows
+[**listPotentialFlows**](DataMovementsApi.md#listPotentialFlows) | **GET** /api/v2/dspm/dataMovements/potentialFlows | List potential flows
+[**listPotentialFlowsPaths**](DataMovementsApi.md#listPotentialFlowsPaths) | **GET** /api/v2/dspm/dataMovements/potentialFlows/paths | List potential flow paths
 
 
 # **getActualFlow**
@@ -24,20 +24,19 @@ Get a detailed information about an actual flow by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetActualFlowRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetActualFlowRequest = {
-  // string
+const request: DataMovementsApiGetActualFlowRequest = {
+  
   id: "id_example",
 };
 
-apiInstance.getActualFlow(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getActualFlow(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -79,20 +78,19 @@ Get a summary of all the actual flows discovered by Guardium DSPM, that is, deta
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetActualFlowsSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetActualFlowsSummaryRequest = {
-  // ListActualFlowsFilterParameter (optional)
+const request: DataMovementsApiGetActualFlowsSummaryRequest = {
+  
   filter: null,
 };
 
-apiInstance.getActualFlowsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getActualFlowsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -134,20 +132,19 @@ Get a detailed information about a potential flow by providing the flow ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetPotentialFlowRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetPotentialFlowRequest = {
-  // string
+const request: DataMovementsApiGetPotentialFlowRequest = {
+  
   flowId: "ff2b4abe-89f4-62b8-061e-1232456789",
 };
 
-apiInstance.getPotentialFlow(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getPotentialFlow(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -189,20 +186,19 @@ Get details of a specific potential flow of data by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetPotentialFlowPathRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetPotentialFlowPathRequest = {
-  // string
+const request: DataMovementsApiGetPotentialFlowPathRequest = {
+  
   flowPathId: "ff2b4abe-89f4-62b8-061e-12345678910",
 };
 
-apiInstance.getPotentialFlowPath(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getPotentialFlowPath(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -244,20 +240,19 @@ Get a summary of all the potential flows based on a filter applied.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetPotentialFlowsSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetPotentialFlowsSummaryRequest = {
-  // PotentialFlowsFilterOptions (optional)
+const request: DataMovementsApiGetPotentialFlowsSummaryRequest = {
+  
   filter: null,
 };
 
-apiInstance.getPotentialFlowsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getPotentialFlowsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -299,29 +294,28 @@ Get detailed information about the actual flows according to the filter applied.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListActualFlowPathsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListActualFlowPathsRequest = {
-  // ListActualFlowPathsSortParameter (optional)
+const request: DataMovementsApiListActualFlowPathsRequest = {
+  
   sort: {
     sortBy: "lastSeen",
     sortOrder: 1,
   },
-  // ListActualFlowPathsFilterParameter (optional)
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listActualFlowPaths(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listActualFlowPaths(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -366,29 +360,28 @@ List all the actual flows (based on logs) of users and services across your enti
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListActualFlowsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListActualFlowsRequest = {
-  // ListActualFlowsSortParameter (optional)
+const request: DataMovementsApiListActualFlowsRequest = {
+  
   sort: {
     sortBy: "lastSeen",
     sortOrder: 1,
   },
-  // ListActualFlowsFilterParameter (optional)
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listActualFlows(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listActualFlows(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -433,24 +426,23 @@ List all the potential flows of users and services across your entire cloud acco
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListPotentialFlowsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListPotentialFlowsRequest = {
-  // PotentialFlowsFilterOptions (optional)
+const request: DataMovementsApiListPotentialFlowsRequest = {
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listPotentialFlows(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listPotentialFlows(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -494,24 +486,23 @@ List all the potential flow paths based on an applied filter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListPotentialFlowsPathsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListPotentialFlowsPathsRequest = {
-  // PotentialFlowsPathsFilterOptions (optional)
+const request: DataMovementsApiListPotentialFlowsPathsRequest = {
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listPotentialFlowsPaths(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listPotentialFlowsPaths(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

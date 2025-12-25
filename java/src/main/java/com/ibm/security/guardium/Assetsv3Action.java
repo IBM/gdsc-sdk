@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3Action
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3Action {
   public static final String SERIALIZED_NAME_DEST_CATEGORY = "dest_category";
   @SerializedName(SERIALIZED_NAME_DEST_CATEGORY)
+  @javax.annotation.Nullable
   private String destCategory;
 
   public static final String SERIALIZED_NAME_DEST_TYPE = "dest_type";
   @SerializedName(SERIALIZED_NAME_DEST_TYPE)
+  @javax.annotation.Nullable
   private String destType;
 
   public static final String SERIALIZED_NAME_DEST_VALUE = "dest_value";
   @SerializedName(SERIALIZED_NAME_DEST_VALUE)
+  @javax.annotation.Nullable
   private String destValue;
 
   public Assetsv3Action() {
   }
 
-  public Assetsv3Action destCategory(String destCategory) {
+  public Assetsv3Action destCategory(@javax.annotation.Nullable String destCategory) {
     this.destCategory = destCategory;
     return this;
   }
 
-   /**
+  /**
    * Category of the action.
    * @return destCategory
-  **/
+   */
   @javax.annotation.Nullable
   public String getDestCategory() {
     return destCategory;
   }
 
-  public void setDestCategory(String destCategory) {
+  public void setDestCategory(@javax.annotation.Nullable String destCategory) {
     this.destCategory = destCategory;
   }
 
 
-  public Assetsv3Action destType(String destType) {
+  public Assetsv3Action destType(@javax.annotation.Nullable String destType) {
     this.destType = destType;
     return this;
   }
 
-   /**
+  /**
    * Action type for the rule.
    * @return destType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDestType() {
     return destType;
   }
 
-  public void setDestType(String destType) {
+  public void setDestType(@javax.annotation.Nullable String destType) {
     this.destType = destType;
   }
 
 
-  public Assetsv3Action destValue(String destValue) {
+  public Assetsv3Action destValue(@javax.annotation.Nullable String destValue) {
     this.destValue = destValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the action.
    * @return destValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getDestValue() {
     return destValue;
   }
 
-  public void setDestValue(String destValue) {
+  public void setDestValue(@javax.annotation.Nullable String destValue) {
     this.destValue = destValue;
   }
 
@@ -171,25 +175,22 @@ public class Assetsv3Action {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dest_category");
-    openapiFields.add("dest_type");
-    openapiFields.add("dest_value");
+    openapiFields = new HashSet<String>(Arrays.asList("dest_category", "dest_type", "dest_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3Action
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3Action
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3Action.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3Action is not found in the empty JSON string", Assetsv3Action.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3Action is not found in the empty JSON string", Assetsv3Action.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Assetsv3Action {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3Action.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dest_category") != null && !jsonObj.get("dest_category").isJsonNull()) && !jsonObj.get("dest_category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dest_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dest_category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dest_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dest_category").toString()));
       }
       if ((jsonObj.get("dest_type") != null && !jsonObj.get("dest_type").isJsonNull()) && !jsonObj.get("dest_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dest_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dest_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dest_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dest_type").toString()));
       }
       if ((jsonObj.get("dest_value") != null && !jsonObj.get("dest_value").isJsonNull()) && !jsonObj.get("dest_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dest_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dest_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dest_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dest_value").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Assetsv3Action {
     }
   }
 
- /**
-  * Create an instance of Assetsv3Action given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3Action
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3Action
-  */
+  /**
+   * Create an instance of Assetsv3Action given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3Action
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3Action
+   */
   public static Assetsv3Action fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3Action.class);
   }
 
- /**
-  * Convert an instance of Assetsv3Action to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3Action to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

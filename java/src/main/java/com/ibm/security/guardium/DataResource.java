@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,296 +40,332 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DataResource
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class DataResource {
   public static final String SERIALIZED_NAME_DATA_RESOURCE_ID = "dataResourceId";
   @SerializedName(SERIALIZED_NAME_DATA_RESOURCE_ID)
+  @javax.annotation.Nonnull
   private String dataResourceId;
 
   public static final String SERIALIZED_NAME_DATA_RESOURCE_NAME = "dataResourceName";
   @SerializedName(SERIALIZED_NAME_DATA_RESOURCE_NAME)
+  @javax.annotation.Nonnull
   private String dataResourceName;
 
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
+  @javax.annotation.Nonnull
   private String dataStoreId;
 
   public static final String SERIALIZED_NAME_DATA_RESOURCE_TYPE = "dataResourceType";
   @SerializedName(SERIALIZED_NAME_DATA_RESOURCE_TYPE)
+  @javax.annotation.Nonnull
   private String dataResourceType;
 
   public static final String SERIALIZED_NAME_DATA_RESOURCE_OWNER = "dataResourceOwner";
   @SerializedName(SERIALIZED_NAME_DATA_RESOURCE_OWNER)
+  @javax.annotation.Nullable
   private String dataResourceOwner;
 
   public static final String SERIALIZED_NAME_SIZE_IN_BYTES = "sizeInBytes";
   @SerializedName(SERIALIZED_NAME_SIZE_IN_BYTES)
+  @javax.annotation.Nullable
   private BigDecimal sizeInBytes;
 
   public static final String SERIALIZED_NAME_SIZE_FORMATTED = "sizeFormatted";
   @SerializedName(SERIALIZED_NAME_SIZE_FORMATTED)
+  @javax.annotation.Nullable
   private String sizeFormatted;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creationTime";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private String creationTime;
 
   public static final String SERIALIZED_NAME_MODIFICATION_TIME = "modificationTime";
   @SerializedName(SERIALIZED_NAME_MODIFICATION_TIME)
+  @javax.annotation.Nullable
   private String modificationTime;
 
   public static final String SERIALIZED_NAME_IS_REVIEWED = "isReviewed";
   @SerializedName(SERIALIZED_NAME_IS_REVIEWED)
+  @javax.annotation.Nullable
   private Boolean isReviewed;
 
   public static final String SERIALIZED_NAME_LINK = "link";
   @SerializedName(SERIALIZED_NAME_LINK)
+  @javax.annotation.Nullable
   private String link;
 
   public static final String SERIALIZED_NAME_STATS = "stats";
   @SerializedName(SERIALIZED_NAME_STATS)
+  @javax.annotation.Nullable
   private DataResourceStats stats;
+
+  public static final String SERIALIZED_NAME_PATH = "path";
+  @SerializedName(SERIALIZED_NAME_PATH)
+  @javax.annotation.Nullable
+  private String path;
 
   public DataResource() {
   }
 
-  public DataResource dataResourceId(String dataResourceId) {
+  public DataResource dataResourceId(@javax.annotation.Nonnull String dataResourceId) {
     this.dataResourceId = dataResourceId;
     return this;
   }
 
-   /**
+  /**
    * Get dataResourceId
    * @return dataResourceId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataResourceId() {
     return dataResourceId;
   }
 
-  public void setDataResourceId(String dataResourceId) {
+  public void setDataResourceId(@javax.annotation.Nonnull String dataResourceId) {
     this.dataResourceId = dataResourceId;
   }
 
 
-  public DataResource dataResourceName(String dataResourceName) {
+  public DataResource dataResourceName(@javax.annotation.Nonnull String dataResourceName) {
     this.dataResourceName = dataResourceName;
     return this;
   }
 
-   /**
+  /**
    * Get dataResourceName
    * @return dataResourceName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataResourceName() {
     return dataResourceName;
   }
 
-  public void setDataResourceName(String dataResourceName) {
+  public void setDataResourceName(@javax.annotation.Nonnull String dataResourceName) {
     this.dataResourceName = dataResourceName;
   }
 
 
-  public DataResource dataStoreId(String dataStoreId) {
+  public DataResource dataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreId
    * @return dataStoreId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreId() {
     return dataStoreId;
   }
 
-  public void setDataStoreId(String dataStoreId) {
+  public void setDataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
   }
 
 
-  public DataResource dataResourceType(String dataResourceType) {
+  public DataResource dataResourceType(@javax.annotation.Nonnull String dataResourceType) {
     this.dataResourceType = dataResourceType;
     return this;
   }
 
-   /**
+  /**
    * Get dataResourceType
    * @return dataResourceType
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataResourceType() {
     return dataResourceType;
   }
 
-  public void setDataResourceType(String dataResourceType) {
+  public void setDataResourceType(@javax.annotation.Nonnull String dataResourceType) {
     this.dataResourceType = dataResourceType;
   }
 
 
-  public DataResource dataResourceOwner(String dataResourceOwner) {
+  public DataResource dataResourceOwner(@javax.annotation.Nullable String dataResourceOwner) {
     this.dataResourceOwner = dataResourceOwner;
     return this;
   }
 
-   /**
+  /**
    * Get dataResourceOwner
    * @return dataResourceOwner
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataResourceOwner() {
     return dataResourceOwner;
   }
 
-  public void setDataResourceOwner(String dataResourceOwner) {
+  public void setDataResourceOwner(@javax.annotation.Nullable String dataResourceOwner) {
     this.dataResourceOwner = dataResourceOwner;
   }
 
 
-  public DataResource sizeInBytes(BigDecimal sizeInBytes) {
+  public DataResource sizeInBytes(@javax.annotation.Nullable BigDecimal sizeInBytes) {
     this.sizeInBytes = sizeInBytes;
     return this;
   }
 
-   /**
+  /**
    * Get sizeInBytes
    * @return sizeInBytes
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getSizeInBytes() {
     return sizeInBytes;
   }
 
-  public void setSizeInBytes(BigDecimal sizeInBytes) {
+  public void setSizeInBytes(@javax.annotation.Nullable BigDecimal sizeInBytes) {
     this.sizeInBytes = sizeInBytes;
   }
 
 
-  public DataResource sizeFormatted(String sizeFormatted) {
+  public DataResource sizeFormatted(@javax.annotation.Nullable String sizeFormatted) {
     this.sizeFormatted = sizeFormatted;
     return this;
   }
 
-   /**
+  /**
    * Get sizeFormatted
    * @return sizeFormatted
-  **/
+   */
   @javax.annotation.Nullable
   public String getSizeFormatted() {
     return sizeFormatted;
   }
 
-  public void setSizeFormatted(String sizeFormatted) {
+  public void setSizeFormatted(@javax.annotation.Nullable String sizeFormatted) {
     this.sizeFormatted = sizeFormatted;
   }
 
 
-  public DataResource creationTime(String creationTime) {
+  public DataResource creationTime(@javax.annotation.Nullable String creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * Get creationTime
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(String creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable String creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public DataResource modificationTime(String modificationTime) {
+  public DataResource modificationTime(@javax.annotation.Nullable String modificationTime) {
     this.modificationTime = modificationTime;
     return this;
   }
 
-   /**
+  /**
    * Get modificationTime
    * @return modificationTime
-  **/
+   */
   @javax.annotation.Nullable
   public String getModificationTime() {
     return modificationTime;
   }
 
-  public void setModificationTime(String modificationTime) {
+  public void setModificationTime(@javax.annotation.Nullable String modificationTime) {
     this.modificationTime = modificationTime;
   }
 
 
-  public DataResource isReviewed(Boolean isReviewed) {
+  public DataResource isReviewed(@javax.annotation.Nullable Boolean isReviewed) {
     this.isReviewed = isReviewed;
     return this;
   }
 
-   /**
+  /**
    * Get isReviewed
    * @return isReviewed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsReviewed() {
     return isReviewed;
   }
 
-  public void setIsReviewed(Boolean isReviewed) {
+  public void setIsReviewed(@javax.annotation.Nullable Boolean isReviewed) {
     this.isReviewed = isReviewed;
   }
 
 
-  public DataResource link(String link) {
+  public DataResource link(@javax.annotation.Nullable String link) {
     this.link = link;
     return this;
   }
 
-   /**
+  /**
    * Get link
    * @return link
-  **/
+   */
   @javax.annotation.Nullable
   public String getLink() {
     return link;
   }
 
-  public void setLink(String link) {
+  public void setLink(@javax.annotation.Nullable String link) {
     this.link = link;
   }
 
 
-  public DataResource stats(DataResourceStats stats) {
+  public DataResource stats(@javax.annotation.Nullable DataResourceStats stats) {
     this.stats = stats;
     return this;
   }
 
-   /**
+  /**
    * Get stats
    * @return stats
-  **/
+   */
   @javax.annotation.Nullable
   public DataResourceStats getStats() {
     return stats;
   }
 
-  public void setStats(DataResourceStats stats) {
+  public void setStats(@javax.annotation.Nullable DataResourceStats stats) {
     this.stats = stats;
+  }
+
+
+  public DataResource path(@javax.annotation.Nullable String path) {
+    this.path = path;
+    return this;
+  }
+
+  /**
+   * Get path
+   * @return path
+   */
+  @javax.annotation.Nullable
+  public String getPath() {
+    return path;
+  }
+
+  public void setPath(@javax.annotation.Nullable String path) {
+    this.path = path;
   }
 
 
@@ -353,12 +390,13 @@ public class DataResource {
         Objects.equals(this.modificationTime, dataResource.modificationTime) &&
         Objects.equals(this.isReviewed, dataResource.isReviewed) &&
         Objects.equals(this.link, dataResource.link) &&
-        Objects.equals(this.stats, dataResource.stats);
+        Objects.equals(this.stats, dataResource.stats) &&
+        Objects.equals(this.path, dataResource.path);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataResourceId, dataResourceName, dataStoreId, dataResourceType, dataResourceOwner, sizeInBytes, sizeFormatted, creationTime, modificationTime, isReviewed, link, stats);
+    return Objects.hash(dataResourceId, dataResourceName, dataStoreId, dataResourceType, dataResourceOwner, sizeInBytes, sizeFormatted, creationTime, modificationTime, isReviewed, link, stats, path);
   }
 
   @Override
@@ -377,6 +415,7 @@ public class DataResource {
     sb.append("    isReviewed: ").append(toIndentedString(isReviewed)).append("\n");
     sb.append("    link: ").append(toIndentedString(link)).append("\n");
     sb.append("    stats: ").append(toIndentedString(stats)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -398,38 +437,22 @@ public class DataResource {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dataResourceId");
-    openapiFields.add("dataResourceName");
-    openapiFields.add("dataStoreId");
-    openapiFields.add("dataResourceType");
-    openapiFields.add("dataResourceOwner");
-    openapiFields.add("sizeInBytes");
-    openapiFields.add("sizeFormatted");
-    openapiFields.add("creationTime");
-    openapiFields.add("modificationTime");
-    openapiFields.add("isReviewed");
-    openapiFields.add("link");
-    openapiFields.add("stats");
+    openapiFields = new HashSet<String>(Arrays.asList("dataResourceId", "dataResourceName", "dataStoreId", "dataResourceType", "dataResourceOwner", "sizeInBytes", "sizeFormatted", "creationTime", "modificationTime", "isReviewed", "link", "stats", "path"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("dataResourceId");
-    openapiRequiredFields.add("dataResourceName");
-    openapiRequiredFields.add("dataStoreId");
-    openapiRequiredFields.add("dataResourceType");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("dataResourceId", "dataResourceName", "dataStoreId", "dataResourceType"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to DataResource
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to DataResource
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DataResource.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in DataResource is not found in the empty JSON string", DataResource.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DataResource is not found in the empty JSON string", DataResource.openapiRequiredFields.toString()));
         }
       }
 
@@ -437,47 +460,50 @@ public class DataResource {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DataResource.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DataResource` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DataResource` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : DataResource.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dataResourceId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataResourceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataResourceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceId").toString()));
       }
       if (!jsonObj.get("dataResourceName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataResourceName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataResourceName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceName").toString()));
       }
       if (!jsonObj.get("dataStoreId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
       }
       if (!jsonObj.get("dataResourceType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataResourceType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataResourceType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceType").toString()));
       }
       if ((jsonObj.get("dataResourceOwner") != null && !jsonObj.get("dataResourceOwner").isJsonNull()) && !jsonObj.get("dataResourceOwner").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataResourceOwner` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceOwner").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataResourceOwner` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataResourceOwner").toString()));
       }
       if ((jsonObj.get("sizeFormatted") != null && !jsonObj.get("sizeFormatted").isJsonNull()) && !jsonObj.get("sizeFormatted").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sizeFormatted` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sizeFormatted").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sizeFormatted` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sizeFormatted").toString()));
       }
       if ((jsonObj.get("creationTime") != null && !jsonObj.get("creationTime").isJsonNull()) && !jsonObj.get("creationTime").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `creationTime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creationTime").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `creationTime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creationTime").toString()));
       }
       if ((jsonObj.get("modificationTime") != null && !jsonObj.get("modificationTime").isJsonNull()) && !jsonObj.get("modificationTime").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `modificationTime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("modificationTime").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `modificationTime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("modificationTime").toString()));
       }
       if ((jsonObj.get("link") != null && !jsonObj.get("link").isJsonNull()) && !jsonObj.get("link").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link").toString()));
       }
       // validate the optional field `stats`
       if (jsonObj.get("stats") != null && !jsonObj.get("stats").isJsonNull()) {
         DataResourceStats.validateJsonElement(jsonObj.get("stats"));
+      }
+      if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
   }
 
@@ -510,22 +536,22 @@ public class DataResource {
     }
   }
 
- /**
-  * Create an instance of DataResource given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of DataResource
-  * @throws IOException if the JSON string is invalid with respect to DataResource
-  */
+  /**
+   * Create an instance of DataResource given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of DataResource
+   * @throws IOException if the JSON string is invalid with respect to DataResource
+   */
   public static DataResource fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, DataResource.class);
   }
 
- /**
-  * Convert an instance of DataResource to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of DataResource to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,295 +40,307 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Structure for [Universal connector] Connection.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3UCConnectionSummary {
   public static final String SERIALIZED_NAME_ALIAS = "alias";
   @SerializedName(SERIALIZED_NAME_ALIAS)
+  @javax.annotation.Nullable
   private String alias;
 
   public static final String SERIALIZED_NAME_CONFIG_ID = "config_id";
   @SerializedName(SERIALIZED_NAME_CONFIG_ID)
+  @javax.annotation.Nullable
   private String configId;
 
   public static final String SERIALIZED_NAME_DATASOURCE_TYPE = "datasource_type";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_TYPE)
+  @javax.annotation.Nullable
   private String datasourceType;
 
   public static final String SERIALIZED_NAME_EDGE_DEPLOYMENT_SERVER = "edge_deployment_server";
   @SerializedName(SERIALIZED_NAME_EDGE_DEPLOYMENT_SERVER)
+  @javax.annotation.Nullable
   private Connectionsv3EdgeDeploymentServer edgeDeploymentServer;
 
   public static final String SERIALIZED_NAME_FILTER_ALIAS = "filter_alias";
   @SerializedName(SERIALIZED_NAME_FILTER_ALIAS)
+  @javax.annotation.Nullable
   private String filterAlias;
 
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
+  @javax.annotation.Nullable
   private String host;
 
   public static final String SERIALIZED_NAME_INPUT_ALIAS = "input_alias";
   @SerializedName(SERIALIZED_NAME_INPUT_ALIAS)
+  @javax.annotation.Nullable
   private String inputAlias;
 
   public static final String SERIALIZED_NAME_LAST_RESPONSE = "last_response";
   @SerializedName(SERIALIZED_NAME_LAST_RESPONSE)
+  @javax.annotation.Nullable
   private String lastResponse;
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
+  @javax.annotation.Nullable
   private String port;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Connectionsv3Status status = Connectionsv3Status.UNDEFINED_STATUS;
 
   public static final String SERIALIZED_NAME_STATUS_TEXT = "status_text";
   @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
+  @javax.annotation.Nullable
   private String statusText;
 
   public static final String SERIALIZED_NAME_UC_CONNECTION_ID = "uc_connection_id";
   @SerializedName(SERIALIZED_NAME_UC_CONNECTION_ID)
+  @javax.annotation.Nullable
   private String ucConnectionId;
 
   public Connectionsv3UCConnectionSummary() {
   }
 
-  public Connectionsv3UCConnectionSummary alias(String alias) {
+  public Connectionsv3UCConnectionSummary alias(@javax.annotation.Nullable String alias) {
     this.alias = alias;
     return this;
   }
 
-   /**
+  /**
    * Connection configuration nickname, set by dev/user (optional).
    * @return alias
-  **/
+   */
   @javax.annotation.Nullable
   public String getAlias() {
     return alias;
   }
 
-  public void setAlias(String alias) {
+  public void setAlias(@javax.annotation.Nullable String alias) {
     this.alias = alias;
   }
 
 
-  public Connectionsv3UCConnectionSummary configId(String configId) {
+  public Connectionsv3UCConnectionSummary configId(@javax.annotation.Nullable String configId) {
     this.configId = configId;
     return this;
   }
 
-   /**
+  /**
    * Foreign key to the saved connection configuration by the user.
    * @return configId
-  **/
+   */
   @javax.annotation.Nullable
   public String getConfigId() {
     return configId;
   }
 
-  public void setConfigId(String configId) {
+  public void setConfigId(@javax.annotation.Nullable String configId) {
     this.configId = configId;
   }
 
 
-  public Connectionsv3UCConnectionSummary datasourceType(String datasourceType) {
+  public Connectionsv3UCConnectionSummary datasourceType(@javax.annotation.Nullable String datasourceType) {
     this.datasourceType = datasourceType;
     return this;
   }
 
-   /**
+  /**
    * Datasource type.
    * @return datasourceType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourceType() {
     return datasourceType;
   }
 
-  public void setDatasourceType(String datasourceType) {
+  public void setDatasourceType(@javax.annotation.Nullable String datasourceType) {
     this.datasourceType = datasourceType;
   }
 
 
-  public Connectionsv3UCConnectionSummary edgeDeploymentServer(Connectionsv3EdgeDeploymentServer edgeDeploymentServer) {
+  public Connectionsv3UCConnectionSummary edgeDeploymentServer(@javax.annotation.Nullable Connectionsv3EdgeDeploymentServer edgeDeploymentServer) {
     this.edgeDeploymentServer = edgeDeploymentServer;
     return this;
   }
 
-   /**
+  /**
    * Get edgeDeploymentServer
    * @return edgeDeploymentServer
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3EdgeDeploymentServer getEdgeDeploymentServer() {
     return edgeDeploymentServer;
   }
 
-  public void setEdgeDeploymentServer(Connectionsv3EdgeDeploymentServer edgeDeploymentServer) {
+  public void setEdgeDeploymentServer(@javax.annotation.Nullable Connectionsv3EdgeDeploymentServer edgeDeploymentServer) {
     this.edgeDeploymentServer = edgeDeploymentServer;
   }
 
 
-  public Connectionsv3UCConnectionSummary filterAlias(String filterAlias) {
+  public Connectionsv3UCConnectionSummary filterAlias(@javax.annotation.Nullable String filterAlias) {
     this.filterAlias = filterAlias;
     return this;
   }
 
-   /**
+  /**
    * Connector filter plugin alias (datasource, usually, like \&quot;MongoDB\&quot;).
    * @return filterAlias
-  **/
+   */
   @javax.annotation.Nullable
   public String getFilterAlias() {
     return filterAlias;
   }
 
-  public void setFilterAlias(String filterAlias) {
+  public void setFilterAlias(@javax.annotation.Nullable String filterAlias) {
     this.filterAlias = filterAlias;
   }
 
 
-  public Connectionsv3UCConnectionSummary host(String host) {
+  public Connectionsv3UCConnectionSummary host(@javax.annotation.Nullable String host) {
     this.host = host;
     return this;
   }
 
-   /**
+  /**
    * URI where related Universal connector service is running/listening.
    * @return host
-  **/
+   */
   @javax.annotation.Nullable
   public String getHost() {
     return host;
   }
 
-  public void setHost(String host) {
+  public void setHost(@javax.annotation.Nullable String host) {
     this.host = host;
   }
 
 
-  public Connectionsv3UCConnectionSummary inputAlias(String inputAlias) {
+  public Connectionsv3UCConnectionSummary inputAlias(@javax.annotation.Nullable String inputAlias) {
     this.inputAlias = inputAlias;
     return this;
   }
 
-   /**
+  /**
    * Connection input plugin alias, like \&quot;Filebeat\&quot;.
    * @return inputAlias
-  **/
+   */
   @javax.annotation.Nullable
   public String getInputAlias() {
     return inputAlias;
   }
 
-  public void setInputAlias(String inputAlias) {
+  public void setInputAlias(@javax.annotation.Nullable String inputAlias) {
     this.inputAlias = inputAlias;
   }
 
 
-  public Connectionsv3UCConnectionSummary lastResponse(String lastResponse) {
+  public Connectionsv3UCConnectionSummary lastResponse(@javax.annotation.Nullable String lastResponse) {
     this.lastResponse = lastResponse;
     return this;
   }
 
-   /**
+  /**
    * The heartbeat.
    * @return lastResponse
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastResponse() {
     return lastResponse;
   }
 
-  public void setLastResponse(String lastResponse) {
+  public void setLastResponse(@javax.annotation.Nullable String lastResponse) {
     this.lastResponse = lastResponse;
   }
 
 
-  public Connectionsv3UCConnectionSummary port(String port) {
+  public Connectionsv3UCConnectionSummary port(@javax.annotation.Nullable String port) {
     this.port = port;
     return this;
   }
 
-   /**
+  /**
    * Port where the related Universal connector service is running/listening.
    * @return port
-  **/
+   */
   @javax.annotation.Nullable
   public String getPort() {
     return port;
   }
 
-  public void setPort(String port) {
+  public void setPort(@javax.annotation.Nullable String port) {
     this.port = port;
   }
 
 
-  public Connectionsv3UCConnectionSummary status(Connectionsv3Status status) {
+  public Connectionsv3UCConnectionSummary status(@javax.annotation.Nullable Connectionsv3Status status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3Status getStatus() {
     return status;
   }
 
-  public void setStatus(Connectionsv3Status status) {
+  public void setStatus(@javax.annotation.Nullable Connectionsv3Status status) {
     this.status = status;
   }
 
 
-  public Connectionsv3UCConnectionSummary statusText(String statusText) {
+  public Connectionsv3UCConnectionSummary statusText(@javax.annotation.Nullable String statusText) {
     this.statusText = statusText;
     return this;
   }
 
-   /**
+  /**
    * If status is not OK, details what&#39;s wrong (non-localized).
    * @return statusText
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusText() {
     return statusText;
   }
 
-  public void setStatusText(String statusText) {
+  public void setStatusText(@javax.annotation.Nullable String statusText) {
     this.statusText = statusText;
   }
 
 
-  public Connectionsv3UCConnectionSummary ucConnectionId(String ucConnectionId) {
+  public Connectionsv3UCConnectionSummary ucConnectionId(@javax.annotation.Nullable String ucConnectionId) {
     this.ucConnectionId = ucConnectionId;
     return this;
   }
 
-   /**
+  /**
    * UC connection id.
    * @return ucConnectionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUcConnectionId() {
     return ucConnectionId;
   }
 
-  public void setUcConnectionId(String ucConnectionId) {
+  public void setUcConnectionId(@javax.annotation.Nullable String ucConnectionId) {
     this.ucConnectionId = ucConnectionId;
   }
 
@@ -398,34 +411,22 @@ public class Connectionsv3UCConnectionSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("alias");
-    openapiFields.add("config_id");
-    openapiFields.add("datasource_type");
-    openapiFields.add("edge_deployment_server");
-    openapiFields.add("filter_alias");
-    openapiFields.add("host");
-    openapiFields.add("input_alias");
-    openapiFields.add("last_response");
-    openapiFields.add("port");
-    openapiFields.add("status");
-    openapiFields.add("status_text");
-    openapiFields.add("uc_connection_id");
+    openapiFields = new HashSet<String>(Arrays.asList("alias", "config_id", "datasource_type", "edge_deployment_server", "filter_alias", "host", "input_alias", "last_response", "port", "status", "status_text", "uc_connection_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3UCConnectionSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3UCConnectionSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3UCConnectionSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3UCConnectionSummary is not found in the empty JSON string", Connectionsv3UCConnectionSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3UCConnectionSummary is not found in the empty JSON string", Connectionsv3UCConnectionSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -433,47 +434,47 @@ public class Connectionsv3UCConnectionSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3UCConnectionSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3UCConnectionSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3UCConnectionSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("alias") != null && !jsonObj.get("alias").isJsonNull()) && !jsonObj.get("alias").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("alias").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("alias").toString()));
       }
       if ((jsonObj.get("config_id") != null && !jsonObj.get("config_id").isJsonNull()) && !jsonObj.get("config_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `config_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("config_id").toString()));
       }
       if ((jsonObj.get("datasource_type") != null && !jsonObj.get("datasource_type").isJsonNull()) && !jsonObj.get("datasource_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasource_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasource_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_type").toString()));
       }
       // validate the optional field `edge_deployment_server`
       if (jsonObj.get("edge_deployment_server") != null && !jsonObj.get("edge_deployment_server").isJsonNull()) {
         Connectionsv3EdgeDeploymentServer.validateJsonElement(jsonObj.get("edge_deployment_server"));
       }
       if ((jsonObj.get("filter_alias") != null && !jsonObj.get("filter_alias").isJsonNull()) && !jsonObj.get("filter_alias").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filter_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_alias").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_alias").toString()));
       }
       if ((jsonObj.get("host") != null && !jsonObj.get("host").isJsonNull()) && !jsonObj.get("host").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host").toString()));
       }
       if ((jsonObj.get("input_alias") != null && !jsonObj.get("input_alias").isJsonNull()) && !jsonObj.get("input_alias").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `input_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input_alias").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `input_alias` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input_alias").toString()));
       }
       if ((jsonObj.get("last_response") != null && !jsonObj.get("last_response").isJsonNull()) && !jsonObj.get("last_response").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_response").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_response").toString()));
       }
       if ((jsonObj.get("port") != null && !jsonObj.get("port").isJsonNull()) && !jsonObj.get("port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
         Connectionsv3Status.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("status_text") != null && !jsonObj.get("status_text").isJsonNull()) && !jsonObj.get("status_text").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
       }
       if ((jsonObj.get("uc_connection_id") != null && !jsonObj.get("uc_connection_id").isJsonNull()) && !jsonObj.get("uc_connection_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uc_connection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uc_connection_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `uc_connection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uc_connection_id").toString()));
       }
   }
 
@@ -506,22 +507,22 @@ public class Connectionsv3UCConnectionSummary {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3UCConnectionSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3UCConnectionSummary
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3UCConnectionSummary
-  */
+  /**
+   * Create an instance of Connectionsv3UCConnectionSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3UCConnectionSummary
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3UCConnectionSummary
+   */
   public static Connectionsv3UCConnectionSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3UCConnectionSummary.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3UCConnectionSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3UCConnectionSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

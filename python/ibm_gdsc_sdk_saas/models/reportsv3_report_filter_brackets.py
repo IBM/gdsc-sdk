@@ -33,7 +33,7 @@ class Reportsv3ReportFilterBrackets(BaseModel):
     filters_array: Optional[List[Reportsv3ReportFilter]] = Field(default=None, description="Filters Array.")
     having_array: Optional[List[Reportsv3ReportAggFilter]] = None
     is_custom: Optional[StrictBool] = Field(default=None, description="Optional: Indicate if this is a custom filter in the UI.")
-    option_type: Optional[Reportsv3OptionType] = None
+    option_type: Optional[Reportsv3OptionType] = Reportsv3OptionType.UNDEFINED_OPTION_TYPE
     sequence: Optional[StrictInt] = Field(default=None, description="Filter sequence.")
     __properties: ClassVar[List[str]] = ["brackets_id", "filter_name", "filters_array", "having_array", "is_custom", "option_type", "sequence"]
 
@@ -79,16 +79,16 @@ class Reportsv3ReportFilterBrackets(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filters_array (list)
         _items = []
         if self.filters_array:
-            for _item in self.filters_array:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filters_array in self.filters_array:
+                if _item_filters_array:
+                    _items.append(_item_filters_array.to_dict())
             _dict['filters_array'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in having_array (list)
         _items = []
         if self.having_array:
-            for _item in self.having_array:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_having_array in self.having_array:
+                if _item_having_array:
+                    _items.append(_item_having_array.to_dict())
             _dict['having_array'] = _items
         return _dict
 
@@ -107,7 +107,7 @@ class Reportsv3ReportFilterBrackets(BaseModel):
             "filters_array": [Reportsv3ReportFilter.from_dict(_item) for _item in obj["filters_array"]] if obj.get("filters_array") is not None else None,
             "having_array": [Reportsv3ReportAggFilter.from_dict(_item) for _item in obj["having_array"]] if obj.get("having_array") is not None else None,
             "is_custom": obj.get("is_custom"),
-            "option_type": obj.get("option_type"),
+            "option_type": obj.get("option_type") if obj.get("option_type") is not None else Reportsv3OptionType.UNDEFINED_OPTION_TYPE,
             "sequence": obj.get("sequence")
         })
         return _obj

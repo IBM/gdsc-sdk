@@ -72,9 +72,9 @@ class Tenantuserv3GetApiKeysResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in apikeys (list)
         _items = []
         if self.apikeys:
-            for _item in self.apikeys:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_apikeys in self.apikeys:
+                if _item_apikeys:
+                    _items.append(_item_apikeys.to_dict())
             _dict['apikeys'] = _items
         return _dict
 

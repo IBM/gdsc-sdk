@@ -16,16 +16,25 @@ package com.ibm.security.guardium;
 import com.ibm.security.ApiException;
 import com.ibm.security.guardium.Jumpboxv3AuthorizeRequest;
 import com.ibm.security.guardium.Jumpboxv3AuthorizeResponse;
+import com.ibm.security.guardium.Jumpboxv3DeleteAccountResponse;
+import com.ibm.security.guardium.Jumpboxv3GetAccountResponse;
+import com.ibm.security.guardium.Jumpboxv3GetAccountsResponse;
 import com.ibm.security.guardium.Jumpboxv3GetTenantResponse;
 import com.ibm.security.guardium.Jumpboxv3GetTenantsResponse;
+import com.ibm.security.guardium.Jumpboxv3PostAccountRequest;
+import com.ibm.security.guardium.Jumpboxv3PostAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3PostTenantsRequest;
 import com.ibm.security.guardium.Jumpboxv3PostTenantsResponse;
 import com.ibm.security.guardium.Jumpboxv3PostUsersBulkRequest;
 import com.ibm.security.guardium.Jumpboxv3PostUsersBulkResponse;
+import com.ibm.security.guardium.Jumpboxv3ResumeAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3SearchUsersRequest;
 import com.ibm.security.guardium.Jumpboxv3SearchUsersResponse;
+import com.ibm.security.guardium.Jumpboxv3SuspendAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3TestUserRequest;
 import com.ibm.security.guardium.Jumpboxv3TestUserResponse;
+import com.ibm.security.guardium.Jumpboxv3UpdateAccountRequest;
+import com.ibm.security.guardium.Jumpboxv3UpdateAccountResponse;
 import com.ibm.security.guardium.Jumpboxv3UpdateTenantRequest;
 import com.ibm.security.guardium.Jumpboxv3UpdateTenantResponse;
 import com.ibm.security.guardium.Jumpboxv3UpdateUsersBulkRequest;
@@ -61,6 +70,18 @@ public class JumpboxServiceApiTest {
     }
 
     /**
+     * Summary: Delete account Description: Delete an account.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void jumpboxServiceDeleteAccountTest() throws ApiException {
+        String accountId = null;
+        Jumpboxv3DeleteAccountResponse response = api.jumpboxServiceDeleteAccount(accountId);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Delete tenant Description: Delete a tenant.
      *
      * @throws ApiException if the Api call fails
@@ -83,6 +104,35 @@ public class JumpboxServiceApiTest {
     public void jumpboxServiceDeleteUserTest() throws ApiException {
         String userId = null;
         Object response = api.jumpboxServiceDeleteUser(userId);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Get account Description: Get an account.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void jumpboxServiceGetAccountTest() throws ApiException {
+        String accountId = null;
+        Boolean includeInactive = null;
+        Boolean includeNotReady = null;
+        Jumpboxv3GetAccountResponse response = api.jumpboxServiceGetAccount(accountId, includeInactive, includeNotReady);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Get accounts Description: Get all accounts based on UID.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void jumpboxServiceGetAccountsTest() throws ApiException {
+        String uid = null;
+        String externalId = null;
+        Boolean includeInactive = null;
+        Boolean includeNotReady = null;
+        Jumpboxv3GetAccountsResponse response = api.jumpboxServiceGetAccounts(uid, externalId, includeInactive, includeNotReady);
         // TODO: test validations
     }
 
@@ -128,6 +178,18 @@ public class JumpboxServiceApiTest {
     }
 
     /**
+     * Summary: Post account Description: Create an Account.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void jumpboxServicePostAccountTest() throws ApiException {
+        Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest = null;
+        Jumpboxv3PostAccountResponse response = api.jumpboxServicePostAccount(jumpboxv3PostAccountRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Post tenants Description: Create a tenant.
      *
      * @throws ApiException if the Api call fails
@@ -152,6 +214,18 @@ public class JumpboxServiceApiTest {
     }
 
     /**
+     * Summary: Resume account Description: Resume an account.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void jumpboxServiceResumeAccountTest() throws ApiException {
+        String accountId = null;
+        Jumpboxv3ResumeAccountResponse response = api.jumpboxServiceResumeAccount(accountId);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Search users Description: Search for all users matching the provided string.
      *
      * @throws ApiException if the Api call fails
@@ -164,6 +238,18 @@ public class JumpboxServiceApiTest {
     }
 
     /**
+     * Summary: Suspend Account Description: Suspend an account
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void jumpboxServiceSuspendAccountTest() throws ApiException {
+        String accountId = null;
+        Jumpboxv3SuspendAccountResponse response = api.jumpboxServiceSuspendAccount(accountId);
+        // TODO: test validations
+    }
+
+    /**
      * Summary: Test user Description: Test a user lookup to a given LDAP.
      *
      * @throws ApiException if the Api call fails
@@ -172,6 +258,19 @@ public class JumpboxServiceApiTest {
     public void jumpboxServiceTestUserTest() throws ApiException {
         Jumpboxv3TestUserRequest jumpboxv3TestUserRequest = null;
         Jumpboxv3TestUserResponse response = api.jumpboxServiceTestUser(jumpboxv3TestUserRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Summary: Update Account Description: Updates an account.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void jumpboxServiceUpdateAccountTest() throws ApiException {
+        String accountId = null;
+        Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest = null;
+        Jumpboxv3UpdateAccountResponse response = api.jumpboxServiceUpdateAccount(accountId, jumpboxv3UpdateAccountRequest);
         // TODO: test validations
     }
 

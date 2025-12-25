@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -45,344 +46,367 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportDefinition encapsulates all data necessary for a report object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ReportDefinition {
   public static final String SERIALIZED_NAME_CATEGORY_ID = "category_id";
   @SerializedName(SERIALIZED_NAME_CATEGORY_ID)
+  @javax.annotation.Nullable
   private String categoryId;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_CREATOR_USER_ID = "creator_user_id";
   @SerializedName(SERIALIZED_NAME_CREATOR_USER_ID)
+  @javax.annotation.Nullable
   private String creatorUserId;
 
   public static final String SERIALIZED_NAME_DATE_RANGE = "date_range";
   @SerializedName(SERIALIZED_NAME_DATE_RANGE)
+  @javax.annotation.Nullable
   private Reportsv3DateRange dateRange;
 
   public static final String SERIALIZED_NAME_DEFAULT_TIMESTAMP_HEADER_ID = "default_timestamp_header_id";
   @SerializedName(SERIALIZED_NAME_DEFAULT_TIMESTAMP_HEADER_ID)
+  @javax.annotation.Nullable
   private String defaultTimestampHeaderId;
 
   public static final String SERIALIZED_NAME_IS_AUDITABLE = "is_auditable";
   @SerializedName(SERIALIZED_NAME_IS_AUDITABLE)
+  @javax.annotation.Nullable
   private Boolean isAuditable;
 
   public static final String SERIALIZED_NAME_IS_HIDDEN = "is_hidden";
   @SerializedName(SERIALIZED_NAME_IS_HIDDEN)
+  @javax.annotation.Nullable
   private Boolean isHidden;
 
   public static final String SERIALIZED_NAME_IS_PINNED = "is_pinned";
   @SerializedName(SERIALIZED_NAME_IS_PINNED)
+  @javax.annotation.Nullable
   private Boolean isPinned;
 
   public static final String SERIALIZED_NAME_IS_PREDEFINED = "is_predefined";
   @SerializedName(SERIALIZED_NAME_IS_PREDEFINED)
+  @javax.annotation.Nullable
   private Boolean isPredefined;
 
   public static final String SERIALIZED_NAME_REFRESH_RATE = "refresh_rate";
   @SerializedName(SERIALIZED_NAME_REFRESH_RATE)
+  @javax.annotation.Nullable
   private Integer refreshRate;
 
   public static final String SERIALIZED_NAME_REPORT_DESCRIPTION = "report_description";
   @SerializedName(SERIALIZED_NAME_REPORT_DESCRIPTION)
+  @javax.annotation.Nullable
   private String reportDescription;
 
   public static final String SERIALIZED_NAME_REPORT_FILTERS = "report_filters";
   @SerializedName(SERIALIZED_NAME_REPORT_FILTERS)
+  @javax.annotation.Nullable
   private Reportsv3ReportFilterBrackets reportFilters;
 
   public static final String SERIALIZED_NAME_REPORT_HEADERS = "report_headers";
   @SerializedName(SERIALIZED_NAME_REPORT_HEADERS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportHeader> reportHeaders = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_NAME = "report_name";
   @SerializedName(SERIALIZED_NAME_REPORT_NAME)
+  @javax.annotation.Nullable
   private String reportName;
 
   public static final String SERIALIZED_NAME_REPORT_TAGS = "report_tags";
   @SerializedName(SERIALIZED_NAME_REPORT_TAGS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportTag> reportTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAMETERS = "runtime_parameters";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Reportsv3RunTimeParameter> runtimeParameters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SELECTED_TIMESTAMP_HEADER_ID = "selected_timestamp_header_id";
   @SerializedName(SERIALIZED_NAME_SELECTED_TIMESTAMP_HEADER_ID)
+  @javax.annotation.Nullable
   private String selectedTimestampHeaderId;
 
   public static final String SERIALIZED_NAME_SHOULD_ADD_COUNT = "should_add_count";
   @SerializedName(SERIALIZED_NAME_SHOULD_ADD_COUNT)
+  @javax.annotation.Nullable
   private Boolean shouldAddCount;
 
   public static final String SERIALIZED_NAME_SHOULD_ADD_DISTINCT = "should_add_distinct";
   @SerializedName(SERIALIZED_NAME_SHOULD_ADD_DISTINCT)
+  @javax.annotation.Nullable
   private Boolean shouldAddDistinct;
 
   public static final String SERIALIZED_NAME_SQL_LAST_VERSION = "sql_last_version";
   @SerializedName(SERIALIZED_NAME_SQL_LAST_VERSION)
+  @javax.annotation.Nullable
   private String sqlLastVersion;
 
   public static final String SERIALIZED_NAME_TABLE_JOIN_OPTIMIZATION = "table_join_optimization";
   @SerializedName(SERIALIZED_NAME_TABLE_JOIN_OPTIMIZATION)
+  @javax.annotation.Nullable
   private String tableJoinOptimization;
 
   public static final String SERIALIZED_NAME_USE_PIPELINE_QUERIES = "use_pipeline_queries";
   @SerializedName(SERIALIZED_NAME_USE_PIPELINE_QUERIES)
+  @javax.annotation.Nullable
   private String usePipelineQueries;
 
   public Reportsv3ReportDefinition() {
   }
 
-  public Reportsv3ReportDefinition categoryId(String categoryId) {
+  public Reportsv3ReportDefinition categoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
     return this;
   }
 
-   /**
+  /**
    * Unique category ID.
    * @return categoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryId() {
     return categoryId;
   }
 
-  public void setCategoryId(String categoryId) {
+  public void setCategoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
   }
 
 
-  public Reportsv3ReportDefinition creationTime(OffsetDateTime creationTime) {
+  public Reportsv3ReportDefinition creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * The report&#39;s cration time in format YYYY-MM-DDTHH:mm:ss.sssZ.
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Reportsv3ReportDefinition creatorUserId(String creatorUserId) {
+  public Reportsv3ReportDefinition creatorUserId(@javax.annotation.Nullable String creatorUserId) {
     this.creatorUserId = creatorUserId;
     return this;
   }
 
-   /**
+  /**
    * An identifier for the creator of the report.
    * @return creatorUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreatorUserId() {
     return creatorUserId;
   }
 
-  public void setCreatorUserId(String creatorUserId) {
+  public void setCreatorUserId(@javax.annotation.Nullable String creatorUserId) {
     this.creatorUserId = creatorUserId;
   }
 
 
-  public Reportsv3ReportDefinition dateRange(Reportsv3DateRange dateRange) {
+  public Reportsv3ReportDefinition dateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(Reportsv3DateRange dateRange) {
+  public void setDateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
   }
 
 
-  public Reportsv3ReportDefinition defaultTimestampHeaderId(String defaultTimestampHeaderId) {
+  public Reportsv3ReportDefinition defaultTimestampHeaderId(@javax.annotation.Nullable String defaultTimestampHeaderId) {
     this.defaultTimestampHeaderId = defaultTimestampHeaderId;
     return this;
   }
 
-   /**
+  /**
    * The default timestamp header id.
    * @return defaultTimestampHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDefaultTimestampHeaderId() {
     return defaultTimestampHeaderId;
   }
 
-  public void setDefaultTimestampHeaderId(String defaultTimestampHeaderId) {
+  public void setDefaultTimestampHeaderId(@javax.annotation.Nullable String defaultTimestampHeaderId) {
     this.defaultTimestampHeaderId = defaultTimestampHeaderId;
   }
 
 
-  public Reportsv3ReportDefinition isAuditable(Boolean isAuditable) {
+  public Reportsv3ReportDefinition isAuditable(@javax.annotation.Nullable Boolean isAuditable) {
     this.isAuditable = isAuditable;
     return this;
   }
 
-   /**
+  /**
    * If a report is auditable.
    * @return isAuditable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsAuditable() {
     return isAuditable;
   }
 
-  public void setIsAuditable(Boolean isAuditable) {
+  public void setIsAuditable(@javax.annotation.Nullable Boolean isAuditable) {
     this.isAuditable = isAuditable;
   }
 
 
-  public Reportsv3ReportDefinition isHidden(Boolean isHidden) {
+  public Reportsv3ReportDefinition isHidden(@javax.annotation.Nullable Boolean isHidden) {
     this.isHidden = isHidden;
     return this;
   }
 
-   /**
+  /**
    * The is hidden true when report should be showed to the user.
    * @return isHidden
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsHidden() {
     return isHidden;
   }
 
-  public void setIsHidden(Boolean isHidden) {
+  public void setIsHidden(@javax.annotation.Nullable Boolean isHidden) {
     this.isHidden = isHidden;
   }
 
 
-  public Reportsv3ReportDefinition isPinned(Boolean isPinned) {
+  public Reportsv3ReportDefinition isPinned(@javax.annotation.Nullable Boolean isPinned) {
     this.isPinned = isPinned;
     return this;
   }
 
-   /**
+  /**
    * Is pinned report.
    * @return isPinned
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsPinned() {
     return isPinned;
   }
 
-  public void setIsPinned(Boolean isPinned) {
+  public void setIsPinned(@javax.annotation.Nullable Boolean isPinned) {
     this.isPinned = isPinned;
   }
 
 
-  public Reportsv3ReportDefinition isPredefined(Boolean isPredefined) {
+  public Reportsv3ReportDefinition isPredefined(@javax.annotation.Nullable Boolean isPredefined) {
     this.isPredefined = isPredefined;
     return this;
   }
 
-   /**
+  /**
    * If a report is predefined.
    * @return isPredefined
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsPredefined() {
     return isPredefined;
   }
 
-  public void setIsPredefined(Boolean isPredefined) {
+  public void setIsPredefined(@javax.annotation.Nullable Boolean isPredefined) {
     this.isPredefined = isPredefined;
   }
 
 
-  public Reportsv3ReportDefinition refreshRate(Integer refreshRate) {
+  public Reportsv3ReportDefinition refreshRate(@javax.annotation.Nullable Integer refreshRate) {
     this.refreshRate = refreshRate;
     return this;
   }
 
-   /**
+  /**
    * Report refresh rate.
    * @return refreshRate
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRefreshRate() {
     return refreshRate;
   }
 
-  public void setRefreshRate(Integer refreshRate) {
+  public void setRefreshRate(@javax.annotation.Nullable Integer refreshRate) {
     this.refreshRate = refreshRate;
   }
 
 
-  public Reportsv3ReportDefinition reportDescription(String reportDescription) {
+  public Reportsv3ReportDefinition reportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
     return this;
   }
 
-   /**
+  /**
    * Report description.
    * @return reportDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportDescription() {
     return reportDescription;
   }
 
-  public void setReportDescription(String reportDescription) {
+  public void setReportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
   }
 
 
-  public Reportsv3ReportDefinition reportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public Reportsv3ReportDefinition reportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
     return this;
   }
 
-   /**
+  /**
    * Get reportFilters
    * @return reportFilters
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportFilterBrackets getReportFilters() {
     return reportFilters;
   }
 
-  public void setReportFilters(Reportsv3ReportFilterBrackets reportFilters) {
+  public void setReportFilters(@javax.annotation.Nullable Reportsv3ReportFilterBrackets reportFilters) {
     this.reportFilters = reportFilters;
   }
 
 
-  public Reportsv3ReportDefinition reportHeaders(List<Reportsv3ReportHeader> reportHeaders) {
+  public Reportsv3ReportDefinition reportHeaders(@javax.annotation.Nullable List<Reportsv3ReportHeader> reportHeaders) {
     this.reportHeaders = reportHeaders;
     return this;
   }
@@ -395,59 +419,59 @@ public class Reportsv3ReportDefinition {
     return this;
   }
 
-   /**
+  /**
    * Selected headers for the report.
    * @return reportHeaders
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportHeader> getReportHeaders() {
     return reportHeaders;
   }
 
-  public void setReportHeaders(List<Reportsv3ReportHeader> reportHeaders) {
+  public void setReportHeaders(@javax.annotation.Nullable List<Reportsv3ReportHeader> reportHeaders) {
     this.reportHeaders = reportHeaders;
   }
 
 
-  public Reportsv3ReportDefinition reportId(String reportId) {
+  public Reportsv3ReportDefinition reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * The report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsv3ReportDefinition reportName(String reportName) {
+  public Reportsv3ReportDefinition reportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * Report name.
    * @return reportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(String reportName) {
+  public void setReportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
 
-  public Reportsv3ReportDefinition reportTags(List<Reportsv3ReportTag> reportTags) {
+  public Reportsv3ReportDefinition reportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
     return this;
   }
@@ -460,21 +484,21 @@ public class Reportsv3ReportDefinition {
     return this;
   }
 
-   /**
+  /**
    * Report tags.
    * @return reportTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportTag> getReportTags() {
     return reportTags;
   }
 
-  public void setReportTags(List<Reportsv3ReportTag> reportTags) {
+  public void setReportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
   }
 
 
-  public Reportsv3ReportDefinition runtimeParameters(List<Reportsv3RunTimeParameter> runtimeParameters) {
+  public Reportsv3ReportDefinition runtimeParameters(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameters) {
     this.runtimeParameters = runtimeParameters;
     return this;
   }
@@ -487,130 +511,130 @@ public class Reportsv3ReportDefinition {
     return this;
   }
 
-   /**
+  /**
    * Report runtime parameters.
    * @return runtimeParameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3RunTimeParameter> getRuntimeParameters() {
     return runtimeParameters;
   }
 
-  public void setRuntimeParameters(List<Reportsv3RunTimeParameter> runtimeParameters) {
+  public void setRuntimeParameters(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameters) {
     this.runtimeParameters = runtimeParameters;
   }
 
 
-  public Reportsv3ReportDefinition selectedTimestampHeaderId(String selectedTimestampHeaderId) {
+  public Reportsv3ReportDefinition selectedTimestampHeaderId(@javax.annotation.Nullable String selectedTimestampHeaderId) {
     this.selectedTimestampHeaderId = selectedTimestampHeaderId;
     return this;
   }
 
-   /**
+  /**
    * The selected timestamp header id- in case the user override the default.
    * @return selectedTimestampHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSelectedTimestampHeaderId() {
     return selectedTimestampHeaderId;
   }
 
-  public void setSelectedTimestampHeaderId(String selectedTimestampHeaderId) {
+  public void setSelectedTimestampHeaderId(@javax.annotation.Nullable String selectedTimestampHeaderId) {
     this.selectedTimestampHeaderId = selectedTimestampHeaderId;
   }
 
 
-  public Reportsv3ReportDefinition shouldAddCount(Boolean shouldAddCount) {
+  public Reportsv3ReportDefinition shouldAddCount(@javax.annotation.Nullable Boolean shouldAddCount) {
     this.shouldAddCount = shouldAddCount;
     return this;
   }
 
-   /**
+  /**
    * Add \&quot;count\&quot; statement or not.
    * @return shouldAddCount
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getShouldAddCount() {
     return shouldAddCount;
   }
 
-  public void setShouldAddCount(Boolean shouldAddCount) {
+  public void setShouldAddCount(@javax.annotation.Nullable Boolean shouldAddCount) {
     this.shouldAddCount = shouldAddCount;
   }
 
 
-  public Reportsv3ReportDefinition shouldAddDistinct(Boolean shouldAddDistinct) {
+  public Reportsv3ReportDefinition shouldAddDistinct(@javax.annotation.Nullable Boolean shouldAddDistinct) {
     this.shouldAddDistinct = shouldAddDistinct;
     return this;
   }
 
-   /**
+  /**
    * Add \&quot;distinct\&quot; statement or not.
    * @return shouldAddDistinct
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getShouldAddDistinct() {
     return shouldAddDistinct;
   }
 
-  public void setShouldAddDistinct(Boolean shouldAddDistinct) {
+  public void setShouldAddDistinct(@javax.annotation.Nullable Boolean shouldAddDistinct) {
     this.shouldAddDistinct = shouldAddDistinct;
   }
 
 
-  public Reportsv3ReportDefinition sqlLastVersion(String sqlLastVersion) {
+  public Reportsv3ReportDefinition sqlLastVersion(@javax.annotation.Nullable String sqlLastVersion) {
     this.sqlLastVersion = sqlLastVersion;
     return this;
   }
 
-   /**
+  /**
    * SQL Last Version -  Last version of GI when the query was generated.
    * @return sqlLastVersion
-  **/
+   */
   @javax.annotation.Nullable
   public String getSqlLastVersion() {
     return sqlLastVersion;
   }
 
-  public void setSqlLastVersion(String sqlLastVersion) {
+  public void setSqlLastVersion(@javax.annotation.Nullable String sqlLastVersion) {
     this.sqlLastVersion = sqlLastVersion;
   }
 
 
-  public Reportsv3ReportDefinition tableJoinOptimization(String tableJoinOptimization) {
+  public Reportsv3ReportDefinition tableJoinOptimization(@javax.annotation.Nullable String tableJoinOptimization) {
     this.tableJoinOptimization = tableJoinOptimization;
     return this;
   }
 
-   /**
+  /**
    * optional : table join optimization - optimized the join operation to enhance the performance. the value can be empty, false or true. if the value is empty then the global setting will be used.
    * @return tableJoinOptimization
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableJoinOptimization() {
     return tableJoinOptimization;
   }
 
-  public void setTableJoinOptimization(String tableJoinOptimization) {
+  public void setTableJoinOptimization(@javax.annotation.Nullable String tableJoinOptimization) {
     this.tableJoinOptimization = tableJoinOptimization;
   }
 
 
-  public Reportsv3ReportDefinition usePipelineQueries(String usePipelineQueries) {
+  public Reportsv3ReportDefinition usePipelineQueries(@javax.annotation.Nullable String usePipelineQueries) {
     this.usePipelineQueries = usePipelineQueries;
     return this;
   }
 
-   /**
+  /**
    * Optional: disable or enable the pipeline queries the value can be empty, false or true. if the value is empty then the global setting will be used.
    * @return usePipelineQueries
-  **/
+   */
   @javax.annotation.Nullable
   public String getUsePipelineQueries() {
     return usePipelineQueries;
   }
 
-  public void setUsePipelineQueries(String usePipelineQueries) {
+  public void setUsePipelineQueries(@javax.annotation.Nullable String usePipelineQueries) {
     this.usePipelineQueries = usePipelineQueries;
   }
 
@@ -703,45 +727,22 @@ public class Reportsv3ReportDefinition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("category_id");
-    openapiFields.add("creation_time");
-    openapiFields.add("creator_user_id");
-    openapiFields.add("date_range");
-    openapiFields.add("default_timestamp_header_id");
-    openapiFields.add("is_auditable");
-    openapiFields.add("is_hidden");
-    openapiFields.add("is_pinned");
-    openapiFields.add("is_predefined");
-    openapiFields.add("refresh_rate");
-    openapiFields.add("report_description");
-    openapiFields.add("report_filters");
-    openapiFields.add("report_headers");
-    openapiFields.add("report_id");
-    openapiFields.add("report_name");
-    openapiFields.add("report_tags");
-    openapiFields.add("runtime_parameters");
-    openapiFields.add("selected_timestamp_header_id");
-    openapiFields.add("should_add_count");
-    openapiFields.add("should_add_distinct");
-    openapiFields.add("sql_last_version");
-    openapiFields.add("table_join_optimization");
-    openapiFields.add("use_pipeline_queries");
+    openapiFields = new HashSet<String>(Arrays.asList("category_id", "creation_time", "creator_user_id", "date_range", "default_timestamp_header_id", "is_auditable", "is_hidden", "is_pinned", "is_predefined", "refresh_rate", "report_description", "report_filters", "report_headers", "report_id", "report_name", "report_tags", "runtime_parameters", "selected_timestamp_header_id", "should_add_count", "should_add_distinct", "sql_last_version", "table_join_optimization", "use_pipeline_queries"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportDefinition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportDefinition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ReportDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ReportDefinition is not found in the empty JSON string", Reportsv3ReportDefinition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ReportDefinition is not found in the empty JSON string", Reportsv3ReportDefinition.openapiRequiredFields.toString()));
         }
       }
 
@@ -749,25 +750,25 @@ public class Reportsv3ReportDefinition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ReportDefinition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ReportDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ReportDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("category_id") != null && !jsonObj.get("category_id").isJsonNull()) && !jsonObj.get("category_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
       }
       if ((jsonObj.get("creator_user_id") != null && !jsonObj.get("creator_user_id").isJsonNull()) && !jsonObj.get("creator_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `creator_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `creator_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("creator_user_id").toString()));
       }
       // validate the optional field `date_range`
       if (jsonObj.get("date_range") != null && !jsonObj.get("date_range").isJsonNull()) {
         Reportsv3DateRange.validateJsonElement(jsonObj.get("date_range"));
       }
       if ((jsonObj.get("default_timestamp_header_id") != null && !jsonObj.get("default_timestamp_header_id").isJsonNull()) && !jsonObj.get("default_timestamp_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `default_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_timestamp_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `default_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_timestamp_header_id").toString()));
       }
       if ((jsonObj.get("report_description") != null && !jsonObj.get("report_description").isJsonNull()) && !jsonObj.get("report_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
       }
       // validate the optional field `report_filters`
       if (jsonObj.get("report_filters") != null && !jsonObj.get("report_filters").isJsonNull()) {
@@ -778,7 +779,7 @@ public class Reportsv3ReportDefinition {
         if (jsonArrayreportHeaders != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_headers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_headers` to be an array in the JSON string but got `%s`", jsonObj.get("report_headers").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_headers` to be an array in the JSON string but got `%s`", jsonObj.get("report_headers").toString()));
           }
 
           // validate the optional field `report_headers` (array)
@@ -788,17 +789,17 @@ public class Reportsv3ReportDefinition {
         }
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("report_name") != null && !jsonObj.get("report_name").isJsonNull()) && !jsonObj.get("report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
       }
       if (jsonObj.get("report_tags") != null && !jsonObj.get("report_tags").isJsonNull()) {
         JsonArray jsonArrayreportTags = jsonObj.getAsJsonArray("report_tags");
         if (jsonArrayreportTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
           }
 
           // validate the optional field `report_tags` (array)
@@ -812,7 +813,7 @@ public class Reportsv3ReportDefinition {
         if (jsonArrayruntimeParameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("runtime_parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `runtime_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `runtime_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameters").toString()));
           }
 
           // validate the optional field `runtime_parameters` (array)
@@ -822,16 +823,16 @@ public class Reportsv3ReportDefinition {
         }
       }
       if ((jsonObj.get("selected_timestamp_header_id") != null && !jsonObj.get("selected_timestamp_header_id").isJsonNull()) && !jsonObj.get("selected_timestamp_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `selected_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("selected_timestamp_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `selected_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("selected_timestamp_header_id").toString()));
       }
       if ((jsonObj.get("sql_last_version") != null && !jsonObj.get("sql_last_version").isJsonNull()) && !jsonObj.get("sql_last_version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sql_last_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sql_last_version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sql_last_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sql_last_version").toString()));
       }
       if ((jsonObj.get("table_join_optimization") != null && !jsonObj.get("table_join_optimization").isJsonNull()) && !jsonObj.get("table_join_optimization").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_join_optimization` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_join_optimization").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_join_optimization` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_join_optimization").toString()));
       }
       if ((jsonObj.get("use_pipeline_queries") != null && !jsonObj.get("use_pipeline_queries").isJsonNull()) && !jsonObj.get("use_pipeline_queries").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `use_pipeline_queries` to be a primitive type in the JSON string but got `%s`", jsonObj.get("use_pipeline_queries").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `use_pipeline_queries` to be a primitive type in the JSON string but got `%s`", jsonObj.get("use_pipeline_queries").toString()));
       }
   }
 
@@ -864,22 +865,22 @@ public class Reportsv3ReportDefinition {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ReportDefinition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ReportDefinition
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportDefinition
-  */
+  /**
+   * Create an instance of Reportsv3ReportDefinition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ReportDefinition
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportDefinition
+   */
   public static Reportsv3ReportDefinition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ReportDefinition.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ReportDefinition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ReportDefinition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

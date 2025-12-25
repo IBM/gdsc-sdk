@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Riskanalyticsmlclassificationv3ClassificationDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsmlclassificationv3ClassificationDefinition {
   public static final String SERIALIZED_NAME_CLASSIFICATIONS = "classifications";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATIONS)
+  @javax.annotation.Nullable
   private List<String> classifications = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PIVOT_TYPE = "pivot_type";
   @SerializedName(SERIALIZED_NAME_PIVOT_TYPE)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3PivotType pivotType = Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE;
 
   public Riskanalyticsmlclassificationv3ClassificationDefinition() {
   }
 
-  public Riskanalyticsmlclassificationv3ClassificationDefinition classifications(List<String> classifications) {
+  public Riskanalyticsmlclassificationv3ClassificationDefinition classifications(@javax.annotation.Nullable List<String> classifications) {
     this.classifications = classifications;
     return this;
   }
@@ -78,35 +81,35 @@ public class Riskanalyticsmlclassificationv3ClassificationDefinition {
     return this;
   }
 
-   /**
+  /**
    * Get classifications
    * @return classifications
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getClassifications() {
     return classifications;
   }
 
-  public void setClassifications(List<String> classifications) {
+  public void setClassifications(@javax.annotation.Nullable List<String> classifications) {
     this.classifications = classifications;
   }
 
 
-  public Riskanalyticsmlclassificationv3ClassificationDefinition pivotType(Riskanalyticsenginev3PivotType pivotType) {
+  public Riskanalyticsmlclassificationv3ClassificationDefinition pivotType(@javax.annotation.Nullable Riskanalyticsenginev3PivotType pivotType) {
     this.pivotType = pivotType;
     return this;
   }
 
-   /**
+  /**
    * Get pivotType
    * @return pivotType
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3PivotType getPivotType() {
     return pivotType;
   }
 
-  public void setPivotType(Riskanalyticsenginev3PivotType pivotType) {
+  public void setPivotType(@javax.annotation.Nullable Riskanalyticsenginev3PivotType pivotType) {
     this.pivotType = pivotType;
   }
 
@@ -157,24 +160,22 @@ public class Riskanalyticsmlclassificationv3ClassificationDefinition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("classifications");
-    openapiFields.add("pivot_type");
+    openapiFields = new HashSet<String>(Arrays.asList("classifications", "pivot_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3ClassificationDefinition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3ClassificationDefinition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsmlclassificationv3ClassificationDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsmlclassificationv3ClassificationDefinition is not found in the empty JSON string", Riskanalyticsmlclassificationv3ClassificationDefinition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsmlclassificationv3ClassificationDefinition is not found in the empty JSON string", Riskanalyticsmlclassificationv3ClassificationDefinition.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,13 +183,13 @@ public class Riskanalyticsmlclassificationv3ClassificationDefinition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsmlclassificationv3ClassificationDefinition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3ClassificationDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3ClassificationDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("classifications") != null && !jsonObj.get("classifications").isJsonNull() && !jsonObj.get("classifications").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `classifications` to be an array in the JSON string but got `%s`", jsonObj.get("classifications").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classifications` to be an array in the JSON string but got `%s`", jsonObj.get("classifications").toString()));
       }
       // validate the optional field `pivot_type`
       if (jsonObj.get("pivot_type") != null && !jsonObj.get("pivot_type").isJsonNull()) {
@@ -225,22 +226,22 @@ public class Riskanalyticsmlclassificationv3ClassificationDefinition {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsmlclassificationv3ClassificationDefinition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsmlclassificationv3ClassificationDefinition
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3ClassificationDefinition
-  */
+  /**
+   * Create an instance of Riskanalyticsmlclassificationv3ClassificationDefinition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsmlclassificationv3ClassificationDefinition
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3ClassificationDefinition
+   */
   public static Riskanalyticsmlclassificationv3ClassificationDefinition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsmlclassificationv3ClassificationDefinition.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsmlclassificationv3ClassificationDefinition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsmlclassificationv3ClassificationDefinition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

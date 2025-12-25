@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,124 +42,130 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Trustee
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Trustee {
   public static final String SERIALIZED_NAME_ASSET_ID = "assetId";
   @SerializedName(SERIALIZED_NAME_ASSET_ID)
+  @javax.annotation.Nonnull
   private String assetId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   public static final String SERIALIZED_NAME_ASSET_TYPE = "assetType";
   @SerializedName(SERIALIZED_NAME_ASSET_TYPE)
+  @javax.annotation.Nonnull
   private String assetType;
 
   public static final String SERIALIZED_NAME_LINK = "link";
   @SerializedName(SERIALIZED_NAME_LINK)
+  @javax.annotation.Nonnull
   private String link;
 
   public static final String SERIALIZED_NAME_PERMISSIONS = "permissions";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS)
+  @javax.annotation.Nullable
   private List<AccessType> permissions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_DETAILS = "cloudAccountDetails";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_DETAILS)
+  @javax.annotation.Nonnull
   private CloudAccountDetails cloudAccountDetails;
 
   public Trustee() {
   }
 
-  public Trustee assetId(String assetId) {
+  public Trustee assetId(@javax.annotation.Nonnull String assetId) {
     this.assetId = assetId;
     return this;
   }
 
-   /**
+  /**
    * Get assetId
    * @return assetId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getAssetId() {
     return assetId;
   }
 
-  public void setAssetId(String assetId) {
+  public void setAssetId(@javax.annotation.Nonnull String assetId) {
     this.assetId = assetId;
   }
 
 
-  public Trustee name(String name) {
+  public Trustee name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public Trustee assetType(String assetType) {
+  public Trustee assetType(@javax.annotation.Nonnull String assetType) {
     this.assetType = assetType;
     return this;
   }
 
-   /**
+  /**
    * Get assetType
    * @return assetType
-  **/
+   */
   @javax.annotation.Nonnull
   public String getAssetType() {
     return assetType;
   }
 
-  public void setAssetType(String assetType) {
+  public void setAssetType(@javax.annotation.Nonnull String assetType) {
     this.assetType = assetType;
   }
 
 
-  public Trustee link(String link) {
+  public Trustee link(@javax.annotation.Nonnull String link) {
     this.link = link;
     return this;
   }
 
-   /**
+  /**
    * Get link
    * @return link
-  **/
+   */
   @javax.annotation.Nonnull
   public String getLink() {
     return link;
   }
 
-  public void setLink(String link) {
+  public void setLink(@javax.annotation.Nonnull String link) {
     this.link = link;
   }
 
 
-  public Trustee permissions(List<AccessType> permissions) {
+  public Trustee permissions(@javax.annotation.Nullable List<AccessType> permissions) {
     this.permissions = permissions;
     return this;
   }
@@ -171,35 +178,35 @@ public class Trustee {
     return this;
   }
 
-   /**
+  /**
    * Get permissions
    * @return permissions
-  **/
+   */
   @javax.annotation.Nullable
   public List<AccessType> getPermissions() {
     return permissions;
   }
 
-  public void setPermissions(List<AccessType> permissions) {
+  public void setPermissions(@javax.annotation.Nullable List<AccessType> permissions) {
     this.permissions = permissions;
   }
 
 
-  public Trustee cloudAccountDetails(CloudAccountDetails cloudAccountDetails) {
+  public Trustee cloudAccountDetails(@javax.annotation.Nonnull CloudAccountDetails cloudAccountDetails) {
     this.cloudAccountDetails = cloudAccountDetails;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountDetails
    * @return cloudAccountDetails
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudAccountDetails getCloudAccountDetails() {
     return cloudAccountDetails;
   }
 
-  public void setCloudAccountDetails(CloudAccountDetails cloudAccountDetails) {
+  public void setCloudAccountDetails(@javax.annotation.Nonnull CloudAccountDetails cloudAccountDetails) {
     this.cloudAccountDetails = cloudAccountDetails;
   }
 
@@ -258,33 +265,22 @@ public class Trustee {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assetId");
-    openapiFields.add("name");
-    openapiFields.add("assetType");
-    openapiFields.add("link");
-    openapiFields.add("permissions");
-    openapiFields.add("cloudAccountDetails");
+    openapiFields = new HashSet<String>(Arrays.asList("assetId", "name", "assetType", "link", "permissions", "cloudAccountDetails"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("assetId");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("assetType");
-    openapiRequiredFields.add("link");
-    openapiRequiredFields.add("cloudAccountDetails");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("assetId", "name", "assetType", "link", "cloudAccountDetails"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Trustee
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Trustee
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Trustee.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Trustee is not found in the empty JSON string", Trustee.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Trustee is not found in the empty JSON string", Trustee.openapiRequiredFields.toString()));
         }
       }
 
@@ -292,32 +288,32 @@ public class Trustee {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Trustee.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Trustee` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Trustee` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Trustee.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("assetId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assetId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assetId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assetId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assetId").toString()));
       }
       if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if (!jsonObj.get("assetType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assetType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assetType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assetType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assetType").toString()));
       }
       if (!jsonObj.get("link").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("link").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("permissions") != null && !jsonObj.get("permissions").isJsonNull() && !jsonObj.get("permissions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
       }
       // validate the required field `cloudAccountDetails`
       CloudAccountDetails.validateJsonElement(jsonObj.get("cloudAccountDetails"));
@@ -352,22 +348,22 @@ public class Trustee {
     }
   }
 
- /**
-  * Create an instance of Trustee given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Trustee
-  * @throws IOException if the JSON string is invalid with respect to Trustee
-  */
+  /**
+   * Create an instance of Trustee given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Trustee
+   * @throws IOException if the JSON string is invalid with respect to Trustee
+   */
   public static Trustee fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Trustee.class);
   }
 
- /**
-  * Convert an instance of Trustee to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Trustee to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

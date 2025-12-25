@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chart_id** | **str** | The chart id. | [optional] 
 **chart_title** | **str** | The chart title. | [optional] 
-**chart_type** | [**Reportsv3ChartType**](Reportsv3ChartType.md) |  | [optional] 
+**chart_type** | [**Reportsv3ChartType**](Reportsv3ChartType.md) |  | [optional] [default to Reportsv3ChartType.UNDEFINED_CHART_TYPE]
 **creation_time** | **datetime** | The chart&#39;s cration time in format YYYY-MM-DDTHH:mm:ss.sssZ. | [optional] 
 **creator_user_id** | **str** | An identifier for the creator of the chart. | [optional] 
 **dataset_header_id** | **str** | Header id for the dataset values. | [optional] 

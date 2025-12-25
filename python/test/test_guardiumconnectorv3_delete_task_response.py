@@ -27,7 +27,7 @@ class TestGuardiumconnectorv3DeleteTaskResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Guardiumconnectorv3DeleteTaskResponse:
         """Test Guardiumconnectorv3DeleteTaskResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Guardiumconnectorv3DeleteTaskResponse`

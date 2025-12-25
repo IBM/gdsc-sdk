@@ -34,6 +34,8 @@ export class Healthcollectorv3StapDetailsObjectGdp {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "connectivityDetails",
@@ -79,4 +81,3 @@ export class Healthcollectorv3StapDetailsObjectGdp {
     public constructor() {
     }
 }
-

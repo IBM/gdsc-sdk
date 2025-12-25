@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RunSimulatorRequest message for RunSimulator.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3RunSimulatorRequest {
   public static final String SERIALIZED_NAME_CONFIGURATION_FILE_PATH = "configuration_file_path";
   @SerializedName(SERIALIZED_NAME_CONFIGURATION_FILE_PATH)
+  @javax.annotation.Nullable
   private String configurationFilePath;
 
   public static final String SERIALIZED_NAME_DATE = "date";
   @SerializedName(SERIALIZED_NAME_DATE)
+  @javax.annotation.Nullable
   private String date;
 
   public static final String SERIALIZED_NAME_ENABLE_DEMO_MODE = "enable_demo_mode";
   @SerializedName(SERIALIZED_NAME_ENABLE_DEMO_MODE)
+  @javax.annotation.Nullable
   private Boolean enableDemoMode;
 
   public static final String SERIALIZED_NAME_LENGTH = "length";
   @SerializedName(SERIALIZED_NAME_LENGTH)
+  @javax.annotation.Nullable
   private Integer length;
 
   public Outliersenginev3RunSimulatorRequest() {
   }
 
-  public Outliersenginev3RunSimulatorRequest configurationFilePath(String configurationFilePath) {
+  public Outliersenginev3RunSimulatorRequest configurationFilePath(@javax.annotation.Nullable String configurationFilePath) {
     this.configurationFilePath = configurationFilePath;
     return this;
   }
 
-   /**
+  /**
    * Optional: path to configuration file - is null or empty use the default config file.
    * @return configurationFilePath
-  **/
+   */
   @javax.annotation.Nullable
   public String getConfigurationFilePath() {
     return configurationFilePath;
   }
 
-  public void setConfigurationFilePath(String configurationFilePath) {
+  public void setConfigurationFilePath(@javax.annotation.Nullable String configurationFilePath) {
     this.configurationFilePath = configurationFilePath;
   }
 
 
-  public Outliersenginev3RunSimulatorRequest date(String date) {
+  public Outliersenginev3RunSimulatorRequest date(@javax.annotation.Nullable String date) {
     this.date = date;
     return this;
   }
 
-   /**
+  /**
    * Date in the format dd/mm/yyyy.
    * @return date
-  **/
+   */
   @javax.annotation.Nullable
   public String getDate() {
     return date;
   }
 
-  public void setDate(String date) {
+  public void setDate(@javax.annotation.Nullable String date) {
     this.date = date;
   }
 
 
-  public Outliersenginev3RunSimulatorRequest enableDemoMode(Boolean enableDemoMode) {
+  public Outliersenginev3RunSimulatorRequest enableDemoMode(@javax.annotation.Nullable Boolean enableDemoMode) {
     this.enableDemoMode = enableDemoMode;
     return this;
   }
 
-   /**
+  /**
    * Optional: default false.
    * @return enableDemoMode
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getEnableDemoMode() {
     return enableDemoMode;
   }
 
-  public void setEnableDemoMode(Boolean enableDemoMode) {
+  public void setEnableDemoMode(@javax.annotation.Nullable Boolean enableDemoMode) {
     this.enableDemoMode = enableDemoMode;
   }
 
 
-  public Outliersenginev3RunSimulatorRequest length(Integer length) {
+  public Outliersenginev3RunSimulatorRequest length(@javax.annotation.Nullable Integer length) {
     this.length = length;
     return this;
   }
 
-   /**
+  /**
    * Number of periods.
    * @return length
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getLength() {
     return length;
   }
 
-  public void setLength(Integer length) {
+  public void setLength(@javax.annotation.Nullable Integer length) {
     this.length = length;
   }
 
@@ -196,26 +201,22 @@ public class Outliersenginev3RunSimulatorRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("configuration_file_path");
-    openapiFields.add("date");
-    openapiFields.add("enable_demo_mode");
-    openapiFields.add("length");
+    openapiFields = new HashSet<String>(Arrays.asList("configuration_file_path", "date", "enable_demo_mode", "length"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3RunSimulatorRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3RunSimulatorRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3RunSimulatorRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3RunSimulatorRequest is not found in the empty JSON string", Outliersenginev3RunSimulatorRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3RunSimulatorRequest is not found in the empty JSON string", Outliersenginev3RunSimulatorRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,15 +224,15 @@ public class Outliersenginev3RunSimulatorRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3RunSimulatorRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3RunSimulatorRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3RunSimulatorRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("configuration_file_path") != null && !jsonObj.get("configuration_file_path").isJsonNull()) && !jsonObj.get("configuration_file_path").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `configuration_file_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("configuration_file_path").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `configuration_file_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("configuration_file_path").toString()));
       }
       if ((jsonObj.get("date") != null && !jsonObj.get("date").isJsonNull()) && !jsonObj.get("date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("date").toString()));
       }
   }
 
@@ -264,22 +265,22 @@ public class Outliersenginev3RunSimulatorRequest {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3RunSimulatorRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3RunSimulatorRequest
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3RunSimulatorRequest
-  */
+  /**
+   * Create an instance of Outliersenginev3RunSimulatorRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3RunSimulatorRequest
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3RunSimulatorRequest
+   */
   public static Outliersenginev3RunSimulatorRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3RunSimulatorRequest.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3RunSimulatorRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3RunSimulatorRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

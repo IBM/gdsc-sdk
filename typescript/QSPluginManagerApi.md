@@ -19,16 +19,16 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokeAppProvRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -43,9 +43,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
   },
 };
 
-apiInstance.qSPluginManagerInvokeAppProv(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokeAppProv(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -87,16 +86,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -111,9 +110,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
   },
 };
 
-apiInstance.qSPluginManagerInvokeExplorerV1(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokeExplorerV1(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -155,16 +153,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -179,9 +177,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
   },
 };
 
-apiInstance.qSPluginManagerInvokeExplorerV2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokeExplorerV2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -223,16 +220,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -247,9 +244,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
   },
 };
 
-apiInstance.qSPluginManagerInvokePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -291,16 +287,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PolicyPluginRQ
+  
   qspmpluginmanagerv3PolicyPluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -314,9 +310,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
   },
 };
 
-apiInstance.qSPluginManagerInvokePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

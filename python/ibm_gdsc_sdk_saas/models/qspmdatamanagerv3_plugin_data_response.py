@@ -72,9 +72,9 @@ class Qspmdatamanagerv3PluginDataResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in plugindata (list)
         _items = []
         if self.plugindata:
-            for _item in self.plugindata:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_plugindata in self.plugindata:
+                if _item_plugindata:
+                    _items.append(_item_plugindata.to_dict())
             _dict['plugindata'] = _items
         return _dict
 

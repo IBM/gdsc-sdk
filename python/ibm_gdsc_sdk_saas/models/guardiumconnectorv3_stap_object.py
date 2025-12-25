@@ -88,9 +88,9 @@ class Guardiumconnectorv3StapObject(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in ie_list (list)
         _items = []
         if self.ie_list:
-            for _item in self.ie_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_ie_list in self.ie_list:
+                if _item_ie_list:
+                    _items.append(_item_ie_list.to_dict())
             _dict['ie_list'] = _items
         return _dict
 

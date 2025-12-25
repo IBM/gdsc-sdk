@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response message that gives back the reciever information.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3GetReceiversResponse {
   public static final String SERIALIZED_NAME_ACTION_NOTIFICATION_OBJECT = "action_notification_object";
   @SerializedName(SERIALIZED_NAME_ACTION_NOTIFICATION_OBJECT)
+  @javax.annotation.Nullable
   private List<Policybuilderv3ActionNotificationObject> actionNotificationObject = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Policybuilderv3StatusResponseBase status;
 
   public Policybuilderv3GetReceiversResponse() {
   }
 
-  public Policybuilderv3GetReceiversResponse actionNotificationObject(List<Policybuilderv3ActionNotificationObject> actionNotificationObject) {
+  public Policybuilderv3GetReceiversResponse actionNotificationObject(@javax.annotation.Nullable List<Policybuilderv3ActionNotificationObject> actionNotificationObject) {
     this.actionNotificationObject = actionNotificationObject;
     return this;
   }
@@ -79,35 +82,35 @@ public class Policybuilderv3GetReceiversResponse {
     return this;
   }
 
-   /**
+  /**
    * Action Notification Objects.
    * @return actionNotificationObject
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3ActionNotificationObject> getActionNotificationObject() {
     return actionNotificationObject;
   }
 
-  public void setActionNotificationObject(List<Policybuilderv3ActionNotificationObject> actionNotificationObject) {
+  public void setActionNotificationObject(@javax.annotation.Nullable List<Policybuilderv3ActionNotificationObject> actionNotificationObject) {
     this.actionNotificationObject = actionNotificationObject;
   }
 
 
-  public Policybuilderv3GetReceiversResponse status(Policybuilderv3StatusResponseBase status) {
+  public Policybuilderv3GetReceiversResponse status(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Policybuilderv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -158,24 +161,22 @@ public class Policybuilderv3GetReceiversResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action_notification_object");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("action_notification_object", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GetReceiversResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GetReceiversResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3GetReceiversResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3GetReceiversResponse is not found in the empty JSON string", Policybuilderv3GetReceiversResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3GetReceiversResponse is not found in the empty JSON string", Policybuilderv3GetReceiversResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Policybuilderv3GetReceiversResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3GetReceiversResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3GetReceiversResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3GetReceiversResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Policybuilderv3GetReceiversResponse {
         if (jsonArrayactionNotificationObject != null) {
           // ensure the json data is an array
           if (!jsonObj.get("action_notification_object").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `action_notification_object` to be an array in the JSON string but got `%s`", jsonObj.get("action_notification_object").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `action_notification_object` to be an array in the JSON string but got `%s`", jsonObj.get("action_notification_object").toString()));
           }
 
           // validate the optional field `action_notification_object` (array)
@@ -236,22 +237,22 @@ public class Policybuilderv3GetReceiversResponse {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3GetReceiversResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3GetReceiversResponse
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GetReceiversResponse
-  */
+  /**
+   * Create an instance of Policybuilderv3GetReceiversResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3GetReceiversResponse
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GetReceiversResponse
+   */
   public static Policybuilderv3GetReceiversResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3GetReceiversResponse.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3GetReceiversResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3GetReceiversResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

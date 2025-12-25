@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,106 +42,122 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Tenant contains id, name, and settings for the specified tenant.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3Tenant {
   public static final String SERIALIZED_NAME_ACTIVATION_DATE = "activation_date";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime activationDate;
 
   public static final String SERIALIZED_NAME_EXTERNAL_ID = "external_id";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_ID)
+  @javax.annotation.Nullable
   private String externalId;
 
   public static final String SERIALIZED_NAME_EXTERNAL_METADATA = "external_metadata";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_METADATA)
+  @javax.annotation.Nullable
   private Map<String, Tenantuserv3ExternalMetadata> externalMetadata = new HashMap<>();
 
   public static final String SERIALIZED_NAME_IS_INACTIVE = "is_inactive";
   @SerializedName(SERIALIZED_NAME_IS_INACTIVE)
+  @javax.annotation.Nullable
   private Boolean isInactive;
 
   public static final String SERIALIZED_NAME_IS_READY = "is_ready";
   @SerializedName(SERIALIZED_NAME_IS_READY)
+  @javax.annotation.Nullable
   private Boolean isReady;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PART_NUMBER = "part_number";
   @SerializedName(SERIALIZED_NAME_PART_NUMBER)
+  @javax.annotation.Nullable
   private String partNumber;
 
   public static final String SERIALIZED_NAME_SETTINGS = "settings";
   @SerializedName(SERIALIZED_NAME_SETTINGS)
+  @javax.annotation.Nullable
   private Map<String, String> settings = new HashMap<>();
+
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
+  private String status;
 
   public static final String SERIALIZED_NAME_TENANT_CAPABILITIES = "tenant_capabilities";
   @SerializedName(SERIALIZED_NAME_TENANT_CAPABILITIES)
+  @javax.annotation.Nullable
   private Map<String, Boolean> tenantCapabilities = new HashMap<>();
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public static final String SERIALIZED_NAME_UID = "uid";
   @SerializedName(SERIALIZED_NAME_UID)
+  @javax.annotation.Nullable
   private String uid;
 
   public Jumpboxv3Tenant() {
   }
 
-  public Jumpboxv3Tenant activationDate(OffsetDateTime activationDate) {
+  public Jumpboxv3Tenant activationDate(@javax.annotation.Nullable OffsetDateTime activationDate) {
     this.activationDate = activationDate;
     return this;
   }
 
-   /**
+  /**
    * Date tenant was activated.
    * @return activationDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getActivationDate() {
     return activationDate;
   }
 
-  public void setActivationDate(OffsetDateTime activationDate) {
+  public void setActivationDate(@javax.annotation.Nullable OffsetDateTime activationDate) {
     this.activationDate = activationDate;
   }
 
 
-  public Jumpboxv3Tenant externalId(String externalId) {
+  public Jumpboxv3Tenant externalId(@javax.annotation.Nullable String externalId) {
     this.externalId = externalId;
     return this;
   }
 
-   /**
+  /**
    * Extrenal id.
    * @return externalId
-  **/
+   */
   @javax.annotation.Nullable
   public String getExternalId() {
     return externalId;
   }
 
-  public void setExternalId(String externalId) {
+  public void setExternalId(@javax.annotation.Nullable String externalId) {
     this.externalId = externalId;
   }
 
 
-  public Jumpboxv3Tenant externalMetadata(Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
+  public Jumpboxv3Tenant externalMetadata(@javax.annotation.Nullable Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
     this.externalMetadata = externalMetadata;
     return this;
   }
@@ -153,97 +170,97 @@ public class Jumpboxv3Tenant {
     return this;
   }
 
-   /**
+  /**
    * External metadata.
    * @return externalMetadata
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Tenantuserv3ExternalMetadata> getExternalMetadata() {
     return externalMetadata;
   }
 
-  public void setExternalMetadata(Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
+  public void setExternalMetadata(@javax.annotation.Nullable Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
     this.externalMetadata = externalMetadata;
   }
 
 
-  public Jumpboxv3Tenant isInactive(Boolean isInactive) {
+  public Jumpboxv3Tenant isInactive(@javax.annotation.Nullable Boolean isInactive) {
     this.isInactive = isInactive;
     return this;
   }
 
-   /**
+  /**
    * Whether or not the tenant is disabled.
    * @return isInactive
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsInactive() {
     return isInactive;
   }
 
-  public void setIsInactive(Boolean isInactive) {
+  public void setIsInactive(@javax.annotation.Nullable Boolean isInactive) {
     this.isInactive = isInactive;
   }
 
 
-  public Jumpboxv3Tenant isReady(Boolean isReady) {
+  public Jumpboxv3Tenant isReady(@javax.annotation.Nullable Boolean isReady) {
     this.isReady = isReady;
     return this;
   }
 
-   /**
+  /**
    * Boolean is ready.
    * @return isReady
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsReady() {
     return isReady;
   }
 
-  public void setIsReady(Boolean isReady) {
+  public void setIsReady(@javax.annotation.Nullable Boolean isReady) {
     this.isReady = isReady;
   }
 
 
-  public Jumpboxv3Tenant name(String name) {
+  public Jumpboxv3Tenant name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * The descriptive name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Jumpboxv3Tenant partNumber(String partNumber) {
+  public Jumpboxv3Tenant partNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
     return this;
   }
 
-   /**
+  /**
    * Part number.
    * @return partNumber
-  **/
+   */
   @javax.annotation.Nullable
   public String getPartNumber() {
     return partNumber;
   }
 
-  public void setPartNumber(String partNumber) {
+  public void setPartNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
   }
 
 
-  public Jumpboxv3Tenant settings(Map<String, String> settings) {
+  public Jumpboxv3Tenant settings(@javax.annotation.Nullable Map<String, String> settings) {
     this.settings = settings;
     return this;
   }
@@ -256,21 +273,40 @@ public class Jumpboxv3Tenant {
     return this;
   }
 
-   /**
+  /**
    * Settings pertaining to all users of this tenant.
    * @return settings
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getSettings() {
     return settings;
   }
 
-  public void setSettings(Map<String, String> settings) {
+  public void setSettings(@javax.annotation.Nullable Map<String, String> settings) {
     this.settings = settings;
   }
 
 
-  public Jumpboxv3Tenant tenantCapabilities(Map<String, Boolean> tenantCapabilities) {
+  public Jumpboxv3Tenant status(@javax.annotation.Nullable String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Get status
+   * @return status
+   */
+  @javax.annotation.Nullable
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(@javax.annotation.Nullable String status) {
+    this.status = status;
+  }
+
+
+  public Jumpboxv3Tenant tenantCapabilities(@javax.annotation.Nullable Map<String, Boolean> tenantCapabilities) {
     this.tenantCapabilities = tenantCapabilities;
     return this;
   }
@@ -283,54 +319,54 @@ public class Jumpboxv3Tenant {
     return this;
   }
 
-   /**
+  /**
    * Get tenantCapabilities
    * @return tenantCapabilities
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Boolean> getTenantCapabilities() {
     return tenantCapabilities;
   }
 
-  public void setTenantCapabilities(Map<String, Boolean> tenantCapabilities) {
+  public void setTenantCapabilities(@javax.annotation.Nullable Map<String, Boolean> tenantCapabilities) {
     this.tenantCapabilities = tenantCapabilities;
   }
 
 
-  public Jumpboxv3Tenant tenantId(String tenantId) {
+  public Jumpboxv3Tenant tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * The unique id for the tenant object.
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
 
-  public Jumpboxv3Tenant uid(String uid) {
+  public Jumpboxv3Tenant uid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
     return this;
   }
 
-   /**
+  /**
    * Email.
    * @return uid
-  **/
+   */
   @javax.annotation.Nullable
   public String getUid() {
     return uid;
   }
 
-  public void setUid(String uid) {
+  public void setUid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
   }
 
@@ -353,6 +389,7 @@ public class Jumpboxv3Tenant {
         Objects.equals(this.name, jumpboxv3Tenant.name) &&
         Objects.equals(this.partNumber, jumpboxv3Tenant.partNumber) &&
         Objects.equals(this.settings, jumpboxv3Tenant.settings) &&
+        Objects.equals(this.status, jumpboxv3Tenant.status) &&
         Objects.equals(this.tenantCapabilities, jumpboxv3Tenant.tenantCapabilities) &&
         Objects.equals(this.tenantId, jumpboxv3Tenant.tenantId) &&
         Objects.equals(this.uid, jumpboxv3Tenant.uid);
@@ -360,7 +397,7 @@ public class Jumpboxv3Tenant {
 
   @Override
   public int hashCode() {
-    return Objects.hash(activationDate, externalId, externalMetadata, isInactive, isReady, name, partNumber, settings, tenantCapabilities, tenantId, uid);
+    return Objects.hash(activationDate, externalId, externalMetadata, isInactive, isReady, name, partNumber, settings, status, tenantCapabilities, tenantId, uid);
   }
 
   @Override
@@ -375,6 +412,7 @@ public class Jumpboxv3Tenant {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    partNumber: ").append(toIndentedString(partNumber)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    tenantCapabilities: ").append(toIndentedString(tenantCapabilities)).append("\n");
     sb.append("    tenantId: ").append(toIndentedString(tenantId)).append("\n");
     sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
@@ -399,33 +437,22 @@ public class Jumpboxv3Tenant {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("activation_date");
-    openapiFields.add("external_id");
-    openapiFields.add("external_metadata");
-    openapiFields.add("is_inactive");
-    openapiFields.add("is_ready");
-    openapiFields.add("name");
-    openapiFields.add("part_number");
-    openapiFields.add("settings");
-    openapiFields.add("tenant_capabilities");
-    openapiFields.add("tenant_id");
-    openapiFields.add("uid");
+    openapiFields = new HashSet<String>(Arrays.asList("activation_date", "external_id", "external_metadata", "is_inactive", "is_ready", "name", "part_number", "settings", "status", "tenant_capabilities", "tenant_id", "uid"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3Tenant
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3Tenant
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3Tenant.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3Tenant is not found in the empty JSON string", Jumpboxv3Tenant.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3Tenant is not found in the empty JSON string", Jumpboxv3Tenant.openapiRequiredFields.toString()));
         }
       }
 
@@ -433,24 +460,27 @@ public class Jumpboxv3Tenant {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3Tenant.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3Tenant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3Tenant` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("external_id") != null && !jsonObj.get("external_id").isJsonNull()) && !jsonObj.get("external_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `external_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("external_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `external_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("external_id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("part_number") != null && !jsonObj.get("part_number").isJsonNull()) && !jsonObj.get("part_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
+      }
+      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
       if ((jsonObj.get("uid") != null && !jsonObj.get("uid").isJsonNull()) && !jsonObj.get("uid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
       }
   }
 
@@ -483,22 +513,22 @@ public class Jumpboxv3Tenant {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3Tenant given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3Tenant
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3Tenant
-  */
+  /**
+   * Create an instance of Jumpboxv3Tenant given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3Tenant
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3Tenant
+   */
   public static Jumpboxv3Tenant fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3Tenant.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3Tenant to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3Tenant to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

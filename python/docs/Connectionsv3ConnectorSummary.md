@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **status_green** | **int** | The number of connections with a green status. | [optional] 
 **status_red** | **int** | The number of connections with a red status. | [optional] 
 **status_yellow** | **int** | The number of connections with a yellow status. | [optional] 
-**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] 
+**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] [default to Connectionsv3ConnectorType.UNDEFINED_TYPE]
 
 ## Example
 

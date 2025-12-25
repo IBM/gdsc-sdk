@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,249 +39,259 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * statistics of analysis tasks, with higher resolution on number of data sources, errors, and performance.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3AnalysisStatisticsMessage {
   public static final String SERIALIZED_NAME_DATASOURCES1H = "datasources_1h";
   @SerializedName(SERIALIZED_NAME_DATASOURCES1H)
+  @javax.annotation.Nullable
   private Integer datasources1h;
 
   public static final String SERIALIZED_NAME_DATASOURCES24H = "datasources_24h";
   @SerializedName(SERIALIZED_NAME_DATASOURCES24H)
+  @javax.annotation.Nullable
   private Integer datasources24h;
 
   public static final String SERIALIZED_NAME_DATASOURCES72H = "datasources_72h";
   @SerializedName(SERIALIZED_NAME_DATASOURCES72H)
+  @javax.annotation.Nullable
   private Integer datasources72h;
 
   public static final String SERIALIZED_NAME_ERRORS1H = "errors_1h";
   @SerializedName(SERIALIZED_NAME_ERRORS1H)
+  @javax.annotation.Nullable
   private Integer errors1h;
 
   public static final String SERIALIZED_NAME_ERRORS24H = "errors_24h";
   @SerializedName(SERIALIZED_NAME_ERRORS24H)
+  @javax.annotation.Nullable
   private Integer errors24h;
 
   public static final String SERIALIZED_NAME_ERRORS72H = "errors_72h";
   @SerializedName(SERIALIZED_NAME_ERRORS72H)
+  @javax.annotation.Nullable
   private Integer errors72h;
 
   public static final String SERIALIZED_NAME_PERFORMANCE1H = "performance_1h";
   @SerializedName(SERIALIZED_NAME_PERFORMANCE1H)
+  @javax.annotation.Nullable
   private Outliersenginev3AnalysisPerformanceStats performance1h;
 
   public static final String SERIALIZED_NAME_PERFORMANCE24H = "performance_24h";
   @SerializedName(SERIALIZED_NAME_PERFORMANCE24H)
+  @javax.annotation.Nullable
   private Outliersenginev3AnalysisPerformanceStats performance24h;
 
   public static final String SERIALIZED_NAME_PERFORMANCE3H = "performance_3h";
   @SerializedName(SERIALIZED_NAME_PERFORMANCE3H)
+  @javax.annotation.Nullable
   private Outliersenginev3AnalysisPerformanceStats performance3h;
 
   public static final String SERIALIZED_NAME_PERFORMANCE72H = "performance_72h";
   @SerializedName(SERIALIZED_NAME_PERFORMANCE72H)
+  @javax.annotation.Nullable
   private Outliersenginev3AnalysisPerformanceStats performance72h;
 
   public Outliersenginev3AnalysisStatisticsMessage() {
   }
 
-  public Outliersenginev3AnalysisStatisticsMessage datasources1h(Integer datasources1h) {
+  public Outliersenginev3AnalysisStatisticsMessage datasources1h(@javax.annotation.Nullable Integer datasources1h) {
     this.datasources1h = datasources1h;
     return this;
   }
 
-   /**
+  /**
    * Number of data sources analyzed, in the last hour.
    * @return datasources1h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasources1h() {
     return datasources1h;
   }
 
-  public void setDatasources1h(Integer datasources1h) {
+  public void setDatasources1h(@javax.annotation.Nullable Integer datasources1h) {
     this.datasources1h = datasources1h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage datasources24h(Integer datasources24h) {
+  public Outliersenginev3AnalysisStatisticsMessage datasources24h(@javax.annotation.Nullable Integer datasources24h) {
     this.datasources24h = datasources24h;
     return this;
   }
 
-   /**
+  /**
    * Number of data sources analyzed, in the last 24 hours.
    * @return datasources24h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasources24h() {
     return datasources24h;
   }
 
-  public void setDatasources24h(Integer datasources24h) {
+  public void setDatasources24h(@javax.annotation.Nullable Integer datasources24h) {
     this.datasources24h = datasources24h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage datasources72h(Integer datasources72h) {
+  public Outliersenginev3AnalysisStatisticsMessage datasources72h(@javax.annotation.Nullable Integer datasources72h) {
     this.datasources72h = datasources72h;
     return this;
   }
 
-   /**
+  /**
    * Number of data sources analyzed, in the last 3 days.
    * @return datasources72h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasources72h() {
     return datasources72h;
   }
 
-  public void setDatasources72h(Integer datasources72h) {
+  public void setDatasources72h(@javax.annotation.Nullable Integer datasources72h) {
     this.datasources72h = datasources72h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage errors1h(Integer errors1h) {
+  public Outliersenginev3AnalysisStatisticsMessage errors1h(@javax.annotation.Nullable Integer errors1h) {
     this.errors1h = errors1h;
     return this;
   }
 
-   /**
+  /**
    * Number of errors in log, in the last hour.
    * @return errors1h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getErrors1h() {
     return errors1h;
   }
 
-  public void setErrors1h(Integer errors1h) {
+  public void setErrors1h(@javax.annotation.Nullable Integer errors1h) {
     this.errors1h = errors1h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage errors24h(Integer errors24h) {
+  public Outliersenginev3AnalysisStatisticsMessage errors24h(@javax.annotation.Nullable Integer errors24h) {
     this.errors24h = errors24h;
     return this;
   }
 
-   /**
+  /**
    * Number of errors in log, in the last 24 hours.
    * @return errors24h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getErrors24h() {
     return errors24h;
   }
 
-  public void setErrors24h(Integer errors24h) {
+  public void setErrors24h(@javax.annotation.Nullable Integer errors24h) {
     this.errors24h = errors24h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage errors72h(Integer errors72h) {
+  public Outliersenginev3AnalysisStatisticsMessage errors72h(@javax.annotation.Nullable Integer errors72h) {
     this.errors72h = errors72h;
     return this;
   }
 
-   /**
+  /**
    * Number of errors in log, in the last 3 days.
    * @return errors72h
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getErrors72h() {
     return errors72h;
   }
 
-  public void setErrors72h(Integer errors72h) {
+  public void setErrors72h(@javax.annotation.Nullable Integer errors72h) {
     this.errors72h = errors72h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage performance1h(Outliersenginev3AnalysisPerformanceStats performance1h) {
+  public Outliersenginev3AnalysisStatisticsMessage performance1h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance1h) {
     this.performance1h = performance1h;
     return this;
   }
 
-   /**
+  /**
    * Get performance1h
    * @return performance1h
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3AnalysisPerformanceStats getPerformance1h() {
     return performance1h;
   }
 
-  public void setPerformance1h(Outliersenginev3AnalysisPerformanceStats performance1h) {
+  public void setPerformance1h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance1h) {
     this.performance1h = performance1h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage performance24h(Outliersenginev3AnalysisPerformanceStats performance24h) {
+  public Outliersenginev3AnalysisStatisticsMessage performance24h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance24h) {
     this.performance24h = performance24h;
     return this;
   }
 
-   /**
+  /**
    * Get performance24h
    * @return performance24h
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3AnalysisPerformanceStats getPerformance24h() {
     return performance24h;
   }
 
-  public void setPerformance24h(Outliersenginev3AnalysisPerformanceStats performance24h) {
+  public void setPerformance24h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance24h) {
     this.performance24h = performance24h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage performance3h(Outliersenginev3AnalysisPerformanceStats performance3h) {
+  public Outliersenginev3AnalysisStatisticsMessage performance3h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance3h) {
     this.performance3h = performance3h;
     return this;
   }
 
-   /**
+  /**
    * Get performance3h
    * @return performance3h
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3AnalysisPerformanceStats getPerformance3h() {
     return performance3h;
   }
 
-  public void setPerformance3h(Outliersenginev3AnalysisPerformanceStats performance3h) {
+  public void setPerformance3h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance3h) {
     this.performance3h = performance3h;
   }
 
 
-  public Outliersenginev3AnalysisStatisticsMessage performance72h(Outliersenginev3AnalysisPerformanceStats performance72h) {
+  public Outliersenginev3AnalysisStatisticsMessage performance72h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance72h) {
     this.performance72h = performance72h;
     return this;
   }
 
-   /**
+  /**
    * Get performance72h
    * @return performance72h
-  **/
+   */
   @javax.annotation.Nullable
   public Outliersenginev3AnalysisPerformanceStats getPerformance72h() {
     return performance72h;
   }
 
-  public void setPerformance72h(Outliersenginev3AnalysisPerformanceStats performance72h) {
+  public void setPerformance72h(@javax.annotation.Nullable Outliersenginev3AnalysisPerformanceStats performance72h) {
     this.performance72h = performance72h;
   }
 
@@ -347,32 +358,22 @@ public class Outliersenginev3AnalysisStatisticsMessage {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("datasources_1h");
-    openapiFields.add("datasources_24h");
-    openapiFields.add("datasources_72h");
-    openapiFields.add("errors_1h");
-    openapiFields.add("errors_24h");
-    openapiFields.add("errors_72h");
-    openapiFields.add("performance_1h");
-    openapiFields.add("performance_24h");
-    openapiFields.add("performance_3h");
-    openapiFields.add("performance_72h");
+    openapiFields = new HashSet<String>(Arrays.asList("datasources_1h", "datasources_24h", "datasources_72h", "errors_1h", "errors_24h", "errors_72h", "performance_1h", "performance_24h", "performance_3h", "performance_72h"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3AnalysisStatisticsMessage
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3AnalysisStatisticsMessage
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3AnalysisStatisticsMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3AnalysisStatisticsMessage is not found in the empty JSON string", Outliersenginev3AnalysisStatisticsMessage.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3AnalysisStatisticsMessage is not found in the empty JSON string", Outliersenginev3AnalysisStatisticsMessage.openapiRequiredFields.toString()));
         }
       }
 
@@ -380,7 +381,7 @@ public class Outliersenginev3AnalysisStatisticsMessage {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3AnalysisStatisticsMessage.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3AnalysisStatisticsMessage` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3AnalysisStatisticsMessage` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -431,22 +432,22 @@ public class Outliersenginev3AnalysisStatisticsMessage {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3AnalysisStatisticsMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3AnalysisStatisticsMessage
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3AnalysisStatisticsMessage
-  */
+  /**
+   * Create an instance of Outliersenginev3AnalysisStatisticsMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3AnalysisStatisticsMessage
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3AnalysisStatisticsMessage
+   */
   public static Outliersenginev3AnalysisStatisticsMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3AnalysisStatisticsMessage.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3AnalysisStatisticsMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3AnalysisStatisticsMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

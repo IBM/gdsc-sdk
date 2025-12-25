@@ -73,9 +73,9 @@ class Assetsv3AssetResourcesInfo(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in resource (list)
         _items = []
         if self.resource:
-            for _item in self.resource:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_resource in self.resource:
+                if _item_resource:
+                    _items.append(_item_resource.to_dict())
             _dict['resource'] = _items
         return _dict
 

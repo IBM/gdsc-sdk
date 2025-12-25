@@ -29,7 +29,7 @@ class Reportsv3GetChartQueryResponse(BaseModel):
     GetChartQueryResponse is the return type of the GetQueryByChartID() api and GetQueryByReportChartSettings() api.
     """ # noqa: E501
     chart_layout: Optional[Reportsv3ChartDisplayLayout] = None
-    model_type: Optional[Reportsv3ModelType] = None
+    model_type: Optional[Reportsv3ModelType] = Reportsv3ModelType.UNDEFINED_MODEL_TYPE
     query: Optional[StrictStr] = Field(default=None, description="The chart's query.")
     __properties: ClassVar[List[str]] = ["chart_layout", "model_type", "query"]
 
@@ -88,7 +88,7 @@ class Reportsv3GetChartQueryResponse(BaseModel):
 
         _obj = cls.model_validate({
             "chart_layout": Reportsv3ChartDisplayLayout.from_dict(obj["chart_layout"]) if obj.get("chart_layout") is not None else None,
-            "model_type": obj.get("model_type"),
+            "model_type": obj.get("model_type") if obj.get("model_type") is not None else Reportsv3ModelType.UNDEFINED_MODEL_TYPE,
             "query": obj.get("query")
         })
         return _obj

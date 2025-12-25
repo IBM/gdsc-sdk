@@ -5,11 +5,11 @@
 ## Enum
 
 
-* `NONE` (value: `"REVIEW_NONE"`)
+* `REVIEW_NONE` (value: `"REVIEW_NONE"`)
 
-* `ENTIRE` (value: `"REVIEW_ENTIRE"`)
+* `REVIEW_ENTIRE` (value: `"REVIEW_ENTIRE"`)
 
-* `ONE_ROW` (value: `"REVIEW_ONE_ROW"`)
+* `REVIEW_ONE_ROW` (value: `"REVIEW_ONE_ROW"`)
 
 
 

@@ -21,5 +21,6 @@ export enum Policybuilderv3ParameterOperator {
     NotEquals = 'NOT_EQUALS',
     InGroup = 'IN_GROUP',
     NotInGroup = 'NOT_IN_GROUP',
-    EveryMemberInGroup = 'EVERY_MEMBER_IN_GROUP'
+    EveryMemberInGroup = 'EVERY_MEMBER_IN_GROUP',
+    InReport = 'IN_REPORT'
 }

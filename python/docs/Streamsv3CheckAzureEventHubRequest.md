@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **namespace** | **str** | Azure namespace. | [optional] 
 **secret_key_id** | **str** | AWS secret key ID. | [optional] 
 **stream_name** | **str** | Name of stream. | [optional] 
-**stream_type** | [**Streamsv3StreamType**](Streamsv3StreamType.md) |  | [optional] 
+**stream_type** | [**Streamsv3StreamType**](Streamsv3StreamType.md) |  | [optional] [default to Streamsv3StreamType.AWS_KINESIS]
 
 ## Example
 

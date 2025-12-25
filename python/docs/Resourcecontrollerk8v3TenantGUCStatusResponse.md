@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **container_status** | **str** |  | [optional] 
-**statefulset_state** | [**Resourcecontrollerk8v3GUCStatefulsetState**](Resourcecontrollerk8v3GUCStatefulsetState.md) |  | [optional] 
+**statefulset_state** | [**Resourcecontrollerk8v3GUCStatefulsetState**](Resourcecontrollerk8v3GUCStatefulsetState.md) |  | [optional] [default to Resourcecontrollerk8v3GUCStatefulsetState.READY]
 **status** | [**RpcStatus**](RpcStatus.md) |  | [optional] 
 
 ## Example

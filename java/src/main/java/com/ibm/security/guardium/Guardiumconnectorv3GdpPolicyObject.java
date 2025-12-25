@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3GdpPolicyObject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3GdpPolicyObject {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Integer id;
 
   public static final String SERIALIZED_NAME_POLICY_DESCRIPTION = "policy_description";
   @SerializedName(SERIALIZED_NAME_POLICY_DESCRIPTION)
+  @javax.annotation.Nullable
   private String policyDescription;
 
   public static final String SERIALIZED_NAME_POLICY_RULES_COUNT = "policy_rules_count";
   @SerializedName(SERIALIZED_NAME_POLICY_RULES_COUNT)
+  @javax.annotation.Nullable
   private Integer policyRulesCount;
 
   public static final String SERIALIZED_NAME_POLICY_SUB_TYPE = "policy_sub_type";
   @SerializedName(SERIALIZED_NAME_POLICY_SUB_TYPE)
+  @javax.annotation.Nullable
   private String policySubType;
 
   public static final String SERIALIZED_NAME_POLICY_TYPE = "policy_type";
   @SerializedName(SERIALIZED_NAME_POLICY_TYPE)
+  @javax.annotation.Nullable
   private String policyType;
 
   public Guardiumconnectorv3GdpPolicyObject() {
   }
 
-  public Guardiumconnectorv3GdpPolicyObject id(Integer id) {
+  public Guardiumconnectorv3GdpPolicyObject id(@javax.annotation.Nullable Integer id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(@javax.annotation.Nullable Integer id) {
     this.id = id;
   }
 
 
-  public Guardiumconnectorv3GdpPolicyObject policyDescription(String policyDescription) {
+  public Guardiumconnectorv3GdpPolicyObject policyDescription(@javax.annotation.Nullable String policyDescription) {
     this.policyDescription = policyDescription;
     return this;
   }
 
-   /**
+  /**
    * Policy name.
    * @return policyDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyDescription() {
     return policyDescription;
   }
 
-  public void setPolicyDescription(String policyDescription) {
+  public void setPolicyDescription(@javax.annotation.Nullable String policyDescription) {
     this.policyDescription = policyDescription;
   }
 
 
-  public Guardiumconnectorv3GdpPolicyObject policyRulesCount(Integer policyRulesCount) {
+  public Guardiumconnectorv3GdpPolicyObject policyRulesCount(@javax.annotation.Nullable Integer policyRulesCount) {
     this.policyRulesCount = policyRulesCount;
     return this;
   }
 
-   /**
+  /**
    * Number of rules.
    * @return policyRulesCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPolicyRulesCount() {
     return policyRulesCount;
   }
 
-  public void setPolicyRulesCount(Integer policyRulesCount) {
+  public void setPolicyRulesCount(@javax.annotation.Nullable Integer policyRulesCount) {
     this.policyRulesCount = policyRulesCount;
   }
 
 
-  public Guardiumconnectorv3GdpPolicyObject policySubType(String policySubType) {
+  public Guardiumconnectorv3GdpPolicyObject policySubType(@javax.annotation.Nullable String policySubType) {
     this.policySubType = policySubType;
     return this;
   }
 
-   /**
+  /**
    * Get policySubType
    * @return policySubType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicySubType() {
     return policySubType;
   }
 
-  public void setPolicySubType(String policySubType) {
+  public void setPolicySubType(@javax.annotation.Nullable String policySubType) {
     this.policySubType = policySubType;
   }
 
 
-  public Guardiumconnectorv3GdpPolicyObject policyType(String policyType) {
+  public Guardiumconnectorv3GdpPolicyObject policyType(@javax.annotation.Nullable String policyType) {
     this.policyType = policyType;
     return this;
   }
 
-   /**
+  /**
    * Get policyType
    * @return policyType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyType() {
     return policyType;
   }
 
-  public void setPolicyType(String policyType) {
+  public void setPolicyType(@javax.annotation.Nullable String policyType) {
     this.policyType = policyType;
   }
 
@@ -221,27 +227,22 @@ public class Guardiumconnectorv3GdpPolicyObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("policy_description");
-    openapiFields.add("policy_rules_count");
-    openapiFields.add("policy_sub_type");
-    openapiFields.add("policy_type");
+    openapiFields = new HashSet<String>(Arrays.asList("id", "policy_description", "policy_rules_count", "policy_sub_type", "policy_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GdpPolicyObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GdpPolicyObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3GdpPolicyObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3GdpPolicyObject is not found in the empty JSON string", Guardiumconnectorv3GdpPolicyObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3GdpPolicyObject is not found in the empty JSON string", Guardiumconnectorv3GdpPolicyObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,18 +250,18 @@ public class Guardiumconnectorv3GdpPolicyObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3GdpPolicyObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GdpPolicyObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GdpPolicyObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("policy_description") != null && !jsonObj.get("policy_description").isJsonNull()) && !jsonObj.get("policy_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_description").toString()));
       }
       if ((jsonObj.get("policy_sub_type") != null && !jsonObj.get("policy_sub_type").isJsonNull()) && !jsonObj.get("policy_sub_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_sub_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_sub_type").toString()));
       }
       if ((jsonObj.get("policy_type") != null && !jsonObj.get("policy_type").isJsonNull()) && !jsonObj.get("policy_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_type").toString()));
       }
   }
 
@@ -293,22 +294,22 @@ public class Guardiumconnectorv3GdpPolicyObject {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3GdpPolicyObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3GdpPolicyObject
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GdpPolicyObject
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3GdpPolicyObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3GdpPolicyObject
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GdpPolicyObject
+   */
   public static Guardiumconnectorv3GdpPolicyObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3GdpPolicyObject.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3GdpPolicyObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3GdpPolicyObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

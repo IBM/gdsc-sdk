@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,101 +41,106 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListSensitivitiesFilterParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListSensitivitiesFilterParameter {
   public static final String SERIALIZED_NAME_RESOURCE_ID = "resourceId";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ID)
+  @javax.annotation.Nullable
   private String resourceId;
 
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
+  @javax.annotation.Nullable
   private String dataStoreId;
 
   public static final String SERIALIZED_NAME_SENSITIVE_TAG = "sensitiveTag";
   @SerializedName(SERIALIZED_NAME_SENSITIVE_TAG)
+  @javax.annotation.Nullable
   private String sensitiveTag;
 
   public static final String SERIALIZED_NAME_SENSITIVITY_CATEGORIES = "sensitivityCategories";
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_CATEGORIES)
+  @javax.annotation.Nullable
   private List<SensitivityCategory> sensitivityCategories = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HASH = "hash";
   @SerializedName(SERIALIZED_NAME_HASH)
+  @javax.annotation.Nullable
   private String hash;
 
   public ListSensitivitiesFilterParameter() {
   }
 
-  public ListSensitivitiesFilterParameter resourceId(String resourceId) {
+  public ListSensitivitiesFilterParameter resourceId(@javax.annotation.Nullable String resourceId) {
     this.resourceId = resourceId;
     return this;
   }
 
-   /**
+  /**
    * Get resourceId
    * @return resourceId
-  **/
+   */
   @javax.annotation.Nullable
   public String getResourceId() {
     return resourceId;
   }
 
-  public void setResourceId(String resourceId) {
+  public void setResourceId(@javax.annotation.Nullable String resourceId) {
     this.resourceId = resourceId;
   }
 
 
-  public ListSensitivitiesFilterParameter dataStoreId(String dataStoreId) {
+  public ListSensitivitiesFilterParameter dataStoreId(@javax.annotation.Nullable String dataStoreId) {
     this.dataStoreId = dataStoreId;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreId
    * @return dataStoreId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataStoreId() {
     return dataStoreId;
   }
 
-  public void setDataStoreId(String dataStoreId) {
+  public void setDataStoreId(@javax.annotation.Nullable String dataStoreId) {
     this.dataStoreId = dataStoreId;
   }
 
 
-  public ListSensitivitiesFilterParameter sensitiveTag(String sensitiveTag) {
+  public ListSensitivitiesFilterParameter sensitiveTag(@javax.annotation.Nullable String sensitiveTag) {
     this.sensitiveTag = sensitiveTag;
     return this;
   }
 
-   /**
+  /**
    * Get sensitiveTag
    * @return sensitiveTag
-  **/
+   */
   @javax.annotation.Nullable
   public String getSensitiveTag() {
     return sensitiveTag;
   }
 
-  public void setSensitiveTag(String sensitiveTag) {
+  public void setSensitiveTag(@javax.annotation.Nullable String sensitiveTag) {
     this.sensitiveTag = sensitiveTag;
   }
 
 
-  public ListSensitivitiesFilterParameter sensitivityCategories(List<SensitivityCategory> sensitivityCategories) {
+  public ListSensitivitiesFilterParameter sensitivityCategories(@javax.annotation.Nullable List<SensitivityCategory> sensitivityCategories) {
     this.sensitivityCategories = sensitivityCategories;
     return this;
   }
@@ -147,35 +153,35 @@ public class ListSensitivitiesFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivityCategories
    * @return sensitivityCategories
-  **/
+   */
   @javax.annotation.Nullable
   public List<SensitivityCategory> getSensitivityCategories() {
     return sensitivityCategories;
   }
 
-  public void setSensitivityCategories(List<SensitivityCategory> sensitivityCategories) {
+  public void setSensitivityCategories(@javax.annotation.Nullable List<SensitivityCategory> sensitivityCategories) {
     this.sensitivityCategories = sensitivityCategories;
   }
 
 
-  public ListSensitivitiesFilterParameter hash(String hash) {
+  public ListSensitivitiesFilterParameter hash(@javax.annotation.Nullable String hash) {
     this.hash = hash;
     return this;
   }
 
-   /**
+  /**
    * Get hash
    * @return hash
-  **/
+   */
   @javax.annotation.Nullable
   public String getHash() {
     return hash;
   }
 
-  public void setHash(String hash) {
+  public void setHash(@javax.annotation.Nullable String hash) {
     this.hash = hash;
   }
 
@@ -232,27 +238,22 @@ public class ListSensitivitiesFilterParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("resourceId");
-    openapiFields.add("dataStoreId");
-    openapiFields.add("sensitiveTag");
-    openapiFields.add("sensitivityCategories");
-    openapiFields.add("hash");
+    openapiFields = new HashSet<String>(Arrays.asList("resourceId", "dataStoreId", "sensitiveTag", "sensitivityCategories", "hash"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListSensitivitiesFilterParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListSensitivitiesFilterParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListSensitivitiesFilterParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListSensitivitiesFilterParameter is not found in the empty JSON string", ListSensitivitiesFilterParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListSensitivitiesFilterParameter is not found in the empty JSON string", ListSensitivitiesFilterParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -260,25 +261,25 @@ public class ListSensitivitiesFilterParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListSensitivitiesFilterParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListSensitivitiesFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListSensitivitiesFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("resourceId") != null && !jsonObj.get("resourceId").isJsonNull()) && !jsonObj.get("resourceId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resourceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resourceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceId").toString()));
       }
       if ((jsonObj.get("dataStoreId") != null && !jsonObj.get("dataStoreId").isJsonNull()) && !jsonObj.get("dataStoreId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
       }
       if ((jsonObj.get("sensitiveTag") != null && !jsonObj.get("sensitiveTag").isJsonNull()) && !jsonObj.get("sensitiveTag").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitiveTag` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitiveTag").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitiveTag` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitiveTag").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sensitivityCategories") != null && !jsonObj.get("sensitivityCategories").isJsonNull() && !jsonObj.get("sensitivityCategories").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivityCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityCategories").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivityCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityCategories").toString()));
       }
       if ((jsonObj.get("hash") != null && !jsonObj.get("hash").isJsonNull()) && !jsonObj.get("hash").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `hash` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hash").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `hash` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hash").toString()));
       }
   }
 
@@ -311,22 +312,22 @@ public class ListSensitivitiesFilterParameter {
     }
   }
 
- /**
-  * Create an instance of ListSensitivitiesFilterParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListSensitivitiesFilterParameter
-  * @throws IOException if the JSON string is invalid with respect to ListSensitivitiesFilterParameter
-  */
+  /**
+   * Create an instance of ListSensitivitiesFilterParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListSensitivitiesFilterParameter
+   * @throws IOException if the JSON string is invalid with respect to ListSensitivitiesFilterParameter
+   */
   public static ListSensitivitiesFilterParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListSensitivitiesFilterParameter.class);
   }
 
- /**
-  * Convert an instance of ListSensitivitiesFilterParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListSensitivitiesFilterParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

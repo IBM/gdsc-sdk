@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **header_name** | **str** | The header name. | [optional] 
 **is_recommended** | **bool** | If the header is recommended. | [optional] 
 **table_name** | **str** | Table name. | [optional] 
-**type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] 
+**type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] [default to Reportsv3HeaderType.UNDEFINED_TYPE]
 **type_length** | **int** | Header type length. | [optional] 
 
 ## Example

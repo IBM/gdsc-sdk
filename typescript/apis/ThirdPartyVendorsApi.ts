@@ -37,7 +37,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts'
+        const localVarPath = '/api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts'
             .replace('{' + 'vendorId' + '}', encodeURIComponent(String(vendorId)));
 
         // Make Request Context
@@ -52,7 +52,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -75,7 +75,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/{vendorId}'
+        const localVarPath = '/api/v2/dspm/linkedVendors/{vendorId}'
             .replace('{' + 'vendorId' + '}', encodeURIComponent(String(vendorId)));
 
         // Make Request Context
@@ -90,7 +90,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -121,7 +121,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/{vendorId}/dataStores'
+        const localVarPath = '/api/v2/dspm/linkedVendors/{vendorId}/dataStores'
             .replace('{' + 'vendorId' + '}', encodeURIComponent(String(vendorId)));
 
         // Make Request Context
@@ -130,12 +130,18 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
         // Query Params
         if (filter !== undefined) {
-            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "ListVendorDataStoresFilterParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(filter, "ListVendorDataStoresFilterParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
         // Query Params
         if (sort !== undefined) {
-            requestContext.setQueryParam("sort", ObjectSerializer.serialize(sort, "ListLinkedVendorDataStoresSortParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(sort, "ListLinkedVendorDataStoresSortParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
         // Query Params
@@ -156,7 +162,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -172,7 +178,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
         let _config = _options || this.configuration;
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors';
+        const localVarPath = '/api/v2/dspm/linkedVendors';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -186,7 +192,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -204,7 +210,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/linkedVendors/trustedAssets';
+        const localVarPath = '/api/v2/dspm/linkedVendors/trustedAssets';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -212,7 +218,10 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
 
         // Query Params
         if (filter !== undefined) {
-            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "ListTrusteesFilterParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(filter, "ListTrusteesFilterParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
 
@@ -223,7 +232,7 @@ export class ThirdPartyVendorsApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }

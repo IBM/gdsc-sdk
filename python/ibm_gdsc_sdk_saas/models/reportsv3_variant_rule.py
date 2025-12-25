@@ -28,11 +28,11 @@ class Reportsv3VariantRule(BaseModel):
     """
     Reportsv3VariantRule
     """ # noqa: E501
-    action_if_type: Optional[Reportsv3VariantRuleCondition] = None
+    action_if_type: Optional[Reportsv3VariantRuleCondition] = Reportsv3VariantRuleCondition.UNDEFINED_VARIANT_ACTION_IF
     delimiter: Optional[StrictStr] = None
     extract_value: Optional[StrictStr] = None
     matcher: Optional[StrictStr] = None
-    type: Optional[Reportsv3VariantRuleType] = None
+    type: Optional[Reportsv3VariantRuleType] = Reportsv3VariantRuleType.UNDEFINED_VARIANT_RULE_TYPE
     __properties: ClassVar[List[str]] = ["action_if_type", "delimiter", "extract_value", "matcher", "type"]
 
     model_config = ConfigDict(
@@ -86,11 +86,11 @@ class Reportsv3VariantRule(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "action_if_type": obj.get("action_if_type"),
+            "action_if_type": obj.get("action_if_type") if obj.get("action_if_type") is not None else Reportsv3VariantRuleCondition.UNDEFINED_VARIANT_ACTION_IF,
             "delimiter": obj.get("delimiter"),
             "extract_value": obj.get("extract_value"),
             "matcher": obj.get("matcher"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Reportsv3VariantRuleType.UNDEFINED_VARIANT_RULE_TYPE
         })
         return _obj
 

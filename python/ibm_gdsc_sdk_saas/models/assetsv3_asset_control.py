@@ -28,9 +28,9 @@ class Assetsv3AssetControl(BaseModel):
     """
     AssetControl - Asset Overview - Control Health widget data.
     """ # noqa: E501
-    encryption: Optional[Assetsv3StatusType] = None
+    encryption: Optional[Assetsv3StatusType] = Assetsv3StatusType.NA
     last_response: Optional[StrictStr] = None
-    monitoring: Optional[Assetsv3StatusType] = None
+    monitoring: Optional[Assetsv3StatusType] = Assetsv3StatusType.NA
     policy_applied_status: Optional[Assetsv3PolicyApplied] = None
     stap_name: Optional[StrictStr] = None
     version: Optional[StrictStr] = None
@@ -90,9 +90,9 @@ class Assetsv3AssetControl(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "encryption": obj.get("encryption"),
+            "encryption": obj.get("encryption") if obj.get("encryption") is not None else Assetsv3StatusType.NA,
             "last_response": obj.get("last_response"),
-            "monitoring": obj.get("monitoring"),
+            "monitoring": obj.get("monitoring") if obj.get("monitoring") is not None else Assetsv3StatusType.NA,
             "policy_applied_status": Assetsv3PolicyApplied.from_dict(obj["policy_applied_status"]) if obj.get("policy_applied_status") is not None else None,
             "stap_name": obj.get("stap_name"),
             "version": obj.get("version")

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListTrusteesFilterParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListTrusteesFilterParameter {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendorId";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
+  @javax.annotation.Nullable
   private String vendorId;
 
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
+  @javax.annotation.Nullable
   private String dataStoreId;
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_ID = "cloudAccountId";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_ID)
+  @javax.annotation.Nullable
   private String cloudAccountId;
 
   public ListTrusteesFilterParameter() {
   }
 
-  public ListTrusteesFilterParameter vendorId(String vendorId) {
+  public ListTrusteesFilterParameter vendorId(@javax.annotation.Nullable String vendorId) {
     this.vendorId = vendorId;
     return this;
   }
 
-   /**
+  /**
    * Get vendorId
    * @return vendorId
-  **/
+   */
   @javax.annotation.Nullable
   public String getVendorId() {
     return vendorId;
   }
 
-  public void setVendorId(String vendorId) {
+  public void setVendorId(@javax.annotation.Nullable String vendorId) {
     this.vendorId = vendorId;
   }
 
 
-  public ListTrusteesFilterParameter dataStoreId(String dataStoreId) {
+  public ListTrusteesFilterParameter dataStoreId(@javax.annotation.Nullable String dataStoreId) {
     this.dataStoreId = dataStoreId;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreId
    * @return dataStoreId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataStoreId() {
     return dataStoreId;
   }
 
-  public void setDataStoreId(String dataStoreId) {
+  public void setDataStoreId(@javax.annotation.Nullable String dataStoreId) {
     this.dataStoreId = dataStoreId;
   }
 
 
-  public ListTrusteesFilterParameter cloudAccountId(String cloudAccountId) {
+  public ListTrusteesFilterParameter cloudAccountId(@javax.annotation.Nullable String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountId
    * @return cloudAccountId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCloudAccountId() {
     return cloudAccountId;
   }
 
-  public void setCloudAccountId(String cloudAccountId) {
+  public void setCloudAccountId(@javax.annotation.Nullable String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
   }
 
@@ -171,25 +175,22 @@ public class ListTrusteesFilterParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("vendorId");
-    openapiFields.add("dataStoreId");
-    openapiFields.add("cloudAccountId");
+    openapiFields = new HashSet<String>(Arrays.asList("vendorId", "dataStoreId", "cloudAccountId"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListTrusteesFilterParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListTrusteesFilterParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListTrusteesFilterParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListTrusteesFilterParameter is not found in the empty JSON string", ListTrusteesFilterParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListTrusteesFilterParameter is not found in the empty JSON string", ListTrusteesFilterParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class ListTrusteesFilterParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListTrusteesFilterParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListTrusteesFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListTrusteesFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("vendorId") != null && !jsonObj.get("vendorId").isJsonNull()) && !jsonObj.get("vendorId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vendorId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vendorId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorId").toString()));
       }
       if ((jsonObj.get("dataStoreId") != null && !jsonObj.get("dataStoreId").isJsonNull()) && !jsonObj.get("dataStoreId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
       }
       if ((jsonObj.get("cloudAccountId") != null && !jsonObj.get("cloudAccountId").isJsonNull()) && !jsonObj.get("cloudAccountId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class ListTrusteesFilterParameter {
     }
   }
 
- /**
-  * Create an instance of ListTrusteesFilterParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListTrusteesFilterParameter
-  * @throws IOException if the JSON string is invalid with respect to ListTrusteesFilterParameter
-  */
+  /**
+   * Create an instance of ListTrusteesFilterParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListTrusteesFilterParameter
+   * @throws IOException if the JSON string is invalid with respect to ListTrusteesFilterParameter
+   */
   public static ListTrusteesFilterParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListTrusteesFilterParameter.class);
   }
 
- /**
-  * Convert an instance of ListTrusteesFilterParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListTrusteesFilterParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

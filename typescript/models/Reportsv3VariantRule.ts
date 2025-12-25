@@ -23,6 +23,8 @@ export class Reportsv3VariantRule {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "actionIfType",
@@ -62,6 +64,5 @@ export class Reportsv3VariantRule {
     public constructor() {
     }
 }
-
 
 

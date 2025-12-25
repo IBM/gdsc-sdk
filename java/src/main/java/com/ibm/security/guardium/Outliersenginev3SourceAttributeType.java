@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -41,7 +43,15 @@ public enum Outliersenginev3SourceAttributeType {
   
   OS_USER("OS_USER"),
   
-  CLIENT_HOSTNAME("CLIENT_HOSTNAME");
+  CLIENT_HOSTNAME("CLIENT_HOSTNAME"),
+  
+  SENSITIVE_OBJECT("SENSITIVE_OBJECT"),
+  
+  SENSITIVE_OBJECT_VERB("SENSITIVE_OBJECT_VERB"),
+  
+  OBJECT("OBJECT"),
+  
+  OBJECT_VERB("OBJECT_VERB");
 
   private String value;
 

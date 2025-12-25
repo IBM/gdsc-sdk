@@ -76,23 +76,23 @@ class VulnerabilitiesSummaryAffectedDataStoreSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_account_ids_count (list)
         _items = []
         if self.cloud_account_ids_count:
-            for _item in self.cloud_account_ids_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_account_ids_count in self.cloud_account_ids_count:
+                if _item_cloud_account_ids_count:
+                    _items.append(_item_cloud_account_ids_count.to_dict())
             _dict['cloudAccountIdsCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_regions_count (list)
         _items = []
         if self.cloud_regions_count:
-            for _item in self.cloud_regions_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_regions_count in self.cloud_regions_count:
+                if _item_cloud_regions_count:
+                    _items.append(_item_cloud_regions_count.to_dict())
             _dict['cloudRegionsCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in data_store_types (list)
         _items = []
         if self.data_store_types:
-            for _item in self.data_store_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_data_store_types in self.data_store_types:
+                if _item_data_store_types:
+                    _items.append(_item_data_store_types.to_dict())
             _dict['dataStoreTypes'] = _items
         return _dict
 

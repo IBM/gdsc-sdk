@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response parameters for check api permission.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AuthserverCheckPermissionForOAuthTokenResponse {
   public static final String SERIALIZED_NAME_JWT_TOKEN = "jwt_token";
   @SerializedName(SERIALIZED_NAME_JWT_TOKEN)
+  @javax.annotation.Nullable
   private String jwtToken;
 
   public AuthserverCheckPermissionForOAuthTokenResponse() {
   }
 
-  public AuthserverCheckPermissionForOAuthTokenResponse jwtToken(String jwtToken) {
+  public AuthserverCheckPermissionForOAuthTokenResponse jwtToken(@javax.annotation.Nullable String jwtToken) {
     this.jwtToken = jwtToken;
     return this;
   }
 
-   /**
+  /**
    * JWT token to access GI API.
    * @return jwtToken
-  **/
+   */
   @javax.annotation.Nullable
   public String getJwtToken() {
     return jwtToken;
   }
 
-  public void setJwtToken(String jwtToken) {
+  public void setJwtToken(@javax.annotation.Nullable String jwtToken) {
     this.jwtToken = jwtToken;
   }
 
@@ -121,23 +123,22 @@ public class AuthserverCheckPermissionForOAuthTokenResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("jwt_token");
+    openapiFields = new HashSet<String>(Arrays.asList("jwt_token"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AuthserverCheckPermissionForOAuthTokenResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AuthserverCheckPermissionForOAuthTokenResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AuthserverCheckPermissionForOAuthTokenResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AuthserverCheckPermissionForOAuthTokenResponse is not found in the empty JSON string", AuthserverCheckPermissionForOAuthTokenResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AuthserverCheckPermissionForOAuthTokenResponse is not found in the empty JSON string", AuthserverCheckPermissionForOAuthTokenResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class AuthserverCheckPermissionForOAuthTokenResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AuthserverCheckPermissionForOAuthTokenResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AuthserverCheckPermissionForOAuthTokenResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AuthserverCheckPermissionForOAuthTokenResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("jwt_token") != null && !jsonObj.get("jwt_token").isJsonNull()) && !jsonObj.get("jwt_token").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `jwt_token` to be a primitive type in the JSON string but got `%s`", jsonObj.get("jwt_token").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `jwt_token` to be a primitive type in the JSON string but got `%s`", jsonObj.get("jwt_token").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class AuthserverCheckPermissionForOAuthTokenResponse {
     }
   }
 
- /**
-  * Create an instance of AuthserverCheckPermissionForOAuthTokenResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AuthserverCheckPermissionForOAuthTokenResponse
-  * @throws IOException if the JSON string is invalid with respect to AuthserverCheckPermissionForOAuthTokenResponse
-  */
+  /**
+   * Create an instance of AuthserverCheckPermissionForOAuthTokenResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AuthserverCheckPermissionForOAuthTokenResponse
+   * @throws IOException if the JSON string is invalid with respect to AuthserverCheckPermissionForOAuthTokenResponse
+   */
   public static AuthserverCheckPermissionForOAuthTokenResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AuthserverCheckPermissionForOAuthTokenResponse.class);
   }
 
- /**
-  * Convert an instance of AuthserverCheckPermissionForOAuthTokenResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AuthserverCheckPermissionForOAuthTokenResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

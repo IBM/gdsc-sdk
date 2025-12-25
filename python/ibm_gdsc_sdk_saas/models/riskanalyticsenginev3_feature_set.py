@@ -73,9 +73,9 @@ class Riskanalyticsenginev3FeatureSet(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in features (list)
         _items = []
         if self.features:
-            for _item in self.features:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_features in self.features:
+                if _item_features:
+                    _items.append(_item_features.to_dict())
             _dict['features'] = _items
         return _dict
 

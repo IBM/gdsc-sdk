@@ -30,7 +30,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/sensitivities/summary';
+        const localVarPath = '/api/v2/dspm/sensitivities/summary';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -38,7 +38,10 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
         // Query Params
         if (filter !== undefined) {
-            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "ListSensitivitiesFilterParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(filter, "ListSensitivitiesFilterParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
 
@@ -49,7 +52,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -72,7 +75,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/sensitivities/{sensitivityId}'
+        const localVarPath = '/api/v2/dspm/sensitivities/{sensitivityId}'
             .replace('{' + 'sensitivityId' + '}', encodeURIComponent(String(sensitivityId)));
 
         // Make Request Context
@@ -87,7 +90,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -111,7 +114,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/sensitivities';
+        const localVarPath = '/api/v2/dspm/sensitivities';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -119,12 +122,18 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
 
         // Query Params
         if (filter !== undefined) {
-            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "ListSensitivitiesFilterParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(filter, "ListSensitivitiesFilterParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
         // Query Params
         if (sort !== undefined) {
-            requestContext.setQueryParam("sort", ObjectSerializer.serialize(sort, "LastSeenSortSchema", ""));
+            const serializedParams = ObjectSerializer.serialize(sort, "LastSeenSortSchema", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
         // Query Params
@@ -145,7 +154,7 @@ export class DataSensitivitiesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }

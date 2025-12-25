@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,235 +41,245 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Dashboardsv3ReportGlobalFilter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Dashboardsv3ReportGlobalFilter {
   public static final String SERIALIZED_NAME_CASE_INSENSITIVE = "case_insensitive";
   @SerializedName(SERIALIZED_NAME_CASE_INSENSITIVE)
+  @javax.annotation.Nullable
   private Boolean caseInsensitive;
 
   public static final String SERIALIZED_NAME_FILTER_ITEM_TYPE = "filter_item_type";
   @SerializedName(SERIALIZED_NAME_FILTER_ITEM_TYPE)
+  @javax.annotation.Nullable
   private String filterItemType;
 
   public static final String SERIALIZED_NAME_GROUP_NAME = "group_name";
   @SerializedName(SERIALIZED_NAME_GROUP_NAME)
+  @javax.annotation.Nullable
   private String groupName;
 
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_HEADER_TYPE = "header_type";
   @SerializedName(SERIALIZED_NAME_HEADER_TYPE)
+  @javax.annotation.Nullable
   private String headerType;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_OPERATOR = "operator";
   @SerializedName(SERIALIZED_NAME_OPERATOR)
+  @javax.annotation.Nullable
   private String operator;
 
   public static final String SERIALIZED_NAME_OPERATOR_KEY = "operator_key";
   @SerializedName(SERIALIZED_NAME_OPERATOR_KEY)
+  @javax.annotation.Nullable
   private String operatorKey;
 
   public static final String SERIALIZED_NAME_REPORT_OPERATOR = "report_operator";
   @SerializedName(SERIALIZED_NAME_REPORT_OPERATOR)
+  @javax.annotation.Nullable
   private List<Dashboardsv3ReportOperator> reportOperator = new ArrayList<>();
 
   public Dashboardsv3ReportGlobalFilter() {
   }
 
-  public Dashboardsv3ReportGlobalFilter caseInsensitive(Boolean caseInsensitive) {
+  public Dashboardsv3ReportGlobalFilter caseInsensitive(@javax.annotation.Nullable Boolean caseInsensitive) {
     this.caseInsensitive = caseInsensitive;
     return this;
   }
 
-   /**
+  /**
    * Get caseInsensitive
    * @return caseInsensitive
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCaseInsensitive() {
     return caseInsensitive;
   }
 
-  public void setCaseInsensitive(Boolean caseInsensitive) {
+  public void setCaseInsensitive(@javax.annotation.Nullable Boolean caseInsensitive) {
     this.caseInsensitive = caseInsensitive;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter filterItemType(String filterItemType) {
+  public Dashboardsv3ReportGlobalFilter filterItemType(@javax.annotation.Nullable String filterItemType) {
     this.filterItemType = filterItemType;
     return this;
   }
 
-   /**
+  /**
    * Get filterItemType
    * @return filterItemType
-  **/
+   */
   @javax.annotation.Nullable
   public String getFilterItemType() {
     return filterItemType;
   }
 
-  public void setFilterItemType(String filterItemType) {
+  public void setFilterItemType(@javax.annotation.Nullable String filterItemType) {
     this.filterItemType = filterItemType;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter groupName(String groupName) {
+  public Dashboardsv3ReportGlobalFilter groupName(@javax.annotation.Nullable String groupName) {
     this.groupName = groupName;
     return this;
   }
 
-   /**
+  /**
    * Get groupName
    * @return groupName
-  **/
+   */
   @javax.annotation.Nullable
   public String getGroupName() {
     return groupName;
   }
 
-  public void setGroupName(String groupName) {
+  public void setGroupName(@javax.annotation.Nullable String groupName) {
     this.groupName = groupName;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter headerId(String headerId) {
+  public Dashboardsv3ReportGlobalFilter headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * Get headerId
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter headerType(String headerType) {
+  public Dashboardsv3ReportGlobalFilter headerType(@javax.annotation.Nullable String headerType) {
     this.headerType = headerType;
     return this;
   }
 
-   /**
+  /**
    * Get headerType
    * @return headerType
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderType() {
     return headerType;
   }
 
-  public void setHeaderType(String headerType) {
+  public void setHeaderType(@javax.annotation.Nullable String headerType) {
     this.headerType = headerType;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter id(String id) {
+  public Dashboardsv3ReportGlobalFilter id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter name(String name) {
+  public Dashboardsv3ReportGlobalFilter name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter operator(String operator) {
+  public Dashboardsv3ReportGlobalFilter operator(@javax.annotation.Nullable String operator) {
     this.operator = operator;
     return this;
   }
 
-   /**
+  /**
    * Get operator
    * @return operator
-  **/
+   */
   @javax.annotation.Nullable
   public String getOperator() {
     return operator;
   }
 
-  public void setOperator(String operator) {
+  public void setOperator(@javax.annotation.Nullable String operator) {
     this.operator = operator;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter operatorKey(String operatorKey) {
+  public Dashboardsv3ReportGlobalFilter operatorKey(@javax.annotation.Nullable String operatorKey) {
     this.operatorKey = operatorKey;
     return this;
   }
 
-   /**
+  /**
    * Get operatorKey
    * @return operatorKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getOperatorKey() {
     return operatorKey;
   }
 
-  public void setOperatorKey(String operatorKey) {
+  public void setOperatorKey(@javax.annotation.Nullable String operatorKey) {
     this.operatorKey = operatorKey;
   }
 
 
-  public Dashboardsv3ReportGlobalFilter reportOperator(List<Dashboardsv3ReportOperator> reportOperator) {
+  public Dashboardsv3ReportGlobalFilter reportOperator(@javax.annotation.Nullable List<Dashboardsv3ReportOperator> reportOperator) {
     this.reportOperator = reportOperator;
     return this;
   }
@@ -281,16 +292,16 @@ public class Dashboardsv3ReportGlobalFilter {
     return this;
   }
 
-   /**
+  /**
    * Get reportOperator
    * @return reportOperator
-  **/
+   */
   @javax.annotation.Nullable
   public List<Dashboardsv3ReportOperator> getReportOperator() {
     return reportOperator;
   }
 
-  public void setReportOperator(List<Dashboardsv3ReportOperator> reportOperator) {
+  public void setReportOperator(@javax.annotation.Nullable List<Dashboardsv3ReportOperator> reportOperator) {
     this.reportOperator = reportOperator;
   }
 
@@ -357,32 +368,22 @@ public class Dashboardsv3ReportGlobalFilter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("case_insensitive");
-    openapiFields.add("filter_item_type");
-    openapiFields.add("group_name");
-    openapiFields.add("header_id");
-    openapiFields.add("header_type");
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("operator");
-    openapiFields.add("operator_key");
-    openapiFields.add("report_operator");
+    openapiFields = new HashSet<String>(Arrays.asList("case_insensitive", "filter_item_type", "group_name", "header_id", "header_type", "id", "name", "operator", "operator_key", "report_operator"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3ReportGlobalFilter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3ReportGlobalFilter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Dashboardsv3ReportGlobalFilter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Dashboardsv3ReportGlobalFilter is not found in the empty JSON string", Dashboardsv3ReportGlobalFilter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Dashboardsv3ReportGlobalFilter is not found in the empty JSON string", Dashboardsv3ReportGlobalFilter.openapiRequiredFields.toString()));
         }
       }
 
@@ -390,40 +391,40 @@ public class Dashboardsv3ReportGlobalFilter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Dashboardsv3ReportGlobalFilter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Dashboardsv3ReportGlobalFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Dashboardsv3ReportGlobalFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("filter_item_type") != null && !jsonObj.get("filter_item_type").isJsonNull()) && !jsonObj.get("filter_item_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filter_item_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_item_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter_item_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_item_type").toString()));
       }
       if ((jsonObj.get("group_name") != null && !jsonObj.get("group_name").isJsonNull()) && !jsonObj.get("group_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_name").toString()));
       }
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       if ((jsonObj.get("header_type") != null && !jsonObj.get("header_type").isJsonNull()) && !jsonObj.get("header_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_type").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("operator") != null && !jsonObj.get("operator").isJsonNull()) && !jsonObj.get("operator").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator").toString()));
       }
       if ((jsonObj.get("operator_key") != null && !jsonObj.get("operator_key").isJsonNull()) && !jsonObj.get("operator_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `operator_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `operator_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator_key").toString()));
       }
       if (jsonObj.get("report_operator") != null && !jsonObj.get("report_operator").isJsonNull()) {
         JsonArray jsonArrayreportOperator = jsonObj.getAsJsonArray("report_operator");
         if (jsonArrayreportOperator != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_operator").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_operator` to be an array in the JSON string but got `%s`", jsonObj.get("report_operator").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_operator` to be an array in the JSON string but got `%s`", jsonObj.get("report_operator").toString()));
           }
 
           // validate the optional field `report_operator` (array)
@@ -463,22 +464,22 @@ public class Dashboardsv3ReportGlobalFilter {
     }
   }
 
- /**
-  * Create an instance of Dashboardsv3ReportGlobalFilter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Dashboardsv3ReportGlobalFilter
-  * @throws IOException if the JSON string is invalid with respect to Dashboardsv3ReportGlobalFilter
-  */
+  /**
+   * Create an instance of Dashboardsv3ReportGlobalFilter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Dashboardsv3ReportGlobalFilter
+   * @throws IOException if the JSON string is invalid with respect to Dashboardsv3ReportGlobalFilter
+   */
   public static Dashboardsv3ReportGlobalFilter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Dashboardsv3ReportGlobalFilter.class);
   }
 
- /**
-  * Convert an instance of Dashboardsv3ReportGlobalFilter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Dashboardsv3ReportGlobalFilter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

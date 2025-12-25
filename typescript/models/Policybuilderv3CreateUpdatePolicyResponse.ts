@@ -23,7 +23,7 @@ export class Policybuilderv3CreateUpdatePolicyResponse {
     * activation_status identifier: 1001 -> install with no issues, 1002-> installed with issues, 1003 -> not installed.
     */
     'activationStatus'?: number;
-    'edgeActivationInfo'?: Policybuilderv3EdgeActivationObject;
+    'edgeActivationInfo'?: Array<Policybuilderv3EdgeActivationObject>;
     /**
     * Flag to indicate whether policy is installed or not.
     */
@@ -44,6 +44,8 @@ export class Policybuilderv3CreateUpdatePolicyResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "activationStatus",
@@ -54,7 +56,7 @@ export class Policybuilderv3CreateUpdatePolicyResponse {
         {
             "name": "edgeActivationInfo",
             "baseName": "edge_activation_info",
-            "type": "Policybuilderv3EdgeActivationObject",
+            "type": "Array<Policybuilderv3EdgeActivationObject>",
             "format": ""
         },
         {
@@ -95,4 +97,3 @@ export class Policybuilderv3CreateUpdatePolicyResponse {
     public constructor() {
     }
 }
-

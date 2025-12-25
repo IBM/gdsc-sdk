@@ -20,17 +20,15 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerGetCertificate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerGetCertificate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -68,17 +66,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerGetConnectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerGetConnectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -116,20 +112,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
+import type { UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:.UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest = {
-  // number | UC plugin id.
+const request: UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest = {
+    // UC plugin id.
   pluginId: 1,
 };
 
-apiInstance.universalConnectorManagerGetUCSetup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerGetUCSetup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -170,17 +165,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerListConnectionsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerListConnectionsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -218,17 +211,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerPluginsList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerPluginsList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -266,22 +257,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
+import type { UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:.UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest = {
-  // Universalconnectormanagerv3UploadPluginRequest
+const request: UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest = {
+  
   universalconnectormanagerv3UploadPluginRequest: {
     pluginId: "pluginId_example",
   },
 };
 
-apiInstance.universalConnectorManagerUploadPlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerUploadPlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

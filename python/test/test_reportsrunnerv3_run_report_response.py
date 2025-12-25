@@ -27,7 +27,7 @@ class TestReportsrunnerv3RunReportResponse(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Reportsrunnerv3RunReportResponse:
         """Test Reportsrunnerv3RunReportResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Reportsrunnerv3RunReportResponse`
@@ -78,6 +78,7 @@ class TestReportsrunnerv3RunReportResponse(unittest.TestCase):
                     report_description = '', 
                     report_headers = [
                         ibm_gdsc_sdk_saas.models.reportsv3_display_header.reportsv3DisplayHeader(
+                            aggregation_type = 'UNDEFINED_AGG_TYPE', 
                             field_name = ibm_gdsc_sdk_saas.models.reportsv3_field_name.reportsv3FieldName(
                                 customized_value = '', 
                                 nls_key = '', 

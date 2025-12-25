@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,56 +42,64 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3Rule
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3Rule {
   public static final String SERIALIZED_NAME_ACTIONS = "actions";
   @SerializedName(SERIALIZED_NAME_ACTIONS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3Action> actions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CONTINUE_TO_NEXT_RULE = "continue_to_next_rule";
   @SerializedName(SERIALIZED_NAME_CONTINUE_TO_NEXT_RULE)
+  @javax.annotation.Nullable
   private Boolean continueToNextRule;
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
   @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3RuleParameter> parameters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RULE_LEVEL = "rule_level";
   @SerializedName(SERIALIZED_NAME_RULE_LEVEL)
+  @javax.annotation.Nullable
   private Integer ruleLevel;
 
   public static final String SERIALIZED_NAME_RULE_NAME = "rule_name";
   @SerializedName(SERIALIZED_NAME_RULE_NAME)
+  @javax.annotation.Nullable
   private String ruleName;
 
   public static final String SERIALIZED_NAME_RULE_TYPE = "rule_type";
   @SerializedName(SERIALIZED_NAME_RULE_TYPE)
+  @javax.annotation.Nullable
   private String ruleType;
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private String severity;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public Guardiumconnectorv3Rule() {
   }
 
-  public Guardiumconnectorv3Rule actions(List<Guardiumconnectorv3Action> actions) {
+  public Guardiumconnectorv3Rule actions(@javax.annotation.Nullable List<Guardiumconnectorv3Action> actions) {
     this.actions = actions;
     return this;
   }
@@ -103,40 +112,40 @@ public class Guardiumconnectorv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Get actions
    * @return actions
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3Action> getActions() {
     return actions;
   }
 
-  public void setActions(List<Guardiumconnectorv3Action> actions) {
+  public void setActions(@javax.annotation.Nullable List<Guardiumconnectorv3Action> actions) {
     this.actions = actions;
   }
 
 
-  public Guardiumconnectorv3Rule continueToNextRule(Boolean continueToNextRule) {
+  public Guardiumconnectorv3Rule continueToNextRule(@javax.annotation.Nullable Boolean continueToNextRule) {
     this.continueToNextRule = continueToNextRule;
     return this;
   }
 
-   /**
+  /**
    * Get continueToNextRule
    * @return continueToNextRule
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getContinueToNextRule() {
     return continueToNextRule;
   }
 
-  public void setContinueToNextRule(Boolean continueToNextRule) {
+  public void setContinueToNextRule(@javax.annotation.Nullable Boolean continueToNextRule) {
     this.continueToNextRule = continueToNextRule;
   }
 
 
-  public Guardiumconnectorv3Rule parameters(List<Guardiumconnectorv3RuleParameter> parameters) {
+  public Guardiumconnectorv3Rule parameters(@javax.annotation.Nullable List<Guardiumconnectorv3RuleParameter> parameters) {
     this.parameters = parameters;
     return this;
   }
@@ -149,97 +158,97 @@ public class Guardiumconnectorv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Get parameters
    * @return parameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3RuleParameter> getParameters() {
     return parameters;
   }
 
-  public void setParameters(List<Guardiumconnectorv3RuleParameter> parameters) {
+  public void setParameters(@javax.annotation.Nullable List<Guardiumconnectorv3RuleParameter> parameters) {
     this.parameters = parameters;
   }
 
 
-  public Guardiumconnectorv3Rule ruleLevel(Integer ruleLevel) {
+  public Guardiumconnectorv3Rule ruleLevel(@javax.annotation.Nullable Integer ruleLevel) {
     this.ruleLevel = ruleLevel;
     return this;
   }
 
-   /**
+  /**
    * Get ruleLevel
    * @return ruleLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRuleLevel() {
     return ruleLevel;
   }
 
-  public void setRuleLevel(Integer ruleLevel) {
+  public void setRuleLevel(@javax.annotation.Nullable Integer ruleLevel) {
     this.ruleLevel = ruleLevel;
   }
 
 
-  public Guardiumconnectorv3Rule ruleName(String ruleName) {
+  public Guardiumconnectorv3Rule ruleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
     return this;
   }
 
-   /**
+  /**
    * Get ruleName
    * @return ruleName
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleName() {
     return ruleName;
   }
 
-  public void setRuleName(String ruleName) {
+  public void setRuleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
   }
 
 
-  public Guardiumconnectorv3Rule ruleType(String ruleType) {
+  public Guardiumconnectorv3Rule ruleType(@javax.annotation.Nullable String ruleType) {
     this.ruleType = ruleType;
     return this;
   }
 
-   /**
+  /**
    * Get ruleType
    * @return ruleType
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleType() {
     return ruleType;
   }
 
-  public void setRuleType(String ruleType) {
+  public void setRuleType(@javax.annotation.Nullable String ruleType) {
     this.ruleType = ruleType;
   }
 
 
-  public Guardiumconnectorv3Rule severity(String severity) {
+  public Guardiumconnectorv3Rule severity(@javax.annotation.Nullable String severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Get severity
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public String getSeverity() {
     return severity;
   }
 
-  public void setSeverity(String severity) {
+  public void setSeverity(@javax.annotation.Nullable String severity) {
     this.severity = severity;
   }
 
 
-  public Guardiumconnectorv3Rule tags(List<String> tags) {
+  public Guardiumconnectorv3Rule tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -252,16 +261,16 @@ public class Guardiumconnectorv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Get tags
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
@@ -324,30 +333,22 @@ public class Guardiumconnectorv3Rule {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("actions");
-    openapiFields.add("continue_to_next_rule");
-    openapiFields.add("parameters");
-    openapiFields.add("rule_level");
-    openapiFields.add("rule_name");
-    openapiFields.add("rule_type");
-    openapiFields.add("severity");
-    openapiFields.add("tags");
+    openapiFields = new HashSet<String>(Arrays.asList("actions", "continue_to_next_rule", "parameters", "rule_level", "rule_name", "rule_type", "severity", "tags"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Rule
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Rule
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3Rule.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3Rule is not found in the empty JSON string", Guardiumconnectorv3Rule.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3Rule is not found in the empty JSON string", Guardiumconnectorv3Rule.openapiRequiredFields.toString()));
         }
       }
 
@@ -355,7 +356,7 @@ public class Guardiumconnectorv3Rule {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3Rule.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Rule` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Rule` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -364,7 +365,7 @@ public class Guardiumconnectorv3Rule {
         if (jsonArrayactions != null) {
           // ensure the json data is an array
           if (!jsonObj.get("actions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `actions` to be an array in the JSON string but got `%s`", jsonObj.get("actions").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `actions` to be an array in the JSON string but got `%s`", jsonObj.get("actions").toString()));
           }
 
           // validate the optional field `actions` (array)
@@ -378,7 +379,7 @@ public class Guardiumconnectorv3Rule {
         if (jsonArrayparameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
           }
 
           // validate the optional field `parameters` (array)
@@ -388,17 +389,17 @@ public class Guardiumconnectorv3Rule {
         }
       }
       if ((jsonObj.get("rule_name") != null && !jsonObj.get("rule_name").isJsonNull()) && !jsonObj.get("rule_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
       }
       if ((jsonObj.get("rule_type") != null && !jsonObj.get("rule_type").isJsonNull()) && !jsonObj.get("rule_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_type").toString()));
       }
       if ((jsonObj.get("severity") != null && !jsonObj.get("severity").isJsonNull()) && !jsonObj.get("severity").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `severity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `severity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
   }
 
@@ -431,22 +432,22 @@ public class Guardiumconnectorv3Rule {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3Rule given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3Rule
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Rule
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3Rule given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3Rule
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Rule
+   */
   public static Guardiumconnectorv3Rule fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3Rule.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3Rule to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3Rule to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

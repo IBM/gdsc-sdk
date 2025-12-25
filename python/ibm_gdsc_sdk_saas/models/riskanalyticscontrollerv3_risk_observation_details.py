@@ -87,9 +87,9 @@ class Riskanalyticscontrollerv3RiskObservationDetails(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in features (list)
         _items = []
         if self.features:
-            for _item in self.features:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_features in self.features:
+                if _item_features:
+                    _items.append(_item_features.to_dict())
             _dict['features'] = _items
         # override the default output from pydantic by calling `to_dict()` of finding
         if self.finding:
@@ -97,9 +97,9 @@ class Riskanalyticscontrollerv3RiskObservationDetails(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_filters (list)
         _items = []
         if self.report_filters:
-            for _item in self.report_filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_filters in self.report_filters:
+                if _item_report_filters:
+                    _items.append(_item_report_filters.to_dict())
             _dict['report_filters'] = _items
         return _dict
 

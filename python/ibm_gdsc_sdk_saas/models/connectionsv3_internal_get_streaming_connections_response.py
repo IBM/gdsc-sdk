@@ -72,9 +72,9 @@ class Connectionsv3InternalGetStreamingConnectionsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in streaming_configs_by_tenants (list)
         _items = []
         if self.streaming_configs_by_tenants:
-            for _item in self.streaming_configs_by_tenants:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_streaming_configs_by_tenants in self.streaming_configs_by_tenants:
+                if _item_streaming_configs_by_tenants:
+                    _items.append(_item_streaming_configs_by_tenants.to_dict())
             _dict['streaming_configs_by_tenants'] = _items
         return _dict
 

@@ -6,7 +6,7 @@ Scheduled Task for Post v3/schedules api.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**audit_type** | [**Schedulerv3AuditType**](Schedulerv3AuditType.md) |  | [optional] 
+**audit_type** | [**Schedulerv3AuditType**](Schedulerv3AuditType.md) |  | [optional] [default to Schedulerv3AuditType.UNDEFINED_TYPE]
 **delivery_method** | [**Schedulerv3DeliveryMethod**](Schedulerv3DeliveryMethod.md) |  | [optional] 
 **distribution_rule_ids** | **List[str]** | Optional: Distribution rule IDs for a task. Will be populated by recipients on save. | [optional] 
 **email_subject** | **str** | Optional: Email subject with replaceable variables. | [optional] 
@@ -16,10 +16,10 @@ Name | Type | Description | Notes
 **recipients** | [**List[Schedulerv3Recipient]**](Schedulerv3Recipient.md) | Optional: Report result recipients. | [optional] 
 **report_filters** | [**Reportsv3ReportFilterBrackets**](Reportsv3ReportFilterBrackets.md) |  | [optional] 
 **scheduled_task_id** | **str** | Optional: Id for the task. | [optional] 
-**type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] 
+**type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] [default to Schedulerv3TaskType.UNDEFINED_JOBTYPE]
 **workflow_investigation_links** | [**List[Schedulerv3ConfigurationItem]**](Schedulerv3ConfigurationItem.md) |  | [optional] 
 **workflow_response_template** | [**Schedulerv3ConfigurationItem**](Schedulerv3ConfigurationItem.md) |  | [optional] 
-**workflow_type** | [**Schedulerv3WorkflowType**](Schedulerv3WorkflowType.md) |  | [optional] 
+**workflow_type** | [**Schedulerv3WorkflowType**](Schedulerv3WorkflowType.md) |  | [optional] [default to Schedulerv3WorkflowType.REVIEW_NONE]
 **workflow_unique_fields** | **List[str]** |  | [optional] 
 
 ## Example

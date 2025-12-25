@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,55 +40,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Tenantuserv3BasicPrivilege
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3BasicPrivilege {
   public static final String SERIALIZED_NAME_PRIVILEGE_ID = "privilege_id";
   @SerializedName(SERIALIZED_NAME_PRIVILEGE_ID)
+  @javax.annotation.Nullable
   private String privilegeId;
 
   public static final String SERIALIZED_NAME_ROLES = "roles";
   @SerializedName(SERIALIZED_NAME_ROLES)
+  @javax.annotation.Nullable
   private List<String> roles = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Tenantuserv3BasicPrivilege() {
   }
 
-  public Tenantuserv3BasicPrivilege privilegeId(String privilegeId) {
+  public Tenantuserv3BasicPrivilege privilegeId(@javax.annotation.Nullable String privilegeId) {
     this.privilegeId = privilegeId;
     return this;
   }
 
-   /**
+  /**
    * Privilege ID to be updated.
    * @return privilegeId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPrivilegeId() {
     return privilegeId;
   }
 
-  public void setPrivilegeId(String privilegeId) {
+  public void setPrivilegeId(@javax.annotation.Nullable String privilegeId) {
     this.privilegeId = privilegeId;
   }
 
 
-  public Tenantuserv3BasicPrivilege roles(List<String> roles) {
+  public Tenantuserv3BasicPrivilege roles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
     return this;
   }
@@ -100,35 +104,35 @@ public class Tenantuserv3BasicPrivilege {
     return this;
   }
 
-   /**
+  /**
    * Roles array (which is the purpose of Bulk Update).
    * @return roles
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getRoles() {
     return roles;
   }
 
-  public void setRoles(List<String> roles) {
+  public void setRoles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
   }
 
 
-  public Tenantuserv3BasicPrivilege type(String type) {
+  public Tenantuserv3BasicPrivilege type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Privilege type (to uniquely identify the privilege).
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -181,25 +185,22 @@ public class Tenantuserv3BasicPrivilege {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("privilege_id");
-    openapiFields.add("roles");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("privilege_id", "roles", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3BasicPrivilege
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3BasicPrivilege
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3BasicPrivilege.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3BasicPrivilege is not found in the empty JSON string", Tenantuserv3BasicPrivilege.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3BasicPrivilege is not found in the empty JSON string", Tenantuserv3BasicPrivilege.openapiRequiredFields.toString()));
         }
       }
 
@@ -207,19 +208,19 @@ public class Tenantuserv3BasicPrivilege {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3BasicPrivilege.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3BasicPrivilege` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3BasicPrivilege` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("privilege_id") != null && !jsonObj.get("privilege_id").isJsonNull()) && !jsonObj.get("privilege_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `privilege_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `privilege_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("roles") != null && !jsonObj.get("roles").isJsonNull() && !jsonObj.get("roles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -252,22 +253,22 @@ public class Tenantuserv3BasicPrivilege {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3BasicPrivilege given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3BasicPrivilege
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3BasicPrivilege
-  */
+  /**
+   * Create an instance of Tenantuserv3BasicPrivilege given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3BasicPrivilege
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3BasicPrivilege
+   */
   public static Tenantuserv3BasicPrivilege fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3BasicPrivilege.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3BasicPrivilege to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3BasicPrivilege to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,226 +38,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AuthorizeRequest message for POST v3/Authorize api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3AuthorizeRequest {
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "display_name";
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  @javax.annotation.Nullable
   private String displayName;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
+  @javax.annotation.Nullable
   private String email;
 
   public static final String SERIALIZED_NAME_EXTERNAL_ID = "external_id";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_ID)
+  @javax.annotation.Nullable
   private String externalId;
 
   public static final String SERIALIZED_NAME_FIRST_NAME = "first_name";
   @SerializedName(SERIALIZED_NAME_FIRST_NAME)
+  @javax.annotation.Nullable
   private String firstName;
 
   public static final String SERIALIZED_NAME_IS_RENEW = "is_renew";
   @SerializedName(SERIALIZED_NAME_IS_RENEW)
+  @javax.annotation.Nullable
   private Boolean isRenew;
 
   public static final String SERIALIZED_NAME_IS_UPDATE_USER_INFO = "is_update_user_info";
   @SerializedName(SERIALIZED_NAME_IS_UPDATE_USER_INFO)
+  @javax.annotation.Nullable
   private Boolean isUpdateUserInfo;
 
   public static final String SERIALIZED_NAME_LAST_NAME = "last_name";
   @SerializedName(SERIALIZED_NAME_LAST_NAME)
+  @javax.annotation.Nullable
   private String lastName;
 
   public static final String SERIALIZED_NAME_LOGIN_ID = "login_id";
   @SerializedName(SERIALIZED_NAME_LOGIN_ID)
+  @javax.annotation.Nullable
   private String loginId;
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public Jumpboxv3AuthorizeRequest() {
   }
 
-  public Jumpboxv3AuthorizeRequest displayName(String displayName) {
+  public Jumpboxv3AuthorizeRequest displayName(@javax.annotation.Nullable String displayName) {
     this.displayName = displayName;
     return this;
   }
 
-   /**
+  /**
    * Display name of the user.
    * @return displayName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDisplayName() {
     return displayName;
   }
 
-  public void setDisplayName(String displayName) {
+  public void setDisplayName(@javax.annotation.Nullable String displayName) {
     this.displayName = displayName;
   }
 
 
-  public Jumpboxv3AuthorizeRequest email(String email) {
+  public Jumpboxv3AuthorizeRequest email(@javax.annotation.Nullable String email) {
     this.email = email;
     return this;
   }
 
-   /**
+  /**
    * Contact email address of the user.
    * @return email
-  **/
+   */
   @javax.annotation.Nullable
   public String getEmail() {
     return email;
   }
 
-  public void setEmail(String email) {
+  public void setEmail(@javax.annotation.Nullable String email) {
     this.email = email;
   }
 
 
-  public Jumpboxv3AuthorizeRequest externalId(String externalId) {
+  public Jumpboxv3AuthorizeRequest externalId(@javax.annotation.Nullable String externalId) {
     this.externalId = externalId;
     return this;
   }
 
-   /**
+  /**
    * External id of the user.
    * @return externalId
-  **/
+   */
   @javax.annotation.Nullable
   public String getExternalId() {
     return externalId;
   }
 
-  public void setExternalId(String externalId) {
+  public void setExternalId(@javax.annotation.Nullable String externalId) {
     this.externalId = externalId;
   }
 
 
-  public Jumpboxv3AuthorizeRequest firstName(String firstName) {
+  public Jumpboxv3AuthorizeRequest firstName(@javax.annotation.Nullable String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
+  /**
    * First name of the user.
    * @return firstName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFirstName() {
     return firstName;
   }
 
-  public void setFirstName(String firstName) {
+  public void setFirstName(@javax.annotation.Nullable String firstName) {
     this.firstName = firstName;
   }
 
 
-  public Jumpboxv3AuthorizeRequest isRenew(Boolean isRenew) {
+  public Jumpboxv3AuthorizeRequest isRenew(@javax.annotation.Nullable Boolean isRenew) {
     this.isRenew = isRenew;
     return this;
   }
 
-   /**
+  /**
    * If it is a renew.
    * @return isRenew
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsRenew() {
     return isRenew;
   }
 
-  public void setIsRenew(Boolean isRenew) {
+  public void setIsRenew(@javax.annotation.Nullable Boolean isRenew) {
     this.isRenew = isRenew;
   }
 
 
-  public Jumpboxv3AuthorizeRequest isUpdateUserInfo(Boolean isUpdateUserInfo) {
+  public Jumpboxv3AuthorizeRequest isUpdateUserInfo(@javax.annotation.Nullable Boolean isUpdateUserInfo) {
     this.isUpdateUserInfo = isUpdateUserInfo;
     return this;
   }
 
-   /**
+  /**
    * Whether to update the user info with ISV during login.
    * @return isUpdateUserInfo
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsUpdateUserInfo() {
     return isUpdateUserInfo;
   }
 
-  public void setIsUpdateUserInfo(Boolean isUpdateUserInfo) {
+  public void setIsUpdateUserInfo(@javax.annotation.Nullable Boolean isUpdateUserInfo) {
     this.isUpdateUserInfo = isUpdateUserInfo;
   }
 
 
-  public Jumpboxv3AuthorizeRequest lastName(String lastName) {
+  public Jumpboxv3AuthorizeRequest lastName(@javax.annotation.Nullable String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
+  /**
    * Last name of the user.
    * @return lastName
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastName() {
     return lastName;
   }
 
-  public void setLastName(String lastName) {
+  public void setLastName(@javax.annotation.Nullable String lastName) {
     this.lastName = lastName;
   }
 
 
-  public Jumpboxv3AuthorizeRequest loginId(String loginId) {
+  public Jumpboxv3AuthorizeRequest loginId(@javax.annotation.Nullable String loginId) {
     this.loginId = loginId;
     return this;
   }
 
-   /**
+  /**
    * Login id of the user.
    * @return loginId
-  **/
+   */
   @javax.annotation.Nullable
   public String getLoginId() {
     return loginId;
   }
 
-  public void setLoginId(String loginId) {
+  public void setLoginId(@javax.annotation.Nullable String loginId) {
     this.loginId = loginId;
   }
 
 
-  public Jumpboxv3AuthorizeRequest tenantId(String tenantId) {
+  public Jumpboxv3AuthorizeRequest tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * Tenant id.
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
@@ -321,31 +331,22 @@ public class Jumpboxv3AuthorizeRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("display_name");
-    openapiFields.add("email");
-    openapiFields.add("external_id");
-    openapiFields.add("first_name");
-    openapiFields.add("is_renew");
-    openapiFields.add("is_update_user_info");
-    openapiFields.add("last_name");
-    openapiFields.add("login_id");
-    openapiFields.add("tenant_id");
+    openapiFields = new HashSet<String>(Arrays.asList("display_name", "email", "external_id", "first_name", "is_renew", "is_update_user_info", "last_name", "login_id", "tenant_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3AuthorizeRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3AuthorizeRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3AuthorizeRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3AuthorizeRequest is not found in the empty JSON string", Jumpboxv3AuthorizeRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3AuthorizeRequest is not found in the empty JSON string", Jumpboxv3AuthorizeRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -353,30 +354,30 @@ public class Jumpboxv3AuthorizeRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3AuthorizeRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3AuthorizeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3AuthorizeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("display_name") != null && !jsonObj.get("display_name").isJsonNull()) && !jsonObj.get("display_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("display_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("display_name").toString()));
       }
       if ((jsonObj.get("email") != null && !jsonObj.get("email").isJsonNull()) && !jsonObj.get("email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
       }
       if ((jsonObj.get("external_id") != null && !jsonObj.get("external_id").isJsonNull()) && !jsonObj.get("external_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `external_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("external_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `external_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("external_id").toString()));
       }
       if ((jsonObj.get("first_name") != null && !jsonObj.get("first_name").isJsonNull()) && !jsonObj.get("first_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `first_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `first_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first_name").toString()));
       }
       if ((jsonObj.get("last_name") != null && !jsonObj.get("last_name").isJsonNull()) && !jsonObj.get("last_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_name").toString()));
       }
       if ((jsonObj.get("login_id") != null && !jsonObj.get("login_id").isJsonNull()) && !jsonObj.get("login_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `login_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("login_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `login_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("login_id").toString()));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
   }
 
@@ -409,22 +410,22 @@ public class Jumpboxv3AuthorizeRequest {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3AuthorizeRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3AuthorizeRequest
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3AuthorizeRequest
-  */
+  /**
+   * Create an instance of Jumpboxv3AuthorizeRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3AuthorizeRequest
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3AuthorizeRequest
+   */
   public static Jumpboxv3AuthorizeRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3AuthorizeRequest.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3AuthorizeRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3AuthorizeRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

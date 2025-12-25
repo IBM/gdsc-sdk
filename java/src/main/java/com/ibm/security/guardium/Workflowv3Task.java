@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,131 +49,153 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Task (sub-task of a case).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3Task {
   public static final String SERIALIZED_NAME_ALT_ID = "alt_id";
   @SerializedName(SERIALIZED_NAME_ALT_ID)
+  @javax.annotation.Nullable
   private String altId;
 
   public static final String SERIALIZED_NAME_ASSIGNMENTS = "assignments";
   @SerializedName(SERIALIZED_NAME_ASSIGNMENTS)
+  @javax.annotation.Nullable
   private List<Workflowv3Entity> assignments = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CASE_ID = "case_id";
   @SerializedName(SERIALIZED_NAME_CASE_ID)
+  @javax.annotation.Nullable
   private String caseId;
 
   public static final String SERIALIZED_NAME_COMMENTS = "comments";
   @SerializedName(SERIALIZED_NAME_COMMENTS)
+  @javax.annotation.Nullable
   private List<Workflowv3Comment> comments = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateCreated;
 
   public static final String SERIALIZED_NAME_DATE_DUE = "date_due";
   @SerializedName(SERIALIZED_NAME_DATE_DUE)
+  @javax.annotation.Nullable
   private OffsetDateTime dateDue;
 
   public static final String SERIALIZED_NAME_DATE_MODIFIED = "date_modified";
   @SerializedName(SERIALIZED_NAME_DATE_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateModified;
 
   public static final String SERIALIZED_NAME_DEPENDS_ON = "depends_on";
   @SerializedName(SERIALIZED_NAME_DEPENDS_ON)
+  @javax.annotation.Nullable
   private List<String> dependsOn = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_INVESTIGATION_LINKS = "investigation_links";
   @SerializedName(SERIALIZED_NAME_INVESTIGATION_LINKS)
+  @javax.annotation.Nullable
   private List<Schedulerv3ConfigurationItem> investigationLinks = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_JUSTIFICATION = "justification";
   @SerializedName(SERIALIZED_NAME_JUSTIFICATION)
+  @javax.annotation.Nullable
   private String justification;
 
   public static final String SERIALIZED_NAME_NUMBER = "number";
   @SerializedName(SERIALIZED_NAME_NUMBER)
+  @javax.annotation.Nullable
   private String number;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Workflowv3Priority priority = Workflowv3Priority.UNDEFINED_PRIORITY;
 
   public static final String SERIALIZED_NAME_REPORT_RESULT = "report_result";
   @SerializedName(SERIALIZED_NAME_REPORT_RESULT)
+  @javax.annotation.Nullable
   private Workflowv3ReportResult reportResult;
 
   public static final String SERIALIZED_NAME_RESPONSE_TEMPLATE = "response_template";
   @SerializedName(SERIALIZED_NAME_RESPONSE_TEMPLATE)
+  @javax.annotation.Nullable
   private Schedulerv3ConfigurationItem responseTemplate;
 
   public static final String SERIALIZED_NAME_REVIEW_ACTION = "review_action";
   @SerializedName(SERIALIZED_NAME_REVIEW_ACTION)
+  @javax.annotation.Nullable
   private String reviewAction;
 
   public static final String SERIALIZED_NAME_RUN = "run";
   @SerializedName(SERIALIZED_NAME_RUN)
+  @javax.annotation.Nullable
   private Workflowv3ReportRun run;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Workflowv3Status status = Workflowv3Status.UNDEFINED_STATUS;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TASK_ID = "task_id";
   @SerializedName(SERIALIZED_NAME_TASK_ID)
+  @javax.annotation.Nullable
   private String taskId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public static final String SERIALIZED_NAME_WORKFLOW_TYPE = "workflow_type";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_TYPE)
-  private Schedulerv3WorkflowType workflowType = Schedulerv3WorkflowType.NONE;
+  @javax.annotation.Nullable
+  private Schedulerv3WorkflowType workflowType = Schedulerv3WorkflowType.REVIEW_NONE;
 
   public Workflowv3Task() {
   }
 
-  public Workflowv3Task altId(String altId) {
+  public Workflowv3Task altId(@javax.annotation.Nullable String altId) {
     this.altId = altId;
     return this;
   }
 
-   /**
+  /**
    * Alternate Unique ID.
    * @return altId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAltId() {
     return altId;
   }
 
-  public void setAltId(String altId) {
+  public void setAltId(@javax.annotation.Nullable String altId) {
     this.altId = altId;
   }
 
 
-  public Workflowv3Task assignments(List<Workflowv3Entity> assignments) {
+  public Workflowv3Task assignments(@javax.annotation.Nullable List<Workflowv3Entity> assignments) {
     this.assignments = assignments;
     return this;
   }
@@ -185,40 +208,40 @@ public class Workflowv3Task {
     return this;
   }
 
-   /**
+  /**
    * Entities that the task is assigned to.
    * @return assignments
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3Entity> getAssignments() {
     return assignments;
   }
 
-  public void setAssignments(List<Workflowv3Entity> assignments) {
+  public void setAssignments(@javax.annotation.Nullable List<Workflowv3Entity> assignments) {
     this.assignments = assignments;
   }
 
 
-  public Workflowv3Task caseId(String caseId) {
+  public Workflowv3Task caseId(@javax.annotation.Nullable String caseId) {
     this.caseId = caseId;
     return this;
   }
 
-   /**
+  /**
    * Parent case.
    * @return caseId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCaseId() {
     return caseId;
   }
 
-  public void setCaseId(String caseId) {
+  public void setCaseId(@javax.annotation.Nullable String caseId) {
     this.caseId = caseId;
   }
 
 
-  public Workflowv3Task comments(List<Workflowv3Comment> comments) {
+  public Workflowv3Task comments(@javax.annotation.Nullable List<Workflowv3Comment> comments) {
     this.comments = comments;
     return this;
   }
@@ -231,78 +254,78 @@ public class Workflowv3Task {
     return this;
   }
 
-   /**
+  /**
    * Comments - who, when, what.
    * @return comments
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3Comment> getComments() {
     return comments;
   }
 
-  public void setComments(List<Workflowv3Comment> comments) {
+  public void setComments(@javax.annotation.Nullable List<Workflowv3Comment> comments) {
     this.comments = comments;
   }
 
 
-  public Workflowv3Task dateCreated(OffsetDateTime dateCreated) {
+  public Workflowv3Task dateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
   }
 
-   /**
+  /**
    * Date created.
    * @return dateCreated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
-  public void setDateCreated(OffsetDateTime dateCreated) {
+  public void setDateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
-  public Workflowv3Task dateDue(OffsetDateTime dateDue) {
+  public Workflowv3Task dateDue(@javax.annotation.Nullable OffsetDateTime dateDue) {
     this.dateDue = dateDue;
     return this;
   }
 
-   /**
+  /**
    * Date due.
    * @return dateDue
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateDue() {
     return dateDue;
   }
 
-  public void setDateDue(OffsetDateTime dateDue) {
+  public void setDateDue(@javax.annotation.Nullable OffsetDateTime dateDue) {
     this.dateDue = dateDue;
   }
 
 
-  public Workflowv3Task dateModified(OffsetDateTime dateModified) {
+  public Workflowv3Task dateModified(@javax.annotation.Nullable OffsetDateTime dateModified) {
     this.dateModified = dateModified;
     return this;
   }
 
-   /**
+  /**
    * Date of last update.
    * @return dateModified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateModified() {
     return dateModified;
   }
 
-  public void setDateModified(OffsetDateTime dateModified) {
+  public void setDateModified(@javax.annotation.Nullable OffsetDateTime dateModified) {
     this.dateModified = dateModified;
   }
 
 
-  public Workflowv3Task dependsOn(List<String> dependsOn) {
+  public Workflowv3Task dependsOn(@javax.annotation.Nullable List<String> dependsOn) {
     this.dependsOn = dependsOn;
     return this;
   }
@@ -315,40 +338,40 @@ public class Workflowv3Task {
     return this;
   }
 
-   /**
+  /**
    * Task ID dependencies if sequential processing is needed.
    * @return dependsOn
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDependsOn() {
     return dependsOn;
   }
 
-  public void setDependsOn(List<String> dependsOn) {
+  public void setDependsOn(@javax.annotation.Nullable List<String> dependsOn) {
     this.dependsOn = dependsOn;
   }
 
 
-  public Workflowv3Task description(String description) {
+  public Workflowv3Task description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Multiline description of the task.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Workflowv3Task investigationLinks(List<Schedulerv3ConfigurationItem> investigationLinks) {
+  public Workflowv3Task investigationLinks(@javax.annotation.Nullable List<Schedulerv3ConfigurationItem> investigationLinks) {
     this.investigationLinks = investigationLinks;
     return this;
   }
@@ -361,173 +384,173 @@ public class Workflowv3Task {
     return this;
   }
 
-   /**
+  /**
    * Get investigationLinks
    * @return investigationLinks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ConfigurationItem> getInvestigationLinks() {
     return investigationLinks;
   }
 
-  public void setInvestigationLinks(List<Schedulerv3ConfigurationItem> investigationLinks) {
+  public void setInvestigationLinks(@javax.annotation.Nullable List<Schedulerv3ConfigurationItem> investigationLinks) {
     this.investigationLinks = investigationLinks;
   }
 
 
-  public Workflowv3Task justification(String justification) {
+  public Workflowv3Task justification(@javax.annotation.Nullable String justification) {
     this.justification = justification;
     return this;
   }
 
-   /**
+  /**
    * Get justification
    * @return justification
-  **/
+   */
   @javax.annotation.Nullable
   public String getJustification() {
     return justification;
   }
 
-  public void setJustification(String justification) {
+  public void setJustification(@javax.annotation.Nullable String justification) {
     this.justification = justification;
   }
 
 
-  public Workflowv3Task number(String number) {
+  public Workflowv3Task number(@javax.annotation.Nullable String number) {
     this.number = number;
     return this;
   }
 
-   /**
+  /**
    * Get number
    * @return number
-  **/
+   */
   @javax.annotation.Nullable
   public String getNumber() {
     return number;
   }
 
-  public void setNumber(String number) {
+  public void setNumber(@javax.annotation.Nullable String number) {
     this.number = number;
   }
 
 
-  public Workflowv3Task priority(Workflowv3Priority priority) {
+  public Workflowv3Task priority(@javax.annotation.Nullable Workflowv3Priority priority) {
     this.priority = priority;
     return this;
   }
 
-   /**
+  /**
    * Get priority
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Priority getPriority() {
     return priority;
   }
 
-  public void setPriority(Workflowv3Priority priority) {
+  public void setPriority(@javax.annotation.Nullable Workflowv3Priority priority) {
     this.priority = priority;
   }
 
 
-  public Workflowv3Task reportResult(Workflowv3ReportResult reportResult) {
+  public Workflowv3Task reportResult(@javax.annotation.Nullable Workflowv3ReportResult reportResult) {
     this.reportResult = reportResult;
     return this;
   }
 
-   /**
+  /**
    * Get reportResult
    * @return reportResult
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3ReportResult getReportResult() {
     return reportResult;
   }
 
-  public void setReportResult(Workflowv3ReportResult reportResult) {
+  public void setReportResult(@javax.annotation.Nullable Workflowv3ReportResult reportResult) {
     this.reportResult = reportResult;
   }
 
 
-  public Workflowv3Task responseTemplate(Schedulerv3ConfigurationItem responseTemplate) {
+  public Workflowv3Task responseTemplate(@javax.annotation.Nullable Schedulerv3ConfigurationItem responseTemplate) {
     this.responseTemplate = responseTemplate;
     return this;
   }
 
-   /**
+  /**
    * Get responseTemplate
    * @return responseTemplate
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3ConfigurationItem getResponseTemplate() {
     return responseTemplate;
   }
 
-  public void setResponseTemplate(Schedulerv3ConfigurationItem responseTemplate) {
+  public void setResponseTemplate(@javax.annotation.Nullable Schedulerv3ConfigurationItem responseTemplate) {
     this.responseTemplate = responseTemplate;
   }
 
 
-  public Workflowv3Task reviewAction(String reviewAction) {
+  public Workflowv3Task reviewAction(@javax.annotation.Nullable String reviewAction) {
     this.reviewAction = reviewAction;
     return this;
   }
 
-   /**
+  /**
    * Get reviewAction
    * @return reviewAction
-  **/
+   */
   @javax.annotation.Nullable
   public String getReviewAction() {
     return reviewAction;
   }
 
-  public void setReviewAction(String reviewAction) {
+  public void setReviewAction(@javax.annotation.Nullable String reviewAction) {
     this.reviewAction = reviewAction;
   }
 
 
-  public Workflowv3Task run(Workflowv3ReportRun run) {
+  public Workflowv3Task run(@javax.annotation.Nullable Workflowv3ReportRun run) {
     this.run = run;
     return this;
   }
 
-   /**
+  /**
    * Get run
    * @return run
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3ReportRun getRun() {
     return run;
   }
 
-  public void setRun(Workflowv3ReportRun run) {
+  public void setRun(@javax.annotation.Nullable Workflowv3ReportRun run) {
     this.run = run;
   }
 
 
-  public Workflowv3Task status(Workflowv3Status status) {
+  public Workflowv3Task status(@javax.annotation.Nullable Workflowv3Status status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Status getStatus() {
     return status;
   }
 
-  public void setStatus(Workflowv3Status status) {
+  public void setStatus(@javax.annotation.Nullable Workflowv3Status status) {
     this.status = status;
   }
 
 
-  public Workflowv3Task tags(List<String> tags) {
+  public Workflowv3Task tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -540,73 +563,73 @@ public class Workflowv3Task {
     return this;
   }
 
-   /**
+  /**
    * Get tags
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
 
-  public Workflowv3Task taskId(String taskId) {
+  public Workflowv3Task taskId(@javax.annotation.Nullable String taskId) {
     this.taskId = taskId;
     return this;
   }
 
-   /**
+  /**
    * Unique ID.
    * @return taskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTaskId() {
     return taskId;
   }
 
-  public void setTaskId(String taskId) {
+  public void setTaskId(@javax.annotation.Nullable String taskId) {
     this.taskId = taskId;
   }
 
 
-  public Workflowv3Task title(String title) {
+  public Workflowv3Task title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Task title (subject).
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
 
-  public Workflowv3Task workflowType(Schedulerv3WorkflowType workflowType) {
+  public Workflowv3Task workflowType(@javax.annotation.Nullable Schedulerv3WorkflowType workflowType) {
     this.workflowType = workflowType;
     return this;
   }
 
-   /**
+  /**
    * Get workflowType
    * @return workflowType
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3WorkflowType getWorkflowType() {
     return workflowType;
   }
 
-  public void setWorkflowType(Schedulerv3WorkflowType workflowType) {
+  public void setWorkflowType(@javax.annotation.Nullable Schedulerv3WorkflowType workflowType) {
     this.workflowType = workflowType;
   }
 
@@ -697,44 +720,22 @@ public class Workflowv3Task {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("alt_id");
-    openapiFields.add("assignments");
-    openapiFields.add("case_id");
-    openapiFields.add("comments");
-    openapiFields.add("date_created");
-    openapiFields.add("date_due");
-    openapiFields.add("date_modified");
-    openapiFields.add("depends_on");
-    openapiFields.add("description");
-    openapiFields.add("investigation_links");
-    openapiFields.add("justification");
-    openapiFields.add("number");
-    openapiFields.add("priority");
-    openapiFields.add("report_result");
-    openapiFields.add("response_template");
-    openapiFields.add("review_action");
-    openapiFields.add("run");
-    openapiFields.add("status");
-    openapiFields.add("tags");
-    openapiFields.add("task_id");
-    openapiFields.add("title");
-    openapiFields.add("workflow_type");
+    openapiFields = new HashSet<String>(Arrays.asList("alt_id", "assignments", "case_id", "comments", "date_created", "date_due", "date_modified", "depends_on", "description", "investigation_links", "justification", "number", "priority", "report_result", "response_template", "review_action", "run", "status", "tags", "task_id", "title", "workflow_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3Task
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3Task
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3Task.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3Task is not found in the empty JSON string", Workflowv3Task.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3Task is not found in the empty JSON string", Workflowv3Task.openapiRequiredFields.toString()));
         }
       }
 
@@ -742,19 +743,19 @@ public class Workflowv3Task {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3Task.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3Task` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3Task` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("alt_id") != null && !jsonObj.get("alt_id").isJsonNull()) && !jsonObj.get("alt_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `alt_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("alt_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `alt_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("alt_id").toString()));
       }
       if (jsonObj.get("assignments") != null && !jsonObj.get("assignments").isJsonNull()) {
         JsonArray jsonArrayassignments = jsonObj.getAsJsonArray("assignments");
         if (jsonArrayassignments != null) {
           // ensure the json data is an array
           if (!jsonObj.get("assignments").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `assignments` to be an array in the JSON string but got `%s`", jsonObj.get("assignments").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assignments` to be an array in the JSON string but got `%s`", jsonObj.get("assignments").toString()));
           }
 
           // validate the optional field `assignments` (array)
@@ -764,14 +765,14 @@ public class Workflowv3Task {
         }
       }
       if ((jsonObj.get("case_id") != null && !jsonObj.get("case_id").isJsonNull()) && !jsonObj.get("case_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `case_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("case_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `case_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("case_id").toString()));
       }
       if (jsonObj.get("comments") != null && !jsonObj.get("comments").isJsonNull()) {
         JsonArray jsonArraycomments = jsonObj.getAsJsonArray("comments");
         if (jsonArraycomments != null) {
           // ensure the json data is an array
           if (!jsonObj.get("comments").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `comments` to be an array in the JSON string but got `%s`", jsonObj.get("comments").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `comments` to be an array in the JSON string but got `%s`", jsonObj.get("comments").toString()));
           }
 
           // validate the optional field `comments` (array)
@@ -782,17 +783,17 @@ public class Workflowv3Task {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("depends_on") != null && !jsonObj.get("depends_on").isJsonNull() && !jsonObj.get("depends_on").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `depends_on` to be an array in the JSON string but got `%s`", jsonObj.get("depends_on").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `depends_on` to be an array in the JSON string but got `%s`", jsonObj.get("depends_on").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("investigation_links") != null && !jsonObj.get("investigation_links").isJsonNull()) {
         JsonArray jsonArrayinvestigationLinks = jsonObj.getAsJsonArray("investigation_links");
         if (jsonArrayinvestigationLinks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("investigation_links").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `investigation_links` to be an array in the JSON string but got `%s`", jsonObj.get("investigation_links").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `investigation_links` to be an array in the JSON string but got `%s`", jsonObj.get("investigation_links").toString()));
           }
 
           // validate the optional field `investigation_links` (array)
@@ -802,10 +803,10 @@ public class Workflowv3Task {
         }
       }
       if ((jsonObj.get("justification") != null && !jsonObj.get("justification").isJsonNull()) && !jsonObj.get("justification").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `justification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("justification").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `justification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("justification").toString()));
       }
       if ((jsonObj.get("number") != null && !jsonObj.get("number").isJsonNull()) && !jsonObj.get("number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("number").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("number").toString()));
       }
       // validate the optional field `priority`
       if (jsonObj.get("priority") != null && !jsonObj.get("priority").isJsonNull()) {
@@ -820,7 +821,7 @@ public class Workflowv3Task {
         Schedulerv3ConfigurationItem.validateJsonElement(jsonObj.get("response_template"));
       }
       if ((jsonObj.get("review_action") != null && !jsonObj.get("review_action").isJsonNull()) && !jsonObj.get("review_action").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `review_action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("review_action").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `review_action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("review_action").toString()));
       }
       // validate the optional field `run`
       if (jsonObj.get("run") != null && !jsonObj.get("run").isJsonNull()) {
@@ -832,13 +833,13 @@ public class Workflowv3Task {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
       if ((jsonObj.get("task_id") != null && !jsonObj.get("task_id").isJsonNull()) && !jsonObj.get("task_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_id").toString()));
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
       // validate the optional field `workflow_type`
       if (jsonObj.get("workflow_type") != null && !jsonObj.get("workflow_type").isJsonNull()) {
@@ -875,22 +876,22 @@ public class Workflowv3Task {
     }
   }
 
- /**
-  * Create an instance of Workflowv3Task given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3Task
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3Task
-  */
+  /**
+   * Create an instance of Workflowv3Task given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3Task
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3Task
+   */
   public static Workflowv3Task fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3Task.class);
   }
 
- /**
-  * Convert an instance of Workflowv3Task to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3Task to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

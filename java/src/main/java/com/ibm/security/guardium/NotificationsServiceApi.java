@@ -96,13 +96,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceCreateTicketCall(Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceCreateTicketCall(@javax.annotation.Nonnull Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -148,7 +149,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceCreateTicketValidateBeforeCall(Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceCreateTicketValidateBeforeCall(@javax.annotation.Nonnull Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'notificationsv3CreateTicketRequest' is set
         if (notificationsv3CreateTicketRequest == null) {
             throw new ApiException("Missing the required parameter 'notificationsv3CreateTicketRequest' when calling notificationsServiceCreateTicket(Async)");
@@ -165,13 +166,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3CreateTicketResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3CreateTicketResponse notificationsServiceCreateTicket(Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest) throws ApiException {
+    public Notificationsv3CreateTicketResponse notificationsServiceCreateTicket(@javax.annotation.Nonnull Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest) throws ApiException {
         ApiResponse<Notificationsv3CreateTicketResponse> localVarResp = notificationsServiceCreateTicketWithHttpInfo(notificationsv3CreateTicketRequest);
         return localVarResp.getData();
     }
@@ -183,13 +185,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3CreateTicketResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3CreateTicketResponse> notificationsServiceCreateTicketWithHttpInfo(Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest) throws ApiException {
+    public ApiResponse<Notificationsv3CreateTicketResponse> notificationsServiceCreateTicketWithHttpInfo(@javax.annotation.Nonnull Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceCreateTicketValidateBeforeCall(notificationsv3CreateTicketRequest, null);
         Type localVarReturnType = new TypeToken<Notificationsv3CreateTicketResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -203,13 +206,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceCreateTicketAsync(Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest, final ApiCallback<Notificationsv3CreateTicketResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceCreateTicketAsync(@javax.annotation.Nonnull Notificationsv3CreateTicketRequest notificationsv3CreateTicketRequest, final ApiCallback<Notificationsv3CreateTicketResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceCreateTicketValidateBeforeCall(notificationsv3CreateTicketRequest, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3CreateTicketResponse>(){}.getType();
@@ -223,13 +227,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetFoldersCall(Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetFoldersCall(@javax.annotation.Nonnull Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -275,7 +280,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceGetFoldersValidateBeforeCall(Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceGetFoldersValidateBeforeCall(@javax.annotation.Nonnull Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'notificationsv3GetFoldersRequest' is set
         if (notificationsv3GetFoldersRequest == null) {
             throw new ApiException("Missing the required parameter 'notificationsv3GetFoldersRequest' when calling notificationsServiceGetFolders(Async)");
@@ -292,13 +297,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3GetFoldersResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3GetFoldersResponse notificationsServiceGetFolders(Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest) throws ApiException {
+    public Notificationsv3GetFoldersResponse notificationsServiceGetFolders(@javax.annotation.Nonnull Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest) throws ApiException {
         ApiResponse<Notificationsv3GetFoldersResponse> localVarResp = notificationsServiceGetFoldersWithHttpInfo(notificationsv3GetFoldersRequest);
         return localVarResp.getData();
     }
@@ -310,13 +316,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3GetFoldersResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3GetFoldersResponse> notificationsServiceGetFoldersWithHttpInfo(Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest) throws ApiException {
+    public ApiResponse<Notificationsv3GetFoldersResponse> notificationsServiceGetFoldersWithHttpInfo(@javax.annotation.Nonnull Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceGetFoldersValidateBeforeCall(notificationsv3GetFoldersRequest, null);
         Type localVarReturnType = new TypeToken<Notificationsv3GetFoldersResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -330,13 +337,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetFoldersAsync(Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest, final ApiCallback<Notificationsv3GetFoldersResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetFoldersAsync(@javax.annotation.Nonnull Notificationsv3GetFoldersRequest notificationsv3GetFoldersRequest, final ApiCallback<Notificationsv3GetFoldersResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceGetFoldersValidateBeforeCall(notificationsv3GetFoldersRequest, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3GetFoldersResponse>(){}.getType();
@@ -350,13 +358,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetNotificationFilenameCall(String notificationId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetNotificationFilenameCall(@javax.annotation.Nullable String notificationId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -405,7 +414,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceGetNotificationFilenameValidateBeforeCall(String notificationId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceGetNotificationFilenameValidateBeforeCall(@javax.annotation.Nullable String notificationId, final ApiCallback _callback) throws ApiException {
         return notificationsServiceGetNotificationFilenameCall(notificationId, _callback);
 
     }
@@ -417,13 +426,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3GetNotificationFilenameResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3GetNotificationFilenameResponse notificationsServiceGetNotificationFilename(String notificationId) throws ApiException {
+    public Notificationsv3GetNotificationFilenameResponse notificationsServiceGetNotificationFilename(@javax.annotation.Nullable String notificationId) throws ApiException {
         ApiResponse<Notificationsv3GetNotificationFilenameResponse> localVarResp = notificationsServiceGetNotificationFilenameWithHttpInfo(notificationId);
         return localVarResp.getData();
     }
@@ -435,13 +445,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3GetNotificationFilenameResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3GetNotificationFilenameResponse> notificationsServiceGetNotificationFilenameWithHttpInfo(String notificationId) throws ApiException {
+    public ApiResponse<Notificationsv3GetNotificationFilenameResponse> notificationsServiceGetNotificationFilenameWithHttpInfo(@javax.annotation.Nullable String notificationId) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceGetNotificationFilenameValidateBeforeCall(notificationId, null);
         Type localVarReturnType = new TypeToken<Notificationsv3GetNotificationFilenameResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -455,13 +466,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetNotificationFilenameAsync(String notificationId, final ApiCallback<Notificationsv3GetNotificationFilenameResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetNotificationFilenameAsync(@javax.annotation.Nullable String notificationId, final ApiCallback<Notificationsv3GetNotificationFilenameResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceGetNotificationFilenameValidateBeforeCall(notificationId, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3GetNotificationFilenameResponse>(){}.getType();
@@ -475,13 +487,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetNotificationRecordCall(String notificationId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetNotificationRecordCall(@javax.annotation.Nonnull String notificationId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -527,7 +540,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceGetNotificationRecordValidateBeforeCall(String notificationId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceGetNotificationRecordValidateBeforeCall(@javax.annotation.Nonnull String notificationId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'notificationId' is set
         if (notificationId == null) {
             throw new ApiException("Missing the required parameter 'notificationId' when calling notificationsServiceGetNotificationRecord(Async)");
@@ -544,13 +557,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3GetNotificationRecordResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3GetNotificationRecordResponse notificationsServiceGetNotificationRecord(String notificationId) throws ApiException {
+    public Notificationsv3GetNotificationRecordResponse notificationsServiceGetNotificationRecord(@javax.annotation.Nonnull String notificationId) throws ApiException {
         ApiResponse<Notificationsv3GetNotificationRecordResponse> localVarResp = notificationsServiceGetNotificationRecordWithHttpInfo(notificationId);
         return localVarResp.getData();
     }
@@ -562,13 +576,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3GetNotificationRecordResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3GetNotificationRecordResponse> notificationsServiceGetNotificationRecordWithHttpInfo(String notificationId) throws ApiException {
+    public ApiResponse<Notificationsv3GetNotificationRecordResponse> notificationsServiceGetNotificationRecordWithHttpInfo(@javax.annotation.Nonnull String notificationId) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceGetNotificationRecordValidateBeforeCall(notificationId, null);
         Type localVarReturnType = new TypeToken<Notificationsv3GetNotificationRecordResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -582,13 +597,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetNotificationRecordAsync(String notificationId, final ApiCallback<Notificationsv3GetNotificationRecordResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetNotificationRecordAsync(@javax.annotation.Nonnull String notificationId, final ApiCallback<Notificationsv3GetNotificationRecordResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceGetNotificationRecordValidateBeforeCall(notificationId, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3GetNotificationRecordResponse>(){}.getType();
@@ -610,13 +626,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetNotificationRecordsCall(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, String filterState, List<String> filterOrigins, String filterOriginData, Long filterLimit, Long offset, Long limit, Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetNotificationRecordsCall(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable String filterState, @javax.annotation.Nullable List<String> filterOrigins, @javax.annotation.Nullable String filterOriginData, @javax.annotation.Nullable Long filterLimit, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -697,7 +714,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceGetNotificationRecordsValidateBeforeCall(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, String filterState, List<String> filterOrigins, String filterOriginData, Long filterLimit, Long offset, Long limit, Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceGetNotificationRecordsValidateBeforeCall(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable String filterState, @javax.annotation.Nullable List<String> filterOrigins, @javax.annotation.Nullable String filterOriginData, @javax.annotation.Nullable Long filterLimit, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
         return notificationsServiceGetNotificationRecordsCall(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts, _callback);
 
     }
@@ -717,13 +734,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3GetNotificationRecordsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3GetNotificationRecordsResponse notificationsServiceGetNotificationRecords(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, String filterState, List<String> filterOrigins, String filterOriginData, Long filterLimit, Long offset, Long limit, Boolean includeFilterCounts) throws ApiException {
+    public Notificationsv3GetNotificationRecordsResponse notificationsServiceGetNotificationRecords(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable String filterState, @javax.annotation.Nullable List<String> filterOrigins, @javax.annotation.Nullable String filterOriginData, @javax.annotation.Nullable Long filterLimit, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts) throws ApiException {
         ApiResponse<Notificationsv3GetNotificationRecordsResponse> localVarResp = notificationsServiceGetNotificationRecordsWithHttpInfo(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts);
         return localVarResp.getData();
     }
@@ -743,13 +761,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3GetNotificationRecordsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3GetNotificationRecordsResponse> notificationsServiceGetNotificationRecordsWithHttpInfo(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, String filterState, List<String> filterOrigins, String filterOriginData, Long filterLimit, Long offset, Long limit, Boolean includeFilterCounts) throws ApiException {
+    public ApiResponse<Notificationsv3GetNotificationRecordsResponse> notificationsServiceGetNotificationRecordsWithHttpInfo(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable String filterState, @javax.annotation.Nullable List<String> filterOrigins, @javax.annotation.Nullable String filterOriginData, @javax.annotation.Nullable Long filterLimit, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceGetNotificationRecordsValidateBeforeCall(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts, null);
         Type localVarReturnType = new TypeToken<Notificationsv3GetNotificationRecordsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -771,13 +790,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetNotificationRecordsAsync(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, String filterState, List<String> filterOrigins, String filterOriginData, Long filterLimit, Long offset, Long limit, Boolean includeFilterCounts, final ApiCallback<Notificationsv3GetNotificationRecordsResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetNotificationRecordsAsync(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable String filterState, @javax.annotation.Nullable List<String> filterOrigins, @javax.annotation.Nullable String filterOriginData, @javax.annotation.Nullable Long filterLimit, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts, final ApiCallback<Notificationsv3GetNotificationRecordsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceGetNotificationRecordsValidateBeforeCall(filterStartTime, filterEndTime, filterState, filterOrigins, filterOriginData, filterLimit, offset, limit, includeFilterCounts, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3GetNotificationRecordsResponse>(){}.getType();
@@ -792,13 +812,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetTicketStatusCall(String ticketId, String integrationId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetTicketStatusCall(@javax.annotation.Nullable String ticketId, @javax.annotation.Nullable String integrationId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -851,7 +872,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceGetTicketStatusValidateBeforeCall(String ticketId, String integrationId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceGetTicketStatusValidateBeforeCall(@javax.annotation.Nullable String ticketId, @javax.annotation.Nullable String integrationId, final ApiCallback _callback) throws ApiException {
         return notificationsServiceGetTicketStatusCall(ticketId, integrationId, _callback);
 
     }
@@ -864,13 +885,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3GetTicketStatusResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3GetTicketStatusResponse notificationsServiceGetTicketStatus(String ticketId, String integrationId) throws ApiException {
+    public Notificationsv3GetTicketStatusResponse notificationsServiceGetTicketStatus(@javax.annotation.Nullable String ticketId, @javax.annotation.Nullable String integrationId) throws ApiException {
         ApiResponse<Notificationsv3GetTicketStatusResponse> localVarResp = notificationsServiceGetTicketStatusWithHttpInfo(ticketId, integrationId);
         return localVarResp.getData();
     }
@@ -883,13 +905,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3GetTicketStatusResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3GetTicketStatusResponse> notificationsServiceGetTicketStatusWithHttpInfo(String ticketId, String integrationId) throws ApiException {
+    public ApiResponse<Notificationsv3GetTicketStatusResponse> notificationsServiceGetTicketStatusWithHttpInfo(@javax.annotation.Nullable String ticketId, @javax.annotation.Nullable String integrationId) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceGetTicketStatusValidateBeforeCall(ticketId, integrationId, null);
         Type localVarReturnType = new TypeToken<Notificationsv3GetTicketStatusResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -904,13 +927,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceGetTicketStatusAsync(String ticketId, String integrationId, final ApiCallback<Notificationsv3GetTicketStatusResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceGetTicketStatusAsync(@javax.annotation.Nullable String ticketId, @javax.annotation.Nullable String integrationId, final ApiCallback<Notificationsv3GetTicketStatusResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceGetTicketStatusValidateBeforeCall(ticketId, integrationId, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3GetTicketStatusResponse>(){}.getType();
@@ -924,13 +948,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServicePostNotificationRecordCall(Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServicePostNotificationRecordCall(@javax.annotation.Nonnull Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -976,7 +1001,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServicePostNotificationRecordValidateBeforeCall(Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServicePostNotificationRecordValidateBeforeCall(@javax.annotation.Nonnull Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'notificationsv3PostNotificationRecordRequest' is set
         if (notificationsv3PostNotificationRecordRequest == null) {
             throw new ApiException("Missing the required parameter 'notificationsv3PostNotificationRecordRequest' when calling notificationsServicePostNotificationRecord(Async)");
@@ -993,13 +1018,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3PostNotificationRecordResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3PostNotificationRecordResponse notificationsServicePostNotificationRecord(Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest) throws ApiException {
+    public Notificationsv3PostNotificationRecordResponse notificationsServicePostNotificationRecord(@javax.annotation.Nonnull Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest) throws ApiException {
         ApiResponse<Notificationsv3PostNotificationRecordResponse> localVarResp = notificationsServicePostNotificationRecordWithHttpInfo(notificationsv3PostNotificationRecordRequest);
         return localVarResp.getData();
     }
@@ -1011,13 +1037,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3PostNotificationRecordResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3PostNotificationRecordResponse> notificationsServicePostNotificationRecordWithHttpInfo(Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest) throws ApiException {
+    public ApiResponse<Notificationsv3PostNotificationRecordResponse> notificationsServicePostNotificationRecordWithHttpInfo(@javax.annotation.Nonnull Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest) throws ApiException {
         okhttp3.Call localVarCall = notificationsServicePostNotificationRecordValidateBeforeCall(notificationsv3PostNotificationRecordRequest, null);
         Type localVarReturnType = new TypeToken<Notificationsv3PostNotificationRecordResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1031,13 +1058,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServicePostNotificationRecordAsync(Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest, final ApiCallback<Notificationsv3PostNotificationRecordResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServicePostNotificationRecordAsync(@javax.annotation.Nonnull Notificationsv3PostNotificationRecordRequest notificationsv3PostNotificationRecordRequest, final ApiCallback<Notificationsv3PostNotificationRecordResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServicePostNotificationRecordValidateBeforeCall(notificationsv3PostNotificationRecordRequest, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3PostNotificationRecordResponse>(){}.getType();
@@ -1051,13 +1079,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceSearchNotificationRecordsCall(Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceSearchNotificationRecordsCall(@javax.annotation.Nonnull Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1103,7 +1132,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceSearchNotificationRecordsValidateBeforeCall(Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceSearchNotificationRecordsValidateBeforeCall(@javax.annotation.Nonnull Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'notificationsv3SearchNotificationRecordsRequest' is set
         if (notificationsv3SearchNotificationRecordsRequest == null) {
             throw new ApiException("Missing the required parameter 'notificationsv3SearchNotificationRecordsRequest' when calling notificationsServiceSearchNotificationRecords(Async)");
@@ -1120,13 +1149,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3SearchNotificationRecordsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3SearchNotificationRecordsResponse notificationsServiceSearchNotificationRecords(Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest) throws ApiException {
+    public Notificationsv3SearchNotificationRecordsResponse notificationsServiceSearchNotificationRecords(@javax.annotation.Nonnull Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest) throws ApiException {
         ApiResponse<Notificationsv3SearchNotificationRecordsResponse> localVarResp = notificationsServiceSearchNotificationRecordsWithHttpInfo(notificationsv3SearchNotificationRecordsRequest);
         return localVarResp.getData();
     }
@@ -1138,13 +1168,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3SearchNotificationRecordsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3SearchNotificationRecordsResponse> notificationsServiceSearchNotificationRecordsWithHttpInfo(Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest) throws ApiException {
+    public ApiResponse<Notificationsv3SearchNotificationRecordsResponse> notificationsServiceSearchNotificationRecordsWithHttpInfo(@javax.annotation.Nonnull Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceSearchNotificationRecordsValidateBeforeCall(notificationsv3SearchNotificationRecordsRequest, null);
         Type localVarReturnType = new TypeToken<Notificationsv3SearchNotificationRecordsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1158,13 +1189,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceSearchNotificationRecordsAsync(Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest, final ApiCallback<Notificationsv3SearchNotificationRecordsResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceSearchNotificationRecordsAsync(@javax.annotation.Nonnull Notificationsv3SearchNotificationRecordsRequest notificationsv3SearchNotificationRecordsRequest, final ApiCallback<Notificationsv3SearchNotificationRecordsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceSearchNotificationRecordsValidateBeforeCall(notificationsv3SearchNotificationRecordsRequest, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3SearchNotificationRecordsResponse>(){}.getType();
@@ -1178,13 +1210,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceTestIntegrationCall(Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceTestIntegrationCall(@javax.annotation.Nonnull Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1230,7 +1263,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceTestIntegrationValidateBeforeCall(Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceTestIntegrationValidateBeforeCall(@javax.annotation.Nonnull Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'notificationsv3TestIntegrationRequest' is set
         if (notificationsv3TestIntegrationRequest == null) {
             throw new ApiException("Missing the required parameter 'notificationsv3TestIntegrationRequest' when calling notificationsServiceTestIntegration(Async)");
@@ -1247,13 +1280,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3TestIntegrationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3TestIntegrationResponse notificationsServiceTestIntegration(Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest) throws ApiException {
+    public Notificationsv3TestIntegrationResponse notificationsServiceTestIntegration(@javax.annotation.Nonnull Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest) throws ApiException {
         ApiResponse<Notificationsv3TestIntegrationResponse> localVarResp = notificationsServiceTestIntegrationWithHttpInfo(notificationsv3TestIntegrationRequest);
         return localVarResp.getData();
     }
@@ -1265,13 +1299,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3TestIntegrationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3TestIntegrationResponse> notificationsServiceTestIntegrationWithHttpInfo(Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest) throws ApiException {
+    public ApiResponse<Notificationsv3TestIntegrationResponse> notificationsServiceTestIntegrationWithHttpInfo(@javax.annotation.Nonnull Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceTestIntegrationValidateBeforeCall(notificationsv3TestIntegrationRequest, null);
         Type localVarReturnType = new TypeToken<Notificationsv3TestIntegrationResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1285,13 +1320,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceTestIntegrationAsync(Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest, final ApiCallback<Notificationsv3TestIntegrationResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceTestIntegrationAsync(@javax.annotation.Nonnull Notificationsv3TestIntegrationRequest notificationsv3TestIntegrationRequest, final ApiCallback<Notificationsv3TestIntegrationResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceTestIntegrationValidateBeforeCall(notificationsv3TestIntegrationRequest, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3TestIntegrationResponse>(){}.getType();
@@ -1305,13 +1341,14 @@ public class NotificationsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceUpdateNotificationRecordCall(Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceUpdateNotificationRecordCall(@javax.annotation.Nonnull Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1357,7 +1394,7 @@ public class NotificationsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call notificationsServiceUpdateNotificationRecordValidateBeforeCall(Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call notificationsServiceUpdateNotificationRecordValidateBeforeCall(@javax.annotation.Nonnull Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'notificationsv3UpdateNotificationRecordRequest' is set
         if (notificationsv3UpdateNotificationRecordRequest == null) {
             throw new ApiException("Missing the required parameter 'notificationsv3UpdateNotificationRecordRequest' when calling notificationsServiceUpdateNotificationRecord(Async)");
@@ -1374,13 +1411,14 @@ public class NotificationsServiceApi {
      * @return Notificationsv3UpdateNotificationRecordResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Notificationsv3UpdateNotificationRecordResponse notificationsServiceUpdateNotificationRecord(Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest) throws ApiException {
+    public Notificationsv3UpdateNotificationRecordResponse notificationsServiceUpdateNotificationRecord(@javax.annotation.Nonnull Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest) throws ApiException {
         ApiResponse<Notificationsv3UpdateNotificationRecordResponse> localVarResp = notificationsServiceUpdateNotificationRecordWithHttpInfo(notificationsv3UpdateNotificationRecordRequest);
         return localVarResp.getData();
     }
@@ -1392,13 +1430,14 @@ public class NotificationsServiceApi {
      * @return ApiResponse&lt;Notificationsv3UpdateNotificationRecordResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Notificationsv3UpdateNotificationRecordResponse> notificationsServiceUpdateNotificationRecordWithHttpInfo(Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest) throws ApiException {
+    public ApiResponse<Notificationsv3UpdateNotificationRecordResponse> notificationsServiceUpdateNotificationRecordWithHttpInfo(@javax.annotation.Nonnull Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest) throws ApiException {
         okhttp3.Call localVarCall = notificationsServiceUpdateNotificationRecordValidateBeforeCall(notificationsv3UpdateNotificationRecordRequest, null);
         Type localVarReturnType = new TypeToken<Notificationsv3UpdateNotificationRecordResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1412,13 +1451,14 @@ public class NotificationsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call notificationsServiceUpdateNotificationRecordAsync(Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest, final ApiCallback<Notificationsv3UpdateNotificationRecordResponse> _callback) throws ApiException {
+    public okhttp3.Call notificationsServiceUpdateNotificationRecordAsync(@javax.annotation.Nonnull Notificationsv3UpdateNotificationRecordRequest notificationsv3UpdateNotificationRecordRequest, final ApiCallback<Notificationsv3UpdateNotificationRecordResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = notificationsServiceUpdateNotificationRecordValidateBeforeCall(notificationsv3UpdateNotificationRecordRequest, _callback);
         Type localVarReturnType = new TypeToken<Notificationsv3UpdateNotificationRecordResponse>(){}.getType();

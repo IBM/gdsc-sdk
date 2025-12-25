@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AnalyzedRegion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AnalyzedRegion {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   public static final String SERIALIZED_NAME_IS_ANALYZED = "isAnalyzed";
   @SerializedName(SERIALIZED_NAME_IS_ANALYZED)
+  @javax.annotation.Nonnull
   private Boolean isAnalyzed;
 
   public AnalyzedRegion() {
   }
 
-  public AnalyzedRegion name(String name) {
+  public AnalyzedRegion name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public AnalyzedRegion isAnalyzed(Boolean isAnalyzed) {
+  public AnalyzedRegion isAnalyzed(@javax.annotation.Nonnull Boolean isAnalyzed) {
     this.isAnalyzed = isAnalyzed;
     return this;
   }
 
-   /**
+  /**
    * Get isAnalyzed
    * @return isAnalyzed
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getIsAnalyzed() {
     return isAnalyzed;
   }
 
-  public void setIsAnalyzed(Boolean isAnalyzed) {
+  public void setIsAnalyzed(@javax.annotation.Nonnull Boolean isAnalyzed) {
     this.isAnalyzed = isAnalyzed;
   }
 
@@ -146,26 +149,22 @@ public class AnalyzedRegion {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("name");
-    openapiFields.add("isAnalyzed");
+    openapiFields = new HashSet<String>(Arrays.asList("name", "isAnalyzed"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("isAnalyzed");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("name", "isAnalyzed"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AnalyzedRegion
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AnalyzedRegion
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AnalyzedRegion.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AnalyzedRegion is not found in the empty JSON string", AnalyzedRegion.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AnalyzedRegion is not found in the empty JSON string", AnalyzedRegion.openapiRequiredFields.toString()));
         }
       }
 
@@ -173,19 +172,19 @@ public class AnalyzedRegion {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AnalyzedRegion.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AnalyzedRegion` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AnalyzedRegion` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AnalyzedRegion.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -218,22 +217,22 @@ public class AnalyzedRegion {
     }
   }
 
- /**
-  * Create an instance of AnalyzedRegion given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AnalyzedRegion
-  * @throws IOException if the JSON string is invalid with respect to AnalyzedRegion
-  */
+  /**
+   * Create an instance of AnalyzedRegion given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AnalyzedRegion
+   * @throws IOException if the JSON string is invalid with respect to AnalyzedRegion
+   */
   public static AnalyzedRegion fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AnalyzedRegion.class);
   }
 
- /**
-  * Convert an instance of AnalyzedRegion to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AnalyzedRegion to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

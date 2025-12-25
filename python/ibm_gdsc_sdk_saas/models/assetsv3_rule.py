@@ -35,7 +35,7 @@ class Assetsv3Rule(BaseModel):
     policy_id: Optional[StrictStr] = Field(default=None, description="Policy ID.")
     rule_id: Optional[StrictStr] = Field(default=None, description="Rule ID.")
     rule_name: Optional[StrictStr] = Field(default=None, description="Rule Name.")
-    rule_type: Optional[Assetsv3RuleType] = None
+    rule_type: Optional[Assetsv3RuleType] = Assetsv3RuleType.ACCESS
     __properties: ClassVar[List[str]] = ["actions", "is_delete", "parameters", "policy_id", "rule_id", "rule_name", "rule_type"]
 
     model_config = ConfigDict(
@@ -80,16 +80,16 @@ class Assetsv3Rule(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in actions (list)
         _items = []
         if self.actions:
-            for _item in self.actions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_actions in self.actions:
+                if _item_actions:
+                    _items.append(_item_actions.to_dict())
             _dict['actions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in parameters (list)
         _items = []
         if self.parameters:
-            for _item in self.parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_parameters in self.parameters:
+                if _item_parameters:
+                    _items.append(_item_parameters.to_dict())
             _dict['parameters'] = _items
         return _dict
 
@@ -109,7 +109,7 @@ class Assetsv3Rule(BaseModel):
             "policy_id": obj.get("policy_id"),
             "rule_id": obj.get("rule_id"),
             "rule_name": obj.get("rule_name"),
-            "rule_type": obj.get("rule_type")
+            "rule_type": obj.get("rule_type") if obj.get("rule_type") is not None else Assetsv3RuleType.ACCESS
         })
         return _obj
 

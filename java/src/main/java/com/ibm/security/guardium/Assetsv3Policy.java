@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,226 +38,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Base Policy object which is used in create and list APIs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3Policy {
   public static final String SERIALIZED_NAME_ACTIVATION_STATUS = "activation_status";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_STATUS)
+  @javax.annotation.Nullable
   private Integer activationStatus;
 
   public static final String SERIALIZED_NAME_INSTALLED_FLAG = "installed_flag";
   @SerializedName(SERIALIZED_NAME_INSTALLED_FLAG)
+  @javax.annotation.Nullable
   private Boolean installedFlag;
 
   public static final String SERIALIZED_NAME_INSTALLED_TIMESTAMP = "installed_timestamp";
   @SerializedName(SERIALIZED_NAME_INSTALLED_TIMESTAMP)
+  @javax.annotation.Nullable
   private String installedTimestamp;
 
   public static final String SERIALIZED_NAME_IS_DELETE = "is_delete";
   @SerializedName(SERIALIZED_NAME_IS_DELETE)
+  @javax.annotation.Nullable
   private Integer isDelete;
 
   public static final String SERIALIZED_NAME_LAST_EDITED_TIMESTAMP = "last_edited_timestamp";
   @SerializedName(SERIALIZED_NAME_LAST_EDITED_TIMESTAMP)
+  @javax.annotation.Nullable
   private String lastEditedTimestamp;
 
   public static final String SERIALIZED_NAME_NO_OF_RULES = "no_of_rules";
   @SerializedName(SERIALIZED_NAME_NO_OF_RULES)
+  @javax.annotation.Nullable
   private Integer noOfRules;
 
   public static final String SERIALIZED_NAME_POLICY_ID = "policy_id";
   @SerializedName(SERIALIZED_NAME_POLICY_ID)
+  @javax.annotation.Nullable
   private String policyId;
 
   public static final String SERIALIZED_NAME_POLICY_NAME = "policy_name";
   @SerializedName(SERIALIZED_NAME_POLICY_NAME)
+  @javax.annotation.Nullable
   private String policyName;
 
   public static final String SERIALIZED_NAME_POLICY_SEQUENCE = "policy_sequence";
   @SerializedName(SERIALIZED_NAME_POLICY_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer policySequence;
 
   public Assetsv3Policy() {
   }
 
-  public Assetsv3Policy activationStatus(Integer activationStatus) {
+  public Assetsv3Policy activationStatus(@javax.annotation.Nullable Integer activationStatus) {
     this.activationStatus = activationStatus;
     return this;
   }
 
-   /**
+  /**
    * Policy Activation Status.
    * @return activationStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getActivationStatus() {
     return activationStatus;
   }
 
-  public void setActivationStatus(Integer activationStatus) {
+  public void setActivationStatus(@javax.annotation.Nullable Integer activationStatus) {
     this.activationStatus = activationStatus;
   }
 
 
-  public Assetsv3Policy installedFlag(Boolean installedFlag) {
+  public Assetsv3Policy installedFlag(@javax.annotation.Nullable Boolean installedFlag) {
     this.installedFlag = installedFlag;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate whether policy is installed or not.
    * @return installedFlag
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getInstalledFlag() {
     return installedFlag;
   }
 
-  public void setInstalledFlag(Boolean installedFlag) {
+  public void setInstalledFlag(@javax.annotation.Nullable Boolean installedFlag) {
     this.installedFlag = installedFlag;
   }
 
 
-  public Assetsv3Policy installedTimestamp(String installedTimestamp) {
+  public Assetsv3Policy installedTimestamp(@javax.annotation.Nullable String installedTimestamp) {
     this.installedTimestamp = installedTimestamp;
     return this;
   }
 
-   /**
+  /**
    * Get installedTimestamp
    * @return installedTimestamp
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstalledTimestamp() {
     return installedTimestamp;
   }
 
-  public void setInstalledTimestamp(String installedTimestamp) {
+  public void setInstalledTimestamp(@javax.annotation.Nullable String installedTimestamp) {
     this.installedTimestamp = installedTimestamp;
   }
 
 
-  public Assetsv3Policy isDelete(Integer isDelete) {
+  public Assetsv3Policy isDelete(@javax.annotation.Nullable Integer isDelete) {
     this.isDelete = isDelete;
     return this;
   }
 
-   /**
+  /**
    * Policy isDelete.
    * @return isDelete
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getIsDelete() {
     return isDelete;
   }
 
-  public void setIsDelete(Integer isDelete) {
+  public void setIsDelete(@javax.annotation.Nullable Integer isDelete) {
     this.isDelete = isDelete;
   }
 
 
-  public Assetsv3Policy lastEditedTimestamp(String lastEditedTimestamp) {
+  public Assetsv3Policy lastEditedTimestamp(@javax.annotation.Nullable String lastEditedTimestamp) {
     this.lastEditedTimestamp = lastEditedTimestamp;
     return this;
   }
 
-   /**
+  /**
    * Get lastEditedTimestamp
    * @return lastEditedTimestamp
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastEditedTimestamp() {
     return lastEditedTimestamp;
   }
 
-  public void setLastEditedTimestamp(String lastEditedTimestamp) {
+  public void setLastEditedTimestamp(@javax.annotation.Nullable String lastEditedTimestamp) {
     this.lastEditedTimestamp = lastEditedTimestamp;
   }
 
 
-  public Assetsv3Policy noOfRules(Integer noOfRules) {
+  public Assetsv3Policy noOfRules(@javax.annotation.Nullable Integer noOfRules) {
     this.noOfRules = noOfRules;
     return this;
   }
 
-   /**
+  /**
    * No. of rules associated with policy.
    * @return noOfRules
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNoOfRules() {
     return noOfRules;
   }
 
-  public void setNoOfRules(Integer noOfRules) {
+  public void setNoOfRules(@javax.annotation.Nullable Integer noOfRules) {
     this.noOfRules = noOfRules;
   }
 
 
-  public Assetsv3Policy policyId(String policyId) {
+  public Assetsv3Policy policyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
     return this;
   }
 
-   /**
+  /**
    * Policy ID.
    * @return policyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyId() {
     return policyId;
   }
 
-  public void setPolicyId(String policyId) {
+  public void setPolicyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
   }
 
 
-  public Assetsv3Policy policyName(String policyName) {
+  public Assetsv3Policy policyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
     return this;
   }
 
-   /**
+  /**
    * Policy Name.
    * @return policyName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyName() {
     return policyName;
   }
 
-  public void setPolicyName(String policyName) {
+  public void setPolicyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
   }
 
 
-  public Assetsv3Policy policySequence(Integer policySequence) {
+  public Assetsv3Policy policySequence(@javax.annotation.Nullable Integer policySequence) {
     this.policySequence = policySequence;
     return this;
   }
 
-   /**
+  /**
    * Get policySequence
    * @return policySequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPolicySequence() {
     return policySequence;
   }
 
-  public void setPolicySequence(Integer policySequence) {
+  public void setPolicySequence(@javax.annotation.Nullable Integer policySequence) {
     this.policySequence = policySequence;
   }
 
@@ -321,31 +331,22 @@ public class Assetsv3Policy {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("activation_status");
-    openapiFields.add("installed_flag");
-    openapiFields.add("installed_timestamp");
-    openapiFields.add("is_delete");
-    openapiFields.add("last_edited_timestamp");
-    openapiFields.add("no_of_rules");
-    openapiFields.add("policy_id");
-    openapiFields.add("policy_name");
-    openapiFields.add("policy_sequence");
+    openapiFields = new HashSet<String>(Arrays.asList("activation_status", "installed_flag", "installed_timestamp", "is_delete", "last_edited_timestamp", "no_of_rules", "policy_id", "policy_name", "policy_sequence"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3Policy
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3Policy
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3Policy.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3Policy is not found in the empty JSON string", Assetsv3Policy.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3Policy is not found in the empty JSON string", Assetsv3Policy.openapiRequiredFields.toString()));
         }
       }
 
@@ -353,21 +354,21 @@ public class Assetsv3Policy {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3Policy.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3Policy` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3Policy` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("installed_timestamp") != null && !jsonObj.get("installed_timestamp").isJsonNull()) && !jsonObj.get("installed_timestamp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `installed_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installed_timestamp").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `installed_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installed_timestamp").toString()));
       }
       if ((jsonObj.get("last_edited_timestamp") != null && !jsonObj.get("last_edited_timestamp").isJsonNull()) && !jsonObj.get("last_edited_timestamp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_edited_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_edited_timestamp").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_edited_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_edited_timestamp").toString()));
       }
       if ((jsonObj.get("policy_id") != null && !jsonObj.get("policy_id").isJsonNull()) && !jsonObj.get("policy_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
       }
       if ((jsonObj.get("policy_name") != null && !jsonObj.get("policy_name").isJsonNull()) && !jsonObj.get("policy_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
       }
   }
 
@@ -400,22 +401,22 @@ public class Assetsv3Policy {
     }
   }
 
- /**
-  * Create an instance of Assetsv3Policy given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3Policy
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3Policy
-  */
+  /**
+   * Create an instance of Assetsv3Policy given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3Policy
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3Policy
+   */
   public static Assetsv3Policy fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3Policy.class);
   }
 
- /**
-  * Convert an instance of Assetsv3Policy to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3Policy to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

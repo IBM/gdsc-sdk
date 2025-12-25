@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ConfigureSSORequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ConfigureSSORequest {
   public static final String SERIALIZED_NAME_EMAIL_DOMAIN = "emailDomain";
   @SerializedName(SERIALIZED_NAME_EMAIL_DOMAIN)
+  @javax.annotation.Nonnull
   private String emailDomain;
 
   public static final String SERIALIZED_NAME_IDP_METADATA = "idpMetadata";
   @SerializedName(SERIALIZED_NAME_IDP_METADATA)
+  @javax.annotation.Nonnull
   private ConfigureSSORequestIdpMetadata idpMetadata;
 
   public ConfigureSSORequest() {
   }
 
-  public ConfigureSSORequest emailDomain(String emailDomain) {
+  public ConfigureSSORequest emailDomain(@javax.annotation.Nonnull String emailDomain) {
     this.emailDomain = emailDomain;
     return this;
   }
 
-   /**
+  /**
    * The domain from where your SSO emails are provided.
    * @return emailDomain
-  **/
+   */
   @javax.annotation.Nonnull
   public String getEmailDomain() {
     return emailDomain;
   }
 
-  public void setEmailDomain(String emailDomain) {
+  public void setEmailDomain(@javax.annotation.Nonnull String emailDomain) {
     this.emailDomain = emailDomain;
   }
 
 
-  public ConfigureSSORequest idpMetadata(ConfigureSSORequestIdpMetadata idpMetadata) {
+  public ConfigureSSORequest idpMetadata(@javax.annotation.Nonnull ConfigureSSORequestIdpMetadata idpMetadata) {
     this.idpMetadata = idpMetadata;
     return this;
   }
 
-   /**
+  /**
    * Get idpMetadata
    * @return idpMetadata
-  **/
+   */
   @javax.annotation.Nonnull
   public ConfigureSSORequestIdpMetadata getIdpMetadata() {
     return idpMetadata;
   }
 
-  public void setIdpMetadata(ConfigureSSORequestIdpMetadata idpMetadata) {
+  public void setIdpMetadata(@javax.annotation.Nonnull ConfigureSSORequestIdpMetadata idpMetadata) {
     this.idpMetadata = idpMetadata;
   }
 
@@ -147,26 +150,22 @@ public class ConfigureSSORequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("emailDomain");
-    openapiFields.add("idpMetadata");
+    openapiFields = new HashSet<String>(Arrays.asList("emailDomain", "idpMetadata"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("emailDomain");
-    openapiRequiredFields.add("idpMetadata");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("emailDomain", "idpMetadata"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ConfigureSSORequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ConfigureSSORequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ConfigureSSORequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ConfigureSSORequest is not found in the empty JSON string", ConfigureSSORequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ConfigureSSORequest is not found in the empty JSON string", ConfigureSSORequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -174,19 +173,19 @@ public class ConfigureSSORequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ConfigureSSORequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ConfigureSSORequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ConfigureSSORequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ConfigureSSORequest.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("emailDomain").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `emailDomain` to be a primitive type in the JSON string but got `%s`", jsonObj.get("emailDomain").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `emailDomain` to be a primitive type in the JSON string but got `%s`", jsonObj.get("emailDomain").toString()));
       }
       // validate the required field `idpMetadata`
       ConfigureSSORequestIdpMetadata.validateJsonElement(jsonObj.get("idpMetadata"));
@@ -221,22 +220,22 @@ public class ConfigureSSORequest {
     }
   }
 
- /**
-  * Create an instance of ConfigureSSORequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ConfigureSSORequest
-  * @throws IOException if the JSON string is invalid with respect to ConfigureSSORequest
-  */
+  /**
+   * Create an instance of ConfigureSSORequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ConfigureSSORequest
+   * @throws IOException if the JSON string is invalid with respect to ConfigureSSORequest
+   */
   public static ConfigureSSORequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ConfigureSSORequest.class);
   }
 
- /**
-  * Convert an instance of ConfigureSSORequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ConfigureSSORequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

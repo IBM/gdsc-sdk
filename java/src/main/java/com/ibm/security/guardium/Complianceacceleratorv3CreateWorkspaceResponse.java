@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response message to create compliance workspace.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3CreateWorkspaceResponse {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3WorkspaceCreationStatus status = Complianceacceleratorv3WorkspaceCreationStatus.NO_ACTION;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public static final String SERIALIZED_NAME_WORKSPACE_ID = "workspace_id";
   @SerializedName(SERIALIZED_NAME_WORKSPACE_ID)
+  @javax.annotation.Nullable
   private String workspaceId;
 
   public Complianceacceleratorv3CreateWorkspaceResponse() {
   }
 
-  public Complianceacceleratorv3CreateWorkspaceResponse status(Complianceacceleratorv3WorkspaceCreationStatus status) {
+  public Complianceacceleratorv3CreateWorkspaceResponse status(@javax.annotation.Nullable Complianceacceleratorv3WorkspaceCreationStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3WorkspaceCreationStatus getStatus() {
     return status;
   }
 
-  public void setStatus(Complianceacceleratorv3WorkspaceCreationStatus status) {
+  public void setStatus(@javax.annotation.Nullable Complianceacceleratorv3WorkspaceCreationStatus status) {
     this.status = status;
   }
 
 
-  public Complianceacceleratorv3CreateWorkspaceResponse title(String title) {
+  public Complianceacceleratorv3CreateWorkspaceResponse title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * More info of the step.
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
 
-  public Complianceacceleratorv3CreateWorkspaceResponse workspaceId(String workspaceId) {
+  public Complianceacceleratorv3CreateWorkspaceResponse workspaceId(@javax.annotation.Nullable String workspaceId) {
     this.workspaceId = workspaceId;
     return this;
   }
 
-   /**
+  /**
    * The id of the workspace.
    * @return workspaceId
-  **/
+   */
   @javax.annotation.Nullable
   public String getWorkspaceId() {
     return workspaceId;
   }
 
-  public void setWorkspaceId(String workspaceId) {
+  public void setWorkspaceId(@javax.annotation.Nullable String workspaceId) {
     this.workspaceId = workspaceId;
   }
 
@@ -172,25 +176,22 @@ public class Complianceacceleratorv3CreateWorkspaceResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("title");
-    openapiFields.add("workspace_id");
+    openapiFields = new HashSet<String>(Arrays.asList("status", "title", "workspace_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3CreateWorkspaceResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3CreateWorkspaceResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3CreateWorkspaceResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3CreateWorkspaceResponse is not found in the empty JSON string", Complianceacceleratorv3CreateWorkspaceResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3CreateWorkspaceResponse is not found in the empty JSON string", Complianceacceleratorv3CreateWorkspaceResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,7 +199,7 @@ public class Complianceacceleratorv3CreateWorkspaceResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3CreateWorkspaceResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3CreateWorkspaceResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3CreateWorkspaceResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -207,10 +208,10 @@ public class Complianceacceleratorv3CreateWorkspaceResponse {
         Complianceacceleratorv3WorkspaceCreationStatus.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
       if ((jsonObj.get("workspace_id") != null && !jsonObj.get("workspace_id").isJsonNull()) && !jsonObj.get("workspace_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `workspace_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("workspace_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `workspace_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("workspace_id").toString()));
       }
   }
 
@@ -243,22 +244,22 @@ public class Complianceacceleratorv3CreateWorkspaceResponse {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3CreateWorkspaceResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3CreateWorkspaceResponse
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3CreateWorkspaceResponse
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3CreateWorkspaceResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3CreateWorkspaceResponse
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3CreateWorkspaceResponse
+   */
   public static Complianceacceleratorv3CreateWorkspaceResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3CreateWorkspaceResponse.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3CreateWorkspaceResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3CreateWorkspaceResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

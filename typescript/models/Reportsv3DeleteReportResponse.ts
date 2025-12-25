@@ -27,6 +27,8 @@ export class Reportsv3DeleteReportResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "isScheduled",
@@ -48,4 +50,3 @@ export class Reportsv3DeleteReportResponse {
     public constructor() {
     }
 }
-

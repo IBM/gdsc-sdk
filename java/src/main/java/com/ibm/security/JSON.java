@@ -13,11 +13,11 @@
 
 package com.ibm.security;
 
-import com.fasterxml.jackson.databind.util.StdDateFormat;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapter;
+import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.google.gson.JsonElement;
@@ -27,20 +27,21 @@ import io.gsonfire.TypeSelector;
 import okio.ByteString;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.ParsePosition;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.TimeZone;
 
 /*
  * A JSON utility class
@@ -56,11 +57,6 @@ public class JSON {
     private static OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
     private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
     private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
-
-    private static final StdDateFormat sdf = new StdDateFormat()
-        .withTimeZone(TimeZone.getTimeZone(ZoneId.systemDefault()))
-        .withColonInTimeZone(true);
-    private static final DateTimeFormatter dtf = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
 
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
@@ -123,7 +119,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssetClassification.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssetControl.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssetEndpoint.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssetFilterTemplateRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssetForMergeSplit.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssetInformation.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssetIngestionRequest.CustomTypeAdapterFactory());
@@ -141,11 +136,13 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3AssignedTags.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3Attributes.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3BeforeAfter.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3CSVRow.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3Category.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ChildCategory.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ClassificationData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ClassificationScanStatus.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ClonePolicyRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3CompareCSVResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ConnectionEdge.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3CreateUpdatePolicyRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3CreateUpdatePolicyResponse.CustomTypeAdapterFactory());
@@ -173,6 +170,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3HighestAssetTagCounts.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3HostVertex.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3IPVertex.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ImportCSVRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ImportCSVResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3IpHost.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ListPolicyResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Assetsv3ListRuleResponse.CustomTypeAdapterFactory());
@@ -340,7 +339,10 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Connectionsv3UpdatePluginResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Connectionsv3UpdateSettingsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Connectionsv3ValidateAwsConnectionRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Connectionsv3ValidateAzureConnectionRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Connectionsv3ValidateConnectionResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Connectionsv3ValidateGcpConnectionRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.DBMetadataInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Dashboardsv3Card.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Dashboardsv3CardPosition.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Dashboardsv3CreateDashboardResponse.CustomTypeAdapterFactory());
@@ -376,6 +378,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Datamartprocessorv3GetDatamartResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Datamartprocessorv3GetEarliestStartTimeResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Datamartprocessorv3StatusResponseBase.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.DbInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Ecosystemv3ColumnDefinition.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Ecosystemv3CreateDatasetRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Ecosystemv3CreateDatasetResponse.CustomTypeAdapterFactory());
@@ -397,10 +400,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Ecosystemv3TestIntegrationRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Ecosystemv3TestIntegrationResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Ecosystemv3ValidateCSVContentResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Edgeschedulerv3GetEdgeQueryStatusResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Edgeschedulerv3ScheduleEdgeQueryRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Edgeschedulerv3ScheduleEdgeQueryResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Featureflagsv3DeleteFeatureFlagOverridesResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Featureflagsv3FeatureFlag.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Featureflagsv3FeatureFlagOverrides.CustomTypeAdapterFactory());
@@ -587,19 +586,28 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.InviteUserBodyParams.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3AuthorizeRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3AuthorizeResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3DeleteAccountResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3DirectoryEntry.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3DisableUsersBulkResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3GetAccountResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3GetAccountsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3GetTenantResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3GetTenantsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3PostAccountRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3PostAccountResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3PostTenantsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3PostTenantsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3PostUsersBulkRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3PostUsersBulkResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3ResumeAccountResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3SearchUsersRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3SearchUsersResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3SuspendAccountResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3Tenant.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3TestUserRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3TestUserResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3UpdateAccountRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3UpdateAccountResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3UpdateTenantRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3UpdateTenantResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Jumpboxv3UpdateUsersBulkRequest.CustomTypeAdapterFactory());
@@ -698,6 +706,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3GetPolicyNamesFromRuleIDsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3GetPolicyNamesFromRuleIDsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3GetPolicySyncListResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3GetPolicyVersionResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3GetPolicyVersionsInfoResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3GetReceiversResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3GetRuleValidationRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3InsertGdpPolicyMetaDataRequest.CustomTypeAdapterFactory());
@@ -721,6 +731,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3StorePolicyGdpRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3StorePolicyGdpResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3TargetReceiver.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Policybuilderv3VersionInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.PotentialFlow.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.PotentialFlowListItem.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.PotentialFlowPath.CustomTypeAdapterFactory());
@@ -791,6 +802,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsrunnerv3StopQueryResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsrunnerv3WriteResultsToFileResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsrunnerv3WriteResultsToGroupResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Artifact.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3BriefReport.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Category.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CategoryDetail.CustomTypeAdapterFactory());
@@ -800,6 +812,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ChartSettings.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ChartSettingsv2.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ContributionPointersInfoObject.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Control.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateCategoryRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateCategoryResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateChartRequest.CustomTypeAdapterFactory());
@@ -808,12 +821,24 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateChartTemplatev2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateChartv2Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateChartv2Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateControlRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateControlResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateFieldsByCategoryRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateFieldsByCategoryResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateGradeRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateGradeResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateJoinRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateJoinResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateMeasureRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateMeasureResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateMetricRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateMetricResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateProgramRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateProgramResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateReportRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateReportResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateRequirementRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateRequirementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateVariantRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CreateVariantResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3CustomChartTemplatev2.CustomTypeAdapterFactory());
@@ -822,9 +847,21 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteChartResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteChartTemplatev2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteChartv2Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteControlRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteControlResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteFieldsByCategoryResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteGradeRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteGradeResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteJoinResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteMeasureRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteMeasureResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteMetricRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteMetricResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteProgramRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteProgramResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteReportResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteRequirementRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteRequirementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DeleteVariantResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3DisplayHeader.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3FieldName.CustomTypeAdapterFactory());
@@ -836,9 +873,14 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetChartSettingsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetChartSettingsv2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetChartTemplatesv2Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetControlsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetFieldsByCategoriesResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetFieldsByCategoryResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetGradesResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetJoinsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetMeasuresResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetMetricsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetProgramsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetQueryByReportDefinitionRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetQueryByReportIDRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetReportDefinitionResponse.CustomTypeAdapterFactory());
@@ -849,8 +891,11 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetReportsForJoinResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetReportsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetReportsTagsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetRequirementsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetVariantResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GetVariantsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Grade.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3GradeThreshold.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Header.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3HeaderDescription.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3HeaderPair.CustomTypeAdapterFactory());
@@ -858,10 +903,14 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3JoinDefinition.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3JoinDefinitionWithID.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Literal.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Measure.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Metric.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3MetricsColumn.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3PartialChartUpdateRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3PartialChartUpdateResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3PartialReportUpdateRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3PartialReportUpdateResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Program.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ReportAggFilter.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ReportAggFilterCondition.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ReportDefinition.CustomTypeAdapterFactory());
@@ -873,6 +922,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ReportResult.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ReportTag.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3ReportUsedInJoin.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Requirement.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3RunGradesRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3RunGradesResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3RunReportResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3RunTimeParameter.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3RunVariantOperationRequest.CustomTypeAdapterFactory());
@@ -884,10 +936,22 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateChartResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateChartv2Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateChartv2Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateControlRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateControlResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateGradeRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateGradeResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateJoinRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateJoinResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateMeasureRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateMeasureResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateMetricRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateMetricResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateProgramRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateProgramResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateReportRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateReportResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateRequirementRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateRequirementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateVariantOverrideRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3UpdateVariantOverrideResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3Variant.CustomTypeAdapterFactory());
@@ -895,66 +959,10 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Reportsv3VariantRule.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.RescanDataStoreRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.ResetPasswordRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3App.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3AppDeployment.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3AppFile.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3AppHpa.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3AppSecret.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3Container.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ContainerResources.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ContainerResourcesQuantity.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3Controller.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ControllerApp.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ControllerAppFile.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ControllerAppSecret.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ControllerCommand.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ControllerHeartbeat.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ControllerResources.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3ControllerStatus.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3CreateControllerRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3CreateHeartBeatExResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3CreateHeartBeatRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3CreateHeartBeatResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3CreateKeypairRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3CreateKeypairResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3Cron.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DeleteControllerRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DeleteControllerResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DeleteEdgeTenantResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DeleteJobRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DeleteJobResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DownloadControllerLogsRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3DownloadControllerLogsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3EdgeResourceResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3EdgeTenantRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3File.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetControllerAppsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetControllerCommandsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetControllerJobsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetControllersResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetControllersWithStatusResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetJobExecutionsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetTenantAppsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3GetTenantJobsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3InitContainer.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3Job.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3JobExecution.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3JobStatusDTO.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3KeyPair.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3QueryControllerLogsRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3QueryControllerLogsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3QueryLogs.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3Rule.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3Secret.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3TenantGUCCreateResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3TenantGUCStatusResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3TenantLifecycleResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3TenantResourceResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3TextContent.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3UpdateJobExecutionRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3UpdateJobStatusRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Resourcecontrollerk8v3Version.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Riskanalyticscontrollerv3CardSettings.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Riskanalyticscontrollerv3DetailToCount.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Riskanalyticscontrollerv3EmergingRiskDetails.CustomTypeAdapterFactory());
@@ -1082,7 +1090,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Snifassistv3StatusResponseBase.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Snifassistv3TestRegexRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.StreamResultOfReportsrunnerv3RunReportResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Streamsv3CheckAWSCredentialsRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Streamsv3CheckAWSCredentialsResponse.CustomTypeAdapterFactory());
@@ -1099,28 +1106,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.SubmitAuthCode.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.SubmitPasswordRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Tags.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3CreateIntegrationRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3CreateIntegrationResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3CreateTemplateRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3CreateTemplateResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3DefaultContent.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3DeleteIntegrationResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3DeleteTemplateResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3GetOriginDefaultContentResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3GetOriginFieldsResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3GetTemplateResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3GetTemplatesForEdgeResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3GetTemplatesResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3SimpleRecipient.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3Template.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3TestTemplateRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3TestTemplateResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3TransformTemplateJSONRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3TransformTemplateJSONResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3TransformTemplateRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3TransformTemplateResponse.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3UpdateTemplateRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Templatesv3UpdateTemplateResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.TenantInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Tenantuserv3Apikey.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Tenantuserv3AuthResponse.CustomTypeAdapterFactory());
@@ -1206,6 +1191,24 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.VendorCertificate.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.VendorDataStore.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.VendorSummary.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3AssetTags.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3Category.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3ChildCategory.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3CreateVulnerabilityRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3CreateVulnerabilityResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3FilterCategory.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3GetFiltersDataResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3GetVulnerabilitiesRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3GetVulnerabilitiesResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3GetVulnerabilityResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3SubCategory.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3UpdateVulnerabilitiesRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3UpdateVulnerabilitiesResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3VulnerabilitiesStatsDataResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3Vulnerability.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3VulnerabilityAudit.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3VulnerabilityIngestionResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.Vulmanagementv3VulnerabilityUpdate.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.VulnerabilitiesByDataStoreFilterOptions.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.VulnerabilitiesCriticalityCountInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ibm.security.guardium.VulnerabilitiesFilterOptions.CustomTypeAdapterFactory());
@@ -1340,6 +1343,28 @@ public class JSON {
                 return (T) body;
             } else {
                 throw (e);
+            }
+        }
+    }
+
+    /**
+    * Deserialize the given JSON InputStream to a Java object.
+    *
+    * @param <T>         Type
+    * @param inputStream The JSON InputStream
+    * @param returnType  The type to deserialize into
+    * @return The deserialized Java object
+    */
+    @SuppressWarnings("unchecked")
+    public static <T> T deserialize(InputStream inputStream, Type returnType) throws IOException {
+        try (InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8)) {
+        if (isLenientOnJson) {
+            // see https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/stream/JsonReader.html#setLenient(boolean)
+            JsonReader jsonReader = new JsonReader(reader);
+            jsonReader.setLenient(true);
+            return gson.fromJson(jsonReader, returnType);
+            } else {
+                return gson.fromJson(reader, returnType);
             }
         }
     }
@@ -1511,7 +1536,7 @@ public class JSON {
                         if (dateFormat != null) {
                             return new java.sql.Date(dateFormat.parse(date).getTime());
                         }
-                        return new java.sql.Date(sdf.parse(date).getTime());
+                        return new java.sql.Date(ISO8601Utils.parse(date, new ParsePosition(0)).getTime());
                     } catch (ParseException e) {
                         throw new JsonParseException(e);
                     }
@@ -1521,7 +1546,7 @@ public class JSON {
 
     /**
      * Gson TypeAdapter for java.util.Date type
-     * If the dateFormat is null, DateTimeFormatter will be used.
+     * If the dateFormat is null, ISO8601Utils will be used.
      */
     public static class DateTypeAdapter extends TypeAdapter<Date> {
 
@@ -1546,7 +1571,7 @@ public class JSON {
                 if (dateFormat != null) {
                     value = dateFormat.format(date);
                 } else {
-                    value = date.toInstant().atOffset(ZoneOffset.UTC).format(dtf);
+                    value = ISO8601Utils.format(date, true);
                 }
                 out.value(value);
             }
@@ -1565,7 +1590,7 @@ public class JSON {
                             if (dateFormat != null) {
                                 return dateFormat.parse(date);
                             }
-                            return sdf.parse(date);
+                            return ISO8601Utils.parse(date, new ParsePosition(0));
                         } catch (ParseException e) {
                             throw new JsonParseException(e);
                         }

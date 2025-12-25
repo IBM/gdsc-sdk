@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,59 +41,63 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RuntimeError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class RuntimeError {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
+  @javax.annotation.Nullable
   private Integer code;
 
   public static final String SERIALIZED_NAME_DETAILS = "details";
   @SerializedName(SERIALIZED_NAME_DETAILS)
+  @javax.annotation.Nullable
   private List<ProtobufAny> details = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private String error;
 
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public RuntimeError() {
   }
 
-  public RuntimeError code(Integer code) {
+  public RuntimeError code(@javax.annotation.Nullable Integer code) {
     this.code = code;
     return this;
   }
 
-   /**
+  /**
    * Get code
    * @return code
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getCode() {
     return code;
   }
 
-  public void setCode(Integer code) {
+  public void setCode(@javax.annotation.Nullable Integer code) {
     this.code = code;
   }
 
 
-  public RuntimeError details(List<ProtobufAny> details) {
+  public RuntimeError details(@javax.annotation.Nullable List<ProtobufAny> details) {
     this.details = details;
     return this;
   }
@@ -105,54 +110,54 @@ public class RuntimeError {
     return this;
   }
 
-   /**
+  /**
    * Get details
    * @return details
-  **/
+   */
   @javax.annotation.Nullable
   public List<ProtobufAny> getDetails() {
     return details;
   }
 
-  public void setDetails(List<ProtobufAny> details) {
+  public void setDetails(@javax.annotation.Nullable List<ProtobufAny> details) {
     this.details = details;
   }
 
 
-  public RuntimeError error(String error) {
+  public RuntimeError error(@javax.annotation.Nullable String error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Get error
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public String getError() {
     return error;
   }
 
-  public void setError(String error) {
+  public void setError(@javax.annotation.Nullable String error) {
     this.error = error;
   }
 
 
-  public RuntimeError message(String message) {
+  public RuntimeError message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Get message
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
@@ -207,26 +212,22 @@ public class RuntimeError {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("code");
-    openapiFields.add("details");
-    openapiFields.add("error");
-    openapiFields.add("message");
+    openapiFields = new HashSet<String>(Arrays.asList("code", "details", "error", "message"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to RuntimeError
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to RuntimeError
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!RuntimeError.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RuntimeError is not found in the empty JSON string", RuntimeError.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in RuntimeError is not found in the empty JSON string", RuntimeError.openapiRequiredFields.toString()));
         }
       }
 
@@ -234,7 +235,7 @@ public class RuntimeError {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!RuntimeError.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RuntimeError` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `RuntimeError` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -243,7 +244,7 @@ public class RuntimeError {
         if (jsonArraydetails != null) {
           // ensure the json data is an array
           if (!jsonObj.get("details").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `details` to be an array in the JSON string but got `%s`", jsonObj.get("details").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `details` to be an array in the JSON string but got `%s`", jsonObj.get("details").toString()));
           }
 
           // validate the optional field `details` (array)
@@ -253,10 +254,10 @@ public class RuntimeError {
         }
       }
       if ((jsonObj.get("error") != null && !jsonObj.get("error").isJsonNull()) && !jsonObj.get("error").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error").toString()));
       }
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
   }
 
@@ -289,22 +290,22 @@ public class RuntimeError {
     }
   }
 
- /**
-  * Create an instance of RuntimeError given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RuntimeError
-  * @throws IOException if the JSON string is invalid with respect to RuntimeError
-  */
+  /**
+   * Create an instance of RuntimeError given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of RuntimeError
+   * @throws IOException if the JSON string is invalid with respect to RuntimeError
+   */
   public static RuntimeError fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, RuntimeError.class);
   }
 
- /**
-  * Convert an instance of RuntimeError to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of RuntimeError to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

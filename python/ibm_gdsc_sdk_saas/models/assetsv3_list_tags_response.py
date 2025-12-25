@@ -76,23 +76,23 @@ class Assetsv3ListTagsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in assigned (list)
         _items = []
         if self.assigned:
-            for _item in self.assigned:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_assigned in self.assigned:
+                if _item_assigned:
+                    _items.append(_item_assigned.to_dict())
             _dict['assigned'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in suggestions (list)
         _items = []
         if self.suggestions:
-            for _item in self.suggestions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_suggestions in self.suggestions:
+                if _item_suggestions:
+                    _items.append(_item_suggestions.to_dict())
             _dict['suggestions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in unassigned (list)
         _items = []
         if self.unassigned:
-            for _item in self.unassigned:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_unassigned in self.unassigned:
+                if _item_unassigned:
+                    _items.append(_item_unassigned.to_dict())
             _dict['unassigned'] = _items
         return _dict
 

@@ -19,6 +19,7 @@
 |**isReviewed** | **Boolean** |  |  [optional] |
 |**link** | **String** |  |  [optional] |
 |**stats** | [**DataResourceStats**](DataResourceStats.md) |  |  [optional] |
+|**path** | **String** |  |  [optional] |
 
 
 

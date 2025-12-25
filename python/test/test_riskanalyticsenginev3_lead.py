@@ -27,7 +27,7 @@ class TestRiskanalyticsenginev3Lead(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Riskanalyticsenginev3Lead:
         """Test Riskanalyticsenginev3Lead
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Riskanalyticsenginev3Lead`

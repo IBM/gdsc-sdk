@@ -72,9 +72,9 @@ class Outliersenginev3GetWorkingHoursPeriodsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in periods (list)
         _items = []
         if self.periods:
-            for _item in self.periods:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_periods in self.periods:
+                if _item_periods:
+                    _items.append(_item_periods.to_dict())
             _dict['periods'] = _items
         return _dict
 

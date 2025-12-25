@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Request parameters for get api privillage.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AuthserverGetPrivilegesResponse {
   public static final String SERIALIZED_NAME_FEATURE_FLAGS = "feature_flags";
   @SerializedName(SERIALIZED_NAME_FEATURE_FLAGS)
+  @javax.annotation.Nullable
   private Map<String, Featureflagsv3FeatureFlagValue> featureFlags = new HashMap<>();
 
   public static final String SERIALIZED_NAME_PRIVILEGES = "privileges";
   @SerializedName(SERIALIZED_NAME_PRIVILEGES)
+  @javax.annotation.Nullable
   private Map<String, Boolean> privileges = new HashMap<>();
 
   public AuthserverGetPrivilegesResponse() {
   }
 
-  public AuthserverGetPrivilegesResponse featureFlags(Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
+  public AuthserverGetPrivilegesResponse featureFlags(@javax.annotation.Nullable Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
     this.featureFlags = featureFlags;
     return this;
   }
@@ -78,21 +81,21 @@ public class AuthserverGetPrivilegesResponse {
     return this;
   }
 
-   /**
+  /**
    * Feature flags map.
    * @return featureFlags
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Featureflagsv3FeatureFlagValue> getFeatureFlags() {
     return featureFlags;
   }
 
-  public void setFeatureFlags(Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
+  public void setFeatureFlags(@javax.annotation.Nullable Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
     this.featureFlags = featureFlags;
   }
 
 
-  public AuthserverGetPrivilegesResponse privileges(Map<String, Boolean> privileges) {
+  public AuthserverGetPrivilegesResponse privileges(@javax.annotation.Nullable Map<String, Boolean> privileges) {
     this.privileges = privileges;
     return this;
   }
@@ -105,16 +108,16 @@ public class AuthserverGetPrivilegesResponse {
     return this;
   }
 
-   /**
+  /**
    * Cumulative privileges base on all roles.
    * @return privileges
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Boolean> getPrivileges() {
     return privileges;
   }
 
-  public void setPrivileges(Map<String, Boolean> privileges) {
+  public void setPrivileges(@javax.annotation.Nullable Map<String, Boolean> privileges) {
     this.privileges = privileges;
   }
 
@@ -165,24 +168,22 @@ public class AuthserverGetPrivilegesResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("feature_flags");
-    openapiFields.add("privileges");
+    openapiFields = new HashSet<String>(Arrays.asList("feature_flags", "privileges"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AuthserverGetPrivilegesResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AuthserverGetPrivilegesResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AuthserverGetPrivilegesResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AuthserverGetPrivilegesResponse is not found in the empty JSON string", AuthserverGetPrivilegesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AuthserverGetPrivilegesResponse is not found in the empty JSON string", AuthserverGetPrivilegesResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -190,7 +191,7 @@ public class AuthserverGetPrivilegesResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AuthserverGetPrivilegesResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AuthserverGetPrivilegesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AuthserverGetPrivilegesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -225,22 +226,22 @@ public class AuthserverGetPrivilegesResponse {
     }
   }
 
- /**
-  * Create an instance of AuthserverGetPrivilegesResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AuthserverGetPrivilegesResponse
-  * @throws IOException if the JSON string is invalid with respect to AuthserverGetPrivilegesResponse
-  */
+  /**
+   * Create an instance of AuthserverGetPrivilegesResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AuthserverGetPrivilegesResponse
+   * @throws IOException if the JSON string is invalid with respect to AuthserverGetPrivilegesResponse
+   */
   public static AuthserverGetPrivilegesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AuthserverGetPrivilegesResponse.class);
   }
 
- /**
-  * Convert an instance of AuthserverGetPrivilegesResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AuthserverGetPrivilegesResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

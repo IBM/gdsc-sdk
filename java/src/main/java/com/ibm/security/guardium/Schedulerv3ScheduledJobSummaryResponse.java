@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,55 +42,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ScheduledJobSummaryResponse message for Get v3/schedules or v3/schedules/search api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3ScheduledJobSummaryResponse {
   public static final String SERIALIZED_NAME_RECORD_COUNT = "record_count";
   @SerializedName(SERIALIZED_NAME_RECORD_COUNT)
+  @javax.annotation.Nullable
   private Long recordCount;
 
   public static final String SERIALIZED_NAME_REPORT_NAMES = "report_names";
   @SerializedName(SERIALIZED_NAME_REPORT_NAMES)
+  @javax.annotation.Nullable
   private List<Schedulerv3ReportArray> reportNames = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SCHEDULED_JOB = "scheduled_job";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_JOB)
+  @javax.annotation.Nullable
   private List<Schedulerv3ScheduledJobSummary> scheduledJob = new ArrayList<>();
 
   public Schedulerv3ScheduledJobSummaryResponse() {
   }
 
-  public Schedulerv3ScheduledJobSummaryResponse recordCount(Long recordCount) {
+  public Schedulerv3ScheduledJobSummaryResponse recordCount(@javax.annotation.Nullable Long recordCount) {
     this.recordCount = recordCount;
     return this;
   }
 
-   /**
+  /**
    * Total number of the scheduled jobs.
    * @return recordCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getRecordCount() {
     return recordCount;
   }
 
-  public void setRecordCount(Long recordCount) {
+  public void setRecordCount(@javax.annotation.Nullable Long recordCount) {
     this.recordCount = recordCount;
   }
 
 
-  public Schedulerv3ScheduledJobSummaryResponse reportNames(List<Schedulerv3ReportArray> reportNames) {
+  public Schedulerv3ScheduledJobSummaryResponse reportNames(@javax.annotation.Nullable List<Schedulerv3ReportArray> reportNames) {
     this.reportNames = reportNames;
     return this;
   }
@@ -102,21 +106,21 @@ public class Schedulerv3ScheduledJobSummaryResponse {
     return this;
   }
 
-   /**
+  /**
    * Array of report name for each scheduledJobSummary.
    * @return reportNames
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ReportArray> getReportNames() {
     return reportNames;
   }
 
-  public void setReportNames(List<Schedulerv3ReportArray> reportNames) {
+  public void setReportNames(@javax.annotation.Nullable List<Schedulerv3ReportArray> reportNames) {
     this.reportNames = reportNames;
   }
 
 
-  public Schedulerv3ScheduledJobSummaryResponse scheduledJob(List<Schedulerv3ScheduledJobSummary> scheduledJob) {
+  public Schedulerv3ScheduledJobSummaryResponse scheduledJob(@javax.annotation.Nullable List<Schedulerv3ScheduledJobSummary> scheduledJob) {
     this.scheduledJob = scheduledJob;
     return this;
   }
@@ -129,16 +133,16 @@ public class Schedulerv3ScheduledJobSummaryResponse {
     return this;
   }
 
-   /**
+  /**
    * The requested scheduled job data.
    * @return scheduledJob
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ScheduledJobSummary> getScheduledJob() {
     return scheduledJob;
   }
 
-  public void setScheduledJob(List<Schedulerv3ScheduledJobSummary> scheduledJob) {
+  public void setScheduledJob(@javax.annotation.Nullable List<Schedulerv3ScheduledJobSummary> scheduledJob) {
     this.scheduledJob = scheduledJob;
   }
 
@@ -191,25 +195,22 @@ public class Schedulerv3ScheduledJobSummaryResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("record_count");
-    openapiFields.add("report_names");
-    openapiFields.add("scheduled_job");
+    openapiFields = new HashSet<String>(Arrays.asList("record_count", "report_names", "scheduled_job"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobSummaryResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobSummaryResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3ScheduledJobSummaryResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3ScheduledJobSummaryResponse is not found in the empty JSON string", Schedulerv3ScheduledJobSummaryResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3ScheduledJobSummaryResponse is not found in the empty JSON string", Schedulerv3ScheduledJobSummaryResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -217,7 +218,7 @@ public class Schedulerv3ScheduledJobSummaryResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3ScheduledJobSummaryResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobSummaryResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobSummaryResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -226,7 +227,7 @@ public class Schedulerv3ScheduledJobSummaryResponse {
         if (jsonArrayreportNames != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_names").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_names` to be an array in the JSON string but got `%s`", jsonObj.get("report_names").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_names` to be an array in the JSON string but got `%s`", jsonObj.get("report_names").toString()));
           }
 
           // validate the optional field `report_names` (array)
@@ -240,7 +241,7 @@ public class Schedulerv3ScheduledJobSummaryResponse {
         if (jsonArrayscheduledJob != null) {
           // ensure the json data is an array
           if (!jsonObj.get("scheduled_job").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `scheduled_job` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_job").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_job` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_job").toString()));
           }
 
           // validate the optional field `scheduled_job` (array)
@@ -280,22 +281,22 @@ public class Schedulerv3ScheduledJobSummaryResponse {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3ScheduledJobSummaryResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3ScheduledJobSummaryResponse
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobSummaryResponse
-  */
+  /**
+   * Create an instance of Schedulerv3ScheduledJobSummaryResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3ScheduledJobSummaryResponse
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobSummaryResponse
+   */
   public static Schedulerv3ScheduledJobSummaryResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3ScheduledJobSummaryResponse.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3ScheduledJobSummaryResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3ScheduledJobSummaryResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

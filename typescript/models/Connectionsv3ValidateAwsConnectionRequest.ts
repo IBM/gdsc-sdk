@@ -14,22 +14,30 @@ import { HttpFile } from '../http/http';
 
 export class Connectionsv3ValidateAwsConnectionRequest {
     'accessKey'?: string;
+    'bucketName'?: string;
     'groupName'?: string;
     /**
-    * aws connection input type as Cloudwatch, SQS, ...
+    * aws connection input type as Cloudwatch, SQS, S3, ...
     */
     'inputPluginType'?: string;
-    'logStream'?: string;
     'queueUrl'?: string;
     'region'?: string;
     'secretKey'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "accessKey",
             "baseName": "access_key",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "bucketName",
+            "baseName": "bucket_name",
             "type": "string",
             "format": ""
         },
@@ -42,12 +50,6 @@ export class Connectionsv3ValidateAwsConnectionRequest {
         {
             "name": "inputPluginType",
             "baseName": "input_plugin_type",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "logStream",
-            "baseName": "log_stream",
             "type": "string",
             "format": ""
         },
@@ -77,4 +79,3 @@ export class Connectionsv3ValidateAwsConnectionRequest {
     public constructor() {
     }
 }
-

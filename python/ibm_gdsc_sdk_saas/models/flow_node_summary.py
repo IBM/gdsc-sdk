@@ -76,23 +76,23 @@ class FlowNodeSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in types_count (list)
         _items = []
         if self.types_count:
-            for _item in self.types_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_types_count in self.types_count:
+                if _item_types_count:
+                    _items.append(_item_types_count.to_dict())
             _dict['typesCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_accounts_count (list)
         _items = []
         if self.cloud_accounts_count:
-            for _item in self.cloud_accounts_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_accounts_count in self.cloud_accounts_count:
+                if _item_cloud_accounts_count:
+                    _items.append(_item_cloud_accounts_count.to_dict())
             _dict['cloudAccountsCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_regions_count (list)
         _items = []
         if self.cloud_regions_count:
-            for _item in self.cloud_regions_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_regions_count in self.cloud_regions_count:
+                if _item_cloud_regions_count:
+                    _items.append(_item_cloud_regions_count.to_dict())
             _dict['cloudRegionsCount'] = _items
         return _dict
 

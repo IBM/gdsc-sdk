@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * TestUserRequest Test user id with in an LDAP connection.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3TestUserRequest {
   public static final String SERIALIZED_NAME_LDAP_ID = "ldap_id";
   @SerializedName(SERIALIZED_NAME_LDAP_ID)
+  @javax.annotation.Nullable
   private String ldapId;
 
   public static final String SERIALIZED_NAME_UID = "uid";
   @SerializedName(SERIALIZED_NAME_UID)
+  @javax.annotation.Nullable
   private String uid;
 
   public Jumpboxv3TestUserRequest() {
   }
 
-  public Jumpboxv3TestUserRequest ldapId(String ldapId) {
+  public Jumpboxv3TestUserRequest ldapId(@javax.annotation.Nullable String ldapId) {
     this.ldapId = ldapId;
     return this;
   }
 
-   /**
+  /**
    * LDAP id.
    * @return ldapId
-  **/
+   */
   @javax.annotation.Nullable
   public String getLdapId() {
     return ldapId;
   }
 
-  public void setLdapId(String ldapId) {
+  public void setLdapId(@javax.annotation.Nullable String ldapId) {
     this.ldapId = ldapId;
   }
 
 
-  public Jumpboxv3TestUserRequest uid(String uid) {
+  public Jumpboxv3TestUserRequest uid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
     return this;
   }
 
-   /**
+  /**
    * Email.
    * @return uid
-  **/
+   */
   @javax.annotation.Nullable
   public String getUid() {
     return uid;
   }
 
-  public void setUid(String uid) {
+  public void setUid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
   }
 
@@ -146,24 +149,22 @@ public class Jumpboxv3TestUserRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ldap_id");
-    openapiFields.add("uid");
+    openapiFields = new HashSet<String>(Arrays.asList("ldap_id", "uid"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3TestUserRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3TestUserRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3TestUserRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3TestUserRequest is not found in the empty JSON string", Jumpboxv3TestUserRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3TestUserRequest is not found in the empty JSON string", Jumpboxv3TestUserRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Jumpboxv3TestUserRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3TestUserRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3TestUserRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3TestUserRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("ldap_id") != null && !jsonObj.get("ldap_id").isJsonNull()) && !jsonObj.get("ldap_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ldap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ldap_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ldap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ldap_id").toString()));
       }
       if ((jsonObj.get("uid") != null && !jsonObj.get("uid").isJsonNull()) && !jsonObj.get("uid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Jumpboxv3TestUserRequest {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3TestUserRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3TestUserRequest
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3TestUserRequest
-  */
+  /**
+   * Create an instance of Jumpboxv3TestUserRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3TestUserRequest
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3TestUserRequest
+   */
   public static Jumpboxv3TestUserRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3TestUserRequest.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3TestUserRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3TestUserRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

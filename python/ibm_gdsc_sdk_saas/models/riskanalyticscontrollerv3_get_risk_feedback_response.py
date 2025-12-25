@@ -72,9 +72,9 @@ class Riskanalyticscontrollerv3GetRiskFeedbackResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in risk_feedbacks (list)
         _items = []
         if self.risk_feedbacks:
-            for _item in self.risk_feedbacks:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_risk_feedbacks in self.risk_feedbacks:
+                if _item_risk_feedbacks:
+                    _items.append(_item_risk_feedbacks.to_dict())
             _dict['risk_feedbacks'] = _items
         return _dict
 

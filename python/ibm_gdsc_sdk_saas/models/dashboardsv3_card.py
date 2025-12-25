@@ -31,7 +31,7 @@ class Dashboardsv3Card(BaseModel):
     """ # noqa: E501
     card_id: Optional[StrictStr] = Field(default=None, description="Card ID.", alias="card_ID")
     card_position: Optional[Dashboardsv3CardPosition] = None
-    card_type: Optional[Dashboardsv3CardType] = None
+    card_type: Optional[Dashboardsv3CardType] = Dashboardsv3CardType.UNDEFINED_CARD_TYPE
     excluded_global_filter_ids: Optional[List[StrictStr]] = None
     report_parameters: Optional[Dashboardsv3ReportParameters] = None
     __properties: ClassVar[List[str]] = ["card_ID", "card_position", "card_type", "excluded_global_filter_ids", "report_parameters"]
@@ -95,7 +95,7 @@ class Dashboardsv3Card(BaseModel):
         _obj = cls.model_validate({
             "card_ID": obj.get("card_ID"),
             "card_position": Dashboardsv3CardPosition.from_dict(obj["card_position"]) if obj.get("card_position") is not None else None,
-            "card_type": obj.get("card_type"),
+            "card_type": obj.get("card_type") if obj.get("card_type") is not None else Dashboardsv3CardType.UNDEFINED_CARD_TYPE,
             "excluded_global_filter_ids": obj.get("excluded_global_filter_ids"),
             "report_parameters": Dashboardsv3ReportParameters.from_dict(obj["report_parameters"]) if obj.get("report_parameters") is not None else None
         })

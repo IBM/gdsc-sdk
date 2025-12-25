@@ -7,10 +7,10 @@ Policy details response message.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation_status** | **int** | activation_status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed. | [optional] 
-**control_flow** | [**Policybuilderv3ControlFlow**](Policybuilderv3ControlFlow.md) |  | [optional] 
+**control_flow** | [**Policybuilderv3ControlFlow**](Policybuilderv3ControlFlow.md) |  | [optional] [default to Policybuilderv3ControlFlow.STANDARD]
 **installed_flag** | **bool** | Flag to indicate whether policy is installed or not. | [optional] 
-**policy_import_issue** | [**Policybuilderv3ImportIssue**](Policybuilderv3ImportIssue.md) |  | [optional] 
-**policy_import_state** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] 
+**policy_import_issue** | [**Policybuilderv3ImportIssue**](Policybuilderv3ImportIssue.md) |  | [optional] [default to Policybuilderv3ImportIssue.NO_IMPORT_ISSUE]
+**policy_import_state** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] [default to Policybuilderv3ImportState.NO_IMPORT_STATUS]
 **policy_info** | [**Policybuilderv3Policy**](Policybuilderv3Policy.md) |  | [optional] 
 **policy_name** | **str** |  | [optional] 
 **rules** | [**List[Policybuilderv3Rule]**](Policybuilderv3Rule.md) | Rules contained by the policy. | [optional] 

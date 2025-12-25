@@ -81,23 +81,23 @@ class Complianceacceleratorv3Workspace(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in dashboards (list)
         _items = []
         if self.dashboards:
-            for _item in self.dashboards:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_dashboards in self.dashboards:
+                if _item_dashboards:
+                    _items.append(_item_dashboards.to_dict())
             _dict['dashboards'] = _items
         # override the default output from pydantic by calling `to_dict()` of each value in groups (dict)
         _field_dict = {}
         if self.groups:
-            for _key in self.groups:
-                if self.groups[_key]:
-                    _field_dict[_key] = self.groups[_key].to_dict()
+            for _key_groups in self.groups:
+                if self.groups[_key_groups]:
+                    _field_dict[_key_groups] = self.groups[_key_groups].to_dict()
             _dict['groups'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of each value in reports_map (dict)
         _field_dict = {}
         if self.reports_map:
-            for _key in self.reports_map:
-                if self.reports_map[_key]:
-                    _field_dict[_key] = self.reports_map[_key].to_dict()
+            for _key_reports_map in self.reports_map:
+                if self.reports_map[_key_reports_map]:
+                    _field_dict[_key_reports_map] = self.reports_map[_key_reports_map].to_dict()
             _dict['reports_map'] = _field_dict
         return _dict
 

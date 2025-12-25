@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,32 +40,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmpolicymanagerv3FileName
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpolicymanagerv3FileName {
   public static final String SERIALIZED_NAME_EXPLORER_FILES_NAME = "explorer_files_name";
   @SerializedName(SERIALIZED_NAME_EXPLORER_FILES_NAME)
+  @javax.annotation.Nullable
   private List<String> explorerFilesName = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NON_EXPLORER_FILES_NAME = "non_explorer_files_name";
   @SerializedName(SERIALIZED_NAME_NON_EXPLORER_FILES_NAME)
+  @javax.annotation.Nullable
   private List<String> nonExplorerFilesName = new ArrayList<>();
 
   public Qspmpolicymanagerv3FileName() {
   }
 
-  public Qspmpolicymanagerv3FileName explorerFilesName(List<String> explorerFilesName) {
+  public Qspmpolicymanagerv3FileName explorerFilesName(@javax.annotation.Nullable List<String> explorerFilesName) {
     this.explorerFilesName = explorerFilesName;
     return this;
   }
@@ -77,21 +80,21 @@ public class Qspmpolicymanagerv3FileName {
     return this;
   }
 
-   /**
+  /**
    * Get explorerFilesName
    * @return explorerFilesName
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getExplorerFilesName() {
     return explorerFilesName;
   }
 
-  public void setExplorerFilesName(List<String> explorerFilesName) {
+  public void setExplorerFilesName(@javax.annotation.Nullable List<String> explorerFilesName) {
     this.explorerFilesName = explorerFilesName;
   }
 
 
-  public Qspmpolicymanagerv3FileName nonExplorerFilesName(List<String> nonExplorerFilesName) {
+  public Qspmpolicymanagerv3FileName nonExplorerFilesName(@javax.annotation.Nullable List<String> nonExplorerFilesName) {
     this.nonExplorerFilesName = nonExplorerFilesName;
     return this;
   }
@@ -104,16 +107,16 @@ public class Qspmpolicymanagerv3FileName {
     return this;
   }
 
-   /**
+  /**
    * Get nonExplorerFilesName
    * @return nonExplorerFilesName
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getNonExplorerFilesName() {
     return nonExplorerFilesName;
   }
 
-  public void setNonExplorerFilesName(List<String> nonExplorerFilesName) {
+  public void setNonExplorerFilesName(@javax.annotation.Nullable List<String> nonExplorerFilesName) {
     this.nonExplorerFilesName = nonExplorerFilesName;
   }
 
@@ -164,24 +167,22 @@ public class Qspmpolicymanagerv3FileName {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("explorer_files_name");
-    openapiFields.add("non_explorer_files_name");
+    openapiFields = new HashSet<String>(Arrays.asList("explorer_files_name", "non_explorer_files_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3FileName
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3FileName
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpolicymanagerv3FileName.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpolicymanagerv3FileName is not found in the empty JSON string", Qspmpolicymanagerv3FileName.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpolicymanagerv3FileName is not found in the empty JSON string", Qspmpolicymanagerv3FileName.openapiRequiredFields.toString()));
         }
       }
 
@@ -189,17 +190,17 @@ public class Qspmpolicymanagerv3FileName {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpolicymanagerv3FileName.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3FileName` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3FileName` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("explorer_files_name") != null && !jsonObj.get("explorer_files_name").isJsonNull() && !jsonObj.get("explorer_files_name").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `explorer_files_name` to be an array in the JSON string but got `%s`", jsonObj.get("explorer_files_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `explorer_files_name` to be an array in the JSON string but got `%s`", jsonObj.get("explorer_files_name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("non_explorer_files_name") != null && !jsonObj.get("non_explorer_files_name").isJsonNull() && !jsonObj.get("non_explorer_files_name").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `non_explorer_files_name` to be an array in the JSON string but got `%s`", jsonObj.get("non_explorer_files_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `non_explorer_files_name` to be an array in the JSON string but got `%s`", jsonObj.get("non_explorer_files_name").toString()));
       }
   }
 
@@ -232,22 +233,22 @@ public class Qspmpolicymanagerv3FileName {
     }
   }
 
- /**
-  * Create an instance of Qspmpolicymanagerv3FileName given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpolicymanagerv3FileName
-  * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3FileName
-  */
+  /**
+   * Create an instance of Qspmpolicymanagerv3FileName given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpolicymanagerv3FileName
+   * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3FileName
+   */
   public static Qspmpolicymanagerv3FileName fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpolicymanagerv3FileName.class);
   }
 
- /**
-  * Convert an instance of Qspmpolicymanagerv3FileName to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpolicymanagerv3FileName to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

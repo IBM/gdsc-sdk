@@ -30,7 +30,7 @@ class Notificationsv3CreateTicketRequest(BaseModel):
     additional_data: Optional[Dict[str, StrictStr]] = None
     contents: Optional[StrictStr] = None
     integration_id: Optional[StrictStr] = None
-    severity: Optional[Notificationsv3NotificationSeverity] = None
+    severity: Optional[Notificationsv3NotificationSeverity] = Notificationsv3NotificationSeverity.UNDEFINED
     title: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["additional_data", "contents", "integration_id", "severity", "title"]
 
@@ -88,7 +88,7 @@ class Notificationsv3CreateTicketRequest(BaseModel):
             "additional_data": obj.get("additional_data"),
             "contents": obj.get("contents"),
             "integration_id": obj.get("integration_id"),
-            "severity": obj.get("severity"),
+            "severity": obj.get("severity") if obj.get("severity") is not None else Notificationsv3NotificationSeverity.UNDEFINED,
             "title": obj.get("title")
         })
         return _obj

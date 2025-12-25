@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,120 +42,125 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PotentialFlowListItem
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class PotentialFlowListItem {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
   private String id;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
   private String type;
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
+  @javax.annotation.Nonnull
   private FlowNode source;
 
   public static final String SERIALIZED_NAME_DESTINATION = "destination";
   @SerializedName(SERIALIZED_NAME_DESTINATION)
+  @javax.annotation.Nonnull
   private FlowNode destination;
 
   public static final String SERIALIZED_NAME_ACCESS_TYPES = "accessTypes";
   @SerializedName(SERIALIZED_NAME_ACCESS_TYPES)
+  @javax.annotation.Nonnull
   private List<AccessType> accessTypes = new ArrayList<>();
 
   public PotentialFlowListItem() {
   }
 
-  public PotentialFlowListItem id(String id) {
+  public PotentialFlowListItem id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
 
-  public PotentialFlowListItem type(String type) {
+  public PotentialFlowListItem type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
 
-  public PotentialFlowListItem source(FlowNode source) {
+  public PotentialFlowListItem source(@javax.annotation.Nonnull FlowNode source) {
     this.source = source;
     return this;
   }
 
-   /**
+  /**
    * Get source
    * @return source
-  **/
+   */
   @javax.annotation.Nonnull
   public FlowNode getSource() {
     return source;
   }
 
-  public void setSource(FlowNode source) {
+  public void setSource(@javax.annotation.Nonnull FlowNode source) {
     this.source = source;
   }
 
 
-  public PotentialFlowListItem destination(FlowNode destination) {
+  public PotentialFlowListItem destination(@javax.annotation.Nonnull FlowNode destination) {
     this.destination = destination;
     return this;
   }
 
-   /**
+  /**
    * Get destination
    * @return destination
-  **/
+   */
   @javax.annotation.Nonnull
   public FlowNode getDestination() {
     return destination;
   }
 
-  public void setDestination(FlowNode destination) {
+  public void setDestination(@javax.annotation.Nonnull FlowNode destination) {
     this.destination = destination;
   }
 
 
-  public PotentialFlowListItem accessTypes(List<AccessType> accessTypes) {
+  public PotentialFlowListItem accessTypes(@javax.annotation.Nonnull List<AccessType> accessTypes) {
     this.accessTypes = accessTypes;
     return this;
   }
@@ -167,16 +173,16 @@ public class PotentialFlowListItem {
     return this;
   }
 
-   /**
+  /**
    * Get accessTypes
    * @return accessTypes
-  **/
+   */
   @javax.annotation.Nonnull
   public List<AccessType> getAccessTypes() {
     return accessTypes;
   }
 
-  public void setAccessTypes(List<AccessType> accessTypes) {
+  public void setAccessTypes(@javax.annotation.Nonnull List<AccessType> accessTypes) {
     this.accessTypes = accessTypes;
   }
 
@@ -233,32 +239,22 @@ public class PotentialFlowListItem {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("type");
-    openapiFields.add("source");
-    openapiFields.add("destination");
-    openapiFields.add("accessTypes");
+    openapiFields = new HashSet<String>(Arrays.asList("id", "type", "source", "destination", "accessTypes"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("source");
-    openapiRequiredFields.add("destination");
-    openapiRequiredFields.add("accessTypes");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("id", "type", "source", "destination", "accessTypes"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PotentialFlowListItem
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PotentialFlowListItem
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PotentialFlowListItem.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in PotentialFlowListItem is not found in the empty JSON string", PotentialFlowListItem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in PotentialFlowListItem is not found in the empty JSON string", PotentialFlowListItem.openapiRequiredFields.toString()));
         }
       }
 
@@ -266,22 +262,22 @@ public class PotentialFlowListItem {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!PotentialFlowListItem.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PotentialFlowListItem` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `PotentialFlowListItem` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : PotentialFlowListItem.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
       // validate the required field `source`
       FlowNode.validateJsonElement(jsonObj.get("source"));
@@ -291,7 +287,7 @@ public class PotentialFlowListItem {
       if (jsonObj.get("accessTypes") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("accessTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accessTypes` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accessTypes` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypes").toString()));
       }
   }
 
@@ -324,22 +320,22 @@ public class PotentialFlowListItem {
     }
   }
 
- /**
-  * Create an instance of PotentialFlowListItem given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PotentialFlowListItem
-  * @throws IOException if the JSON string is invalid with respect to PotentialFlowListItem
-  */
+  /**
+   * Create an instance of PotentialFlowListItem given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PotentialFlowListItem
+   * @throws IOException if the JSON string is invalid with respect to PotentialFlowListItem
+   */
   public static PotentialFlowListItem fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PotentialFlowListItem.class);
   }
 
- /**
-  * Convert an instance of PotentialFlowListItem to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PotentialFlowListItem to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

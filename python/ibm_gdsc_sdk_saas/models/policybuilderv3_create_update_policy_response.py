@@ -30,7 +30,7 @@ class Policybuilderv3CreateUpdatePolicyResponse(BaseModel):
     Return object for creating or updating a policy.
     """ # noqa: E501
     activation_status: Optional[StrictInt] = Field(default=None, description="activation_status identifier: 1001 -> install with no issues, 1002-> installed with issues, 1003 -> not installed.")
-    edge_activation_info: Optional[Policybuilderv3EdgeActivationObject] = None
+    edge_activation_info: Optional[List[Policybuilderv3EdgeActivationObject]] = None
     installed_flag: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether policy is installed or not.")
     policy_id: Optional[StrictStr] = Field(default=None, description="Policy id of the created or updated policy.")
     policy_name: Optional[StrictStr] = Field(default=None, description="Policy Name for the created or updated policy.")
@@ -77,15 +77,19 @@ class Policybuilderv3CreateUpdatePolicyResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of edge_activation_info
+        # override the default output from pydantic by calling `to_dict()` of each item in edge_activation_info (list)
+        _items = []
         if self.edge_activation_info:
-            _dict['edge_activation_info'] = self.edge_activation_info.to_dict()
+            for _item_edge_activation_info in self.edge_activation_info:
+                if _item_edge_activation_info:
+                    _items.append(_item_edge_activation_info.to_dict())
+            _dict['edge_activation_info'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in rules (list)
         _items = []
         if self.rules:
-            for _item in self.rules:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rules in self.rules:
+                if _item_rules:
+                    _items.append(_item_rules.to_dict())
             _dict['rules'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:
@@ -103,7 +107,7 @@ class Policybuilderv3CreateUpdatePolicyResponse(BaseModel):
 
         _obj = cls.model_validate({
             "activation_status": obj.get("activation_status"),
-            "edge_activation_info": Policybuilderv3EdgeActivationObject.from_dict(obj["edge_activation_info"]) if obj.get("edge_activation_info") is not None else None,
+            "edge_activation_info": [Policybuilderv3EdgeActivationObject.from_dict(_item) for _item in obj["edge_activation_info"]] if obj.get("edge_activation_info") is not None else None,
             "installed_flag": obj.get("installed_flag"),
             "policy_id": obj.get("policy_id"),
             "policy_name": obj.get("policy_name"),

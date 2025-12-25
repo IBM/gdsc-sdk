@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,170 +41,178 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3PolicyData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3PolicyData {
   public static final String SERIALIZED_NAME_AUDIT_PATTERN = "audit_pattern";
   @SerializedName(SERIALIZED_NAME_AUDIT_PATTERN)
+  @javax.annotation.Nullable
   private String auditPattern;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @javax.annotation.Nullable
   private String category;
 
   public static final String SERIALIZED_NAME_INSTALLED = "installed";
   @SerializedName(SERIALIZED_NAME_INSTALLED)
+  @javax.annotation.Nullable
   private Boolean installed;
 
   public static final String SERIALIZED_NAME_LOG_FLAT = "log_flat";
   @SerializedName(SERIALIZED_NAME_LOG_FLAT)
+  @javax.annotation.Nullable
   private Boolean logFlat;
 
   public static final String SERIALIZED_NAME_POLICY_NAME = "policy_name";
   @SerializedName(SERIALIZED_NAME_POLICY_NAME)
+  @javax.annotation.Nullable
   private String policyName;
 
   public static final String SERIALIZED_NAME_POLICY_TYPE = "policy_type";
   @SerializedName(SERIALIZED_NAME_POLICY_TYPE)
+  @javax.annotation.Nullable
   private String policyType;
 
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3Rule> rules = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RULES_ON_FLAT = "rules_on_flat";
   @SerializedName(SERIALIZED_NAME_RULES_ON_FLAT)
+  @javax.annotation.Nullable
   private Boolean rulesOnFlat;
 
   public Guardiumconnectorv3PolicyData() {
   }
 
-  public Guardiumconnectorv3PolicyData auditPattern(String auditPattern) {
+  public Guardiumconnectorv3PolicyData auditPattern(@javax.annotation.Nullable String auditPattern) {
     this.auditPattern = auditPattern;
     return this;
   }
 
-   /**
+  /**
    * Get auditPattern
    * @return auditPattern
-  **/
+   */
   @javax.annotation.Nullable
   public String getAuditPattern() {
     return auditPattern;
   }
 
-  public void setAuditPattern(String auditPattern) {
+  public void setAuditPattern(@javax.annotation.Nullable String auditPattern) {
     this.auditPattern = auditPattern;
   }
 
 
-  public Guardiumconnectorv3PolicyData category(String category) {
+  public Guardiumconnectorv3PolicyData category(@javax.annotation.Nullable String category) {
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategory() {
     return category;
   }
 
-  public void setCategory(String category) {
+  public void setCategory(@javax.annotation.Nullable String category) {
     this.category = category;
   }
 
 
-  public Guardiumconnectorv3PolicyData installed(Boolean installed) {
+  public Guardiumconnectorv3PolicyData installed(@javax.annotation.Nullable Boolean installed) {
     this.installed = installed;
     return this;
   }
 
-   /**
+  /**
    * Get installed
    * @return installed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getInstalled() {
     return installed;
   }
 
-  public void setInstalled(Boolean installed) {
+  public void setInstalled(@javax.annotation.Nullable Boolean installed) {
     this.installed = installed;
   }
 
 
-  public Guardiumconnectorv3PolicyData logFlat(Boolean logFlat) {
+  public Guardiumconnectorv3PolicyData logFlat(@javax.annotation.Nullable Boolean logFlat) {
     this.logFlat = logFlat;
     return this;
   }
 
-   /**
+  /**
    * Get logFlat
    * @return logFlat
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getLogFlat() {
     return logFlat;
   }
 
-  public void setLogFlat(Boolean logFlat) {
+  public void setLogFlat(@javax.annotation.Nullable Boolean logFlat) {
     this.logFlat = logFlat;
   }
 
 
-  public Guardiumconnectorv3PolicyData policyName(String policyName) {
+  public Guardiumconnectorv3PolicyData policyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
     return this;
   }
 
-   /**
+  /**
    * Get policyName
    * @return policyName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyName() {
     return policyName;
   }
 
-  public void setPolicyName(String policyName) {
+  public void setPolicyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
   }
 
 
-  public Guardiumconnectorv3PolicyData policyType(String policyType) {
+  public Guardiumconnectorv3PolicyData policyType(@javax.annotation.Nullable String policyType) {
     this.policyType = policyType;
     return this;
   }
 
-   /**
+  /**
    * Get policyType
    * @return policyType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyType() {
     return policyType;
   }
 
-  public void setPolicyType(String policyType) {
+  public void setPolicyType(@javax.annotation.Nullable String policyType) {
     this.policyType = policyType;
   }
 
 
-  public Guardiumconnectorv3PolicyData rules(List<Guardiumconnectorv3Rule> rules) {
+  public Guardiumconnectorv3PolicyData rules(@javax.annotation.Nullable List<Guardiumconnectorv3Rule> rules) {
     this.rules = rules;
     return this;
   }
@@ -216,35 +225,35 @@ public class Guardiumconnectorv3PolicyData {
     return this;
   }
 
-   /**
+  /**
    * Get rules
    * @return rules
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3Rule> getRules() {
     return rules;
   }
 
-  public void setRules(List<Guardiumconnectorv3Rule> rules) {
+  public void setRules(@javax.annotation.Nullable List<Guardiumconnectorv3Rule> rules) {
     this.rules = rules;
   }
 
 
-  public Guardiumconnectorv3PolicyData rulesOnFlat(Boolean rulesOnFlat) {
+  public Guardiumconnectorv3PolicyData rulesOnFlat(@javax.annotation.Nullable Boolean rulesOnFlat) {
     this.rulesOnFlat = rulesOnFlat;
     return this;
   }
 
-   /**
+  /**
    * Get rulesOnFlat
    * @return rulesOnFlat
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getRulesOnFlat() {
     return rulesOnFlat;
   }
 
-  public void setRulesOnFlat(Boolean rulesOnFlat) {
+  public void setRulesOnFlat(@javax.annotation.Nullable Boolean rulesOnFlat) {
     this.rulesOnFlat = rulesOnFlat;
   }
 
@@ -307,30 +316,22 @@ public class Guardiumconnectorv3PolicyData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("audit_pattern");
-    openapiFields.add("category");
-    openapiFields.add("installed");
-    openapiFields.add("log_flat");
-    openapiFields.add("policy_name");
-    openapiFields.add("policy_type");
-    openapiFields.add("rules");
-    openapiFields.add("rules_on_flat");
+    openapiFields = new HashSet<String>(Arrays.asList("audit_pattern", "category", "installed", "log_flat", "policy_name", "policy_type", "rules", "rules_on_flat"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3PolicyData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3PolicyData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3PolicyData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3PolicyData is not found in the empty JSON string", Guardiumconnectorv3PolicyData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3PolicyData is not found in the empty JSON string", Guardiumconnectorv3PolicyData.openapiRequiredFields.toString()));
         }
       }
 
@@ -338,28 +339,28 @@ public class Guardiumconnectorv3PolicyData {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3PolicyData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3PolicyData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3PolicyData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("audit_pattern") != null && !jsonObj.get("audit_pattern").isJsonNull()) && !jsonObj.get("audit_pattern").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `audit_pattern` to be a primitive type in the JSON string but got `%s`", jsonObj.get("audit_pattern").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `audit_pattern` to be a primitive type in the JSON string but got `%s`", jsonObj.get("audit_pattern").toString()));
       }
       if ((jsonObj.get("category") != null && !jsonObj.get("category").isJsonNull()) && !jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
       if ((jsonObj.get("policy_name") != null && !jsonObj.get("policy_name").isJsonNull()) && !jsonObj.get("policy_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
       }
       if ((jsonObj.get("policy_type") != null && !jsonObj.get("policy_type").isJsonNull()) && !jsonObj.get("policy_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_type").toString()));
       }
       if (jsonObj.get("rules") != null && !jsonObj.get("rules").isJsonNull()) {
         JsonArray jsonArrayrules = jsonObj.getAsJsonArray("rules");
         if (jsonArrayrules != null) {
           // ensure the json data is an array
           if (!jsonObj.get("rules").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
           }
 
           // validate the optional field `rules` (array)
@@ -399,22 +400,22 @@ public class Guardiumconnectorv3PolicyData {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3PolicyData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3PolicyData
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3PolicyData
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3PolicyData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3PolicyData
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3PolicyData
+   */
   public static Guardiumconnectorv3PolicyData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3PolicyData.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3PolicyData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3PolicyData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

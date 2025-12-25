@@ -403,7 +403,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     api_instance = ibm_gdsc_sdk_saas.NotificationsServiceApi(api_client)
     filter_start_time = '2013-10-20T19:20:30+01:00' # datetime | Return records created at this time or later (>=). (optional)
     filter_end_time = '2013-10-20T19:20:30+01:00' # datetime | Return records created before this time (<). (optional)
-    filter_state = 'INCLUDE_ALL' # str | Only return record that include the specified state. (optional) (default to 'INCLUDE_ALL')
+    filter_state = INCLUDE_ALL # str | Only return record that include the specified state. (optional) (default to INCLUDE_ALL)
     filter_origins = ['filter_origins_example'] # List[str] | Only return record that includes the specified origins. (optional)
     filter_origin_data = 'filter_origin_data_example' # str | Only return record that with the specified origin_data. (optional)
     filter_limit = 56 # int | The max amount of rows to return for this single query. (optional)
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_start_time** | **datetime**| Return records created at this time or later (&gt;&#x3D;). | [optional] 
  **filter_end_time** | **datetime**| Return records created before this time (&lt;). | [optional] 
- **filter_state** | **str**| Only return record that include the specified state. | [optional] [default to &#39;INCLUDE_ALL&#39;]
+ **filter_state** | **str**| Only return record that include the specified state. | [optional] [default to INCLUDE_ALL]
  **filter_origins** | [**List[str]**](str.md)| Only return record that includes the specified origins. | [optional] 
  **filter_origin_data** | **str**| Only return record that with the specified origin_data. | [optional] 
  **filter_limit** | **int**| The max amount of rows to return for this single query. | [optional] 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Block a database user.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3BlockWhat {
   public static final String SERIALIZED_NAME_BDBNAME = "bdbname";
   @SerializedName(SERIALIZED_NAME_BDBNAME)
+  @javax.annotation.Nullable
   private String bdbname;
 
   public static final String SERIALIZED_NAME_BIP = "bip";
   @SerializedName(SERIALIZED_NAME_BIP)
+  @javax.annotation.Nullable
   private String bip;
 
   public static final String SERIALIZED_NAME_BPORT = "bport";
   @SerializedName(SERIALIZED_NAME_BPORT)
+  @javax.annotation.Nullable
   private String bport;
 
   public static final String SERIALIZED_NAME_BUSER = "buser";
   @SerializedName(SERIALIZED_NAME_BUSER)
+  @javax.annotation.Nullable
   private String buser;
 
   public Guardiumconnectorv3BlockWhat() {
   }
 
-  public Guardiumconnectorv3BlockWhat bdbname(String bdbname) {
+  public Guardiumconnectorv3BlockWhat bdbname(@javax.annotation.Nullable String bdbname) {
     this.bdbname = bdbname;
     return this;
   }
 
-   /**
+  /**
    * DB name.
    * @return bdbname
-  **/
+   */
   @javax.annotation.Nullable
   public String getBdbname() {
     return bdbname;
   }
 
-  public void setBdbname(String bdbname) {
+  public void setBdbname(@javax.annotation.Nullable String bdbname) {
     this.bdbname = bdbname;
   }
 
 
-  public Guardiumconnectorv3BlockWhat bip(String bip) {
+  public Guardiumconnectorv3BlockWhat bip(@javax.annotation.Nullable String bip) {
     this.bip = bip;
     return this;
   }
 
-   /**
+  /**
    * DB server hostname.
    * @return bip
-  **/
+   */
   @javax.annotation.Nullable
   public String getBip() {
     return bip;
   }
 
-  public void setBip(String bip) {
+  public void setBip(@javax.annotation.Nullable String bip) {
     this.bip = bip;
   }
 
 
-  public Guardiumconnectorv3BlockWhat bport(String bport) {
+  public Guardiumconnectorv3BlockWhat bport(@javax.annotation.Nullable String bport) {
     this.bport = bport;
     return this;
   }
 
-   /**
+  /**
    * DB port.
    * @return bport
-  **/
+   */
   @javax.annotation.Nullable
   public String getBport() {
     return bport;
   }
 
-  public void setBport(String bport) {
+  public void setBport(@javax.annotation.Nullable String bport) {
     this.bport = bport;
   }
 
 
-  public Guardiumconnectorv3BlockWhat buser(String buser) {
+  public Guardiumconnectorv3BlockWhat buser(@javax.annotation.Nullable String buser) {
     this.buser = buser;
     return this;
   }
 
-   /**
+  /**
    * User to block.
    * @return buser
-  **/
+   */
   @javax.annotation.Nullable
   public String getBuser() {
     return buser;
   }
 
-  public void setBuser(String buser) {
+  public void setBuser(@javax.annotation.Nullable String buser) {
     this.buser = buser;
   }
 
@@ -196,26 +201,22 @@ public class Guardiumconnectorv3BlockWhat {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("bdbname");
-    openapiFields.add("bip");
-    openapiFields.add("bport");
-    openapiFields.add("buser");
+    openapiFields = new HashSet<String>(Arrays.asList("bdbname", "bip", "bport", "buser"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3BlockWhat
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3BlockWhat
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3BlockWhat.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3BlockWhat is not found in the empty JSON string", Guardiumconnectorv3BlockWhat.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3BlockWhat is not found in the empty JSON string", Guardiumconnectorv3BlockWhat.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,21 +224,21 @@ public class Guardiumconnectorv3BlockWhat {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3BlockWhat.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3BlockWhat` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3BlockWhat` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("bdbname") != null && !jsonObj.get("bdbname").isJsonNull()) && !jsonObj.get("bdbname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `bdbname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bdbname").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `bdbname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bdbname").toString()));
       }
       if ((jsonObj.get("bip") != null && !jsonObj.get("bip").isJsonNull()) && !jsonObj.get("bip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `bip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bip").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `bip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bip").toString()));
       }
       if ((jsonObj.get("bport") != null && !jsonObj.get("bport").isJsonNull()) && !jsonObj.get("bport").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `bport` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bport").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `bport` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bport").toString()));
       }
       if ((jsonObj.get("buser") != null && !jsonObj.get("buser").isJsonNull()) && !jsonObj.get("buser").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `buser` to be a primitive type in the JSON string but got `%s`", jsonObj.get("buser").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `buser` to be a primitive type in the JSON string but got `%s`", jsonObj.get("buser").toString()));
       }
   }
 
@@ -270,22 +271,22 @@ public class Guardiumconnectorv3BlockWhat {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3BlockWhat given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3BlockWhat
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3BlockWhat
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3BlockWhat given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3BlockWhat
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3BlockWhat
+   */
   public static Guardiumconnectorv3BlockWhat fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3BlockWhat.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3BlockWhat to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3BlockWhat to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

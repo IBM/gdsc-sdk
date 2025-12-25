@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,44 +45,49 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VulnerabilitiesSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VulnerabilitiesSummary {
   public static final String SERIALIZED_NAME_CRITICALITY_COUNT = "criticalityCount";
   @SerializedName(SERIALIZED_NAME_CRITICALITY_COUNT)
+  @javax.annotation.Nonnull
   private List<VulnerabilitiesCriticalityCountInner> criticalityCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_VULNERABILITY_TYPE_COUNT = "vulnerabilityTypeCount";
   @SerializedName(SERIALIZED_NAME_VULNERABILITY_TYPE_COUNT)
+  @javax.annotation.Nonnull
   private List<VulnerabilitiesSummaryVulnerabilityTypeCountInner> vulnerabilityTypeCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS_TYPE_COUNT = "statusTypeCount";
   @SerializedName(SERIALIZED_NAME_STATUS_TYPE_COUNT)
+  @javax.annotation.Nonnull
   private List<VulnerabilitiesSummaryStatusTypeCountInner> statusTypeCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS_SUMMARY = "statusSummary";
   @SerializedName(SERIALIZED_NAME_STATUS_SUMMARY)
+  @javax.annotation.Nonnull
   private VulnerabilitiesSummaryStatusSummary statusSummary;
 
   public static final String SERIALIZED_NAME_AFFECTED_DATA_STORE_SUMMARY = "affectedDataStoreSummary";
   @SerializedName(SERIALIZED_NAME_AFFECTED_DATA_STORE_SUMMARY)
+  @javax.annotation.Nonnull
   private VulnerabilitiesSummaryAffectedDataStoreSummary affectedDataStoreSummary;
 
   public VulnerabilitiesSummary() {
   }
 
-  public VulnerabilitiesSummary criticalityCount(List<VulnerabilitiesCriticalityCountInner> criticalityCount) {
+  public VulnerabilitiesSummary criticalityCount(@javax.annotation.Nonnull List<VulnerabilitiesCriticalityCountInner> criticalityCount) {
     this.criticalityCount = criticalityCount;
     return this;
   }
@@ -94,21 +100,21 @@ public class VulnerabilitiesSummary {
     return this;
   }
 
-   /**
+  /**
    * Get criticalityCount
    * @return criticalityCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<VulnerabilitiesCriticalityCountInner> getCriticalityCount() {
     return criticalityCount;
   }
 
-  public void setCriticalityCount(List<VulnerabilitiesCriticalityCountInner> criticalityCount) {
+  public void setCriticalityCount(@javax.annotation.Nonnull List<VulnerabilitiesCriticalityCountInner> criticalityCount) {
     this.criticalityCount = criticalityCount;
   }
 
 
-  public VulnerabilitiesSummary vulnerabilityTypeCount(List<VulnerabilitiesSummaryVulnerabilityTypeCountInner> vulnerabilityTypeCount) {
+  public VulnerabilitiesSummary vulnerabilityTypeCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryVulnerabilityTypeCountInner> vulnerabilityTypeCount) {
     this.vulnerabilityTypeCount = vulnerabilityTypeCount;
     return this;
   }
@@ -121,21 +127,21 @@ public class VulnerabilitiesSummary {
     return this;
   }
 
-   /**
+  /**
    * Get vulnerabilityTypeCount
    * @return vulnerabilityTypeCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<VulnerabilitiesSummaryVulnerabilityTypeCountInner> getVulnerabilityTypeCount() {
     return vulnerabilityTypeCount;
   }
 
-  public void setVulnerabilityTypeCount(List<VulnerabilitiesSummaryVulnerabilityTypeCountInner> vulnerabilityTypeCount) {
+  public void setVulnerabilityTypeCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryVulnerabilityTypeCountInner> vulnerabilityTypeCount) {
     this.vulnerabilityTypeCount = vulnerabilityTypeCount;
   }
 
 
-  public VulnerabilitiesSummary statusTypeCount(List<VulnerabilitiesSummaryStatusTypeCountInner> statusTypeCount) {
+  public VulnerabilitiesSummary statusTypeCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryStatusTypeCountInner> statusTypeCount) {
     this.statusTypeCount = statusTypeCount;
     return this;
   }
@@ -148,54 +154,54 @@ public class VulnerabilitiesSummary {
     return this;
   }
 
-   /**
+  /**
    * Get statusTypeCount
    * @return statusTypeCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<VulnerabilitiesSummaryStatusTypeCountInner> getStatusTypeCount() {
     return statusTypeCount;
   }
 
-  public void setStatusTypeCount(List<VulnerabilitiesSummaryStatusTypeCountInner> statusTypeCount) {
+  public void setStatusTypeCount(@javax.annotation.Nonnull List<VulnerabilitiesSummaryStatusTypeCountInner> statusTypeCount) {
     this.statusTypeCount = statusTypeCount;
   }
 
 
-  public VulnerabilitiesSummary statusSummary(VulnerabilitiesSummaryStatusSummary statusSummary) {
+  public VulnerabilitiesSummary statusSummary(@javax.annotation.Nonnull VulnerabilitiesSummaryStatusSummary statusSummary) {
     this.statusSummary = statusSummary;
     return this;
   }
 
-   /**
+  /**
    * Get statusSummary
    * @return statusSummary
-  **/
+   */
   @javax.annotation.Nonnull
   public VulnerabilitiesSummaryStatusSummary getStatusSummary() {
     return statusSummary;
   }
 
-  public void setStatusSummary(VulnerabilitiesSummaryStatusSummary statusSummary) {
+  public void setStatusSummary(@javax.annotation.Nonnull VulnerabilitiesSummaryStatusSummary statusSummary) {
     this.statusSummary = statusSummary;
   }
 
 
-  public VulnerabilitiesSummary affectedDataStoreSummary(VulnerabilitiesSummaryAffectedDataStoreSummary affectedDataStoreSummary) {
+  public VulnerabilitiesSummary affectedDataStoreSummary(@javax.annotation.Nonnull VulnerabilitiesSummaryAffectedDataStoreSummary affectedDataStoreSummary) {
     this.affectedDataStoreSummary = affectedDataStoreSummary;
     return this;
   }
 
-   /**
+  /**
    * Get affectedDataStoreSummary
    * @return affectedDataStoreSummary
-  **/
+   */
   @javax.annotation.Nonnull
   public VulnerabilitiesSummaryAffectedDataStoreSummary getAffectedDataStoreSummary() {
     return affectedDataStoreSummary;
   }
 
-  public void setAffectedDataStoreSummary(VulnerabilitiesSummaryAffectedDataStoreSummary affectedDataStoreSummary) {
+  public void setAffectedDataStoreSummary(@javax.annotation.Nonnull VulnerabilitiesSummaryAffectedDataStoreSummary affectedDataStoreSummary) {
     this.affectedDataStoreSummary = affectedDataStoreSummary;
   }
 
@@ -252,32 +258,22 @@ public class VulnerabilitiesSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("criticalityCount");
-    openapiFields.add("vulnerabilityTypeCount");
-    openapiFields.add("statusTypeCount");
-    openapiFields.add("statusSummary");
-    openapiFields.add("affectedDataStoreSummary");
+    openapiFields = new HashSet<String>(Arrays.asList("criticalityCount", "vulnerabilityTypeCount", "statusTypeCount", "statusSummary", "affectedDataStoreSummary"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("criticalityCount");
-    openapiRequiredFields.add("vulnerabilityTypeCount");
-    openapiRequiredFields.add("statusTypeCount");
-    openapiRequiredFields.add("statusSummary");
-    openapiRequiredFields.add("affectedDataStoreSummary");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("criticalityCount", "vulnerabilityTypeCount", "statusTypeCount", "statusSummary", "affectedDataStoreSummary"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VulnerabilitiesSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VulnerabilitiesSummary is not found in the empty JSON string", VulnerabilitiesSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VulnerabilitiesSummary is not found in the empty JSON string", VulnerabilitiesSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -285,20 +281,20 @@ public class VulnerabilitiesSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VulnerabilitiesSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VulnerabilitiesSummary.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("criticalityCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `criticalityCount` to be an array in the JSON string but got `%s`", jsonObj.get("criticalityCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `criticalityCount` to be an array in the JSON string but got `%s`", jsonObj.get("criticalityCount").toString()));
       }
 
       JsonArray jsonArraycriticalityCount = jsonObj.getAsJsonArray("criticalityCount");
@@ -308,7 +304,7 @@ public class VulnerabilitiesSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("vulnerabilityTypeCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vulnerabilityTypeCount` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilityTypeCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vulnerabilityTypeCount` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilityTypeCount").toString()));
       }
 
       JsonArray jsonArrayvulnerabilityTypeCount = jsonObj.getAsJsonArray("vulnerabilityTypeCount");
@@ -318,7 +314,7 @@ public class VulnerabilitiesSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("statusTypeCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `statusTypeCount` to be an array in the JSON string but got `%s`", jsonObj.get("statusTypeCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `statusTypeCount` to be an array in the JSON string but got `%s`", jsonObj.get("statusTypeCount").toString()));
       }
 
       JsonArray jsonArraystatusTypeCount = jsonObj.getAsJsonArray("statusTypeCount");
@@ -361,22 +357,22 @@ public class VulnerabilitiesSummary {
     }
   }
 
- /**
-  * Create an instance of VulnerabilitiesSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VulnerabilitiesSummary
-  * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummary
-  */
+  /**
+   * Create an instance of VulnerabilitiesSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VulnerabilitiesSummary
+   * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummary
+   */
   public static VulnerabilitiesSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VulnerabilitiesSummary.class);
   }
 
- /**
-  * Convert an instance of VulnerabilitiesSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VulnerabilitiesSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

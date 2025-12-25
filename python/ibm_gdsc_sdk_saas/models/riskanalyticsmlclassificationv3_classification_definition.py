@@ -28,7 +28,7 @@ class Riskanalyticsmlclassificationv3ClassificationDefinition(BaseModel):
     Riskanalyticsmlclassificationv3ClassificationDefinition
     """ # noqa: E501
     classifications: Optional[List[StrictStr]] = None
-    pivot_type: Optional[Riskanalyticsenginev3PivotType] = None
+    pivot_type: Optional[Riskanalyticsenginev3PivotType] = Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE
     __properties: ClassVar[List[str]] = ["classifications", "pivot_type"]
 
     model_config = ConfigDict(
@@ -83,7 +83,7 @@ class Riskanalyticsmlclassificationv3ClassificationDefinition(BaseModel):
 
         _obj = cls.model_validate({
             "classifications": obj.get("classifications"),
-            "pivot_type": obj.get("pivot_type")
+            "pivot_type": obj.get("pivot_type") if obj.get("pivot_type") is not None else Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE
         })
         return _obj
 

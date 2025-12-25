@@ -294,7 +294,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -311,11 +313,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -338,7 +341,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='POST',
-            resource_path='/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments',
+            resource_path='/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -572,7 +575,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -587,11 +592,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -601,7 +607,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/vulnerabilities/summary',
+            resource_path='/api/v2/dspm/vulnerabilities/summary',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -835,7 +841,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -848,11 +856,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -862,7 +871,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/vulnerabilities/{vulnerabilityId}',
+            resource_path='/api/v2/dspm/vulnerabilities/{vulnerabilityId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1135,7 +1144,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1162,11 +1173,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1176,7 +1188,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/vulnerabilities',
+            resource_path='/api/v2/dspm/vulnerabilities',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1449,7 +1461,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1476,11 +1490,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1490,7 +1505,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/api/v1/dspm/vulnerabilities/byDataStore',
+            resource_path='/api/v2/dspm/vulnerabilities/byDataStore',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1750,7 +1765,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1767,11 +1784,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
 
         # authentication setting
@@ -1781,7 +1799,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='DELETE',
-            resource_path='/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}',
+            resource_path='/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2028,7 +2046,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2043,11 +2063,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -2070,7 +2091,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='POST',
-            resource_path='/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses',
+            resource_path='/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2343,7 +2364,9 @@ class DataVulnerabilitiesApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, Union[str, bytes]] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2362,11 +2385,12 @@ class DataVulnerabilitiesApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -2389,7 +2413,7 @@ class DataVulnerabilitiesApi:
 
         return self.api_client.param_serialize(
             method='PUT',
-            resource_path='/api/v1/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}',
+            resource_path='/api/v2/dspm/vulnerabilities/{vulnerabilityId}/statuses/{statusId}/comments/{commentId}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

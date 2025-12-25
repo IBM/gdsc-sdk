@@ -88,58 +88,58 @@ class Assetsv3FetchAssetDashboardResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in assets_with_open_vulnerabilities (list)
         _items = []
         if self.assets_with_open_vulnerabilities:
-            for _item in self.assets_with_open_vulnerabilities:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_assets_with_open_vulnerabilities in self.assets_with_open_vulnerabilities:
+                if _item_assets_with_open_vulnerabilities:
+                    _items.append(_item_assets_with_open_vulnerabilities.to_dict())
             _dict['assets_with_open_vulnerabilities'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in classification_scan_status (list)
         _items = []
         if self.classification_scan_status:
-            for _item in self.classification_scan_status:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_classification_scan_status in self.classification_scan_status:
+                if _item_classification_scan_status:
+                    _items.append(_item_classification_scan_status.to_dict())
             _dict['classification_scan_status'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in highest_asset_tag_counts (list)
         _items = []
         if self.highest_asset_tag_counts:
-            for _item in self.highest_asset_tag_counts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_highest_asset_tag_counts in self.highest_asset_tag_counts:
+                if _item_highest_asset_tag_counts:
+                    _items.append(_item_highest_asset_tag_counts.to_dict())
             _dict['highest_asset_tag_counts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in selected_filters (list)
         _items = []
         if self.selected_filters:
-            for _item in self.selected_filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_selected_filters in self.selected_filters:
+                if _item_selected_filters:
+                    _items.append(_item_selected_filters.to_dict())
             _dict['selected_filters'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in tag_categories_data (list)
         _items = []
         if self.tag_categories_data:
-            for _item in self.tag_categories_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tag_categories_data in self.tag_categories_data:
+                if _item_tag_categories_data:
+                    _items.append(_item_tag_categories_data.to_dict())
             _dict['tag_categories_data'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in tags_filter_data (list)
         _items = []
         if self.tags_filter_data:
-            for _item in self.tags_filter_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tags_filter_data in self.tags_filter_data:
+                if _item_tags_filter_data:
+                    _items.append(_item_tags_filter_data.to_dict())
             _dict['tags_filter_data'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in vulnerability_scan_status (list)
         _items = []
         if self.vulnerability_scan_status:
-            for _item in self.vulnerability_scan_status:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_vulnerability_scan_status in self.vulnerability_scan_status:
+                if _item_vulnerability_scan_status:
+                    _items.append(_item_vulnerability_scan_status.to_dict())
             _dict['vulnerability_scan_status'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in vulnerability_trend (list)
         _items = []
         if self.vulnerability_trend:
-            for _item in self.vulnerability_trend:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_vulnerability_trend in self.vulnerability_trend:
+                if _item_vulnerability_trend:
+                    _items.append(_item_vulnerability_trend.to_dict())
             _dict['vulnerability_trend'] = _items
         return _dict
 

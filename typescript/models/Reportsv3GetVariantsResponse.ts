@@ -18,6 +18,8 @@ export class Reportsv3GetVariantsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "variants",
@@ -33,4 +35,3 @@ export class Reportsv3GetVariantsResponse {
     public constructor() {
     }
 }
-

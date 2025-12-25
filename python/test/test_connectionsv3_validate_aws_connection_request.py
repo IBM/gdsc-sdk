@@ -27,7 +27,7 @@ class TestConnectionsv3ValidateAwsConnectionRequest(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Connectionsv3ValidateAwsConnectionRequest:
         """Test Connectionsv3ValidateAwsConnectionRequest
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Connectionsv3ValidateAwsConnectionRequest`
@@ -36,9 +36,9 @@ class TestConnectionsv3ValidateAwsConnectionRequest(unittest.TestCase):
         if include_optional:
             return Connectionsv3ValidateAwsConnectionRequest(
                 access_key = '',
+                bucket_name = '',
                 group_name = '',
                 input_plugin_type = '',
-                log_stream = '',
                 queue_url = '',
                 region = '',
                 secret_key = ''

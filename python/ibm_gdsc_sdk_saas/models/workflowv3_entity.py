@@ -29,7 +29,7 @@ class Workflowv3Entity(BaseModel):
     """ # noqa: E501
     label: Optional[StrictStr] = Field(default=None, description="Label of entity,  i.e. test@ibm.com.")
     template_id: Optional[StrictStr] = Field(default=None, description="Template for sending e-mail.")
-    type: Optional[Workflowv3EntityType] = None
+    type: Optional[Workflowv3EntityType] = Workflowv3EntityType.UNDEFINED_ENTITY_TYPE
     value: Optional[StrictStr] = Field(default=None, description="Value of entity, i.e. an e-mail address.")
     __properties: ClassVar[List[str]] = ["label", "template_id", "type", "value"]
 
@@ -86,7 +86,7 @@ class Workflowv3Entity(BaseModel):
         _obj = cls.model_validate({
             "label": obj.get("label"),
             "template_id": obj.get("template_id"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Workflowv3EntityType.UNDEFINED_ENTITY_TYPE,
             "value": obj.get("value")
         })
         return _obj

@@ -15,6 +15,7 @@ import { Policybuilderv3EdgeActivationObject } from '../models/Policybuilderv3Ed
 import { Policybuilderv3ImportIssue } from '../models/Policybuilderv3ImportIssue';
 import { Policybuilderv3ImportState } from '../models/Policybuilderv3ImportState';
 import { Policybuilderv3PolicyType } from '../models/Policybuilderv3PolicyType';
+import { Policybuilderv3ProductType } from '../models/Policybuilderv3ProductType';
 import { Policybuilderv3RuleType } from '../models/Policybuilderv3RuleType';
 import { HttpFile } from '../http/http';
 
@@ -22,6 +23,7 @@ import { HttpFile } from '../http/http';
 * Policy object for creating/storing the policy.
 */
 export class Policybuilderv3Policy {
+    'activationFrequency'?: string;
     /**
     * activation_status identifier: 1001 -> install with no issues, 1002-> installed with issues, 1003 -> not installed.
     */
@@ -48,6 +50,7 @@ export class Policybuilderv3Policy {
     * Timestamp to indicate when the policy was last edited.
     */
     'lastEditedTimestamp'?: string;
+    'lastRevisedBy'?: string;
     /**
     * Flag to indicate whether the policy has log flat enabled or not.
     */
@@ -67,6 +70,7 @@ export class Policybuilderv3Policy {
     */
     'policyName'?: string;
     'policyType'?: Policybuilderv3PolicyType;
+    'productId'?: Policybuilderv3ProductType;
     /**
     * Flag to indicate whether the policy has rules on flat enabled or not.
     */
@@ -86,7 +90,15 @@ export class Policybuilderv3Policy {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+        {
+            "name": "activationFrequency",
+            "baseName": "activation_frequency",
+            "type": "string",
+            "format": ""
+        },
         {
             "name": "activationStatus",
             "baseName": "activation_status",
@@ -136,6 +148,12 @@ export class Policybuilderv3Policy {
             "format": ""
         },
         {
+            "name": "lastRevisedBy",
+            "baseName": "last_revised_by",
+            "type": "string",
+            "format": ""
+        },
+        {
             "name": "logFlat",
             "baseName": "log_flat",
             "type": "boolean",
@@ -178,6 +196,12 @@ export class Policybuilderv3Policy {
             "format": ""
         },
         {
+            "name": "productId",
+            "baseName": "product_id",
+            "type": "Policybuilderv3ProductType",
+            "format": ""
+        },
+        {
             "name": "rulesOnFlat",
             "baseName": "rules_on_flat",
             "type": "boolean",
@@ -209,6 +233,5 @@ export class Policybuilderv3Policy {
     public constructor() {
     }
 }
-
 
 

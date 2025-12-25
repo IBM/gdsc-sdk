@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,78 +42,82 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AddAnalyzedRegionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AddAnalyzedRegionRequest {
   public static final String SERIALIZED_NAME_CLOUD_PROVIDER = "cloudProvider";
   @SerializedName(SERIALIZED_NAME_CLOUD_PROVIDER)
+  @javax.annotation.Nonnull
   private CloudServiceProvider cloudProvider;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_REGIONS = "regions";
   @SerializedName(SERIALIZED_NAME_REGIONS)
+  @javax.annotation.Nullable
   private List<String> regions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CUSTOMER_TAGS = "customerTags";
   @SerializedName(SERIALIZED_NAME_CUSTOMER_TAGS)
+  @javax.annotation.Nullable
   private List<Tags> customerTags = new ArrayList<>();
 
   public AddAnalyzedRegionRequest() {
   }
 
-  public AddAnalyzedRegionRequest cloudProvider(CloudServiceProvider cloudProvider) {
+  public AddAnalyzedRegionRequest cloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
     return this;
   }
 
-   /**
+  /**
    * Get cloudProvider
    * @return cloudProvider
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudServiceProvider getCloudProvider() {
     return cloudProvider;
   }
 
-  public void setCloudProvider(CloudServiceProvider cloudProvider) {
+  public void setCloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
 
 
-  public AddAnalyzedRegionRequest region(String region) {
+  public AddAnalyzedRegionRequest region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Get region
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public AddAnalyzedRegionRequest regions(List<String> regions) {
+  public AddAnalyzedRegionRequest regions(@javax.annotation.Nullable List<String> regions) {
     this.regions = regions;
     return this;
   }
@@ -125,21 +130,21 @@ public class AddAnalyzedRegionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get regions
    * @return regions
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getRegions() {
     return regions;
   }
 
-  public void setRegions(List<String> regions) {
+  public void setRegions(@javax.annotation.Nullable List<String> regions) {
     this.regions = regions;
   }
 
 
-  public AddAnalyzedRegionRequest customerTags(List<Tags> customerTags) {
+  public AddAnalyzedRegionRequest customerTags(@javax.annotation.Nullable List<Tags> customerTags) {
     this.customerTags = customerTags;
     return this;
   }
@@ -152,16 +157,16 @@ public class AddAnalyzedRegionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get customerTags
    * @return customerTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Tags> getCustomerTags() {
     return customerTags;
   }
 
-  public void setCustomerTags(List<Tags> customerTags) {
+  public void setCustomerTags(@javax.annotation.Nullable List<Tags> customerTags) {
     this.customerTags = customerTags;
   }
 
@@ -216,27 +221,22 @@ public class AddAnalyzedRegionRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cloudProvider");
-    openapiFields.add("region");
-    openapiFields.add("regions");
-    openapiFields.add("customerTags");
+    openapiFields = new HashSet<String>(Arrays.asList("cloudProvider", "region", "regions", "customerTags"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("cloudProvider");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("cloudProvider"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddAnalyzedRegionRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddAnalyzedRegionRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddAnalyzedRegionRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddAnalyzedRegionRequest is not found in the empty JSON string", AddAnalyzedRegionRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AddAnalyzedRegionRequest is not found in the empty JSON string", AddAnalyzedRegionRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -244,32 +244,32 @@ public class AddAnalyzedRegionRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AddAnalyzedRegionRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddAnalyzedRegionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AddAnalyzedRegionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AddAnalyzedRegionRequest.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `cloudProvider`
       CloudServiceProvider.validateJsonElement(jsonObj.get("cloudProvider"));
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("regions") != null && !jsonObj.get("regions").isJsonNull() && !jsonObj.get("regions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `regions` to be an array in the JSON string but got `%s`", jsonObj.get("regions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `regions` to be an array in the JSON string but got `%s`", jsonObj.get("regions").toString()));
       }
       if (jsonObj.get("customerTags") != null && !jsonObj.get("customerTags").isJsonNull()) {
         JsonArray jsonArraycustomerTags = jsonObj.getAsJsonArray("customerTags");
         if (jsonArraycustomerTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("customerTags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `customerTags` to be an array in the JSON string but got `%s`", jsonObj.get("customerTags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `customerTags` to be an array in the JSON string but got `%s`", jsonObj.get("customerTags").toString()));
           }
 
           // validate the optional field `customerTags` (array)
@@ -309,22 +309,22 @@ public class AddAnalyzedRegionRequest {
     }
   }
 
- /**
-  * Create an instance of AddAnalyzedRegionRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddAnalyzedRegionRequest
-  * @throws IOException if the JSON string is invalid with respect to AddAnalyzedRegionRequest
-  */
+  /**
+   * Create an instance of AddAnalyzedRegionRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddAnalyzedRegionRequest
+   * @throws IOException if the JSON string is invalid with respect to AddAnalyzedRegionRequest
+   */
   public static AddAnalyzedRegionRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddAnalyzedRegionRequest.class);
   }
 
- /**
-  * Convert an instance of AddAnalyzedRegionRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddAnalyzedRegionRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

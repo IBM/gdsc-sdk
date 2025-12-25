@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,59 +41,63 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Update existing tasks.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3UpdateTasksRequest {
   public static final String SERIALIZED_NAME_CASE_ID = "case_id";
   @SerializedName(SERIALIZED_NAME_CASE_ID)
+  @javax.annotation.Nullable
   private String caseId;
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
+  @javax.annotation.Nullable
   private List<Workflowv3TaskEdit> tasks = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_UPDATE_FIELDS = "update_fields";
   @SerializedName(SERIALIZED_NAME_UPDATE_FIELDS)
+  @javax.annotation.Nullable
   private List<String> updateFields = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_WORKFLOW_ID = "workflow_id";
   @SerializedName(SERIALIZED_NAME_WORKFLOW_ID)
+  @javax.annotation.Nullable
   private String workflowId;
 
   public Workflowv3UpdateTasksRequest() {
   }
 
-  public Workflowv3UpdateTasksRequest caseId(String caseId) {
+  public Workflowv3UpdateTasksRequest caseId(@javax.annotation.Nullable String caseId) {
     this.caseId = caseId;
     return this;
   }
 
-   /**
+  /**
    * Update tasks belonging to common parent.
    * @return caseId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCaseId() {
     return caseId;
   }
 
-  public void setCaseId(String caseId) {
+  public void setCaseId(@javax.annotation.Nullable String caseId) {
     this.caseId = caseId;
   }
 
 
-  public Workflowv3UpdateTasksRequest tasks(List<Workflowv3TaskEdit> tasks) {
+  public Workflowv3UpdateTasksRequest tasks(@javax.annotation.Nullable List<Workflowv3TaskEdit> tasks) {
     this.tasks = tasks;
     return this;
   }
@@ -105,21 +110,21 @@ public class Workflowv3UpdateTasksRequest {
     return this;
   }
 
-   /**
+  /**
    * Update multiple tasks in one request.
    * @return tasks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3TaskEdit> getTasks() {
     return tasks;
   }
 
-  public void setTasks(List<Workflowv3TaskEdit> tasks) {
+  public void setTasks(@javax.annotation.Nullable List<Workflowv3TaskEdit> tasks) {
     this.tasks = tasks;
   }
 
 
-  public Workflowv3UpdateTasksRequest updateFields(List<String> updateFields) {
+  public Workflowv3UpdateTasksRequest updateFields(@javax.annotation.Nullable List<String> updateFields) {
     this.updateFields = updateFields;
     return this;
   }
@@ -132,35 +137,35 @@ public class Workflowv3UpdateTasksRequest {
     return this;
   }
 
-   /**
+  /**
    * Only update these fields in the backend records.
    * @return updateFields
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getUpdateFields() {
     return updateFields;
   }
 
-  public void setUpdateFields(List<String> updateFields) {
+  public void setUpdateFields(@javax.annotation.Nullable List<String> updateFields) {
     this.updateFields = updateFields;
   }
 
 
-  public Workflowv3UpdateTasksRequest workflowId(String workflowId) {
+  public Workflowv3UpdateTasksRequest workflowId(@javax.annotation.Nullable String workflowId) {
     this.workflowId = workflowId;
     return this;
   }
 
-   /**
+  /**
    * Get workflowId
    * @return workflowId
-  **/
+   */
   @javax.annotation.Nullable
   public String getWorkflowId() {
     return workflowId;
   }
 
-  public void setWorkflowId(String workflowId) {
+  public void setWorkflowId(@javax.annotation.Nullable String workflowId) {
     this.workflowId = workflowId;
   }
 
@@ -215,26 +220,22 @@ public class Workflowv3UpdateTasksRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("case_id");
-    openapiFields.add("tasks");
-    openapiFields.add("update_fields");
-    openapiFields.add("workflow_id");
+    openapiFields = new HashSet<String>(Arrays.asList("case_id", "tasks", "update_fields", "workflow_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3UpdateTasksRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3UpdateTasksRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3UpdateTasksRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3UpdateTasksRequest is not found in the empty JSON string", Workflowv3UpdateTasksRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3UpdateTasksRequest is not found in the empty JSON string", Workflowv3UpdateTasksRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -242,19 +243,19 @@ public class Workflowv3UpdateTasksRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3UpdateTasksRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3UpdateTasksRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3UpdateTasksRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("case_id") != null && !jsonObj.get("case_id").isJsonNull()) && !jsonObj.get("case_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `case_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("case_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `case_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("case_id").toString()));
       }
       if (jsonObj.get("tasks") != null && !jsonObj.get("tasks").isJsonNull()) {
         JsonArray jsonArraytasks = jsonObj.getAsJsonArray("tasks");
         if (jsonArraytasks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tasks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
           }
 
           // validate the optional field `tasks` (array)
@@ -265,10 +266,10 @@ public class Workflowv3UpdateTasksRequest {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("update_fields") != null && !jsonObj.get("update_fields").isJsonNull() && !jsonObj.get("update_fields").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_fields` to be an array in the JSON string but got `%s`", jsonObj.get("update_fields").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_fields` to be an array in the JSON string but got `%s`", jsonObj.get("update_fields").toString()));
       }
       if ((jsonObj.get("workflow_id") != null && !jsonObj.get("workflow_id").isJsonNull()) && !jsonObj.get("workflow_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `workflow_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("workflow_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `workflow_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("workflow_id").toString()));
       }
   }
 
@@ -301,22 +302,22 @@ public class Workflowv3UpdateTasksRequest {
     }
   }
 
- /**
-  * Create an instance of Workflowv3UpdateTasksRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3UpdateTasksRequest
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3UpdateTasksRequest
-  */
+  /**
+   * Create an instance of Workflowv3UpdateTasksRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3UpdateTasksRequest
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3UpdateTasksRequest
+   */
   public static Workflowv3UpdateTasksRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3UpdateTasksRequest.class);
   }
 
- /**
-  * Convert an instance of Workflowv3UpdateTasksRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3UpdateTasksRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -39,6 +39,8 @@ export class Assetsv3ApplicationVertex {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "appId",
@@ -168,6 +170,5 @@ export class Assetsv3ApplicationVertex {
     public constructor() {
     }
 }
-
 
 

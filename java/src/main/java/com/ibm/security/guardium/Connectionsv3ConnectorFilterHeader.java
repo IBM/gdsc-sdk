@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connector filter.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ConnectorFilterHeader {
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
+  @javax.annotation.Nullable
   private List<Connectionsv3ConnectorFilter> filters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HEADER = "header";
   @SerializedName(SERIALIZED_NAME_HEADER)
+  @javax.annotation.Nullable
   private String header;
 
   public Connectionsv3ConnectorFilterHeader() {
   }
 
-  public Connectionsv3ConnectorFilterHeader filters(List<Connectionsv3ConnectorFilter> filters) {
+  public Connectionsv3ConnectorFilterHeader filters(@javax.annotation.Nullable List<Connectionsv3ConnectorFilter> filters) {
     this.filters = filters;
     return this;
   }
@@ -78,35 +81,35 @@ public class Connectionsv3ConnectorFilterHeader {
     return this;
   }
 
-   /**
+  /**
    * The number.
    * @return filters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3ConnectorFilter> getFilters() {
     return filters;
   }
 
-  public void setFilters(List<Connectionsv3ConnectorFilter> filters) {
+  public void setFilters(@javax.annotation.Nullable List<Connectionsv3ConnectorFilter> filters) {
     this.filters = filters;
   }
 
 
-  public Connectionsv3ConnectorFilterHeader header(String header) {
+  public Connectionsv3ConnectorFilterHeader header(@javax.annotation.Nullable String header) {
     this.header = header;
     return this;
   }
 
-   /**
+  /**
    * The header id.
    * @return header
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeader() {
     return header;
   }
 
-  public void setHeader(String header) {
+  public void setHeader(@javax.annotation.Nullable String header) {
     this.header = header;
   }
 
@@ -157,24 +160,22 @@ public class Connectionsv3ConnectorFilterHeader {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filters");
-    openapiFields.add("header");
+    openapiFields = new HashSet<String>(Arrays.asList("filters", "header"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorFilterHeader
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ConnectorFilterHeader
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ConnectorFilterHeader.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ConnectorFilterHeader is not found in the empty JSON string", Connectionsv3ConnectorFilterHeader.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ConnectorFilterHeader is not found in the empty JSON string", Connectionsv3ConnectorFilterHeader.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Connectionsv3ConnectorFilterHeader {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ConnectorFilterHeader.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorFilterHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ConnectorFilterHeader` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Connectionsv3ConnectorFilterHeader {
         if (jsonArrayfilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
           }
 
           // validate the optional field `filters` (array)
@@ -201,7 +202,7 @@ public class Connectionsv3ConnectorFilterHeader {
         }
       }
       if ((jsonObj.get("header") != null && !jsonObj.get("header").isJsonNull()) && !jsonObj.get("header").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header").toString()));
       }
   }
 
@@ -234,22 +235,22 @@ public class Connectionsv3ConnectorFilterHeader {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ConnectorFilterHeader given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ConnectorFilterHeader
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorFilterHeader
-  */
+  /**
+   * Create an instance of Connectionsv3ConnectorFilterHeader given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ConnectorFilterHeader
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ConnectorFilterHeader
+   */
   public static Connectionsv3ConnectorFilterHeader fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ConnectorFilterHeader.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ConnectorFilterHeader to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ConnectorFilterHeader to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

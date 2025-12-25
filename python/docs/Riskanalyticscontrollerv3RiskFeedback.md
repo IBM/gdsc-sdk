@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **creation_time** | **datetime** | Feedback creation time. | [optional] 
 **features** | [**List[Riskanalyticsenginev3Feature]**](Riskanalyticsenginev3Feature.md) | List of features for the risk that related to this feedback. | [optional] 
 **new_classification** | **str** | Feedback classification. | [optional] 
-**new_severity** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] 
+**new_severity** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] [default to Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL]
 **old_classification** | **str** | Original classification. | [optional] 
-**old_severity** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] 
+**old_severity** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] [default to Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL]
 
 ## Example
 

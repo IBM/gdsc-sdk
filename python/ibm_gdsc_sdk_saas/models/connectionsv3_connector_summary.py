@@ -30,7 +30,7 @@ class Connectionsv3ConnectorSummary(BaseModel):
     status_green: Optional[StrictInt] = Field(default=None, description="The number of connections with a green status.")
     status_red: Optional[StrictInt] = Field(default=None, description="The number of connections with a red status.")
     status_yellow: Optional[StrictInt] = Field(default=None, description="The number of connections with a yellow status.")
-    type: Optional[Connectionsv3ConnectorType] = None
+    type: Optional[Connectionsv3ConnectorType] = Connectionsv3ConnectorType.UNDEFINED_TYPE
     __properties: ClassVar[List[str]] = ["status_green", "status_red", "status_yellow", "type"]
 
     model_config = ConfigDict(
@@ -87,7 +87,7 @@ class Connectionsv3ConnectorSummary(BaseModel):
             "status_green": obj.get("status_green"),
             "status_red": obj.get("status_red"),
             "status_yellow": obj.get("status_yellow"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Connectionsv3ConnectorType.UNDEFINED_TYPE
         })
         return _obj
 

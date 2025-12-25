@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Describes how many data sources are incoming for outlier analytics compared to the overall data sources seen in GI.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3DatasourcesCoverageStats {
   public static final String SERIALIZED_NAME_DATASOURCES_COVERAGE = "datasources_coverage";
   @SerializedName(SERIALIZED_NAME_DATASOURCES_COVERAGE)
+  @javax.annotation.Nullable
   private String datasourcesCoverage;
 
   public static final String SERIALIZED_NAME_DATASOURCES_IN_GI = "datasources_in_gi";
   @SerializedName(SERIALIZED_NAME_DATASOURCES_IN_GI)
+  @javax.annotation.Nullable
   private Integer datasourcesInGi;
 
   public static final String SERIALIZED_NAME_DATASOURCES_IN_QUEUE = "datasources_in_queue";
   @SerializedName(SERIALIZED_NAME_DATASOURCES_IN_QUEUE)
+  @javax.annotation.Nullable
   private Integer datasourcesInQueue;
 
   public Outliersenginev3DatasourcesCoverageStats() {
   }
 
-  public Outliersenginev3DatasourcesCoverageStats datasourcesCoverage(String datasourcesCoverage) {
+  public Outliersenginev3DatasourcesCoverageStats datasourcesCoverage(@javax.annotation.Nullable String datasourcesCoverage) {
     this.datasourcesCoverage = datasourcesCoverage;
     return this;
   }
 
-   /**
+  /**
    * Get datasourcesCoverage
    * @return datasourcesCoverage
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourcesCoverage() {
     return datasourcesCoverage;
   }
 
-  public void setDatasourcesCoverage(String datasourcesCoverage) {
+  public void setDatasourcesCoverage(@javax.annotation.Nullable String datasourcesCoverage) {
     this.datasourcesCoverage = datasourcesCoverage;
   }
 
 
-  public Outliersenginev3DatasourcesCoverageStats datasourcesInGi(Integer datasourcesInGi) {
+  public Outliersenginev3DatasourcesCoverageStats datasourcesInGi(@javax.annotation.Nullable Integer datasourcesInGi) {
     this.datasourcesInGi = datasourcesInGi;
     return this;
   }
 
-   /**
+  /**
    * Get datasourcesInGi
    * @return datasourcesInGi
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasourcesInGi() {
     return datasourcesInGi;
   }
 
-  public void setDatasourcesInGi(Integer datasourcesInGi) {
+  public void setDatasourcesInGi(@javax.annotation.Nullable Integer datasourcesInGi) {
     this.datasourcesInGi = datasourcesInGi;
   }
 
 
-  public Outliersenginev3DatasourcesCoverageStats datasourcesInQueue(Integer datasourcesInQueue) {
+  public Outliersenginev3DatasourcesCoverageStats datasourcesInQueue(@javax.annotation.Nullable Integer datasourcesInQueue) {
     this.datasourcesInQueue = datasourcesInQueue;
     return this;
   }
 
-   /**
+  /**
    * Get datasourcesInQueue
    * @return datasourcesInQueue
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasourcesInQueue() {
     return datasourcesInQueue;
   }
 
-  public void setDatasourcesInQueue(Integer datasourcesInQueue) {
+  public void setDatasourcesInQueue(@javax.annotation.Nullable Integer datasourcesInQueue) {
     this.datasourcesInQueue = datasourcesInQueue;
   }
 
@@ -171,25 +175,22 @@ public class Outliersenginev3DatasourcesCoverageStats {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("datasources_coverage");
-    openapiFields.add("datasources_in_gi");
-    openapiFields.add("datasources_in_queue");
+    openapiFields = new HashSet<String>(Arrays.asList("datasources_coverage", "datasources_in_gi", "datasources_in_queue"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3DatasourcesCoverageStats
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3DatasourcesCoverageStats
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3DatasourcesCoverageStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3DatasourcesCoverageStats is not found in the empty JSON string", Outliersenginev3DatasourcesCoverageStats.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3DatasourcesCoverageStats is not found in the empty JSON string", Outliersenginev3DatasourcesCoverageStats.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,12 +198,12 @@ public class Outliersenginev3DatasourcesCoverageStats {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3DatasourcesCoverageStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3DatasourcesCoverageStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3DatasourcesCoverageStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("datasources_coverage") != null && !jsonObj.get("datasources_coverage").isJsonNull()) && !jsonObj.get("datasources_coverage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasources_coverage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasources_coverage").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasources_coverage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasources_coverage").toString()));
       }
   }
 
@@ -235,22 +236,22 @@ public class Outliersenginev3DatasourcesCoverageStats {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3DatasourcesCoverageStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3DatasourcesCoverageStats
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3DatasourcesCoverageStats
-  */
+  /**
+   * Create an instance of Outliersenginev3DatasourcesCoverageStats given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3DatasourcesCoverageStats
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3DatasourcesCoverageStats
+   */
   public static Outliersenginev3DatasourcesCoverageStats fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3DatasourcesCoverageStats.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3DatasourcesCoverageStats to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3DatasourcesCoverageStats to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

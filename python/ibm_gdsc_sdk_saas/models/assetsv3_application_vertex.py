@@ -41,13 +41,13 @@ class Assetsv3ApplicationVertex(BaseModel):
     application_subscription: Optional[List[Assetsv3ConnectionEdge]] = None
     application_type: Optional[StrictStr] = None
     category: Optional[StrictStr] = None
-    criticality: Optional[Assetsv3Level] = None
+    criticality: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     extended_properties: Optional[List[Assetsv3CustomProperty]] = None
     last_used: Optional[datetime] = None
     owner: Optional[List[StrictStr]] = None
     parent_application: Optional[StrictStr] = None
     resolution_key: Optional[StrictStr] = None
-    risk_level: Optional[Assetsv3Level] = None
+    risk_level: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     service_type: Optional[StrictStr] = None
     version: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["app_id", "application_database", "application_endpoint", "application_host", "application_ip", "application_name", "application_storage", "application_sub_type", "application_subscription", "application_type", "category", "criticality", "extended_properties", "last_used", "owner", "parent_application", "resolution_key", "risk_level", "service_type", "version"]
@@ -94,51 +94,51 @@ class Assetsv3ApplicationVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in application_database (list)
         _items = []
         if self.application_database:
-            for _item in self.application_database:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_application_database in self.application_database:
+                if _item_application_database:
+                    _items.append(_item_application_database.to_dict())
             _dict['application_database'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in application_endpoint (list)
         _items = []
         if self.application_endpoint:
-            for _item in self.application_endpoint:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_application_endpoint in self.application_endpoint:
+                if _item_application_endpoint:
+                    _items.append(_item_application_endpoint.to_dict())
             _dict['application_endpoint'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in application_host (list)
         _items = []
         if self.application_host:
-            for _item in self.application_host:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_application_host in self.application_host:
+                if _item_application_host:
+                    _items.append(_item_application_host.to_dict())
             _dict['application_host'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in application_ip (list)
         _items = []
         if self.application_ip:
-            for _item in self.application_ip:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_application_ip in self.application_ip:
+                if _item_application_ip:
+                    _items.append(_item_application_ip.to_dict())
             _dict['application_ip'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in application_storage (list)
         _items = []
         if self.application_storage:
-            for _item in self.application_storage:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_application_storage in self.application_storage:
+                if _item_application_storage:
+                    _items.append(_item_application_storage.to_dict())
             _dict['application_storage'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in application_subscription (list)
         _items = []
         if self.application_subscription:
-            for _item in self.application_subscription:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_application_subscription in self.application_subscription:
+                if _item_application_subscription:
+                    _items.append(_item_application_subscription.to_dict())
             _dict['application_subscription'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         return _dict
 
@@ -163,13 +163,13 @@ class Assetsv3ApplicationVertex(BaseModel):
             "application_subscription": [Assetsv3ConnectionEdge.from_dict(_item) for _item in obj["application_subscription"]] if obj.get("application_subscription") is not None else None,
             "application_type": obj.get("application_type"),
             "category": obj.get("category"),
-            "criticality": obj.get("criticality"),
+            "criticality": obj.get("criticality") if obj.get("criticality") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "extended_properties": [Assetsv3CustomProperty.from_dict(_item) for _item in obj["extended_properties"]] if obj.get("extended_properties") is not None else None,
             "last_used": obj.get("last_used"),
             "owner": obj.get("owner"),
             "parent_application": obj.get("parent_application"),
             "resolution_key": obj.get("resolution_key"),
-            "risk_level": obj.get("risk_level"),
+            "risk_level": obj.get("risk_level") if obj.get("risk_level") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "service_type": obj.get("service_type"),
             "version": obj.get("version")
         })

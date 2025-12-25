@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Outliersenginev3Source
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3Source {
   public static final String SERIALIZED_NAME_DATABASE_NAME = "database_name";
   @SerializedName(SERIALIZED_NAME_DATABASE_NAME)
+  @javax.annotation.Nullable
   private String databaseName;
 
   public static final String SERIALIZED_NAME_DB_USER = "db_user";
   @SerializedName(SERIALIZED_NAME_DB_USER)
+  @javax.annotation.Nullable
   private String dbUser;
 
   public static final String SERIALIZED_NAME_SERVER_IP = "server_ip";
   @SerializedName(SERIALIZED_NAME_SERVER_IP)
+  @javax.annotation.Nullable
   private String serverIp;
 
   public Outliersenginev3Source() {
   }
 
-  public Outliersenginev3Source databaseName(String databaseName) {
+  public Outliersenginev3Source databaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
     return this;
   }
 
-   /**
+  /**
    * Get databaseName
    * @return databaseName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseName() {
     return databaseName;
   }
 
-  public void setDatabaseName(String databaseName) {
+  public void setDatabaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
   }
 
 
-  public Outliersenginev3Source dbUser(String dbUser) {
+  public Outliersenginev3Source dbUser(@javax.annotation.Nullable String dbUser) {
     this.dbUser = dbUser;
     return this;
   }
 
-   /**
+  /**
    * Get dbUser
    * @return dbUser
-  **/
+   */
   @javax.annotation.Nullable
   public String getDbUser() {
     return dbUser;
   }
 
-  public void setDbUser(String dbUser) {
+  public void setDbUser(@javax.annotation.Nullable String dbUser) {
     this.dbUser = dbUser;
   }
 
 
-  public Outliersenginev3Source serverIp(String serverIp) {
+  public Outliersenginev3Source serverIp(@javax.annotation.Nullable String serverIp) {
     this.serverIp = serverIp;
     return this;
   }
 
-   /**
+  /**
    * Get serverIp
    * @return serverIp
-  **/
+   */
   @javax.annotation.Nullable
   public String getServerIp() {
     return serverIp;
   }
 
-  public void setServerIp(String serverIp) {
+  public void setServerIp(@javax.annotation.Nullable String serverIp) {
     this.serverIp = serverIp;
   }
 
@@ -171,25 +175,22 @@ public class Outliersenginev3Source {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("database_name");
-    openapiFields.add("db_user");
-    openapiFields.add("server_ip");
+    openapiFields = new HashSet<String>(Arrays.asList("database_name", "db_user", "server_ip"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3Source
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3Source
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3Source.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3Source is not found in the empty JSON string", Outliersenginev3Source.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3Source is not found in the empty JSON string", Outliersenginev3Source.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Outliersenginev3Source {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3Source.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3Source` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3Source` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("database_name") != null && !jsonObj.get("database_name").isJsonNull()) && !jsonObj.get("database_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
       }
       if ((jsonObj.get("db_user") != null && !jsonObj.get("db_user").isJsonNull()) && !jsonObj.get("db_user").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `db_user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_user").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `db_user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_user").toString()));
       }
       if ((jsonObj.get("server_ip") != null && !jsonObj.get("server_ip").isJsonNull()) && !jsonObj.get("server_ip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `server_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("server_ip").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `server_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("server_ip").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Outliersenginev3Source {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3Source given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3Source
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3Source
-  */
+  /**
+   * Create an instance of Outliersenginev3Source given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3Source
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3Source
+   */
   public static Outliersenginev3Source fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3Source.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3Source to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3Source to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AuthInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AuthInfo {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
+  @javax.annotation.Nonnull
   private String code;
 
   public static final String SERIALIZED_NAME_PROVIDER_ID = "providerId";
   @SerializedName(SERIALIZED_NAME_PROVIDER_ID)
+  @javax.annotation.Nonnull
   private String providerId;
 
   public AuthInfo() {
   }
 
-  public AuthInfo code(String code) {
+  public AuthInfo code(@javax.annotation.Nonnull String code) {
     this.code = code;
     return this;
   }
 
-   /**
+  /**
    * Get code
    * @return code
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCode() {
     return code;
   }
 
-  public void setCode(String code) {
+  public void setCode(@javax.annotation.Nonnull String code) {
     this.code = code;
   }
 
 
-  public AuthInfo providerId(String providerId) {
+  public AuthInfo providerId(@javax.annotation.Nonnull String providerId) {
     this.providerId = providerId;
     return this;
   }
 
-   /**
+  /**
    * Get providerId
    * @return providerId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getProviderId() {
     return providerId;
   }
 
-  public void setProviderId(String providerId) {
+  public void setProviderId(@javax.annotation.Nonnull String providerId) {
     this.providerId = providerId;
   }
 
@@ -146,26 +149,22 @@ public class AuthInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("code");
-    openapiFields.add("providerId");
+    openapiFields = new HashSet<String>(Arrays.asList("code", "providerId"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("code");
-    openapiRequiredFields.add("providerId");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("code", "providerId"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AuthInfo
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AuthInfo
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AuthInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AuthInfo is not found in the empty JSON string", AuthInfo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AuthInfo is not found in the empty JSON string", AuthInfo.openapiRequiredFields.toString()));
         }
       }
 
@@ -173,22 +172,22 @@ public class AuthInfo {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AuthInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AuthInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AuthInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AuthInfo.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("code").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("code").toString()));
       }
       if (!jsonObj.get("providerId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `providerId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("providerId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `providerId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("providerId").toString()));
       }
   }
 
@@ -221,22 +220,22 @@ public class AuthInfo {
     }
   }
 
- /**
-  * Create an instance of AuthInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AuthInfo
-  * @throws IOException if the JSON string is invalid with respect to AuthInfo
-  */
+  /**
+   * Create an instance of AuthInfo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AuthInfo
+   * @throws IOException if the JSON string is invalid with respect to AuthInfo
+   */
   public static AuthInfo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AuthInfo.class);
   }
 
- /**
-  * Convert an instance of AuthInfo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AuthInfo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

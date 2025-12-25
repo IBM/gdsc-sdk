@@ -95,86 +95,86 @@ class Assetsv3AssetIngestionRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in accounts (list)
         _items = []
         if self.accounts:
-            for _item in self.accounts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_accounts in self.accounts:
+                if _item_accounts:
+                    _items.append(_item_accounts.to_dict())
             _dict['accounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in applications (list)
         _items = []
         if self.applications:
-            for _item in self.applications:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_applications in self.applications:
+                if _item_applications:
+                    _items.append(_item_applications.to_dict())
             _dict['applications'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in databases (list)
         _items = []
         if self.databases:
-            for _item in self.databases:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_databases in self.databases:
+                if _item_databases:
+                    _items.append(_item_databases.to_dict())
             _dict['databases'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in deployments (list)
         _items = []
         if self.deployments:
-            for _item in self.deployments:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_deployments in self.deployments:
+                if _item_deployments:
+                    _items.append(_item_deployments.to_dict())
             _dict['deployments'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in endpoints (list)
         _items = []
         if self.endpoints:
-            for _item in self.endpoints:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_endpoints in self.endpoints:
+                if _item_endpoints:
+                    _items.append(_item_endpoints.to_dict())
             _dict['endpoints'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in hosts (list)
         _items = []
         if self.hosts:
-            for _item in self.hosts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_hosts in self.hosts:
+                if _item_hosts:
+                    _items.append(_item_hosts.to_dict())
             _dict['hosts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in ips (list)
         _items = []
         if self.ips:
-            for _item in self.ips:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_ips in self.ips:
+                if _item_ips:
+                    _items.append(_item_ips.to_dict())
             _dict['ips'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in models (list)
         _items = []
         if self.models:
-            for _item in self.models:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_models in self.models:
+                if _item_models:
+                    _items.append(_item_models.to_dict())
             _dict['models'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in ports (list)
         _items = []
         if self.ports:
-            for _item in self.ports:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_ports in self.ports:
+                if _item_ports:
+                    _items.append(_item_ports.to_dict())
             _dict['ports'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in resources (list)
         _items = []
         if self.resources:
-            for _item in self.resources:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_resources in self.resources:
+                if _item_resources:
+                    _items.append(_item_resources.to_dict())
             _dict['resources'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in storages (list)
         _items = []
         if self.storages:
-            for _item in self.storages:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_storages in self.storages:
+                if _item_storages:
+                    _items.append(_item_storages.to_dict())
             _dict['storages'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in subscriptions (list)
         _items = []
         if self.subscriptions:
-            for _item in self.subscriptions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_subscriptions in self.subscriptions:
+                if _item_subscriptions:
+                    _items.append(_item_subscriptions.to_dict())
             _dict['subscriptions'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Returns task count.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3GetTasksCountResponse {
   public static final String SERIALIZED_NAME_COUNTS = "counts";
   @SerializedName(SERIALIZED_NAME_COUNTS)
+  @javax.annotation.Nullable
   private List<Workflowv3TaskCount> counts = new ArrayList<>();
 
   public Workflowv3GetTasksCountResponse() {
   }
 
-  public Workflowv3GetTasksCountResponse counts(List<Workflowv3TaskCount> counts) {
+  public Workflowv3GetTasksCountResponse counts(@javax.annotation.Nullable List<Workflowv3TaskCount> counts) {
     this.counts = counts;
     return this;
   }
@@ -74,16 +76,16 @@ public class Workflowv3GetTasksCountResponse {
     return this;
   }
 
-   /**
+  /**
    * Total Rows Count.
    * @return counts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3TaskCount> getCounts() {
     return counts;
   }
 
-  public void setCounts(List<Workflowv3TaskCount> counts) {
+  public void setCounts(@javax.annotation.Nullable List<Workflowv3TaskCount> counts) {
     this.counts = counts;
   }
 
@@ -132,23 +134,22 @@ public class Workflowv3GetTasksCountResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("counts");
+    openapiFields = new HashSet<String>(Arrays.asList("counts"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3GetTasksCountResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3GetTasksCountResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3GetTasksCountResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3GetTasksCountResponse is not found in the empty JSON string", Workflowv3GetTasksCountResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3GetTasksCountResponse is not found in the empty JSON string", Workflowv3GetTasksCountResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Workflowv3GetTasksCountResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3GetTasksCountResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3GetTasksCountResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3GetTasksCountResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Workflowv3GetTasksCountResponse {
         if (jsonArraycounts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("counts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `counts` to be an array in the JSON string but got `%s`", jsonObj.get("counts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `counts` to be an array in the JSON string but got `%s`", jsonObj.get("counts").toString()));
           }
 
           // validate the optional field `counts` (array)
@@ -205,22 +206,22 @@ public class Workflowv3GetTasksCountResponse {
     }
   }
 
- /**
-  * Create an instance of Workflowv3GetTasksCountResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3GetTasksCountResponse
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3GetTasksCountResponse
-  */
+  /**
+   * Create an instance of Workflowv3GetTasksCountResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3GetTasksCountResponse
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3GetTasksCountResponse
+   */
   public static Workflowv3GetTasksCountResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3GetTasksCountResponse.class);
   }
 
- /**
-  * Convert an instance of Workflowv3GetTasksCountResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3GetTasksCountResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

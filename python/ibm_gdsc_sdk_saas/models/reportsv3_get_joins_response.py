@@ -72,9 +72,9 @@ class Reportsv3GetJoinsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in join_defs (list)
         _items = []
         if self.join_defs:
-            for _item in self.join_defs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_join_defs in self.join_defs:
+                if _item_join_defs:
+                    _items.append(_item_join_defs.to_dict())
             _dict['join_defs'] = _items
         return _dict
 

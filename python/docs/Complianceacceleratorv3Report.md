@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **groups_present** | [**List[Complianceacceleratorv3Group]**](Complianceacceleratorv3Group.md) | Groups present in the reports. | [optional] 
 **report_id** | **str** | Id of the reports. | [optional] 
 **report_tags** | [**List[Reportsv3ReportTag]**](Reportsv3ReportTag.md) | The report tags. | [optional] 
-**status** | [**Complianceacceleratorv3ReportStatus**](Complianceacceleratorv3ReportStatus.md) |  | [optional] 
+**status** | [**Complianceacceleratorv3ReportStatus**](Complianceacceleratorv3ReportStatus.md) |  | [optional] [default to Complianceacceleratorv3ReportStatus.POPULATED]
 **title** | **str** | Title of the report. | [optional] 
 
 ## Example

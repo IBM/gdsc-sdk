@@ -31,7 +31,7 @@ class Assetsv3DeploymentVertex(BaseModel):
     """ # noqa: E501
     city: Optional[StrictStr] = None
     country: Optional[StrictStr] = None
-    criticality: Optional[Assetsv3Level] = None
+    criticality: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     data_center: Optional[StrictStr] = None
     deployment_account: Optional[List[Assetsv3ConnectionEdge]] = None
     deployment_id: Optional[StrictStr] = None
@@ -42,7 +42,7 @@ class Assetsv3DeploymentVertex(BaseModel):
     name: Optional[StrictStr] = None
     region: Optional[StrictStr] = None
     resolution_key: Optional[StrictStr] = None
-    risk_level: Optional[Assetsv3Level] = None
+    risk_level: Optional[Assetsv3Level] = Assetsv3Level.LEVEL_UNKNOWN
     service: Optional[StrictStr] = None
     state: Optional[StrictStr] = None
     type: Optional[StrictStr] = None
@@ -90,23 +90,23 @@ class Assetsv3DeploymentVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in deployment_account (list)
         _items = []
         if self.deployment_account:
-            for _item in self.deployment_account:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_deployment_account in self.deployment_account:
+                if _item_deployment_account:
+                    _items.append(_item_deployment_account.to_dict())
             _dict['deployment_account'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in deployment_subscription (list)
         _items = []
         if self.deployment_subscription:
-            for _item in self.deployment_subscription:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_deployment_subscription in self.deployment_subscription:
+                if _item_deployment_subscription:
+                    _items.append(_item_deployment_subscription.to_dict())
             _dict['deployment_subscription'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         return _dict
 
@@ -122,7 +122,7 @@ class Assetsv3DeploymentVertex(BaseModel):
         _obj = cls.model_validate({
             "city": obj.get("city"),
             "country": obj.get("country"),
-            "criticality": obj.get("criticality"),
+            "criticality": obj.get("criticality") if obj.get("criticality") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "data_center": obj.get("data_center"),
             "deployment_account": [Assetsv3ConnectionEdge.from_dict(_item) for _item in obj["deployment_account"]] if obj.get("deployment_account") is not None else None,
             "deployment_id": obj.get("deployment_id"),
@@ -133,7 +133,7 @@ class Assetsv3DeploymentVertex(BaseModel):
             "name": obj.get("name"),
             "region": obj.get("region"),
             "resolution_key": obj.get("resolution_key"),
-            "risk_level": obj.get("risk_level"),
+            "risk_level": obj.get("risk_level") if obj.get("risk_level") is not None else Assetsv3Level.LEVEL_UNKNOWN,
             "service": obj.get("service"),
             "state": obj.get("state"),
             "type": obj.get("type")

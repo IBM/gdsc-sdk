@@ -49,6 +49,7 @@ export class Jumpboxv3Tenant {
     * Settings pertaining to all users of this tenant.
     */
     'settings'?: { [key: string]: string; };
+    'status'?: string;
     'tenantCapabilities'?: { [key: string]: boolean; };
     /**
     * The unique id for the tenant object.
@@ -60,6 +61,8 @@ export class Jumpboxv3Tenant {
     'uid'?: string;
 
     static readonly discriminator: string | undefined = undefined;
+
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
@@ -111,6 +114,12 @@ export class Jumpboxv3Tenant {
             "format": ""
         },
         {
+            "name": "status",
+            "baseName": "status",
+            "type": "string",
+            "format": ""
+        },
+        {
             "name": "tenantCapabilities",
             "baseName": "tenant_capabilities",
             "type": "{ [key: string]: boolean; }",
@@ -136,4 +145,3 @@ export class Jumpboxv3Tenant {
     public constructor() {
     }
 }
-

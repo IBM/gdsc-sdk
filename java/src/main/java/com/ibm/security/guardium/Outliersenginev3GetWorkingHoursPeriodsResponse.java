@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetWorkingHoursPeriodsResponse is the response object for GetWorkingHoursPeriods API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3GetWorkingHoursPeriodsResponse {
   public static final String SERIALIZED_NAME_PERIODS = "periods";
   @SerializedName(SERIALIZED_NAME_PERIODS)
+  @javax.annotation.Nullable
   private List<Outliersenginev3WorkingHoursPeriod> periods = new ArrayList<>();
 
   public Outliersenginev3GetWorkingHoursPeriodsResponse() {
   }
 
-  public Outliersenginev3GetWorkingHoursPeriodsResponse periods(List<Outliersenginev3WorkingHoursPeriod> periods) {
+  public Outliersenginev3GetWorkingHoursPeriodsResponse periods(@javax.annotation.Nullable List<Outliersenginev3WorkingHoursPeriod> periods) {
     this.periods = periods;
     return this;
   }
@@ -74,16 +76,16 @@ public class Outliersenginev3GetWorkingHoursPeriodsResponse {
     return this;
   }
 
-   /**
+  /**
    * Periods is a list of WorkingHoursPeriod objects retrived from the database.
    * @return periods
-  **/
+   */
   @javax.annotation.Nullable
   public List<Outliersenginev3WorkingHoursPeriod> getPeriods() {
     return periods;
   }
 
-  public void setPeriods(List<Outliersenginev3WorkingHoursPeriod> periods) {
+  public void setPeriods(@javax.annotation.Nullable List<Outliersenginev3WorkingHoursPeriod> periods) {
     this.periods = periods;
   }
 
@@ -132,23 +134,22 @@ public class Outliersenginev3GetWorkingHoursPeriodsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("periods");
+    openapiFields = new HashSet<String>(Arrays.asList("periods"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3GetWorkingHoursPeriodsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3GetWorkingHoursPeriodsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3GetWorkingHoursPeriodsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3GetWorkingHoursPeriodsResponse is not found in the empty JSON string", Outliersenginev3GetWorkingHoursPeriodsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3GetWorkingHoursPeriodsResponse is not found in the empty JSON string", Outliersenginev3GetWorkingHoursPeriodsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Outliersenginev3GetWorkingHoursPeriodsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3GetWorkingHoursPeriodsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3GetWorkingHoursPeriodsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3GetWorkingHoursPeriodsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Outliersenginev3GetWorkingHoursPeriodsResponse {
         if (jsonArrayperiods != null) {
           // ensure the json data is an array
           if (!jsonObj.get("periods").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `periods` to be an array in the JSON string but got `%s`", jsonObj.get("periods").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `periods` to be an array in the JSON string but got `%s`", jsonObj.get("periods").toString()));
           }
 
           // validate the optional field `periods` (array)
@@ -205,22 +206,22 @@ public class Outliersenginev3GetWorkingHoursPeriodsResponse {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3GetWorkingHoursPeriodsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3GetWorkingHoursPeriodsResponse
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3GetWorkingHoursPeriodsResponse
-  */
+  /**
+   * Create an instance of Outliersenginev3GetWorkingHoursPeriodsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3GetWorkingHoursPeriodsResponse
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3GetWorkingHoursPeriodsResponse
+   */
   public static Outliersenginev3GetWorkingHoursPeriodsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3GetWorkingHoursPeriodsResponse.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3GetWorkingHoursPeriodsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3GetWorkingHoursPeriodsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

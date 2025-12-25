@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,28 +40,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StreamByRegion defines an array of streams.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Streamsv3StreamByRegion {
   public static final String SERIALIZED_NAME_STREAM = "stream";
   @SerializedName(SERIALIZED_NAME_STREAM)
+  @javax.annotation.Nullable
   private List<String> stream = new ArrayList<>();
 
   public Streamsv3StreamByRegion() {
   }
 
-  public Streamsv3StreamByRegion stream(List<String> stream) {
+  public Streamsv3StreamByRegion stream(@javax.annotation.Nullable List<String> stream) {
     this.stream = stream;
     return this;
   }
@@ -73,16 +75,16 @@ public class Streamsv3StreamByRegion {
     return this;
   }
 
-   /**
+  /**
    * Array of streams.
    * @return stream
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getStream() {
     return stream;
   }
 
-  public void setStream(List<String> stream) {
+  public void setStream(@javax.annotation.Nullable List<String> stream) {
     this.stream = stream;
   }
 
@@ -131,23 +133,22 @@ public class Streamsv3StreamByRegion {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("stream");
+    openapiFields = new HashSet<String>(Arrays.asList("stream"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Streamsv3StreamByRegion
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Streamsv3StreamByRegion
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Streamsv3StreamByRegion.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Streamsv3StreamByRegion is not found in the empty JSON string", Streamsv3StreamByRegion.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Streamsv3StreamByRegion is not found in the empty JSON string", Streamsv3StreamByRegion.openapiRequiredFields.toString()));
         }
       }
 
@@ -155,13 +156,13 @@ public class Streamsv3StreamByRegion {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Streamsv3StreamByRegion.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Streamsv3StreamByRegion` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Streamsv3StreamByRegion` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("stream") != null && !jsonObj.get("stream").isJsonNull() && !jsonObj.get("stream").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stream` to be an array in the JSON string but got `%s`", jsonObj.get("stream").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stream` to be an array in the JSON string but got `%s`", jsonObj.get("stream").toString()));
       }
   }
 
@@ -194,22 +195,22 @@ public class Streamsv3StreamByRegion {
     }
   }
 
- /**
-  * Create an instance of Streamsv3StreamByRegion given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Streamsv3StreamByRegion
-  * @throws IOException if the JSON string is invalid with respect to Streamsv3StreamByRegion
-  */
+  /**
+   * Create an instance of Streamsv3StreamByRegion given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Streamsv3StreamByRegion
+   * @throws IOException if the JSON string is invalid with respect to Streamsv3StreamByRegion
+   */
   public static Streamsv3StreamByRegion fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Streamsv3StreamByRegion.class);
   }
 
- /**
-  * Convert an instance of Streamsv3StreamByRegion to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Streamsv3StreamByRegion to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

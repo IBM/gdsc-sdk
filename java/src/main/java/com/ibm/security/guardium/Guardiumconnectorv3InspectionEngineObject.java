@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Information for an inspection engine object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3InspectionEngineObject {
   public static final String SERIALIZED_NAME_IE_STATUS = "ie_status";
   @SerializedName(SERIALIZED_NAME_IE_STATUS)
+  @javax.annotation.Nullable
   private Integer ieStatus;
 
   public static final String SERIALIZED_NAME_INSPECTION_ENGINE = "inspection_engine";
   @SerializedName(SERIALIZED_NAME_INSPECTION_ENGINE)
+  @javax.annotation.Nullable
   private String inspectionEngine;
 
   public Guardiumconnectorv3InspectionEngineObject() {
   }
 
-  public Guardiumconnectorv3InspectionEngineObject ieStatus(Integer ieStatus) {
+  public Guardiumconnectorv3InspectionEngineObject ieStatus(@javax.annotation.Nullable Integer ieStatus) {
     this.ieStatus = ieStatus;
     return this;
   }
 
-   /**
+  /**
    * Inspection engine status.
    * @return ieStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getIeStatus() {
     return ieStatus;
   }
 
-  public void setIeStatus(Integer ieStatus) {
+  public void setIeStatus(@javax.annotation.Nullable Integer ieStatus) {
     this.ieStatus = ieStatus;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineObject inspectionEngine(String inspectionEngine) {
+  public Guardiumconnectorv3InspectionEngineObject inspectionEngine(@javax.annotation.Nullable String inspectionEngine) {
     this.inspectionEngine = inspectionEngine;
     return this;
   }
 
-   /**
+  /**
    * Inspection engine name.
    * @return inspectionEngine
-  **/
+   */
   @javax.annotation.Nullable
   public String getInspectionEngine() {
     return inspectionEngine;
   }
 
-  public void setInspectionEngine(String inspectionEngine) {
+  public void setInspectionEngine(@javax.annotation.Nullable String inspectionEngine) {
     this.inspectionEngine = inspectionEngine;
   }
 
@@ -146,24 +149,22 @@ public class Guardiumconnectorv3InspectionEngineObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ie_status");
-    openapiFields.add("inspection_engine");
+    openapiFields = new HashSet<String>(Arrays.asList("ie_status", "inspection_engine"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3InspectionEngineObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3InspectionEngineObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3InspectionEngineObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3InspectionEngineObject is not found in the empty JSON string", Guardiumconnectorv3InspectionEngineObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3InspectionEngineObject is not found in the empty JSON string", Guardiumconnectorv3InspectionEngineObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,12 +172,12 @@ public class Guardiumconnectorv3InspectionEngineObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3InspectionEngineObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3InspectionEngineObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3InspectionEngineObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("inspection_engine") != null && !jsonObj.get("inspection_engine").isJsonNull()) && !jsonObj.get("inspection_engine").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `inspection_engine` to be a primitive type in the JSON string but got `%s`", jsonObj.get("inspection_engine").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `inspection_engine` to be a primitive type in the JSON string but got `%s`", jsonObj.get("inspection_engine").toString()));
       }
   }
 
@@ -209,22 +210,22 @@ public class Guardiumconnectorv3InspectionEngineObject {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3InspectionEngineObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3InspectionEngineObject
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3InspectionEngineObject
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3InspectionEngineObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3InspectionEngineObject
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3InspectionEngineObject
+   */
   public static Guardiumconnectorv3InspectionEngineObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3InspectionEngineObject.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3InspectionEngineObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3InspectionEngineObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

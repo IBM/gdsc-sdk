@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **name** | **str** | The descriptive name. | [optional] 
 **part_number** | **str** | Part number. | [optional] 
 **settings** | **Dict[str, str]** | Settings pertaining to all users of this tenant. | [optional] 
+**status** | **str** |  | [optional] 
 **tenant_capabilities** | **Dict[str, bool]** |  | [optional] 
 **tenant_id** | **str** | The unique id for the tenant object. | [optional] 
 **uid** | **str** | Email. | [optional] 

@@ -38,7 +38,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/{dataResourceId}'
+        const localVarPath = '/api/v2/dspm/dataResources/{dataResourceId}'
             .replace('{' + 'dataResourceId' + '}', encodeURIComponent(String(dataResourceId)));
 
         // Make Request Context
@@ -53,7 +53,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -73,7 +73,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/summary';
+        const localVarPath = '/api/v2/dspm/dataResources/summary';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -86,7 +86,10 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
         // Query Params
         if (filter !== undefined) {
-            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "ListDataResourcesFilterParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(filter, "ListDataResourcesFilterParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
 
@@ -97,7 +100,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -123,7 +126,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources';
+        const localVarPath = '/api/v2/dspm/dataResources';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -136,12 +139,18 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
         // Query Params
         if (filter !== undefined) {
-            requestContext.setQueryParam("filter", ObjectSerializer.serialize(filter, "ListDataResourcesFilterParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(filter, "ListDataResourcesFilterParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
         // Query Params
         if (sort !== undefined) {
-            requestContext.setQueryParam("sort", ObjectSerializer.serialize(sort, "ListDataResourcesSortParameter", ""));
+            const serializedParams = ObjectSerializer.serialize(sort, "ListDataResourcesSortParameter", "");
+            for (const key of Object.keys(serializedParams)) {
+                requestContext.setQueryParam(key, serializedParams[key]);
+            }
         }
 
         // Query Params
@@ -162,7 +171,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -187,7 +196,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/names';
+        const localVarPath = '/api/v2/dspm/dataResources/names';
 
         // Make Request Context
         const requestContext = _config.baseServer.makeRequestContext(localVarPath, HttpMethod.GET);
@@ -211,7 +220,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -241,7 +250,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/{dataResourceId}/removeResource'
+        const localVarPath = '/api/v2/dspm/dataResources/{dataResourceId}/removeResource'
             .replace('{' + 'dataResourceId' + '}', encodeURIComponent(String(dataResourceId)));
 
         // Make Request Context
@@ -261,7 +270,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -291,7 +300,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
 
 
         // Path Params
-        const localVarPath = '/api/v1/dspm/dataResources/{dataResourceId}/reviewed'
+        const localVarPath = '/api/v2/dspm/dataResources/{dataResourceId}/reviewed'
             .replace('{' + 'dataResourceId' + '}', encodeURIComponent(String(dataResourceId)));
 
         // Make Request Context
@@ -317,7 +326,7 @@ export class DataResourcesApiRequestFactory extends BaseAPIRequestFactory {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }

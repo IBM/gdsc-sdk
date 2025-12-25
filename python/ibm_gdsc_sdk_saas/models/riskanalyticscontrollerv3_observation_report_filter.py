@@ -29,7 +29,7 @@ class Riskanalyticscontrollerv3ObservationReportFilter(BaseModel):
     """ # noqa: E501
     header_id: Optional[StrictStr] = Field(default=None, description="The header id to filter.")
     header_value: Optional[StrictStr] = Field(default=None, description="The value to filter this header by.")
-    operator_type: Optional[Reportsv3OperatorType] = None
+    operator_type: Optional[Reportsv3OperatorType] = Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE
     __properties: ClassVar[List[str]] = ["header_id", "header_value", "operator_type"]
 
     model_config = ConfigDict(
@@ -85,7 +85,7 @@ class Riskanalyticscontrollerv3ObservationReportFilter(BaseModel):
         _obj = cls.model_validate({
             "header_id": obj.get("header_id"),
             "header_value": obj.get("header_value"),
-            "operator_type": obj.get("operator_type")
+            "operator_type": obj.get("operator_type") if obj.get("operator_type") is not None else Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE
         })
         return _obj
 

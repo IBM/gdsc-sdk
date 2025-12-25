@@ -25,6 +25,8 @@ export class Riskanalyticscontrollerv3FindingDetailsMap {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "findingDetails",
@@ -58,4 +60,3 @@ export class Riskanalyticscontrollerv3FindingDetailsMap {
     public constructor() {
     }
 }
-

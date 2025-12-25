@@ -28,7 +28,7 @@ class Riskanalyticscontrollerv3ShortObservation(BaseModel):
     Short observation.
     """ # noqa: E501
     count: Optional[StrictInt] = Field(default=None, description="Count of observation.")
-    type: Optional[Riskanalyticscontrollerv3ObservationType] = None
+    type: Optional[Riskanalyticscontrollerv3ObservationType] = Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE
     __properties: ClassVar[List[str]] = ["count", "type"]
 
     model_config = ConfigDict(
@@ -83,7 +83,7 @@ class Riskanalyticscontrollerv3ShortObservation(BaseModel):
 
         _obj = cls.model_validate({
             "count": obj.get("count"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE
         })
         return _obj
 

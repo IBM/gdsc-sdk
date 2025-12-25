@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,180 +40,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DateRange represents a date range type - from an enum and if its custom / relative - the start and the end date.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3DateRange {
   public static final String SERIALIZED_NAME_END_DATE = "end_date";
   @SerializedName(SERIALIZED_NAME_END_DATE)
+  @javax.annotation.Nullable
   private String endDate;
 
   public static final String SERIALIZED_NAME_END_NUMBER = "end_number";
   @SerializedName(SERIALIZED_NAME_END_NUMBER)
+  @javax.annotation.Nullable
   private Integer endNumber;
 
   public static final String SERIALIZED_NAME_END_UNIT = "end_unit";
   @SerializedName(SERIALIZED_NAME_END_UNIT)
+  @javax.annotation.Nullable
   private Reportsv3DateRangeUnit endUnit = Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE;
 
   public static final String SERIALIZED_NAME_START_DATE = "start_date";
   @SerializedName(SERIALIZED_NAME_START_DATE)
+  @javax.annotation.Nullable
   private String startDate;
 
   public static final String SERIALIZED_NAME_START_NUMBER = "start_number";
   @SerializedName(SERIALIZED_NAME_START_NUMBER)
+  @javax.annotation.Nullable
   private Integer startNumber;
 
   public static final String SERIALIZED_NAME_START_UNIT = "start_unit";
   @SerializedName(SERIALIZED_NAME_START_UNIT)
+  @javax.annotation.Nullable
   private Reportsv3DateRangeUnit startUnit = Reportsv3DateRangeUnit.UNDEFINED_UINT_TYPE;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3DateRangeType type = Reportsv3DateRangeType.UNDEFINED_DATE_RANGE_TYPE;
 
   public Reportsv3DateRange() {
   }
 
-  public Reportsv3DateRange endDate(String endDate) {
+  public Reportsv3DateRange endDate(@javax.annotation.Nullable String endDate) {
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * If custom holds the date string.
    * @return endDate
-  **/
+   */
   @javax.annotation.Nullable
   public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(String endDate) {
+  public void setEndDate(@javax.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
 
-  public Reportsv3DateRange endNumber(Integer endNumber) {
+  public Reportsv3DateRange endNumber(@javax.annotation.Nullable Integer endNumber) {
     this.endNumber = endNumber;
     return this;
   }
 
-   /**
+  /**
    * If custom-relative -  holds the end number.
    * @return endNumber
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getEndNumber() {
     return endNumber;
   }
 
-  public void setEndNumber(Integer endNumber) {
+  public void setEndNumber(@javax.annotation.Nullable Integer endNumber) {
     this.endNumber = endNumber;
   }
 
 
-  public Reportsv3DateRange endUnit(Reportsv3DateRangeUnit endUnit) {
+  public Reportsv3DateRange endUnit(@javax.annotation.Nullable Reportsv3DateRangeUnit endUnit) {
     this.endUnit = endUnit;
     return this;
   }
 
-   /**
+  /**
    * Get endUnit
    * @return endUnit
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRangeUnit getEndUnit() {
     return endUnit;
   }
 
-  public void setEndUnit(Reportsv3DateRangeUnit endUnit) {
+  public void setEndUnit(@javax.annotation.Nullable Reportsv3DateRangeUnit endUnit) {
     this.endUnit = endUnit;
   }
 
 
-  public Reportsv3DateRange startDate(String startDate) {
+  public Reportsv3DateRange startDate(@javax.annotation.Nullable String startDate) {
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * If custom holds the date string.
    * @return startDate
-  **/
+   */
   @javax.annotation.Nullable
   public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(String startDate) {
+  public void setStartDate(@javax.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
 
-  public Reportsv3DateRange startNumber(Integer startNumber) {
+  public Reportsv3DateRange startNumber(@javax.annotation.Nullable Integer startNumber) {
     this.startNumber = startNumber;
     return this;
   }
 
-   /**
+  /**
    * If custom-relative -  holds the start number.
    * @return startNumber
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStartNumber() {
     return startNumber;
   }
 
-  public void setStartNumber(Integer startNumber) {
+  public void setStartNumber(@javax.annotation.Nullable Integer startNumber) {
     this.startNumber = startNumber;
   }
 
 
-  public Reportsv3DateRange startUnit(Reportsv3DateRangeUnit startUnit) {
+  public Reportsv3DateRange startUnit(@javax.annotation.Nullable Reportsv3DateRangeUnit startUnit) {
     this.startUnit = startUnit;
     return this;
   }
 
-   /**
+  /**
    * Get startUnit
    * @return startUnit
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRangeUnit getStartUnit() {
     return startUnit;
   }
 
-  public void setStartUnit(Reportsv3DateRangeUnit startUnit) {
+  public void setStartUnit(@javax.annotation.Nullable Reportsv3DateRangeUnit startUnit) {
     this.startUnit = startUnit;
   }
 
 
-  public Reportsv3DateRange type(Reportsv3DateRangeType type) {
+  public Reportsv3DateRange type(@javax.annotation.Nullable Reportsv3DateRangeType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRangeType getType() {
     return type;
   }
 
-  public void setType(Reportsv3DateRangeType type) {
+  public void setType(@javax.annotation.Nullable Reportsv3DateRangeType type) {
     this.type = type;
   }
 
@@ -273,29 +281,22 @@ public class Reportsv3DateRange {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("end_date");
-    openapiFields.add("end_number");
-    openapiFields.add("end_unit");
-    openapiFields.add("start_date");
-    openapiFields.add("start_number");
-    openapiFields.add("start_unit");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("end_date", "end_number", "end_unit", "start_date", "start_number", "start_unit", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3DateRange
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3DateRange
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3DateRange.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3DateRange is not found in the empty JSON string", Reportsv3DateRange.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3DateRange is not found in the empty JSON string", Reportsv3DateRange.openapiRequiredFields.toString()));
         }
       }
 
@@ -303,19 +304,19 @@ public class Reportsv3DateRange {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3DateRange.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3DateRange` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3DateRange` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("end_date") != null && !jsonObj.get("end_date").isJsonNull()) && !jsonObj.get("end_date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `end_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_date").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `end_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("end_date").toString()));
       }
       // validate the optional field `end_unit`
       if (jsonObj.get("end_unit") != null && !jsonObj.get("end_unit").isJsonNull()) {
         Reportsv3DateRangeUnit.validateJsonElement(jsonObj.get("end_unit"));
       }
       if ((jsonObj.get("start_date") != null && !jsonObj.get("start_date").isJsonNull()) && !jsonObj.get("start_date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `start_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `start_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_date").toString()));
       }
       // validate the optional field `start_unit`
       if (jsonObj.get("start_unit") != null && !jsonObj.get("start_unit").isJsonNull()) {
@@ -356,22 +357,22 @@ public class Reportsv3DateRange {
     }
   }
 
- /**
-  * Create an instance of Reportsv3DateRange given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3DateRange
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3DateRange
-  */
+  /**
+   * Create an instance of Reportsv3DateRange given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3DateRange
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3DateRange
+   */
   public static Reportsv3DateRange fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3DateRange.class);
   }
 
- /**
-  * Convert an instance of Reportsv3DateRange to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3DateRange to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

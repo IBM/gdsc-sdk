@@ -82,16 +82,16 @@ class Assetsv3SubscriptionVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in subscription_account (list)
         _items = []
         if self.subscription_account:
-            for _item in self.subscription_account:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_subscription_account in self.subscription_account:
+                if _item_subscription_account:
+                    _items.append(_item_subscription_account.to_dict())
             _dict['subscription_account'] = _items
         return _dict
 

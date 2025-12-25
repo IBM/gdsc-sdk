@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,65 +40,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Comparator
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Comparator {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nonnull
   private BigDecimal value;
 
   public static final String SERIALIZED_NAME_OPERATOR = "operator";
   @SerializedName(SERIALIZED_NAME_OPERATOR)
+  @javax.annotation.Nonnull
   private Operator operator;
 
   public Comparator() {
   }
 
-  public Comparator value(BigDecimal value) {
+  public Comparator value(@javax.annotation.Nonnull BigDecimal value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Get value
    * @return value
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getValue() {
     return value;
   }
 
-  public void setValue(BigDecimal value) {
+  public void setValue(@javax.annotation.Nonnull BigDecimal value) {
     this.value = value;
   }
 
 
-  public Comparator operator(Operator operator) {
+  public Comparator operator(@javax.annotation.Nonnull Operator operator) {
     this.operator = operator;
     return this;
   }
 
-   /**
+  /**
    * Get operator
    * @return operator
-  **/
+   */
   @javax.annotation.Nonnull
   public Operator getOperator() {
     return operator;
   }
 
-  public void setOperator(Operator operator) {
+  public void setOperator(@javax.annotation.Nonnull Operator operator) {
     this.operator = operator;
   }
 
@@ -148,26 +151,22 @@ public class Comparator {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("value");
-    openapiFields.add("operator");
+    openapiFields = new HashSet<String>(Arrays.asList("value", "operator"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("value");
-    openapiRequiredFields.add("operator");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("value", "operator"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Comparator
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Comparator
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Comparator.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Comparator is not found in the empty JSON string", Comparator.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Comparator is not found in the empty JSON string", Comparator.openapiRequiredFields.toString()));
         }
       }
 
@@ -175,14 +174,14 @@ public class Comparator {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Comparator.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Comparator` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Comparator` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Comparator.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -219,22 +218,22 @@ public class Comparator {
     }
   }
 
- /**
-  * Create an instance of Comparator given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Comparator
-  * @throws IOException if the JSON string is invalid with respect to Comparator
-  */
+  /**
+   * Create an instance of Comparator given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Comparator
+   * @throws IOException if the JSON string is invalid with respect to Comparator
+   */
   public static Comparator fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Comparator.class);
   }
 
- /**
-  * Convert an instance of Comparator to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Comparator to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

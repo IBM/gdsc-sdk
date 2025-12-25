@@ -27,7 +27,7 @@ class Riskanalyticscontrollerv3ExcludedItem(BaseModel):
     """
     Excluded item.
     """ # noqa: E501
-    excluded_item_type: Optional[Riskanalyticscontrollerv3ExcludedItemType] = None
+    excluded_item_type: Optional[Riskanalyticscontrollerv3ExcludedItemType] = Riskanalyticscontrollerv3ExcludedItemType.UNDEFINED_EXCLUDED_ITEM_TYPE
     key: Optional[StrictStr] = Field(default=None, description="Excluded key.")
     __properties: ClassVar[List[str]] = ["excluded_item_type", "key"]
 
@@ -82,7 +82,7 @@ class Riskanalyticscontrollerv3ExcludedItem(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "excluded_item_type": obj.get("excluded_item_type"),
+            "excluded_item_type": obj.get("excluded_item_type") if obj.get("excluded_item_type") is not None else Riskanalyticscontrollerv3ExcludedItemType.UNDEFINED_EXCLUDED_ITEM_TYPE,
             "key": obj.get("key")
         })
         return _obj

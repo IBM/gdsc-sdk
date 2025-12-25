@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,157 +39,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Datasource Definition encapsulates all data necessary for a handling datasource in Universal Connector.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3DatasourceDefinition {
   public static final String SERIALIZED_NAME_DATASOURCE_FILTER = "datasource_filter";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_FILTER)
+  @javax.annotation.Nullable
   private String datasourceFilter;
 
   public static final String SERIALIZED_NAME_DATASOURCE_ID = "datasource_id";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_ID)
+  @javax.annotation.Nullable
   private String datasourceId;
 
   public static final String SERIALIZED_NAME_DATASOURCE_INPUT = "datasource_input";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_INPUT)
+  @javax.annotation.Nullable
   private String datasourceInput;
 
   public static final String SERIALIZED_NAME_DATASOURCE_NAME = "datasource_name";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_NAME)
+  @javax.annotation.Nullable
   private String datasourceName;
 
   public static final String SERIALIZED_NAME_OWNER_USER_ID = "owner_user_id";
   @SerializedName(SERIALIZED_NAME_OWNER_USER_ID)
+  @javax.annotation.Nullable
   private String ownerUserId;
 
   public static final String SERIALIZED_NAME_UPDATE_TIME = "update_time";
   @SerializedName(SERIALIZED_NAME_UPDATE_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime updateTime;
 
   public Universalconnectormanagerv3DatasourceDefinition() {
   }
 
-  public Universalconnectormanagerv3DatasourceDefinition datasourceFilter(String datasourceFilter) {
+  public Universalconnectormanagerv3DatasourceDefinition datasourceFilter(@javax.annotation.Nullable String datasourceFilter) {
     this.datasourceFilter = datasourceFilter;
     return this;
   }
 
-   /**
+  /**
    * Datasource configuration filter section text.
    * @return datasourceFilter
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourceFilter() {
     return datasourceFilter;
   }
 
-  public void setDatasourceFilter(String datasourceFilter) {
+  public void setDatasourceFilter(@javax.annotation.Nullable String datasourceFilter) {
     this.datasourceFilter = datasourceFilter;
   }
 
 
-  public Universalconnectormanagerv3DatasourceDefinition datasourceId(String datasourceId) {
+  public Universalconnectormanagerv3DatasourceDefinition datasourceId(@javax.annotation.Nullable String datasourceId) {
     this.datasourceId = datasourceId;
     return this;
   }
 
-   /**
+  /**
    * The datasource ID.
    * @return datasourceId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourceId() {
     return datasourceId;
   }
 
-  public void setDatasourceId(String datasourceId) {
+  public void setDatasourceId(@javax.annotation.Nullable String datasourceId) {
     this.datasourceId = datasourceId;
   }
 
 
-  public Universalconnectormanagerv3DatasourceDefinition datasourceInput(String datasourceInput) {
+  public Universalconnectormanagerv3DatasourceDefinition datasourceInput(@javax.annotation.Nullable String datasourceInput) {
     this.datasourceInput = datasourceInput;
     return this;
   }
 
-   /**
+  /**
    * Datasource configuration input section text.
    * @return datasourceInput
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourceInput() {
     return datasourceInput;
   }
 
-  public void setDatasourceInput(String datasourceInput) {
+  public void setDatasourceInput(@javax.annotation.Nullable String datasourceInput) {
     this.datasourceInput = datasourceInput;
   }
 
 
-  public Universalconnectormanagerv3DatasourceDefinition datasourceName(String datasourceName) {
+  public Universalconnectormanagerv3DatasourceDefinition datasourceName(@javax.annotation.Nullable String datasourceName) {
     this.datasourceName = datasourceName;
     return this;
   }
 
-   /**
+  /**
    * Datasource name.
    * @return datasourceName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourceName() {
     return datasourceName;
   }
 
-  public void setDatasourceName(String datasourceName) {
+  public void setDatasourceName(@javax.annotation.Nullable String datasourceName) {
     this.datasourceName = datasourceName;
   }
 
 
-  public Universalconnectormanagerv3DatasourceDefinition ownerUserId(String ownerUserId) {
+  public Universalconnectormanagerv3DatasourceDefinition ownerUserId(@javax.annotation.Nullable String ownerUserId) {
     this.ownerUserId = ownerUserId;
     return this;
   }
 
-   /**
+  /**
    * The name of the user created datasource.
    * @return ownerUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getOwnerUserId() {
     return ownerUserId;
   }
 
-  public void setOwnerUserId(String ownerUserId) {
+  public void setOwnerUserId(@javax.annotation.Nullable String ownerUserId) {
     this.ownerUserId = ownerUserId;
   }
 
 
-  public Universalconnectormanagerv3DatasourceDefinition updateTime(OffsetDateTime updateTime) {
+  public Universalconnectormanagerv3DatasourceDefinition updateTime(@javax.annotation.Nullable OffsetDateTime updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
-   /**
+  /**
    * The datasource update time.
    * @return updateTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getUpdateTime() {
     return updateTime;
   }
 
-  public void setUpdateTime(OffsetDateTime updateTime) {
+  public void setUpdateTime(@javax.annotation.Nullable OffsetDateTime updateTime) {
     this.updateTime = updateTime;
   }
 
@@ -247,28 +254,22 @@ public class Universalconnectormanagerv3DatasourceDefinition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("datasource_filter");
-    openapiFields.add("datasource_id");
-    openapiFields.add("datasource_input");
-    openapiFields.add("datasource_name");
-    openapiFields.add("owner_user_id");
-    openapiFields.add("update_time");
+    openapiFields = new HashSet<String>(Arrays.asList("datasource_filter", "datasource_id", "datasource_input", "datasource_name", "owner_user_id", "update_time"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3DatasourceDefinition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3DatasourceDefinition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3DatasourceDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3DatasourceDefinition is not found in the empty JSON string", Universalconnectormanagerv3DatasourceDefinition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3DatasourceDefinition is not found in the empty JSON string", Universalconnectormanagerv3DatasourceDefinition.openapiRequiredFields.toString()));
         }
       }
 
@@ -276,24 +277,24 @@ public class Universalconnectormanagerv3DatasourceDefinition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3DatasourceDefinition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3DatasourceDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3DatasourceDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("datasource_filter") != null && !jsonObj.get("datasource_filter").isJsonNull()) && !jsonObj.get("datasource_filter").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasource_filter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_filter").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasource_filter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_filter").toString()));
       }
       if ((jsonObj.get("datasource_id") != null && !jsonObj.get("datasource_id").isJsonNull()) && !jsonObj.get("datasource_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasource_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasource_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_id").toString()));
       }
       if ((jsonObj.get("datasource_input") != null && !jsonObj.get("datasource_input").isJsonNull()) && !jsonObj.get("datasource_input").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasource_input` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_input").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasource_input` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_input").toString()));
       }
       if ((jsonObj.get("datasource_name") != null && !jsonObj.get("datasource_name").isJsonNull()) && !jsonObj.get("datasource_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasource_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasource_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_name").toString()));
       }
       if ((jsonObj.get("owner_user_id") != null && !jsonObj.get("owner_user_id").isJsonNull()) && !jsonObj.get("owner_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `owner_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("owner_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `owner_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("owner_user_id").toString()));
       }
   }
 
@@ -326,22 +327,22 @@ public class Universalconnectormanagerv3DatasourceDefinition {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3DatasourceDefinition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3DatasourceDefinition
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3DatasourceDefinition
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3DatasourceDefinition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3DatasourceDefinition
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3DatasourceDefinition
+   */
   public static Universalconnectormanagerv3DatasourceDefinition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3DatasourceDefinition.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3DatasourceDefinition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3DatasourceDefinition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

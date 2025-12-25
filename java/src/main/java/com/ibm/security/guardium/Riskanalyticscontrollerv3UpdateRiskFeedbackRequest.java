@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,97 +40,101 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateRiskFeedbackRequest message for the UpdateRiskFeedback API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3UpdateRiskFeedbackRequest {
   public static final String SERIALIZED_NAME_COMMENT = "comment";
   @SerializedName(SERIALIZED_NAME_COMMENT)
+  @javax.annotation.Nullable
   private String comment;
 
   public static final String SERIALIZED_NAME_FEEDBACK_CLASSIFICATION_KEY = "feedback_classification_key";
   @SerializedName(SERIALIZED_NAME_FEEDBACK_CLASSIFICATION_KEY)
+  @javax.annotation.Nullable
   private String feedbackClassificationKey;
 
   public static final String SERIALIZED_NAME_ORIGINAL_CLASSIFICATION_KEY = "original_classification_key";
   @SerializedName(SERIALIZED_NAME_ORIGINAL_CLASSIFICATION_KEY)
+  @javax.annotation.Nullable
   private String originalClassificationKey;
 
   public static final String SERIALIZED_NAME_RISK_IDS = "risk_ids";
   @SerializedName(SERIALIZED_NAME_RISK_IDS)
+  @javax.annotation.Nullable
   private List<Integer> riskIds = new ArrayList<>();
 
   public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest() {
   }
 
-  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest comment(String comment) {
+  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest comment(@javax.annotation.Nullable String comment) {
     this.comment = comment;
     return this;
   }
 
-   /**
+  /**
    * Get comment
    * @return comment
-  **/
+   */
   @javax.annotation.Nullable
   public String getComment() {
     return comment;
   }
 
-  public void setComment(String comment) {
+  public void setComment(@javax.annotation.Nullable String comment) {
     this.comment = comment;
   }
 
 
-  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest feedbackClassificationKey(String feedbackClassificationKey) {
+  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest feedbackClassificationKey(@javax.annotation.Nullable String feedbackClassificationKey) {
     this.feedbackClassificationKey = feedbackClassificationKey;
     return this;
   }
 
-   /**
+  /**
    * Get feedbackClassificationKey
    * @return feedbackClassificationKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getFeedbackClassificationKey() {
     return feedbackClassificationKey;
   }
 
-  public void setFeedbackClassificationKey(String feedbackClassificationKey) {
+  public void setFeedbackClassificationKey(@javax.annotation.Nullable String feedbackClassificationKey) {
     this.feedbackClassificationKey = feedbackClassificationKey;
   }
 
 
-  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest originalClassificationKey(String originalClassificationKey) {
+  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest originalClassificationKey(@javax.annotation.Nullable String originalClassificationKey) {
     this.originalClassificationKey = originalClassificationKey;
     return this;
   }
 
-   /**
+  /**
    * Get originalClassificationKey
    * @return originalClassificationKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getOriginalClassificationKey() {
     return originalClassificationKey;
   }
 
-  public void setOriginalClassificationKey(String originalClassificationKey) {
+  public void setOriginalClassificationKey(@javax.annotation.Nullable String originalClassificationKey) {
     this.originalClassificationKey = originalClassificationKey;
   }
 
 
-  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskIds(List<Integer> riskIds) {
+  public Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskIds(@javax.annotation.Nullable List<Integer> riskIds) {
     this.riskIds = riskIds;
     return this;
   }
@@ -142,16 +147,16 @@ public class Riskanalyticscontrollerv3UpdateRiskFeedbackRequest {
     return this;
   }
 
-   /**
+  /**
    * One or more risk id. This API can be called for multiple risks, only if all of them are from the same category.
    * @return riskIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<Integer> getRiskIds() {
     return riskIds;
   }
 
-  public void setRiskIds(List<Integer> riskIds) {
+  public void setRiskIds(@javax.annotation.Nullable List<Integer> riskIds) {
     this.riskIds = riskIds;
   }
 
@@ -206,26 +211,22 @@ public class Riskanalyticscontrollerv3UpdateRiskFeedbackRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("comment");
-    openapiFields.add("feedback_classification_key");
-    openapiFields.add("original_classification_key");
-    openapiFields.add("risk_ids");
+    openapiFields = new HashSet<String>(Arrays.asList("comment", "feedback_classification_key", "original_classification_key", "risk_ids"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3UpdateRiskFeedbackRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3UpdateRiskFeedbackRequest is not found in the empty JSON string", Riskanalyticscontrollerv3UpdateRiskFeedbackRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3UpdateRiskFeedbackRequest is not found in the empty JSON string", Riskanalyticscontrollerv3UpdateRiskFeedbackRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -233,22 +234,22 @@ public class Riskanalyticscontrollerv3UpdateRiskFeedbackRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3UpdateRiskFeedbackRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3UpdateRiskFeedbackRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3UpdateRiskFeedbackRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("comment") != null && !jsonObj.get("comment").isJsonNull()) && !jsonObj.get("comment").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `comment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comment").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `comment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comment").toString()));
       }
       if ((jsonObj.get("feedback_classification_key") != null && !jsonObj.get("feedback_classification_key").isJsonNull()) && !jsonObj.get("feedback_classification_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `feedback_classification_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feedback_classification_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `feedback_classification_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feedback_classification_key").toString()));
       }
       if ((jsonObj.get("original_classification_key") != null && !jsonObj.get("original_classification_key").isJsonNull()) && !jsonObj.get("original_classification_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `original_classification_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("original_classification_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `original_classification_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("original_classification_key").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("risk_ids") != null && !jsonObj.get("risk_ids").isJsonNull() && !jsonObj.get("risk_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `risk_ids` to be an array in the JSON string but got `%s`", jsonObj.get("risk_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `risk_ids` to be an array in the JSON string but got `%s`", jsonObj.get("risk_ids").toString()));
       }
   }
 
@@ -281,22 +282,22 @@ public class Riskanalyticscontrollerv3UpdateRiskFeedbackRequest {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3UpdateRiskFeedbackRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3UpdateRiskFeedbackRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+   */
   public static Riskanalyticscontrollerv3UpdateRiskFeedbackRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3UpdateRiskFeedbackRequest.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3UpdateRiskFeedbackRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3UpdateRiskFeedbackRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

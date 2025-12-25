@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,111 +40,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * An object that describes the Connectivity status of this connection.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3ConnectionStatus {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
-  private Universalconnectormanagerv3ConnectivityState status = Universalconnectormanagerv3ConnectivityState.OK;
+  @javax.annotation.Nullable
+  private Universalconnectormanagerv3ConnectivityState status = Universalconnectormanagerv3ConnectivityState.UC_OK;
 
   public static final String SERIALIZED_NAME_STATUS_TEXT = "status_text";
   @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
+  @javax.annotation.Nullable
   private String statusText;
 
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  @javax.annotation.Nullable
   private OffsetDateTime timestamp;
 
   public static final String SERIALIZED_NAME_TIMESTAMP_LAST_OK = "timestamp_last_ok";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP_LAST_OK)
+  @javax.annotation.Nullable
   private OffsetDateTime timestampLastOk;
 
   public Universalconnectormanagerv3ConnectionStatus() {
   }
 
-  public Universalconnectormanagerv3ConnectionStatus status(Universalconnectormanagerv3ConnectivityState status) {
+  public Universalconnectormanagerv3ConnectionStatus status(@javax.annotation.Nullable Universalconnectormanagerv3ConnectivityState status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Universalconnectormanagerv3ConnectivityState getStatus() {
     return status;
   }
 
-  public void setStatus(Universalconnectormanagerv3ConnectivityState status) {
+  public void setStatus(@javax.annotation.Nullable Universalconnectormanagerv3ConnectivityState status) {
     this.status = status;
   }
 
 
-  public Universalconnectormanagerv3ConnectionStatus statusText(String statusText) {
+  public Universalconnectormanagerv3ConnectionStatus statusText(@javax.annotation.Nullable String statusText) {
     this.statusText = statusText;
     return this;
   }
 
-   /**
+  /**
    * If status is not OK, details what&#39;s wrong (non-localized).
    * @return statusText
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusText() {
     return statusText;
   }
 
-  public void setStatusText(String statusText) {
+  public void setStatusText(@javax.annotation.Nullable String statusText) {
     this.statusText = statusText;
   }
 
 
-  public Universalconnectormanagerv3ConnectionStatus timestamp(OffsetDateTime timestamp) {
+  public Universalconnectormanagerv3ConnectionStatus timestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
     return this;
   }
 
-   /**
+  /**
    * Datetime of status.
    * @return timestamp
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 
 
-  public Universalconnectormanagerv3ConnectionStatus timestampLastOk(OffsetDateTime timestampLastOk) {
+  public Universalconnectormanagerv3ConnectionStatus timestampLastOk(@javax.annotation.Nullable OffsetDateTime timestampLastOk) {
     this.timestampLastOk = timestampLastOk;
     return this;
   }
 
-   /**
+  /**
    * Datetime of previous OK status.
    * @return timestampLastOk
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTimestampLastOk() {
     return timestampLastOk;
   }
 
-  public void setTimestampLastOk(OffsetDateTime timestampLastOk) {
+  public void setTimestampLastOk(@javax.annotation.Nullable OffsetDateTime timestampLastOk) {
     this.timestampLastOk = timestampLastOk;
   }
 
@@ -198,26 +203,22 @@ public class Universalconnectormanagerv3ConnectionStatus {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("status_text");
-    openapiFields.add("timestamp");
-    openapiFields.add("timestamp_last_ok");
+    openapiFields = new HashSet<String>(Arrays.asList("status", "status_text", "timestamp", "timestamp_last_ok"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ConnectionStatus
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3ConnectionStatus
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3ConnectionStatus.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3ConnectionStatus is not found in the empty JSON string", Universalconnectormanagerv3ConnectionStatus.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3ConnectionStatus is not found in the empty JSON string", Universalconnectormanagerv3ConnectionStatus.openapiRequiredFields.toString()));
         }
       }
 
@@ -225,7 +226,7 @@ public class Universalconnectormanagerv3ConnectionStatus {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3ConnectionStatus.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ConnectionStatus` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3ConnectionStatus` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -234,7 +235,7 @@ public class Universalconnectormanagerv3ConnectionStatus {
         Universalconnectormanagerv3ConnectivityState.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("status_text") != null && !jsonObj.get("status_text").isJsonNull()) && !jsonObj.get("status_text").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
       }
   }
 
@@ -267,22 +268,22 @@ public class Universalconnectormanagerv3ConnectionStatus {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3ConnectionStatus given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3ConnectionStatus
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ConnectionStatus
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3ConnectionStatus given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3ConnectionStatus
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3ConnectionStatus
+   */
   public static Universalconnectormanagerv3ConnectionStatus fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3ConnectionStatus.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3ConnectionStatus to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3ConnectionStatus to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

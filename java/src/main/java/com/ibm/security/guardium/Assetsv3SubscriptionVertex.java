@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,98 +43,107 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3SubscriptionVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3SubscriptionVertex {
   public static final String SERIALIZED_NAME_DURATION = "duration";
   @SerializedName(SERIALIZED_NAME_DURATION)
+  @javax.annotation.Nullable
   private String duration;
 
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public static final String SERIALIZED_NAME_SUBSCRIPTION_ACCOUNT = "subscription_account";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_ACCOUNT)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> subscriptionAccount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUBSCRIPTION_ID = "subscription_id";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_ID)
+  @javax.annotation.Nullable
   private String subscriptionId;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Assetsv3SubscriptionVertex() {
   }
 
-  public Assetsv3SubscriptionVertex duration(String duration) {
+  public Assetsv3SubscriptionVertex duration(@javax.annotation.Nullable String duration) {
     this.duration = duration;
     return this;
   }
 
-   /**
+  /**
    * Get duration
    * @return duration
-  **/
+   */
   @javax.annotation.Nullable
   public String getDuration() {
     return duration;
   }
 
-  public void setDuration(String duration) {
+  public void setDuration(@javax.annotation.Nullable String duration) {
     this.duration = duration;
   }
 
 
-  public Assetsv3SubscriptionVertex endTime(OffsetDateTime endTime) {
+  public Assetsv3SubscriptionVertex endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * Get endTime
    * @return endTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public Assetsv3SubscriptionVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3SubscriptionVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -146,78 +156,78 @@ public class Assetsv3SubscriptionVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3SubscriptionVertex name(String name) {
+  public Assetsv3SubscriptionVertex name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Assetsv3SubscriptionVertex resolutionKey(String resolutionKey) {
+  public Assetsv3SubscriptionVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
 
-  public Assetsv3SubscriptionVertex startTime(OffsetDateTime startTime) {
+  public Assetsv3SubscriptionVertex startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * Get startTime
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
 
-  public Assetsv3SubscriptionVertex subscriptionAccount(List<Assetsv3ConnectionEdge> subscriptionAccount) {
+  public Assetsv3SubscriptionVertex subscriptionAccount(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> subscriptionAccount) {
     this.subscriptionAccount = subscriptionAccount;
     return this;
   }
@@ -230,54 +240,54 @@ public class Assetsv3SubscriptionVertex {
     return this;
   }
 
-   /**
+  /**
    * Get subscriptionAccount
    * @return subscriptionAccount
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getSubscriptionAccount() {
     return subscriptionAccount;
   }
 
-  public void setSubscriptionAccount(List<Assetsv3ConnectionEdge> subscriptionAccount) {
+  public void setSubscriptionAccount(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> subscriptionAccount) {
     this.subscriptionAccount = subscriptionAccount;
   }
 
 
-  public Assetsv3SubscriptionVertex subscriptionId(String subscriptionId) {
+  public Assetsv3SubscriptionVertex subscriptionId(@javax.annotation.Nullable String subscriptionId) {
     this.subscriptionId = subscriptionId;
     return this;
   }
 
-   /**
+  /**
    * Get subscriptionId
    * @return subscriptionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSubscriptionId() {
     return subscriptionId;
   }
 
-  public void setSubscriptionId(String subscriptionId) {
+  public void setSubscriptionId(@javax.annotation.Nullable String subscriptionId) {
     this.subscriptionId = subscriptionId;
   }
 
 
-  public Assetsv3SubscriptionVertex type(String type) {
+  public Assetsv3SubscriptionVertex type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -342,31 +352,22 @@ public class Assetsv3SubscriptionVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("duration");
-    openapiFields.add("end_time");
-    openapiFields.add("extended_properties");
-    openapiFields.add("name");
-    openapiFields.add("resolution_key");
-    openapiFields.add("start_time");
-    openapiFields.add("subscription_account");
-    openapiFields.add("subscription_id");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("duration", "end_time", "extended_properties", "name", "resolution_key", "start_time", "subscription_account", "subscription_id", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3SubscriptionVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3SubscriptionVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3SubscriptionVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3SubscriptionVertex is not found in the empty JSON string", Assetsv3SubscriptionVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3SubscriptionVertex is not found in the empty JSON string", Assetsv3SubscriptionVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -374,19 +375,19 @@ public class Assetsv3SubscriptionVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3SubscriptionVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3SubscriptionVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3SubscriptionVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("duration") != null && !jsonObj.get("duration").isJsonNull()) && !jsonObj.get("duration").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `duration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("duration").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `duration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("duration").toString()));
       }
       if (jsonObj.get("extended_properties") != null && !jsonObj.get("extended_properties").isJsonNull()) {
         JsonArray jsonArrayextendedProperties = jsonObj.getAsJsonArray("extended_properties");
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -396,17 +397,17 @@ public class Assetsv3SubscriptionVertex {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
       if (jsonObj.get("subscription_account") != null && !jsonObj.get("subscription_account").isJsonNull()) {
         JsonArray jsonArraysubscriptionAccount = jsonObj.getAsJsonArray("subscription_account");
         if (jsonArraysubscriptionAccount != null) {
           // ensure the json data is an array
           if (!jsonObj.get("subscription_account").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `subscription_account` to be an array in the JSON string but got `%s`", jsonObj.get("subscription_account").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `subscription_account` to be an array in the JSON string but got `%s`", jsonObj.get("subscription_account").toString()));
           }
 
           // validate the optional field `subscription_account` (array)
@@ -416,10 +417,10 @@ public class Assetsv3SubscriptionVertex {
         }
       }
       if ((jsonObj.get("subscription_id") != null && !jsonObj.get("subscription_id").isJsonNull()) && !jsonObj.get("subscription_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `subscription_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `subscription_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription_id").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -452,22 +453,22 @@ public class Assetsv3SubscriptionVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3SubscriptionVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3SubscriptionVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3SubscriptionVertex
-  */
+  /**
+   * Create an instance of Assetsv3SubscriptionVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3SubscriptionVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3SubscriptionVertex
+   */
   public static Assetsv3SubscriptionVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3SubscriptionVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3SubscriptionVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3SubscriptionVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

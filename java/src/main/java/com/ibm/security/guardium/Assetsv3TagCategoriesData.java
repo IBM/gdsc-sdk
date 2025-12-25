@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3TagCategoriesData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3TagCategoriesData {
   public static final String SERIALIZED_NAME_TAG_CATEGORY_ID = "tag_category_id";
   @SerializedName(SERIALIZED_NAME_TAG_CATEGORY_ID)
+  @javax.annotation.Nullable
   private String tagCategoryId;
 
   public static final String SERIALIZED_NAME_TAG_CATEGORY_NAME = "tag_category_name";
   @SerializedName(SERIALIZED_NAME_TAG_CATEGORY_NAME)
+  @javax.annotation.Nullable
   private String tagCategoryName;
 
   public Assetsv3TagCategoriesData() {
   }
 
-  public Assetsv3TagCategoriesData tagCategoryId(String tagCategoryId) {
+  public Assetsv3TagCategoriesData tagCategoryId(@javax.annotation.Nullable String tagCategoryId) {
     this.tagCategoryId = tagCategoryId;
     return this;
   }
 
-   /**
+  /**
    * Get tagCategoryId
    * @return tagCategoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagCategoryId() {
     return tagCategoryId;
   }
 
-  public void setTagCategoryId(String tagCategoryId) {
+  public void setTagCategoryId(@javax.annotation.Nullable String tagCategoryId) {
     this.tagCategoryId = tagCategoryId;
   }
 
 
-  public Assetsv3TagCategoriesData tagCategoryName(String tagCategoryName) {
+  public Assetsv3TagCategoriesData tagCategoryName(@javax.annotation.Nullable String tagCategoryName) {
     this.tagCategoryName = tagCategoryName;
     return this;
   }
 
-   /**
+  /**
    * Get tagCategoryName
    * @return tagCategoryName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagCategoryName() {
     return tagCategoryName;
   }
 
-  public void setTagCategoryName(String tagCategoryName) {
+  public void setTagCategoryName(@javax.annotation.Nullable String tagCategoryName) {
     this.tagCategoryName = tagCategoryName;
   }
 
@@ -146,24 +149,22 @@ public class Assetsv3TagCategoriesData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("tag_category_id");
-    openapiFields.add("tag_category_name");
+    openapiFields = new HashSet<String>(Arrays.asList("tag_category_id", "tag_category_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3TagCategoriesData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3TagCategoriesData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3TagCategoriesData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3TagCategoriesData is not found in the empty JSON string", Assetsv3TagCategoriesData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3TagCategoriesData is not found in the empty JSON string", Assetsv3TagCategoriesData.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Assetsv3TagCategoriesData {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3TagCategoriesData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3TagCategoriesData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3TagCategoriesData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("tag_category_id") != null && !jsonObj.get("tag_category_id").isJsonNull()) && !jsonObj.get("tag_category_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category_id").toString()));
       }
       if ((jsonObj.get("tag_category_name") != null && !jsonObj.get("tag_category_name").isJsonNull()) && !jsonObj.get("tag_category_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_category_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_category_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category_name").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Assetsv3TagCategoriesData {
     }
   }
 
- /**
-  * Create an instance of Assetsv3TagCategoriesData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3TagCategoriesData
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3TagCategoriesData
-  */
+  /**
+   * Create an instance of Assetsv3TagCategoriesData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3TagCategoriesData
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3TagCategoriesData
+   */
   public static Assetsv3TagCategoriesData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3TagCategoriesData.class);
   }
 
- /**
-  * Convert an instance of Assetsv3TagCategoriesData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3TagCategoriesData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

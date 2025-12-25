@@ -18,6 +18,8 @@ export class Outliersenginev3GetSourceStatisticsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "sourceStatistics",
@@ -33,4 +35,3 @@ export class Outliersenginev3GetSourceStatisticsResponse {
     public constructor() {
     }
 }
-

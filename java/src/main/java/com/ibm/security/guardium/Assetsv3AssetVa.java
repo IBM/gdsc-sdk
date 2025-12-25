@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AssetVa - Asset Overview - Vulnerabilites widget data.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetVa {
   public static final String SERIALIZED_NAME_CRITICAL_COUNT = "critical_count";
   @SerializedName(SERIALIZED_NAME_CRITICAL_COUNT)
+  @javax.annotation.Nullable
   private Integer criticalCount;
 
   public static final String SERIALIZED_NAME_HIGH_COUNT = "high_count";
   @SerializedName(SERIALIZED_NAME_HIGH_COUNT)
+  @javax.annotation.Nullable
   private Integer highCount;
 
   public Assetsv3AssetVa() {
   }
 
-  public Assetsv3AssetVa criticalCount(Integer criticalCount) {
+  public Assetsv3AssetVa criticalCount(@javax.annotation.Nullable Integer criticalCount) {
     this.criticalCount = criticalCount;
     return this;
   }
 
-   /**
+  /**
    * Get criticalCount
    * @return criticalCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getCriticalCount() {
     return criticalCount;
   }
 
-  public void setCriticalCount(Integer criticalCount) {
+  public void setCriticalCount(@javax.annotation.Nullable Integer criticalCount) {
     this.criticalCount = criticalCount;
   }
 
 
-  public Assetsv3AssetVa highCount(Integer highCount) {
+  public Assetsv3AssetVa highCount(@javax.annotation.Nullable Integer highCount) {
     this.highCount = highCount;
     return this;
   }
 
-   /**
+  /**
    * Get highCount
    * @return highCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getHighCount() {
     return highCount;
   }
 
-  public void setHighCount(Integer highCount) {
+  public void setHighCount(@javax.annotation.Nullable Integer highCount) {
     this.highCount = highCount;
   }
 
@@ -146,24 +149,22 @@ public class Assetsv3AssetVa {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("critical_count");
-    openapiFields.add("high_count");
+    openapiFields = new HashSet<String>(Arrays.asList("critical_count", "high_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetVa
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetVa
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetVa.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetVa is not found in the empty JSON string", Assetsv3AssetVa.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetVa is not found in the empty JSON string", Assetsv3AssetVa.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,7 +172,7 @@ public class Assetsv3AssetVa {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetVa.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetVa` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetVa` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -206,22 +207,22 @@ public class Assetsv3AssetVa {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetVa given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetVa
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetVa
-  */
+  /**
+   * Create an instance of Assetsv3AssetVa given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetVa
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetVa
+   */
   public static Assetsv3AssetVa fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetVa.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetVa to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetVa to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

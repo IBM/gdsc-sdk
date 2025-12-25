@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,203 +39,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmdatamanagerv3AppData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmdatamanagerv3AppData {
   public static final String SERIALIZED_NAME_APP_CLIENT_SPECIFIC = "app_client_specific";
   @SerializedName(SERIALIZED_NAME_APP_CLIENT_SPECIFIC)
+  @javax.annotation.Nullable
   private String appClientSpecific;
 
   public static final String SERIALIZED_NAME_APP_END_TIME = "app_end_time";
   @SerializedName(SERIALIZED_NAME_APP_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime appEndTime;
 
   public static final String SERIALIZED_NAME_APP_GENERIC_ID = "app_generic_id";
   @SerializedName(SERIALIZED_NAME_APP_GENERIC_ID)
+  @javax.annotation.Nullable
   private String appGenericId;
 
   public static final String SERIALIZED_NAME_APP_NAME = "app_name";
   @SerializedName(SERIALIZED_NAME_APP_NAME)
+  @javax.annotation.Nullable
   private String appName;
 
   public static final String SERIALIZED_NAME_APP_OWNER_EMAIL = "app_owner_email";
   @SerializedName(SERIALIZED_NAME_APP_OWNER_EMAIL)
+  @javax.annotation.Nullable
   private String appOwnerEmail;
 
   public static final String SERIALIZED_NAME_APP_START_TIME = "app_start_time";
   @SerializedName(SERIALIZED_NAME_APP_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime appStartTime;
 
   public static final String SERIALIZED_NAME_APP_UUID = "app_uuid";
   @SerializedName(SERIALIZED_NAME_APP_UUID)
+  @javax.annotation.Nullable
   private String appUuid;
 
   public static final String SERIALIZED_NAME_APP_VER = "app_ver";
   @SerializedName(SERIALIZED_NAME_APP_VER)
+  @javax.annotation.Nullable
   private String appVer;
 
   public Qspmdatamanagerv3AppData() {
   }
 
-  public Qspmdatamanagerv3AppData appClientSpecific(String appClientSpecific) {
+  public Qspmdatamanagerv3AppData appClientSpecific(@javax.annotation.Nullable String appClientSpecific) {
     this.appClientSpecific = appClientSpecific;
     return this;
   }
 
-   /**
+  /**
    * Get appClientSpecific
    * @return appClientSpecific
-  **/
+   */
   @javax.annotation.Nullable
   public String getAppClientSpecific() {
     return appClientSpecific;
   }
 
-  public void setAppClientSpecific(String appClientSpecific) {
+  public void setAppClientSpecific(@javax.annotation.Nullable String appClientSpecific) {
     this.appClientSpecific = appClientSpecific;
   }
 
 
-  public Qspmdatamanagerv3AppData appEndTime(OffsetDateTime appEndTime) {
+  public Qspmdatamanagerv3AppData appEndTime(@javax.annotation.Nullable OffsetDateTime appEndTime) {
     this.appEndTime = appEndTime;
     return this;
   }
 
-   /**
+  /**
    * Get appEndTime
    * @return appEndTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getAppEndTime() {
     return appEndTime;
   }
 
-  public void setAppEndTime(OffsetDateTime appEndTime) {
+  public void setAppEndTime(@javax.annotation.Nullable OffsetDateTime appEndTime) {
     this.appEndTime = appEndTime;
   }
 
 
-  public Qspmdatamanagerv3AppData appGenericId(String appGenericId) {
+  public Qspmdatamanagerv3AppData appGenericId(@javax.annotation.Nullable String appGenericId) {
     this.appGenericId = appGenericId;
     return this;
   }
 
-   /**
+  /**
    * Get appGenericId
    * @return appGenericId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAppGenericId() {
     return appGenericId;
   }
 
-  public void setAppGenericId(String appGenericId) {
+  public void setAppGenericId(@javax.annotation.Nullable String appGenericId) {
     this.appGenericId = appGenericId;
   }
 
 
-  public Qspmdatamanagerv3AppData appName(String appName) {
+  public Qspmdatamanagerv3AppData appName(@javax.annotation.Nullable String appName) {
     this.appName = appName;
     return this;
   }
 
-   /**
+  /**
    * Get appName
    * @return appName
-  **/
+   */
   @javax.annotation.Nullable
   public String getAppName() {
     return appName;
   }
 
-  public void setAppName(String appName) {
+  public void setAppName(@javax.annotation.Nullable String appName) {
     this.appName = appName;
   }
 
 
-  public Qspmdatamanagerv3AppData appOwnerEmail(String appOwnerEmail) {
+  public Qspmdatamanagerv3AppData appOwnerEmail(@javax.annotation.Nullable String appOwnerEmail) {
     this.appOwnerEmail = appOwnerEmail;
     return this;
   }
 
-   /**
+  /**
    * Get appOwnerEmail
    * @return appOwnerEmail
-  **/
+   */
   @javax.annotation.Nullable
   public String getAppOwnerEmail() {
     return appOwnerEmail;
   }
 
-  public void setAppOwnerEmail(String appOwnerEmail) {
+  public void setAppOwnerEmail(@javax.annotation.Nullable String appOwnerEmail) {
     this.appOwnerEmail = appOwnerEmail;
   }
 
 
-  public Qspmdatamanagerv3AppData appStartTime(OffsetDateTime appStartTime) {
+  public Qspmdatamanagerv3AppData appStartTime(@javax.annotation.Nullable OffsetDateTime appStartTime) {
     this.appStartTime = appStartTime;
     return this;
   }
 
-   /**
+  /**
    * Get appStartTime
    * @return appStartTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getAppStartTime() {
     return appStartTime;
   }
 
-  public void setAppStartTime(OffsetDateTime appStartTime) {
+  public void setAppStartTime(@javax.annotation.Nullable OffsetDateTime appStartTime) {
     this.appStartTime = appStartTime;
   }
 
 
-  public Qspmdatamanagerv3AppData appUuid(String appUuid) {
+  public Qspmdatamanagerv3AppData appUuid(@javax.annotation.Nullable String appUuid) {
     this.appUuid = appUuid;
     return this;
   }
 
-   /**
+  /**
    * Get appUuid
    * @return appUuid
-  **/
+   */
   @javax.annotation.Nullable
   public String getAppUuid() {
     return appUuid;
   }
 
-  public void setAppUuid(String appUuid) {
+  public void setAppUuid(@javax.annotation.Nullable String appUuid) {
     this.appUuid = appUuid;
   }
 
 
-  public Qspmdatamanagerv3AppData appVer(String appVer) {
+  public Qspmdatamanagerv3AppData appVer(@javax.annotation.Nullable String appVer) {
     this.appVer = appVer;
     return this;
   }
 
-   /**
+  /**
    * Get appVer
    * @return appVer
-  **/
+   */
   @javax.annotation.Nullable
   public String getAppVer() {
     return appVer;
   }
 
-  public void setAppVer(String appVer) {
+  public void setAppVer(@javax.annotation.Nullable String appVer) {
     this.appVer = appVer;
   }
 
@@ -297,30 +306,22 @@ public class Qspmdatamanagerv3AppData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("app_client_specific");
-    openapiFields.add("app_end_time");
-    openapiFields.add("app_generic_id");
-    openapiFields.add("app_name");
-    openapiFields.add("app_owner_email");
-    openapiFields.add("app_start_time");
-    openapiFields.add("app_uuid");
-    openapiFields.add("app_ver");
+    openapiFields = new HashSet<String>(Arrays.asList("app_client_specific", "app_end_time", "app_generic_id", "app_name", "app_owner_email", "app_start_time", "app_uuid", "app_ver"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3AppData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3AppData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmdatamanagerv3AppData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmdatamanagerv3AppData is not found in the empty JSON string", Qspmdatamanagerv3AppData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmdatamanagerv3AppData is not found in the empty JSON string", Qspmdatamanagerv3AppData.openapiRequiredFields.toString()));
         }
       }
 
@@ -328,27 +329,27 @@ public class Qspmdatamanagerv3AppData {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmdatamanagerv3AppData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3AppData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3AppData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("app_client_specific") != null && !jsonObj.get("app_client_specific").isJsonNull()) && !jsonObj.get("app_client_specific").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `app_client_specific` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_client_specific").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `app_client_specific` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_client_specific").toString()));
       }
       if ((jsonObj.get("app_generic_id") != null && !jsonObj.get("app_generic_id").isJsonNull()) && !jsonObj.get("app_generic_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `app_generic_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_generic_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `app_generic_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_generic_id").toString()));
       }
       if ((jsonObj.get("app_name") != null && !jsonObj.get("app_name").isJsonNull()) && !jsonObj.get("app_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `app_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `app_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_name").toString()));
       }
       if ((jsonObj.get("app_owner_email") != null && !jsonObj.get("app_owner_email").isJsonNull()) && !jsonObj.get("app_owner_email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `app_owner_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_owner_email").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `app_owner_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_owner_email").toString()));
       }
       if ((jsonObj.get("app_uuid") != null && !jsonObj.get("app_uuid").isJsonNull()) && !jsonObj.get("app_uuid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `app_uuid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_uuid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `app_uuid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_uuid").toString()));
       }
       if ((jsonObj.get("app_ver") != null && !jsonObj.get("app_ver").isJsonNull()) && !jsonObj.get("app_ver").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `app_ver` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_ver").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `app_ver` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_ver").toString()));
       }
   }
 
@@ -381,22 +382,22 @@ public class Qspmdatamanagerv3AppData {
     }
   }
 
- /**
-  * Create an instance of Qspmdatamanagerv3AppData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmdatamanagerv3AppData
-  * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3AppData
-  */
+  /**
+   * Create an instance of Qspmdatamanagerv3AppData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmdatamanagerv3AppData
+   * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3AppData
+   */
   public static Qspmdatamanagerv3AppData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmdatamanagerv3AppData.class);
   }
 
- /**
-  * Convert an instance of Qspmdatamanagerv3AppData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmdatamanagerv3AppData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

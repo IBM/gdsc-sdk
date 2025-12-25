@@ -27,7 +27,7 @@ class Streamsv3CheckAzureEventHubResponse(BaseModel):
     """
     CheckAzureEventHubResponse defines response of CheckAzureEventHubRequest call.
     """ # noqa: E501
-    status: Optional[Streamsv3AzureCheckStatus] = None
+    status: Optional[Streamsv3AzureCheckStatus] = Streamsv3AzureCheckStatus.OK
     __properties: ClassVar[List[str]] = ["status"]
 
     model_config = ConfigDict(
@@ -81,7 +81,7 @@ class Streamsv3CheckAzureEventHubResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "status": obj.get("status")
+            "status": obj.get("status") if obj.get("status") is not None else Streamsv3AzureCheckStatus.OK
         })
         return _obj
 

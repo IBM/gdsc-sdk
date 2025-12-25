@@ -6,7 +6,7 @@ An object that describes the Connectivity status of this connection.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**Universalconnectormanagerv3ConnectivityState**](Universalconnectormanagerv3ConnectivityState.md) |  | [optional] 
+**status** | [**Universalconnectormanagerv3ConnectivityState**](Universalconnectormanagerv3ConnectivityState.md) |  | [optional] [default to Universalconnectormanagerv3ConnectivityState.UC_OK]
 **status_text** | **str** | If status is not OK, details what&#39;s wrong (non-localized). | [optional] 
 **timestamp** | **datetime** | Datetime of status. | [optional] 
 **timestamp_last_ok** | **datetime** | Datetime of previous OK status. | [optional] 

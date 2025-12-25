@@ -20,6 +20,8 @@ export class VendorCertificate {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "certificateName",
@@ -36,7 +38,6 @@ export class VendorCertificate {
     }
 }
 
-
 export enum VendorCertificateCertificateNameEnum {
     Pci = 'PCI',
     Hipaa = 'HIPAA',
@@ -44,6 +45,7 @@ export enum VendorCertificateCertificateNameEnum {
     Sox = 'SOX',
     Fisma = 'FISMA',
     Lba = 'LBA',
+    Glba = 'GLBA',
     Iso27001 = 'ISO 27001',
     Iso27018 = 'ISO 27018',
     Nist = 'NIST',

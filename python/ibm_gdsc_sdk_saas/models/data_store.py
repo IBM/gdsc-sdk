@@ -19,11 +19,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from ibm_gdsc_sdk_saas.models.classification_status import ClassificationStatus
 from ibm_gdsc_sdk_saas.models.cloud_account_details import CloudAccountDetails
 from ibm_gdsc_sdk_saas.models.data_store_encryption_status import DataStoreEncryptionStatus
 from ibm_gdsc_sdk_saas.models.data_store_source import DataStoreSource
 from ibm_gdsc_sdk_saas.models.data_store_stats import DataStoreStats
+from ibm_gdsc_sdk_saas.models.store_classification_status import StoreClassificationStatus
 from ibm_gdsc_sdk_saas.models.string_key_value import StringKeyValue
 from typing import Optional, Set
 from typing_extensions import Self
@@ -38,7 +38,7 @@ class DataStore(BaseModel):
     cloud_account_details: CloudAccountDetails = Field(alias="cloudAccountDetails")
     cloud_region: Optional[StrictStr] = Field(default=None, alias="cloudRegion")
     country: Optional[StrictStr] = None
-    classification_status: Optional[ClassificationStatus] = Field(default=None, alias="classificationStatus")
+    classification_status: Optional[StoreClassificationStatus] = Field(default=None, alias="classificationStatus")
     encryption_status: Optional[DataStoreEncryptionStatus] = Field(default=None, alias="encryptionStatus")
     custom_data: Optional[List[StringKeyValue]] = Field(default=None, alias="customData")
     label: Optional[StrictStr] = None
@@ -100,16 +100,16 @@ class DataStore(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in custom_data (list)
         _items = []
         if self.custom_data:
-            for _item in self.custom_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_custom_data in self.custom_data:
+                if _item_custom_data:
+                    _items.append(_item_custom_data.to_dict())
             _dict['customData'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_tags (list)
         _items = []
         if self.cloud_tags:
-            for _item in self.cloud_tags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_tags in self.cloud_tags:
+                if _item_cloud_tags:
+                    _items.append(_item_cloud_tags.to_dict())
             _dict['cloudTags'] = _items
         # override the default output from pydantic by calling `to_dict()` of stats
         if self.stats:

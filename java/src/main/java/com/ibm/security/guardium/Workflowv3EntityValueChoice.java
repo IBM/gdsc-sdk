@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3EntityValueChoice
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3EntityValueChoice {
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)
+  @javax.annotation.Nullable
   private Boolean disabled;
 
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nullable
   private String label;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public Workflowv3EntityValueChoice() {
   }
 
-  public Workflowv3EntityValueChoice disabled(Boolean disabled) {
+  public Workflowv3EntityValueChoice disabled(@javax.annotation.Nullable Boolean disabled) {
     this.disabled = disabled;
     return this;
   }
 
-   /**
+  /**
    * Get disabled
    * @return disabled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDisabled() {
     return disabled;
   }
 
-  public void setDisabled(Boolean disabled) {
+  public void setDisabled(@javax.annotation.Nullable Boolean disabled) {
     this.disabled = disabled;
   }
 
 
-  public Workflowv3EntityValueChoice label(String label) {
+  public Workflowv3EntityValueChoice label(@javax.annotation.Nullable String label) {
     this.label = label;
     return this;
   }
 
-   /**
+  /**
    * Get label
    * @return label
-  **/
+   */
   @javax.annotation.Nullable
   public String getLabel() {
     return label;
   }
 
-  public void setLabel(String label) {
+  public void setLabel(@javax.annotation.Nullable String label) {
     this.label = label;
   }
 
 
-  public Workflowv3EntityValueChoice name(String name) {
+  public Workflowv3EntityValueChoice name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
@@ -171,25 +175,22 @@ public class Workflowv3EntityValueChoice {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("disabled");
-    openapiFields.add("label");
-    openapiFields.add("name");
+    openapiFields = new HashSet<String>(Arrays.asList("disabled", "label", "name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3EntityValueChoice
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3EntityValueChoice
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3EntityValueChoice.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3EntityValueChoice is not found in the empty JSON string", Workflowv3EntityValueChoice.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3EntityValueChoice is not found in the empty JSON string", Workflowv3EntityValueChoice.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,15 +198,15 @@ public class Workflowv3EntityValueChoice {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3EntityValueChoice.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3EntityValueChoice` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3EntityValueChoice` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("label") != null && !jsonObj.get("label").isJsonNull()) && !jsonObj.get("label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -238,22 +239,22 @@ public class Workflowv3EntityValueChoice {
     }
   }
 
- /**
-  * Create an instance of Workflowv3EntityValueChoice given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3EntityValueChoice
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3EntityValueChoice
-  */
+  /**
+   * Create an instance of Workflowv3EntityValueChoice given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3EntityValueChoice
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3EntityValueChoice
+   */
   public static Workflowv3EntityValueChoice fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3EntityValueChoice.class);
   }
 
- /**
-  * Convert an instance of Workflowv3EntityValueChoice to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3EntityValueChoice to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

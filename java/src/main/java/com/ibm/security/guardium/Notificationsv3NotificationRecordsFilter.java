@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,105 +42,111 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * NotificationRecordsFilter includes all fields used to filter the set of desired notification records returned. by a GET request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Notificationsv3NotificationRecordsFilter {
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
+  @javax.annotation.Nullable
   private Long limit;
 
   public static final String SERIALIZED_NAME_ORIGIN_DATA = "origin_data";
   @SerializedName(SERIALIZED_NAME_ORIGIN_DATA)
+  @javax.annotation.Nullable
   private String originData;
 
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
+  @javax.annotation.Nullable
   private List<String> origins = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
   private NotificationRecordsFilterStateFilter state = NotificationRecordsFilterStateFilter.INCLUDE_ALL;
 
   public Notificationsv3NotificationRecordsFilter() {
   }
 
-  public Notificationsv3NotificationRecordsFilter endTime(OffsetDateTime endTime) {
+  public Notificationsv3NotificationRecordsFilter endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * Return records created before this time (&lt;).
    * @return endTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public Notificationsv3NotificationRecordsFilter limit(Long limit) {
+  public Notificationsv3NotificationRecordsFilter limit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
     return this;
   }
 
-   /**
+  /**
    * The max amount of rows to return for this single query.
    * @return limit
-  **/
+   */
   @javax.annotation.Nullable
   public Long getLimit() {
     return limit;
   }
 
-  public void setLimit(Long limit) {
+  public void setLimit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
   }
 
 
-  public Notificationsv3NotificationRecordsFilter originData(String originData) {
+  public Notificationsv3NotificationRecordsFilter originData(@javax.annotation.Nullable String originData) {
     this.originData = originData;
     return this;
   }
 
-   /**
+  /**
    * Only return record that with the specified origin_data.
    * @return originData
-  **/
+   */
   @javax.annotation.Nullable
   public String getOriginData() {
     return originData;
   }
 
-  public void setOriginData(String originData) {
+  public void setOriginData(@javax.annotation.Nullable String originData) {
     this.originData = originData;
   }
 
 
-  public Notificationsv3NotificationRecordsFilter origins(List<String> origins) {
+  public Notificationsv3NotificationRecordsFilter origins(@javax.annotation.Nullable List<String> origins) {
     this.origins = origins;
     return this;
   }
@@ -152,54 +159,54 @@ public class Notificationsv3NotificationRecordsFilter {
     return this;
   }
 
-   /**
+  /**
    * Only return record that includes the specified origins.
    * @return origins
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getOrigins() {
     return origins;
   }
 
-  public void setOrigins(List<String> origins) {
+  public void setOrigins(@javax.annotation.Nullable List<String> origins) {
     this.origins = origins;
   }
 
 
-  public Notificationsv3NotificationRecordsFilter startTime(OffsetDateTime startTime) {
+  public Notificationsv3NotificationRecordsFilter startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * Return records created at this time or later (&gt;&#x3D;).
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
 
-  public Notificationsv3NotificationRecordsFilter state(NotificationRecordsFilterStateFilter state) {
+  public Notificationsv3NotificationRecordsFilter state(@javax.annotation.Nullable NotificationRecordsFilterStateFilter state) {
     this.state = state;
     return this;
   }
 
-   /**
+  /**
    * Get state
    * @return state
-  **/
+   */
   @javax.annotation.Nullable
   public NotificationRecordsFilterStateFilter getState() {
     return state;
   }
 
-  public void setState(NotificationRecordsFilterStateFilter state) {
+  public void setState(@javax.annotation.Nullable NotificationRecordsFilterStateFilter state) {
     this.state = state;
   }
 
@@ -258,28 +265,22 @@ public class Notificationsv3NotificationRecordsFilter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("end_time");
-    openapiFields.add("limit");
-    openapiFields.add("origin_data");
-    openapiFields.add("origins");
-    openapiFields.add("start_time");
-    openapiFields.add("state");
+    openapiFields = new HashSet<String>(Arrays.asList("end_time", "limit", "origin_data", "origins", "start_time", "state"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Notificationsv3NotificationRecordsFilter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Notificationsv3NotificationRecordsFilter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Notificationsv3NotificationRecordsFilter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Notificationsv3NotificationRecordsFilter is not found in the empty JSON string", Notificationsv3NotificationRecordsFilter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Notificationsv3NotificationRecordsFilter is not found in the empty JSON string", Notificationsv3NotificationRecordsFilter.openapiRequiredFields.toString()));
         }
       }
 
@@ -287,16 +288,16 @@ public class Notificationsv3NotificationRecordsFilter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Notificationsv3NotificationRecordsFilter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Notificationsv3NotificationRecordsFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Notificationsv3NotificationRecordsFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("origin_data") != null && !jsonObj.get("origin_data").isJsonNull()) && !jsonObj.get("origin_data").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `origin_data` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin_data").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `origin_data` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin_data").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("origins") != null && !jsonObj.get("origins").isJsonNull() && !jsonObj.get("origins").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
       }
       // validate the optional field `state`
       if (jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull()) {
@@ -333,22 +334,22 @@ public class Notificationsv3NotificationRecordsFilter {
     }
   }
 
- /**
-  * Create an instance of Notificationsv3NotificationRecordsFilter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Notificationsv3NotificationRecordsFilter
-  * @throws IOException if the JSON string is invalid with respect to Notificationsv3NotificationRecordsFilter
-  */
+  /**
+   * Create an instance of Notificationsv3NotificationRecordsFilter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Notificationsv3NotificationRecordsFilter
+   * @throws IOException if the JSON string is invalid with respect to Notificationsv3NotificationRecordsFilter
+   */
   public static Notificationsv3NotificationRecordsFilter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Notificationsv3NotificationRecordsFilter.class);
   }
 
- /**
-  * Convert an instance of Notificationsv3NotificationRecordsFilter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Notificationsv3NotificationRecordsFilter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

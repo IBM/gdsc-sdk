@@ -25,6 +25,8 @@ export class Assetsv3ListTagsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "assigned",
@@ -52,4 +54,3 @@ export class Assetsv3ListTagsResponse {
     public constructor() {
     }
 }
-

@@ -27,7 +27,7 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Tenantuserv3UserTenant:
         """Test Tenantuserv3UserTenant
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Tenantuserv3UserTenant`
@@ -60,6 +60,7 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
                     settings = {
                         'key' : ''
                         }, 
+                    status = '', 
                     tenant_capabilities = {
                         'key' : True
                         }, 
@@ -91,6 +92,7 @@ class TestTenantuserv3UserTenant(unittest.TestCase):
                         settings = {
                             'key' : ''
                             }, 
+                        status = '', 
                         tenant_capabilities = {
                             'key' : True
                             }, 

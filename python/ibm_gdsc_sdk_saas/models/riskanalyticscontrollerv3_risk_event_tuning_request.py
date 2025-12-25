@@ -72,9 +72,9 @@ class Riskanalyticscontrollerv3RiskEventTuningRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in excluded_items (list)
         _items = []
         if self.excluded_items:
-            for _item in self.excluded_items:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_excluded_items in self.excluded_items:
+                if _item_excluded_items:
+                    _items.append(_item_excluded_items.to_dict())
             _dict['excluded_items'] = _items
         return _dict
 

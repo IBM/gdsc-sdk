@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **filters** | [**List[Connectionsv3HeaderFilter]**](Connectionsv3HeaderFilter.md) | The filters to apply. | [optional] 
 **headers** | **List[str]** | The headers used. | [optional] 
 **offset** | **int** | The amount to offset the rows by for pagination. | [optional] 
-**order** | [**Connectionsv3OrderType**](Connectionsv3OrderType.md) |  | [optional] 
+**order** | [**Connectionsv3OrderType**](Connectionsv3OrderType.md) |  | [optional] [default to Connectionsv3OrderType.NONE]
 **search** | **str** | The text to search. | [optional] 
 **sort_by** | **str** | The header key used for sorting. | [optional] 
 

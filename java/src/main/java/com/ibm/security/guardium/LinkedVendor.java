@@ -14,15 +14,19 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ibm.security.guardium.SensitivitySummary;
 import com.ibm.security.guardium.Vendor;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -39,89 +43,124 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * LinkedVendor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class LinkedVendor {
   public static final String SERIALIZED_NAME_VENDOR = "vendor";
   @SerializedName(SERIALIZED_NAME_VENDOR)
+  @javax.annotation.Nonnull
   private Vendor vendor;
 
   public static final String SERIALIZED_NAME_TOTAL_ACCOUNTS = "totalAccounts";
   @SerializedName(SERIALIZED_NAME_TOTAL_ACCOUNTS)
+  @javax.annotation.Nonnull
   private BigDecimal totalAccounts;
 
   public static final String SERIALIZED_NAME_IS_SENSITIVE = "isSensitive";
   @SerializedName(SERIALIZED_NAME_IS_SENSITIVE)
+  @javax.annotation.Nonnull
   private Boolean isSensitive;
+
+  public static final String SERIALIZED_NAME_SENSITIVITY_SUMMARY = "sensitivitySummary";
+  @SerializedName(SERIALIZED_NAME_SENSITIVITY_SUMMARY)
+  @javax.annotation.Nullable
+  private List<SensitivitySummary> sensitivitySummary = new ArrayList<>();
 
   public LinkedVendor() {
   }
 
-  public LinkedVendor vendor(Vendor vendor) {
+  public LinkedVendor vendor(@javax.annotation.Nonnull Vendor vendor) {
     this.vendor = vendor;
     return this;
   }
 
-   /**
+  /**
    * Get vendor
    * @return vendor
-  **/
+   */
   @javax.annotation.Nonnull
   public Vendor getVendor() {
     return vendor;
   }
 
-  public void setVendor(Vendor vendor) {
+  public void setVendor(@javax.annotation.Nonnull Vendor vendor) {
     this.vendor = vendor;
   }
 
 
-  public LinkedVendor totalAccounts(BigDecimal totalAccounts) {
+  public LinkedVendor totalAccounts(@javax.annotation.Nonnull BigDecimal totalAccounts) {
     this.totalAccounts = totalAccounts;
     return this;
   }
 
-   /**
+  /**
    * Get totalAccounts
    * @return totalAccounts
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getTotalAccounts() {
     return totalAccounts;
   }
 
-  public void setTotalAccounts(BigDecimal totalAccounts) {
+  public void setTotalAccounts(@javax.annotation.Nonnull BigDecimal totalAccounts) {
     this.totalAccounts = totalAccounts;
   }
 
 
-  public LinkedVendor isSensitive(Boolean isSensitive) {
+  public LinkedVendor isSensitive(@javax.annotation.Nonnull Boolean isSensitive) {
     this.isSensitive = isSensitive;
     return this;
   }
 
-   /**
+  /**
    * Get isSensitive
    * @return isSensitive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getIsSensitive() {
     return isSensitive;
   }
 
-  public void setIsSensitive(Boolean isSensitive) {
+  public void setIsSensitive(@javax.annotation.Nonnull Boolean isSensitive) {
     this.isSensitive = isSensitive;
+  }
+
+
+  public LinkedVendor sensitivitySummary(@javax.annotation.Nullable List<SensitivitySummary> sensitivitySummary) {
+    this.sensitivitySummary = sensitivitySummary;
+    return this;
+  }
+
+  public LinkedVendor addSensitivitySummaryItem(SensitivitySummary sensitivitySummaryItem) {
+    if (this.sensitivitySummary == null) {
+      this.sensitivitySummary = new ArrayList<>();
+    }
+    this.sensitivitySummary.add(sensitivitySummaryItem);
+    return this;
+  }
+
+  /**
+   * Get sensitivitySummary
+   * @return sensitivitySummary
+   */
+  @javax.annotation.Nullable
+  public List<SensitivitySummary> getSensitivitySummary() {
+    return sensitivitySummary;
+  }
+
+  public void setSensitivitySummary(@javax.annotation.Nullable List<SensitivitySummary> sensitivitySummary) {
+    this.sensitivitySummary = sensitivitySummary;
   }
 
 
@@ -137,12 +176,13 @@ public class LinkedVendor {
     LinkedVendor linkedVendor = (LinkedVendor) o;
     return Objects.equals(this.vendor, linkedVendor.vendor) &&
         Objects.equals(this.totalAccounts, linkedVendor.totalAccounts) &&
-        Objects.equals(this.isSensitive, linkedVendor.isSensitive);
+        Objects.equals(this.isSensitive, linkedVendor.isSensitive) &&
+        Objects.equals(this.sensitivitySummary, linkedVendor.sensitivitySummary);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(vendor, totalAccounts, isSensitive);
+    return Objects.hash(vendor, totalAccounts, isSensitive, sensitivitySummary);
   }
 
   @Override
@@ -152,6 +192,7 @@ public class LinkedVendor {
     sb.append("    vendor: ").append(toIndentedString(vendor)).append("\n");
     sb.append("    totalAccounts: ").append(toIndentedString(totalAccounts)).append("\n");
     sb.append("    isSensitive: ").append(toIndentedString(isSensitive)).append("\n");
+    sb.append("    sensitivitySummary: ").append(toIndentedString(sensitivitySummary)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -173,28 +214,22 @@ public class LinkedVendor {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("vendor");
-    openapiFields.add("totalAccounts");
-    openapiFields.add("isSensitive");
+    openapiFields = new HashSet<String>(Arrays.asList("vendor", "totalAccounts", "isSensitive", "sensitivitySummary"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("vendor");
-    openapiRequiredFields.add("totalAccounts");
-    openapiRequiredFields.add("isSensitive");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("vendor", "totalAccounts", "isSensitive"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to LinkedVendor
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to LinkedVendor
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!LinkedVendor.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in LinkedVendor is not found in the empty JSON string", LinkedVendor.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in LinkedVendor is not found in the empty JSON string", LinkedVendor.openapiRequiredFields.toString()));
         }
       }
 
@@ -202,19 +237,33 @@ public class LinkedVendor {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!LinkedVendor.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `LinkedVendor` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `LinkedVendor` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : LinkedVendor.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `vendor`
       Vendor.validateJsonElement(jsonObj.get("vendor"));
+      if (jsonObj.get("sensitivitySummary") != null && !jsonObj.get("sensitivitySummary").isJsonNull()) {
+        JsonArray jsonArraysensitivitySummary = jsonObj.getAsJsonArray("sensitivitySummary");
+        if (jsonArraysensitivitySummary != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("sensitivitySummary").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivitySummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitySummary").toString()));
+          }
+
+          // validate the optional field `sensitivitySummary` (array)
+          for (int i = 0; i < jsonArraysensitivitySummary.size(); i++) {
+            SensitivitySummary.validateJsonElement(jsonArraysensitivitySummary.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -246,22 +295,22 @@ public class LinkedVendor {
     }
   }
 
- /**
-  * Create an instance of LinkedVendor given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of LinkedVendor
-  * @throws IOException if the JSON string is invalid with respect to LinkedVendor
-  */
+  /**
+   * Create an instance of LinkedVendor given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of LinkedVendor
+   * @throws IOException if the JSON string is invalid with respect to LinkedVendor
+   */
   public static LinkedVendor fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, LinkedVendor.class);
   }
 
- /**
-  * Convert an instance of LinkedVendor to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of LinkedVendor to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

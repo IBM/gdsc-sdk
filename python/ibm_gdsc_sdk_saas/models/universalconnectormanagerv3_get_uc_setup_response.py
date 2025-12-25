@@ -77,23 +77,23 @@ class Universalconnectormanagerv3GetUCSetupResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in binaries (list)
         _items = []
         if self.binaries:
-            for _item in self.binaries:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_binaries in self.binaries:
+                if _item_binaries:
+                    _items.append(_item_binaries.to_dict())
             _dict['binaries'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in configurations (list)
         _items = []
         if self.configurations:
-            for _item in self.configurations:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_configurations in self.configurations:
+                if _item_configurations:
+                    _items.append(_item_configurations.to_dict())
             _dict['configurations'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in offline_packages (list)
         _items = []
         if self.offline_packages:
-            for _item in self.offline_packages:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_offline_packages in self.offline_packages:
+                if _item_offline_packages:
+                    _items.append(_item_offline_packages.to_dict())
             _dict['offline_packages'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateCustodianBody
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class UpdateCustodianBody {
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
+  @javax.annotation.Nonnull
   private String dataStoreId;
 
   public static final String SERIALIZED_NAME_CUSTODIAN = "custodian";
   @SerializedName(SERIALIZED_NAME_CUSTODIAN)
+  @javax.annotation.Nonnull
   private String custodian;
 
   public UpdateCustodianBody() {
   }
 
-  public UpdateCustodianBody dataStoreId(String dataStoreId) {
+  public UpdateCustodianBody dataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreId
    * @return dataStoreId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreId() {
     return dataStoreId;
   }
 
-  public void setDataStoreId(String dataStoreId) {
+  public void setDataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
   }
 
 
-  public UpdateCustodianBody custodian(String custodian) {
+  public UpdateCustodianBody custodian(@javax.annotation.Nonnull String custodian) {
     this.custodian = custodian;
     return this;
   }
 
-   /**
+  /**
    * Get custodian
    * @return custodian
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCustodian() {
     return custodian;
   }
 
-  public void setCustodian(String custodian) {
+  public void setCustodian(@javax.annotation.Nonnull String custodian) {
     this.custodian = custodian;
   }
 
@@ -146,26 +149,22 @@ public class UpdateCustodianBody {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dataStoreId");
-    openapiFields.add("custodian");
+    openapiFields = new HashSet<String>(Arrays.asList("dataStoreId", "custodian"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("dataStoreId");
-    openapiRequiredFields.add("custodian");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("dataStoreId", "custodian"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateCustodianBody
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateCustodianBody
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UpdateCustodianBody.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateCustodianBody is not found in the empty JSON string", UpdateCustodianBody.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in UpdateCustodianBody is not found in the empty JSON string", UpdateCustodianBody.openapiRequiredFields.toString()));
         }
       }
 
@@ -173,22 +172,22 @@ public class UpdateCustodianBody {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!UpdateCustodianBody.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdateCustodianBody` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `UpdateCustodianBody` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : UpdateCustodianBody.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dataStoreId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
       }
       if (!jsonObj.get("custodian").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `custodian` to be a primitive type in the JSON string but got `%s`", jsonObj.get("custodian").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `custodian` to be a primitive type in the JSON string but got `%s`", jsonObj.get("custodian").toString()));
       }
   }
 
@@ -221,22 +220,22 @@ public class UpdateCustodianBody {
     }
   }
 
- /**
-  * Create an instance of UpdateCustodianBody given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateCustodianBody
-  * @throws IOException if the JSON string is invalid with respect to UpdateCustodianBody
-  */
+  /**
+   * Create an instance of UpdateCustodianBody given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateCustodianBody
+   * @throws IOException if the JSON string is invalid with respect to UpdateCustodianBody
+   */
   public static UpdateCustodianBody fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateCustodianBody.class);
   }
 
- /**
-  * Convert an instance of UpdateCustodianBody to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateCustodianBody to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

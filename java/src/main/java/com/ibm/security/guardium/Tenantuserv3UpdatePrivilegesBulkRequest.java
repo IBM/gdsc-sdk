@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Tenantuserv3UpdatePrivilegesBulkRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3UpdatePrivilegesBulkRequest {
   public static final String SERIALIZED_NAME_PRIVILEGE = "privilege";
   @SerializedName(SERIALIZED_NAME_PRIVILEGE)
+  @javax.annotation.Nullable
   private List<Tenantuserv3BasicPrivilege> privilege = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ROLE_ID = "role_id";
   @SerializedName(SERIALIZED_NAME_ROLE_ID)
+  @javax.annotation.Nullable
   private String roleId;
 
   public Tenantuserv3UpdatePrivilegesBulkRequest() {
   }
 
-  public Tenantuserv3UpdatePrivilegesBulkRequest privilege(List<Tenantuserv3BasicPrivilege> privilege) {
+  public Tenantuserv3UpdatePrivilegesBulkRequest privilege(@javax.annotation.Nullable List<Tenantuserv3BasicPrivilege> privilege) {
     this.privilege = privilege;
     return this;
   }
@@ -78,35 +81,35 @@ public class Tenantuserv3UpdatePrivilegesBulkRequest {
     return this;
   }
 
-   /**
+  /**
    * Array of privileges for which roles will be updated.
    * @return privilege
-  **/
+   */
   @javax.annotation.Nullable
   public List<Tenantuserv3BasicPrivilege> getPrivilege() {
     return privilege;
   }
 
-  public void setPrivilege(List<Tenantuserv3BasicPrivilege> privilege) {
+  public void setPrivilege(@javax.annotation.Nullable List<Tenantuserv3BasicPrivilege> privilege) {
     this.privilege = privilege;
   }
 
 
-  public Tenantuserv3UpdatePrivilegesBulkRequest roleId(String roleId) {
+  public Tenantuserv3UpdatePrivilegesBulkRequest roleId(@javax.annotation.Nullable String roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
+  /**
    * Used to determine what changed from the original roles array.
    * @return roleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRoleId() {
     return roleId;
   }
 
-  public void setRoleId(String roleId) {
+  public void setRoleId(@javax.annotation.Nullable String roleId) {
     this.roleId = roleId;
   }
 
@@ -157,24 +160,22 @@ public class Tenantuserv3UpdatePrivilegesBulkRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("privilege");
-    openapiFields.add("role_id");
+    openapiFields = new HashSet<String>(Arrays.asList("privilege", "role_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3UpdatePrivilegesBulkRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3UpdatePrivilegesBulkRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3UpdatePrivilegesBulkRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3UpdatePrivilegesBulkRequest is not found in the empty JSON string", Tenantuserv3UpdatePrivilegesBulkRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3UpdatePrivilegesBulkRequest is not found in the empty JSON string", Tenantuserv3UpdatePrivilegesBulkRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Tenantuserv3UpdatePrivilegesBulkRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3UpdatePrivilegesBulkRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3UpdatePrivilegesBulkRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3UpdatePrivilegesBulkRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Tenantuserv3UpdatePrivilegesBulkRequest {
         if (jsonArrayprivilege != null) {
           // ensure the json data is an array
           if (!jsonObj.get("privilege").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `privilege` to be an array in the JSON string but got `%s`", jsonObj.get("privilege").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `privilege` to be an array in the JSON string but got `%s`", jsonObj.get("privilege").toString()));
           }
 
           // validate the optional field `privilege` (array)
@@ -201,7 +202,7 @@ public class Tenantuserv3UpdatePrivilegesBulkRequest {
         }
       }
       if ((jsonObj.get("role_id") != null && !jsonObj.get("role_id").isJsonNull()) && !jsonObj.get("role_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `role_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `role_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_id").toString()));
       }
   }
 
@@ -234,22 +235,22 @@ public class Tenantuserv3UpdatePrivilegesBulkRequest {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3UpdatePrivilegesBulkRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3UpdatePrivilegesBulkRequest
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3UpdatePrivilegesBulkRequest
-  */
+  /**
+   * Create an instance of Tenantuserv3UpdatePrivilegesBulkRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3UpdatePrivilegesBulkRequest
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3UpdatePrivilegesBulkRequest
+   */
   public static Tenantuserv3UpdatePrivilegesBulkRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3UpdatePrivilegesBulkRequest.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3UpdatePrivilegesBulkRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3UpdatePrivilegesBulkRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

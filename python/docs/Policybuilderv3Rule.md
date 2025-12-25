@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **rule_key** | **str** |  | [optional] 
 **rule_name** | **str** | Rule name. | [optional] 
 **rule_order** | **int** | Integer to indicate the order of the rule in the policy. | [optional] 
-**rule_type** | [**Policybuilderv3RuleType**](Policybuilderv3RuleType.md) |  | [optional] 
-**severity** | [**Policybuilderv3RuleSeverity**](Policybuilderv3RuleSeverity.md) |  | [optional] 
+**rule_type** | [**Policybuilderv3RuleType**](Policybuilderv3RuleType.md) |  | [optional] [default to Policybuilderv3RuleType.ACCESS]
+**severity** | [**Policybuilderv3RuleSeverity**](Policybuilderv3RuleSeverity.md) |  | [optional] [default to Policybuilderv3RuleSeverity.INFO]
 **tags** | **List[str]** | Variable that contains tags assosicated with the rule. | [optional] 
 **template** | **bool** | Flag to indicate if the rule is a template rule. | [optional] 
 

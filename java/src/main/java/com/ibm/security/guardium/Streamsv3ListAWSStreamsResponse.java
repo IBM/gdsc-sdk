@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListAWSStreamsResponse defines response of ListAWSStreamsRequest call.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Streamsv3ListAWSStreamsResponse {
   public static final String SERIALIZED_NAME_STREAMS_BY_REGION = "streams_by_region";
   @SerializedName(SERIALIZED_NAME_STREAMS_BY_REGION)
+  @javax.annotation.Nullable
   private Map<String, Streamsv3StreamByRegion> streamsByRegion = new HashMap<>();
 
   public Streamsv3ListAWSStreamsResponse() {
   }
 
-  public Streamsv3ListAWSStreamsResponse streamsByRegion(Map<String, Streamsv3StreamByRegion> streamsByRegion) {
+  public Streamsv3ListAWSStreamsResponse streamsByRegion(@javax.annotation.Nullable Map<String, Streamsv3StreamByRegion> streamsByRegion) {
     this.streamsByRegion = streamsByRegion;
     return this;
   }
@@ -74,16 +76,16 @@ public class Streamsv3ListAWSStreamsResponse {
     return this;
   }
 
-   /**
+  /**
    * Map of streams by regions.
    * @return streamsByRegion
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Streamsv3StreamByRegion> getStreamsByRegion() {
     return streamsByRegion;
   }
 
-  public void setStreamsByRegion(Map<String, Streamsv3StreamByRegion> streamsByRegion) {
+  public void setStreamsByRegion(@javax.annotation.Nullable Map<String, Streamsv3StreamByRegion> streamsByRegion) {
     this.streamsByRegion = streamsByRegion;
   }
 
@@ -132,23 +134,22 @@ public class Streamsv3ListAWSStreamsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("streams_by_region");
+    openapiFields = new HashSet<String>(Arrays.asList("streams_by_region"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Streamsv3ListAWSStreamsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Streamsv3ListAWSStreamsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Streamsv3ListAWSStreamsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Streamsv3ListAWSStreamsResponse is not found in the empty JSON string", Streamsv3ListAWSStreamsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Streamsv3ListAWSStreamsResponse is not found in the empty JSON string", Streamsv3ListAWSStreamsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Streamsv3ListAWSStreamsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Streamsv3ListAWSStreamsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Streamsv3ListAWSStreamsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Streamsv3ListAWSStreamsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,22 +192,22 @@ public class Streamsv3ListAWSStreamsResponse {
     }
   }
 
- /**
-  * Create an instance of Streamsv3ListAWSStreamsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Streamsv3ListAWSStreamsResponse
-  * @throws IOException if the JSON string is invalid with respect to Streamsv3ListAWSStreamsResponse
-  */
+  /**
+   * Create an instance of Streamsv3ListAWSStreamsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Streamsv3ListAWSStreamsResponse
+   * @throws IOException if the JSON string is invalid with respect to Streamsv3ListAWSStreamsResponse
+   */
   public static Streamsv3ListAWSStreamsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Streamsv3ListAWSStreamsResponse.class);
   }
 
- /**
-  * Convert an instance of Streamsv3ListAWSStreamsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Streamsv3ListAWSStreamsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

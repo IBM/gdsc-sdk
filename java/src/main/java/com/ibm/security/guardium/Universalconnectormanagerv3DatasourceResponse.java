@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DatasourceResponse is a return type of CRUD operation on UC datasource configuration (as it saved in mongo / configuration service).
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3DatasourceResponse {
   public static final String SERIALIZED_NAME_DATASOURCE_ID = "datasource_id";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_ID)
+  @javax.annotation.Nullable
   private String datasourceId;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus status;
 
   public Universalconnectormanagerv3DatasourceResponse() {
   }
 
-  public Universalconnectormanagerv3DatasourceResponse datasourceId(String datasourceId) {
+  public Universalconnectormanagerv3DatasourceResponse datasourceId(@javax.annotation.Nullable String datasourceId) {
     this.datasourceId = datasourceId;
     return this;
   }
 
-   /**
+  /**
    * Configuration id of datasource.
    * @return datasourceId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourceId() {
     return datasourceId;
   }
 
-  public void setDatasourceId(String datasourceId) {
+  public void setDatasourceId(@javax.annotation.Nullable String datasourceId) {
     this.datasourceId = datasourceId;
   }
 
 
-  public Universalconnectormanagerv3DatasourceResponse status(RpcStatus status) {
+  public Universalconnectormanagerv3DatasourceResponse status(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(RpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
   }
 
@@ -147,24 +150,22 @@ public class Universalconnectormanagerv3DatasourceResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("datasource_id");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("datasource_id", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3DatasourceResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3DatasourceResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3DatasourceResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3DatasourceResponse is not found in the empty JSON string", Universalconnectormanagerv3DatasourceResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3DatasourceResponse is not found in the empty JSON string", Universalconnectormanagerv3DatasourceResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,12 +173,12 @@ public class Universalconnectormanagerv3DatasourceResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3DatasourceResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3DatasourceResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3DatasourceResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("datasource_id") != null && !jsonObj.get("datasource_id").isJsonNull()) && !jsonObj.get("datasource_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasource_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasource_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_id").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
@@ -214,22 +215,22 @@ public class Universalconnectormanagerv3DatasourceResponse {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3DatasourceResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3DatasourceResponse
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3DatasourceResponse
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3DatasourceResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3DatasourceResponse
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3DatasourceResponse
+   */
   public static Universalconnectormanagerv3DatasourceResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3DatasourceResponse.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3DatasourceResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3DatasourceResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

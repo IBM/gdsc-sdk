@@ -31,22 +31,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderCancelImportGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderCancelImportGroupRequest = {
-  // Array<number> | Group IDs to delete. (optional)
+const request: GroupBuilderApiGroupBuilderCancelImportGroupRequest = {
+    // Group IDs to delete. (optional)
   groupIds: [
     1,
   ],
 };
 
-apiInstance.groupBuilderCancelImportGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderCancelImportGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -87,14 +86,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderCreateGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderCreateGroupRequest = {
-  // Groupbuilderv3CreateGroupRequest
+const request: GroupBuilderApiGroupBuilderCreateGroupRequest = {
+  
   groupbuilderv3CreateGroupRequest: {
     copyGroupId: 1,
     description: "description_example",
@@ -104,9 +103,8 @@ let body:.GroupBuilderApiGroupBuilderCreateGroupRequest = {
   },
 };
 
-apiInstance.groupBuilderCreateGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderCreateGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -147,22 +145,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderDeleteGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderDeleteGroupRequest = {
-  // Array<number> | Group IDs to delete. (optional)
+const request: GroupBuilderApiGroupBuilderDeleteGroupRequest = {
+    // Group IDs to delete. (optional)
   groupIds: [
     1,
   ],
 };
 
-apiInstance.groupBuilderDeleteGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderDeleteGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -203,16 +200,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderEditGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderEditGroupRequest = {
-  // number | Group ID.
+const request: GroupBuilderApiGroupBuilderEditGroupRequest = {
+    // Group ID.
   groupId: 1,
-  // Groupbuilderv3EditGroupRequest
+  
   groupbuilderv3EditGroupRequest: {
     clearGroup: true,
     deletedMembers: [
@@ -247,9 +244,8 @@ let body:.GroupBuilderApiGroupBuilderEditGroupRequest = {
   },
 };
 
-apiInstance.groupBuilderEditGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderEditGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -291,23 +287,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderExportGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderExportGroupRequest = {
-  // Groupbuilderv3GetExportGroupRequest
+const request: GroupBuilderApiGroupBuilderExportGroupRequest = {
+  
   groupbuilderv3GetExportGroupRequest: {
     exportHierarchy: true,
     groupId: 1,
   },
 };
 
-apiInstance.groupBuilderExportGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderExportGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -348,24 +343,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupDetailsRequest = {
-  // number | Group ID.
+const request: GroupBuilderApiGroupBuilderGetGroupDetailsRequest = {
+    // Group ID.
   groupId: 1,
-  // string | Filter by group member name. (optional)
+    // Filter by group member name. (optional)
   filter: "filter_example",
-  // string | Order by ascending (ASC) or descending (DESC). (optional)
+    // Order by ascending (ASC) or descending (DESC). (optional)
   order: "order_example",
 };
 
-apiInstance.groupBuilderGetGroupDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -408,14 +402,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupMembersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupMembersRequest = {
-  // Groupbuilderv3GetGroupMembersRequest
+const request: GroupBuilderApiGroupBuilderGetGroupMembersRequest = {
+  
   groupbuilderv3GetGroupMembersRequest: {
     groupId: [
       1,
@@ -423,9 +417,8 @@ let body:.GroupBuilderApiGroupBuilderGetGroupMembersRequest = {
   },
 };
 
-apiInstance.groupBuilderGetGroupMembers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupMembers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -466,20 +459,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {
-  // string | Central manager. (optional)
+const request: GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {
+    // Central manager. (optional)
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.groupBuilderGetGroupSyncMapping(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupSyncMapping(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -520,17 +512,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.groupBuilderGetGroupTypeMapping(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupTypeMapping(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -568,17 +558,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.groupBuilderGetGroupTypes(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupTypes(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -616,24 +604,23 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupsRequest = {
-  // boolean | Return group names, ID\'s, type ID\'s, nested bool, and tuple count only if the flag is true. (optional)
+const request: GroupBuilderApiGroupBuilderGetGroupsRequest = {
+    // Return group names, ID\'s, type ID\'s, nested bool, and tuple count only if the flag is true. (optional)
   doNotIncludeMemberCount: true,
-  // boolean | Only return groups that user has full-access to. (optional)
+    // Only return groups that user has full-access to. (optional)
   onlyFullAccess: true,
-  // boolean | Only return non-nested groups. (optional)
+    // Only return non-nested groups. (optional)
   nonNested: true,
 };
 
-apiInstance.groupBuilderGetGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -676,20 +663,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetImportGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetImportGroupsRequest = {
-  // string | Central manager host name. (optional)
+const request: GroupBuilderApiGroupBuilderGetImportGroupsRequest = {
+    // Central manager host name. (optional)
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.groupBuilderGetImportGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetImportGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -730,14 +716,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderImportGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderImportGroupRequest = {
-  // Groupbuilderv3ImportGroupRequest
+const request: GroupBuilderApiGroupBuilderImportGroupRequest = {
+  
   groupbuilderv3ImportGroupRequest: {
     centralManagerId: "centralManagerId_example",
     groups: [
@@ -807,9 +793,8 @@ let body:.GroupBuilderApiGroupBuilderImportGroupRequest = {
   },
 };
 
-apiInstance.groupBuilderImportGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderImportGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -850,14 +835,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderRefreshGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderRefreshGroupsRequest = {
-  // Groupbuilderv3RefreshGroupsRequest
+const request: GroupBuilderApiGroupBuilderRefreshGroupsRequest = {
+  
   groupbuilderv3RefreshGroupsRequest: {
     groupIds: [
       1,
@@ -865,9 +850,8 @@ let body:.GroupBuilderApiGroupBuilderRefreshGroupsRequest = {
   },
 };
 
-apiInstance.groupBuilderRefreshGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderRefreshGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -908,14 +892,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderResetGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderResetGroupsRequest = {
-  // Groupbuilderv3ResetGroupsRequest
+const request: GroupBuilderApiGroupBuilderResetGroupsRequest = {
+  
   groupbuilderv3ResetGroupsRequest: {
     groupIds: [
       1,
@@ -923,9 +907,8 @@ let body:.GroupBuilderApiGroupBuilderResetGroupsRequest = {
   },
 };
 
-apiInstance.groupBuilderResetGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderResetGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -966,25 +949,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest = {
-  // string | ID of central manager.
+const request: GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Groupbuilderv3StoreGroupMembersGdpRequest
+  
   groupbuilderv3StoreGroupMembersGdpRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.groupBuilderStoreGroupMembersGdp(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderStoreGroupMembersGdp(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1026,16 +1008,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderStoreGroupsGdpRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderStoreGroupsGdpRequest = {
-  // string | ID of central manager.
+const request: GroupBuilderApiGroupBuilderStoreGroupsGdpRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Groupbuilderv3GetGroupsRequestGdp
+  
   groupbuilderv3GetGroupsRequestGdp: {
     centralManagerId: "centralManagerId_example",
     data: [
@@ -1055,9 +1037,8 @@ let body:.GroupBuilderApiGroupBuilderStoreGroupsGdpRequest = {
   },
 };
 
-apiInstance.groupBuilderStoreGroupsGdp(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderStoreGroupsGdp(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

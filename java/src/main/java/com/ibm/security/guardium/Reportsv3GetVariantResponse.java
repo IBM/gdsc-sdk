@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3GetVariantResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetVariantResponse {
   public static final String SERIALIZED_NAME_VARIANT = "variant";
   @SerializedName(SERIALIZED_NAME_VARIANT)
+  @javax.annotation.Nullable
   private Reportsv3VariantDetails variant;
 
   public Reportsv3GetVariantResponse() {
   }
 
-  public Reportsv3GetVariantResponse variant(Reportsv3VariantDetails variant) {
+  public Reportsv3GetVariantResponse variant(@javax.annotation.Nullable Reportsv3VariantDetails variant) {
     this.variant = variant;
     return this;
   }
 
-   /**
+  /**
    * Get variant
    * @return variant
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3VariantDetails getVariant() {
     return variant;
   }
 
-  public void setVariant(Reportsv3VariantDetails variant) {
+  public void setVariant(@javax.annotation.Nullable Reportsv3VariantDetails variant) {
     this.variant = variant;
   }
 
@@ -122,23 +124,22 @@ public class Reportsv3GetVariantResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("variant");
+    openapiFields = new HashSet<String>(Arrays.asList("variant"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetVariantResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetVariantResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetVariantResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetVariantResponse is not found in the empty JSON string", Reportsv3GetVariantResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetVariantResponse is not found in the empty JSON string", Reportsv3GetVariantResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,7 +147,7 @@ public class Reportsv3GetVariantResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetVariantResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetVariantResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetVariantResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -185,22 +186,22 @@ public class Reportsv3GetVariantResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetVariantResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetVariantResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetVariantResponse
-  */
+  /**
+   * Create an instance of Reportsv3GetVariantResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetVariantResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetVariantResponse
+   */
   public static Reportsv3GetVariantResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetVariantResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetVariantResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetVariantResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

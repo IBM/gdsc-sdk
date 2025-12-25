@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ClassificationObservation is a pair of key and value of observation that were found for this classification.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3ClassificationObservation {
   public static final String SERIALIZED_NAME_IS_SUPPORTING_OBSERVATION = "is_supporting_observation";
   @SerializedName(SERIALIZED_NAME_IS_SUPPORTING_OBSERVATION)
+  @javax.annotation.Nullable
   private Boolean isSupportingObservation;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_ORIGINAL_VALUE = "original_value";
   @SerializedName(SERIALIZED_NAME_ORIGINAL_VALUE)
+  @javax.annotation.Nullable
   private Float originalValue;
 
   public Riskanalyticsenginev3ClassificationObservation() {
   }
 
-  public Riskanalyticsenginev3ClassificationObservation isSupportingObservation(Boolean isSupportingObservation) {
+  public Riskanalyticsenginev3ClassificationObservation isSupportingObservation(@javax.annotation.Nullable Boolean isSupportingObservation) {
     this.isSupportingObservation = isSupportingObservation;
     return this;
   }
 
-   /**
+  /**
    * Is supporting observation - means is this observation used as a supporting observation for this classification.
    * @return isSupportingObservation
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsSupportingObservation() {
     return isSupportingObservation;
   }
 
-  public void setIsSupportingObservation(Boolean isSupportingObservation) {
+  public void setIsSupportingObservation(@javax.annotation.Nullable Boolean isSupportingObservation) {
     this.isSupportingObservation = isSupportingObservation;
   }
 
 
-  public Riskanalyticsenginev3ClassificationObservation key(String key) {
+  public Riskanalyticsenginev3ClassificationObservation key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Classification observation key.
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Riskanalyticsenginev3ClassificationObservation originalValue(Float originalValue) {
+  public Riskanalyticsenginev3ClassificationObservation originalValue(@javax.annotation.Nullable Float originalValue) {
     this.originalValue = originalValue;
     return this;
   }
 
-   /**
+  /**
    * Classification observation value before normalization.
    * @return originalValue
-  **/
+   */
   @javax.annotation.Nullable
   public Float getOriginalValue() {
     return originalValue;
   }
 
-  public void setOriginalValue(Float originalValue) {
+  public void setOriginalValue(@javax.annotation.Nullable Float originalValue) {
     this.originalValue = originalValue;
   }
 
@@ -171,25 +175,22 @@ public class Riskanalyticsenginev3ClassificationObservation {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("is_supporting_observation");
-    openapiFields.add("key");
-    openapiFields.add("original_value");
+    openapiFields = new HashSet<String>(Arrays.asList("is_supporting_observation", "key", "original_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3ClassificationObservation
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3ClassificationObservation
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3ClassificationObservation.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3ClassificationObservation is not found in the empty JSON string", Riskanalyticsenginev3ClassificationObservation.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3ClassificationObservation is not found in the empty JSON string", Riskanalyticsenginev3ClassificationObservation.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,12 +198,12 @@ public class Riskanalyticsenginev3ClassificationObservation {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3ClassificationObservation.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3ClassificationObservation` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3ClassificationObservation` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
   }
 
@@ -235,22 +236,22 @@ public class Riskanalyticsenginev3ClassificationObservation {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3ClassificationObservation given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3ClassificationObservation
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3ClassificationObservation
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3ClassificationObservation given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3ClassificationObservation
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3ClassificationObservation
+   */
   public static Riskanalyticsenginev3ClassificationObservation fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3ClassificationObservation.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3ClassificationObservation to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3ClassificationObservation to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

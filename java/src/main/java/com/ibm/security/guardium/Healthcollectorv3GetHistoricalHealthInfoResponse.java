@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response object of the historical api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3GetHistoricalHealthInfoResponse {
   public static final String SERIALIZED_NAME_HISTORICAL_DATA_NODES = "historical_data_nodes";
   @SerializedName(SERIALIZED_NAME_HISTORICAL_DATA_NODES)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3HistoricalDataObject> historicalDataNodes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Healthcollectorv3StatusResponseBase status;
 
   public Healthcollectorv3GetHistoricalHealthInfoResponse() {
   }
 
-  public Healthcollectorv3GetHistoricalHealthInfoResponse historicalDataNodes(List<Healthcollectorv3HistoricalDataObject> historicalDataNodes) {
+  public Healthcollectorv3GetHistoricalHealthInfoResponse historicalDataNodes(@javax.annotation.Nullable List<Healthcollectorv3HistoricalDataObject> historicalDataNodes) {
     this.historicalDataNodes = historicalDataNodes;
     return this;
   }
@@ -79,35 +82,35 @@ public class Healthcollectorv3GetHistoricalHealthInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * List of managed units and monitoring agents associated with the central manager.
    * @return historicalDataNodes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3HistoricalDataObject> getHistoricalDataNodes() {
     return historicalDataNodes;
   }
 
-  public void setHistoricalDataNodes(List<Healthcollectorv3HistoricalDataObject> historicalDataNodes) {
+  public void setHistoricalDataNodes(@javax.annotation.Nullable List<Healthcollectorv3HistoricalDataObject> historicalDataNodes) {
     this.historicalDataNodes = historicalDataNodes;
   }
 
 
-  public Healthcollectorv3GetHistoricalHealthInfoResponse status(Healthcollectorv3StatusResponseBase status) {
+  public Healthcollectorv3GetHistoricalHealthInfoResponse status(@javax.annotation.Nullable Healthcollectorv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Healthcollectorv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Healthcollectorv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -158,24 +161,22 @@ public class Healthcollectorv3GetHistoricalHealthInfoResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("historical_data_nodes");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("historical_data_nodes", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3GetHistoricalHealthInfoResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3GetHistoricalHealthInfoResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3GetHistoricalHealthInfoResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3GetHistoricalHealthInfoResponse is not found in the empty JSON string", Healthcollectorv3GetHistoricalHealthInfoResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3GetHistoricalHealthInfoResponse is not found in the empty JSON string", Healthcollectorv3GetHistoricalHealthInfoResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Healthcollectorv3GetHistoricalHealthInfoResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3GetHistoricalHealthInfoResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3GetHistoricalHealthInfoResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3GetHistoricalHealthInfoResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Healthcollectorv3GetHistoricalHealthInfoResponse {
         if (jsonArrayhistoricalDataNodes != null) {
           // ensure the json data is an array
           if (!jsonObj.get("historical_data_nodes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `historical_data_nodes` to be an array in the JSON string but got `%s`", jsonObj.get("historical_data_nodes").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `historical_data_nodes` to be an array in the JSON string but got `%s`", jsonObj.get("historical_data_nodes").toString()));
           }
 
           // validate the optional field `historical_data_nodes` (array)
@@ -236,22 +237,22 @@ public class Healthcollectorv3GetHistoricalHealthInfoResponse {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3GetHistoricalHealthInfoResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3GetHistoricalHealthInfoResponse
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3GetHistoricalHealthInfoResponse
-  */
+  /**
+   * Create an instance of Healthcollectorv3GetHistoricalHealthInfoResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3GetHistoricalHealthInfoResponse
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3GetHistoricalHealthInfoResponse
+   */
   public static Healthcollectorv3GetHistoricalHealthInfoResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3GetHistoricalHealthInfoResponse.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3GetHistoricalHealthInfoResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3GetHistoricalHealthInfoResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

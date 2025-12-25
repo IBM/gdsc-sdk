@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,44 +41,49 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3CategoryVersion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3CategoryVersion {
   public static final String SERIALIZED_NAME_HEADER_MAP = "header_map";
   @SerializedName(SERIALIZED_NAME_HEADER_MAP)
+  @javax.annotation.Nullable
   private Map<String, String> headerMap = new HashMap<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PRIMARY = "primary";
   @SerializedName(SERIALIZED_NAME_PRIMARY)
+  @javax.annotation.Nullable
   private Boolean primary;
 
   public static final String SERIALIZED_NAME_SKIP_JOIN_ONLY = "skip_join_only";
   @SerializedName(SERIALIZED_NAME_SKIP_JOIN_ONLY)
+  @javax.annotation.Nullable
   private Boolean skipJoinOnly;
 
   public static final String SERIALIZED_NAME_TABLE_MAP = "table_map";
   @SerializedName(SERIALIZED_NAME_TABLE_MAP)
+  @javax.annotation.Nullable
   private Map<String, Reportsv3TableNames> tableMap = new HashMap<>();
 
   public Reportsv3CategoryVersion() {
   }
 
-  public Reportsv3CategoryVersion headerMap(Map<String, String> headerMap) {
+  public Reportsv3CategoryVersion headerMap(@javax.annotation.Nullable Map<String, String> headerMap) {
     this.headerMap = headerMap;
     return this;
   }
@@ -90,78 +96,78 @@ public class Reportsv3CategoryVersion {
     return this;
   }
 
-   /**
+  /**
    * Get headerMap
    * @return headerMap
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getHeaderMap() {
     return headerMap;
   }
 
-  public void setHeaderMap(Map<String, String> headerMap) {
+  public void setHeaderMap(@javax.annotation.Nullable Map<String, String> headerMap) {
     this.headerMap = headerMap;
   }
 
 
-  public Reportsv3CategoryVersion name(String name) {
+  public Reportsv3CategoryVersion name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Reportsv3CategoryVersion primary(Boolean primary) {
+  public Reportsv3CategoryVersion primary(@javax.annotation.Nullable Boolean primary) {
     this.primary = primary;
     return this;
   }
 
-   /**
+  /**
    * Get primary
    * @return primary
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPrimary() {
     return primary;
   }
 
-  public void setPrimary(Boolean primary) {
+  public void setPrimary(@javax.annotation.Nullable Boolean primary) {
     this.primary = primary;
   }
 
 
-  public Reportsv3CategoryVersion skipJoinOnly(Boolean skipJoinOnly) {
+  public Reportsv3CategoryVersion skipJoinOnly(@javax.annotation.Nullable Boolean skipJoinOnly) {
     this.skipJoinOnly = skipJoinOnly;
     return this;
   }
 
-   /**
+  /**
    * Get skipJoinOnly
    * @return skipJoinOnly
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getSkipJoinOnly() {
     return skipJoinOnly;
   }
 
-  public void setSkipJoinOnly(Boolean skipJoinOnly) {
+  public void setSkipJoinOnly(@javax.annotation.Nullable Boolean skipJoinOnly) {
     this.skipJoinOnly = skipJoinOnly;
   }
 
 
-  public Reportsv3CategoryVersion tableMap(Map<String, Reportsv3TableNames> tableMap) {
+  public Reportsv3CategoryVersion tableMap(@javax.annotation.Nullable Map<String, Reportsv3TableNames> tableMap) {
     this.tableMap = tableMap;
     return this;
   }
@@ -174,16 +180,16 @@ public class Reportsv3CategoryVersion {
     return this;
   }
 
-   /**
+  /**
    * Get tableMap
    * @return tableMap
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Reportsv3TableNames> getTableMap() {
     return tableMap;
   }
 
-  public void setTableMap(Map<String, Reportsv3TableNames> tableMap) {
+  public void setTableMap(@javax.annotation.Nullable Map<String, Reportsv3TableNames> tableMap) {
     this.tableMap = tableMap;
   }
 
@@ -240,27 +246,22 @@ public class Reportsv3CategoryVersion {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("header_map");
-    openapiFields.add("name");
-    openapiFields.add("primary");
-    openapiFields.add("skip_join_only");
-    openapiFields.add("table_map");
+    openapiFields = new HashSet<String>(Arrays.asList("header_map", "name", "primary", "skip_join_only", "table_map"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3CategoryVersion
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3CategoryVersion
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3CategoryVersion.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3CategoryVersion is not found in the empty JSON string", Reportsv3CategoryVersion.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3CategoryVersion is not found in the empty JSON string", Reportsv3CategoryVersion.openapiRequiredFields.toString()));
         }
       }
 
@@ -268,12 +269,12 @@ public class Reportsv3CategoryVersion {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3CategoryVersion.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3CategoryVersion` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3CategoryVersion` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -306,22 +307,22 @@ public class Reportsv3CategoryVersion {
     }
   }
 
- /**
-  * Create an instance of Reportsv3CategoryVersion given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3CategoryVersion
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3CategoryVersion
-  */
+  /**
+   * Create an instance of Reportsv3CategoryVersion given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3CategoryVersion
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3CategoryVersion
+   */
   public static Reportsv3CategoryVersion fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3CategoryVersion.class);
   }
 
- /**
-  * Convert an instance of Reportsv3CategoryVersion to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3CategoryVersion to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

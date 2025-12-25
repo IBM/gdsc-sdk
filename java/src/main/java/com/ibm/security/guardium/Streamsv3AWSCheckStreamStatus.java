@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -29,11 +31,11 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(Streamsv3AWSCheckStreamStatus.Adapter.class)
 public enum Streamsv3AWSCheckStreamStatus {
   
-  OK("STREAM_OK"),
+  STREAM_OK("STREAM_OK"),
   
-  AUTHENTICATION_FAILED("STREAM_AUTHENTICATION_FAILED"),
+  STREAM_AUTHENTICATION_FAILED("STREAM_AUTHENTICATION_FAILED"),
   
-  NOT_FOUND("STREAM_NOT_FOUND");
+  STREAM_NOT_FOUND("STREAM_NOT_FOUND");
 
   private String value;
 

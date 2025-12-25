@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner {
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_ID = "cloudAccountId";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_ID)
+  @javax.annotation.Nonnull
   private String cloudAccountId;
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_NAME = "cloudAccountName";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_NAME)
+  @javax.annotation.Nonnull
   private String cloudAccountName;
 
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
   @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  @javax.annotation.Nullable
   private Environment environment;
 
   public CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner() {
   }
 
-  public CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner cloudAccountId(String cloudAccountId) {
+  public CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner cloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountId
    * @return cloudAccountId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCloudAccountId() {
     return cloudAccountId;
   }
 
-  public void setCloudAccountId(String cloudAccountId) {
+  public void setCloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
   }
 
 
-  public CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner cloudAccountName(String cloudAccountName) {
+  public CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner cloudAccountName(@javax.annotation.Nonnull String cloudAccountName) {
     this.cloudAccountName = cloudAccountName;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountName
    * @return cloudAccountName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCloudAccountName() {
     return cloudAccountName;
   }
 
-  public void setCloudAccountName(String cloudAccountName) {
+  public void setCloudAccountName(@javax.annotation.Nonnull String cloudAccountName) {
     this.cloudAccountName = cloudAccountName;
   }
 
 
-  public CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner environment(Environment environment) {
+  public CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner environment(@javax.annotation.Nullable Environment environment) {
     this.environment = environment;
     return this;
   }
 
-   /**
+  /**
    * Get environment
    * @return environment
-  **/
+   */
   @javax.annotation.Nullable
   public Environment getEnvironment() {
     return environment;
   }
 
-  public void setEnvironment(Environment environment) {
+  public void setEnvironment(@javax.annotation.Nullable Environment environment) {
     this.environment = environment;
   }
 
@@ -172,27 +176,22 @@ public class CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cloudAccountId");
-    openapiFields.add("cloudAccountName");
-    openapiFields.add("environment");
+    openapiFields = new HashSet<String>(Arrays.asList("cloudAccountId", "cloudAccountName", "environment"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("cloudAccountId");
-    openapiRequiredFields.add("cloudAccountName");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("cloudAccountId", "cloudAccountName"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner is not found in the empty JSON string", CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner is not found in the empty JSON string", CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner.openapiRequiredFields.toString()));
         }
       }
 
@@ -200,22 +199,22 @@ public class CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("cloudAccountId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
       }
       if (!jsonObj.get("cloudAccountName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountName").toString()));
       }
       // validate the optional field `environment`
       if (jsonObj.get("environment") != null && !jsonObj.get("environment").isJsonNull()) {
@@ -252,22 +251,22 @@ public class CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner {
     }
   }
 
- /**
-  * Create an instance of CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner
-  * @throws IOException if the JSON string is invalid with respect to CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner
-  */
+  /**
+   * Create an instance of CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner
+   * @throws IOException if the JSON string is invalid with respect to CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner
+   */
   public static CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner.class);
   }
 
- /**
-  * Convert an instance of CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CloudAccountsCloudProvidersOptionsRequestCloudAccountsInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

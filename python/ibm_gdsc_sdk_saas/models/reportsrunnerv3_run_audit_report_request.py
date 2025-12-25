@@ -32,7 +32,7 @@ class Reportsrunnerv3RunAuditReportRequest(BaseModel):
     header_name: Optional[StrictStr] = Field(default=None, description="The header name.")
     job_id: Optional[StrictStr] = Field(default=None, description="Unique token identifying the export job.")
     offset: Optional[StrictInt] = Field(default=None, description="The amount to offset the rows by for pagination. Required if report query uses offset and fetch_size parameters.")
-    order_by: Optional[Reportsv3OrderBy] = None
+    order_by: Optional[Reportsv3OrderBy] = Reportsv3OrderBy.UNDEFINED_ORDER_BY
     report_filters: Optional[Reportsv3ReportFilterBrackets] = None
     report_id: Optional[StrictStr] = Field(default=None, description="The ID of the Report we wish to run (e.g. 000000000000000000000905).")
     schema_name: Optional[StrictStr] = Field(default=None, description="The schema name to organize report task temp tables.")
@@ -98,7 +98,7 @@ class Reportsrunnerv3RunAuditReportRequest(BaseModel):
             "header_name": obj.get("header_name"),
             "job_id": obj.get("job_id"),
             "offset": obj.get("offset"),
-            "order_by": obj.get("order_by"),
+            "order_by": obj.get("order_by") if obj.get("order_by") is not None else Reportsv3OrderBy.UNDEFINED_ORDER_BY,
             "report_filters": Reportsv3ReportFilterBrackets.from_dict(obj["report_filters"]) if obj.get("report_filters") is not None else None,
             "report_id": obj.get("report_id"),
             "schema_name": obj.get("schema_name"),

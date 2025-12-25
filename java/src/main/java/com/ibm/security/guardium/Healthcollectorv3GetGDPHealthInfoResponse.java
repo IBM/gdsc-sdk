@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Healthcollectorv3GetGDPHealthInfoResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3GetGDPHealthInfoResponse {
   public static final String SERIALIZED_NAME_ALL_NODES = "all_nodes";
   @SerializedName(SERIALIZED_NAME_ALL_NODES)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3CMNodeObject> allNodes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Healthcollectorv3StatusResponseBase status;
 
   public Healthcollectorv3GetGDPHealthInfoResponse() {
   }
 
-  public Healthcollectorv3GetGDPHealthInfoResponse allNodes(List<Healthcollectorv3CMNodeObject> allNodes) {
+  public Healthcollectorv3GetGDPHealthInfoResponse allNodes(@javax.annotation.Nullable List<Healthcollectorv3CMNodeObject> allNodes) {
     this.allNodes = allNodes;
     return this;
   }
@@ -79,35 +82,35 @@ public class Healthcollectorv3GetGDPHealthInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * List of managed units and monitoring agents associated with the central manager.
    * @return allNodes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3CMNodeObject> getAllNodes() {
     return allNodes;
   }
 
-  public void setAllNodes(List<Healthcollectorv3CMNodeObject> allNodes) {
+  public void setAllNodes(@javax.annotation.Nullable List<Healthcollectorv3CMNodeObject> allNodes) {
     this.allNodes = allNodes;
   }
 
 
-  public Healthcollectorv3GetGDPHealthInfoResponse status(Healthcollectorv3StatusResponseBase status) {
+  public Healthcollectorv3GetGDPHealthInfoResponse status(@javax.annotation.Nullable Healthcollectorv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Healthcollectorv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Healthcollectorv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -158,24 +161,22 @@ public class Healthcollectorv3GetGDPHealthInfoResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("all_nodes");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("all_nodes", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3GetGDPHealthInfoResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3GetGDPHealthInfoResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3GetGDPHealthInfoResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3GetGDPHealthInfoResponse is not found in the empty JSON string", Healthcollectorv3GetGDPHealthInfoResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3GetGDPHealthInfoResponse is not found in the empty JSON string", Healthcollectorv3GetGDPHealthInfoResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Healthcollectorv3GetGDPHealthInfoResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3GetGDPHealthInfoResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3GetGDPHealthInfoResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3GetGDPHealthInfoResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Healthcollectorv3GetGDPHealthInfoResponse {
         if (jsonArrayallNodes != null) {
           // ensure the json data is an array
           if (!jsonObj.get("all_nodes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `all_nodes` to be an array in the JSON string but got `%s`", jsonObj.get("all_nodes").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `all_nodes` to be an array in the JSON string but got `%s`", jsonObj.get("all_nodes").toString()));
           }
 
           // validate the optional field `all_nodes` (array)
@@ -236,22 +237,22 @@ public class Healthcollectorv3GetGDPHealthInfoResponse {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3GetGDPHealthInfoResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3GetGDPHealthInfoResponse
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3GetGDPHealthInfoResponse
-  */
+  /**
+   * Create an instance of Healthcollectorv3GetGDPHealthInfoResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3GetGDPHealthInfoResponse
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3GetGDPHealthInfoResponse
+   */
   public static Healthcollectorv3GetGDPHealthInfoResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3GetGDPHealthInfoResponse.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3GetGDPHealthInfoResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3GetGDPHealthInfoResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -27,11 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ibm.security.guardium.Assetsv3AssetFilterTemplateRequest;
 import com.ibm.security.guardium.Assetsv3AssetIngestionRequest;
 import com.ibm.security.guardium.Assetsv3AssetIngestionResponse;
 import com.ibm.security.guardium.Assetsv3AssetOverviewResponse;
 import com.ibm.security.guardium.Assetsv3ClonePolicyRequest;
+import com.ibm.security.guardium.Assetsv3CompareCSVResponse;
 import com.ibm.security.guardium.Assetsv3CreateUpdatePolicyRequest;
 import com.ibm.security.guardium.Assetsv3CreateUpdatePolicyResponse;
 import com.ibm.security.guardium.Assetsv3FetchAssetChangeLogRequest;
@@ -45,6 +45,8 @@ import com.ibm.security.guardium.Assetsv3GetAssetTopologyRequest;
 import com.ibm.security.guardium.Assetsv3GetAssetTopologyResponse;
 import com.ibm.security.guardium.Assetsv3GetFilterTemplateResponse;
 import com.ibm.security.guardium.Assetsv3GetFiltersDataResponse;
+import com.ibm.security.guardium.Assetsv3ImportCSVRequest;
+import com.ibm.security.guardium.Assetsv3ImportCSVResponse;
 import com.ibm.security.guardium.Assetsv3ListPolicyResponse;
 import com.ibm.security.guardium.Assetsv3ListRuleResponse;
 import com.ibm.security.guardium.Assetsv3ListTagDomainsResponse;
@@ -110,13 +112,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceAssetIngestionCall(Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceAssetIngestionCall(@javax.annotation.Nonnull Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -162,7 +165,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceAssetIngestionValidateBeforeCall(Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceAssetIngestionValidateBeforeCall(@javax.annotation.Nonnull Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3AssetIngestionRequest' is set
         if (assetsv3AssetIngestionRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3AssetIngestionRequest' when calling assetsServiceAssetIngestion(Async)");
@@ -179,13 +182,14 @@ public class AssetsServiceApi {
      * @return Assetsv3AssetIngestionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3AssetIngestionResponse assetsServiceAssetIngestion(Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest) throws ApiException {
+    public Assetsv3AssetIngestionResponse assetsServiceAssetIngestion(@javax.annotation.Nonnull Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest) throws ApiException {
         ApiResponse<Assetsv3AssetIngestionResponse> localVarResp = assetsServiceAssetIngestionWithHttpInfo(assetsv3AssetIngestionRequest);
         return localVarResp.getData();
     }
@@ -197,13 +201,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3AssetIngestionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3AssetIngestionResponse> assetsServiceAssetIngestionWithHttpInfo(Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest) throws ApiException {
+    public ApiResponse<Assetsv3AssetIngestionResponse> assetsServiceAssetIngestionWithHttpInfo(@javax.annotation.Nonnull Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceAssetIngestionValidateBeforeCall(assetsv3AssetIngestionRequest, null);
         Type localVarReturnType = new TypeToken<Assetsv3AssetIngestionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -217,13 +222,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceAssetIngestionAsync(Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest, final ApiCallback<Assetsv3AssetIngestionResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceAssetIngestionAsync(@javax.annotation.Nonnull Assetsv3AssetIngestionRequest assetsv3AssetIngestionRequest, final ApiCallback<Assetsv3AssetIngestionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceAssetIngestionValidateBeforeCall(assetsv3AssetIngestionRequest, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3AssetIngestionResponse>(){}.getType();
@@ -237,13 +243,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceAssetIngestionManualTriggerCall(Object body, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceAssetIngestionManualTriggerCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -289,7 +296,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceAssetIngestionManualTriggerValidateBeforeCall(Object body, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceAssetIngestionManualTriggerValidateBeforeCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling assetsServiceAssetIngestionManualTrigger(Async)");
@@ -306,13 +313,14 @@ public class AssetsServiceApi {
      * @return Assetsv3AssetIngestionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3AssetIngestionResponse assetsServiceAssetIngestionManualTrigger(Object body) throws ApiException {
+    public Assetsv3AssetIngestionResponse assetsServiceAssetIngestionManualTrigger(@javax.annotation.Nonnull Object body) throws ApiException {
         ApiResponse<Assetsv3AssetIngestionResponse> localVarResp = assetsServiceAssetIngestionManualTriggerWithHttpInfo(body);
         return localVarResp.getData();
     }
@@ -324,13 +332,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3AssetIngestionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3AssetIngestionResponse> assetsServiceAssetIngestionManualTriggerWithHttpInfo(Object body) throws ApiException {
+    public ApiResponse<Assetsv3AssetIngestionResponse> assetsServiceAssetIngestionManualTriggerWithHttpInfo(@javax.annotation.Nonnull Object body) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceAssetIngestionManualTriggerValidateBeforeCall(body, null);
         Type localVarReturnType = new TypeToken<Assetsv3AssetIngestionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -344,16 +353,148 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceAssetIngestionManualTriggerAsync(Object body, final ApiCallback<Assetsv3AssetIngestionResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceAssetIngestionManualTriggerAsync(@javax.annotation.Nonnull Object body, final ApiCallback<Assetsv3AssetIngestionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceAssetIngestionManualTriggerValidateBeforeCall(body, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3AssetIngestionResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for assetsServiceCancelCSVImport
+     * @param csvId unique id of the csv (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCancelCSVImportCall(@javax.annotation.Nonnull String csvId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/assets/csv/cancel/{csv_id}"
+            .replace("{" + "csv_id" + "}", localVarApiClient.escapeString(csvId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call assetsServiceCancelCSVImportValidateBeforeCall(@javax.annotation.Nonnull String csvId, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'csvId' is set
+        if (csvId == null) {
+            throw new ApiException("Missing the required parameter 'csvId' when calling assetsServiceCancelCSVImport(Async)");
+        }
+
+        return assetsServiceCancelCSVImportCall(csvId, _callback);
+
+    }
+
+    /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     * 
+     * @param csvId unique id of the csv (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Object assetsServiceCancelCSVImport(@javax.annotation.Nonnull String csvId) throws ApiException {
+        ApiResponse<Object> localVarResp = assetsServiceCancelCSVImportWithHttpInfo(csvId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table
+     * 
+     * @param csvId unique id of the csv (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Object> assetsServiceCancelCSVImportWithHttpInfo(@javax.annotation.Nonnull String csvId) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceCancelCSVImportValidateBeforeCall(csvId, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * CancelCSVImport - Cancel the import of CSV and update the status in import log table (asynchronously)
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCancelCSVImportAsync(@javax.annotation.Nonnull String csvId, final ApiCallback<Object> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = assetsServiceCancelCSVImportValidateBeforeCall(csvId, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -365,13 +506,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceClonePolicyCall(String policyId, Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceClonePolicyCall(@javax.annotation.Nonnull String policyId, @javax.annotation.Nonnull Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -418,7 +560,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceClonePolicyValidateBeforeCall(String policyId, Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceClonePolicyValidateBeforeCall(@javax.annotation.Nonnull String policyId, @javax.annotation.Nonnull Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'policyId' is set
         if (policyId == null) {
             throw new ApiException("Missing the required parameter 'policyId' when calling assetsServiceClonePolicy(Async)");
@@ -441,13 +583,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceClonePolicy(String policyId, Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest) throws ApiException {
+    public Object assetsServiceClonePolicy(@javax.annotation.Nonnull String policyId, @javax.annotation.Nonnull Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceClonePolicyWithHttpInfo(policyId, assetsv3ClonePolicyRequest);
         return localVarResp.getData();
     }
@@ -460,13 +603,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceClonePolicyWithHttpInfo(String policyId, Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceClonePolicyWithHttpInfo(@javax.annotation.Nonnull String policyId, @javax.annotation.Nonnull Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceClonePolicyValidateBeforeCall(policyId, assetsv3ClonePolicyRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -481,16 +625,180 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceClonePolicyAsync(String policyId, Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceClonePolicyAsync(@javax.annotation.Nonnull String policyId, @javax.annotation.Nonnull Assetsv3ClonePolicyRequest assetsv3ClonePolicyRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceClonePolicyValidateBeforeCall(policyId, assetsv3ClonePolicyRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for assetsServiceCompareCSVToExistingAssets
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCompareCSVToExistingAssetsCall(@javax.annotation.Nonnull String csvId, @javax.annotation.Nullable String rowsRequired, @javax.annotation.Nullable Long pageNumber, @javax.annotation.Nullable Long pageSize, @javax.annotation.Nullable String templateType, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/assets/csv/compare/{csv_id}"
+            .replace("{" + "csv_id" + "}", localVarApiClient.escapeString(csvId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (rowsRequired != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("rows_required", rowsRequired));
+        }
+
+        if (pageNumber != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page_number", pageNumber));
+        }
+
+        if (pageSize != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page_size", pageSize));
+        }
+
+        if (templateType != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("template_type", templateType));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call assetsServiceCompareCSVToExistingAssetsValidateBeforeCall(@javax.annotation.Nonnull String csvId, @javax.annotation.Nullable String rowsRequired, @javax.annotation.Nullable Long pageNumber, @javax.annotation.Nullable Long pageSize, @javax.annotation.Nullable String templateType, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'csvId' is set
+        if (csvId == null) {
+            throw new ApiException("Missing the required parameter 'csvId' when calling assetsServiceCompareCSVToExistingAssets(Async)");
+        }
+
+        return assetsServiceCompareCSVToExistingAssetsCall(csvId, rowsRequired, pageNumber, pageSize, templateType, _callback);
+
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @return Assetsv3CompareCSVResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Assetsv3CompareCSVResponse assetsServiceCompareCSVToExistingAssets(@javax.annotation.Nonnull String csvId, @javax.annotation.Nullable String rowsRequired, @javax.annotation.Nullable Long pageNumber, @javax.annotation.Nullable Long pageSize, @javax.annotation.Nullable String templateType) throws ApiException {
+        ApiResponse<Assetsv3CompareCSVResponse> localVarResp = assetsServiceCompareCSVToExistingAssetsWithHttpInfo(csvId, rowsRequired, pageNumber, pageSize, templateType);
+        return localVarResp.getData();
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @return ApiResponse&lt;Assetsv3CompareCSVResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Assetsv3CompareCSVResponse> assetsServiceCompareCSVToExistingAssetsWithHttpInfo(@javax.annotation.Nonnull String csvId, @javax.annotation.Nullable String rowsRequired, @javax.annotation.Nullable Long pageNumber, @javax.annotation.Nullable Long pageSize, @javax.annotation.Nullable String templateType) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceCompareCSVToExistingAssetsValidateBeforeCall(csvId, rowsRequired, pageNumber, pageSize, templateType, null);
+        Type localVarReturnType = new TypeToken<Assetsv3CompareCSVResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv. (asynchronously)
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param rowsRequired which rows are required, existing or new or all. (optional)
+     * @param pageNumber page number. (optional)
+     * @param pageSize page size. (optional)
+     * @param templateType Asset CSV template type.   - DATABASE: Template for database (optional, default to DATABASE)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceCompareCSVToExistingAssetsAsync(@javax.annotation.Nonnull String csvId, @javax.annotation.Nullable String rowsRequired, @javax.annotation.Nullable Long pageNumber, @javax.annotation.Nullable Long pageSize, @javax.annotation.Nullable String templateType, final ApiCallback<Assetsv3CompareCSVResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = assetsServiceCompareCSVToExistingAssetsValidateBeforeCall(csvId, rowsRequired, pageNumber, pageSize, templateType, _callback);
+        Type localVarReturnType = new TypeToken<Assetsv3CompareCSVResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -501,13 +809,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceCreateUpdatePolicyCall(Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceCreateUpdatePolicyCall(@javax.annotation.Nonnull Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -553,7 +862,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceCreateUpdatePolicyValidateBeforeCall(Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceCreateUpdatePolicyValidateBeforeCall(@javax.annotation.Nonnull Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3CreateUpdatePolicyRequest' is set
         if (assetsv3CreateUpdatePolicyRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3CreateUpdatePolicyRequest' when calling assetsServiceCreateUpdatePolicy(Async)");
@@ -570,13 +879,14 @@ public class AssetsServiceApi {
      * @return Assetsv3CreateUpdatePolicyResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3CreateUpdatePolicyResponse assetsServiceCreateUpdatePolicy(Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest) throws ApiException {
+    public Assetsv3CreateUpdatePolicyResponse assetsServiceCreateUpdatePolicy(@javax.annotation.Nonnull Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest) throws ApiException {
         ApiResponse<Assetsv3CreateUpdatePolicyResponse> localVarResp = assetsServiceCreateUpdatePolicyWithHttpInfo(assetsv3CreateUpdatePolicyRequest);
         return localVarResp.getData();
     }
@@ -588,13 +898,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3CreateUpdatePolicyResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3CreateUpdatePolicyResponse> assetsServiceCreateUpdatePolicyWithHttpInfo(Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest) throws ApiException {
+    public ApiResponse<Assetsv3CreateUpdatePolicyResponse> assetsServiceCreateUpdatePolicyWithHttpInfo(@javax.annotation.Nonnull Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceCreateUpdatePolicyValidateBeforeCall(assetsv3CreateUpdatePolicyRequest, null);
         Type localVarReturnType = new TypeToken<Assetsv3CreateUpdatePolicyResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -608,13 +919,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceCreateUpdatePolicyAsync(Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest, final ApiCallback<Assetsv3CreateUpdatePolicyResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceCreateUpdatePolicyAsync(@javax.annotation.Nonnull Assetsv3CreateUpdatePolicyRequest assetsv3CreateUpdatePolicyRequest, final ApiCallback<Assetsv3CreateUpdatePolicyResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceCreateUpdatePolicyValidateBeforeCall(assetsv3CreateUpdatePolicyRequest, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3CreateUpdatePolicyResponse>(){}.getType();
@@ -624,18 +936,18 @@ public class AssetsServiceApi {
     /**
      * Build call for assetsServiceDeleteFilterTemplateForAssets
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsCall(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsCall(@javax.annotation.Nonnull String templateId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -649,7 +961,7 @@ public class AssetsServiceApi {
             basePath = null;
         }
 
-        Object localVarPostBody = assetsv3AssetFilterTemplateRequest;
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v3/assets/filters/template/{template_id}"
@@ -670,7 +982,6 @@ public class AssetsServiceApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -682,18 +993,13 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(@javax.annotation.Nonnull String templateId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'templateId' is set
         if (templateId == null) {
             throw new ApiException("Missing the required parameter 'templateId' when calling assetsServiceDeleteFilterTemplateForAssets(Async)");
         }
 
-        // verify the required parameter 'assetsv3AssetFilterTemplateRequest' is set
-        if (assetsv3AssetFilterTemplateRequest == null) {
-            throw new ApiException("Missing the required parameter 'assetsv3AssetFilterTemplateRequest' when calling assetsServiceDeleteFilterTemplateForAssets(Async)");
-        }
-
-        return assetsServiceDeleteFilterTemplateForAssetsCall(templateId, assetsv3AssetFilterTemplateRequest, _callback);
+        return assetsServiceDeleteFilterTemplateForAssetsCall(templateId, _callback);
 
     }
 
@@ -701,18 +1007,18 @@ public class AssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
      * 
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceDeleteFilterTemplateForAssets(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest) throws ApiException {
-        ApiResponse<Object> localVarResp = assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(templateId, assetsv3AssetFilterTemplateRequest);
+    public Object assetsServiceDeleteFilterTemplateForAssets(@javax.annotation.Nonnull String templateId) throws ApiException {
+        ApiResponse<Object> localVarResp = assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(templateId);
         return localVarResp.getData();
     }
 
@@ -720,18 +1026,18 @@ public class AssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
      * 
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest) throws ApiException {
-        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, assetsv3AssetFilterTemplateRequest, null);
+    public ApiResponse<Object> assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(@javax.annotation.Nonnull String templateId) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -740,20 +1046,20 @@ public class AssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets. (asynchronously)
      * 
      * @param templateId template id to be deleted (required)
-     * @param assetsv3AssetFilterTemplateRequest  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsAsync(String templateId, Assetsv3AssetFilterTemplateRequest assetsv3AssetFilterTemplateRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceDeleteFilterTemplateForAssetsAsync(@javax.annotation.Nonnull String templateId, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, assetsv3AssetFilterTemplateRequest, _callback);
+        okhttp3.Call localVarCall = assetsServiceDeleteFilterTemplateForAssetsValidateBeforeCall(templateId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -765,13 +1071,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceDeletePoliciesCall(List<String> policyIds, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceDeletePoliciesCall(@javax.annotation.Nullable List<String> policyIds, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -820,7 +1127,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceDeletePoliciesValidateBeforeCall(List<String> policyIds, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceDeletePoliciesValidateBeforeCall(@javax.annotation.Nullable List<String> policyIds, final ApiCallback _callback) throws ApiException {
         return assetsServiceDeletePoliciesCall(policyIds, _callback);
 
     }
@@ -832,13 +1139,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceDeletePolicies(List<String> policyIds) throws ApiException {
+    public Object assetsServiceDeletePolicies(@javax.annotation.Nullable List<String> policyIds) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceDeletePoliciesWithHttpInfo(policyIds);
         return localVarResp.getData();
     }
@@ -850,13 +1158,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceDeletePoliciesWithHttpInfo(List<String> policyIds) throws ApiException {
+    public ApiResponse<Object> assetsServiceDeletePoliciesWithHttpInfo(@javax.annotation.Nullable List<String> policyIds) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceDeletePoliciesValidateBeforeCall(policyIds, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -870,13 +1179,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceDeletePoliciesAsync(List<String> policyIds, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceDeletePoliciesAsync(@javax.annotation.Nullable List<String> policyIds, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceDeletePoliciesValidateBeforeCall(policyIds, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -890,13 +1200,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetChangeLogCall(Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetChangeLogCall(@javax.annotation.Nonnull Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -942,7 +1253,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceFetchAssetChangeLogValidateBeforeCall(Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceFetchAssetChangeLogValidateBeforeCall(@javax.annotation.Nonnull Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3FetchAssetChangeLogRequest' is set
         if (assetsv3FetchAssetChangeLogRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3FetchAssetChangeLogRequest' when calling assetsServiceFetchAssetChangeLog(Async)");
@@ -959,13 +1270,14 @@ public class AssetsServiceApi {
      * @return Assetsv3FetchAssetChangeLogResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3FetchAssetChangeLogResponse assetsServiceFetchAssetChangeLog(Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest) throws ApiException {
+    public Assetsv3FetchAssetChangeLogResponse assetsServiceFetchAssetChangeLog(@javax.annotation.Nonnull Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest) throws ApiException {
         ApiResponse<Assetsv3FetchAssetChangeLogResponse> localVarResp = assetsServiceFetchAssetChangeLogWithHttpInfo(assetsv3FetchAssetChangeLogRequest);
         return localVarResp.getData();
     }
@@ -977,13 +1289,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3FetchAssetChangeLogResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3FetchAssetChangeLogResponse> assetsServiceFetchAssetChangeLogWithHttpInfo(Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest) throws ApiException {
+    public ApiResponse<Assetsv3FetchAssetChangeLogResponse> assetsServiceFetchAssetChangeLogWithHttpInfo(@javax.annotation.Nonnull Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceFetchAssetChangeLogValidateBeforeCall(assetsv3FetchAssetChangeLogRequest, null);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetChangeLogResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -997,13 +1310,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetChangeLogAsync(Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest, final ApiCallback<Assetsv3FetchAssetChangeLogResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetChangeLogAsync(@javax.annotation.Nonnull Assetsv3FetchAssetChangeLogRequest assetsv3FetchAssetChangeLogRequest, final ApiCallback<Assetsv3FetchAssetChangeLogResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceFetchAssetChangeLogValidateBeforeCall(assetsv3FetchAssetChangeLogRequest, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetChangeLogResponse>(){}.getType();
@@ -1028,13 +1342,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetDashboardCall(String widgetType, String dateRangeStart, String dateRangeEnd, String dateRangeType, String dateRangeKey, String dateRangeError, Integer dateRangeStartNumber, String dateRangeStartUnit, Integer dateRangeEndNumber, String dateRangeEndUnit, String timelineValueSelected, String tagId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetDashboardCall(@javax.annotation.Nonnull String widgetType, @javax.annotation.Nullable String dateRangeStart, @javax.annotation.Nullable String dateRangeEnd, @javax.annotation.Nullable String dateRangeType, @javax.annotation.Nullable String dateRangeKey, @javax.annotation.Nullable String dateRangeError, @javax.annotation.Nullable Integer dateRangeStartNumber, @javax.annotation.Nullable String dateRangeStartUnit, @javax.annotation.Nullable Integer dateRangeEndNumber, @javax.annotation.Nullable String dateRangeEndUnit, @javax.annotation.Nullable String timelineValueSelected, @javax.annotation.Nullable String tagId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1124,7 +1439,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceFetchAssetDashboardValidateBeforeCall(String widgetType, String dateRangeStart, String dateRangeEnd, String dateRangeType, String dateRangeKey, String dateRangeError, Integer dateRangeStartNumber, String dateRangeStartUnit, Integer dateRangeEndNumber, String dateRangeEndUnit, String timelineValueSelected, String tagId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceFetchAssetDashboardValidateBeforeCall(@javax.annotation.Nonnull String widgetType, @javax.annotation.Nullable String dateRangeStart, @javax.annotation.Nullable String dateRangeEnd, @javax.annotation.Nullable String dateRangeType, @javax.annotation.Nullable String dateRangeKey, @javax.annotation.Nullable String dateRangeError, @javax.annotation.Nullable Integer dateRangeStartNumber, @javax.annotation.Nullable String dateRangeStartUnit, @javax.annotation.Nullable Integer dateRangeEndNumber, @javax.annotation.Nullable String dateRangeEndUnit, @javax.annotation.Nullable String timelineValueSelected, @javax.annotation.Nullable String tagId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'widgetType' is set
         if (widgetType == null) {
             throw new ApiException("Missing the required parameter 'widgetType' when calling assetsServiceFetchAssetDashboard(Async)");
@@ -1152,13 +1467,14 @@ public class AssetsServiceApi {
      * @return Assetsv3FetchAssetDashboardResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3FetchAssetDashboardResponse assetsServiceFetchAssetDashboard(String widgetType, String dateRangeStart, String dateRangeEnd, String dateRangeType, String dateRangeKey, String dateRangeError, Integer dateRangeStartNumber, String dateRangeStartUnit, Integer dateRangeEndNumber, String dateRangeEndUnit, String timelineValueSelected, String tagId) throws ApiException {
+    public Assetsv3FetchAssetDashboardResponse assetsServiceFetchAssetDashboard(@javax.annotation.Nonnull String widgetType, @javax.annotation.Nullable String dateRangeStart, @javax.annotation.Nullable String dateRangeEnd, @javax.annotation.Nullable String dateRangeType, @javax.annotation.Nullable String dateRangeKey, @javax.annotation.Nullable String dateRangeError, @javax.annotation.Nullable Integer dateRangeStartNumber, @javax.annotation.Nullable String dateRangeStartUnit, @javax.annotation.Nullable Integer dateRangeEndNumber, @javax.annotation.Nullable String dateRangeEndUnit, @javax.annotation.Nullable String timelineValueSelected, @javax.annotation.Nullable String tagId) throws ApiException {
         ApiResponse<Assetsv3FetchAssetDashboardResponse> localVarResp = assetsServiceFetchAssetDashboardWithHttpInfo(widgetType, dateRangeStart, dateRangeEnd, dateRangeType, dateRangeKey, dateRangeError, dateRangeStartNumber, dateRangeStartUnit, dateRangeEndNumber, dateRangeEndUnit, timelineValueSelected, tagId);
         return localVarResp.getData();
     }
@@ -1181,13 +1497,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3FetchAssetDashboardResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3FetchAssetDashboardResponse> assetsServiceFetchAssetDashboardWithHttpInfo(String widgetType, String dateRangeStart, String dateRangeEnd, String dateRangeType, String dateRangeKey, String dateRangeError, Integer dateRangeStartNumber, String dateRangeStartUnit, Integer dateRangeEndNumber, String dateRangeEndUnit, String timelineValueSelected, String tagId) throws ApiException {
+    public ApiResponse<Assetsv3FetchAssetDashboardResponse> assetsServiceFetchAssetDashboardWithHttpInfo(@javax.annotation.Nonnull String widgetType, @javax.annotation.Nullable String dateRangeStart, @javax.annotation.Nullable String dateRangeEnd, @javax.annotation.Nullable String dateRangeType, @javax.annotation.Nullable String dateRangeKey, @javax.annotation.Nullable String dateRangeError, @javax.annotation.Nullable Integer dateRangeStartNumber, @javax.annotation.Nullable String dateRangeStartUnit, @javax.annotation.Nullable Integer dateRangeEndNumber, @javax.annotation.Nullable String dateRangeEndUnit, @javax.annotation.Nullable String timelineValueSelected, @javax.annotation.Nullable String tagId) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceFetchAssetDashboardValidateBeforeCall(widgetType, dateRangeStart, dateRangeEnd, dateRangeType, dateRangeKey, dateRangeError, dateRangeStartNumber, dateRangeStartUnit, dateRangeEndNumber, dateRangeEndUnit, timelineValueSelected, tagId, null);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetDashboardResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1212,13 +1529,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetDashboardAsync(String widgetType, String dateRangeStart, String dateRangeEnd, String dateRangeType, String dateRangeKey, String dateRangeError, Integer dateRangeStartNumber, String dateRangeStartUnit, Integer dateRangeEndNumber, String dateRangeEndUnit, String timelineValueSelected, String tagId, final ApiCallback<Assetsv3FetchAssetDashboardResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetDashboardAsync(@javax.annotation.Nonnull String widgetType, @javax.annotation.Nullable String dateRangeStart, @javax.annotation.Nullable String dateRangeEnd, @javax.annotation.Nullable String dateRangeType, @javax.annotation.Nullable String dateRangeKey, @javax.annotation.Nullable String dateRangeError, @javax.annotation.Nullable Integer dateRangeStartNumber, @javax.annotation.Nullable String dateRangeStartUnit, @javax.annotation.Nullable Integer dateRangeEndNumber, @javax.annotation.Nullable String dateRangeEndUnit, @javax.annotation.Nullable String timelineValueSelected, @javax.annotation.Nullable String tagId, final ApiCallback<Assetsv3FetchAssetDashboardResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceFetchAssetDashboardValidateBeforeCall(widgetType, dateRangeStart, dateRangeEnd, dateRangeType, dateRangeKey, dateRangeError, dateRangeStartNumber, dateRangeStartUnit, dateRangeEndNumber, dateRangeEndUnit, timelineValueSelected, tagId, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetDashboardResponse>(){}.getType();
@@ -1232,13 +1550,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetListCall(Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetListCall(@javax.annotation.Nonnull Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1284,7 +1603,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceFetchAssetListValidateBeforeCall(Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceFetchAssetListValidateBeforeCall(@javax.annotation.Nonnull Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3FetchAssetListRequest' is set
         if (assetsv3FetchAssetListRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3FetchAssetListRequest' when calling assetsServiceFetchAssetList(Async)");
@@ -1301,13 +1620,14 @@ public class AssetsServiceApi {
      * @return Assetsv3FetchAssetListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3FetchAssetListResponse assetsServiceFetchAssetList(Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest) throws ApiException {
+    public Assetsv3FetchAssetListResponse assetsServiceFetchAssetList(@javax.annotation.Nonnull Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest) throws ApiException {
         ApiResponse<Assetsv3FetchAssetListResponse> localVarResp = assetsServiceFetchAssetListWithHttpInfo(assetsv3FetchAssetListRequest);
         return localVarResp.getData();
     }
@@ -1319,13 +1639,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3FetchAssetListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3FetchAssetListResponse> assetsServiceFetchAssetListWithHttpInfo(Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest) throws ApiException {
+    public ApiResponse<Assetsv3FetchAssetListResponse> assetsServiceFetchAssetListWithHttpInfo(@javax.annotation.Nonnull Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceFetchAssetListValidateBeforeCall(assetsv3FetchAssetListRequest, null);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetListResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1339,13 +1660,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetListAsync(Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest, final ApiCallback<Assetsv3FetchAssetListResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetListAsync(@javax.annotation.Nonnull Assetsv3FetchAssetListRequest assetsv3FetchAssetListRequest, final ApiCallback<Assetsv3FetchAssetListResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceFetchAssetListValidateBeforeCall(assetsv3FetchAssetListRequest, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetListResponse>(){}.getType();
@@ -1363,13 +1685,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetsForMergeSplitCall(String assetId, Integer pageNumber, Integer pageSize, String action, String searchKey, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetsForMergeSplitCall(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable String action, @javax.annotation.Nullable String searchKey, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1434,7 +1757,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceFetchAssetsForMergeSplitValidateBeforeCall(String assetId, Integer pageNumber, Integer pageSize, String action, String searchKey, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceFetchAssetsForMergeSplitValidateBeforeCall(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable String action, @javax.annotation.Nullable String searchKey, final ApiCallback _callback) throws ApiException {
         return assetsServiceFetchAssetsForMergeSplitCall(assetId, pageNumber, pageSize, action, searchKey, _callback);
 
     }
@@ -1450,13 +1773,14 @@ public class AssetsServiceApi {
      * @return Assetsv3FetchAssetsForMergeSplitResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3FetchAssetsForMergeSplitResponse assetsServiceFetchAssetsForMergeSplit(String assetId, Integer pageNumber, Integer pageSize, String action, String searchKey) throws ApiException {
+    public Assetsv3FetchAssetsForMergeSplitResponse assetsServiceFetchAssetsForMergeSplit(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable String action, @javax.annotation.Nullable String searchKey) throws ApiException {
         ApiResponse<Assetsv3FetchAssetsForMergeSplitResponse> localVarResp = assetsServiceFetchAssetsForMergeSplitWithHttpInfo(assetId, pageNumber, pageSize, action, searchKey);
         return localVarResp.getData();
     }
@@ -1472,13 +1796,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3FetchAssetsForMergeSplitResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3FetchAssetsForMergeSplitResponse> assetsServiceFetchAssetsForMergeSplitWithHttpInfo(String assetId, Integer pageNumber, Integer pageSize, String action, String searchKey) throws ApiException {
+    public ApiResponse<Assetsv3FetchAssetsForMergeSplitResponse> assetsServiceFetchAssetsForMergeSplitWithHttpInfo(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable String action, @javax.annotation.Nullable String searchKey) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceFetchAssetsForMergeSplitValidateBeforeCall(assetId, pageNumber, pageSize, action, searchKey, null);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetsForMergeSplitResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1496,13 +1821,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFetchAssetsForMergeSplitAsync(String assetId, Integer pageNumber, Integer pageSize, String action, String searchKey, final ApiCallback<Assetsv3FetchAssetsForMergeSplitResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFetchAssetsForMergeSplitAsync(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable String action, @javax.annotation.Nullable String searchKey, final ApiCallback<Assetsv3FetchAssetsForMergeSplitResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceFetchAssetsForMergeSplitValidateBeforeCall(assetId, pageNumber, pageSize, action, searchKey, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3FetchAssetsForMergeSplitResponse>(){}.getType();
@@ -1516,13 +1842,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFindAssetNameCall(String assetName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFindAssetNameCall(@javax.annotation.Nullable String assetName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1571,7 +1898,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceFindAssetNameValidateBeforeCall(String assetName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceFindAssetNameValidateBeforeCall(@javax.annotation.Nullable String assetName, final ApiCallback _callback) throws ApiException {
         return assetsServiceFindAssetNameCall(assetName, _callback);
 
     }
@@ -1583,13 +1910,14 @@ public class AssetsServiceApi {
      * @return Assetsv3FindAssetNameResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3FindAssetNameResponse assetsServiceFindAssetName(String assetName) throws ApiException {
+    public Assetsv3FindAssetNameResponse assetsServiceFindAssetName(@javax.annotation.Nullable String assetName) throws ApiException {
         ApiResponse<Assetsv3FindAssetNameResponse> localVarResp = assetsServiceFindAssetNameWithHttpInfo(assetName);
         return localVarResp.getData();
     }
@@ -1601,13 +1929,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3FindAssetNameResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3FindAssetNameResponse> assetsServiceFindAssetNameWithHttpInfo(String assetName) throws ApiException {
+    public ApiResponse<Assetsv3FindAssetNameResponse> assetsServiceFindAssetNameWithHttpInfo(@javax.annotation.Nullable String assetName) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceFindAssetNameValidateBeforeCall(assetName, null);
         Type localVarReturnType = new TypeToken<Assetsv3FindAssetNameResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1621,13 +1950,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceFindAssetNameAsync(String assetName, final ApiCallback<Assetsv3FindAssetNameResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceFindAssetNameAsync(@javax.annotation.Nullable String assetName, final ApiCallback<Assetsv3FindAssetNameResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceFindAssetNameValidateBeforeCall(assetName, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3FindAssetNameResponse>(){}.getType();
@@ -1643,18 +1973,19 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceGetAssetOverviewCall(String assetId, Integer pageNumber, Integer size, String widget, String ip, String host, String database, String assetEntityType, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceGetAssetOverviewCall(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer size, @javax.annotation.Nullable String widget, @javax.annotation.Nullable String ip, @javax.annotation.Nullable String host, @javax.annotation.Nullable String database, @javax.annotation.Nullable String assetEntityType, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1731,7 +2062,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceGetAssetOverviewValidateBeforeCall(String assetId, Integer pageNumber, Integer size, String widget, String ip, String host, String database, String assetEntityType, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceGetAssetOverviewValidateBeforeCall(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer size, @javax.annotation.Nullable String widget, @javax.annotation.Nullable String ip, @javax.annotation.Nullable String host, @javax.annotation.Nullable String database, @javax.annotation.Nullable String assetEntityType, final ApiCallback _callback) throws ApiException {
         return assetsServiceGetAssetOverviewCall(assetId, pageNumber, size, widget, ip, host, database, assetEntityType, _callback);
 
     }
@@ -1746,17 +2077,18 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @return Assetsv3AssetOverviewResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3AssetOverviewResponse assetsServiceGetAssetOverview(String assetId, Integer pageNumber, Integer size, String widget, String ip, String host, String database, String assetEntityType) throws ApiException {
+    public Assetsv3AssetOverviewResponse assetsServiceGetAssetOverview(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer size, @javax.annotation.Nullable String widget, @javax.annotation.Nullable String ip, @javax.annotation.Nullable String host, @javax.annotation.Nullable String database, @javax.annotation.Nullable String assetEntityType) throws ApiException {
         ApiResponse<Assetsv3AssetOverviewResponse> localVarResp = assetsServiceGetAssetOverviewWithHttpInfo(assetId, pageNumber, size, widget, ip, host, database, assetEntityType);
         return localVarResp.getData();
     }
@@ -1771,17 +2103,18 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @return ApiResponse&lt;Assetsv3AssetOverviewResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3AssetOverviewResponse> assetsServiceGetAssetOverviewWithHttpInfo(String assetId, Integer pageNumber, Integer size, String widget, String ip, String host, String database, String assetEntityType) throws ApiException {
+    public ApiResponse<Assetsv3AssetOverviewResponse> assetsServiceGetAssetOverviewWithHttpInfo(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer size, @javax.annotation.Nullable String widget, @javax.annotation.Nullable String ip, @javax.annotation.Nullable String host, @javax.annotation.Nullable String database, @javax.annotation.Nullable String assetEntityType) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceGetAssetOverviewValidateBeforeCall(assetId, pageNumber, size, widget, ip, host, database, assetEntityType, null);
         Type localVarReturnType = new TypeToken<Assetsv3AssetOverviewResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1797,18 +2130,19 @@ public class AssetsServiceApi {
      * @param ip Asset IP. (optional)
      * @param host Asset Host. (optional)
      * @param database Database Name. (optional)
-     * @param assetEntityType asset ntity type. (optional)
+     * @param assetEntityType asset entity type. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceGetAssetOverviewAsync(String assetId, Integer pageNumber, Integer size, String widget, String ip, String host, String database, String assetEntityType, final ApiCallback<Assetsv3AssetOverviewResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceGetAssetOverviewAsync(@javax.annotation.Nullable String assetId, @javax.annotation.Nullable Integer pageNumber, @javax.annotation.Nullable Integer size, @javax.annotation.Nullable String widget, @javax.annotation.Nullable String ip, @javax.annotation.Nullable String host, @javax.annotation.Nullable String database, @javax.annotation.Nullable String assetEntityType, final ApiCallback<Assetsv3AssetOverviewResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceGetAssetOverviewValidateBeforeCall(assetId, pageNumber, size, widget, ip, host, database, assetEntityType, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3AssetOverviewResponse>(){}.getType();
@@ -1822,13 +2156,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceGetAssetTopologyCall(Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceGetAssetTopologyCall(@javax.annotation.Nonnull Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1874,7 +2209,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceGetAssetTopologyValidateBeforeCall(Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceGetAssetTopologyValidateBeforeCall(@javax.annotation.Nonnull Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3GetAssetTopologyRequest' is set
         if (assetsv3GetAssetTopologyRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3GetAssetTopologyRequest' when calling assetsServiceGetAssetTopology(Async)");
@@ -1891,13 +2226,14 @@ public class AssetsServiceApi {
      * @return Assetsv3GetAssetTopologyResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3GetAssetTopologyResponse assetsServiceGetAssetTopology(Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest) throws ApiException {
+    public Assetsv3GetAssetTopologyResponse assetsServiceGetAssetTopology(@javax.annotation.Nonnull Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest) throws ApiException {
         ApiResponse<Assetsv3GetAssetTopologyResponse> localVarResp = assetsServiceGetAssetTopologyWithHttpInfo(assetsv3GetAssetTopologyRequest);
         return localVarResp.getData();
     }
@@ -1909,13 +2245,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3GetAssetTopologyResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3GetAssetTopologyResponse> assetsServiceGetAssetTopologyWithHttpInfo(Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest) throws ApiException {
+    public ApiResponse<Assetsv3GetAssetTopologyResponse> assetsServiceGetAssetTopologyWithHttpInfo(@javax.annotation.Nonnull Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceGetAssetTopologyValidateBeforeCall(assetsv3GetAssetTopologyRequest, null);
         Type localVarReturnType = new TypeToken<Assetsv3GetAssetTopologyResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1929,13 +2266,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceGetAssetTopologyAsync(Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest, final ApiCallback<Assetsv3GetAssetTopologyResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceGetAssetTopologyAsync(@javax.annotation.Nonnull Assetsv3GetAssetTopologyRequest assetsv3GetAssetTopologyRequest, final ApiCallback<Assetsv3GetAssetTopologyResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceGetAssetTopologyValidateBeforeCall(assetsv3GetAssetTopologyRequest, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3GetAssetTopologyResponse>(){}.getType();
@@ -1949,13 +2287,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceGetFilterTemplateForAssetsCall(String templateId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceGetFilterTemplateForAssetsCall(@javax.annotation.Nullable String templateId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2004,7 +2343,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceGetFilterTemplateForAssetsValidateBeforeCall(String templateId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceGetFilterTemplateForAssetsValidateBeforeCall(@javax.annotation.Nullable String templateId, final ApiCallback _callback) throws ApiException {
         return assetsServiceGetFilterTemplateForAssetsCall(templateId, _callback);
 
     }
@@ -2016,13 +2355,14 @@ public class AssetsServiceApi {
      * @return Assetsv3GetFilterTemplateResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3GetFilterTemplateResponse assetsServiceGetFilterTemplateForAssets(String templateId) throws ApiException {
+    public Assetsv3GetFilterTemplateResponse assetsServiceGetFilterTemplateForAssets(@javax.annotation.Nullable String templateId) throws ApiException {
         ApiResponse<Assetsv3GetFilterTemplateResponse> localVarResp = assetsServiceGetFilterTemplateForAssetsWithHttpInfo(templateId);
         return localVarResp.getData();
     }
@@ -2034,13 +2374,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3GetFilterTemplateResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3GetFilterTemplateResponse> assetsServiceGetFilterTemplateForAssetsWithHttpInfo(String templateId) throws ApiException {
+    public ApiResponse<Assetsv3GetFilterTemplateResponse> assetsServiceGetFilterTemplateForAssetsWithHttpInfo(@javax.annotation.Nullable String templateId) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceGetFilterTemplateForAssetsValidateBeforeCall(templateId, null);
         Type localVarReturnType = new TypeToken<Assetsv3GetFilterTemplateResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2054,13 +2395,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceGetFilterTemplateForAssetsAsync(String templateId, final ApiCallback<Assetsv3GetFilterTemplateResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceGetFilterTemplateForAssetsAsync(@javax.annotation.Nullable String templateId, final ApiCallback<Assetsv3GetFilterTemplateResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceGetFilterTemplateForAssetsValidateBeforeCall(templateId, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3GetFilterTemplateResponse>(){}.getType();
@@ -2073,7 +2415,8 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2135,7 +2478,8 @@ public class AssetsServiceApi {
      * @return Assetsv3GetFiltersDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2152,7 +2496,8 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3GetFiltersDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2171,7 +2516,8 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2185,12 +2531,154 @@ public class AssetsServiceApi {
         return localVarCall;
     }
     /**
+     * Build call for assetsServiceImportCSV
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceImportCSVCall(@javax.annotation.Nonnull String csvId, @javax.annotation.Nonnull Assetsv3ImportCSVRequest assetsv3ImportCSVRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = assetsv3ImportCSVRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v3/assets/csv/import/{csv_id}"
+            .replace("{" + "csv_id" + "}", localVarApiClient.escapeString(csvId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth", "ApiKeyAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call assetsServiceImportCSVValidateBeforeCall(@javax.annotation.Nonnull String csvId, @javax.annotation.Nonnull Assetsv3ImportCSVRequest assetsv3ImportCSVRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'csvId' is set
+        if (csvId == null) {
+            throw new ApiException("Missing the required parameter 'csvId' when calling assetsServiceImportCSV(Async)");
+        }
+
+        // verify the required parameter 'assetsv3ImportCSVRequest' is set
+        if (assetsv3ImportCSVRequest == null) {
+            throw new ApiException("Missing the required parameter 'assetsv3ImportCSVRequest' when calling assetsServiceImportCSV(Async)");
+        }
+
+        return assetsServiceImportCSVCall(csvId, assetsv3ImportCSVRequest, _callback);
+
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @return Assetsv3ImportCSVResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public Assetsv3ImportCSVResponse assetsServiceImportCSV(@javax.annotation.Nonnull String csvId, @javax.annotation.Nonnull Assetsv3ImportCSVRequest assetsv3ImportCSVRequest) throws ApiException {
+        ApiResponse<Assetsv3ImportCSVResponse> localVarResp = assetsServiceImportCSVWithHttpInfo(csvId, assetsv3ImportCSVRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @return ApiResponse&lt;Assetsv3ImportCSVResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Assetsv3ImportCSVResponse> assetsServiceImportCSVWithHttpInfo(@javax.annotation.Nonnull String csvId, @javax.annotation.Nonnull Assetsv3ImportCSVRequest assetsv3ImportCSVRequest) throws ApiException {
+        okhttp3.Call localVarCall = assetsServiceImportCSVValidateBeforeCall(csvId, assetsv3ImportCSVRequest, null);
+        Type localVarReturnType = new TypeToken<Assetsv3ImportCSVResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end. (asynchronously)
+     * 
+     * @param csvId unique id of the csv (required)
+     * @param assetsv3ImportCSVRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call assetsServiceImportCSVAsync(@javax.annotation.Nonnull String csvId, @javax.annotation.Nonnull Assetsv3ImportCSVRequest assetsv3ImportCSVRequest, final ApiCallback<Assetsv3ImportCSVResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = assetsServiceImportCSVValidateBeforeCall(csvId, assetsv3ImportCSVRequest, _callback);
+        Type localVarReturnType = new TypeToken<Assetsv3ImportCSVResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for assetsServiceListPolicy
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2252,7 +2740,8 @@ public class AssetsServiceApi {
      * @return Assetsv3ListPolicyResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2269,7 +2758,8 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3ListPolicyResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2288,7 +2778,8 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2308,13 +2799,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceListRuleCall(String policyId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceListRuleCall(@javax.annotation.Nonnull String policyId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2360,7 +2852,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceListRuleValidateBeforeCall(String policyId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceListRuleValidateBeforeCall(@javax.annotation.Nonnull String policyId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'policyId' is set
         if (policyId == null) {
             throw new ApiException("Missing the required parameter 'policyId' when calling assetsServiceListRule(Async)");
@@ -2377,13 +2869,14 @@ public class AssetsServiceApi {
      * @return Assetsv3ListRuleResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3ListRuleResponse assetsServiceListRule(String policyId) throws ApiException {
+    public Assetsv3ListRuleResponse assetsServiceListRule(@javax.annotation.Nonnull String policyId) throws ApiException {
         ApiResponse<Assetsv3ListRuleResponse> localVarResp = assetsServiceListRuleWithHttpInfo(policyId);
         return localVarResp.getData();
     }
@@ -2395,13 +2888,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3ListRuleResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3ListRuleResponse> assetsServiceListRuleWithHttpInfo(String policyId) throws ApiException {
+    public ApiResponse<Assetsv3ListRuleResponse> assetsServiceListRuleWithHttpInfo(@javax.annotation.Nonnull String policyId) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceListRuleValidateBeforeCall(policyId, null);
         Type localVarReturnType = new TypeToken<Assetsv3ListRuleResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2415,13 +2909,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceListRuleAsync(String policyId, final ApiCallback<Assetsv3ListRuleResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceListRuleAsync(@javax.annotation.Nonnull String policyId, final ApiCallback<Assetsv3ListRuleResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceListRuleValidateBeforeCall(policyId, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3ListRuleResponse>(){}.getType();
@@ -2437,13 +2932,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceListTagDomainsCall(String domGrouper, String purpose, Boolean needTag, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceListTagDomainsCall(@javax.annotation.Nullable String domGrouper, @javax.annotation.Nullable String purpose, @javax.annotation.Nullable Boolean needTag, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2500,7 +2996,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceListTagDomainsValidateBeforeCall(String domGrouper, String purpose, Boolean needTag, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceListTagDomainsValidateBeforeCall(@javax.annotation.Nullable String domGrouper, @javax.annotation.Nullable String purpose, @javax.annotation.Nullable Boolean needTag, final ApiCallback _callback) throws ApiException {
         return assetsServiceListTagDomainsCall(domGrouper, purpose, needTag, _callback);
 
     }
@@ -2514,13 +3010,14 @@ public class AssetsServiceApi {
      * @return Assetsv3ListTagDomainsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3ListTagDomainsResponse assetsServiceListTagDomains(String domGrouper, String purpose, Boolean needTag) throws ApiException {
+    public Assetsv3ListTagDomainsResponse assetsServiceListTagDomains(@javax.annotation.Nullable String domGrouper, @javax.annotation.Nullable String purpose, @javax.annotation.Nullable Boolean needTag) throws ApiException {
         ApiResponse<Assetsv3ListTagDomainsResponse> localVarResp = assetsServiceListTagDomainsWithHttpInfo(domGrouper, purpose, needTag);
         return localVarResp.getData();
     }
@@ -2534,13 +3031,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3ListTagDomainsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3ListTagDomainsResponse> assetsServiceListTagDomainsWithHttpInfo(String domGrouper, String purpose, Boolean needTag) throws ApiException {
+    public ApiResponse<Assetsv3ListTagDomainsResponse> assetsServiceListTagDomainsWithHttpInfo(@javax.annotation.Nullable String domGrouper, @javax.annotation.Nullable String purpose, @javax.annotation.Nullable Boolean needTag) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceListTagDomainsValidateBeforeCall(domGrouper, purpose, needTag, null);
         Type localVarReturnType = new TypeToken<Assetsv3ListTagDomainsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2556,13 +3054,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceListTagDomainsAsync(String domGrouper, String purpose, Boolean needTag, final ApiCallback<Assetsv3ListTagDomainsResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceListTagDomainsAsync(@javax.annotation.Nullable String domGrouper, @javax.annotation.Nullable String purpose, @javax.annotation.Nullable Boolean needTag, final ApiCallback<Assetsv3ListTagDomainsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceListTagDomainsValidateBeforeCall(domGrouper, purpose, needTag, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3ListTagDomainsResponse>(){}.getType();
@@ -2576,13 +3075,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceListTagsCall(List<String> assetId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceListTagsCall(@javax.annotation.Nullable List<String> assetId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2631,7 +3131,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceListTagsValidateBeforeCall(List<String> assetId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceListTagsValidateBeforeCall(@javax.annotation.Nullable List<String> assetId, final ApiCallback _callback) throws ApiException {
         return assetsServiceListTagsCall(assetId, _callback);
 
     }
@@ -2643,13 +3143,14 @@ public class AssetsServiceApi {
      * @return Assetsv3ListTagsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3ListTagsResponse assetsServiceListTags(List<String> assetId) throws ApiException {
+    public Assetsv3ListTagsResponse assetsServiceListTags(@javax.annotation.Nullable List<String> assetId) throws ApiException {
         ApiResponse<Assetsv3ListTagsResponse> localVarResp = assetsServiceListTagsWithHttpInfo(assetId);
         return localVarResp.getData();
     }
@@ -2661,13 +3162,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3ListTagsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3ListTagsResponse> assetsServiceListTagsWithHttpInfo(List<String> assetId) throws ApiException {
+    public ApiResponse<Assetsv3ListTagsResponse> assetsServiceListTagsWithHttpInfo(@javax.annotation.Nullable List<String> assetId) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceListTagsValidateBeforeCall(assetId, null);
         Type localVarReturnType = new TypeToken<Assetsv3ListTagsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2681,13 +3183,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceListTagsAsync(List<String> assetId, final ApiCallback<Assetsv3ListTagsResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceListTagsAsync(@javax.annotation.Nullable List<String> assetId, final ApiCallback<Assetsv3ListTagsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceListTagsValidateBeforeCall(assetId, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3ListTagsResponse>(){}.getType();
@@ -2701,13 +3204,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceMergeOrSplitAssetsCall(Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceMergeOrSplitAssetsCall(@javax.annotation.Nonnull Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2753,7 +3257,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceMergeOrSplitAssetsValidateBeforeCall(Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceMergeOrSplitAssetsValidateBeforeCall(@javax.annotation.Nonnull Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3MergeOrSplitAssetsRequest' is set
         if (assetsv3MergeOrSplitAssetsRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3MergeOrSplitAssetsRequest' when calling assetsServiceMergeOrSplitAssets(Async)");
@@ -2770,13 +3274,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceMergeOrSplitAssets(Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest) throws ApiException {
+    public Object assetsServiceMergeOrSplitAssets(@javax.annotation.Nonnull Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceMergeOrSplitAssetsWithHttpInfo(assetsv3MergeOrSplitAssetsRequest);
         return localVarResp.getData();
     }
@@ -2788,13 +3293,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceMergeOrSplitAssetsWithHttpInfo(Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceMergeOrSplitAssetsWithHttpInfo(@javax.annotation.Nonnull Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceMergeOrSplitAssetsValidateBeforeCall(assetsv3MergeOrSplitAssetsRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2808,13 +3314,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceMergeOrSplitAssetsAsync(Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceMergeOrSplitAssetsAsync(@javax.annotation.Nonnull Assetsv3MergeOrSplitAssetsRequest assetsv3MergeOrSplitAssetsRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceMergeOrSplitAssetsValidateBeforeCall(assetsv3MergeOrSplitAssetsRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -2828,13 +3335,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveAssignedTagsCall(Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveAssignedTagsCall(@javax.annotation.Nonnull Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2880,7 +3388,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceSaveAssignedTagsValidateBeforeCall(Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceSaveAssignedTagsValidateBeforeCall(@javax.annotation.Nonnull Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3SaveAssignedTagsRequest' is set
         if (assetsv3SaveAssignedTagsRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3SaveAssignedTagsRequest' when calling assetsServiceSaveAssignedTags(Async)");
@@ -2897,13 +3405,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceSaveAssignedTags(Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest) throws ApiException {
+    public Object assetsServiceSaveAssignedTags(@javax.annotation.Nonnull Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceSaveAssignedTagsWithHttpInfo(assetsv3SaveAssignedTagsRequest);
         return localVarResp.getData();
     }
@@ -2915,13 +3424,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceSaveAssignedTagsWithHttpInfo(Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceSaveAssignedTagsWithHttpInfo(@javax.annotation.Nonnull Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceSaveAssignedTagsValidateBeforeCall(assetsv3SaveAssignedTagsRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2935,13 +3445,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveAssignedTagsAsync(Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveAssignedTagsAsync(@javax.annotation.Nonnull Assetsv3SaveAssignedTagsRequest assetsv3SaveAssignedTagsRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceSaveAssignedTagsValidateBeforeCall(assetsv3SaveAssignedTagsRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -2955,13 +3466,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveTagConceptDataCall(Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveTagConceptDataCall(@javax.annotation.Nonnull Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3007,7 +3519,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceSaveTagConceptDataValidateBeforeCall(Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceSaveTagConceptDataValidateBeforeCall(@javax.annotation.Nonnull Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3SaveTagConceptDataRequest' is set
         if (assetsv3SaveTagConceptDataRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3SaveTagConceptDataRequest' when calling assetsServiceSaveTagConceptData(Async)");
@@ -3024,13 +3536,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceSaveTagConceptData(Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest) throws ApiException {
+    public Object assetsServiceSaveTagConceptData(@javax.annotation.Nonnull Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceSaveTagConceptDataWithHttpInfo(assetsv3SaveTagConceptDataRequest);
         return localVarResp.getData();
     }
@@ -3042,13 +3555,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceSaveTagConceptDataWithHttpInfo(Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceSaveTagConceptDataWithHttpInfo(@javax.annotation.Nonnull Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceSaveTagConceptDataValidateBeforeCall(assetsv3SaveTagConceptDataRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3062,13 +3576,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveTagConceptDataAsync(Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveTagConceptDataAsync(@javax.annotation.Nonnull Assetsv3SaveTagConceptDataRequest assetsv3SaveTagConceptDataRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceSaveTagConceptDataValidateBeforeCall(assetsv3SaveTagConceptDataRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -3082,13 +3597,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveTagDomainDataCall(Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveTagDomainDataCall(@javax.annotation.Nonnull Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3134,7 +3650,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceSaveTagDomainDataValidateBeforeCall(Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceSaveTagDomainDataValidateBeforeCall(@javax.annotation.Nonnull Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3SaveTagDomainDataRequest' is set
         if (assetsv3SaveTagDomainDataRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3SaveTagDomainDataRequest' when calling assetsServiceSaveTagDomainData(Async)");
@@ -3151,13 +3667,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceSaveTagDomainData(Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest) throws ApiException {
+    public Object assetsServiceSaveTagDomainData(@javax.annotation.Nonnull Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceSaveTagDomainDataWithHttpInfo(assetsv3SaveTagDomainDataRequest);
         return localVarResp.getData();
     }
@@ -3169,13 +3686,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceSaveTagDomainDataWithHttpInfo(Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceSaveTagDomainDataWithHttpInfo(@javax.annotation.Nonnull Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceSaveTagDomainDataValidateBeforeCall(assetsv3SaveTagDomainDataRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3189,13 +3707,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveTagDomainDataAsync(Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveTagDomainDataAsync(@javax.annotation.Nonnull Assetsv3SaveTagDomainDataRequest assetsv3SaveTagDomainDataRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceSaveTagDomainDataValidateBeforeCall(assetsv3SaveTagDomainDataRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -3209,13 +3728,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveUpdateFilterTemplateForAssetsCall(Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveUpdateFilterTemplateForAssetsCall(@javax.annotation.Nonnull Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3261,7 +3781,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceSaveUpdateFilterTemplateForAssetsValidateBeforeCall(Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceSaveUpdateFilterTemplateForAssetsValidateBeforeCall(@javax.annotation.Nonnull Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3SaveUpdateFilterTemplateRequest' is set
         if (assetsv3SaveUpdateFilterTemplateRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3SaveUpdateFilterTemplateRequest' when calling assetsServiceSaveUpdateFilterTemplateForAssets(Async)");
@@ -3278,13 +3798,14 @@ public class AssetsServiceApi {
      * @return Assetsv3SaveUpdateFilterTemplateResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Assetsv3SaveUpdateFilterTemplateResponse assetsServiceSaveUpdateFilterTemplateForAssets(Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest) throws ApiException {
+    public Assetsv3SaveUpdateFilterTemplateResponse assetsServiceSaveUpdateFilterTemplateForAssets(@javax.annotation.Nonnull Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest) throws ApiException {
         ApiResponse<Assetsv3SaveUpdateFilterTemplateResponse> localVarResp = assetsServiceSaveUpdateFilterTemplateForAssetsWithHttpInfo(assetsv3SaveUpdateFilterTemplateRequest);
         return localVarResp.getData();
     }
@@ -3296,13 +3817,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Assetsv3SaveUpdateFilterTemplateResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Assetsv3SaveUpdateFilterTemplateResponse> assetsServiceSaveUpdateFilterTemplateForAssetsWithHttpInfo(Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest) throws ApiException {
+    public ApiResponse<Assetsv3SaveUpdateFilterTemplateResponse> assetsServiceSaveUpdateFilterTemplateForAssetsWithHttpInfo(@javax.annotation.Nonnull Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceSaveUpdateFilterTemplateForAssetsValidateBeforeCall(assetsv3SaveUpdateFilterTemplateRequest, null);
         Type localVarReturnType = new TypeToken<Assetsv3SaveUpdateFilterTemplateResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3316,13 +3838,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSaveUpdateFilterTemplateForAssetsAsync(Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest, final ApiCallback<Assetsv3SaveUpdateFilterTemplateResponse> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSaveUpdateFilterTemplateForAssetsAsync(@javax.annotation.Nonnull Assetsv3SaveUpdateFilterTemplateRequest assetsv3SaveUpdateFilterTemplateRequest, final ApiCallback<Assetsv3SaveUpdateFilterTemplateResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceSaveUpdateFilterTemplateForAssetsValidateBeforeCall(assetsv3SaveUpdateFilterTemplateRequest, _callback);
         Type localVarReturnType = new TypeToken<Assetsv3SaveUpdateFilterTemplateResponse>(){}.getType();
@@ -3336,13 +3859,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSetBannerStateCall(Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSetBannerStateCall(@javax.annotation.Nonnull Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3388,7 +3912,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceSetBannerStateValidateBeforeCall(Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceSetBannerStateValidateBeforeCall(@javax.annotation.Nonnull Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3SetBannerStateRequest' is set
         if (assetsv3SetBannerStateRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3SetBannerStateRequest' when calling assetsServiceSetBannerState(Async)");
@@ -3405,13 +3929,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceSetBannerState(Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest) throws ApiException {
+    public Object assetsServiceSetBannerState(@javax.annotation.Nonnull Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceSetBannerStateWithHttpInfo(assetsv3SetBannerStateRequest);
         return localVarResp.getData();
     }
@@ -3423,13 +3948,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceSetBannerStateWithHttpInfo(Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceSetBannerStateWithHttpInfo(@javax.annotation.Nonnull Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceSetBannerStateValidateBeforeCall(assetsv3SetBannerStateRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3443,13 +3969,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceSetBannerStateAsync(Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceSetBannerStateAsync(@javax.annotation.Nonnull Assetsv3SetBannerStateRequest assetsv3SetBannerStateRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceSetBannerStateValidateBeforeCall(assetsv3SetBannerStateRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -3463,13 +3990,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceUpdateAssetNameCall(Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceUpdateAssetNameCall(@javax.annotation.Nonnull Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3515,7 +4043,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceUpdateAssetNameValidateBeforeCall(Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceUpdateAssetNameValidateBeforeCall(@javax.annotation.Nonnull Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3UpdateAssetNameRequest' is set
         if (assetsv3UpdateAssetNameRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3UpdateAssetNameRequest' when calling assetsServiceUpdateAssetName(Async)");
@@ -3532,13 +4060,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceUpdateAssetName(Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest) throws ApiException {
+    public Object assetsServiceUpdateAssetName(@javax.annotation.Nonnull Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceUpdateAssetNameWithHttpInfo(assetsv3UpdateAssetNameRequest);
         return localVarResp.getData();
     }
@@ -3550,13 +4079,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceUpdateAssetNameWithHttpInfo(Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceUpdateAssetNameWithHttpInfo(@javax.annotation.Nonnull Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceUpdateAssetNameValidateBeforeCall(assetsv3UpdateAssetNameRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3570,13 +4100,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceUpdateAssetNameAsync(Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceUpdateAssetNameAsync(@javax.annotation.Nonnull Assetsv3UpdateAssetNameRequest assetsv3UpdateAssetNameRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceUpdateAssetNameValidateBeforeCall(assetsv3UpdateAssetNameRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -3590,13 +4121,14 @@ public class AssetsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceUpdatePolicyCall(Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call assetsServiceUpdatePolicyCall(@javax.annotation.Nonnull Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3642,7 +4174,7 @@ public class AssetsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call assetsServiceUpdatePolicyValidateBeforeCall(Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call assetsServiceUpdatePolicyValidateBeforeCall(@javax.annotation.Nonnull Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'assetsv3UpdatePolicyRequest' is set
         if (assetsv3UpdatePolicyRequest == null) {
             throw new ApiException("Missing the required parameter 'assetsv3UpdatePolicyRequest' when calling assetsServiceUpdatePolicy(Async)");
@@ -3659,13 +4191,14 @@ public class AssetsServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object assetsServiceUpdatePolicy(Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest) throws ApiException {
+    public Object assetsServiceUpdatePolicy(@javax.annotation.Nonnull Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest) throws ApiException {
         ApiResponse<Object> localVarResp = assetsServiceUpdatePolicyWithHttpInfo(assetsv3UpdatePolicyRequest);
         return localVarResp.getData();
     }
@@ -3677,13 +4210,14 @@ public class AssetsServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> assetsServiceUpdatePolicyWithHttpInfo(Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest) throws ApiException {
+    public ApiResponse<Object> assetsServiceUpdatePolicyWithHttpInfo(@javax.annotation.Nonnull Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest) throws ApiException {
         okhttp3.Call localVarCall = assetsServiceUpdatePolicyValidateBeforeCall(assetsv3UpdatePolicyRequest, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3697,13 +4231,14 @@ public class AssetsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call assetsServiceUpdatePolicyAsync(Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call assetsServiceUpdatePolicyAsync(@javax.annotation.Nonnull Assetsv3UpdatePolicyRequest assetsv3UpdatePolicyRequest, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = assetsServiceUpdatePolicyValidateBeforeCall(assetsv3UpdatePolicyRequest, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();

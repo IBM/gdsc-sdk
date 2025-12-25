@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StopExportReportJobResponse is the return type of StopExportReportJob API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3StopExportReportJobResponse {
   public static final String SERIALIZED_NAME_EXPORT_FILE_NAME = "export_file_name";
   @SerializedName(SERIALIZED_NAME_EXPORT_FILE_NAME)
+  @javax.annotation.Nullable
   private String exportFileName;
 
   public static final String SERIALIZED_NAME_JOB_ID = "job_id";
   @SerializedName(SERIALIZED_NAME_JOB_ID)
+  @javax.annotation.Nullable
   private String jobId;
 
   public static final String SERIALIZED_NAME_JOB_STATUS = "job_status";
   @SerializedName(SERIALIZED_NAME_JOB_STATUS)
+  @javax.annotation.Nullable
   private Reportsrunnerv3ExportJobStatus jobStatus = Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS;
 
   public Reportsrunnerv3StopExportReportJobResponse() {
   }
 
-  public Reportsrunnerv3StopExportReportJobResponse exportFileName(String exportFileName) {
+  public Reportsrunnerv3StopExportReportJobResponse exportFileName(@javax.annotation.Nullable String exportFileName) {
     this.exportFileName = exportFileName;
     return this;
   }
 
-   /**
+  /**
    * Export file name.
    * @return exportFileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getExportFileName() {
     return exportFileName;
   }
 
-  public void setExportFileName(String exportFileName) {
+  public void setExportFileName(@javax.annotation.Nullable String exportFileName) {
     this.exportFileName = exportFileName;
   }
 
 
-  public Reportsrunnerv3StopExportReportJobResponse jobId(String jobId) {
+  public Reportsrunnerv3StopExportReportJobResponse jobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * Token that identifies the export job.
    * @return jobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getJobId() {
     return jobId;
   }
 
-  public void setJobId(String jobId) {
+  public void setJobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
   }
 
 
-  public Reportsrunnerv3StopExportReportJobResponse jobStatus(Reportsrunnerv3ExportJobStatus jobStatus) {
+  public Reportsrunnerv3StopExportReportJobResponse jobStatus(@javax.annotation.Nullable Reportsrunnerv3ExportJobStatus jobStatus) {
     this.jobStatus = jobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get jobStatus
    * @return jobStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsrunnerv3ExportJobStatus getJobStatus() {
     return jobStatus;
   }
 
-  public void setJobStatus(Reportsrunnerv3ExportJobStatus jobStatus) {
+  public void setJobStatus(@javax.annotation.Nullable Reportsrunnerv3ExportJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
@@ -172,25 +176,22 @@ public class Reportsrunnerv3StopExportReportJobResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("export_file_name");
-    openapiFields.add("job_id");
-    openapiFields.add("job_status");
+    openapiFields = new HashSet<String>(Arrays.asList("export_file_name", "job_id", "job_status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3StopExportReportJobResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3StopExportReportJobResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3StopExportReportJobResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3StopExportReportJobResponse is not found in the empty JSON string", Reportsrunnerv3StopExportReportJobResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3StopExportReportJobResponse is not found in the empty JSON string", Reportsrunnerv3StopExportReportJobResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,15 +199,15 @@ public class Reportsrunnerv3StopExportReportJobResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3StopExportReportJobResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3StopExportReportJobResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3StopExportReportJobResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("export_file_name") != null && !jsonObj.get("export_file_name").isJsonNull()) && !jsonObj.get("export_file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `export_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("export_file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `export_file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("export_file_name").toString()));
       }
       if ((jsonObj.get("job_id") != null && !jsonObj.get("job_id").isJsonNull()) && !jsonObj.get("job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
       }
       // validate the optional field `job_status`
       if (jsonObj.get("job_status") != null && !jsonObj.get("job_status").isJsonNull()) {
@@ -243,22 +244,22 @@ public class Reportsrunnerv3StopExportReportJobResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3StopExportReportJobResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3StopExportReportJobResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3StopExportReportJobResponse
-  */
+  /**
+   * Create an instance of Reportsrunnerv3StopExportReportJobResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3StopExportReportJobResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3StopExportReportJobResponse
+   */
   public static Reportsrunnerv3StopExportReportJobResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3StopExportReportJobResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3StopExportReportJobResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3StopExportReportJobResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,157 +40,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RunTimeParameter object define all necessary data for a report runtime parameter.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3RunTimeParameter {
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nullable
   private String label;
 
   public static final String SERIALIZED_NAME_OPERATOR_TYPE = "operator_type";
   @SerializedName(SERIALIZED_NAME_OPERATOR_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3OperatorType operatorType = Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE;
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAMETER_TYPE = "runtime_parameter_type";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAMETER_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3HeaderType runtimeParameterType = Reportsv3HeaderType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAMETER_TYPE_LENGTH = "runtime_parameter_type_length";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAMETER_TYPE_LENGTH)
+  @javax.annotation.Nullable
   private Integer runtimeParameterTypeLength;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public Reportsv3RunTimeParameter() {
   }
 
-  public Reportsv3RunTimeParameter key(String key) {
+  public Reportsv3RunTimeParameter key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * The run time parameter key (ReportFilter.value).
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Reportsv3RunTimeParameter label(String label) {
+  public Reportsv3RunTimeParameter label(@javax.annotation.Nullable String label) {
     this.label = label;
     return this;
   }
 
-   /**
+  /**
    * The run time parameter label.
    * @return label
-  **/
+   */
   @javax.annotation.Nullable
   public String getLabel() {
     return label;
   }
 
-  public void setLabel(String label) {
+  public void setLabel(@javax.annotation.Nullable String label) {
     this.label = label;
   }
 
 
-  public Reportsv3RunTimeParameter operatorType(Reportsv3OperatorType operatorType) {
+  public Reportsv3RunTimeParameter operatorType(@javax.annotation.Nullable Reportsv3OperatorType operatorType) {
     this.operatorType = operatorType;
     return this;
   }
 
-   /**
+  /**
    * Get operatorType
    * @return operatorType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3OperatorType getOperatorType() {
     return operatorType;
   }
 
-  public void setOperatorType(Reportsv3OperatorType operatorType) {
+  public void setOperatorType(@javax.annotation.Nullable Reportsv3OperatorType operatorType) {
     this.operatorType = operatorType;
   }
 
 
-  public Reportsv3RunTimeParameter runtimeParameterType(Reportsv3HeaderType runtimeParameterType) {
+  public Reportsv3RunTimeParameter runtimeParameterType(@javax.annotation.Nullable Reportsv3HeaderType runtimeParameterType) {
     this.runtimeParameterType = runtimeParameterType;
     return this;
   }
 
-   /**
+  /**
    * Get runtimeParameterType
    * @return runtimeParameterType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3HeaderType getRuntimeParameterType() {
     return runtimeParameterType;
   }
 
-  public void setRuntimeParameterType(Reportsv3HeaderType runtimeParameterType) {
+  public void setRuntimeParameterType(@javax.annotation.Nullable Reportsv3HeaderType runtimeParameterType) {
     this.runtimeParameterType = runtimeParameterType;
   }
 
 
-  public Reportsv3RunTimeParameter runtimeParameterTypeLength(Integer runtimeParameterTypeLength) {
+  public Reportsv3RunTimeParameter runtimeParameterTypeLength(@javax.annotation.Nullable Integer runtimeParameterTypeLength) {
     this.runtimeParameterTypeLength = runtimeParameterTypeLength;
     return this;
   }
 
-   /**
+  /**
    * Runtime parameter&#39;s field type length.
    * @return runtimeParameterTypeLength
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRuntimeParameterTypeLength() {
     return runtimeParameterTypeLength;
   }
 
-  public void setRuntimeParameterTypeLength(Integer runtimeParameterTypeLength) {
+  public void setRuntimeParameterTypeLength(@javax.annotation.Nullable Integer runtimeParameterTypeLength) {
     this.runtimeParameterTypeLength = runtimeParameterTypeLength;
   }
 
 
-  public Reportsv3RunTimeParameter value(String value) {
+  public Reportsv3RunTimeParameter value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Run time parameter values.
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public String getValue() {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
@@ -248,28 +255,22 @@ public class Reportsv3RunTimeParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("key");
-    openapiFields.add("label");
-    openapiFields.add("operator_type");
-    openapiFields.add("runtime_parameter_type");
-    openapiFields.add("runtime_parameter_type_length");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("key", "label", "operator_type", "runtime_parameter_type", "runtime_parameter_type_length", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3RunTimeParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3RunTimeParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3RunTimeParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3RunTimeParameter is not found in the empty JSON string", Reportsv3RunTimeParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3RunTimeParameter is not found in the empty JSON string", Reportsv3RunTimeParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -277,15 +278,15 @@ public class Reportsv3RunTimeParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3RunTimeParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3RunTimeParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3RunTimeParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       if ((jsonObj.get("label") != null && !jsonObj.get("label").isJsonNull()) && !jsonObj.get("label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
       }
       // validate the optional field `operator_type`
       if (jsonObj.get("operator_type") != null && !jsonObj.get("operator_type").isJsonNull()) {
@@ -296,7 +297,7 @@ public class Reportsv3RunTimeParameter {
         Reportsv3HeaderType.validateJsonElement(jsonObj.get("runtime_parameter_type"));
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -329,22 +330,22 @@ public class Reportsv3RunTimeParameter {
     }
   }
 
- /**
-  * Create an instance of Reportsv3RunTimeParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3RunTimeParameter
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3RunTimeParameter
-  */
+  /**
+   * Create an instance of Reportsv3RunTimeParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3RunTimeParameter
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3RunTimeParameter
+   */
   public static Reportsv3RunTimeParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3RunTimeParameter.class);
   }
 
- /**
-  * Convert an instance of Reportsv3RunTimeParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3RunTimeParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,111 +39,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Request to log task error execution from GDP.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3TaskErrorRequest {
   public static final String SERIALIZED_NAME_CENTRAL_MANAGER_ID = "central_manager_id";
   @SerializedName(SERIALIZED_NAME_CENTRAL_MANAGER_ID)
+  @javax.annotation.Nullable
   private String centralManagerId;
 
   public static final String SERIALIZED_NAME_ERROR_CODE = "error_code";
   @SerializedName(SERIALIZED_NAME_ERROR_CODE)
+  @javax.annotation.Nullable
   private String errorCode;
 
   public static final String SERIALIZED_NAME_ERROR_DESCRIPTION = "error_description";
   @SerializedName(SERIALIZED_NAME_ERROR_DESCRIPTION)
+  @javax.annotation.Nullable
   private String errorDescription;
 
   public static final String SERIALIZED_NAME_TASK = "task";
   @SerializedName(SERIALIZED_NAME_TASK)
+  @javax.annotation.Nullable
   private Guardiumconnectorv3TaskDefinition task;
 
   public Guardiumconnectorv3TaskErrorRequest() {
   }
 
-  public Guardiumconnectorv3TaskErrorRequest centralManagerId(String centralManagerId) {
+  public Guardiumconnectorv3TaskErrorRequest centralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
     return this;
   }
 
-   /**
+  /**
    * ID of central manager.
    * @return centralManagerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCentralManagerId() {
     return centralManagerId;
   }
 
-  public void setCentralManagerId(String centralManagerId) {
+  public void setCentralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
   }
 
 
-  public Guardiumconnectorv3TaskErrorRequest errorCode(String errorCode) {
+  public Guardiumconnectorv3TaskErrorRequest errorCode(@javax.annotation.Nullable String errorCode) {
     this.errorCode = errorCode;
     return this;
   }
 
-   /**
+  /**
    * Translatable error code.
    * @return errorCode
-  **/
+   */
   @javax.annotation.Nullable
   public String getErrorCode() {
     return errorCode;
   }
 
-  public void setErrorCode(String errorCode) {
+  public void setErrorCode(@javax.annotation.Nullable String errorCode) {
     this.errorCode = errorCode;
   }
 
 
-  public Guardiumconnectorv3TaskErrorRequest errorDescription(String errorDescription) {
+  public Guardiumconnectorv3TaskErrorRequest errorDescription(@javax.annotation.Nullable String errorDescription) {
     this.errorDescription = errorDescription;
     return this;
   }
 
-   /**
+  /**
    * Error details.
    * @return errorDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getErrorDescription() {
     return errorDescription;
   }
 
-  public void setErrorDescription(String errorDescription) {
+  public void setErrorDescription(@javax.annotation.Nullable String errorDescription) {
     this.errorDescription = errorDescription;
   }
 
 
-  public Guardiumconnectorv3TaskErrorRequest task(Guardiumconnectorv3TaskDefinition task) {
+  public Guardiumconnectorv3TaskErrorRequest task(@javax.annotation.Nullable Guardiumconnectorv3TaskDefinition task) {
     this.task = task;
     return this;
   }
 
-   /**
+  /**
    * Get task
    * @return task
-  **/
+   */
   @javax.annotation.Nullable
   public Guardiumconnectorv3TaskDefinition getTask() {
     return task;
   }
 
-  public void setTask(Guardiumconnectorv3TaskDefinition task) {
+  public void setTask(@javax.annotation.Nullable Guardiumconnectorv3TaskDefinition task) {
     this.task = task;
   }
 
@@ -197,26 +202,22 @@ public class Guardiumconnectorv3TaskErrorRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("central_manager_id");
-    openapiFields.add("error_code");
-    openapiFields.add("error_description");
-    openapiFields.add("task");
+    openapiFields = new HashSet<String>(Arrays.asList("central_manager_id", "error_code", "error_description", "task"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3TaskErrorRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3TaskErrorRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3TaskErrorRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3TaskErrorRequest is not found in the empty JSON string", Guardiumconnectorv3TaskErrorRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3TaskErrorRequest is not found in the empty JSON string", Guardiumconnectorv3TaskErrorRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -224,18 +225,18 @@ public class Guardiumconnectorv3TaskErrorRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3TaskErrorRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3TaskErrorRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3TaskErrorRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("central_manager_id") != null && !jsonObj.get("central_manager_id").isJsonNull()) && !jsonObj.get("central_manager_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
       }
       if ((jsonObj.get("error_code") != null && !jsonObj.get("error_code").isJsonNull()) && !jsonObj.get("error_code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `error_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_code").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `error_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_code").toString()));
       }
       if ((jsonObj.get("error_description") != null && !jsonObj.get("error_description").isJsonNull()) && !jsonObj.get("error_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `error_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `error_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("error_description").toString()));
       }
       // validate the optional field `task`
       if (jsonObj.get("task") != null && !jsonObj.get("task").isJsonNull()) {
@@ -272,22 +273,22 @@ public class Guardiumconnectorv3TaskErrorRequest {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3TaskErrorRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3TaskErrorRequest
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3TaskErrorRequest
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3TaskErrorRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3TaskErrorRequest
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3TaskErrorRequest
+   */
   public static Guardiumconnectorv3TaskErrorRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3TaskErrorRequest.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3TaskErrorRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3TaskErrorRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

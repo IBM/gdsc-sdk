@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,111 +40,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PartialChartUpdateRequest is the argument type used to update a chart  with partial information.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3PartialChartUpdateRequest {
   public static final String SERIALIZED_NAME_CHART_ID = "chart_id";
   @SerializedName(SERIALIZED_NAME_CHART_ID)
+  @javax.annotation.Nullable
   private String chartId;
 
   public static final String SERIALIZED_NAME_CHART_TITLE = "chart_title";
   @SerializedName(SERIALIZED_NAME_CHART_TITLE)
+  @javax.annotation.Nullable
   private String chartTitle;
 
   public static final String SERIALIZED_NAME_CHART_TYPE = "chart_type";
   @SerializedName(SERIALIZED_NAME_CHART_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3ChartType chartType = Reportsv3ChartType.UNDEFINED_CHART_TYPE;
 
   public static final String SERIALIZED_NAME_UPDATE_MASK = "update_mask";
   @SerializedName(SERIALIZED_NAME_UPDATE_MASK)
+  @javax.annotation.Nullable
   private ProtobufFieldMask updateMask;
 
   public Reportsv3PartialChartUpdateRequest() {
   }
 
-  public Reportsv3PartialChartUpdateRequest chartId(String chartId) {
+  public Reportsv3PartialChartUpdateRequest chartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
     return this;
   }
 
-   /**
+  /**
    * Unique chart ID.
    * @return chartId
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartId() {
     return chartId;
   }
 
-  public void setChartId(String chartId) {
+  public void setChartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
   }
 
 
-  public Reportsv3PartialChartUpdateRequest chartTitle(String chartTitle) {
+  public Reportsv3PartialChartUpdateRequest chartTitle(@javax.annotation.Nullable String chartTitle) {
     this.chartTitle = chartTitle;
     return this;
   }
 
-   /**
+  /**
    * The chart title.
    * @return chartTitle
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartTitle() {
     return chartTitle;
   }
 
-  public void setChartTitle(String chartTitle) {
+  public void setChartTitle(@javax.annotation.Nullable String chartTitle) {
     this.chartTitle = chartTitle;
   }
 
 
-  public Reportsv3PartialChartUpdateRequest chartType(Reportsv3ChartType chartType) {
+  public Reportsv3PartialChartUpdateRequest chartType(@javax.annotation.Nullable Reportsv3ChartType chartType) {
     this.chartType = chartType;
     return this;
   }
 
-   /**
+  /**
    * Get chartType
    * @return chartType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ChartType getChartType() {
     return chartType;
   }
 
-  public void setChartType(Reportsv3ChartType chartType) {
+  public void setChartType(@javax.annotation.Nullable Reportsv3ChartType chartType) {
     this.chartType = chartType;
   }
 
 
-  public Reportsv3PartialChartUpdateRequest updateMask(ProtobufFieldMask updateMask) {
+  public Reportsv3PartialChartUpdateRequest updateMask(@javax.annotation.Nullable ProtobufFieldMask updateMask) {
     this.updateMask = updateMask;
     return this;
   }
 
-   /**
+  /**
    * Get updateMask
    * @return updateMask
-  **/
+   */
   @javax.annotation.Nullable
   public ProtobufFieldMask getUpdateMask() {
     return updateMask;
   }
 
-  public void setUpdateMask(ProtobufFieldMask updateMask) {
+  public void setUpdateMask(@javax.annotation.Nullable ProtobufFieldMask updateMask) {
     this.updateMask = updateMask;
   }
 
@@ -198,26 +203,22 @@ public class Reportsv3PartialChartUpdateRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_id");
-    openapiFields.add("chart_title");
-    openapiFields.add("chart_type");
-    openapiFields.add("update_mask");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_id", "chart_title", "chart_type", "update_mask"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3PartialChartUpdateRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3PartialChartUpdateRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3PartialChartUpdateRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3PartialChartUpdateRequest is not found in the empty JSON string", Reportsv3PartialChartUpdateRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3PartialChartUpdateRequest is not found in the empty JSON string", Reportsv3PartialChartUpdateRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -225,15 +226,15 @@ public class Reportsv3PartialChartUpdateRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3PartialChartUpdateRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3PartialChartUpdateRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3PartialChartUpdateRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("chart_id") != null && !jsonObj.get("chart_id").isJsonNull()) && !jsonObj.get("chart_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
       }
       if ((jsonObj.get("chart_title") != null && !jsonObj.get("chart_title").isJsonNull()) && !jsonObj.get("chart_title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_title").toString()));
       }
       // validate the optional field `chart_type`
       if (jsonObj.get("chart_type") != null && !jsonObj.get("chart_type").isJsonNull()) {
@@ -274,22 +275,22 @@ public class Reportsv3PartialChartUpdateRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3PartialChartUpdateRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3PartialChartUpdateRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3PartialChartUpdateRequest
-  */
+  /**
+   * Create an instance of Reportsv3PartialChartUpdateRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3PartialChartUpdateRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3PartialChartUpdateRequest
+   */
   public static Reportsv3PartialChartUpdateRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3PartialChartUpdateRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3PartialChartUpdateRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3PartialChartUpdateRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

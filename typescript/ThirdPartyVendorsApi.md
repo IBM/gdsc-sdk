@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getLinkedVendor**](ThirdPartyVendorsApi.md#getLinkedVendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
-[**getSingleLinkedVendor**](ThirdPartyVendorsApi.md#getSingleLinkedVendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId} | Get the third party vendors list
-[**listLinkedVendorDataStores**](ThirdPartyVendorsApi.md#listLinkedVendorDataStores) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
-[**listLinkedVendors**](ThirdPartyVendorsApi.md#listLinkedVendors) | **GET** /api/v1/dspm/linkedVendors | Get the summary of a third party vendor
-[**listTrustedAssets**](ThirdPartyVendorsApi.md#listTrustedAssets) | **GET** /api/v1/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
+[**getLinkedVendor**](ThirdPartyVendorsApi.md#getLinkedVendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
+[**getSingleLinkedVendor**](ThirdPartyVendorsApi.md#getSingleLinkedVendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId} | Get the third party vendors list
+[**listLinkedVendorDataStores**](ThirdPartyVendorsApi.md#listLinkedVendorDataStores) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
+[**listLinkedVendors**](ThirdPartyVendorsApi.md#listLinkedVendors) | **GET** /api/v2/dspm/linkedVendors | Get the summary of a third party vendor
+[**listTrustedAssets**](ThirdPartyVendorsApi.md#listTrustedAssets) | **GET** /api/v2/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
 
 
 # **getLinkedVendor**
@@ -20,20 +20,19 @@ Get additional details of a specific third party vendor, such as, customer accou
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiGetLinkedVendorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiGetLinkedVendorRequest = {
-  // string | The third party vendor\'s account ID
+const request: ThirdPartyVendorsApiGetLinkedVendorRequest = {
+    // The third party vendor\'s account ID
   vendorId: "123456789101",
 };
 
-apiInstance.getLinkedVendor(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getLinkedVendor(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -78,20 +77,19 @@ Get details about a third party vendor.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiGetSingleLinkedVendorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiGetSingleLinkedVendorRequest = {
-  // string | vendor id
+const request: ThirdPartyVendorsApiGetSingleLinkedVendorRequest = {
+    // vendor id
   vendorId: "123456789101",
 };
 
-apiInstance.getSingleLinkedVendor(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getSingleLinkedVendor(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -133,16 +131,16 @@ Get a list of all the data stores that a third party vendor can access. Find out
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiListLinkedVendorDataStoresRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiListLinkedVendorDataStoresRequest = {
-  // string | The third party vendor\'s account ID
+const request: ThirdPartyVendorsApiListLinkedVendorDataStoresRequest = {
+    // The third party vendor\'s account ID
   vendorId: "123456789101",
-  // ListVendorDataStoresFilterParameter (optional)
+  
   filter: {
     cloudAccountId: "cloudAccountId_example",
     dataStoreId: "dataStoreId_example",
@@ -151,20 +149,19 @@ let body:.ThirdPartyVendorsApiListLinkedVendorDataStoresRequest = {
     cloudRegion: "cloudRegion_example",
     cloudProvider: "aws",
   },
-  // ListLinkedVendorDataStoresSortParameter (optional)
+  
   sort: {
     sortBy: "dataStoreId",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listLinkedVendorDataStores(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listLinkedVendorDataStores(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -210,17 +207,15 @@ Get a list of all third party vendors associated to your cloud environments (rel
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.listLinkedVendors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listLinkedVendors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -259,14 +254,14 @@ Get a list of roles, buckets or service principles, and their entitled permissio
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiListTrustedAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiListTrustedAssetsRequest = {
-  // ListTrusteesFilterParameter (optional)
+const request: ThirdPartyVendorsApiListTrustedAssetsRequest = {
+  
   filter: {
     vendorId: "123456789101",
     dataStoreId: "123456789101",
@@ -274,9 +269,8 @@ let body:.ThirdPartyVendorsApiListTrustedAssetsRequest = {
   },
 };
 
-apiInstance.listTrustedAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listTrustedAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

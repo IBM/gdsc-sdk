@@ -47,16 +47,16 @@ class Workflowv3Task(BaseModel):
     investigation_links: Optional[List[Schedulerv3ConfigurationItem]] = None
     justification: Optional[StrictStr] = None
     number: Optional[StrictStr] = None
-    priority: Optional[Workflowv3Priority] = None
+    priority: Optional[Workflowv3Priority] = Workflowv3Priority.UNDEFINED_PRIORITY
     report_result: Optional[Workflowv3ReportResult] = None
     response_template: Optional[Schedulerv3ConfigurationItem] = None
     review_action: Optional[StrictStr] = None
     run: Optional[Workflowv3ReportRun] = None
-    status: Optional[Workflowv3Status] = None
+    status: Optional[Workflowv3Status] = Workflowv3Status.UNDEFINED_STATUS
     tags: Optional[List[StrictStr]] = None
     task_id: Optional[StrictStr] = Field(default=None, description="Unique ID.")
     title: Optional[StrictStr] = Field(default=None, description="Task title (subject).")
-    workflow_type: Optional[Schedulerv3WorkflowType] = None
+    workflow_type: Optional[Schedulerv3WorkflowType] = Schedulerv3WorkflowType.REVIEW_NONE
     __properties: ClassVar[List[str]] = ["alt_id", "assignments", "case_id", "comments", "date_created", "date_due", "date_modified", "depends_on", "description", "investigation_links", "justification", "number", "priority", "report_result", "response_template", "review_action", "run", "status", "tags", "task_id", "title", "workflow_type"]
 
     model_config = ConfigDict(
@@ -101,23 +101,23 @@ class Workflowv3Task(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in assignments (list)
         _items = []
         if self.assignments:
-            for _item in self.assignments:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_assignments in self.assignments:
+                if _item_assignments:
+                    _items.append(_item_assignments.to_dict())
             _dict['assignments'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in comments (list)
         _items = []
         if self.comments:
-            for _item in self.comments:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_comments in self.comments:
+                if _item_comments:
+                    _items.append(_item_comments.to_dict())
             _dict['comments'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in investigation_links (list)
         _items = []
         if self.investigation_links:
-            for _item in self.investigation_links:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_investigation_links in self.investigation_links:
+                if _item_investigation_links:
+                    _items.append(_item_investigation_links.to_dict())
             _dict['investigation_links'] = _items
         # override the default output from pydantic by calling `to_dict()` of report_result
         if self.report_result:
@@ -152,16 +152,16 @@ class Workflowv3Task(BaseModel):
             "investigation_links": [Schedulerv3ConfigurationItem.from_dict(_item) for _item in obj["investigation_links"]] if obj.get("investigation_links") is not None else None,
             "justification": obj.get("justification"),
             "number": obj.get("number"),
-            "priority": obj.get("priority"),
+            "priority": obj.get("priority") if obj.get("priority") is not None else Workflowv3Priority.UNDEFINED_PRIORITY,
             "report_result": Workflowv3ReportResult.from_dict(obj["report_result"]) if obj.get("report_result") is not None else None,
             "response_template": Schedulerv3ConfigurationItem.from_dict(obj["response_template"]) if obj.get("response_template") is not None else None,
             "review_action": obj.get("review_action"),
             "run": Workflowv3ReportRun.from_dict(obj["run"]) if obj.get("run") is not None else None,
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Workflowv3Status.UNDEFINED_STATUS,
             "tags": obj.get("tags"),
             "task_id": obj.get("task_id"),
             "title": obj.get("title"),
-            "workflow_type": obj.get("workflow_type")
+            "workflow_type": obj.get("workflow_type") if obj.get("workflow_type") is not None else Schedulerv3WorkflowType.REVIEW_NONE
         })
         return _obj
 

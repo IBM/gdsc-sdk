@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **input_alias** | **str** | Connection input plugin alias, like \&quot;Filebeat\&quot;. | [optional] 
 **last_response** | **str** | The heartbeat. | [optional] 
 **port** | **str** | Port where the related Universal connector service is running/listening. | [optional] 
-**status** | [**Connectionsv3Status**](Connectionsv3Status.md) |  | [optional] 
+**status** | [**Connectionsv3Status**](Connectionsv3Status.md) |  | [optional] [default to Connectionsv3Status.UNDEFINED_STATUS]
 **status_text** | **str** | If status is not OK, details what&#39;s wrong (non-localized). | [optional] 
 **uc_connection_id** | **str** | UC connection id. | [optional] 
 

@@ -32,6 +32,8 @@ export class Schedulerv3IntegrationParameter {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "extraDetail",
@@ -65,4 +67,3 @@ export class Schedulerv3IntegrationParameter {
     public constructor() {
     }
 }
-

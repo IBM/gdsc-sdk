@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { SensitivitySummary } from '../models/SensitivitySummary';
 import { Vendor } from '../models/Vendor';
 import { HttpFile } from '../http/http';
 
@@ -17,8 +18,11 @@ export class LinkedVendor {
     'vendor': Vendor;
     'totalAccounts': number;
     'isSensitive': boolean;
+    'sensitivitySummary'?: Array<SensitivitySummary>;
 
     static readonly discriminator: string | undefined = undefined;
+
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
@@ -38,6 +42,12 @@ export class LinkedVendor {
             "baseName": "isSensitive",
             "type": "boolean",
             "format": ""
+        },
+        {
+            "name": "sensitivitySummary",
+            "baseName": "sensitivitySummary",
+            "type": "Array<SensitivitySummary>",
+            "format": ""
         }    ];
 
     static getAttributeTypeMap() {
@@ -47,4 +57,3 @@ export class LinkedVendor {
     public constructor() {
     }
 }
-

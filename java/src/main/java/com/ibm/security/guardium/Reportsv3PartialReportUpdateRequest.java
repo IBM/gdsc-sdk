@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,170 +42,178 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdatePartialReportRequest is the argument type used to update a report with partial information using the UpdatePartialReport() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3PartialReportUpdateRequest {
   public static final String SERIALIZED_NAME_DEFAULT_CHART_EXPANDED = "default_chart_expanded";
   @SerializedName(SERIALIZED_NAME_DEFAULT_CHART_EXPANDED)
+  @javax.annotation.Nullable
   private Boolean defaultChartExpanded;
 
   public static final String SERIALIZED_NAME_IS_HIDDEN = "is_hidden";
   @SerializedName(SERIALIZED_NAME_IS_HIDDEN)
+  @javax.annotation.Nullable
   private Boolean isHidden;
 
   public static final String SERIALIZED_NAME_IS_PINNED = "is_pinned";
   @SerializedName(SERIALIZED_NAME_IS_PINNED)
+  @javax.annotation.Nullable
   private Boolean isPinned;
 
   public static final String SERIALIZED_NAME_REPORT_DESCRIPTION = "report_description";
   @SerializedName(SERIALIZED_NAME_REPORT_DESCRIPTION)
+  @javax.annotation.Nullable
   private String reportDescription;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_NAME = "report_name";
   @SerializedName(SERIALIZED_NAME_REPORT_NAME)
+  @javax.annotation.Nullable
   private String reportName;
 
   public static final String SERIALIZED_NAME_REPORT_TAGS = "report_tags";
   @SerializedName(SERIALIZED_NAME_REPORT_TAGS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportTag> reportTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_UPDATE_MASK = "update_mask";
   @SerializedName(SERIALIZED_NAME_UPDATE_MASK)
+  @javax.annotation.Nullable
   private ProtobufFieldMask updateMask;
 
   public Reportsv3PartialReportUpdateRequest() {
   }
 
-  public Reportsv3PartialReportUpdateRequest defaultChartExpanded(Boolean defaultChartExpanded) {
+  public Reportsv3PartialReportUpdateRequest defaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
     return this;
   }
 
-   /**
+  /**
    * The default_chart_expanded is a flag taken from the user settings collection per report and user.
    * @return defaultChartExpanded
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDefaultChartExpanded() {
     return defaultChartExpanded;
   }
 
-  public void setDefaultChartExpanded(Boolean defaultChartExpanded) {
+  public void setDefaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
   }
 
 
-  public Reportsv3PartialReportUpdateRequest isHidden(Boolean isHidden) {
+  public Reportsv3PartialReportUpdateRequest isHidden(@javax.annotation.Nullable Boolean isHidden) {
     this.isHidden = isHidden;
     return this;
   }
 
-   /**
+  /**
    * Flag to determine weather the report is hidden or not.
    * @return isHidden
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsHidden() {
     return isHidden;
   }
 
-  public void setIsHidden(Boolean isHidden) {
+  public void setIsHidden(@javax.annotation.Nullable Boolean isHidden) {
     this.isHidden = isHidden;
   }
 
 
-  public Reportsv3PartialReportUpdateRequest isPinned(Boolean isPinned) {
+  public Reportsv3PartialReportUpdateRequest isPinned(@javax.annotation.Nullable Boolean isPinned) {
     this.isPinned = isPinned;
     return this;
   }
 
-   /**
+  /**
    * Flag to determine weather the report is pinned or not.
    * @return isPinned
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsPinned() {
     return isPinned;
   }
 
-  public void setIsPinned(Boolean isPinned) {
+  public void setIsPinned(@javax.annotation.Nullable Boolean isPinned) {
     this.isPinned = isPinned;
   }
 
 
-  public Reportsv3PartialReportUpdateRequest reportDescription(String reportDescription) {
+  public Reportsv3PartialReportUpdateRequest reportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
     return this;
   }
 
-   /**
+  /**
    * The report description.
    * @return reportDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportDescription() {
     return reportDescription;
   }
 
-  public void setReportDescription(String reportDescription) {
+  public void setReportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
   }
 
 
-  public Reportsv3PartialReportUpdateRequest reportId(String reportId) {
+  public Reportsv3PartialReportUpdateRequest reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Unique Report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsv3PartialReportUpdateRequest reportName(String reportName) {
+  public Reportsv3PartialReportUpdateRequest reportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * The report name.
    * @return reportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(String reportName) {
+  public void setReportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
 
-  public Reportsv3PartialReportUpdateRequest reportTags(List<Reportsv3ReportTag> reportTags) {
+  public Reportsv3PartialReportUpdateRequest reportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
     return this;
   }
@@ -217,35 +226,35 @@ public class Reportsv3PartialReportUpdateRequest {
     return this;
   }
 
-   /**
+  /**
    * The report tags.
    * @return reportTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportTag> getReportTags() {
     return reportTags;
   }
 
-  public void setReportTags(List<Reportsv3ReportTag> reportTags) {
+  public void setReportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
   }
 
 
-  public Reportsv3PartialReportUpdateRequest updateMask(ProtobufFieldMask updateMask) {
+  public Reportsv3PartialReportUpdateRequest updateMask(@javax.annotation.Nullable ProtobufFieldMask updateMask) {
     this.updateMask = updateMask;
     return this;
   }
 
-   /**
+  /**
    * Get updateMask
    * @return updateMask
-  **/
+   */
   @javax.annotation.Nullable
   public ProtobufFieldMask getUpdateMask() {
     return updateMask;
   }
 
-  public void setUpdateMask(ProtobufFieldMask updateMask) {
+  public void setUpdateMask(@javax.annotation.Nullable ProtobufFieldMask updateMask) {
     this.updateMask = updateMask;
   }
 
@@ -308,30 +317,22 @@ public class Reportsv3PartialReportUpdateRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("default_chart_expanded");
-    openapiFields.add("is_hidden");
-    openapiFields.add("is_pinned");
-    openapiFields.add("report_description");
-    openapiFields.add("report_id");
-    openapiFields.add("report_name");
-    openapiFields.add("report_tags");
-    openapiFields.add("update_mask");
+    openapiFields = new HashSet<String>(Arrays.asList("default_chart_expanded", "is_hidden", "is_pinned", "report_description", "report_id", "report_name", "report_tags", "update_mask"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3PartialReportUpdateRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3PartialReportUpdateRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3PartialReportUpdateRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3PartialReportUpdateRequest is not found in the empty JSON string", Reportsv3PartialReportUpdateRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3PartialReportUpdateRequest is not found in the empty JSON string", Reportsv3PartialReportUpdateRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -339,25 +340,25 @@ public class Reportsv3PartialReportUpdateRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3PartialReportUpdateRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3PartialReportUpdateRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3PartialReportUpdateRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("report_description") != null && !jsonObj.get("report_description").isJsonNull()) && !jsonObj.get("report_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("report_name") != null && !jsonObj.get("report_name").isJsonNull()) && !jsonObj.get("report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
       }
       if (jsonObj.get("report_tags") != null && !jsonObj.get("report_tags").isJsonNull()) {
         JsonArray jsonArrayreportTags = jsonObj.getAsJsonArray("report_tags");
         if (jsonArrayreportTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
           }
 
           // validate the optional field `report_tags` (array)
@@ -401,22 +402,22 @@ public class Reportsv3PartialReportUpdateRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3PartialReportUpdateRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3PartialReportUpdateRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3PartialReportUpdateRequest
-  */
+  /**
+   * Create an instance of Reportsv3PartialReportUpdateRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3PartialReportUpdateRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3PartialReportUpdateRequest
+   */
   public static Reportsv3PartialReportUpdateRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3PartialReportUpdateRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3PartialReportUpdateRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3PartialReportUpdateRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

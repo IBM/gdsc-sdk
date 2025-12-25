@@ -72,9 +72,9 @@ class Qspmdatamanagerv3NetlocDataResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in netloc_data (list)
         _items = []
         if self.netloc_data:
-            for _item in self.netloc_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_netloc_data in self.netloc_data:
+                if _item_netloc_data:
+                    _items.append(_item_netloc_data.to_dict())
             _dict['netlocData'] = _items
         return _dict
 

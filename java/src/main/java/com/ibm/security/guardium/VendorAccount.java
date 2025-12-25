@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VendorAccount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VendorAccount {
   public static final String SERIALIZED_NAME_VENDOR_ACCOUNT_ID = "vendorAccountId";
   @SerializedName(SERIALIZED_NAME_VENDOR_ACCOUNT_ID)
+  @javax.annotation.Nonnull
   private String vendorAccountId;
 
   public static final String SERIALIZED_NAME_VENDOR_ACCOUNT_NAME = "vendorAccountName";
   @SerializedName(SERIALIZED_NAME_VENDOR_ACCOUNT_NAME)
+  @javax.annotation.Nonnull
   private String vendorAccountName;
 
   public static final String SERIALIZED_NAME_CLOUD_PROVIDER = "cloudProvider";
   @SerializedName(SERIALIZED_NAME_CLOUD_PROVIDER)
+  @javax.annotation.Nonnull
   private CloudServiceProvider cloudProvider;
 
   public VendorAccount() {
   }
 
-  public VendorAccount vendorAccountId(String vendorAccountId) {
+  public VendorAccount vendorAccountId(@javax.annotation.Nonnull String vendorAccountId) {
     this.vendorAccountId = vendorAccountId;
     return this;
   }
 
-   /**
+  /**
    * The Cloud account ID
    * @return vendorAccountId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getVendorAccountId() {
     return vendorAccountId;
   }
 
-  public void setVendorAccountId(String vendorAccountId) {
+  public void setVendorAccountId(@javax.annotation.Nonnull String vendorAccountId) {
     this.vendorAccountId = vendorAccountId;
   }
 
 
-  public VendorAccount vendorAccountName(String vendorAccountName) {
+  public VendorAccount vendorAccountName(@javax.annotation.Nonnull String vendorAccountName) {
     this.vendorAccountName = vendorAccountName;
     return this;
   }
 
-   /**
+  /**
    * The Cloud account name (as was onboarded to Polar)
    * @return vendorAccountName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getVendorAccountName() {
     return vendorAccountName;
   }
 
-  public void setVendorAccountName(String vendorAccountName) {
+  public void setVendorAccountName(@javax.annotation.Nonnull String vendorAccountName) {
     this.vendorAccountName = vendorAccountName;
   }
 
 
-  public VendorAccount cloudProvider(CloudServiceProvider cloudProvider) {
+  public VendorAccount cloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
     return this;
   }
 
-   /**
+  /**
    * Get cloudProvider
    * @return cloudProvider
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudServiceProvider getCloudProvider() {
     return cloudProvider;
   }
 
-  public void setCloudProvider(CloudServiceProvider cloudProvider) {
+  public void setCloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
 
@@ -172,28 +176,22 @@ public class VendorAccount {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("vendorAccountId");
-    openapiFields.add("vendorAccountName");
-    openapiFields.add("cloudProvider");
+    openapiFields = new HashSet<String>(Arrays.asList("vendorAccountId", "vendorAccountName", "cloudProvider"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("vendorAccountId");
-    openapiRequiredFields.add("vendorAccountName");
-    openapiRequiredFields.add("cloudProvider");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("vendorAccountId", "vendorAccountName", "cloudProvider"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VendorAccount
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VendorAccount
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VendorAccount.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VendorAccount is not found in the empty JSON string", VendorAccount.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VendorAccount is not found in the empty JSON string", VendorAccount.openapiRequiredFields.toString()));
         }
       }
 
@@ -201,22 +199,22 @@ public class VendorAccount {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VendorAccount.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VendorAccount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VendorAccount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VendorAccount.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("vendorAccountId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vendorAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorAccountId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vendorAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorAccountId").toString()));
       }
       if (!jsonObj.get("vendorAccountName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vendorAccountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorAccountName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vendorAccountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorAccountName").toString()));
       }
       // validate the required field `cloudProvider`
       CloudServiceProvider.validateJsonElement(jsonObj.get("cloudProvider"));
@@ -251,22 +249,22 @@ public class VendorAccount {
     }
   }
 
- /**
-  * Create an instance of VendorAccount given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VendorAccount
-  * @throws IOException if the JSON string is invalid with respect to VendorAccount
-  */
+  /**
+   * Create an instance of VendorAccount given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VendorAccount
+   * @throws IOException if the JSON string is invalid with respect to VendorAccount
+   */
   public static VendorAccount fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VendorAccount.class);
   }
 
- /**
-  * Convert an instance of VendorAccount to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VendorAccount to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

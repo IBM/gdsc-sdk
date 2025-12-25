@@ -13,6 +13,8 @@ Method | HTTP request | Description
 [**policy_builder_get_policy_details**](PolicyBuilderApi.md#policy_builder_get_policy_details) | **GET** /api/v3/policies/{policy_id}/details | Summary: Get policy details Description: Return a list of rules inside the policy.
 [**policy_builder_get_policy_names_from_rule_ids**](PolicyBuilderApi.md#policy_builder_get_policy_names_from_rule_ids) | **POST** /api/v3/policies/policy_names | Summary: GetPolicy names from rule IDs Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.
 [**policy_builder_get_policy_sync_list**](PolicyBuilderApi.md#policy_builder_get_policy_sync_list) | **GET** /api/v3/policies/sync_list | Summary: Get list of synced polices Description: Returns the list and status of sync entries
+[**policy_builder_get_policy_version**](PolicyBuilderApi.md#policy_builder_get_policy_version) | **GET** /api/v3/policies/{policy_id}/details/versions/{version} | Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+[**policy_builder_get_policy_versions_info**](PolicyBuilderApi.md#policy_builder_get_policy_versions_info) | **GET** /api/v3/policies/{policy_id}/versions/metdata | Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
 [**policy_builder_get_receivers**](PolicyBuilderApi.md#policy_builder_get_receivers) | **GET** /api/v3/policies/receivers | Summary: Get receivers Description: Get all the receivers associated with actions.
 [**policy_builder_get_rule_metadata**](PolicyBuilderApi.md#policy_builder_get_rule_metadata) | **GET** /api/v3/rules/metadata | Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
 [**policy_builder_insert_gdp_policy**](PolicyBuilderApi.md#policy_builder_insert_gdp_policy) | **POST** /api/v3/policies/sync_entry | Summary: Insert GDP policy sync entry Description: Inserts GDP policy&#39;s name into sync collection
@@ -22,6 +24,7 @@ Method | HTTP request | Description
 [**policy_builder_policies_groups**](PolicyBuilderApi.md#policy_builder_policies_groups) | **GET** /api/v3/policies/groups | Summary: Policies groups Description: Get policy groups.
 [**policy_builder_rule_validation**](PolicyBuilderApi.md#policy_builder_rule_validation) | **POST** /api/v3/rules/validate | Summary: Rule validation Description: Validate a rule parameters and actions.
 [**policy_builder_store_policies_gdp**](PolicyBuilderApi.md#policy_builder_store_policies_gdp) | **POST** /api/v3/policies/{central_manager_id} | Summary: Store policies Gdp Description: Store policies.  (This API is called from GDP only)
+[**policy_builder_update_policy**](PolicyBuilderApi.md#policy_builder_update_policy) | **PUT** /api/v3/policies | Summary: Update policy Description: Update Policy returns response code and message.
 
 
 # **policy_builder_clone_policy**
@@ -782,6 +785,178 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **policy_builder_get_policy_version**
+> Policybuilderv3GetPolicyVersionResponse policy_builder_get_policy_version(policy_id, version)
+
+Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_version_response import Policybuilderv3GetPolicyVersionResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policy_id = 'policy_id_example' # str | Policy id of the requested policy
+    version = 56 # int | Requested version number of the policy
+
+    try:
+        # Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
+        api_response = api_instance.policy_builder_get_policy_version(policy_id, version)
+        print("The response of PolicyBuilderApi->policy_builder_get_policy_version:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PolicyBuilderApi->policy_builder_get_policy_version: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **str**| Policy id of the requested policy | 
+ **version** | **int**| Requested version number of the policy | 
+
+### Return type
+
+[**Policybuilderv3GetPolicyVersionResponse**](Policybuilderv3GetPolicyVersionResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **policy_builder_get_policy_versions_info**
+> Policybuilderv3GetPolicyVersionsInfoResponse policy_builder_get_policy_versions_info(policy_id)
+
+Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_get_policy_versions_info_response import Policybuilderv3GetPolicyVersionsInfoResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policy_id = 'policy_id_example' # str | Policy id of the requested policy
+
+    try:
+        # Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
+        api_response = api_instance.policy_builder_get_policy_versions_info(policy_id)
+        print("The response of PolicyBuilderApi->policy_builder_get_policy_versions_info:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PolicyBuilderApi->policy_builder_get_policy_versions_info: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy_id** | **str**| Policy id of the requested policy | 
+
+### Return type
+
+[**Policybuilderv3GetPolicyVersionsInfoResponse**](Policybuilderv3GetPolicyVersionsInfoResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **policy_builder_get_receivers**
 > Policybuilderv3GetReceiversResponse policy_builder_get_receivers(action_id=action_id, validate_cache=validate_cache)
 
@@ -912,7 +1087,7 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
-    rule_type = 'ACCESS' # str | Rule type integer to indicate rule type. (optional) (default to 'ACCESS')
+    rule_type = ACCESS # str | Rule type integer to indicate rule type. (optional) (default to ACCESS)
 
     try:
         # Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
@@ -930,7 +1105,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_type** | **str**| Rule type integer to indicate rule type. | [optional] [default to &#39;ACCESS&#39;]
+ **rule_type** | **str**| Rule type integer to indicate rule type. | [optional] [default to ACCESS]
 
 ### Return type
 
@@ -1541,6 +1716,92 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Policybuilderv3StorePolicyGdpResponse**](Policybuilderv3StorePolicyGdpResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth), [ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **policy_builder_update_policy**
+> Policybuilderv3CreateUpdatePolicyResponse policy_builder_update_policy(policybuilderv3_create_update_policy_request)
+
+Summary: Update policy Description: Update Policy returns response code and message.
+
+### Example
+
+* Basic Authentication (BasicAuth):
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import ibm_gdsc_sdk_saas,os
+from ibm_gdsc_sdk_saas.models.policybuilderv3_create_update_policy_request import Policybuilderv3CreateUpdatePolicyRequest
+from ibm_gdsc_sdk_saas.models.policybuilderv3_create_update_policy_response import Policybuilderv3CreateUpdatePolicyResponse
+from ibm_gdsc_sdk_saas.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: BasicAuth
+configuration = ibm_gdsc_sdk_saas.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
+    policybuilderv3_create_update_policy_request = ibm_gdsc_sdk_saas.Policybuilderv3CreateUpdatePolicyRequest() # Policybuilderv3CreateUpdatePolicyRequest | 
+
+    try:
+        # Summary: Update policy Description: Update Policy returns response code and message.
+        api_response = api_instance.policy_builder_update_policy(policybuilderv3_create_update_policy_request)
+        print("The response of PolicyBuilderApi->policy_builder_update_policy:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PolicyBuilderApi->policy_builder_update_policy: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policybuilderv3_create_update_policy_request** | [**Policybuilderv3CreateUpdatePolicyRequest**](Policybuilderv3CreateUpdatePolicyRequest.md)|  | 
+
+### Return type
+
+[**Policybuilderv3CreateUpdatePolicyResponse**](Policybuilderv3CreateUpdatePolicyResponse.md)
 
 ### Authorization
 

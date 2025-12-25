@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,36 +43,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * FlowNodeSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class FlowNodeSummary {
   public static final String SERIALIZED_NAME_TYPES_COUNT = "typesCount";
   @SerializedName(SERIALIZED_NAME_TYPES_COUNT)
+  @javax.annotation.Nonnull
   private List<TypesCountInner> typesCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNTS_COUNT = "cloudAccountsCount";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNTS_COUNT)
+  @javax.annotation.Nonnull
   private List<CloudAccountCountInner> cloudAccountsCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_REGIONS_COUNT = "cloudRegionsCount";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGIONS_COUNT)
+  @javax.annotation.Nonnull
   private List<CloudRegionCountInner> cloudRegionsCount = new ArrayList<>();
 
   public FlowNodeSummary() {
   }
 
-  public FlowNodeSummary typesCount(List<TypesCountInner> typesCount) {
+  public FlowNodeSummary typesCount(@javax.annotation.Nonnull List<TypesCountInner> typesCount) {
     this.typesCount = typesCount;
     return this;
   }
@@ -84,21 +88,21 @@ public class FlowNodeSummary {
     return this;
   }
 
-   /**
+  /**
    * Get typesCount
    * @return typesCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<TypesCountInner> getTypesCount() {
     return typesCount;
   }
 
-  public void setTypesCount(List<TypesCountInner> typesCount) {
+  public void setTypesCount(@javax.annotation.Nonnull List<TypesCountInner> typesCount) {
     this.typesCount = typesCount;
   }
 
 
-  public FlowNodeSummary cloudAccountsCount(List<CloudAccountCountInner> cloudAccountsCount) {
+  public FlowNodeSummary cloudAccountsCount(@javax.annotation.Nonnull List<CloudAccountCountInner> cloudAccountsCount) {
     this.cloudAccountsCount = cloudAccountsCount;
     return this;
   }
@@ -111,21 +115,21 @@ public class FlowNodeSummary {
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountsCount
    * @return cloudAccountsCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CloudAccountCountInner> getCloudAccountsCount() {
     return cloudAccountsCount;
   }
 
-  public void setCloudAccountsCount(List<CloudAccountCountInner> cloudAccountsCount) {
+  public void setCloudAccountsCount(@javax.annotation.Nonnull List<CloudAccountCountInner> cloudAccountsCount) {
     this.cloudAccountsCount = cloudAccountsCount;
   }
 
 
-  public FlowNodeSummary cloudRegionsCount(List<CloudRegionCountInner> cloudRegionsCount) {
+  public FlowNodeSummary cloudRegionsCount(@javax.annotation.Nonnull List<CloudRegionCountInner> cloudRegionsCount) {
     this.cloudRegionsCount = cloudRegionsCount;
     return this;
   }
@@ -138,16 +142,16 @@ public class FlowNodeSummary {
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegionsCount
    * @return cloudRegionsCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CloudRegionCountInner> getCloudRegionsCount() {
     return cloudRegionsCount;
   }
 
-  public void setCloudRegionsCount(List<CloudRegionCountInner> cloudRegionsCount) {
+  public void setCloudRegionsCount(@javax.annotation.Nonnull List<CloudRegionCountInner> cloudRegionsCount) {
     this.cloudRegionsCount = cloudRegionsCount;
   }
 
@@ -200,28 +204,22 @@ public class FlowNodeSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("typesCount");
-    openapiFields.add("cloudAccountsCount");
-    openapiFields.add("cloudRegionsCount");
+    openapiFields = new HashSet<String>(Arrays.asList("typesCount", "cloudAccountsCount", "cloudRegionsCount"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("typesCount");
-    openapiRequiredFields.add("cloudAccountsCount");
-    openapiRequiredFields.add("cloudRegionsCount");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("typesCount", "cloudAccountsCount", "cloudRegionsCount"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to FlowNodeSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to FlowNodeSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!FlowNodeSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FlowNodeSummary is not found in the empty JSON string", FlowNodeSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in FlowNodeSummary is not found in the empty JSON string", FlowNodeSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -229,20 +227,20 @@ public class FlowNodeSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FlowNodeSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FlowNodeSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `FlowNodeSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : FlowNodeSummary.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("typesCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `typesCount` to be an array in the JSON string but got `%s`", jsonObj.get("typesCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `typesCount` to be an array in the JSON string but got `%s`", jsonObj.get("typesCount").toString()));
       }
 
       JsonArray jsonArraytypesCount = jsonObj.getAsJsonArray("typesCount");
@@ -252,7 +250,7 @@ public class FlowNodeSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("cloudAccountsCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountsCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountsCount").toString()));
       }
 
       JsonArray jsonArraycloudAccountsCount = jsonObj.getAsJsonArray("cloudAccountsCount");
@@ -262,7 +260,7 @@ public class FlowNodeSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("cloudRegionsCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegionsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegionsCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegionsCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegionsCount").toString()));
       }
 
       JsonArray jsonArraycloudRegionsCount = jsonObj.getAsJsonArray("cloudRegionsCount");
@@ -301,22 +299,22 @@ public class FlowNodeSummary {
     }
   }
 
- /**
-  * Create an instance of FlowNodeSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of FlowNodeSummary
-  * @throws IOException if the JSON string is invalid with respect to FlowNodeSummary
-  */
+  /**
+   * Create an instance of FlowNodeSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of FlowNodeSummary
+   * @throws IOException if the JSON string is invalid with respect to FlowNodeSummary
+   */
   public static FlowNodeSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, FlowNodeSummary.class);
   }
 
- /**
-  * Convert an instance of FlowNodeSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of FlowNodeSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

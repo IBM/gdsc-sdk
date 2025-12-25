@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assetsServiceAssetIngestion**](AssetsServiceApi.md#assetsServiceAssetIngestion) | **POST** /api/v3/assets/ingestion | AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
 [**assetsServiceAssetIngestionManualTrigger**](AssetsServiceApi.md#assetsServiceAssetIngestionManualTrigger) | **POST** /api/v3/assets/ingestion/trigger | AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
+[**assetsServiceCancelCSVImport**](AssetsServiceApi.md#assetsServiceCancelCSVImport) | **DELETE** /api/v3/assets/csv/cancel/{csv_id} | CancelCSVImport - Cancel the import of CSV and update the status in import log table
 [**assetsServiceClonePolicy**](AssetsServiceApi.md#assetsServiceClonePolicy) | **POST** /api/v3/assets/policies/{policy_id}/clone | ClonePolicy - Clone a policy.
+[**assetsServiceCompareCSVToExistingAssets**](AssetsServiceApi.md#assetsServiceCompareCSVToExistingAssets) | **GET** /api/v3/assets/csv/compare/{csv_id} | CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
 [**assetsServiceCreateUpdatePolicy**](AssetsServiceApi.md#assetsServiceCreateUpdatePolicy) | **POST** /api/v3/assets/policies | CreateUpdatePolicy - Create/update new Policy.
 [**assetsServiceDeleteFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceDeleteFilterTemplateForAssets) | **DELETE** /api/v3/assets/filters/template/{template_id} | DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
 [**assetsServiceDeletePolicies**](AssetsServiceApi.md#assetsServiceDeletePolicies) | **DELETE** /api/v3/assets/policies | DeletePolicies - Delete Policy returns response code and message.
@@ -19,6 +21,7 @@ Method | HTTP request | Description
 [**assetsServiceGetAssetTopology**](AssetsServiceApi.md#assetsServiceGetAssetTopology) | **POST** /api/v3/assets/topology | GetAssetTopology- Get list of topology for a parent asset.
 [**assetsServiceGetFilterTemplateForAssets**](AssetsServiceApi.md#assetsServiceGetFilterTemplateForAssets) | **GET** /api/v3/assets/filters/templates | GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
 [**assetsServiceGetFiltersForAssets**](AssetsServiceApi.md#assetsServiceGetFiltersForAssets) | **GET** /api/v3/assets/filters | GetFiltersForAssets - Get a list of filters category and sub category with all data.
+[**assetsServiceImportCSV**](AssetsServiceApi.md#assetsServiceImportCSV) | **POST** /api/v3/assets/csv/import/{csv_id} | ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
 [**assetsServiceListPolicy**](AssetsServiceApi.md#assetsServiceListPolicy) | **GET** /api/v3/assets/policies | ListPolicy - List all policies.
 [**assetsServiceListRule**](AssetsServiceApi.md#assetsServiceListRule) | **GET** /api/v3/assets/policies/{policy_id}/rules | ListRule - List all rules for a policy.
 [**assetsServiceListTagDomains**](AssetsServiceApi.md#assetsServiceListTagDomains) | **GET** /api/v3/assets/tags/categories | ListTagDomains - Get Tag categories by request parameters .
@@ -41,14 +44,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceAssetIngestionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceAssetIngestionRequest = {
-  // Assetsv3AssetIngestionRequest
+const request: AssetsServiceApiAssetsServiceAssetIngestionRequest = {
+  
   assetsv3AssetIngestionRequest: {
     accounts: [
       {
@@ -447,9 +450,8 @@ let body:.AssetsServiceApiAssetsServiceAssetIngestionRequest = {
   },
 };
 
-apiInstance.assetsServiceAssetIngestion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceAssetIngestion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -490,20 +492,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest = {
-  // any
+const request: AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest = {
+  
   body: {},
 };
 
-apiInstance.assetsServiceAssetIngestionManualTrigger(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceAssetIngestionManualTrigger(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -536,6 +537,59 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **assetsServiceCancelCSVImport**
+> any assetsServiceCancelCSVImport()
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceCancelCSVImportRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
+
+const request: AssetsServiceApiAssetsServiceCancelCSVImportRequest = {
+    // unique id of the csv
+  csvId: "csv_id_example",
+};
+
+const data = await apiInstance.assetsServiceCancelCSVImport(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+
+
+### Return type
+
+**any**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **assetsServiceClonePolicy**
 > any assetsServiceClonePolicy(assetsv3ClonePolicyRequest)
 
@@ -544,16 +598,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceClonePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceClonePolicyRequest = {
-  // string | Policy id that needs to be cloned.
+const request: AssetsServiceApiAssetsServiceClonePolicyRequest = {
+    // Policy id that needs to be cloned.
   policyId: "policy_id_example",
-  // Assetsv3ClonePolicyRequest
+  
   assetsv3ClonePolicyRequest: {
     policyId: "policyId_example",
     policyName: "policyName_example",
@@ -585,9 +639,8 @@ let body:.AssetsServiceApiAssetsServiceClonePolicyRequest = {
   },
 };
 
-apiInstance.assetsServiceClonePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceClonePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -621,6 +674,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **assetsServiceCompareCSVToExistingAssets**
+> Assetsv3CompareCSVResponse assetsServiceCompareCSVToExistingAssets()
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
+
+const request: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest = {
+    // unique id of the csv
+  csvId: "csv_id_example",
+    // which rows are required, existing or new or all. (optional)
+  rowsRequired: "rows_required_example",
+    // page number. (optional)
+  pageNumber: 1,
+    // page size. (optional)
+  pageSize: 1,
+    // Asset CSV template type.   - DATABASE: Template for database (optional)
+  templateType: "DATABASE",
+};
+
+const data = await apiInstance.assetsServiceCompareCSVToExistingAssets(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+ **rowsRequired** | [**string**] | which rows are required, existing or new or all. | (optional) defaults to undefined
+ **pageNumber** | [**number**] | page number. | (optional) defaults to undefined
+ **pageSize** | [**number**] | page size. | (optional) defaults to undefined
+ **templateType** | [**&#39;DATABASE&#39;**]**Array<&#39;DATABASE&#39;>** | Asset CSV template type.   - DATABASE: Template for database | (optional) defaults to 'DATABASE'
+
+
+### Return type
+
+**Assetsv3CompareCSVResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **assetsServiceCreateUpdatePolicy**
 > Assetsv3CreateUpdatePolicyResponse assetsServiceCreateUpdatePolicy(assetsv3CreateUpdatePolicyRequest)
 
@@ -629,14 +747,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest = {
-  // Assetsv3CreateUpdatePolicyRequest
+const request: AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest = {
+  
   assetsv3CreateUpdatePolicyRequest: {
     operation: 1,
     policy: {
@@ -682,9 +800,8 @@ let body:.AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest = {
   },
 };
 
-apiInstance.assetsServiceCreateUpdatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceCreateUpdatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -718,31 +835,26 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
 # **assetsServiceDeleteFilterTemplateForAssets**
-> any assetsServiceDeleteFilterTemplateForAssets(assetsv3AssetFilterTemplateRequest)
+> any assetsServiceDeleteFilterTemplateForAssets()
 
 
 ### Example
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest = {
-  // string | template id to be deleted
+const request: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest = {
+    // template id to be deleted
   templateId: "template_id_example",
-  // Assetsv3AssetFilterTemplateRequest
-  assetsv3AssetFilterTemplateRequest: {
-    templateId: "templateId_example",
-  },
 };
 
-apiInstance.assetsServiceDeleteFilterTemplateForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceDeleteFilterTemplateForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -750,7 +862,6 @@ apiInstance.assetsServiceDeleteFilterTemplateForAssets(body).then((data:any) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assetsv3AssetFilterTemplateRequest** | **Assetsv3AssetFilterTemplateRequest**|  |
  **templateId** | [**string**] | template id to be deleted | defaults to undefined
 
 
@@ -764,7 +875,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -784,22 +895,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceDeletePoliciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceDeletePoliciesRequest = {
-  // Array<string> | Policy ids. (optional)
+const request: AssetsServiceApiAssetsServiceDeletePoliciesRequest = {
+    // Policy ids. (optional)
   policyIds: [
     "policy_ids_example",
   ],
 };
 
-apiInstance.assetsServiceDeletePolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceDeletePolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -840,14 +950,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest = {
-  // Assetsv3FetchAssetChangeLogRequest
+const request: AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest = {
+  
   assetsv3FetchAssetChangeLogRequest: {
     assetId: "assetId_example",
     filter: [
@@ -893,9 +1003,8 @@ let body:.AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest = {
   },
 };
 
-apiInstance.assetsServiceFetchAssetChangeLog(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetChangeLog(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -936,42 +1045,41 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetDashboardRequest = {
-  // string | ID of the Dashboard Widget
+const request: AssetsServiceApiAssetsServiceFetchAssetDashboardRequest = {
+    // ID of the Dashboard Widget
   widgetType: "widget_type_example",
-  // string | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeStart: "date_range.start_example",
-  // string | end of date range for ui widget. (optional)
+    // end of date range for ui widget. (optional)
   dateRangeEnd: "date_range.end_example",
-  // string | type of date range for ui widget. (optional)
+    // type of date range for ui widget. (optional)
   dateRangeType: "date_range.type_example",
-  // string | key for ui widget. (optional)
+    // key for ui widget. (optional)
   dateRangeKey: "date_range.key_example",
-  // string | error for ui widget. (optional)
+    // error for ui widget. (optional)
   dateRangeError: "date_range.error_example",
-  // number | start_number for ui widget. (optional)
+    // start_number for ui widget. (optional)
   dateRangeStartNumber: 1,
-  // string | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeStartUnit: "date_range.start_unit_example",
-  // number | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeEndNumber: 1,
-  // string | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeEndUnit: "date_range.end_unit_example",
-  // string | Name of the timeline value selected from drop down. (optional)
+    // Name of the timeline value selected from drop down. (optional)
   timelineValueSelected: "timeline_value_selected_example",
-  // string | Tag ID. (optional)
+    // Tag ID. (optional)
   tagId: "tag_id_example",
 };
 
-apiInstance.assetsServiceFetchAssetDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1023,14 +1131,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetListRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetListRequest = {
-  // Assetsv3FetchAssetListRequest
+const request: AssetsServiceApiAssetsServiceFetchAssetListRequest = {
+  
   assetsv3FetchAssetListRequest: {
     columns: [
       "columns_example",
@@ -1080,9 +1188,8 @@ let body:.AssetsServiceApiAssetsServiceFetchAssetListRequest = {
   },
 };
 
-apiInstance.assetsServiceFetchAssetList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1123,28 +1230,27 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {
-  // string | Asset grouper Id. (optional)
+const request: AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {
+    // Asset grouper Id. (optional)
   assetId: "asset_id_example",
-  // number | Page number. (optional)
+    // Page number. (optional)
   pageNumber: 1,
-  // number | Page size. (optional)
+    // Page size. (optional)
   pageSize: 1,
-  // string | Action : merge or split. (optional)
+    // Action : merge or split. (optional)
   action: "action_example",
-  // string | Search from the list based on asset name, database name, ip or host. (optional)
+    // Search from the list based on asset name, database name, ip or host. (optional)
   searchKey: "search_key_example",
 };
 
-apiInstance.assetsServiceFetchAssetsForMergeSplit(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetsForMergeSplit(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1189,20 +1295,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFindAssetNameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFindAssetNameRequest = {
-  // string | Name of asset. (optional)
+const request: AssetsServiceApiAssetsServiceFindAssetNameRequest = {
+    // Name of asset. (optional)
   assetName: "asset_name_example",
 };
 
-apiInstance.assetsServiceFindAssetName(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFindAssetName(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1243,34 +1348,33 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceGetAssetOverviewRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {
-  // string | Asset grouper Id. (optional)
+const request: AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {
+    // Asset grouper Id. (optional)
   assetId: "asset_id_example",
-  // number | Page number. (optional)
+    // Page number. (optional)
   pageNumber: 1,
-  // number | Page size. (optional)
+    // Page size. (optional)
   size: 1,
-  // 'ALL' | 'CLASSIFICATION' | 'TAG' | 'RESOURCE' | Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. (optional)
+    // Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. (optional)
   widget: "ALL",
-  // string | Asset IP. (optional)
+    // Asset IP. (optional)
   ip: "ip_example",
-  // string | Asset Host. (optional)
+    // Asset Host. (optional)
   host: "host_example",
-  // string | Database Name. (optional)
+    // Database Name. (optional)
   database: "database_example",
-  // string | asset ntity type. (optional)
+    // asset entity type. (optional)
   assetEntityType: "asset_entity_type_example",
 };
 
-apiInstance.assetsServiceGetAssetOverview(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetAssetOverview(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1285,7 +1389,7 @@ Name | Type | Description  | Notes
  **ip** | [**string**] | Asset IP. | (optional) defaults to undefined
  **host** | [**string**] | Asset Host. | (optional) defaults to undefined
  **database** | [**string**] | Database Name. | (optional) defaults to undefined
- **assetEntityType** | [**string**] | asset ntity type. | (optional) defaults to undefined
+ **assetEntityType** | [**string**] | asset entity type. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1318,23 +1422,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceGetAssetTopologyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceGetAssetTopologyRequest = {
-  // Assetsv3GetAssetTopologyRequest
+const request: AssetsServiceApiAssetsServiceGetAssetTopologyRequest = {
+  
   assetsv3GetAssetTopologyRequest: {
     assetId: "assetId_example",
     type: "type_example",
   },
 };
 
-apiInstance.assetsServiceGetAssetTopology(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetAssetTopology(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1375,20 +1478,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {
-  // string | template id to be deleted. (optional)
+const request: AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {
+    // template id to be deleted. (optional)
   templateId: "template_id_example",
 };
 
-apiInstance.assetsServiceGetFilterTemplateForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetFilterTemplateForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1429,17 +1531,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.assetsServiceGetFiltersForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetFiltersForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1469,6 +1569,66 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
+# **assetsServiceImportCSV**
+> Assetsv3ImportCSVResponse assetsServiceImportCSV(assetsv3ImportCSVRequest)
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceImportCSVRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
+
+const request: AssetsServiceApiAssetsServiceImportCSVRequest = {
+    // unique id of the csv
+  csvId: "csv_id_example",
+  
+  assetsv3ImportCSVRequest: {
+    csvId: "csvId_example",
+    importAction: "importAction_example",
+    templateType: "DATABASE",
+  },
+};
+
+const data = await apiInstance.assetsServiceImportCSV(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **assetsv3ImportCSVRequest** | **Assetsv3ImportCSVRequest**|  |
+ **csvId** | [**string**] | unique id of the csv | defaults to undefined
+
+
+### Return type
+
+**Assetsv3ImportCSVResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
 # **assetsServiceListPolicy**
 > Assetsv3ListPolicyResponse assetsServiceListPolicy()
 
@@ -1477,17 +1637,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.assetsServiceListPolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListPolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1525,20 +1683,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceListRuleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceListRuleRequest = {
-  // string | Policy ID
+const request: AssetsServiceApiAssetsServiceListRuleRequest = {
+    // Policy ID
   policyId: "policy_id_example",
 };
 
-apiInstance.assetsServiceListRule(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListRule(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1579,24 +1736,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceListTagDomainsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceListTagDomainsRequest = {
-  // string | Optional: dom_grouper required if we want to fetch domains based on the group. (optional)
+const request: AssetsServiceApiAssetsServiceListTagDomainsRequest = {
+    // Optional: dom_grouper required if we want to fetch domains based on the group. (optional)
   domGrouper: "dom_grouper_example",
-  // string | Optional: purpose required if we want to fetch domains based on the purpose. (optional)
+    // Optional: purpose required if we want to fetch domains based on the purpose. (optional)
   purpose: "purpose_example",
-  // boolean | Optional: If we need Tag  based on the Domains. (optional)
+    // Optional: If we need Tag  based on the Domains. (optional)
   needTag: true,
 };
 
-apiInstance.assetsServiceListTagDomains(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListTagDomains(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1639,22 +1795,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceListTagsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceListTagsRequest = {
-  // Array<string> | asset id - Asset ID. (optional)
+const request: AssetsServiceApiAssetsServiceListTagsRequest = {
+    // asset id - Asset ID. (optional)
   assetId: [
     "asset_id_example",
   ],
 };
 
-apiInstance.assetsServiceListTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1695,14 +1850,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest = {
-  // Assetsv3MergeOrSplitAssetsRequest
+const request: AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest = {
+  
   assetsv3MergeOrSplitAssetsRequest: {
     action: "action_example",
     destinationAssets: [
@@ -1724,9 +1879,8 @@ let body:.AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest = {
   },
 };
 
-apiInstance.assetsServiceMergeOrSplitAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceMergeOrSplitAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1767,14 +1921,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveAssignedTagsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveAssignedTagsRequest = {
-  // Assetsv3SaveAssignedTagsRequest
+const request: AssetsServiceApiAssetsServiceSaveAssignedTagsRequest = {
+  
   assetsv3SaveAssignedTagsRequest: {
     tagsAssigned: [
       {
@@ -1787,9 +1941,8 @@ let body:.AssetsServiceApiAssetsServiceSaveAssignedTagsRequest = {
   },
 };
 
-apiInstance.assetsServiceSaveAssignedTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveAssignedTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1830,14 +1983,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveTagConceptDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveTagConceptDataRequest = {
-  // Assetsv3SaveTagConceptDataRequest
+const request: AssetsServiceApiAssetsServiceSaveTagConceptDataRequest = {
+  
   assetsv3SaveTagConceptDataRequest: {
     tag: {
       creationTime: new Date('1970-01-01T00:00:00.00Z'),
@@ -1855,9 +2008,8 @@ let body:.AssetsServiceApiAssetsServiceSaveTagConceptDataRequest = {
   },
 };
 
-apiInstance.assetsServiceSaveTagConceptData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveTagConceptData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1898,14 +2050,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveTagDomainDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveTagDomainDataRequest = {
-  // Assetsv3SaveTagDomainDataRequest
+const request: AssetsServiceApiAssetsServiceSaveTagDomainDataRequest = {
+  
   assetsv3SaveTagDomainDataRequest: {
     category: {
       creationTime: new Date('1970-01-01T00:00:00.00Z'),
@@ -1939,9 +2091,8 @@ let body:.AssetsServiceApiAssetsServiceSaveTagDomainDataRequest = {
   },
 };
 
-apiInstance.assetsServiceSaveTagDomainData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveTagDomainData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1982,14 +2133,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest = {
-  // Assetsv3SaveUpdateFilterTemplateRequest
+const request: AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest = {
+  
   assetsv3SaveUpdateFilterTemplateRequest: {
     isDefault: true,
     template: {
@@ -2055,9 +2206,8 @@ let body:.AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest 
   },
 };
 
-apiInstance.assetsServiceSaveUpdateFilterTemplateForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveUpdateFilterTemplateForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2098,22 +2248,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSetBannerStateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSetBannerStateRequest = {
-  // Assetsv3SetBannerStateRequest
+const request: AssetsServiceApiAssetsServiceSetBannerStateRequest = {
+  
   assetsv3SetBannerStateRequest: {
     hideAssetsBanner: true,
   },
 };
 
-apiInstance.assetsServiceSetBannerState(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSetBannerState(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2154,23 +2303,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceUpdateAssetNameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceUpdateAssetNameRequest = {
-  // Assetsv3UpdateAssetNameRequest
+const request: AssetsServiceApiAssetsServiceUpdateAssetNameRequest = {
+  
   assetsv3UpdateAssetNameRequest: {
     grouperId: 1,
     updatedName: "updatedName_example",
   },
 };
 
-apiInstance.assetsServiceUpdateAssetName(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceUpdateAssetName(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2211,14 +2359,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceUpdatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceUpdatePolicyRequest = {
-  // Assetsv3UpdatePolicyRequest
+const request: AssetsServiceApiAssetsServiceUpdatePolicyRequest = {
+  
   assetsv3UpdatePolicyRequest: {
     policyId: [
       "policyId_example",
@@ -2227,9 +2375,8 @@ let body:.AssetsServiceApiAssetsServiceUpdatePolicyRequest = {
   },
 };
 
-apiInstance.assetsServiceUpdatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceUpdatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

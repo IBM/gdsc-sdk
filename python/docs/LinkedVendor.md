@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **vendor** | [**Vendor**](Vendor.md) |  | 
 **total_accounts** | **float** |  | 
 **is_sensitive** | **bool** |  | 
+**sensitivity_summary** | [**List[SensitivitySummary]**](SensitivitySummary.md) |  | [optional] 
 
 ## Example
 

@@ -95,13 +95,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getActualFlowCall(String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getActualFlowCall(@javax.annotation.Nonnull String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -118,7 +119,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlows/{id}"
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlows/{id}"
             .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -147,7 +148,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getActualFlowValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getActualFlowValidateBeforeCall(@javax.annotation.Nonnull String id, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getActualFlow(Async)");
@@ -164,13 +165,14 @@ public class DataMovementsApi {
      * @return ActualFlow
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ActualFlow getActualFlow(String id) throws ApiException {
+    public ActualFlow getActualFlow(@javax.annotation.Nonnull String id) throws ApiException {
         ApiResponse<ActualFlow> localVarResp = getActualFlowWithHttpInfo(id);
         return localVarResp.getData();
     }
@@ -182,13 +184,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;ActualFlow&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ActualFlow> getActualFlowWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<ActualFlow> getActualFlowWithHttpInfo(@javax.annotation.Nonnull String id) throws ApiException {
         okhttp3.Call localVarCall = getActualFlowValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<ActualFlow>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -202,13 +205,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getActualFlowAsync(String id, final ApiCallback<ActualFlow> _callback) throws ApiException {
+    public okhttp3.Call getActualFlowAsync(@javax.annotation.Nonnull String id, final ApiCallback<ActualFlow> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getActualFlowValidateBeforeCall(id, _callback);
         Type localVarReturnType = new TypeToken<ActualFlow>(){}.getType();
@@ -222,13 +226,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getActualFlowsSummaryCall(ListActualFlowsFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getActualFlowsSummaryCall(@javax.annotation.Nullable ListActualFlowsFilterParameter filter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -245,7 +250,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlows/summary";
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlows/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -277,7 +282,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getActualFlowsSummaryValidateBeforeCall(ListActualFlowsFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getActualFlowsSummaryValidateBeforeCall(@javax.annotation.Nullable ListActualFlowsFilterParameter filter, final ApiCallback _callback) throws ApiException {
         return getActualFlowsSummaryCall(filter, _callback);
 
     }
@@ -289,13 +294,14 @@ public class DataMovementsApi {
      * @return ActualFlowsSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ActualFlowsSummary getActualFlowsSummary(ListActualFlowsFilterParameter filter) throws ApiException {
+    public ActualFlowsSummary getActualFlowsSummary(@javax.annotation.Nullable ListActualFlowsFilterParameter filter) throws ApiException {
         ApiResponse<ActualFlowsSummary> localVarResp = getActualFlowsSummaryWithHttpInfo(filter);
         return localVarResp.getData();
     }
@@ -307,13 +313,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;ActualFlowsSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ActualFlowsSummary> getActualFlowsSummaryWithHttpInfo(ListActualFlowsFilterParameter filter) throws ApiException {
+    public ApiResponse<ActualFlowsSummary> getActualFlowsSummaryWithHttpInfo(@javax.annotation.Nullable ListActualFlowsFilterParameter filter) throws ApiException {
         okhttp3.Call localVarCall = getActualFlowsSummaryValidateBeforeCall(filter, null);
         Type localVarReturnType = new TypeToken<ActualFlowsSummary>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -327,13 +334,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getActualFlowsSummaryAsync(ListActualFlowsFilterParameter filter, final ApiCallback<ActualFlowsSummary> _callback) throws ApiException {
+    public okhttp3.Call getActualFlowsSummaryAsync(@javax.annotation.Nullable ListActualFlowsFilterParameter filter, final ApiCallback<ActualFlowsSummary> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getActualFlowsSummaryValidateBeforeCall(filter, _callback);
         Type localVarReturnType = new TypeToken<ActualFlowsSummary>(){}.getType();
@@ -347,13 +355,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPotentialFlowCall(String flowId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getPotentialFlowCall(@javax.annotation.Nonnull String flowId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -370,7 +379,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/{flowId}"
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/{flowId}"
             .replace("{" + "flowId" + "}", localVarApiClient.escapeString(flowId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -399,7 +408,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getPotentialFlowValidateBeforeCall(String flowId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getPotentialFlowValidateBeforeCall(@javax.annotation.Nonnull String flowId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'flowId' is set
         if (flowId == null) {
             throw new ApiException("Missing the required parameter 'flowId' when calling getPotentialFlow(Async)");
@@ -416,13 +425,14 @@ public class DataMovementsApi {
      * @return PotentialFlow
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow not found </td><td>  -  </td></tr>
      </table>
      */
-    public PotentialFlow getPotentialFlow(String flowId) throws ApiException {
+    public PotentialFlow getPotentialFlow(@javax.annotation.Nonnull String flowId) throws ApiException {
         ApiResponse<PotentialFlow> localVarResp = getPotentialFlowWithHttpInfo(flowId);
         return localVarResp.getData();
     }
@@ -434,13 +444,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;PotentialFlow&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PotentialFlow> getPotentialFlowWithHttpInfo(String flowId) throws ApiException {
+    public ApiResponse<PotentialFlow> getPotentialFlowWithHttpInfo(@javax.annotation.Nonnull String flowId) throws ApiException {
         okhttp3.Call localVarCall = getPotentialFlowValidateBeforeCall(flowId, null);
         Type localVarReturnType = new TypeToken<PotentialFlow>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -454,13 +465,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPotentialFlowAsync(String flowId, final ApiCallback<PotentialFlow> _callback) throws ApiException {
+    public okhttp3.Call getPotentialFlowAsync(@javax.annotation.Nonnull String flowId, final ApiCallback<PotentialFlow> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getPotentialFlowValidateBeforeCall(flowId, _callback);
         Type localVarReturnType = new TypeToken<PotentialFlow>(){}.getType();
@@ -474,13 +486,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow path not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPotentialFlowPathCall(String flowPathId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getPotentialFlowPathCall(@javax.annotation.Nonnull String flowPathId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -497,7 +510,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/paths/{flowPathId}"
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/paths/{flowPathId}"
             .replace("{" + "flowPathId" + "}", localVarApiClient.escapeString(flowPathId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -526,7 +539,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getPotentialFlowPathValidateBeforeCall(String flowPathId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getPotentialFlowPathValidateBeforeCall(@javax.annotation.Nonnull String flowPathId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'flowPathId' is set
         if (flowPathId == null) {
             throw new ApiException("Missing the required parameter 'flowPathId' when calling getPotentialFlowPath(Async)");
@@ -543,13 +556,14 @@ public class DataMovementsApi {
      * @return PotentialFlowPath
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow path not found </td><td>  -  </td></tr>
      </table>
      */
-    public PotentialFlowPath getPotentialFlowPath(String flowPathId) throws ApiException {
+    public PotentialFlowPath getPotentialFlowPath(@javax.annotation.Nonnull String flowPathId) throws ApiException {
         ApiResponse<PotentialFlowPath> localVarResp = getPotentialFlowPathWithHttpInfo(flowPathId);
         return localVarResp.getData();
     }
@@ -561,13 +575,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;PotentialFlowPath&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow path not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PotentialFlowPath> getPotentialFlowPathWithHttpInfo(String flowPathId) throws ApiException {
+    public ApiResponse<PotentialFlowPath> getPotentialFlowPathWithHttpInfo(@javax.annotation.Nonnull String flowPathId) throws ApiException {
         okhttp3.Call localVarCall = getPotentialFlowPathValidateBeforeCall(flowPathId, null);
         Type localVarReturnType = new TypeToken<PotentialFlowPath>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -581,13 +596,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> potential flow path not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPotentialFlowPathAsync(String flowPathId, final ApiCallback<PotentialFlowPath> _callback) throws ApiException {
+    public okhttp3.Call getPotentialFlowPathAsync(@javax.annotation.Nonnull String flowPathId, final ApiCallback<PotentialFlowPath> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getPotentialFlowPathValidateBeforeCall(flowPathId, _callback);
         Type localVarReturnType = new TypeToken<PotentialFlowPath>(){}.getType();
@@ -601,13 +617,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getPotentialFlowsSummaryCall(PotentialFlowsFilterOptions filter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getPotentialFlowsSummaryCall(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -624,7 +641,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/summary";
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/summary";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -656,7 +673,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getPotentialFlowsSummaryValidateBeforeCall(PotentialFlowsFilterOptions filter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getPotentialFlowsSummaryValidateBeforeCall(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, final ApiCallback _callback) throws ApiException {
         return getPotentialFlowsSummaryCall(filter, _callback);
 
     }
@@ -668,13 +685,14 @@ public class DataMovementsApi {
      * @return PotentialFlowsSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public PotentialFlowsSummary getPotentialFlowsSummary(PotentialFlowsFilterOptions filter) throws ApiException {
+    public PotentialFlowsSummary getPotentialFlowsSummary(@javax.annotation.Nullable PotentialFlowsFilterOptions filter) throws ApiException {
         ApiResponse<PotentialFlowsSummary> localVarResp = getPotentialFlowsSummaryWithHttpInfo(filter);
         return localVarResp.getData();
     }
@@ -686,13 +704,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;PotentialFlowsSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<PotentialFlowsSummary> getPotentialFlowsSummaryWithHttpInfo(PotentialFlowsFilterOptions filter) throws ApiException {
+    public ApiResponse<PotentialFlowsSummary> getPotentialFlowsSummaryWithHttpInfo(@javax.annotation.Nullable PotentialFlowsFilterOptions filter) throws ApiException {
         okhttp3.Call localVarCall = getPotentialFlowsSummaryValidateBeforeCall(filter, null);
         Type localVarReturnType = new TypeToken<PotentialFlowsSummary>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -706,13 +725,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getPotentialFlowsSummaryAsync(PotentialFlowsFilterOptions filter, final ApiCallback<PotentialFlowsSummary> _callback) throws ApiException {
+    public okhttp3.Call getPotentialFlowsSummaryAsync(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, final ApiCallback<PotentialFlowsSummary> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getPotentialFlowsSummaryValidateBeforeCall(filter, _callback);
         Type localVarReturnType = new TypeToken<PotentialFlowsSummary>(){}.getType();
@@ -729,13 +749,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listActualFlowPathsCall(ListActualFlowPathsSortParameter sort, ListActualFlowPathsFilterParameter filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listActualFlowPathsCall(@javax.annotation.Nullable ListActualFlowPathsSortParameter sort, @javax.annotation.Nullable ListActualFlowPathsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -752,7 +773,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlowPaths";
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlowPaths";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -796,7 +817,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listActualFlowPathsValidateBeforeCall(ListActualFlowPathsSortParameter sort, ListActualFlowPathsFilterParameter filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listActualFlowPathsValidateBeforeCall(@javax.annotation.Nullable ListActualFlowPathsSortParameter sort, @javax.annotation.Nullable ListActualFlowPathsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listActualFlowPathsCall(sort, filter, pageSize, nextToken, _callback);
 
     }
@@ -811,13 +832,14 @@ public class DataMovementsApi {
      * @return ListActualFlowPaths200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListActualFlowPaths200Response listActualFlowPaths(ListActualFlowPathsSortParameter sort, ListActualFlowPathsFilterParameter filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListActualFlowPaths200Response listActualFlowPaths(@javax.annotation.Nullable ListActualFlowPathsSortParameter sort, @javax.annotation.Nullable ListActualFlowPathsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListActualFlowPaths200Response> localVarResp = listActualFlowPathsWithHttpInfo(sort, filter, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -832,13 +854,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;ListActualFlowPaths200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListActualFlowPaths200Response> listActualFlowPathsWithHttpInfo(ListActualFlowPathsSortParameter sort, ListActualFlowPathsFilterParameter filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListActualFlowPaths200Response> listActualFlowPathsWithHttpInfo(@javax.annotation.Nullable ListActualFlowPathsSortParameter sort, @javax.annotation.Nullable ListActualFlowPathsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listActualFlowPathsValidateBeforeCall(sort, filter, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListActualFlowPaths200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -855,13 +878,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listActualFlowPathsAsync(ListActualFlowPathsSortParameter sort, ListActualFlowPathsFilterParameter filter, BigDecimal pageSize, String nextToken, final ApiCallback<ListActualFlowPaths200Response> _callback) throws ApiException {
+    public okhttp3.Call listActualFlowPathsAsync(@javax.annotation.Nullable ListActualFlowPathsSortParameter sort, @javax.annotation.Nullable ListActualFlowPathsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListActualFlowPaths200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listActualFlowPathsValidateBeforeCall(sort, filter, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListActualFlowPaths200Response>(){}.getType();
@@ -878,13 +902,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listActualFlowsCall(ListActualFlowsSortParameter sort, ListActualFlowsFilterParameter filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listActualFlowsCall(@javax.annotation.Nullable ListActualFlowsSortParameter sort, @javax.annotation.Nullable ListActualFlowsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -901,7 +926,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/actualFlows";
+        String localVarPath = "/api/v2/dspm/dataMovements/actualFlows";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -945,7 +970,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listActualFlowsValidateBeforeCall(ListActualFlowsSortParameter sort, ListActualFlowsFilterParameter filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listActualFlowsValidateBeforeCall(@javax.annotation.Nullable ListActualFlowsSortParameter sort, @javax.annotation.Nullable ListActualFlowsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listActualFlowsCall(sort, filter, pageSize, nextToken, _callback);
 
     }
@@ -960,13 +985,14 @@ public class DataMovementsApi {
      * @return ListActualFlows200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListActualFlows200Response listActualFlows(ListActualFlowsSortParameter sort, ListActualFlowsFilterParameter filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListActualFlows200Response listActualFlows(@javax.annotation.Nullable ListActualFlowsSortParameter sort, @javax.annotation.Nullable ListActualFlowsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListActualFlows200Response> localVarResp = listActualFlowsWithHttpInfo(sort, filter, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -981,13 +1007,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;ListActualFlows200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListActualFlows200Response> listActualFlowsWithHttpInfo(ListActualFlowsSortParameter sort, ListActualFlowsFilterParameter filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListActualFlows200Response> listActualFlowsWithHttpInfo(@javax.annotation.Nullable ListActualFlowsSortParameter sort, @javax.annotation.Nullable ListActualFlowsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listActualFlowsValidateBeforeCall(sort, filter, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListActualFlows200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1004,13 +1031,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listActualFlowsAsync(ListActualFlowsSortParameter sort, ListActualFlowsFilterParameter filter, BigDecimal pageSize, String nextToken, final ApiCallback<ListActualFlows200Response> _callback) throws ApiException {
+    public okhttp3.Call listActualFlowsAsync(@javax.annotation.Nullable ListActualFlowsSortParameter sort, @javax.annotation.Nullable ListActualFlowsFilterParameter filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListActualFlows200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listActualFlowsValidateBeforeCall(sort, filter, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListActualFlows200Response>(){}.getType();
@@ -1026,13 +1054,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listPotentialFlowsCall(PotentialFlowsFilterOptions filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listPotentialFlowsCall(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1049,7 +1078,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows";
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1089,7 +1118,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listPotentialFlowsValidateBeforeCall(PotentialFlowsFilterOptions filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listPotentialFlowsValidateBeforeCall(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listPotentialFlowsCall(filter, pageSize, nextToken, _callback);
 
     }
@@ -1103,13 +1132,14 @@ public class DataMovementsApi {
      * @return ListPotentialFlows200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListPotentialFlows200Response listPotentialFlows(PotentialFlowsFilterOptions filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListPotentialFlows200Response listPotentialFlows(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListPotentialFlows200Response> localVarResp = listPotentialFlowsWithHttpInfo(filter, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -1123,13 +1153,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;ListPotentialFlows200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListPotentialFlows200Response> listPotentialFlowsWithHttpInfo(PotentialFlowsFilterOptions filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListPotentialFlows200Response> listPotentialFlowsWithHttpInfo(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listPotentialFlowsValidateBeforeCall(filter, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListPotentialFlows200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1145,13 +1176,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listPotentialFlowsAsync(PotentialFlowsFilterOptions filter, BigDecimal pageSize, String nextToken, final ApiCallback<ListPotentialFlows200Response> _callback) throws ApiException {
+    public okhttp3.Call listPotentialFlowsAsync(@javax.annotation.Nullable PotentialFlowsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListPotentialFlows200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listPotentialFlowsValidateBeforeCall(filter, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListPotentialFlows200Response>(){}.getType();
@@ -1167,13 +1199,14 @@ public class DataMovementsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listPotentialFlowsPathsCall(PotentialFlowsPathsFilterOptions filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listPotentialFlowsPathsCall(@javax.annotation.Nullable PotentialFlowsPathsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1190,7 +1223,7 @@ public class DataMovementsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1/dspm/dataMovements/potentialFlows/paths";
+        String localVarPath = "/api/v2/dspm/dataMovements/potentialFlows/paths";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1230,7 +1263,7 @@ public class DataMovementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listPotentialFlowsPathsValidateBeforeCall(PotentialFlowsPathsFilterOptions filter, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listPotentialFlowsPathsValidateBeforeCall(@javax.annotation.Nullable PotentialFlowsPathsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listPotentialFlowsPathsCall(filter, pageSize, nextToken, _callback);
 
     }
@@ -1244,13 +1277,14 @@ public class DataMovementsApi {
      * @return ListPotentialFlowsPaths200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListPotentialFlowsPaths200Response listPotentialFlowsPaths(PotentialFlowsPathsFilterOptions filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListPotentialFlowsPaths200Response listPotentialFlowsPaths(@javax.annotation.Nullable PotentialFlowsPathsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListPotentialFlowsPaths200Response> localVarResp = listPotentialFlowsPathsWithHttpInfo(filter, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -1264,13 +1298,14 @@ public class DataMovementsApi {
      * @return ApiResponse&lt;ListPotentialFlowsPaths200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListPotentialFlowsPaths200Response> listPotentialFlowsPathsWithHttpInfo(PotentialFlowsPathsFilterOptions filter, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListPotentialFlowsPaths200Response> listPotentialFlowsPathsWithHttpInfo(@javax.annotation.Nullable PotentialFlowsPathsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listPotentialFlowsPathsValidateBeforeCall(filter, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListPotentialFlowsPaths200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1286,13 +1321,14 @@ public class DataMovementsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listPotentialFlowsPathsAsync(PotentialFlowsPathsFilterOptions filter, BigDecimal pageSize, String nextToken, final ApiCallback<ListPotentialFlowsPaths200Response> _callback) throws ApiException {
+    public okhttp3.Call listPotentialFlowsPathsAsync(@javax.annotation.Nullable PotentialFlowsPathsFilterOptions filter, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListPotentialFlowsPaths200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listPotentialFlowsPathsValidateBeforeCall(filter, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListPotentialFlowsPaths200Response>(){}.getType();

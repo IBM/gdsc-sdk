@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetFilterTemplateResponse - Get all filters query template as list.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3GetFilterTemplateResponse {
   public static final String SERIALIZED_NAME_HIDE_ASSETS_BANNER = "hide_assets_banner";
   @SerializedName(SERIALIZED_NAME_HIDE_ASSETS_BANNER)
+  @javax.annotation.Nullable
   private Boolean hideAssetsBanner;
 
   public static final String SERIALIZED_NAME_TEMPLATES = "templates";
   @SerializedName(SERIALIZED_NAME_TEMPLATES)
+  @javax.annotation.Nullable
   private List<Assetsv3FilterTemplate> templates = new ArrayList<>();
 
   public Assetsv3GetFilterTemplateResponse() {
   }
 
-  public Assetsv3GetFilterTemplateResponse hideAssetsBanner(Boolean hideAssetsBanner) {
+  public Assetsv3GetFilterTemplateResponse hideAssetsBanner(@javax.annotation.Nullable Boolean hideAssetsBanner) {
     this.hideAssetsBanner = hideAssetsBanner;
     return this;
   }
 
-   /**
+  /**
    * bool to control if asests banner is going to be hidden.
    * @return hideAssetsBanner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHideAssetsBanner() {
     return hideAssetsBanner;
   }
 
-  public void setHideAssetsBanner(Boolean hideAssetsBanner) {
+  public void setHideAssetsBanner(@javax.annotation.Nullable Boolean hideAssetsBanner) {
     this.hideAssetsBanner = hideAssetsBanner;
   }
 
 
-  public Assetsv3GetFilterTemplateResponse templates(List<Assetsv3FilterTemplate> templates) {
+  public Assetsv3GetFilterTemplateResponse templates(@javax.annotation.Nullable List<Assetsv3FilterTemplate> templates) {
     this.templates = templates;
     return this;
   }
@@ -97,16 +100,16 @@ public class Assetsv3GetFilterTemplateResponse {
     return this;
   }
 
-   /**
+  /**
    * Get templates
    * @return templates
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3FilterTemplate> getTemplates() {
     return templates;
   }
 
-  public void setTemplates(List<Assetsv3FilterTemplate> templates) {
+  public void setTemplates(@javax.annotation.Nullable List<Assetsv3FilterTemplate> templates) {
     this.templates = templates;
   }
 
@@ -157,24 +160,22 @@ public class Assetsv3GetFilterTemplateResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("hide_assets_banner");
-    openapiFields.add("templates");
+    openapiFields = new HashSet<String>(Arrays.asList("hide_assets_banner", "templates"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3GetFilterTemplateResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3GetFilterTemplateResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3GetFilterTemplateResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3GetFilterTemplateResponse is not found in the empty JSON string", Assetsv3GetFilterTemplateResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3GetFilterTemplateResponse is not found in the empty JSON string", Assetsv3GetFilterTemplateResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Assetsv3GetFilterTemplateResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3GetFilterTemplateResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3GetFilterTemplateResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3GetFilterTemplateResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Assetsv3GetFilterTemplateResponse {
         if (jsonArraytemplates != null) {
           // ensure the json data is an array
           if (!jsonObj.get("templates").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `templates` to be an array in the JSON string but got `%s`", jsonObj.get("templates").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `templates` to be an array in the JSON string but got `%s`", jsonObj.get("templates").toString()));
           }
 
           // validate the optional field `templates` (array)
@@ -231,22 +232,22 @@ public class Assetsv3GetFilterTemplateResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3GetFilterTemplateResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3GetFilterTemplateResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3GetFilterTemplateResponse
-  */
+  /**
+   * Create an instance of Assetsv3GetFilterTemplateResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3GetFilterTemplateResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3GetFilterTemplateResponse
+   */
   public static Assetsv3GetFilterTemplateResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3GetFilterTemplateResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3GetFilterTemplateResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3GetFilterTemplateResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

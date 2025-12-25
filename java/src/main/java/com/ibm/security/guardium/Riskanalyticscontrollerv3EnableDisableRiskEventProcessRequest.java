@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * EnableDisableRiskEventProcessRequest is the request object for EnableDisableRiskEventProcess API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest {
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3Action action = Riskanalyticscontrollerv3Action.UNDEFINED_ACTION_TYPE;
 
   public Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest() {
   }
 
-  public Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest action(Riskanalyticscontrollerv3Action action) {
+  public Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest action(@javax.annotation.Nullable Riskanalyticscontrollerv3Action action) {
     this.action = action;
     return this;
   }
 
-   /**
+  /**
    * Get action
    * @return action
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3Action getAction() {
     return action;
   }
 
-  public void setAction(Riskanalyticscontrollerv3Action action) {
+  public void setAction(@javax.annotation.Nullable Riskanalyticscontrollerv3Action action) {
     this.action = action;
   }
 
@@ -122,23 +124,22 @@ public class Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action");
+    openapiFields = new HashSet<String>(Arrays.asList("action"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest is not found in the empty JSON string", Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest is not found in the empty JSON string", Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,7 +147,7 @@ public class Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -185,22 +186,22 @@ public class Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
+   */
   public static Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

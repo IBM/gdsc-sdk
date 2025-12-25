@@ -37,6 +37,8 @@ export class Riskanalyticscontrollerv3Observation {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "leadFeatureId",
@@ -76,6 +78,5 @@ export class Riskanalyticscontrollerv3Observation {
     public constructor() {
     }
 }
-
 
 

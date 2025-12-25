@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Statistics about the different sources seen. Mainly related to the number of data source users.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3SourcesStats {
   public static final String SERIALIZED_NAME_DATASOURCE_AVG_USERS = "datasource_avg_users";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_AVG_USERS)
+  @javax.annotation.Nullable
   private Integer datasourceAvgUsers;
 
   public static final String SERIALIZED_NAME_DATASOURCE_MAX_USERS = "datasource_max_users";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_MAX_USERS)
+  @javax.annotation.Nullable
   private Integer datasourceMaxUsers;
 
   public static final String SERIALIZED_NAME_DATASOURCE_MIN_USERS = "datasource_min_users";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_MIN_USERS)
+  @javax.annotation.Nullable
   private Integer datasourceMinUsers;
 
   public Outliersenginev3SourcesStats() {
   }
 
-  public Outliersenginev3SourcesStats datasourceAvgUsers(Integer datasourceAvgUsers) {
+  public Outliersenginev3SourcesStats datasourceAvgUsers(@javax.annotation.Nullable Integer datasourceAvgUsers) {
     this.datasourceAvgUsers = datasourceAvgUsers;
     return this;
   }
 
-   /**
+  /**
    * Average users per data source, in the past 72 hours.
    * @return datasourceAvgUsers
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasourceAvgUsers() {
     return datasourceAvgUsers;
   }
 
-  public void setDatasourceAvgUsers(Integer datasourceAvgUsers) {
+  public void setDatasourceAvgUsers(@javax.annotation.Nullable Integer datasourceAvgUsers) {
     this.datasourceAvgUsers = datasourceAvgUsers;
   }
 
 
-  public Outliersenginev3SourcesStats datasourceMaxUsers(Integer datasourceMaxUsers) {
+  public Outliersenginev3SourcesStats datasourceMaxUsers(@javax.annotation.Nullable Integer datasourceMaxUsers) {
     this.datasourceMaxUsers = datasourceMaxUsers;
     return this;
   }
 
-   /**
+  /**
    * Maximum users in a single data source, in the past 72 hours.
    * @return datasourceMaxUsers
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasourceMaxUsers() {
     return datasourceMaxUsers;
   }
 
-  public void setDatasourceMaxUsers(Integer datasourceMaxUsers) {
+  public void setDatasourceMaxUsers(@javax.annotation.Nullable Integer datasourceMaxUsers) {
     this.datasourceMaxUsers = datasourceMaxUsers;
   }
 
 
-  public Outliersenginev3SourcesStats datasourceMinUsers(Integer datasourceMinUsers) {
+  public Outliersenginev3SourcesStats datasourceMinUsers(@javax.annotation.Nullable Integer datasourceMinUsers) {
     this.datasourceMinUsers = datasourceMinUsers;
     return this;
   }
 
-   /**
+  /**
    * Minimum users in a single data source, in the past 72 hours.
    * @return datasourceMinUsers
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDatasourceMinUsers() {
     return datasourceMinUsers;
   }
 
-  public void setDatasourceMinUsers(Integer datasourceMinUsers) {
+  public void setDatasourceMinUsers(@javax.annotation.Nullable Integer datasourceMinUsers) {
     this.datasourceMinUsers = datasourceMinUsers;
   }
 
@@ -171,25 +175,22 @@ public class Outliersenginev3SourcesStats {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("datasource_avg_users");
-    openapiFields.add("datasource_max_users");
-    openapiFields.add("datasource_min_users");
+    openapiFields = new HashSet<String>(Arrays.asList("datasource_avg_users", "datasource_max_users", "datasource_min_users"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3SourcesStats
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3SourcesStats
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3SourcesStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3SourcesStats is not found in the empty JSON string", Outliersenginev3SourcesStats.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3SourcesStats is not found in the empty JSON string", Outliersenginev3SourcesStats.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,7 +198,7 @@ public class Outliersenginev3SourcesStats {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3SourcesStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3SourcesStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3SourcesStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -232,22 +233,22 @@ public class Outliersenginev3SourcesStats {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3SourcesStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3SourcesStats
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3SourcesStats
-  */
+  /**
+   * Create an instance of Outliersenginev3SourcesStats given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3SourcesStats
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3SourcesStats
+   */
   public static Outliersenginev3SourcesStats fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3SourcesStats.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3SourcesStats to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3SourcesStats to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

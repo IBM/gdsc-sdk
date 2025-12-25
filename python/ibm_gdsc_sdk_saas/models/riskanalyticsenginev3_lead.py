@@ -38,7 +38,7 @@ class Riskanalyticsenginev3Lead(BaseModel):
     pivot: Optional[Riskanalyticsenginev3Pivot] = None
     score: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The lead score (normalized score between 0 and 1).")
     severity: Optional[StrictInt] = Field(default=None, description="Lead severity.")
-    type: Optional[Riskanalyticsenginev3LeadType] = None
+    type: Optional[Riskanalyticsenginev3LeadType] = Riskanalyticsenginev3LeadType.UNDEFINED_LEAD_TYPE
     __properties: ClassVar[List[str]] = ["count", "creation_time", "info", "is_observation", "lead_key", "pivot", "score", "severity", "type"]
 
     model_config = ConfigDict(
@@ -83,9 +83,9 @@ class Riskanalyticsenginev3Lead(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in info (list)
         _items = []
         if self.info:
-            for _item in self.info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_info in self.info:
+                if _item_info:
+                    _items.append(_item_info.to_dict())
             _dict['info'] = _items
         # override the default output from pydantic by calling `to_dict()` of pivot
         if self.pivot:
@@ -110,7 +110,7 @@ class Riskanalyticsenginev3Lead(BaseModel):
             "pivot": Riskanalyticsenginev3Pivot.from_dict(obj["pivot"]) if obj.get("pivot") is not None else None,
             "score": obj.get("score"),
             "severity": obj.get("severity"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Riskanalyticsenginev3LeadType.UNDEFINED_LEAD_TYPE
         })
         return _obj
 

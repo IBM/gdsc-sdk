@@ -73,9 +73,9 @@ class Complianceacceleratorv3RuleAndAction(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in actions (dict)
         _field_dict = {}
         if self.actions:
-            for _key in self.actions:
-                if self.actions[_key]:
-                    _field_dict[_key] = self.actions[_key].to_dict()
+            for _key_actions in self.actions:
+                if self.actions[_key_actions]:
+                    _field_dict[_key_actions] = self.actions[_key_actions].to_dict()
             _dict['actions'] = _field_dict
         return _dict
 

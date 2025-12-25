@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,122 +44,137 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportDisplayLayout has report matadata , rows and headers.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ReportDisplayLayout {
   public static final String SERIALIZED_NAME_DEFAULT_TIMESTAMP_HEADER_ID = "default_timestamp_header_id";
   @SerializedName(SERIALIZED_NAME_DEFAULT_TIMESTAMP_HEADER_ID)
+  @javax.annotation.Nullable
   private String defaultTimestampHeaderId;
 
   public static final String SERIALIZED_NAME_FETCH_SIZE = "fetch_size";
   @SerializedName(SERIALIZED_NAME_FETCH_SIZE)
+  @javax.annotation.Nullable
   private Integer fetchSize;
 
   public static final String SERIALIZED_NAME_IN_REPORT_ADDITIONAL_PARAMETER = "in_report_additional_parameter";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_ADDITIONAL_PARAMETER)
+  @javax.annotation.Nullable
   private List<Reportsv3InReportAdditionalParameter> inReportAdditionalParameter = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IS_AUDITABLE = "is_auditable";
   @SerializedName(SERIALIZED_NAME_IS_AUDITABLE)
+  @javax.annotation.Nullable
   private Boolean isAuditable;
 
   public static final String SERIALIZED_NAME_IS_PREDEFINED = "is_predefined";
   @SerializedName(SERIALIZED_NAME_IS_PREDEFINED)
+  @javax.annotation.Nullable
   private Boolean isPredefined;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_EVENTS = "number_of_events";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_EVENTS)
+  @javax.annotation.Nullable
   private String numberOfEvents;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Integer offset;
 
   public static final String SERIALIZED_NAME_REFRESH_RATE = "refresh_rate";
   @SerializedName(SERIALIZED_NAME_REFRESH_RATE)
+  @javax.annotation.Nullable
   private Integer refreshRate;
 
   public static final String SERIALIZED_NAME_REPORT_DESCRIPTION = "report_description";
   @SerializedName(SERIALIZED_NAME_REPORT_DESCRIPTION)
+  @javax.annotation.Nullable
   private String reportDescription;
 
   public static final String SERIALIZED_NAME_REPORT_HEADERS = "report_headers";
   @SerializedName(SERIALIZED_NAME_REPORT_HEADERS)
+  @javax.annotation.Nullable
   private List<Reportsv3DisplayHeader> reportHeaders = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_NAME = "report_name";
   @SerializedName(SERIALIZED_NAME_REPORT_NAME)
+  @javax.annotation.Nullable
   private String reportName;
 
   public static final String SERIALIZED_NAME_REPORT_TAGS = "report_tags";
   @SerializedName(SERIALIZED_NAME_REPORT_TAGS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportTag> reportTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAM_LIST = "runtime_param_list";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAM_LIST)
+  @javax.annotation.Nullable
   private List<Reportsv3RunTimeParameter> runtimeParamList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SELECTED_TIMESTAMP_HEADER_ID = "selected_timestamp_header_id";
   @SerializedName(SERIALIZED_NAME_SELECTED_TIMESTAMP_HEADER_ID)
+  @javax.annotation.Nullable
   private String selectedTimestampHeaderId;
 
   public Reportsv3ReportDisplayLayout() {
   }
 
-  public Reportsv3ReportDisplayLayout defaultTimestampHeaderId(String defaultTimestampHeaderId) {
+  public Reportsv3ReportDisplayLayout defaultTimestampHeaderId(@javax.annotation.Nullable String defaultTimestampHeaderId) {
     this.defaultTimestampHeaderId = defaultTimestampHeaderId;
     return this;
   }
 
-   /**
+  /**
    * The default timestamp header id.
    * @return defaultTimestampHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDefaultTimestampHeaderId() {
     return defaultTimestampHeaderId;
   }
 
-  public void setDefaultTimestampHeaderId(String defaultTimestampHeaderId) {
+  public void setDefaultTimestampHeaderId(@javax.annotation.Nullable String defaultTimestampHeaderId) {
     this.defaultTimestampHeaderId = defaultTimestampHeaderId;
   }
 
 
-  public Reportsv3ReportDisplayLayout fetchSize(Integer fetchSize) {
+  public Reportsv3ReportDisplayLayout fetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
     return this;
   }
 
-   /**
+  /**
    * Report data fetch size.
    * @return fetchSize
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFetchSize() {
     return fetchSize;
   }
 
-  public void setFetchSize(Integer fetchSize) {
+  public void setFetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
   }
 
 
-  public Reportsv3ReportDisplayLayout inReportAdditionalParameter(List<Reportsv3InReportAdditionalParameter> inReportAdditionalParameter) {
+  public Reportsv3ReportDisplayLayout inReportAdditionalParameter(@javax.annotation.Nullable List<Reportsv3InReportAdditionalParameter> inReportAdditionalParameter) {
     this.inReportAdditionalParameter = inReportAdditionalParameter;
     return this;
   }
@@ -171,135 +187,135 @@ public class Reportsv3ReportDisplayLayout {
     return this;
   }
 
-   /**
+  /**
    * Additional Parameters for in report.
    * @return inReportAdditionalParameter
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3InReportAdditionalParameter> getInReportAdditionalParameter() {
     return inReportAdditionalParameter;
   }
 
-  public void setInReportAdditionalParameter(List<Reportsv3InReportAdditionalParameter> inReportAdditionalParameter) {
+  public void setInReportAdditionalParameter(@javax.annotation.Nullable List<Reportsv3InReportAdditionalParameter> inReportAdditionalParameter) {
     this.inReportAdditionalParameter = inReportAdditionalParameter;
   }
 
 
-  public Reportsv3ReportDisplayLayout isAuditable(Boolean isAuditable) {
+  public Reportsv3ReportDisplayLayout isAuditable(@javax.annotation.Nullable Boolean isAuditable) {
     this.isAuditable = isAuditable;
     return this;
   }
 
-   /**
+  /**
    * If a report is auditable.
    * @return isAuditable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsAuditable() {
     return isAuditable;
   }
 
-  public void setIsAuditable(Boolean isAuditable) {
+  public void setIsAuditable(@javax.annotation.Nullable Boolean isAuditable) {
     this.isAuditable = isAuditable;
   }
 
 
-  public Reportsv3ReportDisplayLayout isPredefined(Boolean isPredefined) {
+  public Reportsv3ReportDisplayLayout isPredefined(@javax.annotation.Nullable Boolean isPredefined) {
     this.isPredefined = isPredefined;
     return this;
   }
 
-   /**
+  /**
    * Is predefined report.
    * @return isPredefined
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsPredefined() {
     return isPredefined;
   }
 
-  public void setIsPredefined(Boolean isPredefined) {
+  public void setIsPredefined(@javax.annotation.Nullable Boolean isPredefined) {
     this.isPredefined = isPredefined;
   }
 
 
-  public Reportsv3ReportDisplayLayout numberOfEvents(String numberOfEvents) {
+  public Reportsv3ReportDisplayLayout numberOfEvents(@javax.annotation.Nullable String numberOfEvents) {
     this.numberOfEvents = numberOfEvents;
     return this;
   }
 
-   /**
+  /**
    * Total count of the report results.
    * @return numberOfEvents
-  **/
+   */
   @javax.annotation.Nullable
   public String getNumberOfEvents() {
     return numberOfEvents;
   }
 
-  public void setNumberOfEvents(String numberOfEvents) {
+  public void setNumberOfEvents(@javax.annotation.Nullable String numberOfEvents) {
     this.numberOfEvents = numberOfEvents;
   }
 
 
-  public Reportsv3ReportDisplayLayout offset(Integer offset) {
+  public Reportsv3ReportDisplayLayout offset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * Report data offset.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOffset() {
     return offset;
   }
 
-  public void setOffset(Integer offset) {
+  public void setOffset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
   }
 
 
-  public Reportsv3ReportDisplayLayout refreshRate(Integer refreshRate) {
+  public Reportsv3ReportDisplayLayout refreshRate(@javax.annotation.Nullable Integer refreshRate) {
     this.refreshRate = refreshRate;
     return this;
   }
 
-   /**
+  /**
    * Report refresh rate.
    * @return refreshRate
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRefreshRate() {
     return refreshRate;
   }
 
-  public void setRefreshRate(Integer refreshRate) {
+  public void setRefreshRate(@javax.annotation.Nullable Integer refreshRate) {
     this.refreshRate = refreshRate;
   }
 
 
-  public Reportsv3ReportDisplayLayout reportDescription(String reportDescription) {
+  public Reportsv3ReportDisplayLayout reportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
     return this;
   }
 
-   /**
+  /**
    * Report description.
    * @return reportDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportDescription() {
     return reportDescription;
   }
 
-  public void setReportDescription(String reportDescription) {
+  public void setReportDescription(@javax.annotation.Nullable String reportDescription) {
     this.reportDescription = reportDescription;
   }
 
 
-  public Reportsv3ReportDisplayLayout reportHeaders(List<Reportsv3DisplayHeader> reportHeaders) {
+  public Reportsv3ReportDisplayLayout reportHeaders(@javax.annotation.Nullable List<Reportsv3DisplayHeader> reportHeaders) {
     this.reportHeaders = reportHeaders;
     return this;
   }
@@ -312,59 +328,59 @@ public class Reportsv3ReportDisplayLayout {
     return this;
   }
 
-   /**
+  /**
    * The report headers.
    * @return reportHeaders
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3DisplayHeader> getReportHeaders() {
     return reportHeaders;
   }
 
-  public void setReportHeaders(List<Reportsv3DisplayHeader> reportHeaders) {
+  public void setReportHeaders(@javax.annotation.Nullable List<Reportsv3DisplayHeader> reportHeaders) {
     this.reportHeaders = reportHeaders;
   }
 
 
-  public Reportsv3ReportDisplayLayout reportId(String reportId) {
+  public Reportsv3ReportDisplayLayout reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * The report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsv3ReportDisplayLayout reportName(String reportName) {
+  public Reportsv3ReportDisplayLayout reportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * Report name.
    * @return reportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(String reportName) {
+  public void setReportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
 
-  public Reportsv3ReportDisplayLayout reportTags(List<Reportsv3ReportTag> reportTags) {
+  public Reportsv3ReportDisplayLayout reportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
     return this;
   }
@@ -377,21 +393,21 @@ public class Reportsv3ReportDisplayLayout {
     return this;
   }
 
-   /**
+  /**
    * Report tags.
    * @return reportTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportTag> getReportTags() {
     return reportTags;
   }
 
-  public void setReportTags(List<Reportsv3ReportTag> reportTags) {
+  public void setReportTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportTags) {
     this.reportTags = reportTags;
   }
 
 
-  public Reportsv3ReportDisplayLayout runtimeParamList(List<Reportsv3RunTimeParameter> runtimeParamList) {
+  public Reportsv3ReportDisplayLayout runtimeParamList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParamList) {
     this.runtimeParamList = runtimeParamList;
     return this;
   }
@@ -404,35 +420,35 @@ public class Reportsv3ReportDisplayLayout {
     return this;
   }
 
-   /**
+  /**
    * Runtime Parameter list.
    * @return runtimeParamList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3RunTimeParameter> getRuntimeParamList() {
     return runtimeParamList;
   }
 
-  public void setRuntimeParamList(List<Reportsv3RunTimeParameter> runtimeParamList) {
+  public void setRuntimeParamList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParamList) {
     this.runtimeParamList = runtimeParamList;
   }
 
 
-  public Reportsv3ReportDisplayLayout selectedTimestampHeaderId(String selectedTimestampHeaderId) {
+  public Reportsv3ReportDisplayLayout selectedTimestampHeaderId(@javax.annotation.Nullable String selectedTimestampHeaderId) {
     this.selectedTimestampHeaderId = selectedTimestampHeaderId;
     return this;
   }
 
-   /**
+  /**
    * The selected timestamp header id- in case the user override the default.
    * @return selectedTimestampHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSelectedTimestampHeaderId() {
     return selectedTimestampHeaderId;
   }
 
-  public void setSelectedTimestampHeaderId(String selectedTimestampHeaderId) {
+  public void setSelectedTimestampHeaderId(@javax.annotation.Nullable String selectedTimestampHeaderId) {
     this.selectedTimestampHeaderId = selectedTimestampHeaderId;
   }
 
@@ -509,37 +525,22 @@ public class Reportsv3ReportDisplayLayout {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("default_timestamp_header_id");
-    openapiFields.add("fetch_size");
-    openapiFields.add("in_report_additional_parameter");
-    openapiFields.add("is_auditable");
-    openapiFields.add("is_predefined");
-    openapiFields.add("number_of_events");
-    openapiFields.add("offset");
-    openapiFields.add("refresh_rate");
-    openapiFields.add("report_description");
-    openapiFields.add("report_headers");
-    openapiFields.add("report_id");
-    openapiFields.add("report_name");
-    openapiFields.add("report_tags");
-    openapiFields.add("runtime_param_list");
-    openapiFields.add("selected_timestamp_header_id");
+    openapiFields = new HashSet<String>(Arrays.asList("default_timestamp_header_id", "fetch_size", "in_report_additional_parameter", "is_auditable", "is_predefined", "number_of_events", "offset", "refresh_rate", "report_description", "report_headers", "report_id", "report_name", "report_tags", "runtime_param_list", "selected_timestamp_header_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportDisplayLayout
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportDisplayLayout
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ReportDisplayLayout.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ReportDisplayLayout is not found in the empty JSON string", Reportsv3ReportDisplayLayout.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ReportDisplayLayout is not found in the empty JSON string", Reportsv3ReportDisplayLayout.openapiRequiredFields.toString()));
         }
       }
 
@@ -547,19 +548,19 @@ public class Reportsv3ReportDisplayLayout {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ReportDisplayLayout.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ReportDisplayLayout` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ReportDisplayLayout` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("default_timestamp_header_id") != null && !jsonObj.get("default_timestamp_header_id").isJsonNull()) && !jsonObj.get("default_timestamp_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `default_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_timestamp_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `default_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_timestamp_header_id").toString()));
       }
       if (jsonObj.get("in_report_additional_parameter") != null && !jsonObj.get("in_report_additional_parameter").isJsonNull()) {
         JsonArray jsonArrayinReportAdditionalParameter = jsonObj.getAsJsonArray("in_report_additional_parameter");
         if (jsonArrayinReportAdditionalParameter != null) {
           // ensure the json data is an array
           if (!jsonObj.get("in_report_additional_parameter").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `in_report_additional_parameter` to be an array in the JSON string but got `%s`", jsonObj.get("in_report_additional_parameter").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_additional_parameter` to be an array in the JSON string but got `%s`", jsonObj.get("in_report_additional_parameter").toString()));
           }
 
           // validate the optional field `in_report_additional_parameter` (array)
@@ -569,17 +570,17 @@ public class Reportsv3ReportDisplayLayout {
         }
       }
       if ((jsonObj.get("number_of_events") != null && !jsonObj.get("number_of_events").isJsonNull()) && !jsonObj.get("number_of_events").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `number_of_events` to be a primitive type in the JSON string but got `%s`", jsonObj.get("number_of_events").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `number_of_events` to be a primitive type in the JSON string but got `%s`", jsonObj.get("number_of_events").toString()));
       }
       if ((jsonObj.get("report_description") != null && !jsonObj.get("report_description").isJsonNull()) && !jsonObj.get("report_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_description").toString()));
       }
       if (jsonObj.get("report_headers") != null && !jsonObj.get("report_headers").isJsonNull()) {
         JsonArray jsonArrayreportHeaders = jsonObj.getAsJsonArray("report_headers");
         if (jsonArrayreportHeaders != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_headers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_headers` to be an array in the JSON string but got `%s`", jsonObj.get("report_headers").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_headers` to be an array in the JSON string but got `%s`", jsonObj.get("report_headers").toString()));
           }
 
           // validate the optional field `report_headers` (array)
@@ -589,17 +590,17 @@ public class Reportsv3ReportDisplayLayout {
         }
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("report_name") != null && !jsonObj.get("report_name").isJsonNull()) && !jsonObj.get("report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
       }
       if (jsonObj.get("report_tags") != null && !jsonObj.get("report_tags").isJsonNull()) {
         JsonArray jsonArrayreportTags = jsonObj.getAsJsonArray("report_tags");
         if (jsonArrayreportTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_tags` to be an array in the JSON string but got `%s`", jsonObj.get("report_tags").toString()));
           }
 
           // validate the optional field `report_tags` (array)
@@ -613,7 +614,7 @@ public class Reportsv3ReportDisplayLayout {
         if (jsonArrayruntimeParamList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("runtime_param_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `runtime_param_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_param_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `runtime_param_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_param_list").toString()));
           }
 
           // validate the optional field `runtime_param_list` (array)
@@ -623,7 +624,7 @@ public class Reportsv3ReportDisplayLayout {
         }
       }
       if ((jsonObj.get("selected_timestamp_header_id") != null && !jsonObj.get("selected_timestamp_header_id").isJsonNull()) && !jsonObj.get("selected_timestamp_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `selected_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("selected_timestamp_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `selected_timestamp_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("selected_timestamp_header_id").toString()));
       }
   }
 
@@ -656,22 +657,22 @@ public class Reportsv3ReportDisplayLayout {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ReportDisplayLayout given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ReportDisplayLayout
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportDisplayLayout
-  */
+  /**
+   * Create an instance of Reportsv3ReportDisplayLayout given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ReportDisplayLayout
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportDisplayLayout
+   */
   public static Reportsv3ReportDisplayLayout fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ReportDisplayLayout.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ReportDisplayLayout to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ReportDisplayLayout to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

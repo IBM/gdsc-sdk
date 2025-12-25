@@ -72,9 +72,9 @@ class Connectionsv3GetConnectionsAccountsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in account_configs (list)
         _items = []
         if self.account_configs:
-            for _item in self.account_configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_account_configs in self.account_configs:
+                if _item_account_configs:
+                    _items.append(_item_account_configs.to_dict())
             _dict['account_configs'] = _items
         return _dict
 

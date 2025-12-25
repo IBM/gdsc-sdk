@@ -7,7 +7,7 @@ GetChartQueryResponse is the return type of the GetQueryByChartID() api and GetQ
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chart_layout** | [**Reportsv3ChartDisplayLayout**](Reportsv3ChartDisplayLayout.md) |  | [optional] 
-**model_type** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] 
+**model_type** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] [default to Reportsv3ModelType.UNDEFINED_MODEL_TYPE]
 **query** | **str** | The chart&#39;s query. | [optional] 
 
 ## Example

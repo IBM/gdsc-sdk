@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * HeaderDescription represents a header description&#39;s translation key and its translated value.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3HeaderDescription {
   public static final String SERIALIZED_NAME_NLS_KEY = "nls_key";
   @SerializedName(SERIALIZED_NAME_NLS_KEY)
+  @javax.annotation.Nullable
   private String nlsKey;
 
   public static final String SERIALIZED_NAME_NLS_VALUE = "nls_value";
   @SerializedName(SERIALIZED_NAME_NLS_VALUE)
+  @javax.annotation.Nullable
   private String nlsValue;
 
   public Reportsv3HeaderDescription() {
   }
 
-  public Reportsv3HeaderDescription nlsKey(String nlsKey) {
+  public Reportsv3HeaderDescription nlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
     return this;
   }
 
-   /**
+  /**
    * Identifies the header&#39;s description NLS translated string.
    * @return nlsKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getNlsKey() {
     return nlsKey;
   }
 
-  public void setNlsKey(String nlsKey) {
+  public void setNlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
   }
 
 
-  public Reportsv3HeaderDescription nlsValue(String nlsValue) {
+  public Reportsv3HeaderDescription nlsValue(@javax.annotation.Nullable String nlsValue) {
     this.nlsValue = nlsValue;
     return this;
   }
 
-   /**
+  /**
    * The header&#39;s description NLS translated string.
    * @return nlsValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getNlsValue() {
     return nlsValue;
   }
 
-  public void setNlsValue(String nlsValue) {
+  public void setNlsValue(@javax.annotation.Nullable String nlsValue) {
     this.nlsValue = nlsValue;
   }
 
@@ -146,24 +149,22 @@ public class Reportsv3HeaderDescription {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("nls_key");
-    openapiFields.add("nls_value");
+    openapiFields = new HashSet<String>(Arrays.asList("nls_key", "nls_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3HeaderDescription
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3HeaderDescription
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3HeaderDescription.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3HeaderDescription is not found in the empty JSON string", Reportsv3HeaderDescription.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3HeaderDescription is not found in the empty JSON string", Reportsv3HeaderDescription.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Reportsv3HeaderDescription {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3HeaderDescription.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3HeaderDescription` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3HeaderDescription` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("nls_key") != null && !jsonObj.get("nls_key").isJsonNull()) && !jsonObj.get("nls_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
       }
       if ((jsonObj.get("nls_value") != null && !jsonObj.get("nls_value").isJsonNull()) && !jsonObj.get("nls_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nls_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nls_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_value").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Reportsv3HeaderDescription {
     }
   }
 
- /**
-  * Create an instance of Reportsv3HeaderDescription given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3HeaderDescription
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3HeaderDescription
-  */
+  /**
+   * Create an instance of Reportsv3HeaderDescription given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3HeaderDescription
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3HeaderDescription
+   */
   public static Reportsv3HeaderDescription fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3HeaderDescription.class);
   }
 
- /**
-  * Convert an instance of Reportsv3HeaderDescription to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3HeaderDescription to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

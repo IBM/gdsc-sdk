@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetReportDataCountResponse is the argument get counts for given column.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3GetReportColumnFacetResponse {
   public static final String SERIALIZED_NAME_FACET = "facet";
   @SerializedName(SERIALIZED_NAME_FACET)
+  @javax.annotation.Nullable
   private List<Reportsrunnerv3Filter> facet = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FACET_SELECTED_HEADER = "facet_selected_header";
   @SerializedName(SERIALIZED_NAME_FACET_SELECTED_HEADER)
+  @javax.annotation.Nullable
   private Reportsv3ReportHeader facetSelectedHeader;
 
   public Reportsrunnerv3GetReportColumnFacetResponse() {
   }
 
-  public Reportsrunnerv3GetReportColumnFacetResponse facet(List<Reportsrunnerv3Filter> facet) {
+  public Reportsrunnerv3GetReportColumnFacetResponse facet(@javax.annotation.Nullable List<Reportsrunnerv3Filter> facet) {
     this.facet = facet;
     return this;
   }
@@ -79,35 +82,35 @@ public class Reportsrunnerv3GetReportColumnFacetResponse {
     return this;
   }
 
-   /**
+  /**
    * Get facet
    * @return facet
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsrunnerv3Filter> getFacet() {
     return facet;
   }
 
-  public void setFacet(List<Reportsrunnerv3Filter> facet) {
+  public void setFacet(@javax.annotation.Nullable List<Reportsrunnerv3Filter> facet) {
     this.facet = facet;
   }
 
 
-  public Reportsrunnerv3GetReportColumnFacetResponse facetSelectedHeader(Reportsv3ReportHeader facetSelectedHeader) {
+  public Reportsrunnerv3GetReportColumnFacetResponse facetSelectedHeader(@javax.annotation.Nullable Reportsv3ReportHeader facetSelectedHeader) {
     this.facetSelectedHeader = facetSelectedHeader;
     return this;
   }
 
-   /**
+  /**
    * Get facetSelectedHeader
    * @return facetSelectedHeader
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportHeader getFacetSelectedHeader() {
     return facetSelectedHeader;
   }
 
-  public void setFacetSelectedHeader(Reportsv3ReportHeader facetSelectedHeader) {
+  public void setFacetSelectedHeader(@javax.annotation.Nullable Reportsv3ReportHeader facetSelectedHeader) {
     this.facetSelectedHeader = facetSelectedHeader;
   }
 
@@ -158,24 +161,22 @@ public class Reportsrunnerv3GetReportColumnFacetResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("facet");
-    openapiFields.add("facet_selected_header");
+    openapiFields = new HashSet<String>(Arrays.asList("facet", "facet_selected_header"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetReportColumnFacetResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetReportColumnFacetResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3GetReportColumnFacetResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3GetReportColumnFacetResponse is not found in the empty JSON string", Reportsrunnerv3GetReportColumnFacetResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3GetReportColumnFacetResponse is not found in the empty JSON string", Reportsrunnerv3GetReportColumnFacetResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Reportsrunnerv3GetReportColumnFacetResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3GetReportColumnFacetResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetReportColumnFacetResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetReportColumnFacetResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class Reportsrunnerv3GetReportColumnFacetResponse {
         if (jsonArrayfacet != null) {
           // ensure the json data is an array
           if (!jsonObj.get("facet").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `facet` to be an array in the JSON string but got `%s`", jsonObj.get("facet").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `facet` to be an array in the JSON string but got `%s`", jsonObj.get("facet").toString()));
           }
 
           // validate the optional field `facet` (array)
@@ -236,22 +237,22 @@ public class Reportsrunnerv3GetReportColumnFacetResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3GetReportColumnFacetResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3GetReportColumnFacetResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetReportColumnFacetResponse
-  */
+  /**
+   * Create an instance of Reportsrunnerv3GetReportColumnFacetResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3GetReportColumnFacetResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetReportColumnFacetResponse
+   */
   public static Reportsrunnerv3GetReportColumnFacetResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3GetReportColumnFacetResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3GetReportColumnFacetResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3GetReportColumnFacetResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

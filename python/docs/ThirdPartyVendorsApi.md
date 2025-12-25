@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_linked_vendor**](ThirdPartyVendorsApi.md#get_linked_vendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
-[**get_single_linked_vendor**](ThirdPartyVendorsApi.md#get_single_linked_vendor) | **GET** /api/v1/dspm/linkedVendors/{vendorId} | Get the third party vendors list
-[**list_linked_vendor_data_stores**](ThirdPartyVendorsApi.md#list_linked_vendor_data_stores) | **GET** /api/v1/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
-[**list_linked_vendors**](ThirdPartyVendorsApi.md#list_linked_vendors) | **GET** /api/v1/dspm/linkedVendors | Get the summary of a third party vendor
-[**list_trusted_assets**](ThirdPartyVendorsApi.md#list_trusted_assets) | **GET** /api/v1/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
+[**get_linked_vendor**](ThirdPartyVendorsApi.md#get_linked_vendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/cloudAccounts | Get additional details of a specific third party vendor
+[**get_single_linked_vendor**](ThirdPartyVendorsApi.md#get_single_linked_vendor) | **GET** /api/v2/dspm/linkedVendors/{vendorId} | Get the third party vendors list
+[**list_linked_vendor_data_stores**](ThirdPartyVendorsApi.md#list_linked_vendor_data_stores) | **GET** /api/v2/dspm/linkedVendors/{vendorId}/dataStores | Get the data stores associated with a third party vendor
+[**list_linked_vendors**](ThirdPartyVendorsApi.md#list_linked_vendors) | **GET** /api/v2/dspm/linkedVendors | Get the summary of a third party vendor
+[**list_trusted_assets**](ThirdPartyVendorsApi.md#list_trusted_assets) | **GET** /api/v2/dspm/linkedVendors/trustedAssets | Get a list of all the actual trusted assets
 
 
 # **get_linked_vendor**

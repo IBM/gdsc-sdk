@@ -22,7 +22,6 @@ export * from '../models/Assetsv3AssetChangeLog';
 export * from '../models/Assetsv3AssetClassification';
 export * from '../models/Assetsv3AssetControl';
 export * from '../models/Assetsv3AssetEndpoint';
-export * from '../models/Assetsv3AssetFilterTemplateRequest';
 export * from '../models/Assetsv3AssetForMergeSplit';
 export * from '../models/Assetsv3AssetInformation';
 export * from '../models/Assetsv3AssetIngestionRequest';
@@ -41,11 +40,13 @@ export * from '../models/Assetsv3AssetsWithOpenVulnerabilities';
 export * from '../models/Assetsv3AssignedTags';
 export * from '../models/Assetsv3Attributes';
 export * from '../models/Assetsv3BeforeAfter';
+export * from '../models/Assetsv3CSVRow';
 export * from '../models/Assetsv3Category';
 export * from '../models/Assetsv3ChildCategory';
 export * from '../models/Assetsv3ClassificationData';
 export * from '../models/Assetsv3ClassificationScanStatus';
 export * from '../models/Assetsv3ClonePolicyRequest';
+export * from '../models/Assetsv3CompareCSVResponse';
 export * from '../models/Assetsv3ConnectionEdge';
 export * from '../models/Assetsv3CreateUpdatePolicyRequest';
 export * from '../models/Assetsv3CreateUpdatePolicyResponse';
@@ -74,6 +75,8 @@ export * from '../models/Assetsv3HealthType';
 export * from '../models/Assetsv3HighestAssetTagCounts';
 export * from '../models/Assetsv3HostVertex';
 export * from '../models/Assetsv3IPVertex';
+export * from '../models/Assetsv3ImportCSVRequest';
+export * from '../models/Assetsv3ImportCSVResponse';
 export * from '../models/Assetsv3IpHost';
 export * from '../models/Assetsv3Level';
 export * from '../models/Assetsv3ListPolicyResponse';
@@ -115,6 +118,7 @@ export * from '../models/Assetsv3TagCategory';
 export * from '../models/Assetsv3TagsAssigned';
 export * from '../models/Assetsv3TagsData';
 export * from '../models/Assetsv3TagsFilterData';
+export * from '../models/Assetsv3TemplateType';
 export * from '../models/Assetsv3TimelineDateRange';
 export * from '../models/Assetsv3UnassignedTags';
 export * from '../models/Assetsv3UpdateAssetNameRequest';
@@ -143,7 +147,6 @@ export * from '../models/AuthserverGetPrivilegesResponse';
 export * from '../models/AuthserverGetUserResponse';
 export * from '../models/AuthserverListOauthClientResponse';
 export * from '../models/AuthserverOauthClient';
-export * from '../models/ClassificationStatus';
 export * from '../models/ClientInfo';
 export * from '../models/CloudAccountCountInner';
 export * from '../models/CloudAccountDetails';
@@ -257,7 +260,10 @@ export * from '../models/Connectionsv3UpdatePluginRequest';
 export * from '../models/Connectionsv3UpdatePluginResponse';
 export * from '../models/Connectionsv3UpdateSettingsRequest';
 export * from '../models/Connectionsv3ValidateAwsConnectionRequest';
+export * from '../models/Connectionsv3ValidateAzureConnectionRequest';
 export * from '../models/Connectionsv3ValidateConnectionResponse';
+export * from '../models/Connectionsv3ValidateGcpConnectionRequest';
+export * from '../models/DBMetadataInfo';
 export * from '../models/Dashboardsv3Card';
 export * from '../models/Dashboardsv3CardPosition';
 export * from '../models/Dashboardsv3CardType';
@@ -296,6 +302,7 @@ export * from '../models/Datamartprocessorv3GetDatamartInfoResponse';
 export * from '../models/Datamartprocessorv3GetDatamartResponse';
 export * from '../models/Datamartprocessorv3GetEarliestStartTimeResponse';
 export * from '../models/Datamartprocessorv3StatusResponseBase';
+export * from '../models/DbInfo';
 export * from '../models/Ecosystemv3ColumnDefinition';
 export * from '../models/Ecosystemv3CreateDatasetRequest';
 export * from '../models/Ecosystemv3CreateDatasetResponse';
@@ -319,10 +326,6 @@ export * from '../models/Ecosystemv3PurgeDataResponse';
 export * from '../models/Ecosystemv3TestIntegrationRequest';
 export * from '../models/Ecosystemv3TestIntegrationResponse';
 export * from '../models/Ecosystemv3ValidateCSVContentResponse';
-export * from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
-export * from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
-export * from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
-export * from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 export * from '../models/Environment';
 export * from '../models/Featureflagsv3DeleteFeatureFlagOverridesResponse';
 export * from '../models/Featureflagsv3FeatureFlag';
@@ -514,19 +517,28 @@ export * from '../models/IntegrationTypes';
 export * from '../models/InviteUserBodyParams';
 export * from '../models/Jumpboxv3AuthorizeRequest';
 export * from '../models/Jumpboxv3AuthorizeResponse';
+export * from '../models/Jumpboxv3DeleteAccountResponse';
 export * from '../models/Jumpboxv3DirectoryEntry';
 export * from '../models/Jumpboxv3DisableUsersBulkResponse';
+export * from '../models/Jumpboxv3GetAccountResponse';
+export * from '../models/Jumpboxv3GetAccountsResponse';
 export * from '../models/Jumpboxv3GetTenantResponse';
 export * from '../models/Jumpboxv3GetTenantsResponse';
+export * from '../models/Jumpboxv3PostAccountRequest';
+export * from '../models/Jumpboxv3PostAccountResponse';
 export * from '../models/Jumpboxv3PostTenantsRequest';
 export * from '../models/Jumpboxv3PostTenantsResponse';
 export * from '../models/Jumpboxv3PostUsersBulkRequest';
 export * from '../models/Jumpboxv3PostUsersBulkResponse';
+export * from '../models/Jumpboxv3ResumeAccountResponse';
 export * from '../models/Jumpboxv3SearchUsersRequest';
 export * from '../models/Jumpboxv3SearchUsersResponse';
+export * from '../models/Jumpboxv3SuspendAccountResponse';
 export * from '../models/Jumpboxv3Tenant';
 export * from '../models/Jumpboxv3TestUserRequest';
 export * from '../models/Jumpboxv3TestUserResponse';
+export * from '../models/Jumpboxv3UpdateAccountRequest';
+export * from '../models/Jumpboxv3UpdateAccountResponse';
 export * from '../models/Jumpboxv3UpdateTenantRequest';
 export * from '../models/Jumpboxv3UpdateTenantResponse';
 export * from '../models/Jumpboxv3UpdateUsersBulkRequest';
@@ -577,6 +589,7 @@ export * from '../models/Notificationsv3NotificationRecord';
 export * from '../models/Notificationsv3NotificationRecordsFilter';
 export * from '../models/Notificationsv3NotificationSeverity';
 export * from '../models/Notificationsv3NotificationState';
+export * from '../models/Notificationsv3Origin';
 export * from '../models/Notificationsv3PipelineQueryOperator';
 export * from '../models/Notificationsv3PostNotificationRecordRequest';
 export * from '../models/Notificationsv3PostNotificationRecordResponse';
@@ -635,6 +648,8 @@ export * from '../models/Policybuilderv3GetPolicyDetailsResponse';
 export * from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsRequest';
 export * from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsResponse';
 export * from '../models/Policybuilderv3GetPolicySyncListResponse';
+export * from '../models/Policybuilderv3GetPolicyVersionResponse';
+export * from '../models/Policybuilderv3GetPolicyVersionsInfoResponse';
 export * from '../models/Policybuilderv3GetReceiversResponse';
 export * from '../models/Policybuilderv3GetRuleValidationRequest';
 export * from '../models/Policybuilderv3ImportIssue';
@@ -653,6 +668,7 @@ export * from '../models/Policybuilderv3PolicyGroups';
 export * from '../models/Policybuilderv3PolicyType';
 export * from '../models/Policybuilderv3PolicyUpdate';
 export * from '../models/Policybuilderv3PossibleValueObj';
+export * from '../models/Policybuilderv3ProductType';
 export * from '../models/Policybuilderv3RecipientType';
 export * from '../models/Policybuilderv3Rule';
 export * from '../models/Policybuilderv3RuleMetadataResponse';
@@ -666,6 +682,7 @@ export * from '../models/Policybuilderv3StorePolicyGdpRequest';
 export * from '../models/Policybuilderv3StorePolicyGdpResponse';
 export * from '../models/Policybuilderv3SyncStatusType';
 export * from '../models/Policybuilderv3TargetReceiver';
+export * from '../models/Policybuilderv3VersionInfo';
 export * from '../models/PotentialFlow';
 export * from '../models/PotentialFlowListItem';
 export * from '../models/PotentialFlowPath';
@@ -744,6 +761,8 @@ export * from '../models/Reportsrunnerv3StopQueryResponse';
 export * from '../models/Reportsrunnerv3WriteResultsToFileResponse';
 export * from '../models/Reportsrunnerv3WriteResultsToGroupResponse';
 export * from '../models/Reportsv3AggregationType';
+export * from '../models/Reportsv3Artifact';
+export * from '../models/Reportsv3ArtifactType';
 export * from '../models/Reportsv3BriefReport';
 export * from '../models/Reportsv3Category';
 export * from '../models/Reportsv3CategoryDetail';
@@ -754,6 +773,7 @@ export * from '../models/Reportsv3ChartSettings';
 export * from '../models/Reportsv3ChartSettingsv2';
 export * from '../models/Reportsv3ChartType';
 export * from '../models/Reportsv3ContributionPointersInfoObject';
+export * from '../models/Reportsv3Control';
 export * from '../models/Reportsv3CreateCategoryRequest';
 export * from '../models/Reportsv3CreateCategoryResponse';
 export * from '../models/Reportsv3CreateChartRequest';
@@ -762,12 +782,24 @@ export * from '../models/Reportsv3CreateChartTemplatev2Request';
 export * from '../models/Reportsv3CreateChartTemplatev2Response';
 export * from '../models/Reportsv3CreateChartv2Request';
 export * from '../models/Reportsv3CreateChartv2Response';
+export * from '../models/Reportsv3CreateControlRequest';
+export * from '../models/Reportsv3CreateControlResponse';
 export * from '../models/Reportsv3CreateFieldsByCategoryRequest';
 export * from '../models/Reportsv3CreateFieldsByCategoryResponse';
+export * from '../models/Reportsv3CreateGradeRequest';
+export * from '../models/Reportsv3CreateGradeResponse';
 export * from '../models/Reportsv3CreateJoinRequest';
 export * from '../models/Reportsv3CreateJoinResponse';
+export * from '../models/Reportsv3CreateMeasureRequest';
+export * from '../models/Reportsv3CreateMeasureResponse';
+export * from '../models/Reportsv3CreateMetricRequest';
+export * from '../models/Reportsv3CreateMetricResponse';
+export * from '../models/Reportsv3CreateProgramRequest';
+export * from '../models/Reportsv3CreateProgramResponse';
 export * from '../models/Reportsv3CreateReportRequest';
 export * from '../models/Reportsv3CreateReportResponse';
+export * from '../models/Reportsv3CreateRequirementRequest';
+export * from '../models/Reportsv3CreateRequirementResponse';
 export * from '../models/Reportsv3CreateVariantRequest';
 export * from '../models/Reportsv3CreateVariantResponse';
 export * from '../models/Reportsv3CustomChartTemplatev2';
@@ -778,9 +810,21 @@ export * from '../models/Reportsv3DeleteCategoryResponse';
 export * from '../models/Reportsv3DeleteChartResponse';
 export * from '../models/Reportsv3DeleteChartTemplatev2Response';
 export * from '../models/Reportsv3DeleteChartv2Response';
+export * from '../models/Reportsv3DeleteControlRequest';
+export * from '../models/Reportsv3DeleteControlResponse';
 export * from '../models/Reportsv3DeleteFieldsByCategoryResponse';
+export * from '../models/Reportsv3DeleteGradeRequest';
+export * from '../models/Reportsv3DeleteGradeResponse';
 export * from '../models/Reportsv3DeleteJoinResponse';
+export * from '../models/Reportsv3DeleteMeasureRequest';
+export * from '../models/Reportsv3DeleteMeasureResponse';
+export * from '../models/Reportsv3DeleteMetricRequest';
+export * from '../models/Reportsv3DeleteMetricResponse';
+export * from '../models/Reportsv3DeleteProgramRequest';
+export * from '../models/Reportsv3DeleteProgramResponse';
 export * from '../models/Reportsv3DeleteReportResponse';
+export * from '../models/Reportsv3DeleteRequirementRequest';
+export * from '../models/Reportsv3DeleteRequirementResponse';
 export * from '../models/Reportsv3DeleteVariantResponse';
 export * from '../models/Reportsv3DisplayHeader';
 export * from '../models/Reportsv3FieldName';
@@ -792,9 +836,14 @@ export * from '../models/Reportsv3GetChartQueryResponsev2';
 export * from '../models/Reportsv3GetChartSettingsResponse';
 export * from '../models/Reportsv3GetChartSettingsv2Response';
 export * from '../models/Reportsv3GetChartTemplatesv2Response';
+export * from '../models/Reportsv3GetControlsResponse';
 export * from '../models/Reportsv3GetFieldsByCategoriesResponse';
 export * from '../models/Reportsv3GetFieldsByCategoryResponse';
+export * from '../models/Reportsv3GetGradesResponse';
 export * from '../models/Reportsv3GetJoinsResponse';
+export * from '../models/Reportsv3GetMeasuresResponse';
+export * from '../models/Reportsv3GetMetricsResponse';
+export * from '../models/Reportsv3GetProgramsResponse';
 export * from '../models/Reportsv3GetQueryByReportDefinitionRequest';
 export * from '../models/Reportsv3GetQueryByReportIDRequest';
 export * from '../models/Reportsv3GetReportDefinitionResponse';
@@ -805,8 +854,11 @@ export * from '../models/Reportsv3GetReportTimestampHeaderResponse';
 export * from '../models/Reportsv3GetReportsForJoinResponse';
 export * from '../models/Reportsv3GetReportsResponse';
 export * from '../models/Reportsv3GetReportsTagsResponse';
+export * from '../models/Reportsv3GetRequirementsResponse';
 export * from '../models/Reportsv3GetVariantResponse';
 export * from '../models/Reportsv3GetVariantsResponse';
+export * from '../models/Reportsv3Grade';
+export * from '../models/Reportsv3GradeThreshold';
 export * from '../models/Reportsv3Header';
 export * from '../models/Reportsv3HeaderDataType';
 export * from '../models/Reportsv3HeaderDescription';
@@ -817,6 +869,11 @@ export * from '../models/Reportsv3JobType';
 export * from '../models/Reportsv3JoinDefinition';
 export * from '../models/Reportsv3JoinDefinitionWithID';
 export * from '../models/Reportsv3Literal';
+export * from '../models/Reportsv3Measure';
+export * from '../models/Reportsv3MeasureType';
+export * from '../models/Reportsv3Metric';
+export * from '../models/Reportsv3MetricType';
+export * from '../models/Reportsv3MetricsColumn';
 export * from '../models/Reportsv3ModelType';
 export * from '../models/Reportsv3OperatorType';
 export * from '../models/Reportsv3OptionType';
@@ -826,6 +883,7 @@ export * from '../models/Reportsv3PartialChartUpdateRequest';
 export * from '../models/Reportsv3PartialChartUpdateResponse';
 export * from '../models/Reportsv3PartialReportUpdateRequest';
 export * from '../models/Reportsv3PartialReportUpdateResponse';
+export * from '../models/Reportsv3Program';
 export * from '../models/Reportsv3ReportAggFilter';
 export * from '../models/Reportsv3ReportAggFilterCondition';
 export * from '../models/Reportsv3ReportDefinition';
@@ -837,6 +895,9 @@ export * from '../models/Reportsv3ReportHeader';
 export * from '../models/Reportsv3ReportResult';
 export * from '../models/Reportsv3ReportTag';
 export * from '../models/Reportsv3ReportUsedInJoin';
+export * from '../models/Reportsv3Requirement';
+export * from '../models/Reportsv3RunGradesRequest';
+export * from '../models/Reportsv3RunGradesResponse';
 export * from '../models/Reportsv3RunReportResponse';
 export * from '../models/Reportsv3RunTimeParameter';
 export * from '../models/Reportsv3RunVariantOperationRequest';
@@ -849,10 +910,22 @@ export * from '../models/Reportsv3UpdateChartRequest';
 export * from '../models/Reportsv3UpdateChartResponse';
 export * from '../models/Reportsv3UpdateChartv2Request';
 export * from '../models/Reportsv3UpdateChartv2Response';
+export * from '../models/Reportsv3UpdateControlRequest';
+export * from '../models/Reportsv3UpdateControlResponse';
+export * from '../models/Reportsv3UpdateGradeRequest';
+export * from '../models/Reportsv3UpdateGradeResponse';
 export * from '../models/Reportsv3UpdateJoinRequest';
 export * from '../models/Reportsv3UpdateJoinResponse';
+export * from '../models/Reportsv3UpdateMeasureRequest';
+export * from '../models/Reportsv3UpdateMeasureResponse';
+export * from '../models/Reportsv3UpdateMetricRequest';
+export * from '../models/Reportsv3UpdateMetricResponse';
+export * from '../models/Reportsv3UpdateProgramRequest';
+export * from '../models/Reportsv3UpdateProgramResponse';
 export * from '../models/Reportsv3UpdateReportRequest';
 export * from '../models/Reportsv3UpdateReportResponse';
+export * from '../models/Reportsv3UpdateRequirementRequest';
+export * from '../models/Reportsv3UpdateRequirementResponse';
 export * from '../models/Reportsv3UpdateVariantOverrideRequest';
 export * from '../models/Reportsv3UpdateVariantOverrideResponse';
 export * from '../models/Reportsv3Variant';
@@ -862,67 +935,11 @@ export * from '../models/Reportsv3VariantRuleCondition';
 export * from '../models/Reportsv3VariantRuleType';
 export * from '../models/RescanDataStoreRequest';
 export * from '../models/ResetPasswordRequest';
-export * from '../models/Resourcecontrollerk8v3App';
-export * from '../models/Resourcecontrollerk8v3AppDeployment';
-export * from '../models/Resourcecontrollerk8v3AppFile';
-export * from '../models/Resourcecontrollerk8v3AppHpa';
-export * from '../models/Resourcecontrollerk8v3AppSecret';
-export * from '../models/Resourcecontrollerk8v3Container';
-export * from '../models/Resourcecontrollerk8v3ContainerResources';
-export * from '../models/Resourcecontrollerk8v3ContainerResourcesQuantity';
-export * from '../models/Resourcecontrollerk8v3Controller';
-export * from '../models/Resourcecontrollerk8v3ControllerApp';
-export * from '../models/Resourcecontrollerk8v3ControllerAppFile';
-export * from '../models/Resourcecontrollerk8v3ControllerAppSecret';
-export * from '../models/Resourcecontrollerk8v3ControllerCommand';
-export * from '../models/Resourcecontrollerk8v3ControllerHeartbeat';
-export * from '../models/Resourcecontrollerk8v3ControllerResources';
-export * from '../models/Resourcecontrollerk8v3ControllerStatus';
-export * from '../models/Resourcecontrollerk8v3CreateControllerRequest';
-export * from '../models/Resourcecontrollerk8v3CreateHeartBeatExResponse';
-export * from '../models/Resourcecontrollerk8v3CreateHeartBeatRequest';
-export * from '../models/Resourcecontrollerk8v3CreateHeartBeatResponse';
-export * from '../models/Resourcecontrollerk8v3CreateKeypairRequest';
-export * from '../models/Resourcecontrollerk8v3CreateKeypairResponse';
-export * from '../models/Resourcecontrollerk8v3Cron';
-export * from '../models/Resourcecontrollerk8v3DeleteControllerRequest';
-export * from '../models/Resourcecontrollerk8v3DeleteControllerResponse';
-export * from '../models/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost';
-export * from '../models/Resourcecontrollerk8v3DeleteEdgeTenantResponse';
-export * from '../models/Resourcecontrollerk8v3DeleteJobRequest';
-export * from '../models/Resourcecontrollerk8v3DeleteJobResponse';
-export * from '../models/Resourcecontrollerk8v3DownloadControllerLogsRequest';
-export * from '../models/Resourcecontrollerk8v3DownloadControllerLogsResponse';
-export * from '../models/Resourcecontrollerk8v3EdgeResourceResponse';
-export * from '../models/Resourcecontrollerk8v3EdgeTenantRequest';
-export * from '../models/Resourcecontrollerk8v3File';
 export * from '../models/Resourcecontrollerk8v3GUCStatefulsetState';
-export * from '../models/Resourcecontrollerk8v3GetControllerAppsResponse';
-export * from '../models/Resourcecontrollerk8v3GetControllerCommandsResponse';
-export * from '../models/Resourcecontrollerk8v3GetControllerJobsResponse';
-export * from '../models/Resourcecontrollerk8v3GetControllersResponse';
-export * from '../models/Resourcecontrollerk8v3GetControllersWithStatusResponse';
-export * from '../models/Resourcecontrollerk8v3GetJobExecutionsResponse';
-export * from '../models/Resourcecontrollerk8v3GetTenantAppsResponse';
-export * from '../models/Resourcecontrollerk8v3GetTenantJobsResponse';
-export * from '../models/Resourcecontrollerk8v3InitContainer';
-export * from '../models/Resourcecontrollerk8v3Job';
-export * from '../models/Resourcecontrollerk8v3JobExecution';
-export * from '../models/Resourcecontrollerk8v3JobStatusDTO';
-export * from '../models/Resourcecontrollerk8v3KeyPair';
-export * from '../models/Resourcecontrollerk8v3QueryControllerLogsRequest';
-export * from '../models/Resourcecontrollerk8v3QueryControllerLogsResponse';
-export * from '../models/Resourcecontrollerk8v3QueryLogs';
-export * from '../models/Resourcecontrollerk8v3Rule';
-export * from '../models/Resourcecontrollerk8v3Secret';
 export * from '../models/Resourcecontrollerk8v3TenantGUCCreateResponse';
 export * from '../models/Resourcecontrollerk8v3TenantGUCStatusResponse';
 export * from '../models/Resourcecontrollerk8v3TenantLifecycleResponse';
 export * from '../models/Resourcecontrollerk8v3TenantResourceResponse';
-export * from '../models/Resourcecontrollerk8v3TextContent';
-export * from '../models/Resourcecontrollerk8v3UpdateJobExecutionRequest';
-export * from '../models/Resourcecontrollerk8v3UpdateJobStatusRequest';
-export * from '../models/Resourcecontrollerk8v3Version';
 export * from '../models/Riskanalyticscontrollerv3Action';
 export * from '../models/Riskanalyticscontrollerv3CardSettings';
 export * from '../models/Riskanalyticscontrollerv3DetailToCount';
@@ -1067,7 +1084,6 @@ export * from '../models/SetDataStoreLabelRequest';
 export * from '../models/SetQuestionBodyParams';
 export * from '../models/SetVulnerabilityStatusRequest';
 export * from '../models/SignupRequest';
-export * from '../models/SimpleRecipientSimpleRecipientType';
 export * from '../models/Snifassistv3Feedback';
 export * from '../models/Snifassistv3FeedbackStatus';
 export * from '../models/Snifassistv3GetSnifConfigResponse';
@@ -1080,8 +1096,8 @@ export * from '../models/Snifassistv3StapOperation';
 export * from '../models/Snifassistv3StatusResponseBase';
 export * from '../models/Snifassistv3TestRegexRequest';
 export * from '../models/SortOrder';
+export * from '../models/StoreClassificationStatus';
 export * from '../models/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse';
-export * from '../models/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
 export * from '../models/StreamResultOfReportsrunnerv3RunReportResponse';
 export * from '../models/Streamsv3AWSCheckStreamStatus';
 export * from '../models/Streamsv3AuthType';
@@ -1102,31 +1118,6 @@ export * from '../models/SubmitAdminEmailParams';
 export * from '../models/SubmitAuthCode';
 export * from '../models/SubmitPasswordRequest';
 export * from '../models/Tags';
-export * from '../models/Templatesv3CreateIntegrationRequest';
-export * from '../models/Templatesv3CreateIntegrationResponse';
-export * from '../models/Templatesv3CreateTemplateRequest';
-export * from '../models/Templatesv3CreateTemplateResponse';
-export * from '../models/Templatesv3DefaultContent';
-export * from '../models/Templatesv3DeleteIntegrationResponse';
-export * from '../models/Templatesv3DeleteTemplateResponse';
-export * from '../models/Templatesv3GetOriginDefaultContentResponse';
-export * from '../models/Templatesv3GetOriginFieldsResponse';
-export * from '../models/Templatesv3GetTemplateResponse';
-export * from '../models/Templatesv3GetTemplatesForEdgeResponse';
-export * from '../models/Templatesv3GetTemplatesResponse';
-export * from '../models/Templatesv3Integration';
-export * from '../models/Templatesv3MIMEType';
-export * from '../models/Templatesv3Origin';
-export * from '../models/Templatesv3SimpleRecipient';
-export * from '../models/Templatesv3Template';
-export * from '../models/Templatesv3TestTemplateRequest';
-export * from '../models/Templatesv3TestTemplateResponse';
-export * from '../models/Templatesv3TransformTemplateJSONRequest';
-export * from '../models/Templatesv3TransformTemplateJSONResponse';
-export * from '../models/Templatesv3TransformTemplateRequest';
-export * from '../models/Templatesv3TransformTemplateResponse';
-export * from '../models/Templatesv3UpdateTemplateRequest';
-export * from '../models/Templatesv3UpdateTemplateResponse';
 export * from '../models/TenantInfo';
 export * from '../models/Tenantuserv3Apikey';
 export * from '../models/Tenantuserv3AuthResponse';
@@ -1214,6 +1205,29 @@ export * from '../models/VendorAccount';
 export * from '../models/VendorCertificate';
 export * from '../models/VendorDataStore';
 export * from '../models/VendorSummary';
+export * from '../models/Vulmanagementv3ActionType';
+export * from '../models/Vulmanagementv3AssetTags';
+export * from '../models/Vulmanagementv3Category';
+export * from '../models/Vulmanagementv3ChildCategory';
+export * from '../models/Vulmanagementv3CreateVulnerabilityRequest';
+export * from '../models/Vulmanagementv3CreateVulnerabilityResponse';
+export * from '../models/Vulmanagementv3FilterCategory';
+export * from '../models/Vulmanagementv3GetFiltersDataResponse';
+export * from '../models/Vulmanagementv3GetVulnerabilitiesRequest';
+export * from '../models/Vulmanagementv3GetVulnerabilitiesResponse';
+export * from '../models/Vulmanagementv3GetVulnerabilityResponse';
+export * from '../models/Vulmanagementv3Severity';
+export * from '../models/Vulmanagementv3SortOrder';
+export * from '../models/Vulmanagementv3SourceType';
+export * from '../models/Vulmanagementv3Status';
+export * from '../models/Vulmanagementv3SubCategory';
+export * from '../models/Vulmanagementv3UpdateVulnerabilitiesRequest';
+export * from '../models/Vulmanagementv3UpdateVulnerabilitiesResponse';
+export * from '../models/Vulmanagementv3VulnerabilitiesStatsDataResponse';
+export * from '../models/Vulmanagementv3Vulnerability';
+export * from '../models/Vulmanagementv3VulnerabilityAudit';
+export * from '../models/Vulmanagementv3VulnerabilityIngestionResponse';
+export * from '../models/Vulmanagementv3VulnerabilityUpdate';
 export * from '../models/VulnerabilitiesByDataStoreFilterOptions';
 export * from '../models/VulnerabilitiesCriticalityCountInner';
 export * from '../models/VulnerabilitiesFilterOptions';
@@ -1323,7 +1337,6 @@ import { Assetsv3AssetChangeLog } from '../models/Assetsv3AssetChangeLog';
 import { Assetsv3AssetClassification } from '../models/Assetsv3AssetClassification';
 import { Assetsv3AssetControl       } from '../models/Assetsv3AssetControl';
 import { Assetsv3AssetEndpoint } from '../models/Assetsv3AssetEndpoint';
-import { Assetsv3AssetFilterTemplateRequest } from '../models/Assetsv3AssetFilterTemplateRequest';
 import { Assetsv3AssetForMergeSplit } from '../models/Assetsv3AssetForMergeSplit';
 import { Assetsv3AssetInformation } from '../models/Assetsv3AssetInformation';
 import { Assetsv3AssetIngestionRequest } from '../models/Assetsv3AssetIngestionRequest';
@@ -1342,11 +1355,13 @@ import { Assetsv3AssetsWithOpenVulnerabilities } from '../models/Assetsv3AssetsW
 import { Assetsv3AssignedTags } from '../models/Assetsv3AssignedTags';
 import { Assetsv3Attributes          } from '../models/Assetsv3Attributes';
 import { Assetsv3BeforeAfter } from '../models/Assetsv3BeforeAfter';
+import { Assetsv3CSVRow } from '../models/Assetsv3CSVRow';
 import { Assetsv3Category } from '../models/Assetsv3Category';
 import { Assetsv3ChildCategory } from '../models/Assetsv3ChildCategory';
 import { Assetsv3ClassificationData } from '../models/Assetsv3ClassificationData';
 import { Assetsv3ClassificationScanStatus } from '../models/Assetsv3ClassificationScanStatus';
 import { Assetsv3ClonePolicyRequest } from '../models/Assetsv3ClonePolicyRequest';
+import { Assetsv3CompareCSVResponse } from '../models/Assetsv3CompareCSVResponse';
 import { Assetsv3ConnectionEdge } from '../models/Assetsv3ConnectionEdge';
 import { Assetsv3CreateUpdatePolicyRequest } from '../models/Assetsv3CreateUpdatePolicyRequest';
 import { Assetsv3CreateUpdatePolicyResponse } from '../models/Assetsv3CreateUpdatePolicyResponse';
@@ -1375,6 +1390,8 @@ import { Assetsv3HealthType } from '../models/Assetsv3HealthType';
 import { Assetsv3HighestAssetTagCounts } from '../models/Assetsv3HighestAssetTagCounts';
 import { Assetsv3HostVertex } from '../models/Assetsv3HostVertex';
 import { Assetsv3IPVertex } from '../models/Assetsv3IPVertex';
+import { Assetsv3ImportCSVRequest    } from '../models/Assetsv3ImportCSVRequest';
+import { Assetsv3ImportCSVResponse } from '../models/Assetsv3ImportCSVResponse';
 import { Assetsv3IpHost } from '../models/Assetsv3IpHost';
 import { Assetsv3Level } from '../models/Assetsv3Level';
 import { Assetsv3ListPolicyResponse } from '../models/Assetsv3ListPolicyResponse';
@@ -1416,6 +1433,7 @@ import { Assetsv3TagCategory } from '../models/Assetsv3TagCategory';
 import { Assetsv3TagsAssigned } from '../models/Assetsv3TagsAssigned';
 import { Assetsv3TagsData } from '../models/Assetsv3TagsData';
 import { Assetsv3TagsFilterData } from '../models/Assetsv3TagsFilterData';
+import { Assetsv3TemplateType } from '../models/Assetsv3TemplateType';
 import { Assetsv3TimelineDateRange } from '../models/Assetsv3TimelineDateRange';
 import { Assetsv3UnassignedTags } from '../models/Assetsv3UnassignedTags';
 import { Assetsv3UpdateAssetNameRequest } from '../models/Assetsv3UpdateAssetNameRequest';
@@ -1444,7 +1462,6 @@ import { AuthserverGetPrivilegesResponse } from '../models/AuthserverGetPrivileg
 import { AuthserverGetUserResponse } from '../models/AuthserverGetUserResponse';
 import { AuthserverListOauthClientResponse } from '../models/AuthserverListOauthClientResponse';
 import { AuthserverOauthClient } from '../models/AuthserverOauthClient';
-import { ClassificationStatus } from '../models/ClassificationStatus';
 import { ClientInfo } from '../models/ClientInfo';
 import { CloudAccountCountInner } from '../models/CloudAccountCountInner';
 import { CloudAccountDetails    } from '../models/CloudAccountDetails';
@@ -1484,7 +1501,7 @@ import { Complianceacceleratorv3TaskStatus } from '../models/Complianceaccelerat
 import { Complianceacceleratorv3Workspace } from '../models/Complianceacceleratorv3Workspace';
 import { Complianceacceleratorv3WorkspaceCreationStatus } from '../models/Complianceacceleratorv3WorkspaceCreationStatus';
 import { ConfigureSSORequest } from '../models/ConfigureSSORequest';
-import { ConfigureSSORequestIdpMetadata } from '../models/ConfigureSSORequestIdpMetadata';
+import { ConfigureSSORequestIdpMetadataClass } from '../models/ConfigureSSORequestIdpMetadata';
 import { Connectionsv3Account } from '../models/Connectionsv3Account';
 import { Connectionsv3AccountConfig } from '../models/Connectionsv3AccountConfig';
 import { Connectionsv3Connector     } from '../models/Connectionsv3Connector';
@@ -1558,7 +1575,10 @@ import { Connectionsv3UpdatePluginRequest } from '../models/Connectionsv3UpdateP
 import { Connectionsv3UpdatePluginResponse } from '../models/Connectionsv3UpdatePluginResponse';
 import { Connectionsv3UpdateSettingsRequest } from '../models/Connectionsv3UpdateSettingsRequest';
 import { Connectionsv3ValidateAwsConnectionRequest } from '../models/Connectionsv3ValidateAwsConnectionRequest';
+import { Connectionsv3ValidateAzureConnectionRequest } from '../models/Connectionsv3ValidateAzureConnectionRequest';
 import { Connectionsv3ValidateConnectionResponse } from '../models/Connectionsv3ValidateConnectionResponse';
+import { Connectionsv3ValidateGcpConnectionRequest } from '../models/Connectionsv3ValidateGcpConnectionRequest';
+import { DBMetadataInfo } from '../models/DBMetadataInfo';
 import { Dashboardsv3Card      } from '../models/Dashboardsv3Card';
 import { Dashboardsv3CardPosition } from '../models/Dashboardsv3CardPosition';
 import { Dashboardsv3CardType } from '../models/Dashboardsv3CardType';
@@ -1597,6 +1617,7 @@ import { Datamartprocessorv3GetDatamartInfoResponse } from '../models/Datamartpr
 import { Datamartprocessorv3GetDatamartResponse } from '../models/Datamartprocessorv3GetDatamartResponse';
 import { Datamartprocessorv3GetEarliestStartTimeResponse } from '../models/Datamartprocessorv3GetEarliestStartTimeResponse';
 import { Datamartprocessorv3StatusResponseBase } from '../models/Datamartprocessorv3StatusResponseBase';
+import { DbInfo } from '../models/DbInfo';
 import { Ecosystemv3ColumnDefinition       } from '../models/Ecosystemv3ColumnDefinition';
 import { Ecosystemv3CreateDatasetRequest } from '../models/Ecosystemv3CreateDatasetRequest';
 import { Ecosystemv3CreateDatasetResponse } from '../models/Ecosystemv3CreateDatasetResponse';
@@ -1620,10 +1641,6 @@ import { Ecosystemv3PurgeDataResponse } from '../models/Ecosystemv3PurgeDataResp
 import { Ecosystemv3TestIntegrationRequest } from '../models/Ecosystemv3TestIntegrationRequest';
 import { Ecosystemv3TestIntegrationResponse } from '../models/Ecosystemv3TestIntegrationResponse';
 import { Ecosystemv3ValidateCSVContentResponse } from '../models/Ecosystemv3ValidateCSVContentResponse';
-import { Edgeschedulerv3GetEdgeQueryStatusResponse } from '../models/Edgeschedulerv3GetEdgeQueryStatusResponse';
-import { Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
-import { Edgeschedulerv3ScheduleEdgeQueryRequest } from '../models/Edgeschedulerv3ScheduleEdgeQueryRequest';
-import { Edgeschedulerv3ScheduleEdgeQueryResponse } from '../models/Edgeschedulerv3ScheduleEdgeQueryResponse';
 import { Environment } from '../models/Environment';
 import { Featureflagsv3DeleteFeatureFlagOverridesResponse } from '../models/Featureflagsv3DeleteFeatureFlagOverridesResponse';
 import { Featureflagsv3FeatureFlag } from '../models/Featureflagsv3FeatureFlag';
@@ -1815,19 +1832,28 @@ import { IntegrationTypes } from '../models/IntegrationTypes';
 import { InviteUserBodyParams } from '../models/InviteUserBodyParams';
 import { Jumpboxv3AuthorizeRequest } from '../models/Jumpboxv3AuthorizeRequest';
 import { Jumpboxv3AuthorizeResponse } from '../models/Jumpboxv3AuthorizeResponse';
+import { Jumpboxv3DeleteAccountResponse } from '../models/Jumpboxv3DeleteAccountResponse';
 import { Jumpboxv3DirectoryEntry } from '../models/Jumpboxv3DirectoryEntry';
 import { Jumpboxv3DisableUsersBulkResponse } from '../models/Jumpboxv3DisableUsersBulkResponse';
+import { Jumpboxv3GetAccountResponse } from '../models/Jumpboxv3GetAccountResponse';
+import { Jumpboxv3GetAccountsResponse } from '../models/Jumpboxv3GetAccountsResponse';
 import { Jumpboxv3GetTenantResponse } from '../models/Jumpboxv3GetTenantResponse';
 import { Jumpboxv3GetTenantsResponse } from '../models/Jumpboxv3GetTenantsResponse';
+import { Jumpboxv3PostAccountRequest } from '../models/Jumpboxv3PostAccountRequest';
+import { Jumpboxv3PostAccountResponse } from '../models/Jumpboxv3PostAccountResponse';
 import { Jumpboxv3PostTenantsRequest } from '../models/Jumpboxv3PostTenantsRequest';
 import { Jumpboxv3PostTenantsResponse } from '../models/Jumpboxv3PostTenantsResponse';
 import { Jumpboxv3PostUsersBulkRequest } from '../models/Jumpboxv3PostUsersBulkRequest';
 import { Jumpboxv3PostUsersBulkResponse } from '../models/Jumpboxv3PostUsersBulkResponse';
+import { Jumpboxv3ResumeAccountResponse } from '../models/Jumpboxv3ResumeAccountResponse';
 import { Jumpboxv3SearchUsersRequest } from '../models/Jumpboxv3SearchUsersRequest';
 import { Jumpboxv3SearchUsersResponse } from '../models/Jumpboxv3SearchUsersResponse';
+import { Jumpboxv3SuspendAccountResponse } from '../models/Jumpboxv3SuspendAccountResponse';
 import { Jumpboxv3Tenant } from '../models/Jumpboxv3Tenant';
 import { Jumpboxv3TestUserRequest } from '../models/Jumpboxv3TestUserRequest';
 import { Jumpboxv3TestUserResponse } from '../models/Jumpboxv3TestUserResponse';
+import { Jumpboxv3UpdateAccountRequest } from '../models/Jumpboxv3UpdateAccountRequest';
+import { Jumpboxv3UpdateAccountResponse } from '../models/Jumpboxv3UpdateAccountResponse';
 import { Jumpboxv3UpdateTenantRequest } from '../models/Jumpboxv3UpdateTenantRequest';
 import { Jumpboxv3UpdateTenantResponse } from '../models/Jumpboxv3UpdateTenantResponse';
 import { Jumpboxv3UpdateUsersBulkRequest } from '../models/Jumpboxv3UpdateUsersBulkRequest';
@@ -1878,6 +1904,7 @@ import { Notificationsv3NotificationRecord                 } from '../models/Not
 import { Notificationsv3NotificationRecordsFilter       } from '../models/Notificationsv3NotificationRecordsFilter';
 import { Notificationsv3NotificationSeverity } from '../models/Notificationsv3NotificationSeverity';
 import { Notificationsv3NotificationState } from '../models/Notificationsv3NotificationState';
+import { Notificationsv3Origin } from '../models/Notificationsv3Origin';
 import { Notificationsv3PipelineQueryOperator } from '../models/Notificationsv3PipelineQueryOperator';
 import { Notificationsv3PostNotificationRecordRequest      } from '../models/Notificationsv3PostNotificationRecordRequest';
 import { Notificationsv3PostNotificationRecordResponse } from '../models/Notificationsv3PostNotificationRecordResponse';
@@ -1936,6 +1963,8 @@ import { Policybuilderv3GetPolicyDetailsResponse          } from '../models/Poli
 import { Policybuilderv3GetPolicyNamesFromRuleIDsRequest } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsRequest';
 import { Policybuilderv3GetPolicyNamesFromRuleIDsResponse } from '../models/Policybuilderv3GetPolicyNamesFromRuleIDsResponse';
 import { Policybuilderv3GetPolicySyncListResponse } from '../models/Policybuilderv3GetPolicySyncListResponse';
+import { Policybuilderv3GetPolicyVersionResponse } from '../models/Policybuilderv3GetPolicyVersionResponse';
+import { Policybuilderv3GetPolicyVersionsInfoResponse } from '../models/Policybuilderv3GetPolicyVersionsInfoResponse';
 import { Policybuilderv3GetReceiversResponse } from '../models/Policybuilderv3GetReceiversResponse';
 import { Policybuilderv3GetRuleValidationRequest } from '../models/Policybuilderv3GetRuleValidationRequest';
 import { Policybuilderv3ImportIssue } from '../models/Policybuilderv3ImportIssue';
@@ -1948,12 +1977,13 @@ import { Policybuilderv3InstallPoliciesRequest } from '../models/Policybuilderv3
 import { Policybuilderv3InstallationAndSequenceObject } from '../models/Policybuilderv3InstallationAndSequenceObject';
 import { Policybuilderv3ParameterOperator } from '../models/Policybuilderv3ParameterOperator';
 import { Policybuilderv3ParameterRelationShip } from '../models/Policybuilderv3ParameterRelationShip';
-import { Policybuilderv3Policy                    } from '../models/Policybuilderv3Policy';
+import { Policybuilderv3Policy                       } from '../models/Policybuilderv3Policy';
 import { Policybuilderv3PolicyDetailsForGroups } from '../models/Policybuilderv3PolicyDetailsForGroups';
 import { Policybuilderv3PolicyGroups } from '../models/Policybuilderv3PolicyGroups';
 import { Policybuilderv3PolicyType } from '../models/Policybuilderv3PolicyType';
-import { Policybuilderv3PolicyUpdate                } from '../models/Policybuilderv3PolicyUpdate';
+import { Policybuilderv3PolicyUpdate                 } from '../models/Policybuilderv3PolicyUpdate';
 import { Policybuilderv3PossibleValueObj } from '../models/Policybuilderv3PossibleValueObj';
+import { Policybuilderv3ProductType } from '../models/Policybuilderv3ProductType';
 import { Policybuilderv3RecipientType } from '../models/Policybuilderv3RecipientType';
 import { Policybuilderv3Rule                } from '../models/Policybuilderv3Rule';
 import { Policybuilderv3RuleMetadataResponse } from '../models/Policybuilderv3RuleMetadataResponse';
@@ -1967,6 +1997,7 @@ import { Policybuilderv3StorePolicyGdpRequest } from '../models/Policybuilderv3S
 import { Policybuilderv3StorePolicyGdpResponse } from '../models/Policybuilderv3StorePolicyGdpResponse';
 import { Policybuilderv3SyncStatusType } from '../models/Policybuilderv3SyncStatusType';
 import { Policybuilderv3TargetReceiver     } from '../models/Policybuilderv3TargetReceiver';
+import { Policybuilderv3VersionInfo } from '../models/Policybuilderv3VersionInfo';
 import { PotentialFlow } from '../models/PotentialFlow';
 import { PotentialFlowListItem } from '../models/PotentialFlowListItem';
 import { PotentialFlowPath } from '../models/PotentialFlowPath';
@@ -2045,6 +2076,8 @@ import { Reportsrunnerv3StopQueryResponse } from '../models/Reportsrunnerv3StopQ
 import { Reportsrunnerv3WriteResultsToFileResponse } from '../models/Reportsrunnerv3WriteResultsToFileResponse';
 import { Reportsrunnerv3WriteResultsToGroupResponse } from '../models/Reportsrunnerv3WriteResultsToGroupResponse';
 import { Reportsv3AggregationType } from '../models/Reportsv3AggregationType';
+import { Reportsv3Artifact          } from '../models/Reportsv3Artifact';
+import { Reportsv3ArtifactType } from '../models/Reportsv3ArtifactType';
 import { Reportsv3BriefReport } from '../models/Reportsv3BriefReport';
 import { Reportsv3Category } from '../models/Reportsv3Category';
 import { Reportsv3CategoryDetail } from '../models/Reportsv3CategoryDetail';
@@ -2055,6 +2088,7 @@ import { Reportsv3ChartSettings                } from '../models/Reportsv3ChartS
 import { Reportsv3ChartSettingsv2 } from '../models/Reportsv3ChartSettingsv2';
 import { Reportsv3ChartType } from '../models/Reportsv3ChartType';
 import { Reportsv3ContributionPointersInfoObject } from '../models/Reportsv3ContributionPointersInfoObject';
+import { Reportsv3Control } from '../models/Reportsv3Control';
 import { Reportsv3CreateCategoryRequest } from '../models/Reportsv3CreateCategoryRequest';
 import { Reportsv3CreateCategoryResponse } from '../models/Reportsv3CreateCategoryResponse';
 import { Reportsv3CreateChartRequest } from '../models/Reportsv3CreateChartRequest';
@@ -2063,12 +2097,24 @@ import { Reportsv3CreateChartTemplatev2Request } from '../models/Reportsv3Create
 import { Reportsv3CreateChartTemplatev2Response } from '../models/Reportsv3CreateChartTemplatev2Response';
 import { Reportsv3CreateChartv2Request } from '../models/Reportsv3CreateChartv2Request';
 import { Reportsv3CreateChartv2Response } from '../models/Reportsv3CreateChartv2Response';
+import { Reportsv3CreateControlRequest } from '../models/Reportsv3CreateControlRequest';
+import { Reportsv3CreateControlResponse } from '../models/Reportsv3CreateControlResponse';
 import { Reportsv3CreateFieldsByCategoryRequest } from '../models/Reportsv3CreateFieldsByCategoryRequest';
 import { Reportsv3CreateFieldsByCategoryResponse } from '../models/Reportsv3CreateFieldsByCategoryResponse';
+import { Reportsv3CreateGradeRequest } from '../models/Reportsv3CreateGradeRequest';
+import { Reportsv3CreateGradeResponse } from '../models/Reportsv3CreateGradeResponse';
 import { Reportsv3CreateJoinRequest } from '../models/Reportsv3CreateJoinRequest';
 import { Reportsv3CreateJoinResponse } from '../models/Reportsv3CreateJoinResponse';
+import { Reportsv3CreateMeasureRequest } from '../models/Reportsv3CreateMeasureRequest';
+import { Reportsv3CreateMeasureResponse } from '../models/Reportsv3CreateMeasureResponse';
+import { Reportsv3CreateMetricRequest } from '../models/Reportsv3CreateMetricRequest';
+import { Reportsv3CreateMetricResponse } from '../models/Reportsv3CreateMetricResponse';
+import { Reportsv3CreateProgramRequest } from '../models/Reportsv3CreateProgramRequest';
+import { Reportsv3CreateProgramResponse } from '../models/Reportsv3CreateProgramResponse';
 import { Reportsv3CreateReportRequest } from '../models/Reportsv3CreateReportRequest';
 import { Reportsv3CreateReportResponse } from '../models/Reportsv3CreateReportResponse';
+import { Reportsv3CreateRequirementRequest } from '../models/Reportsv3CreateRequirementRequest';
+import { Reportsv3CreateRequirementResponse } from '../models/Reportsv3CreateRequirementResponse';
 import { Reportsv3CreateVariantRequest } from '../models/Reportsv3CreateVariantRequest';
 import { Reportsv3CreateVariantResponse } from '../models/Reportsv3CreateVariantResponse';
 import { Reportsv3CustomChartTemplatev2 } from '../models/Reportsv3CustomChartTemplatev2';
@@ -2079,11 +2125,23 @@ import { Reportsv3DeleteCategoryResponse } from '../models/Reportsv3DeleteCatego
 import { Reportsv3DeleteChartResponse } from '../models/Reportsv3DeleteChartResponse';
 import { Reportsv3DeleteChartTemplatev2Response } from '../models/Reportsv3DeleteChartTemplatev2Response';
 import { Reportsv3DeleteChartv2Response } from '../models/Reportsv3DeleteChartv2Response';
+import { Reportsv3DeleteControlRequest } from '../models/Reportsv3DeleteControlRequest';
+import { Reportsv3DeleteControlResponse } from '../models/Reportsv3DeleteControlResponse';
 import { Reportsv3DeleteFieldsByCategoryResponse } from '../models/Reportsv3DeleteFieldsByCategoryResponse';
+import { Reportsv3DeleteGradeRequest } from '../models/Reportsv3DeleteGradeRequest';
+import { Reportsv3DeleteGradeResponse } from '../models/Reportsv3DeleteGradeResponse';
 import { Reportsv3DeleteJoinResponse } from '../models/Reportsv3DeleteJoinResponse';
+import { Reportsv3DeleteMeasureRequest } from '../models/Reportsv3DeleteMeasureRequest';
+import { Reportsv3DeleteMeasureResponse } from '../models/Reportsv3DeleteMeasureResponse';
+import { Reportsv3DeleteMetricRequest } from '../models/Reportsv3DeleteMetricRequest';
+import { Reportsv3DeleteMetricResponse } from '../models/Reportsv3DeleteMetricResponse';
+import { Reportsv3DeleteProgramRequest } from '../models/Reportsv3DeleteProgramRequest';
+import { Reportsv3DeleteProgramResponse } from '../models/Reportsv3DeleteProgramResponse';
 import { Reportsv3DeleteReportResponse } from '../models/Reportsv3DeleteReportResponse';
+import { Reportsv3DeleteRequirementRequest } from '../models/Reportsv3DeleteRequirementRequest';
+import { Reportsv3DeleteRequirementResponse } from '../models/Reportsv3DeleteRequirementResponse';
 import { Reportsv3DeleteVariantResponse } from '../models/Reportsv3DeleteVariantResponse';
-import { Reportsv3DisplayHeader } from '../models/Reportsv3DisplayHeader';
+import { Reportsv3DisplayHeader        } from '../models/Reportsv3DisplayHeader';
 import { Reportsv3FieldName } from '../models/Reportsv3FieldName';
 import { Reportsv3Filter } from '../models/Reportsv3Filter';
 import { Reportsv3FilterHeaders } from '../models/Reportsv3FilterHeaders';
@@ -2093,9 +2151,14 @@ import { Reportsv3GetChartQueryResponsev2 } from '../models/Reportsv3GetChartQue
 import { Reportsv3GetChartSettingsResponse } from '../models/Reportsv3GetChartSettingsResponse';
 import { Reportsv3GetChartSettingsv2Response } from '../models/Reportsv3GetChartSettingsv2Response';
 import { Reportsv3GetChartTemplatesv2Response } from '../models/Reportsv3GetChartTemplatesv2Response';
+import { Reportsv3GetControlsResponse } from '../models/Reportsv3GetControlsResponse';
 import { Reportsv3GetFieldsByCategoriesResponse } from '../models/Reportsv3GetFieldsByCategoriesResponse';
 import { Reportsv3GetFieldsByCategoryResponse } from '../models/Reportsv3GetFieldsByCategoryResponse';
+import { Reportsv3GetGradesResponse } from '../models/Reportsv3GetGradesResponse';
 import { Reportsv3GetJoinsResponse } from '../models/Reportsv3GetJoinsResponse';
+import { Reportsv3GetMeasuresResponse } from '../models/Reportsv3GetMeasuresResponse';
+import { Reportsv3GetMetricsResponse } from '../models/Reportsv3GetMetricsResponse';
+import { Reportsv3GetProgramsResponse } from '../models/Reportsv3GetProgramsResponse';
 import { Reportsv3GetQueryByReportDefinitionRequest             } from '../models/Reportsv3GetQueryByReportDefinitionRequest';
 import { Reportsv3GetQueryByReportIDRequest             } from '../models/Reportsv3GetQueryByReportIDRequest';
 import { Reportsv3GetReportDefinitionResponse } from '../models/Reportsv3GetReportDefinitionResponse';
@@ -2106,8 +2169,11 @@ import { Reportsv3GetReportTimestampHeaderResponse } from '../models/Reportsv3Ge
 import { Reportsv3GetReportsForJoinResponse } from '../models/Reportsv3GetReportsForJoinResponse';
 import { Reportsv3GetReportsResponse } from '../models/Reportsv3GetReportsResponse';
 import { Reportsv3GetReportsTagsResponse } from '../models/Reportsv3GetReportsTagsResponse';
+import { Reportsv3GetRequirementsResponse } from '../models/Reportsv3GetRequirementsResponse';
 import { Reportsv3GetVariantResponse } from '../models/Reportsv3GetVariantResponse';
 import { Reportsv3GetVariantsResponse } from '../models/Reportsv3GetVariantsResponse';
+import { Reportsv3Grade } from '../models/Reportsv3Grade';
+import { Reportsv3GradeThreshold } from '../models/Reportsv3GradeThreshold';
 import { Reportsv3Header            } from '../models/Reportsv3Header';
 import { Reportsv3HeaderDataType } from '../models/Reportsv3HeaderDataType';
 import { Reportsv3HeaderDescription } from '../models/Reportsv3HeaderDescription';
@@ -2118,6 +2184,11 @@ import { Reportsv3JobType } from '../models/Reportsv3JobType';
 import { Reportsv3JoinDefinition } from '../models/Reportsv3JoinDefinition';
 import { Reportsv3JoinDefinitionWithID } from '../models/Reportsv3JoinDefinitionWithID';
 import { Reportsv3Literal } from '../models/Reportsv3Literal';
+import { Reportsv3Measure } from '../models/Reportsv3Measure';
+import { Reportsv3MeasureType } from '../models/Reportsv3MeasureType';
+import { Reportsv3Metric       } from '../models/Reportsv3Metric';
+import { Reportsv3MetricType } from '../models/Reportsv3MetricType';
+import { Reportsv3MetricsColumn   } from '../models/Reportsv3MetricsColumn';
 import { Reportsv3ModelType } from '../models/Reportsv3ModelType';
 import { Reportsv3OperatorType } from '../models/Reportsv3OperatorType';
 import { Reportsv3OptionType } from '../models/Reportsv3OptionType';
@@ -2127,6 +2198,7 @@ import { Reportsv3PartialChartUpdateRequest     } from '../models/Reportsv3Parti
 import { Reportsv3PartialChartUpdateResponse } from '../models/Reportsv3PartialChartUpdateResponse';
 import { Reportsv3PartialReportUpdateRequest } from '../models/Reportsv3PartialReportUpdateRequest';
 import { Reportsv3PartialReportUpdateResponse } from '../models/Reportsv3PartialReportUpdateResponse';
+import { Reportsv3Program } from '../models/Reportsv3Program';
 import { Reportsv3ReportAggFilter } from '../models/Reportsv3ReportAggFilter';
 import { Reportsv3ReportAggFilterCondition       } from '../models/Reportsv3ReportAggFilterCondition';
 import { Reportsv3ReportDefinition } from '../models/Reportsv3ReportDefinition';
@@ -2138,6 +2210,9 @@ import { Reportsv3ReportHeader                } from '../models/Reportsv3ReportH
 import { Reportsv3ReportResult } from '../models/Reportsv3ReportResult';
 import { Reportsv3ReportTag } from '../models/Reportsv3ReportTag';
 import { Reportsv3ReportUsedInJoin } from '../models/Reportsv3ReportUsedInJoin';
+import { Reportsv3Requirement } from '../models/Reportsv3Requirement';
+import { Reportsv3RunGradesRequest } from '../models/Reportsv3RunGradesRequest';
+import { Reportsv3RunGradesResponse } from '../models/Reportsv3RunGradesResponse';
 import { Reportsv3RunReportResponse } from '../models/Reportsv3RunReportResponse';
 import { Reportsv3RunTimeParameter       } from '../models/Reportsv3RunTimeParameter';
 import { Reportsv3RunVariantOperationRequest } from '../models/Reportsv3RunVariantOperationRequest';
@@ -2150,10 +2225,22 @@ import { Reportsv3UpdateChartRequest } from '../models/Reportsv3UpdateChartReque
 import { Reportsv3UpdateChartResponse } from '../models/Reportsv3UpdateChartResponse';
 import { Reportsv3UpdateChartv2Request } from '../models/Reportsv3UpdateChartv2Request';
 import { Reportsv3UpdateChartv2Response } from '../models/Reportsv3UpdateChartv2Response';
+import { Reportsv3UpdateControlRequest } from '../models/Reportsv3UpdateControlRequest';
+import { Reportsv3UpdateControlResponse } from '../models/Reportsv3UpdateControlResponse';
+import { Reportsv3UpdateGradeRequest } from '../models/Reportsv3UpdateGradeRequest';
+import { Reportsv3UpdateGradeResponse } from '../models/Reportsv3UpdateGradeResponse';
 import { Reportsv3UpdateJoinRequest } from '../models/Reportsv3UpdateJoinRequest';
 import { Reportsv3UpdateJoinResponse } from '../models/Reportsv3UpdateJoinResponse';
+import { Reportsv3UpdateMeasureRequest } from '../models/Reportsv3UpdateMeasureRequest';
+import { Reportsv3UpdateMeasureResponse } from '../models/Reportsv3UpdateMeasureResponse';
+import { Reportsv3UpdateMetricRequest } from '../models/Reportsv3UpdateMetricRequest';
+import { Reportsv3UpdateMetricResponse } from '../models/Reportsv3UpdateMetricResponse';
+import { Reportsv3UpdateProgramRequest } from '../models/Reportsv3UpdateProgramRequest';
+import { Reportsv3UpdateProgramResponse } from '../models/Reportsv3UpdateProgramResponse';
 import { Reportsv3UpdateReportRequest } from '../models/Reportsv3UpdateReportRequest';
 import { Reportsv3UpdateReportResponse } from '../models/Reportsv3UpdateReportResponse';
+import { Reportsv3UpdateRequirementRequest } from '../models/Reportsv3UpdateRequirementRequest';
+import { Reportsv3UpdateRequirementResponse } from '../models/Reportsv3UpdateRequirementResponse';
 import { Reportsv3UpdateVariantOverrideRequest } from '../models/Reportsv3UpdateVariantOverrideRequest';
 import { Reportsv3UpdateVariantOverrideResponse } from '../models/Reportsv3UpdateVariantOverrideResponse';
 import { Reportsv3Variant } from '../models/Reportsv3Variant';
@@ -2163,67 +2250,11 @@ import { Reportsv3VariantRuleCondition } from '../models/Reportsv3VariantRuleCon
 import { Reportsv3VariantRuleType } from '../models/Reportsv3VariantRuleType';
 import { RescanDataStoreRequest } from '../models/RescanDataStoreRequest';
 import { ResetPasswordRequest } from '../models/ResetPasswordRequest';
-import { Resourcecontrollerk8v3App } from '../models/Resourcecontrollerk8v3App';
-import { Resourcecontrollerk8v3AppDeployment } from '../models/Resourcecontrollerk8v3AppDeployment';
-import { Resourcecontrollerk8v3AppFile } from '../models/Resourcecontrollerk8v3AppFile';
-import { Resourcecontrollerk8v3AppHpa } from '../models/Resourcecontrollerk8v3AppHpa';
-import { Resourcecontrollerk8v3AppSecret } from '../models/Resourcecontrollerk8v3AppSecret';
-import { Resourcecontrollerk8v3Container } from '../models/Resourcecontrollerk8v3Container';
-import { Resourcecontrollerk8v3ContainerResources } from '../models/Resourcecontrollerk8v3ContainerResources';
-import { Resourcecontrollerk8v3ContainerResourcesQuantity } from '../models/Resourcecontrollerk8v3ContainerResourcesQuantity';
-import { Resourcecontrollerk8v3Controller } from '../models/Resourcecontrollerk8v3Controller';
-import { Resourcecontrollerk8v3ControllerApp } from '../models/Resourcecontrollerk8v3ControllerApp';
-import { Resourcecontrollerk8v3ControllerAppFile } from '../models/Resourcecontrollerk8v3ControllerAppFile';
-import { Resourcecontrollerk8v3ControllerAppSecret } from '../models/Resourcecontrollerk8v3ControllerAppSecret';
-import { Resourcecontrollerk8v3ControllerCommand } from '../models/Resourcecontrollerk8v3ControllerCommand';
-import { Resourcecontrollerk8v3ControllerHeartbeat } from '../models/Resourcecontrollerk8v3ControllerHeartbeat';
-import { Resourcecontrollerk8v3ControllerResources } from '../models/Resourcecontrollerk8v3ControllerResources';
-import { Resourcecontrollerk8v3ControllerStatus } from '../models/Resourcecontrollerk8v3ControllerStatus';
-import { Resourcecontrollerk8v3CreateControllerRequest } from '../models/Resourcecontrollerk8v3CreateControllerRequest';
-import { Resourcecontrollerk8v3CreateHeartBeatExResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatExResponse';
-import { Resourcecontrollerk8v3CreateHeartBeatRequest } from '../models/Resourcecontrollerk8v3CreateHeartBeatRequest';
-import { Resourcecontrollerk8v3CreateHeartBeatResponse } from '../models/Resourcecontrollerk8v3CreateHeartBeatResponse';
-import { Resourcecontrollerk8v3CreateKeypairRequest } from '../models/Resourcecontrollerk8v3CreateKeypairRequest';
-import { Resourcecontrollerk8v3CreateKeypairResponse } from '../models/Resourcecontrollerk8v3CreateKeypairResponse';
-import { Resourcecontrollerk8v3Cron } from '../models/Resourcecontrollerk8v3Cron';
-import { Resourcecontrollerk8v3DeleteControllerRequest } from '../models/Resourcecontrollerk8v3DeleteControllerRequest';
-import { Resourcecontrollerk8v3DeleteControllerResponse } from '../models/Resourcecontrollerk8v3DeleteControllerResponse';
-import { Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost';
-import { Resourcecontrollerk8v3DeleteEdgeTenantResponse } from '../models/Resourcecontrollerk8v3DeleteEdgeTenantResponse';
-import { Resourcecontrollerk8v3DeleteJobRequest } from '../models/Resourcecontrollerk8v3DeleteJobRequest';
-import { Resourcecontrollerk8v3DeleteJobResponse } from '../models/Resourcecontrollerk8v3DeleteJobResponse';
-import { Resourcecontrollerk8v3DownloadControllerLogsRequest } from '../models/Resourcecontrollerk8v3DownloadControllerLogsRequest';
-import { Resourcecontrollerk8v3DownloadControllerLogsResponse } from '../models/Resourcecontrollerk8v3DownloadControllerLogsResponse';
-import { Resourcecontrollerk8v3EdgeResourceResponse } from '../models/Resourcecontrollerk8v3EdgeResourceResponse';
-import { Resourcecontrollerk8v3EdgeTenantRequest } from '../models/Resourcecontrollerk8v3EdgeTenantRequest';
-import { Resourcecontrollerk8v3File } from '../models/Resourcecontrollerk8v3File';
 import { Resourcecontrollerk8v3GUCStatefulsetState } from '../models/Resourcecontrollerk8v3GUCStatefulsetState';
-import { Resourcecontrollerk8v3GetControllerAppsResponse } from '../models/Resourcecontrollerk8v3GetControllerAppsResponse';
-import { Resourcecontrollerk8v3GetControllerCommandsResponse } from '../models/Resourcecontrollerk8v3GetControllerCommandsResponse';
-import { Resourcecontrollerk8v3GetControllerJobsResponse } from '../models/Resourcecontrollerk8v3GetControllerJobsResponse';
-import { Resourcecontrollerk8v3GetControllersResponse } from '../models/Resourcecontrollerk8v3GetControllersResponse';
-import { Resourcecontrollerk8v3GetControllersWithStatusResponse } from '../models/Resourcecontrollerk8v3GetControllersWithStatusResponse';
-import { Resourcecontrollerk8v3GetJobExecutionsResponse } from '../models/Resourcecontrollerk8v3GetJobExecutionsResponse';
-import { Resourcecontrollerk8v3GetTenantAppsResponse } from '../models/Resourcecontrollerk8v3GetTenantAppsResponse';
-import { Resourcecontrollerk8v3GetTenantJobsResponse } from '../models/Resourcecontrollerk8v3GetTenantJobsResponse';
-import { Resourcecontrollerk8v3InitContainer } from '../models/Resourcecontrollerk8v3InitContainer';
-import { Resourcecontrollerk8v3Job } from '../models/Resourcecontrollerk8v3Job';
-import { Resourcecontrollerk8v3JobExecution } from '../models/Resourcecontrollerk8v3JobExecution';
-import { Resourcecontrollerk8v3JobStatusDTO } from '../models/Resourcecontrollerk8v3JobStatusDTO';
-import { Resourcecontrollerk8v3KeyPair } from '../models/Resourcecontrollerk8v3KeyPair';
-import { Resourcecontrollerk8v3QueryControllerLogsRequest } from '../models/Resourcecontrollerk8v3QueryControllerLogsRequest';
-import { Resourcecontrollerk8v3QueryControllerLogsResponse } from '../models/Resourcecontrollerk8v3QueryControllerLogsResponse';
-import { Resourcecontrollerk8v3QueryLogs } from '../models/Resourcecontrollerk8v3QueryLogs';
-import { Resourcecontrollerk8v3Rule } from '../models/Resourcecontrollerk8v3Rule';
-import { Resourcecontrollerk8v3Secret } from '../models/Resourcecontrollerk8v3Secret';
 import { Resourcecontrollerk8v3TenantGUCCreateResponse } from '../models/Resourcecontrollerk8v3TenantGUCCreateResponse';
 import { Resourcecontrollerk8v3TenantGUCStatusResponse    } from '../models/Resourcecontrollerk8v3TenantGUCStatusResponse';
 import { Resourcecontrollerk8v3TenantLifecycleResponse } from '../models/Resourcecontrollerk8v3TenantLifecycleResponse';
 import { Resourcecontrollerk8v3TenantResourceResponse } from '../models/Resourcecontrollerk8v3TenantResourceResponse';
-import { Resourcecontrollerk8v3TextContent } from '../models/Resourcecontrollerk8v3TextContent';
-import { Resourcecontrollerk8v3UpdateJobExecutionRequest } from '../models/Resourcecontrollerk8v3UpdateJobExecutionRequest';
-import { Resourcecontrollerk8v3UpdateJobStatusRequest } from '../models/Resourcecontrollerk8v3UpdateJobStatusRequest';
-import { Resourcecontrollerk8v3Version } from '../models/Resourcecontrollerk8v3Version';
 import { Riskanalyticscontrollerv3Action } from '../models/Riskanalyticscontrollerv3Action';
 import { Riskanalyticscontrollerv3CardSettings        } from '../models/Riskanalyticscontrollerv3CardSettings';
 import { Riskanalyticscontrollerv3DetailToCount } from '../models/Riskanalyticscontrollerv3DetailToCount';
@@ -2368,7 +2399,6 @@ import { SetDataStoreLabelRequest } from '../models/SetDataStoreLabelRequest';
 import { SetQuestionBodyParams   } from '../models/SetQuestionBodyParams';
 import { SetVulnerabilityStatusRequest  } from '../models/SetVulnerabilityStatusRequest';
 import { SignupRequest } from '../models/SignupRequest';
-import { SimpleRecipientSimpleRecipientType } from '../models/SimpleRecipientSimpleRecipientType';
 import { Snifassistv3Feedback    } from '../models/Snifassistv3Feedback';
 import { Snifassistv3FeedbackStatus } from '../models/Snifassistv3FeedbackStatus';
 import { Snifassistv3GetSnifConfigResponse } from '../models/Snifassistv3GetSnifConfigResponse';
@@ -2381,8 +2411,8 @@ import { Snifassistv3StapOperation } from '../models/Snifassistv3StapOperation';
 import { Snifassistv3StatusResponseBase } from '../models/Snifassistv3StatusResponseBase';
 import { Snifassistv3TestRegexRequest } from '../models/Snifassistv3TestRegexRequest';
 import { SortOrder } from '../models/SortOrder';
+import { StoreClassificationStatus } from '../models/StoreClassificationStatus';
 import { StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse } from '../models/StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse';
-import { StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse } from '../models/StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse';
 import { StreamResultOfReportsrunnerv3RunReportResponse } from '../models/StreamResultOfReportsrunnerv3RunReportResponse';
 import { Streamsv3AWSCheckStreamStatus } from '../models/Streamsv3AWSCheckStreamStatus';
 import { Streamsv3AuthType } from '../models/Streamsv3AuthType';
@@ -2403,31 +2433,6 @@ import { SubmitAdminEmailParams } from '../models/SubmitAdminEmailParams';
 import { SubmitAuthCode } from '../models/SubmitAuthCode';
 import { SubmitPasswordRequest } from '../models/SubmitPasswordRequest';
 import { Tags } from '../models/Tags';
-import { Templatesv3CreateIntegrationRequest    } from '../models/Templatesv3CreateIntegrationRequest';
-import { Templatesv3CreateIntegrationResponse } from '../models/Templatesv3CreateIntegrationResponse';
-import { Templatesv3CreateTemplateRequest } from '../models/Templatesv3CreateTemplateRequest';
-import { Templatesv3CreateTemplateResponse } from '../models/Templatesv3CreateTemplateResponse';
-import { Templatesv3DefaultContent } from '../models/Templatesv3DefaultContent';
-import { Templatesv3DeleteIntegrationResponse } from '../models/Templatesv3DeleteIntegrationResponse';
-import { Templatesv3DeleteTemplateResponse } from '../models/Templatesv3DeleteTemplateResponse';
-import { Templatesv3GetOriginDefaultContentResponse } from '../models/Templatesv3GetOriginDefaultContentResponse';
-import { Templatesv3GetOriginFieldsResponse } from '../models/Templatesv3GetOriginFieldsResponse';
-import { Templatesv3GetTemplateResponse } from '../models/Templatesv3GetTemplateResponse';
-import { Templatesv3GetTemplatesForEdgeResponse } from '../models/Templatesv3GetTemplatesForEdgeResponse';
-import { Templatesv3GetTemplatesResponse } from '../models/Templatesv3GetTemplatesResponse';
-import { Templatesv3Integration } from '../models/Templatesv3Integration';
-import { Templatesv3MIMEType } from '../models/Templatesv3MIMEType';
-import { Templatesv3Origin } from '../models/Templatesv3Origin';
-import { Templatesv3SimpleRecipient   } from '../models/Templatesv3SimpleRecipient';
-import { Templatesv3Template               } from '../models/Templatesv3Template';
-import { Templatesv3TestTemplateRequest } from '../models/Templatesv3TestTemplateRequest';
-import { Templatesv3TestTemplateResponse } from '../models/Templatesv3TestTemplateResponse';
-import { Templatesv3TransformTemplateJSONRequest      } from '../models/Templatesv3TransformTemplateJSONRequest';
-import { Templatesv3TransformTemplateJSONResponse } from '../models/Templatesv3TransformTemplateJSONResponse';
-import { Templatesv3TransformTemplateRequest      } from '../models/Templatesv3TransformTemplateRequest';
-import { Templatesv3TransformTemplateResponse } from '../models/Templatesv3TransformTemplateResponse';
-import { Templatesv3UpdateTemplateRequest } from '../models/Templatesv3UpdateTemplateRequest';
-import { Templatesv3UpdateTemplateResponse } from '../models/Templatesv3UpdateTemplateResponse';
 import { TenantInfo } from '../models/TenantInfo';
 import { Tenantuserv3Apikey } from '../models/Tenantuserv3Apikey';
 import { Tenantuserv3AuthResponse } from '../models/Tenantuserv3AuthResponse';
@@ -2515,6 +2520,29 @@ import { VendorAccount    } from '../models/VendorAccount';
 import { VendorCertificate, VendorCertificateCertificateNameEnum   } from '../models/VendorCertificate';
 import { VendorDataStore       } from '../models/VendorDataStore';
 import { VendorSummary    } from '../models/VendorSummary';
+import { Vulmanagementv3ActionType } from '../models/Vulmanagementv3ActionType';
+import { Vulmanagementv3AssetTags } from '../models/Vulmanagementv3AssetTags';
+import { Vulmanagementv3Category } from '../models/Vulmanagementv3Category';
+import { Vulmanagementv3ChildCategory } from '../models/Vulmanagementv3ChildCategory';
+import { Vulmanagementv3CreateVulnerabilityRequest        } from '../models/Vulmanagementv3CreateVulnerabilityRequest';
+import { Vulmanagementv3CreateVulnerabilityResponse } from '../models/Vulmanagementv3CreateVulnerabilityResponse';
+import { Vulmanagementv3FilterCategory } from '../models/Vulmanagementv3FilterCategory';
+import { Vulmanagementv3GetFiltersDataResponse } from '../models/Vulmanagementv3GetFiltersDataResponse';
+import { Vulmanagementv3GetVulnerabilitiesRequest       } from '../models/Vulmanagementv3GetVulnerabilitiesRequest';
+import { Vulmanagementv3GetVulnerabilitiesResponse } from '../models/Vulmanagementv3GetVulnerabilitiesResponse';
+import { Vulmanagementv3GetVulnerabilityResponse } from '../models/Vulmanagementv3GetVulnerabilityResponse';
+import { Vulmanagementv3Severity } from '../models/Vulmanagementv3Severity';
+import { Vulmanagementv3SortOrder } from '../models/Vulmanagementv3SortOrder';
+import { Vulmanagementv3SourceType } from '../models/Vulmanagementv3SourceType';
+import { Vulmanagementv3Status } from '../models/Vulmanagementv3Status';
+import { Vulmanagementv3SubCategory } from '../models/Vulmanagementv3SubCategory';
+import { Vulmanagementv3UpdateVulnerabilitiesRequest } from '../models/Vulmanagementv3UpdateVulnerabilitiesRequest';
+import { Vulmanagementv3UpdateVulnerabilitiesResponse } from '../models/Vulmanagementv3UpdateVulnerabilitiesResponse';
+import { Vulmanagementv3VulnerabilitiesStatsDataResponse } from '../models/Vulmanagementv3VulnerabilitiesStatsDataResponse';
+import { Vulmanagementv3Vulnerability                    } from '../models/Vulmanagementv3Vulnerability';
+import { Vulmanagementv3VulnerabilityAudit         } from '../models/Vulmanagementv3VulnerabilityAudit';
+import { Vulmanagementv3VulnerabilityIngestionResponse } from '../models/Vulmanagementv3VulnerabilityIngestionResponse';
+import { Vulmanagementv3VulnerabilityUpdate       } from '../models/Vulmanagementv3VulnerabilityUpdate';
 import { VulnerabilitiesByDataStoreFilterOptions  , VulnerabilitiesByDataStoreFilterOptionsThreatsEnum           } from '../models/VulnerabilitiesByDataStoreFilterOptions';
 import { VulnerabilitiesCriticalityCountInner   } from '../models/VulnerabilitiesCriticalityCountInner';
 import { VulnerabilitiesFilterOptions  , VulnerabilitiesFilterOptionsThreatsEnum         } from '../models/VulnerabilitiesFilterOptions';
@@ -2619,8 +2647,8 @@ let enumsMap: Set<string> = new Set<string>([
     "Assetsv3Level",
     "Assetsv3RuleType",
     "Assetsv3StatusType",
+    "Assetsv3TemplateType",
     "Assetsv3WidgetType",
-    "ClassificationStatus",
     "CloudServiceProvider",
     "Compliance",
     "Complianceacceleratorv3DashboardType",
@@ -2656,6 +2684,7 @@ let enumsMap: Set<string> = new Set<string>([
     "NotificationRecordsFilterStateFilter",
     "Notificationsv3NotificationSeverity",
     "Notificationsv3NotificationState",
+    "Notificationsv3Origin",
     "Notificationsv3PipelineQueryOperator",
     "Operator",
     "Outliersenginev3SourceAttributeType",
@@ -2666,6 +2695,7 @@ let enumsMap: Set<string> = new Set<string>([
     "Policybuilderv3ImportState",
     "Policybuilderv3ParameterOperator",
     "Policybuilderv3PolicyType",
+    "Policybuilderv3ProductType",
     "Policybuilderv3RecipientType",
     "Policybuilderv3RuleSeverity",
     "Policybuilderv3RuleType",
@@ -2678,12 +2708,15 @@ let enumsMap: Set<string> = new Set<string>([
     "Reportsrunnerv3FileType",
     "Reportsrunnerv3JobType",
     "Reportsv3AggregationType",
+    "Reportsv3ArtifactType",
     "Reportsv3ChartType",
     "Reportsv3DateRangeType",
     "Reportsv3DateRangeUnit",
     "Reportsv3HeaderDataType",
     "Reportsv3HeaderType",
     "Reportsv3JobType",
+    "Reportsv3MeasureType",
+    "Reportsv3MetricType",
     "Reportsv3ModelType",
     "Reportsv3OperatorType",
     "Reportsv3OptionType",
@@ -2719,21 +2752,23 @@ let enumsMap: Set<string> = new Set<string>([
     "Schedulerv3WorkflowType",
     "SensitivityCategory",
     "ServiceProvider",
-    "SimpleRecipientSimpleRecipientType",
     "Snifassistv3FeedbackStatus",
     "Snifassistv3SnifAssistType",
     "Snifassistv3StapOperation",
     "SortOrder",
+    "StoreClassificationStatus",
     "Streamsv3AWSCheckStreamStatus",
     "Streamsv3AuthType",
     "Streamsv3AzureCheckStatus",
     "Streamsv3StreamType",
-    "Templatesv3Integration",
-    "Templatesv3MIMEType",
-    "Templatesv3Origin",
     "Tenantuserv3UserState",
     "Universalconnectormanagerv3ConnectivityState",
     "VendorCertificateCertificateNameEnum",
+    "Vulmanagementv3ActionType",
+    "Vulmanagementv3Severity",
+    "Vulmanagementv3SortOrder",
+    "Vulmanagementv3SourceType",
+    "Vulmanagementv3Status",
     "VulnerabilitiesByDataStoreFilterOptionsThreatsEnum",
     "VulnerabilitiesFilterOptionsThreatsEnum",
     "VulnerabilityThreatsEnum",
@@ -2775,7 +2810,6 @@ let typeMap: {[index: string]: any} = {
     "Assetsv3AssetClassification": Assetsv3AssetClassification,
     "Assetsv3AssetControl": Assetsv3AssetControl,
     "Assetsv3AssetEndpoint": Assetsv3AssetEndpoint,
-    "Assetsv3AssetFilterTemplateRequest": Assetsv3AssetFilterTemplateRequest,
     "Assetsv3AssetForMergeSplit": Assetsv3AssetForMergeSplit,
     "Assetsv3AssetInformation": Assetsv3AssetInformation,
     "Assetsv3AssetIngestionRequest": Assetsv3AssetIngestionRequest,
@@ -2793,11 +2827,13 @@ let typeMap: {[index: string]: any} = {
     "Assetsv3AssignedTags": Assetsv3AssignedTags,
     "Assetsv3Attributes": Assetsv3Attributes,
     "Assetsv3BeforeAfter": Assetsv3BeforeAfter,
+    "Assetsv3CSVRow": Assetsv3CSVRow,
     "Assetsv3Category": Assetsv3Category,
     "Assetsv3ChildCategory": Assetsv3ChildCategory,
     "Assetsv3ClassificationData": Assetsv3ClassificationData,
     "Assetsv3ClassificationScanStatus": Assetsv3ClassificationScanStatus,
     "Assetsv3ClonePolicyRequest": Assetsv3ClonePolicyRequest,
+    "Assetsv3CompareCSVResponse": Assetsv3CompareCSVResponse,
     "Assetsv3ConnectionEdge": Assetsv3ConnectionEdge,
     "Assetsv3CreateUpdatePolicyRequest": Assetsv3CreateUpdatePolicyRequest,
     "Assetsv3CreateUpdatePolicyResponse": Assetsv3CreateUpdatePolicyResponse,
@@ -2825,6 +2861,8 @@ let typeMap: {[index: string]: any} = {
     "Assetsv3HighestAssetTagCounts": Assetsv3HighestAssetTagCounts,
     "Assetsv3HostVertex": Assetsv3HostVertex,
     "Assetsv3IPVertex": Assetsv3IPVertex,
+    "Assetsv3ImportCSVRequest": Assetsv3ImportCSVRequest,
+    "Assetsv3ImportCSVResponse": Assetsv3ImportCSVResponse,
     "Assetsv3IpHost": Assetsv3IpHost,
     "Assetsv3ListPolicyResponse": Assetsv3ListPolicyResponse,
     "Assetsv3ListRuleResponse": Assetsv3ListRuleResponse,
@@ -2922,7 +2960,7 @@ let typeMap: {[index: string]: any} = {
     "Complianceacceleratorv3SyslogConfig": Complianceacceleratorv3SyslogConfig,
     "Complianceacceleratorv3Workspace": Complianceacceleratorv3Workspace,
     "ConfigureSSORequest": ConfigureSSORequest,
-    "ConfigureSSORequestIdpMetadata": ConfigureSSORequestIdpMetadata,
+    "ConfigureSSORequestIdpMetadata": ConfigureSSORequestIdpMetadataClass,
     "Connectionsv3Account": Connectionsv3Account,
     "Connectionsv3AccountConfig": Connectionsv3AccountConfig,
     "Connectionsv3Connector": Connectionsv3Connector,
@@ -2992,7 +3030,10 @@ let typeMap: {[index: string]: any} = {
     "Connectionsv3UpdatePluginResponse": Connectionsv3UpdatePluginResponse,
     "Connectionsv3UpdateSettingsRequest": Connectionsv3UpdateSettingsRequest,
     "Connectionsv3ValidateAwsConnectionRequest": Connectionsv3ValidateAwsConnectionRequest,
+    "Connectionsv3ValidateAzureConnectionRequest": Connectionsv3ValidateAzureConnectionRequest,
     "Connectionsv3ValidateConnectionResponse": Connectionsv3ValidateConnectionResponse,
+    "Connectionsv3ValidateGcpConnectionRequest": Connectionsv3ValidateGcpConnectionRequest,
+    "DBMetadataInfo": DBMetadataInfo,
     "Dashboardsv3Card": Dashboardsv3Card,
     "Dashboardsv3CardPosition": Dashboardsv3CardPosition,
     "Dashboardsv3CreateDashboardResponse": Dashboardsv3CreateDashboardResponse,
@@ -3028,6 +3069,7 @@ let typeMap: {[index: string]: any} = {
     "Datamartprocessorv3GetDatamartResponse": Datamartprocessorv3GetDatamartResponse,
     "Datamartprocessorv3GetEarliestStartTimeResponse": Datamartprocessorv3GetEarliestStartTimeResponse,
     "Datamartprocessorv3StatusResponseBase": Datamartprocessorv3StatusResponseBase,
+    "DbInfo": DbInfo,
     "Ecosystemv3ColumnDefinition": Ecosystemv3ColumnDefinition,
     "Ecosystemv3CreateDatasetRequest": Ecosystemv3CreateDatasetRequest,
     "Ecosystemv3CreateDatasetResponse": Ecosystemv3CreateDatasetResponse,
@@ -3049,10 +3091,6 @@ let typeMap: {[index: string]: any} = {
     "Ecosystemv3TestIntegrationRequest": Ecosystemv3TestIntegrationRequest,
     "Ecosystemv3TestIntegrationResponse": Ecosystemv3TestIntegrationResponse,
     "Ecosystemv3ValidateCSVContentResponse": Ecosystemv3ValidateCSVContentResponse,
-    "Edgeschedulerv3GetEdgeQueryStatusResponse": Edgeschedulerv3GetEdgeQueryStatusResponse,
-    "Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse": Edgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse,
-    "Edgeschedulerv3ScheduleEdgeQueryRequest": Edgeschedulerv3ScheduleEdgeQueryRequest,
-    "Edgeschedulerv3ScheduleEdgeQueryResponse": Edgeschedulerv3ScheduleEdgeQueryResponse,
     "Featureflagsv3DeleteFeatureFlagOverridesResponse": Featureflagsv3DeleteFeatureFlagOverridesResponse,
     "Featureflagsv3FeatureFlag": Featureflagsv3FeatureFlag,
     "Featureflagsv3FeatureFlagOverrides": Featureflagsv3FeatureFlagOverrides,
@@ -3239,19 +3277,28 @@ let typeMap: {[index: string]: any} = {
     "InviteUserBodyParams": InviteUserBodyParams,
     "Jumpboxv3AuthorizeRequest": Jumpboxv3AuthorizeRequest,
     "Jumpboxv3AuthorizeResponse": Jumpboxv3AuthorizeResponse,
+    "Jumpboxv3DeleteAccountResponse": Jumpboxv3DeleteAccountResponse,
     "Jumpboxv3DirectoryEntry": Jumpboxv3DirectoryEntry,
     "Jumpboxv3DisableUsersBulkResponse": Jumpboxv3DisableUsersBulkResponse,
+    "Jumpboxv3GetAccountResponse": Jumpboxv3GetAccountResponse,
+    "Jumpboxv3GetAccountsResponse": Jumpboxv3GetAccountsResponse,
     "Jumpboxv3GetTenantResponse": Jumpboxv3GetTenantResponse,
     "Jumpboxv3GetTenantsResponse": Jumpboxv3GetTenantsResponse,
+    "Jumpboxv3PostAccountRequest": Jumpboxv3PostAccountRequest,
+    "Jumpboxv3PostAccountResponse": Jumpboxv3PostAccountResponse,
     "Jumpboxv3PostTenantsRequest": Jumpboxv3PostTenantsRequest,
     "Jumpboxv3PostTenantsResponse": Jumpboxv3PostTenantsResponse,
     "Jumpboxv3PostUsersBulkRequest": Jumpboxv3PostUsersBulkRequest,
     "Jumpboxv3PostUsersBulkResponse": Jumpboxv3PostUsersBulkResponse,
+    "Jumpboxv3ResumeAccountResponse": Jumpboxv3ResumeAccountResponse,
     "Jumpboxv3SearchUsersRequest": Jumpboxv3SearchUsersRequest,
     "Jumpboxv3SearchUsersResponse": Jumpboxv3SearchUsersResponse,
+    "Jumpboxv3SuspendAccountResponse": Jumpboxv3SuspendAccountResponse,
     "Jumpboxv3Tenant": Jumpboxv3Tenant,
     "Jumpboxv3TestUserRequest": Jumpboxv3TestUserRequest,
     "Jumpboxv3TestUserResponse": Jumpboxv3TestUserResponse,
+    "Jumpboxv3UpdateAccountRequest": Jumpboxv3UpdateAccountRequest,
+    "Jumpboxv3UpdateAccountResponse": Jumpboxv3UpdateAccountResponse,
     "Jumpboxv3UpdateTenantRequest": Jumpboxv3UpdateTenantRequest,
     "Jumpboxv3UpdateTenantResponse": Jumpboxv3UpdateTenantResponse,
     "Jumpboxv3UpdateUsersBulkRequest": Jumpboxv3UpdateUsersBulkRequest,
@@ -3350,6 +3397,8 @@ let typeMap: {[index: string]: any} = {
     "Policybuilderv3GetPolicyNamesFromRuleIDsRequest": Policybuilderv3GetPolicyNamesFromRuleIDsRequest,
     "Policybuilderv3GetPolicyNamesFromRuleIDsResponse": Policybuilderv3GetPolicyNamesFromRuleIDsResponse,
     "Policybuilderv3GetPolicySyncListResponse": Policybuilderv3GetPolicySyncListResponse,
+    "Policybuilderv3GetPolicyVersionResponse": Policybuilderv3GetPolicyVersionResponse,
+    "Policybuilderv3GetPolicyVersionsInfoResponse": Policybuilderv3GetPolicyVersionsInfoResponse,
     "Policybuilderv3GetReceiversResponse": Policybuilderv3GetReceiversResponse,
     "Policybuilderv3GetRuleValidationRequest": Policybuilderv3GetRuleValidationRequest,
     "Policybuilderv3InsertGdpPolicyMetaDataRequest": Policybuilderv3InsertGdpPolicyMetaDataRequest,
@@ -3373,6 +3422,7 @@ let typeMap: {[index: string]: any} = {
     "Policybuilderv3StorePolicyGdpRequest": Policybuilderv3StorePolicyGdpRequest,
     "Policybuilderv3StorePolicyGdpResponse": Policybuilderv3StorePolicyGdpResponse,
     "Policybuilderv3TargetReceiver": Policybuilderv3TargetReceiver,
+    "Policybuilderv3VersionInfo": Policybuilderv3VersionInfo,
     "PotentialFlow": PotentialFlow,
     "PotentialFlowListItem": PotentialFlowListItem,
     "PotentialFlowPath": PotentialFlowPath,
@@ -3443,6 +3493,7 @@ let typeMap: {[index: string]: any} = {
     "Reportsrunnerv3StopQueryResponse": Reportsrunnerv3StopQueryResponse,
     "Reportsrunnerv3WriteResultsToFileResponse": Reportsrunnerv3WriteResultsToFileResponse,
     "Reportsrunnerv3WriteResultsToGroupResponse": Reportsrunnerv3WriteResultsToGroupResponse,
+    "Reportsv3Artifact": Reportsv3Artifact,
     "Reportsv3BriefReport": Reportsv3BriefReport,
     "Reportsv3Category": Reportsv3Category,
     "Reportsv3CategoryDetail": Reportsv3CategoryDetail,
@@ -3452,6 +3503,7 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3ChartSettings": Reportsv3ChartSettings,
     "Reportsv3ChartSettingsv2": Reportsv3ChartSettingsv2,
     "Reportsv3ContributionPointersInfoObject": Reportsv3ContributionPointersInfoObject,
+    "Reportsv3Control": Reportsv3Control,
     "Reportsv3CreateCategoryRequest": Reportsv3CreateCategoryRequest,
     "Reportsv3CreateCategoryResponse": Reportsv3CreateCategoryResponse,
     "Reportsv3CreateChartRequest": Reportsv3CreateChartRequest,
@@ -3460,12 +3512,24 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3CreateChartTemplatev2Response": Reportsv3CreateChartTemplatev2Response,
     "Reportsv3CreateChartv2Request": Reportsv3CreateChartv2Request,
     "Reportsv3CreateChartv2Response": Reportsv3CreateChartv2Response,
+    "Reportsv3CreateControlRequest": Reportsv3CreateControlRequest,
+    "Reportsv3CreateControlResponse": Reportsv3CreateControlResponse,
     "Reportsv3CreateFieldsByCategoryRequest": Reportsv3CreateFieldsByCategoryRequest,
     "Reportsv3CreateFieldsByCategoryResponse": Reportsv3CreateFieldsByCategoryResponse,
+    "Reportsv3CreateGradeRequest": Reportsv3CreateGradeRequest,
+    "Reportsv3CreateGradeResponse": Reportsv3CreateGradeResponse,
     "Reportsv3CreateJoinRequest": Reportsv3CreateJoinRequest,
     "Reportsv3CreateJoinResponse": Reportsv3CreateJoinResponse,
+    "Reportsv3CreateMeasureRequest": Reportsv3CreateMeasureRequest,
+    "Reportsv3CreateMeasureResponse": Reportsv3CreateMeasureResponse,
+    "Reportsv3CreateMetricRequest": Reportsv3CreateMetricRequest,
+    "Reportsv3CreateMetricResponse": Reportsv3CreateMetricResponse,
+    "Reportsv3CreateProgramRequest": Reportsv3CreateProgramRequest,
+    "Reportsv3CreateProgramResponse": Reportsv3CreateProgramResponse,
     "Reportsv3CreateReportRequest": Reportsv3CreateReportRequest,
     "Reportsv3CreateReportResponse": Reportsv3CreateReportResponse,
+    "Reportsv3CreateRequirementRequest": Reportsv3CreateRequirementRequest,
+    "Reportsv3CreateRequirementResponse": Reportsv3CreateRequirementResponse,
     "Reportsv3CreateVariantRequest": Reportsv3CreateVariantRequest,
     "Reportsv3CreateVariantResponse": Reportsv3CreateVariantResponse,
     "Reportsv3CustomChartTemplatev2": Reportsv3CustomChartTemplatev2,
@@ -3474,9 +3538,21 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3DeleteChartResponse": Reportsv3DeleteChartResponse,
     "Reportsv3DeleteChartTemplatev2Response": Reportsv3DeleteChartTemplatev2Response,
     "Reportsv3DeleteChartv2Response": Reportsv3DeleteChartv2Response,
+    "Reportsv3DeleteControlRequest": Reportsv3DeleteControlRequest,
+    "Reportsv3DeleteControlResponse": Reportsv3DeleteControlResponse,
     "Reportsv3DeleteFieldsByCategoryResponse": Reportsv3DeleteFieldsByCategoryResponse,
+    "Reportsv3DeleteGradeRequest": Reportsv3DeleteGradeRequest,
+    "Reportsv3DeleteGradeResponse": Reportsv3DeleteGradeResponse,
     "Reportsv3DeleteJoinResponse": Reportsv3DeleteJoinResponse,
+    "Reportsv3DeleteMeasureRequest": Reportsv3DeleteMeasureRequest,
+    "Reportsv3DeleteMeasureResponse": Reportsv3DeleteMeasureResponse,
+    "Reportsv3DeleteMetricRequest": Reportsv3DeleteMetricRequest,
+    "Reportsv3DeleteMetricResponse": Reportsv3DeleteMetricResponse,
+    "Reportsv3DeleteProgramRequest": Reportsv3DeleteProgramRequest,
+    "Reportsv3DeleteProgramResponse": Reportsv3DeleteProgramResponse,
     "Reportsv3DeleteReportResponse": Reportsv3DeleteReportResponse,
+    "Reportsv3DeleteRequirementRequest": Reportsv3DeleteRequirementRequest,
+    "Reportsv3DeleteRequirementResponse": Reportsv3DeleteRequirementResponse,
     "Reportsv3DeleteVariantResponse": Reportsv3DeleteVariantResponse,
     "Reportsv3DisplayHeader": Reportsv3DisplayHeader,
     "Reportsv3FieldName": Reportsv3FieldName,
@@ -3488,9 +3564,14 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3GetChartSettingsResponse": Reportsv3GetChartSettingsResponse,
     "Reportsv3GetChartSettingsv2Response": Reportsv3GetChartSettingsv2Response,
     "Reportsv3GetChartTemplatesv2Response": Reportsv3GetChartTemplatesv2Response,
+    "Reportsv3GetControlsResponse": Reportsv3GetControlsResponse,
     "Reportsv3GetFieldsByCategoriesResponse": Reportsv3GetFieldsByCategoriesResponse,
     "Reportsv3GetFieldsByCategoryResponse": Reportsv3GetFieldsByCategoryResponse,
+    "Reportsv3GetGradesResponse": Reportsv3GetGradesResponse,
     "Reportsv3GetJoinsResponse": Reportsv3GetJoinsResponse,
+    "Reportsv3GetMeasuresResponse": Reportsv3GetMeasuresResponse,
+    "Reportsv3GetMetricsResponse": Reportsv3GetMetricsResponse,
+    "Reportsv3GetProgramsResponse": Reportsv3GetProgramsResponse,
     "Reportsv3GetQueryByReportDefinitionRequest": Reportsv3GetQueryByReportDefinitionRequest,
     "Reportsv3GetQueryByReportIDRequest": Reportsv3GetQueryByReportIDRequest,
     "Reportsv3GetReportDefinitionResponse": Reportsv3GetReportDefinitionResponse,
@@ -3501,8 +3582,11 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3GetReportsForJoinResponse": Reportsv3GetReportsForJoinResponse,
     "Reportsv3GetReportsResponse": Reportsv3GetReportsResponse,
     "Reportsv3GetReportsTagsResponse": Reportsv3GetReportsTagsResponse,
+    "Reportsv3GetRequirementsResponse": Reportsv3GetRequirementsResponse,
     "Reportsv3GetVariantResponse": Reportsv3GetVariantResponse,
     "Reportsv3GetVariantsResponse": Reportsv3GetVariantsResponse,
+    "Reportsv3Grade": Reportsv3Grade,
+    "Reportsv3GradeThreshold": Reportsv3GradeThreshold,
     "Reportsv3Header": Reportsv3Header,
     "Reportsv3HeaderDescription": Reportsv3HeaderDescription,
     "Reportsv3HeaderPair": Reportsv3HeaderPair,
@@ -3510,10 +3594,14 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3JoinDefinition": Reportsv3JoinDefinition,
     "Reportsv3JoinDefinitionWithID": Reportsv3JoinDefinitionWithID,
     "Reportsv3Literal": Reportsv3Literal,
+    "Reportsv3Measure": Reportsv3Measure,
+    "Reportsv3Metric": Reportsv3Metric,
+    "Reportsv3MetricsColumn": Reportsv3MetricsColumn,
     "Reportsv3PartialChartUpdateRequest": Reportsv3PartialChartUpdateRequest,
     "Reportsv3PartialChartUpdateResponse": Reportsv3PartialChartUpdateResponse,
     "Reportsv3PartialReportUpdateRequest": Reportsv3PartialReportUpdateRequest,
     "Reportsv3PartialReportUpdateResponse": Reportsv3PartialReportUpdateResponse,
+    "Reportsv3Program": Reportsv3Program,
     "Reportsv3ReportAggFilter": Reportsv3ReportAggFilter,
     "Reportsv3ReportAggFilterCondition": Reportsv3ReportAggFilterCondition,
     "Reportsv3ReportDefinition": Reportsv3ReportDefinition,
@@ -3525,6 +3613,9 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3ReportResult": Reportsv3ReportResult,
     "Reportsv3ReportTag": Reportsv3ReportTag,
     "Reportsv3ReportUsedInJoin": Reportsv3ReportUsedInJoin,
+    "Reportsv3Requirement": Reportsv3Requirement,
+    "Reportsv3RunGradesRequest": Reportsv3RunGradesRequest,
+    "Reportsv3RunGradesResponse": Reportsv3RunGradesResponse,
     "Reportsv3RunReportResponse": Reportsv3RunReportResponse,
     "Reportsv3RunTimeParameter": Reportsv3RunTimeParameter,
     "Reportsv3RunVariantOperationRequest": Reportsv3RunVariantOperationRequest,
@@ -3536,10 +3627,22 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3UpdateChartResponse": Reportsv3UpdateChartResponse,
     "Reportsv3UpdateChartv2Request": Reportsv3UpdateChartv2Request,
     "Reportsv3UpdateChartv2Response": Reportsv3UpdateChartv2Response,
+    "Reportsv3UpdateControlRequest": Reportsv3UpdateControlRequest,
+    "Reportsv3UpdateControlResponse": Reportsv3UpdateControlResponse,
+    "Reportsv3UpdateGradeRequest": Reportsv3UpdateGradeRequest,
+    "Reportsv3UpdateGradeResponse": Reportsv3UpdateGradeResponse,
     "Reportsv3UpdateJoinRequest": Reportsv3UpdateJoinRequest,
     "Reportsv3UpdateJoinResponse": Reportsv3UpdateJoinResponse,
+    "Reportsv3UpdateMeasureRequest": Reportsv3UpdateMeasureRequest,
+    "Reportsv3UpdateMeasureResponse": Reportsv3UpdateMeasureResponse,
+    "Reportsv3UpdateMetricRequest": Reportsv3UpdateMetricRequest,
+    "Reportsv3UpdateMetricResponse": Reportsv3UpdateMetricResponse,
+    "Reportsv3UpdateProgramRequest": Reportsv3UpdateProgramRequest,
+    "Reportsv3UpdateProgramResponse": Reportsv3UpdateProgramResponse,
     "Reportsv3UpdateReportRequest": Reportsv3UpdateReportRequest,
     "Reportsv3UpdateReportResponse": Reportsv3UpdateReportResponse,
+    "Reportsv3UpdateRequirementRequest": Reportsv3UpdateRequirementRequest,
+    "Reportsv3UpdateRequirementResponse": Reportsv3UpdateRequirementResponse,
     "Reportsv3UpdateVariantOverrideRequest": Reportsv3UpdateVariantOverrideRequest,
     "Reportsv3UpdateVariantOverrideResponse": Reportsv3UpdateVariantOverrideResponse,
     "Reportsv3Variant": Reportsv3Variant,
@@ -3547,66 +3650,10 @@ let typeMap: {[index: string]: any} = {
     "Reportsv3VariantRule": Reportsv3VariantRule,
     "RescanDataStoreRequest": RescanDataStoreRequest,
     "ResetPasswordRequest": ResetPasswordRequest,
-    "Resourcecontrollerk8v3App": Resourcecontrollerk8v3App,
-    "Resourcecontrollerk8v3AppDeployment": Resourcecontrollerk8v3AppDeployment,
-    "Resourcecontrollerk8v3AppFile": Resourcecontrollerk8v3AppFile,
-    "Resourcecontrollerk8v3AppHpa": Resourcecontrollerk8v3AppHpa,
-    "Resourcecontrollerk8v3AppSecret": Resourcecontrollerk8v3AppSecret,
-    "Resourcecontrollerk8v3Container": Resourcecontrollerk8v3Container,
-    "Resourcecontrollerk8v3ContainerResources": Resourcecontrollerk8v3ContainerResources,
-    "Resourcecontrollerk8v3ContainerResourcesQuantity": Resourcecontrollerk8v3ContainerResourcesQuantity,
-    "Resourcecontrollerk8v3Controller": Resourcecontrollerk8v3Controller,
-    "Resourcecontrollerk8v3ControllerApp": Resourcecontrollerk8v3ControllerApp,
-    "Resourcecontrollerk8v3ControllerAppFile": Resourcecontrollerk8v3ControllerAppFile,
-    "Resourcecontrollerk8v3ControllerAppSecret": Resourcecontrollerk8v3ControllerAppSecret,
-    "Resourcecontrollerk8v3ControllerCommand": Resourcecontrollerk8v3ControllerCommand,
-    "Resourcecontrollerk8v3ControllerHeartbeat": Resourcecontrollerk8v3ControllerHeartbeat,
-    "Resourcecontrollerk8v3ControllerResources": Resourcecontrollerk8v3ControllerResources,
-    "Resourcecontrollerk8v3ControllerStatus": Resourcecontrollerk8v3ControllerStatus,
-    "Resourcecontrollerk8v3CreateControllerRequest": Resourcecontrollerk8v3CreateControllerRequest,
-    "Resourcecontrollerk8v3CreateHeartBeatExResponse": Resourcecontrollerk8v3CreateHeartBeatExResponse,
-    "Resourcecontrollerk8v3CreateHeartBeatRequest": Resourcecontrollerk8v3CreateHeartBeatRequest,
-    "Resourcecontrollerk8v3CreateHeartBeatResponse": Resourcecontrollerk8v3CreateHeartBeatResponse,
-    "Resourcecontrollerk8v3CreateKeypairRequest": Resourcecontrollerk8v3CreateKeypairRequest,
-    "Resourcecontrollerk8v3CreateKeypairResponse": Resourcecontrollerk8v3CreateKeypairResponse,
-    "Resourcecontrollerk8v3Cron": Resourcecontrollerk8v3Cron,
-    "Resourcecontrollerk8v3DeleteControllerRequest": Resourcecontrollerk8v3DeleteControllerRequest,
-    "Resourcecontrollerk8v3DeleteControllerResponse": Resourcecontrollerk8v3DeleteControllerResponse,
-    "Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost": Resourcecontrollerk8v3DeleteEdgeTenantRequestApphost,
-    "Resourcecontrollerk8v3DeleteEdgeTenantResponse": Resourcecontrollerk8v3DeleteEdgeTenantResponse,
-    "Resourcecontrollerk8v3DeleteJobRequest": Resourcecontrollerk8v3DeleteJobRequest,
-    "Resourcecontrollerk8v3DeleteJobResponse": Resourcecontrollerk8v3DeleteJobResponse,
-    "Resourcecontrollerk8v3DownloadControllerLogsRequest": Resourcecontrollerk8v3DownloadControllerLogsRequest,
-    "Resourcecontrollerk8v3DownloadControllerLogsResponse": Resourcecontrollerk8v3DownloadControllerLogsResponse,
-    "Resourcecontrollerk8v3EdgeResourceResponse": Resourcecontrollerk8v3EdgeResourceResponse,
-    "Resourcecontrollerk8v3EdgeTenantRequest": Resourcecontrollerk8v3EdgeTenantRequest,
-    "Resourcecontrollerk8v3File": Resourcecontrollerk8v3File,
-    "Resourcecontrollerk8v3GetControllerAppsResponse": Resourcecontrollerk8v3GetControllerAppsResponse,
-    "Resourcecontrollerk8v3GetControllerCommandsResponse": Resourcecontrollerk8v3GetControllerCommandsResponse,
-    "Resourcecontrollerk8v3GetControllerJobsResponse": Resourcecontrollerk8v3GetControllerJobsResponse,
-    "Resourcecontrollerk8v3GetControllersResponse": Resourcecontrollerk8v3GetControllersResponse,
-    "Resourcecontrollerk8v3GetControllersWithStatusResponse": Resourcecontrollerk8v3GetControllersWithStatusResponse,
-    "Resourcecontrollerk8v3GetJobExecutionsResponse": Resourcecontrollerk8v3GetJobExecutionsResponse,
-    "Resourcecontrollerk8v3GetTenantAppsResponse": Resourcecontrollerk8v3GetTenantAppsResponse,
-    "Resourcecontrollerk8v3GetTenantJobsResponse": Resourcecontrollerk8v3GetTenantJobsResponse,
-    "Resourcecontrollerk8v3InitContainer": Resourcecontrollerk8v3InitContainer,
-    "Resourcecontrollerk8v3Job": Resourcecontrollerk8v3Job,
-    "Resourcecontrollerk8v3JobExecution": Resourcecontrollerk8v3JobExecution,
-    "Resourcecontrollerk8v3JobStatusDTO": Resourcecontrollerk8v3JobStatusDTO,
-    "Resourcecontrollerk8v3KeyPair": Resourcecontrollerk8v3KeyPair,
-    "Resourcecontrollerk8v3QueryControllerLogsRequest": Resourcecontrollerk8v3QueryControllerLogsRequest,
-    "Resourcecontrollerk8v3QueryControllerLogsResponse": Resourcecontrollerk8v3QueryControllerLogsResponse,
-    "Resourcecontrollerk8v3QueryLogs": Resourcecontrollerk8v3QueryLogs,
-    "Resourcecontrollerk8v3Rule": Resourcecontrollerk8v3Rule,
-    "Resourcecontrollerk8v3Secret": Resourcecontrollerk8v3Secret,
     "Resourcecontrollerk8v3TenantGUCCreateResponse": Resourcecontrollerk8v3TenantGUCCreateResponse,
     "Resourcecontrollerk8v3TenantGUCStatusResponse": Resourcecontrollerk8v3TenantGUCStatusResponse,
     "Resourcecontrollerk8v3TenantLifecycleResponse": Resourcecontrollerk8v3TenantLifecycleResponse,
     "Resourcecontrollerk8v3TenantResourceResponse": Resourcecontrollerk8v3TenantResourceResponse,
-    "Resourcecontrollerk8v3TextContent": Resourcecontrollerk8v3TextContent,
-    "Resourcecontrollerk8v3UpdateJobExecutionRequest": Resourcecontrollerk8v3UpdateJobExecutionRequest,
-    "Resourcecontrollerk8v3UpdateJobStatusRequest": Resourcecontrollerk8v3UpdateJobStatusRequest,
-    "Resourcecontrollerk8v3Version": Resourcecontrollerk8v3Version,
     "Riskanalyticscontrollerv3CardSettings": Riskanalyticscontrollerv3CardSettings,
     "Riskanalyticscontrollerv3DetailToCount": Riskanalyticscontrollerv3DetailToCount,
     "Riskanalyticscontrollerv3EmergingRiskDetails": Riskanalyticscontrollerv3EmergingRiskDetails,
@@ -3734,7 +3781,6 @@ let typeMap: {[index: string]: any} = {
     "Snifassistv3StatusResponseBase": Snifassistv3StatusResponseBase,
     "Snifassistv3TestRegexRequest": Snifassistv3TestRegexRequest,
     "StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse": StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse,
-    "StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse": StreamResultOfEdgeschedulerv3MonitoringPendingRequestForEdgeQueryResponse,
     "StreamResultOfReportsrunnerv3RunReportResponse": StreamResultOfReportsrunnerv3RunReportResponse,
     "Streamsv3CheckAWSCredentialsRequest": Streamsv3CheckAWSCredentialsRequest,
     "Streamsv3CheckAWSCredentialsResponse": Streamsv3CheckAWSCredentialsResponse,
@@ -3751,28 +3797,6 @@ let typeMap: {[index: string]: any} = {
     "SubmitAuthCode": SubmitAuthCode,
     "SubmitPasswordRequest": SubmitPasswordRequest,
     "Tags": Tags,
-    "Templatesv3CreateIntegrationRequest": Templatesv3CreateIntegrationRequest,
-    "Templatesv3CreateIntegrationResponse": Templatesv3CreateIntegrationResponse,
-    "Templatesv3CreateTemplateRequest": Templatesv3CreateTemplateRequest,
-    "Templatesv3CreateTemplateResponse": Templatesv3CreateTemplateResponse,
-    "Templatesv3DefaultContent": Templatesv3DefaultContent,
-    "Templatesv3DeleteIntegrationResponse": Templatesv3DeleteIntegrationResponse,
-    "Templatesv3DeleteTemplateResponse": Templatesv3DeleteTemplateResponse,
-    "Templatesv3GetOriginDefaultContentResponse": Templatesv3GetOriginDefaultContentResponse,
-    "Templatesv3GetOriginFieldsResponse": Templatesv3GetOriginFieldsResponse,
-    "Templatesv3GetTemplateResponse": Templatesv3GetTemplateResponse,
-    "Templatesv3GetTemplatesForEdgeResponse": Templatesv3GetTemplatesForEdgeResponse,
-    "Templatesv3GetTemplatesResponse": Templatesv3GetTemplatesResponse,
-    "Templatesv3SimpleRecipient": Templatesv3SimpleRecipient,
-    "Templatesv3Template": Templatesv3Template,
-    "Templatesv3TestTemplateRequest": Templatesv3TestTemplateRequest,
-    "Templatesv3TestTemplateResponse": Templatesv3TestTemplateResponse,
-    "Templatesv3TransformTemplateJSONRequest": Templatesv3TransformTemplateJSONRequest,
-    "Templatesv3TransformTemplateJSONResponse": Templatesv3TransformTemplateJSONResponse,
-    "Templatesv3TransformTemplateRequest": Templatesv3TransformTemplateRequest,
-    "Templatesv3TransformTemplateResponse": Templatesv3TransformTemplateResponse,
-    "Templatesv3UpdateTemplateRequest": Templatesv3UpdateTemplateRequest,
-    "Templatesv3UpdateTemplateResponse": Templatesv3UpdateTemplateResponse,
     "TenantInfo": TenantInfo,
     "Tenantuserv3Apikey": Tenantuserv3Apikey,
     "Tenantuserv3AuthResponse": Tenantuserv3AuthResponse,
@@ -3858,6 +3882,24 @@ let typeMap: {[index: string]: any} = {
     "VendorCertificate": VendorCertificate,
     "VendorDataStore": VendorDataStore,
     "VendorSummary": VendorSummary,
+    "Vulmanagementv3AssetTags": Vulmanagementv3AssetTags,
+    "Vulmanagementv3Category": Vulmanagementv3Category,
+    "Vulmanagementv3ChildCategory": Vulmanagementv3ChildCategory,
+    "Vulmanagementv3CreateVulnerabilityRequest": Vulmanagementv3CreateVulnerabilityRequest,
+    "Vulmanagementv3CreateVulnerabilityResponse": Vulmanagementv3CreateVulnerabilityResponse,
+    "Vulmanagementv3FilterCategory": Vulmanagementv3FilterCategory,
+    "Vulmanagementv3GetFiltersDataResponse": Vulmanagementv3GetFiltersDataResponse,
+    "Vulmanagementv3GetVulnerabilitiesRequest": Vulmanagementv3GetVulnerabilitiesRequest,
+    "Vulmanagementv3GetVulnerabilitiesResponse": Vulmanagementv3GetVulnerabilitiesResponse,
+    "Vulmanagementv3GetVulnerabilityResponse": Vulmanagementv3GetVulnerabilityResponse,
+    "Vulmanagementv3SubCategory": Vulmanagementv3SubCategory,
+    "Vulmanagementv3UpdateVulnerabilitiesRequest": Vulmanagementv3UpdateVulnerabilitiesRequest,
+    "Vulmanagementv3UpdateVulnerabilitiesResponse": Vulmanagementv3UpdateVulnerabilitiesResponse,
+    "Vulmanagementv3VulnerabilitiesStatsDataResponse": Vulmanagementv3VulnerabilitiesStatsDataResponse,
+    "Vulmanagementv3Vulnerability": Vulmanagementv3Vulnerability,
+    "Vulmanagementv3VulnerabilityAudit": Vulmanagementv3VulnerabilityAudit,
+    "Vulmanagementv3VulnerabilityIngestionResponse": Vulmanagementv3VulnerabilityIngestionResponse,
+    "Vulmanagementv3VulnerabilityUpdate": Vulmanagementv3VulnerabilityUpdate,
     "VulnerabilitiesByDataStoreFilterOptions": VulnerabilitiesByDataStoreFilterOptions,
     "VulnerabilitiesCriticalityCountInner": VulnerabilitiesCriticalityCountInner,
     "VulnerabilitiesFilterOptions": VulnerabilitiesFilterOptions,
@@ -3949,7 +3991,7 @@ type MimeTypeDescriptor = {
  * the payload.
  */
 const parseMimeType = (mimeType: string): MimeTypeDescriptor => {
-    const [type, subtype] = mimeType.split('/');
+    const [type = '', subtype = ''] = mimeType.split('/');
     return {
         type,
         subtype,
@@ -3985,6 +4027,13 @@ const supportedMimeTypePredicatesWithPriority: MimeTypePredicate[] = [
     isFormUrlencodedMimeType,
 ];
 
+const nullableSuffix = " | null";
+const optionalSuffix = " | undefined";
+const arrayPrefix = "Array<";
+const arraySuffix = ">";
+const mapPrefix = "{ [key: string]: ";
+const mapSuffix = "; }";
+
 export class ObjectSerializer {
     public static findCorrectType(data: any, expectedType: string) {
         if (data == undefined) {
@@ -4009,8 +4058,11 @@ export class ObjectSerializer {
             } else {
                 if (data[discriminatorProperty]) {
                     var discriminatorType = data[discriminatorProperty];
-                    if(typeMap[discriminatorType]){
-                        return discriminatorType; // use the type given in the discriminator
+                    let mapping = typeMap[expectedType].mapping;
+                    if (mapping != undefined && mapping[discriminatorType]) {
+                        return mapping[discriminatorType]; // use the type given in the discriminator
+                    } else if(typeMap[discriminatorType]) {
+                        return discriminatorType;
                     } else {
                         return expectedType; // discriminator did not map to a type
                     }
@@ -4021,27 +4073,46 @@ export class ObjectSerializer {
         }
     }
 
-    public static serialize(data: any, type: string, format: string) {
+    public static serialize(data: any, type: string, format: string): any {
         if (data == undefined) {
             return data;
         } else if (primitives.indexOf(type.toLowerCase()) !== -1) {
             return data;
-        } else if (type.lastIndexOf("Array<", 0) === 0) { // string.startsWith pre es6
-            let subType: string = type.replace("Array<", ""); // Array<Type> => Type>
-            subType = subType.substring(0, subType.length - 1); // Type> => Type
+        } else if (type.endsWith(nullableSuffix)) {
+            let subType: string = type.slice(0, -nullableSuffix.length); // Type | null => Type
+            return ObjectSerializer.serialize(data, subType, format);
+        } else if (type.endsWith(optionalSuffix)) {
+            let subType: string = type.slice(0, -optionalSuffix.length); // Type | undefined => Type
+            return ObjectSerializer.serialize(data, subType, format);
+        } else if (type.startsWith(arrayPrefix)) {
+            let subType: string = type.slice(arrayPrefix.length, -arraySuffix.length); // Array<Type> => Type
             let transformedData: any[] = [];
             for (let date of data) {
                 transformedData.push(ObjectSerializer.serialize(date, subType, format));
             }
             return transformedData;
+        } else if (type.startsWith(mapPrefix)) {
+            let subType: string = type.slice(mapPrefix.length, -mapSuffix.length); // { [key: string]: Type; } => Type
+            let transformedData: { [key: string]: any } = {};
+            for (let key in data) {
+                transformedData[key] = ObjectSerializer.serialize(
+                    data[key],
+                    subType,
+                    format,
+                );
+            }
+            return transformedData;
         } else if (type === "Date") {
+            if (!(data instanceof Date)) {
+                return data;
+            }
             if (format == "date") {
                 let month = data.getMonth()+1
-                month = month < 10 ? "0" + month.toString() : month.toString()
+                let monthStr = month < 10 ? "0" + month.toString() : month.toString()
                 let day = data.getDate();
-                day = day < 10 ? "0" + day.toString() : day.toString();
+                let dayStr = day < 10 ? "0" + day.toString() : day.toString();
 
-                return data.getFullYear() + "-" + month + "-" + day;
+                return data.getFullYear() + "-" + monthStr + "-" + dayStr;
             } else {
                 return data.toISOString();
             }
@@ -4066,19 +4137,35 @@ export class ObjectSerializer {
         }
     }
 
-    public static deserialize(data: any, type: string, format: string) {
+    public static deserialize(data: any, type: string, format: string): any {
         // polymorphism may change the actual type.
         type = ObjectSerializer.findCorrectType(data, type);
         if (data == undefined) {
             return data;
         } else if (primitives.indexOf(type.toLowerCase()) !== -1) {
             return data;
-        } else if (type.lastIndexOf("Array<", 0) === 0) { // string.startsWith pre es6
-            let subType: string = type.replace("Array<", ""); // Array<Type> => Type>
-            subType = subType.substring(0, subType.length - 1); // Type> => Type
+        } else if (type.endsWith(nullableSuffix)) {
+            let subType: string = type.slice(0, -nullableSuffix.length); // Type | null => Type
+            return ObjectSerializer.deserialize(data, subType, format);
+        } else if (type.endsWith(optionalSuffix)) {
+            let subType: string = type.slice(0, -optionalSuffix.length); // Type | undefined => Type
+            return ObjectSerializer.deserialize(data, subType, format);
+        } else if (type.startsWith(arrayPrefix)) {
+            let subType: string = type.slice(arrayPrefix.length, -arraySuffix.length); // Array<Type> => Type
             let transformedData: any[] = [];
             for (let date of data) {
                 transformedData.push(ObjectSerializer.deserialize(date, subType, format));
+            }
+            return transformedData;
+        } else if (type.startsWith(mapPrefix)) {
+            let subType: string = type.slice(mapPrefix.length, -mapSuffix.length); // { [key: string]: Type; } => Type
+            let transformedData: { [key: string]: any } = {};
+            for (let key in data) {
+                transformedData[key] = ObjectSerializer.deserialize(
+                    data[key],
+                    subType,
+                    format,
+                );
             }
             return transformedData;
         } else if (type === "Date") {
@@ -4114,7 +4201,7 @@ export class ObjectSerializer {
         if (mediaType === undefined) {
             return undefined;
         }
-        return mediaType.split(";")[0].trim().toLowerCase();
+        return (mediaType.split(";")[0] ?? '').trim().toLowerCase();
     }
 
     /**
@@ -4129,7 +4216,7 @@ export class ObjectSerializer {
             return "application/json";
         }
 
-        const normalMediaTypes = mediaTypes.map(this.normalizeMediaType);
+        const normalMediaTypes = mediaTypes.map(ObjectSerializer.normalizeMediaType);
 
         for (const predicate of supportedMimeTypePredicatesWithPriority) {
             for (const mediaType of normalMediaTypes) {

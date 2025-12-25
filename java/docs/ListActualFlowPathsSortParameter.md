@@ -17,8 +17,8 @@ Descending order by default.
 
 | Name | Value |
 |---- | -----|
-| LASTSEEN | &quot;lastSeen&quot; |
-| FIRSTSEEN | &quot;firstSeen&quot; |
+| LAST_SEEN | &quot;lastSeen&quot; |
+| FIRST_SEEN | &quot;firstSeen&quot; |
 
 
 

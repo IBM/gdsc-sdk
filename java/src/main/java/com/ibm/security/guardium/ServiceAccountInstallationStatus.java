@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ServiceAccountInstallationStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ServiceAccountInstallationStatus {
   public static final String SERIALIZED_NAME_INSTALLATION_STATUS = "installationStatus";
   @SerializedName(SERIALIZED_NAME_INSTALLATION_STATUS)
+  @javax.annotation.Nonnull
   private Boolean installationStatus;
 
   public ServiceAccountInstallationStatus() {
   }
 
-  public ServiceAccountInstallationStatus installationStatus(Boolean installationStatus) {
+  public ServiceAccountInstallationStatus installationStatus(@javax.annotation.Nonnull Boolean installationStatus) {
     this.installationStatus = installationStatus;
     return this;
   }
 
-   /**
+  /**
    * Get installationStatus
    * @return installationStatus
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getInstallationStatus() {
     return installationStatus;
   }
 
-  public void setInstallationStatus(Boolean installationStatus) {
+  public void setInstallationStatus(@javax.annotation.Nonnull Boolean installationStatus) {
     this.installationStatus = installationStatus;
   }
 
@@ -121,24 +123,22 @@ public class ServiceAccountInstallationStatus {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("installationStatus");
+    openapiFields = new HashSet<String>(Arrays.asList("installationStatus"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("installationStatus");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("installationStatus"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ServiceAccountInstallationStatus
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ServiceAccountInstallationStatus
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ServiceAccountInstallationStatus.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ServiceAccountInstallationStatus is not found in the empty JSON string", ServiceAccountInstallationStatus.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ServiceAccountInstallationStatus is not found in the empty JSON string", ServiceAccountInstallationStatus.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,14 +146,14 @@ public class ServiceAccountInstallationStatus {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ServiceAccountInstallationStatus.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ServiceAccountInstallationStatus` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ServiceAccountInstallationStatus` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ServiceAccountInstallationStatus.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -188,22 +188,22 @@ public class ServiceAccountInstallationStatus {
     }
   }
 
- /**
-  * Create an instance of ServiceAccountInstallationStatus given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ServiceAccountInstallationStatus
-  * @throws IOException if the JSON string is invalid with respect to ServiceAccountInstallationStatus
-  */
+  /**
+   * Create an instance of ServiceAccountInstallationStatus given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ServiceAccountInstallationStatus
+   * @throws IOException if the JSON string is invalid with respect to ServiceAccountInstallationStatus
+   */
   public static ServiceAccountInstallationStatus fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ServiceAccountInstallationStatus.class);
   }
 
- /**
-  * Convert an instance of ServiceAccountInstallationStatus to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ServiceAccountInstallationStatus to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

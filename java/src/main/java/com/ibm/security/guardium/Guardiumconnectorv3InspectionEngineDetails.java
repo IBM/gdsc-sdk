@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,203 +38,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Additional information for an inspection engine.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3InspectionEngineDetails {
   public static final String SERIALIZED_NAME_IE = "ie";
   @SerializedName(SERIALIZED_NAME_IE)
+  @javax.annotation.Nullable
   private String ie;
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
+  @javax.annotation.Nullable
   private String port;
 
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
+  @javax.annotation.Nullable
   private String protocol;
 
   public static final String SERIALIZED_NAME_STAP = "stap";
   @SerializedName(SERIALIZED_NAME_STAP)
+  @javax.annotation.Nullable
   private String stap;
 
   public static final String SERIALIZED_NAME_VERIFICATION_HEALTH = "verification_health";
   @SerializedName(SERIALIZED_NAME_VERIFICATION_HEALTH)
+  @javax.annotation.Nullable
   private Integer verificationHealth;
 
   public static final String SERIALIZED_NAME_VERIFICATION_RESULT = "verification_result";
   @SerializedName(SERIALIZED_NAME_VERIFICATION_RESULT)
+  @javax.annotation.Nullable
   private String verificationResult;
 
   public static final String SERIALIZED_NAME_VERIFICATION_STATE = "verification_state";
   @SerializedName(SERIALIZED_NAME_VERIFICATION_STATE)
+  @javax.annotation.Nullable
   private String verificationState;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Guardiumconnectorv3InspectionEngineDetails() {
   }
 
-  public Guardiumconnectorv3InspectionEngineDetails ie(String ie) {
+  public Guardiumconnectorv3InspectionEngineDetails ie(@javax.annotation.Nullable String ie) {
     this.ie = ie;
     return this;
   }
 
-   /**
+  /**
    * Inspection engine.
    * @return ie
-  **/
+   */
   @javax.annotation.Nullable
   public String getIe() {
     return ie;
   }
 
-  public void setIe(String ie) {
+  public void setIe(@javax.annotation.Nullable String ie) {
     this.ie = ie;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineDetails port(String port) {
+  public Guardiumconnectorv3InspectionEngineDetails port(@javax.annotation.Nullable String port) {
     this.port = port;
     return this;
   }
 
-   /**
+  /**
    * Port.
    * @return port
-  **/
+   */
   @javax.annotation.Nullable
   public String getPort() {
     return port;
   }
 
-  public void setPort(String port) {
+  public void setPort(@javax.annotation.Nullable String port) {
     this.port = port;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineDetails protocol(String protocol) {
+  public Guardiumconnectorv3InspectionEngineDetails protocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
     return this;
   }
 
-   /**
+  /**
    * Protocol.
    * @return protocol
-  **/
+   */
   @javax.annotation.Nullable
   public String getProtocol() {
     return protocol;
   }
 
-  public void setProtocol(String protocol) {
+  public void setProtocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineDetails stap(String stap) {
+  public Guardiumconnectorv3InspectionEngineDetails stap(@javax.annotation.Nullable String stap) {
     this.stap = stap;
     return this;
   }
 
-   /**
+  /**
    * S -TAP name.
    * @return stap
-  **/
+   */
   @javax.annotation.Nullable
   public String getStap() {
     return stap;
   }
 
-  public void setStap(String stap) {
+  public void setStap(@javax.annotation.Nullable String stap) {
     this.stap = stap;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineDetails verificationHealth(Integer verificationHealth) {
+  public Guardiumconnectorv3InspectionEngineDetails verificationHealth(@javax.annotation.Nullable Integer verificationHealth) {
     this.verificationHealth = verificationHealth;
     return this;
   }
 
-   /**
+  /**
    * Verfication health.
    * @return verificationHealth
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getVerificationHealth() {
     return verificationHealth;
   }
 
-  public void setVerificationHealth(Integer verificationHealth) {
+  public void setVerificationHealth(@javax.annotation.Nullable Integer verificationHealth) {
     this.verificationHealth = verificationHealth;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineDetails verificationResult(String verificationResult) {
+  public Guardiumconnectorv3InspectionEngineDetails verificationResult(@javax.annotation.Nullable String verificationResult) {
     this.verificationResult = verificationResult;
     return this;
   }
 
-   /**
+  /**
    * Verfication results.
    * @return verificationResult
-  **/
+   */
   @javax.annotation.Nullable
   public String getVerificationResult() {
     return verificationResult;
   }
 
-  public void setVerificationResult(String verificationResult) {
+  public void setVerificationResult(@javax.annotation.Nullable String verificationResult) {
     this.verificationResult = verificationResult;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineDetails verificationState(String verificationState) {
+  public Guardiumconnectorv3InspectionEngineDetails verificationState(@javax.annotation.Nullable String verificationState) {
     this.verificationState = verificationState;
     return this;
   }
 
-   /**
+  /**
    * Verfication state.
    * @return verificationState
-  **/
+   */
   @javax.annotation.Nullable
   public String getVerificationState() {
     return verificationState;
   }
 
-  public void setVerificationState(String verificationState) {
+  public void setVerificationState(@javax.annotation.Nullable String verificationState) {
     this.verificationState = verificationState;
   }
 
 
-  public Guardiumconnectorv3InspectionEngineDetails version(String version) {
+  public Guardiumconnectorv3InspectionEngineDetails version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Version.
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -296,30 +305,22 @@ public class Guardiumconnectorv3InspectionEngineDetails {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ie");
-    openapiFields.add("port");
-    openapiFields.add("protocol");
-    openapiFields.add("stap");
-    openapiFields.add("verification_health");
-    openapiFields.add("verification_result");
-    openapiFields.add("verification_state");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("ie", "port", "protocol", "stap", "verification_health", "verification_result", "verification_state", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3InspectionEngineDetails
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3InspectionEngineDetails
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3InspectionEngineDetails.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3InspectionEngineDetails is not found in the empty JSON string", Guardiumconnectorv3InspectionEngineDetails.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3InspectionEngineDetails is not found in the empty JSON string", Guardiumconnectorv3InspectionEngineDetails.openapiRequiredFields.toString()));
         }
       }
 
@@ -327,30 +328,30 @@ public class Guardiumconnectorv3InspectionEngineDetails {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3InspectionEngineDetails.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3InspectionEngineDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3InspectionEngineDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("ie") != null && !jsonObj.get("ie").isJsonNull()) && !jsonObj.get("ie").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ie` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ie").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ie` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ie").toString()));
       }
       if ((jsonObj.get("port") != null && !jsonObj.get("port").isJsonNull()) && !jsonObj.get("port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
       }
       if ((jsonObj.get("protocol") != null && !jsonObj.get("protocol").isJsonNull()) && !jsonObj.get("protocol").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
       }
       if ((jsonObj.get("stap") != null && !jsonObj.get("stap").isJsonNull()) && !jsonObj.get("stap").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stap` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap").toString()));
       }
       if ((jsonObj.get("verification_result") != null && !jsonObj.get("verification_result").isJsonNull()) && !jsonObj.get("verification_result").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `verification_result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_result").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `verification_result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_result").toString()));
       }
       if ((jsonObj.get("verification_state") != null && !jsonObj.get("verification_state").isJsonNull()) && !jsonObj.get("verification_state").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `verification_state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_state").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `verification_state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_state").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -383,22 +384,22 @@ public class Guardiumconnectorv3InspectionEngineDetails {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3InspectionEngineDetails given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3InspectionEngineDetails
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3InspectionEngineDetails
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3InspectionEngineDetails given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3InspectionEngineDetails
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3InspectionEngineDetails
+   */
   public static Guardiumconnectorv3InspectionEngineDetails fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3InspectionEngineDetails.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3InspectionEngineDetails to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3InspectionEngineDetails to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

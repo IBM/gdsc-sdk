@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,79 +40,88 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Tenantuserv3Privilege
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3Privilege {
   public static final String SERIALIZED_NAME_AUTHOR_ID = "author_id";
   @SerializedName(SERIALIZED_NAME_AUTHOR_ID)
+  @javax.annotation.Nullable
   private String authorId;
 
   public static final String SERIALIZED_NAME_IMMUTABLE_ROLES = "immutable_roles";
   @SerializedName(SERIALIZED_NAME_IMMUTABLE_ROLES)
+  @javax.annotation.Nullable
   private List<String> immutableRoles = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MANAGE_ROLES = "manage_roles";
   @SerializedName(SERIALIZED_NAME_MANAGE_ROLES)
+  @javax.annotation.Nullable
   private List<String> manageRoles = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NLS_ID = "nls_id";
   @SerializedName(SERIALIZED_NAME_NLS_ID)
+  @javax.annotation.Nullable
   private String nlsId;
 
   public static final String SERIALIZED_NAME_PRIVILEGE_ID = "privilege_id";
   @SerializedName(SERIALIZED_NAME_PRIVILEGE_ID)
+  @javax.annotation.Nullable
   private String privilegeId;
 
   public static final String SERIALIZED_NAME_REMOVABLE = "removable";
   @SerializedName(SERIALIZED_NAME_REMOVABLE)
+  @javax.annotation.Nullable
   private Boolean removable;
 
   public static final String SERIALIZED_NAME_ROLES = "roles";
   @SerializedName(SERIALIZED_NAME_ROLES)
+  @javax.annotation.Nullable
   private List<String> roles = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Tenantuserv3Privilege() {
   }
 
-  public Tenantuserv3Privilege authorId(String authorId) {
+  public Tenantuserv3Privilege authorId(@javax.annotation.Nullable String authorId) {
     this.authorId = authorId;
     return this;
   }
 
-   /**
+  /**
    * Privilege author&#39;s id.
    * @return authorId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAuthorId() {
     return authorId;
   }
 
-  public void setAuthorId(String authorId) {
+  public void setAuthorId(@javax.annotation.Nullable String authorId) {
     this.authorId = authorId;
   }
 
 
-  public Tenantuserv3Privilege immutableRoles(List<String> immutableRoles) {
+  public Tenantuserv3Privilege immutableRoles(@javax.annotation.Nullable List<String> immutableRoles) {
     this.immutableRoles = immutableRoles;
     return this;
   }
@@ -124,21 +134,21 @@ public class Tenantuserv3Privilege {
     return this;
   }
 
-   /**
+  /**
    * Roles of the type:* permission.
    * @return immutableRoles
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getImmutableRoles() {
     return immutableRoles;
   }
 
-  public void setImmutableRoles(List<String> immutableRoles) {
+  public void setImmutableRoles(@javax.annotation.Nullable List<String> immutableRoles) {
     this.immutableRoles = immutableRoles;
   }
 
 
-  public Tenantuserv3Privilege manageRoles(List<String> manageRoles) {
+  public Tenantuserv3Privilege manageRoles(@javax.annotation.Nullable List<String> manageRoles) {
     this.manageRoles = manageRoles;
     return this;
   }
@@ -151,97 +161,97 @@ public class Tenantuserv3Privilege {
     return this;
   }
 
-   /**
+  /**
    * Roles of the management permission.
    * @return manageRoles
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getManageRoles() {
     return manageRoles;
   }
 
-  public void setManageRoles(List<String> manageRoles) {
+  public void setManageRoles(@javax.annotation.Nullable List<String> manageRoles) {
     this.manageRoles = manageRoles;
   }
 
 
-  public Tenantuserv3Privilege name(String name) {
+  public Tenantuserv3Privilege name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * A privilege name that the access-manager sees (for pre-defined privileges, use translation text).
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Tenantuserv3Privilege nlsId(String nlsId) {
+  public Tenantuserv3Privilege nlsId(@javax.annotation.Nullable String nlsId) {
     this.nlsId = nlsId;
     return this;
   }
 
-   /**
+  /**
    * Get nlsId
    * @return nlsId
-  **/
+   */
   @javax.annotation.Nullable
   public String getNlsId() {
     return nlsId;
   }
 
-  public void setNlsId(String nlsId) {
+  public void setNlsId(@javax.annotation.Nullable String nlsId) {
     this.nlsId = nlsId;
   }
 
 
-  public Tenantuserv3Privilege privilegeId(String privilegeId) {
+  public Tenantuserv3Privilege privilegeId(@javax.annotation.Nullable String privilegeId) {
     this.privilegeId = privilegeId;
     return this;
   }
 
-   /**
+  /**
    * Permanent id of the privilege.
    * @return privilegeId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPrivilegeId() {
     return privilegeId;
   }
 
-  public void setPrivilegeId(String privilegeId) {
+  public void setPrivilegeId(@javax.annotation.Nullable String privilegeId) {
     this.privilegeId = privilegeId;
   }
 
 
-  public Tenantuserv3Privilege removable(Boolean removable) {
+  public Tenantuserv3Privilege removable(@javax.annotation.Nullable Boolean removable) {
     this.removable = removable;
     return this;
   }
 
-   /**
+  /**
    * All pre-defined privileges are not removable.
    * @return removable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getRemovable() {
     return removable;
   }
 
-  public void setRemovable(Boolean removable) {
+  public void setRemovable(@javax.annotation.Nullable Boolean removable) {
     this.removable = removable;
   }
 
 
-  public Tenantuserv3Privilege roles(List<String> roles) {
+  public Tenantuserv3Privilege roles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
     return this;
   }
@@ -254,35 +264,35 @@ public class Tenantuserv3Privilege {
     return this;
   }
 
-   /**
+  /**
    * The array of GDSC roles that this privilege belongs to.
    * @return roles
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getRoles() {
     return roles;
   }
 
-  public void setRoles(List<String> roles) {
+  public void setRoles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
   }
 
 
-  public Tenantuserv3Privilege type(String type) {
+  public Tenantuserv3Privilege type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Type of privilege: report, classification, group, page, restapi, etc.
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -347,31 +357,22 @@ public class Tenantuserv3Privilege {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("author_id");
-    openapiFields.add("immutable_roles");
-    openapiFields.add("manage_roles");
-    openapiFields.add("name");
-    openapiFields.add("nls_id");
-    openapiFields.add("privilege_id");
-    openapiFields.add("removable");
-    openapiFields.add("roles");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("author_id", "immutable_roles", "manage_roles", "name", "nls_id", "privilege_id", "removable", "roles", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3Privilege
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3Privilege
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3Privilege.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3Privilege is not found in the empty JSON string", Tenantuserv3Privilege.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3Privilege is not found in the empty JSON string", Tenantuserv3Privilege.openapiRequiredFields.toString()));
         }
       }
 
@@ -379,36 +380,36 @@ public class Tenantuserv3Privilege {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3Privilege.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3Privilege` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3Privilege` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("author_id") != null && !jsonObj.get("author_id").isJsonNull()) && !jsonObj.get("author_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `author_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("author_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `author_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("author_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("immutable_roles") != null && !jsonObj.get("immutable_roles").isJsonNull() && !jsonObj.get("immutable_roles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `immutable_roles` to be an array in the JSON string but got `%s`", jsonObj.get("immutable_roles").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `immutable_roles` to be an array in the JSON string but got `%s`", jsonObj.get("immutable_roles").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("manage_roles") != null && !jsonObj.get("manage_roles").isJsonNull() && !jsonObj.get("manage_roles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `manage_roles` to be an array in the JSON string but got `%s`", jsonObj.get("manage_roles").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `manage_roles` to be an array in the JSON string but got `%s`", jsonObj.get("manage_roles").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("nls_id") != null && !jsonObj.get("nls_id").isJsonNull()) && !jsonObj.get("nls_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nls_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nls_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_id").toString()));
       }
       if ((jsonObj.get("privilege_id") != null && !jsonObj.get("privilege_id").isJsonNull()) && !jsonObj.get("privilege_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `privilege_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `privilege_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("privilege_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("roles") != null && !jsonObj.get("roles").isJsonNull() && !jsonObj.get("roles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -441,22 +442,22 @@ public class Tenantuserv3Privilege {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3Privilege given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3Privilege
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3Privilege
-  */
+  /**
+   * Create an instance of Tenantuserv3Privilege given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3Privilege
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3Privilege
+   */
   public static Tenantuserv3Privilege fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3Privilege.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3Privilege to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3Privilege to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

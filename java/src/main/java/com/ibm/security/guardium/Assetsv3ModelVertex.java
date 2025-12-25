@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,103 +44,118 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ModelVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ModelVertex {
   public static final String SERIALIZED_NAME_CRITICALITY = "criticality";
   @SerializedName(SERIALIZED_NAME_CRITICALITY)
-  private Assetsv3Level criticality = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level criticality = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HAS_TRAINING_DATA = "has_training_data";
   @SerializedName(SERIALIZED_NAME_HAS_TRAINING_DATA)
+  @javax.annotation.Nullable
   private Boolean hasTrainingData;
 
   public static final String SERIALIZED_NAME_LAST_TRAINED = "last_trained";
   @SerializedName(SERIALIZED_NAME_LAST_TRAINED)
+  @javax.annotation.Nullable
   private OffsetDateTime lastTrained;
 
   public static final String SERIALIZED_NAME_MODEL_APPLICATION = "model_application";
   @SerializedName(SERIALIZED_NAME_MODEL_APPLICATION)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> modelApplication = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MODEL_DEPLOYMENT = "model_deployment";
   @SerializedName(SERIALIZED_NAME_MODEL_DEPLOYMENT)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> modelDeployment = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MODEL_ID = "model_id";
   @SerializedName(SERIALIZED_NAME_MODEL_ID)
+  @javax.annotation.Nullable
   private String modelId;
 
   public static final String SERIALIZED_NAME_MODEL_NAME = "model_name";
   @SerializedName(SERIALIZED_NAME_MODEL_NAME)
+  @javax.annotation.Nullable
   private String modelName;
 
   public static final String SERIALIZED_NAME_MODEL_RESOURCES = "model_resources";
   @SerializedName(SERIALIZED_NAME_MODEL_RESOURCES)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> modelResources = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MODEL_SUB_TYPE = "model_sub_type";
   @SerializedName(SERIALIZED_NAME_MODEL_SUB_TYPE)
+  @javax.annotation.Nullable
   private String modelSubType;
 
   public static final String SERIALIZED_NAME_MODEL_TYPE = "model_type";
   @SerializedName(SERIALIZED_NAME_MODEL_TYPE)
+  @javax.annotation.Nullable
   private String modelType;
 
   public static final String SERIALIZED_NAME_PUBLISHER = "publisher";
   @SerializedName(SERIALIZED_NAME_PUBLISHER)
+  @javax.annotation.Nullable
   private String publisher;
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public static final String SERIALIZED_NAME_RISK_LEVEL = "risk_level";
   @SerializedName(SERIALIZED_NAME_RISK_LEVEL)
-  private Assetsv3Level riskLevel = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level riskLevel = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Assetsv3ModelVertex() {
   }
 
-  public Assetsv3ModelVertex criticality(Assetsv3Level criticality) {
+  public Assetsv3ModelVertex criticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
     return this;
   }
 
-   /**
+  /**
    * Get criticality
    * @return criticality
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getCriticality() {
     return criticality;
   }
 
-  public void setCriticality(Assetsv3Level criticality) {
+  public void setCriticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
   }
 
 
-  public Assetsv3ModelVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3ModelVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -152,59 +168,59 @@ public class Assetsv3ModelVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3ModelVertex hasTrainingData(Boolean hasTrainingData) {
+  public Assetsv3ModelVertex hasTrainingData(@javax.annotation.Nullable Boolean hasTrainingData) {
     this.hasTrainingData = hasTrainingData;
     return this;
   }
 
-   /**
+  /**
    * Get hasTrainingData
    * @return hasTrainingData
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHasTrainingData() {
     return hasTrainingData;
   }
 
-  public void setHasTrainingData(Boolean hasTrainingData) {
+  public void setHasTrainingData(@javax.annotation.Nullable Boolean hasTrainingData) {
     this.hasTrainingData = hasTrainingData;
   }
 
 
-  public Assetsv3ModelVertex lastTrained(OffsetDateTime lastTrained) {
+  public Assetsv3ModelVertex lastTrained(@javax.annotation.Nullable OffsetDateTime lastTrained) {
     this.lastTrained = lastTrained;
     return this;
   }
 
-   /**
+  /**
    * Get lastTrained
    * @return lastTrained
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastTrained() {
     return lastTrained;
   }
 
-  public void setLastTrained(OffsetDateTime lastTrained) {
+  public void setLastTrained(@javax.annotation.Nullable OffsetDateTime lastTrained) {
     this.lastTrained = lastTrained;
   }
 
 
-  public Assetsv3ModelVertex modelApplication(List<Assetsv3ConnectionEdge> modelApplication) {
+  public Assetsv3ModelVertex modelApplication(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> modelApplication) {
     this.modelApplication = modelApplication;
     return this;
   }
@@ -217,21 +233,21 @@ public class Assetsv3ModelVertex {
     return this;
   }
 
-   /**
+  /**
    * Get modelApplication
    * @return modelApplication
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getModelApplication() {
     return modelApplication;
   }
 
-  public void setModelApplication(List<Assetsv3ConnectionEdge> modelApplication) {
+  public void setModelApplication(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> modelApplication) {
     this.modelApplication = modelApplication;
   }
 
 
-  public Assetsv3ModelVertex modelDeployment(List<Assetsv3ConnectionEdge> modelDeployment) {
+  public Assetsv3ModelVertex modelDeployment(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> modelDeployment) {
     this.modelDeployment = modelDeployment;
     return this;
   }
@@ -244,59 +260,59 @@ public class Assetsv3ModelVertex {
     return this;
   }
 
-   /**
+  /**
    * Get modelDeployment
    * @return modelDeployment
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getModelDeployment() {
     return modelDeployment;
   }
 
-  public void setModelDeployment(List<Assetsv3ConnectionEdge> modelDeployment) {
+  public void setModelDeployment(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> modelDeployment) {
     this.modelDeployment = modelDeployment;
   }
 
 
-  public Assetsv3ModelVertex modelId(String modelId) {
+  public Assetsv3ModelVertex modelId(@javax.annotation.Nullable String modelId) {
     this.modelId = modelId;
     return this;
   }
 
-   /**
+  /**
    * Get modelId
    * @return modelId
-  **/
+   */
   @javax.annotation.Nullable
   public String getModelId() {
     return modelId;
   }
 
-  public void setModelId(String modelId) {
+  public void setModelId(@javax.annotation.Nullable String modelId) {
     this.modelId = modelId;
   }
 
 
-  public Assetsv3ModelVertex modelName(String modelName) {
+  public Assetsv3ModelVertex modelName(@javax.annotation.Nullable String modelName) {
     this.modelName = modelName;
     return this;
   }
 
-   /**
+  /**
    * Get modelName
    * @return modelName
-  **/
+   */
   @javax.annotation.Nullable
   public String getModelName() {
     return modelName;
   }
 
-  public void setModelName(String modelName) {
+  public void setModelName(@javax.annotation.Nullable String modelName) {
     this.modelName = modelName;
   }
 
 
-  public Assetsv3ModelVertex modelResources(List<Assetsv3ConnectionEdge> modelResources) {
+  public Assetsv3ModelVertex modelResources(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> modelResources) {
     this.modelResources = modelResources;
     return this;
   }
@@ -309,130 +325,130 @@ public class Assetsv3ModelVertex {
     return this;
   }
 
-   /**
+  /**
    * Get modelResources
    * @return modelResources
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getModelResources() {
     return modelResources;
   }
 
-  public void setModelResources(List<Assetsv3ConnectionEdge> modelResources) {
+  public void setModelResources(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> modelResources) {
     this.modelResources = modelResources;
   }
 
 
-  public Assetsv3ModelVertex modelSubType(String modelSubType) {
+  public Assetsv3ModelVertex modelSubType(@javax.annotation.Nullable String modelSubType) {
     this.modelSubType = modelSubType;
     return this;
   }
 
-   /**
+  /**
    * Get modelSubType
    * @return modelSubType
-  **/
+   */
   @javax.annotation.Nullable
   public String getModelSubType() {
     return modelSubType;
   }
 
-  public void setModelSubType(String modelSubType) {
+  public void setModelSubType(@javax.annotation.Nullable String modelSubType) {
     this.modelSubType = modelSubType;
   }
 
 
-  public Assetsv3ModelVertex modelType(String modelType) {
+  public Assetsv3ModelVertex modelType(@javax.annotation.Nullable String modelType) {
     this.modelType = modelType;
     return this;
   }
 
-   /**
+  /**
    * Get modelType
    * @return modelType
-  **/
+   */
   @javax.annotation.Nullable
   public String getModelType() {
     return modelType;
   }
 
-  public void setModelType(String modelType) {
+  public void setModelType(@javax.annotation.Nullable String modelType) {
     this.modelType = modelType;
   }
 
 
-  public Assetsv3ModelVertex publisher(String publisher) {
+  public Assetsv3ModelVertex publisher(@javax.annotation.Nullable String publisher) {
     this.publisher = publisher;
     return this;
   }
 
-   /**
+  /**
    * Get publisher
    * @return publisher
-  **/
+   */
   @javax.annotation.Nullable
   public String getPublisher() {
     return publisher;
   }
 
-  public void setPublisher(String publisher) {
+  public void setPublisher(@javax.annotation.Nullable String publisher) {
     this.publisher = publisher;
   }
 
 
-  public Assetsv3ModelVertex resolutionKey(String resolutionKey) {
+  public Assetsv3ModelVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
 
-  public Assetsv3ModelVertex riskLevel(Assetsv3Level riskLevel) {
+  public Assetsv3ModelVertex riskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
     return this;
   }
 
-   /**
+  /**
    * Get riskLevel
    * @return riskLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getRiskLevel() {
     return riskLevel;
   }
 
-  public void setRiskLevel(Assetsv3Level riskLevel) {
+  public void setRiskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
   }
 
 
-  public Assetsv3ModelVertex version(String version) {
+  public Assetsv3ModelVertex version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Get version
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -509,37 +525,22 @@ public class Assetsv3ModelVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("criticality");
-    openapiFields.add("extended_properties");
-    openapiFields.add("has_training_data");
-    openapiFields.add("last_trained");
-    openapiFields.add("model_application");
-    openapiFields.add("model_deployment");
-    openapiFields.add("model_id");
-    openapiFields.add("model_name");
-    openapiFields.add("model_resources");
-    openapiFields.add("model_sub_type");
-    openapiFields.add("model_type");
-    openapiFields.add("publisher");
-    openapiFields.add("resolution_key");
-    openapiFields.add("risk_level");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("criticality", "extended_properties", "has_training_data", "last_trained", "model_application", "model_deployment", "model_id", "model_name", "model_resources", "model_sub_type", "model_type", "publisher", "resolution_key", "risk_level", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ModelVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ModelVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ModelVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ModelVertex is not found in the empty JSON string", Assetsv3ModelVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ModelVertex is not found in the empty JSON string", Assetsv3ModelVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -547,7 +548,7 @@ public class Assetsv3ModelVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ModelVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ModelVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ModelVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -560,7 +561,7 @@ public class Assetsv3ModelVertex {
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -574,7 +575,7 @@ public class Assetsv3ModelVertex {
         if (jsonArraymodelApplication != null) {
           // ensure the json data is an array
           if (!jsonObj.get("model_application").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `model_application` to be an array in the JSON string but got `%s`", jsonObj.get("model_application").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_application` to be an array in the JSON string but got `%s`", jsonObj.get("model_application").toString()));
           }
 
           // validate the optional field `model_application` (array)
@@ -588,7 +589,7 @@ public class Assetsv3ModelVertex {
         if (jsonArraymodelDeployment != null) {
           // ensure the json data is an array
           if (!jsonObj.get("model_deployment").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `model_deployment` to be an array in the JSON string but got `%s`", jsonObj.get("model_deployment").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_deployment` to be an array in the JSON string but got `%s`", jsonObj.get("model_deployment").toString()));
           }
 
           // validate the optional field `model_deployment` (array)
@@ -598,17 +599,17 @@ public class Assetsv3ModelVertex {
         }
       }
       if ((jsonObj.get("model_id") != null && !jsonObj.get("model_id").isJsonNull()) && !jsonObj.get("model_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `model_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_id").toString()));
       }
       if ((jsonObj.get("model_name") != null && !jsonObj.get("model_name").isJsonNull()) && !jsonObj.get("model_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `model_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_name").toString()));
       }
       if (jsonObj.get("model_resources") != null && !jsonObj.get("model_resources").isJsonNull()) {
         JsonArray jsonArraymodelResources = jsonObj.getAsJsonArray("model_resources");
         if (jsonArraymodelResources != null) {
           // ensure the json data is an array
           if (!jsonObj.get("model_resources").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `model_resources` to be an array in the JSON string but got `%s`", jsonObj.get("model_resources").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_resources` to be an array in the JSON string but got `%s`", jsonObj.get("model_resources").toString()));
           }
 
           // validate the optional field `model_resources` (array)
@@ -618,23 +619,23 @@ public class Assetsv3ModelVertex {
         }
       }
       if ((jsonObj.get("model_sub_type") != null && !jsonObj.get("model_sub_type").isJsonNull()) && !jsonObj.get("model_sub_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `model_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_sub_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_sub_type").toString()));
       }
       if ((jsonObj.get("model_type") != null && !jsonObj.get("model_type").isJsonNull()) && !jsonObj.get("model_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `model_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model_type").toString()));
       }
       if ((jsonObj.get("publisher") != null && !jsonObj.get("publisher").isJsonNull()) && !jsonObj.get("publisher").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `publisher` to be a primitive type in the JSON string but got `%s`", jsonObj.get("publisher").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `publisher` to be a primitive type in the JSON string but got `%s`", jsonObj.get("publisher").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
       // validate the optional field `risk_level`
       if (jsonObj.get("risk_level") != null && !jsonObj.get("risk_level").isJsonNull()) {
         Assetsv3Level.validateJsonElement(jsonObj.get("risk_level"));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -667,22 +668,22 @@ public class Assetsv3ModelVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ModelVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ModelVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ModelVertex
-  */
+  /**
+   * Create an instance of Assetsv3ModelVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ModelVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ModelVertex
+   */
   public static Assetsv3ModelVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ModelVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ModelVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ModelVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

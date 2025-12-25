@@ -7,7 +7,7 @@ Short observation.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **count** | **int** | Count of observation. | [optional] 
-**type** | [**Riskanalyticscontrollerv3ObservationType**](Riskanalyticscontrollerv3ObservationType.md) |  | [optional] 
+**type** | [**Riskanalyticscontrollerv3ObservationType**](Riskanalyticscontrollerv3ObservationType.md) |  | [optional] [default to Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE]
 
 ## Example
 

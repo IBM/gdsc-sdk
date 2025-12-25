@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AddJiraIntegrationParametersRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-27T16:17:29.841502Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AddJiraIntegrationParametersRequest {
   public static final String SERIALIZED_NAME_COMPANY_DOMAIN_NAME = "companyDomainName";
   @SerializedName(SERIALIZED_NAME_COMPANY_DOMAIN_NAME)
+  @javax.annotation.Nonnull
   private String companyDomainName;
 
   public static final String SERIALIZED_NAME_ISSUE_TYPE = "issueType";
   @SerializedName(SERIALIZED_NAME_ISSUE_TYPE)
+  @javax.annotation.Nullable
   private String issueType = "501";
 
   public static final String SERIALIZED_NAME_PROJECT_ID = "projectId";
   @SerializedName(SERIALIZED_NAME_PROJECT_ID)
+  @javax.annotation.Nullable
   private String projectId;
 
   public AddJiraIntegrationParametersRequest() {
   }
 
-  public AddJiraIntegrationParametersRequest companyDomainName(String companyDomainName) {
+  public AddJiraIntegrationParametersRequest companyDomainName(@javax.annotation.Nonnull String companyDomainName) {
     this.companyDomainName = companyDomainName;
     return this;
   }
 
-   /**
+  /**
    * Get companyDomainName
    * @return companyDomainName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCompanyDomainName() {
     return companyDomainName;
   }
 
-  public void setCompanyDomainName(String companyDomainName) {
+  public void setCompanyDomainName(@javax.annotation.Nonnull String companyDomainName) {
     this.companyDomainName = companyDomainName;
   }
 
 
-  public AddJiraIntegrationParametersRequest issueType(String issueType) {
+  public AddJiraIntegrationParametersRequest issueType(@javax.annotation.Nullable String issueType) {
     this.issueType = issueType;
     return this;
   }
 
-   /**
+  /**
    * Get issueType
    * @return issueType
-  **/
+   */
   @javax.annotation.Nullable
   public String getIssueType() {
     return issueType;
   }
 
-  public void setIssueType(String issueType) {
+  public void setIssueType(@javax.annotation.Nullable String issueType) {
     this.issueType = issueType;
   }
 
 
-  public AddJiraIntegrationParametersRequest projectId(String projectId) {
+  public AddJiraIntegrationParametersRequest projectId(@javax.annotation.Nullable String projectId) {
     this.projectId = projectId;
     return this;
   }
 
-   /**
+  /**
    * Get projectId
    * @return projectId
-  **/
+   */
   @javax.annotation.Nullable
   public String getProjectId() {
     return projectId;
   }
 
-  public void setProjectId(String projectId) {
+  public void setProjectId(@javax.annotation.Nullable String projectId) {
     this.projectId = projectId;
   }
 
@@ -171,26 +175,22 @@ public class AddJiraIntegrationParametersRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("companyDomainName");
-    openapiFields.add("issueType");
-    openapiFields.add("projectId");
+    openapiFields = new HashSet<String>(Arrays.asList("companyDomainName", "issueType", "projectId"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("companyDomainName");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("companyDomainName"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddJiraIntegrationParametersRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddJiraIntegrationParametersRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddJiraIntegrationParametersRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddJiraIntegrationParametersRequest is not found in the empty JSON string", AddJiraIntegrationParametersRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AddJiraIntegrationParametersRequest is not found in the empty JSON string", AddJiraIntegrationParametersRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,25 +198,25 @@ public class AddJiraIntegrationParametersRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AddJiraIntegrationParametersRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddJiraIntegrationParametersRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AddJiraIntegrationParametersRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AddJiraIntegrationParametersRequest.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("companyDomainName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `companyDomainName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("companyDomainName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `companyDomainName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("companyDomainName").toString()));
       }
       if ((jsonObj.get("issueType") != null && !jsonObj.get("issueType").isJsonNull()) && !jsonObj.get("issueType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `issueType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issueType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `issueType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issueType").toString()));
       }
       if ((jsonObj.get("projectId") != null && !jsonObj.get("projectId").isJsonNull()) && !jsonObj.get("projectId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `projectId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("projectId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `projectId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("projectId").toString()));
       }
   }
 
@@ -249,22 +249,22 @@ public class AddJiraIntegrationParametersRequest {
     }
   }
 
- /**
-  * Create an instance of AddJiraIntegrationParametersRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddJiraIntegrationParametersRequest
-  * @throws IOException if the JSON string is invalid with respect to AddJiraIntegrationParametersRequest
-  */
+  /**
+   * Create an instance of AddJiraIntegrationParametersRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddJiraIntegrationParametersRequest
+   * @throws IOException if the JSON string is invalid with respect to AddJiraIntegrationParametersRequest
+   */
   public static AddJiraIntegrationParametersRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddJiraIntegrationParametersRequest.class);
   }
 
- /**
-  * Convert an instance of AddJiraIntegrationParametersRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddJiraIntegrationParametersRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

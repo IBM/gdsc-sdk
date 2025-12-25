@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **possible_values** | [**List[Policybuilderv3PossibleValueObj]**](Policybuilderv3PossibleValueObj.md) | Possible value length of the rule parameter. | [optional] 
 **relationships** | [**List[Policybuilderv3ParameterRelationShip]**](Policybuilderv3ParameterRelationShip.md) | Parameter relationship object. | [optional] 
 **rule_category** | **str** | Category of the rule. | [optional] 
-**rule_type** | [**Policybuilderv3RuleType**](Policybuilderv3RuleType.md) |  | [optional] 
+**rule_type** | [**Policybuilderv3RuleType**](Policybuilderv3RuleType.md) |  | [optional] [default to Policybuilderv3RuleType.ACCESS]
 **standalone_parameter** | **bool** | If the parameter is standalone. | [optional] 
 **supported_db_types** | **List[str]** | Stores all the supported db types. | [optional] 
 **type** | **str** | Type of parameter. | [optional] 

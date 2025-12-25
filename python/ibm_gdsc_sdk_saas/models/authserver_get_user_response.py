@@ -74,9 +74,9 @@ class AuthserverGetUserResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in feature_flags (dict)
         _field_dict = {}
         if self.feature_flags:
-            for _key in self.feature_flags:
-                if self.feature_flags[_key]:
-                    _field_dict[_key] = self.feature_flags[_key].to_dict()
+            for _key_feature_flags in self.feature_flags:
+                if self.feature_flags[_key_feature_flags]:
+                    _field_dict[_key_feature_flags] = self.feature_flags[_key_feature_flags].to_dict()
             _dict['feature_flags'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of user
         if self.user:

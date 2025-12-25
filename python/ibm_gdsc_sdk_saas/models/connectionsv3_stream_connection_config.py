@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class Connectionsv3StreamConnectionConfig(BaseModel):
     """
-    Stream connection config with connecion id.
+    Stream connection config with connection id.
     """ # noqa: E501
     connection_id: Optional[StrictStr] = Field(default=None, description="Connection id.")
     stream_connection: Optional[Connectionsv3StreamConnection] = None

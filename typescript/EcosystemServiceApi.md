@@ -23,14 +23,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceCreateDatasetRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceCreateDatasetRequest = {
-  // Ecosystemv3CreateDatasetRequest
+const request: EcosystemServiceApiEcosystemServiceCreateDatasetRequest = {
+  
   ecosystemv3CreateDatasetRequest: {
     detail: {
       columns: [
@@ -52,9 +52,8 @@ let body:.EcosystemServiceApiEcosystemServiceCreateDatasetRequest = {
   },
 };
 
-apiInstance.ecosystemServiceCreateDataset(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceCreateDataset(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -95,16 +94,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceDataInsertRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceDataInsertRequest = {
-  // string | Data set target name.
+const request: EcosystemServiceApiEcosystemServiceDataInsertRequest = {
+    // Data set target name.
   datasetName: "dataset_name_example",
-  // Ecosystemv3DataInsertRequest
+  
   ecosystemv3DataInsertRequest: {
     datasetName: "datasetName_example",
     entries: [
@@ -117,9 +116,8 @@ let body:.EcosystemServiceApiEcosystemServiceDataInsertRequest = {
   },
 };
 
-apiInstance.ecosystemServiceDataInsert(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceDataInsert(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -161,22 +159,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {
-  // Array<string> | Name of the dataset, required field. (optional)
+const request: EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {
+    // Name of the dataset, required field. (optional)
   datasetNames: [
     "dataset_names_example",
   ],
 };
 
-apiInstance.ecosystemServiceDeleteDatasets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceDeleteDatasets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -217,34 +214,33 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetDatasetDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetDatasetDataRequest = {
-  // string | Name of the dataset.
+const request: EcosystemServiceApiEcosystemServiceGetDatasetDataRequest = {
+    // Name of the dataset.
   datasetName: "dataset_name_example",
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | If needs to return header information. It is for pagination. The first page needs header, the rest doesn\'t need. (optional)
+    // If needs to return header information. It is for pagination. The first page needs header, the rest doesn\'t need. (optional)
   returnHeader: true,
-  // string | Search field. (optional)
+    // Search field. (optional)
   field: "field_example",
-  // string | Search value. (optional)
+    // Search value. (optional)
   value: "value_example",
-  // string | Field to sort. (optional)
+    // Field to sort. (optional)
   sortField: "sort_field_example",
-  // 'NONE' | 'ASC' | 'DESC' | Sort order. (optional)
+    // Sort order. (optional)
   sortOrder: "NONE",
 };
 
-apiInstance.ecosystemServiceGetDatasetData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetDatasetData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -292,20 +288,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest = {
-  // string | Name of the dataset.
+const request: EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest = {
+    // Name of the dataset.
   datasetName: "dataset_name_example",
 };
 
-apiInstance.ecosystemServiceGetDatasetDetail(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetDatasetDetail(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -346,32 +341,31 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetDatasetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {
-  // Date | Return datasets created at this time or later (>=). (optional)
+const request: EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {
+    // Return datasets created at this time or later (>=). (optional)
   filterStartTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Return datasets created before this time (<). (optional)
+    // Return datasets created before this time (<). (optional)
   filterEndTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Array<string> | The state filter groups commonly paired states. Only returns records that include the specified names. (optional)
+    // The state filter groups commonly paired states. Only returns records that include the specified names. (optional)
   filterDatasetNames: [
     "filter.dataset_names_example",
   ],
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | Computing the filter counts is relatively expensive, only compute when needed. (optional)
+    // Computing the filter counts is relatively expensive, only compute when needed. (optional)
   includeFilterCounts: true,
 };
 
-apiInstance.ecosystemServiceGetDatasets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetDatasets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -417,23 +411,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest = {
-  // Ecosystemv3GetPurgableRowsRequest
+const request: EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest = {
+  
   ecosystemv3GetPurgableRowsRequest: {
     hotRetentionPeriod: "hotRetentionPeriod_example",
     hotRetentionPeriodUnit: "hotRetentionPeriodUnit_example",
   },
 };
 
-apiInstance.ecosystemServiceGetPurgableRows(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetPurgableRows(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -474,22 +467,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServicePurgeDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServicePurgeDataRequest = {
-  // Array<string> | Name of the datasets, required field. (optional)
+const request: EcosystemServiceApiEcosystemServicePurgeDataRequest = {
+    // Name of the datasets, required field. (optional)
   datasetNames: [
     "dataset_names_example",
   ],
 };
 
-apiInstance.ecosystemServicePurgeData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServicePurgeData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -530,14 +522,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceTestIntegrationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceTestIntegrationRequest = {
-  // Ecosystemv3TestIntegrationRequest
+const request: EcosystemServiceApiEcosystemServiceTestIntegrationRequest = {
+  
   ecosystemv3TestIntegrationRequest: {
     integrationType: "integrationType_example",
     options: {
@@ -546,9 +538,8 @@ let body:.EcosystemServiceApiEcosystemServiceTestIntegrationRequest = {
   },
 };
 
-apiInstance.ecosystemServiceTestIntegration(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceTestIntegration(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

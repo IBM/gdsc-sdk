@@ -24,6 +24,8 @@ export class Guardiumconnectorv3GetSyncDMsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "params",
@@ -39,4 +41,3 @@ export class Guardiumconnectorv3GetSyncDMsResponse {
     public constructor() {
     }
 }
-

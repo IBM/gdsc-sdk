@@ -6,7 +6,7 @@ EnableDisableRiskEventProcessRequest is the request object for EnableDisableRisk
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**action** | [**Riskanalyticscontrollerv3Action**](Riskanalyticscontrollerv3Action.md) |  | [optional] 
+**action** | [**Riskanalyticscontrollerv3Action**](Riskanalyticscontrollerv3Action.md) |  | [optional] [default to Riskanalyticscontrollerv3Action.UNDEFINED_ACTION_TYPE]
 
 ## Example
 
