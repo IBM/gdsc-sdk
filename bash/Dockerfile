@@ -1,4 +1,4 @@
-FROM alpine:3.12.0
+FROM alpine:3.23.3
 
 RUN apk add --update --no-cache curl ca-certificates bash bash-completion zsh curl git vim ncurses util-linux
 
