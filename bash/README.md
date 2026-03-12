@@ -10,25 +10,25 @@ The script uses cURL underneath for making all REST calls.
 
 ```shell
 # Make sure the script has executable rights
-$ chmod u+x ./client.sh
+$ chmod u+x 
 
 # Print the list of operations available on the service
-$ ./client.sh -h
+$ ./ -h
 
 # Print the service description
-$ ./client.sh --about
+$ ./ --about
 
 # Print detailed information about specific operation
-$ ./client.sh <operationId> -h
+$ ./ <operationId> -h
 
 # Make GET request
-$ ./client.sh --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+./ --host http://<hostname>:<port> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make GET request using arbitrary curl options (must be passed before <operationId>) to an SSL service using username:password
-$ ./client.sh -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
+ -k -sS --tlsv1.2 --host https://<hostname> -u <user>:<password> --accept xml <operationId> <queryParam1>=<value1> <header_key1>:<header_value2>
 
 # Make POST request
-$ echo '<body_content>' | ./client.sh --host <hostname> --content-type json <operationId> -
+$ echo '<body_content>' |  --host <hostname> --content-type json <operationId> -
 
 # Make POST request with simple JSON content, e.g.:
 # {
@@ -36,13 +36,13 @@ $ echo '<body_content>' | ./client.sh --host <hostname> --content-type json <ope
 #   "key2": "value2",
 #   "key3": 23
 # }
-$ echo '<body_content>' | ./client.sh --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
+$ echo '<body_content>' |  --host <hostname> --content-type json <operationId> key1==value1 key2=value2 key3:=23 -
 
 # Make POST request with form data
-$ ./client.sh --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
+$  --host <hostname> <operationId> key1:=value1 key2:=value2 key3:=23
 
 # Preview the cURL command without actually executing it
-$ ./client.sh --host http://<hostname>:<port> --dry-run <operationid>
+$  --host http://<hostname>:<port> --dry-run <operationid>
 
 ```
 

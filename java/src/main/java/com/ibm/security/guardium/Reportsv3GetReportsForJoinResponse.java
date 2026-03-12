@@ -53,7 +53,7 @@ import com.ibm.security.JSON;
 /**
  * GetReportsForJoinResponse - Returns a small amount of information for each report used by a join. Includes the join-imported headers used by the report. Warning: use sparingly as this function requires fetching every report in a category and traversing their trees - it can be slow.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-12T11:32:35.296131573-07:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetReportsForJoinResponse {
   public static final String SERIALIZED_NAME_REPORTS_USED_IN_JOIN = "reports_used_in_join";
   @SerializedName(SERIALIZED_NAME_REPORTS_USED_IN_JOIN)

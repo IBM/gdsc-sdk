@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "com.ibm.security.guardium",
     name := "com.ibm.security.guardium.saas",
-    version := "1.0.0",
+    version := "1.1.0",
     scalaVersion := "2.11.12",
     scalacOptions ++= Seq("-feature"),
     compile / javacOptions ++= Seq("-Xlint:deprecation"),

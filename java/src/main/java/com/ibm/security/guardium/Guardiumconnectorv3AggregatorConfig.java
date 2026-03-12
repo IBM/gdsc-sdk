@@ -50,7 +50,7 @@ import com.ibm.security.JSON;
 /**
  * Return the Aggregator configuration information from tenant database.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-12T11:32:35.296131573-07:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3AggregatorConfig {
   public static final String SERIALIZED_NAME_DATAMART_END_DATE_AGGREGATOR = "datamart_end_date_aggregator";
   @SerializedName(SERIALIZED_NAME_DATAMART_END_DATE_AGGREGATOR)

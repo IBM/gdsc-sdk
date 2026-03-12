@@ -52,7 +52,7 @@ import com.ibm.security.JSON;
 /**
  * Contains a list of examples, reference links, in a finding category. If outlier finding, it could be HIGH_VOLUME, ERROR, NEW, and so on.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-12T11:32:35.296131573-07:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3FindingDetailsMap {
   public static final String SERIALIZED_NAME_FINDING_DETAILS = "finding_details";
   @SerializedName(SERIALIZED_NAME_FINDING_DETAILS)

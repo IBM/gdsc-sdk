@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ibm_gdsc_sdk_saas"
-version = "1.0.0"
+version = "1.1.0"
 description = "IBM Guardium Data Security Center"
 authors = ["c3cvp8ch@ca.ibm.com"]
 license = "Apache License Version 2.0"
@@ -19,7 +19,7 @@ typing-extensions = ">=4.7.1"
 
 [tool.poetry.dev-dependencies]
 pytest = ">=7.2.1"
-tox = ">=3.9.0"
+tox = ">=4.34.1"
 flake8 = ">=4.0.0"
 types-python-dateutil = ">=2.8.19.14"
 mypy = "1.4.1"

@@ -51,7 +51,7 @@ import com.ibm.security.JSON;
 /**
  * UpdatemetricRequest is the argument type used to update a metric with the Updatemetric() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-12T11:32:35.296131573-07:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3UpdateMetricRequest {
   public static final String SERIALIZED_NAME_METRIC = "metric";
   @SerializedName(SERIALIZED_NAME_METRIC)

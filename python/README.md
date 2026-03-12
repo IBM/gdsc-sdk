@@ -10,9 +10,9 @@ Python 3.7+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install ibm-gdsc-sdk-saas==1.0.0
+pip install ibm-gdsc-sdk-saas==1.1.0
 ```
-(you may need to run `pip` with root permission: `sudo pip install ibm-gdsc-sdk-saas==1.0.0`)
+(you may need to run `pip` with root permission: `sudo pip install ibm-gdsc-sdk-saas==1.1.0`)
 
 Then import the package:
 ```python

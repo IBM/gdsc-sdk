@@ -5,7 +5,7 @@
     <artifactId>com.ibm.security.guardium.saas</artifactId>
     <packaging>jar</packaging>
     <name>com.ibm.security.guardium.saas</name>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

@@ -1,9 +1,9 @@
 {
   "name":"@ibm-gdsc/ibm-gdsc-sdk-saas",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "IBM Guardium Data Security Center SDK",
   "author": "IBM GDSC Team <c3cvp8ch@ca.ibm.com>",
-"homepage": "https://github.ibm.com/Activity-Insights/guardium-sdk/tree/release-v1.0.0",
+"homepage": "https://github.ibm.com/Activity-Insights/guardium-sdk/tree/release-v1.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM/gdsc-sdk.git"

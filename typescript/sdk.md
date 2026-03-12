@@ -7562,412 +7562,6 @@ Name | Type | Description  | Notes
 
 
 
-# .DatabootstrapperServiceApi
-
-All URIs are relative to *http://localhost*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**databootstrapperServiceLoadData**](DatabootstrapperServiceApi.md#databootstrapperServiceLoadData) | **POST** /api/v3/databootstrapper/data | Summary: Load data Description: Load data for a tenant.
-
-
-# **databootstrapperServiceLoadData**
-> Databootstrapperv3LoadDataResponse databootstrapperServiceLoadData(databootstrapperv3LoadDataRequest)
-
-
-### Example
-
-
-```typescript
-import { createConfiguration, DatabootstrapperServiceApi } from '';
-import type { DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new DatabootstrapperServiceApi(configuration);
-
-const request: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest = {
-  
-  databootstrapperv3LoadDataRequest: {
-    partNumber: "partNumber_example",
-  },
-};
-
-const data = await apiInstance.databootstrapperServiceLoadData(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **databootstrapperv3LoadDataRequest** | **Databootstrapperv3LoadDataRequest**|  |
-
-
-### Return type
-
-**Databootstrapperv3LoadDataResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-
-
-
-
-# .DatamartProcessorServiceApi
-
-All URIs are relative to *http://localhost*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**datamartProcessorServiceGetDatamartInfo**](DatamartProcessorServiceApi.md#datamartProcessorServiceGetDatamartInfo) | **GET** /api/v3/datamarts/info | Summary: Get datamarts Description: Return a list of files inside a datamart to the caller.
-[**datamartProcessorServiceGetDatamarts**](DatamartProcessorServiceApi.md#datamartProcessorServiceGetDatamarts) | **GET** /api/v3/datamarts | Summary: Get datamarts Description: Return a list of datamarts for a time interval to the caller.
-[**datamartProcessorServiceGetEarliestStartTime**](DatamartProcessorServiceApi.md#datamartProcessorServiceGetEarliestStartTime) | **GET** /api/v3/datamarts/earliest_start_time | Summary: Get rarliest start time Description: Return the earliest time period of data available in database.
-[**datamartProcessorServiceSendAllCompleteFilesToQueue**](DatamartProcessorServiceApi.md#datamartProcessorServiceSendAllCompleteFilesToQueue) | **POST** /api/v3/datamarts/repush_files | 
-[**datamartProcessorServiceStoreExtractionLogs**](DatamartProcessorServiceApi.md#datamartProcessorServiceStoreExtractionLogs) | **POST** /api/v3/datamarts/{request_id}/dm_extraction_logs | Summary: Store extraction logs Description: Store the datamart extraction logs inside GI.
-[**uploadDatamart**](DatamartProcessorServiceApi.md#uploadDatamart) | **POST** /api/v3/datamarts/upload | Summary: Upload datamart Description: Upload datamart file for ingestion.
-
-
-# **datamartProcessorServiceGetDatamartInfo**
-> Datamartprocessorv3GetDatamartInfoResponse datamartProcessorServiceGetDatamartInfo()
-
-
-### Example
-
-
-```typescript
-import { createConfiguration, DatamartProcessorServiceApi } from '';
-import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new DatamartProcessorServiceApi(configuration);
-
-const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {
-    // Ingestion id. (optional)
-  ingestionId: "ingestion_id_example",
-};
-
-const data = await apiInstance.datamartProcessorServiceGetDatamartInfo(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ingestionId** | [**string**] | Ingestion id. | (optional) defaults to undefined
-
-
-### Return type
-
-**Datamartprocessorv3GetDatamartInfoResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **datamartProcessorServiceGetDatamarts**
-> Datamartprocessorv3GetDatamartResponse datamartProcessorServiceGetDatamarts()
-
-
-### Example
-
-
-```typescript
-import { createConfiguration, DatamartProcessorServiceApi } from '';
-import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new DatamartProcessorServiceApi(configuration);
-
-const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {
-    // Data starting time period in UTC. (optional)
-  periodStart: new Date('1970-01-01T00:00:00.00Z'),
-    // Data ending time period in UTC. (optional)
-  periodEnd: new Date('1970-01-01T00:00:00.00Z'),
-};
-
-const data = await apiInstance.datamartProcessorServiceGetDatamarts(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **periodStart** | [**Date**] | Data starting time period in UTC. | (optional) defaults to undefined
- **periodEnd** | [**Date**] | Data ending time period in UTC. | (optional) defaults to undefined
-
-
-### Return type
-
-**Datamartprocessorv3GetDatamartResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **datamartProcessorServiceGetEarliestStartTime**
-> Datamartprocessorv3GetEarliestStartTimeResponse datamartProcessorServiceGetEarliestStartTime()
-
-
-### Example
-
-
-```typescript
-import { createConfiguration, DatamartProcessorServiceApi } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new DatamartProcessorServiceApi(configuration);
-
-const request = {};
-
-const data = await apiInstance.datamartProcessorServiceGetEarliestStartTime(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-
-### Return type
-
-**Datamartprocessorv3GetEarliestStartTimeResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **datamartProcessorServiceSendAllCompleteFilesToQueue**
-> Datamartprocessorv3StatusResponseBase datamartProcessorServiceSendAllCompleteFilesToQueue(body)
-
-
-### Example
-
-
-```typescript
-import { createConfiguration, DatamartProcessorServiceApi } from '';
-import type { DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new DatamartProcessorServiceApi(configuration);
-
-const request: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest = {
-  
-  body: {},
-};
-
-const data = await apiInstance.datamartProcessorServiceSendAllCompleteFilesToQueue(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | **any**|  |
-
-
-### Return type
-
-**Datamartprocessorv3StatusResponseBase**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **datamartProcessorServiceStoreExtractionLogs**
-> Datamartprocessorv3DMExtractionLogsResponse datamartProcessorServiceStoreExtractionLogs(datamartprocessorv3DMExtractionLogsRequest)
-
-
-### Example
-
-
-```typescript
-import { createConfiguration, DatamartProcessorServiceApi } from '';
-import type { DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new DatamartProcessorServiceApi(configuration);
-
-const request: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest = {
-    // Request id which co-relates to request.
-  requestId: "request_id_example",
-  
-  datamartprocessorv3DMExtractionLogsRequest: {
-    data: "data_example",
-    requestId: "requestId_example",
-  },
-};
-
-const data = await apiInstance.datamartProcessorServiceStoreExtractionLogs(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **datamartprocessorv3DMExtractionLogsRequest** | **Datamartprocessorv3DMExtractionLogsRequest**|  |
- **requestId** | [**string**] | Request id which co-relates to request. | defaults to undefined
-
-
-### Return type
-
-**Datamartprocessorv3DMExtractionLogsResponse**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **uploadDatamart**
-> void uploadDatamart()
-
-
-### Example
-
-
-```typescript
-import { createConfiguration, DatamartProcessorServiceApi } from '';
-import type { DatamartProcessorServiceApiUploadDatamartRequest } from '';
-
-const configuration = createConfiguration();
-const apiInstance = new DatamartProcessorServiceApi(configuration);
-
-const request: DatamartProcessorServiceApiUploadDatamartRequest = {
-    // The file to upload.
-  file: { data: Buffer.from(fs.readFileSync('/path/to/file', 'utf-8')), name: '/path/to/file' },
-};
-
-const data = await apiInstance.uploadDatamart(request);
-console.log('API called successfully. Returned data:', data);
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **file** | [**HttpFile**] | The file to upload. | defaults to undefined
-
-
-### Return type
-
-**void**
-
-### Authorization
-
-[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/x-www-form-urlencoded
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-
-
-
-
 # .DataMovementsApi
 
 All URIs are relative to *http://localhost*
@@ -10255,6 +9849,412 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | success |  -  |
 **400** | Bad Request |  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+
+
+
+
+# .DatabootstrapperServiceApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**databootstrapperServiceLoadData**](DatabootstrapperServiceApi.md#databootstrapperServiceLoadData) | **POST** /api/v3/databootstrapper/data | Summary: Load data Description: Load data for a tenant.
+
+
+# **databootstrapperServiceLoadData**
+> Databootstrapperv3LoadDataResponse databootstrapperServiceLoadData(databootstrapperv3LoadDataRequest)
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, DatabootstrapperServiceApi } from '';
+import type { DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new DatabootstrapperServiceApi(configuration);
+
+const request: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest = {
+  
+  databootstrapperv3LoadDataRequest: {
+    partNumber: "partNumber_example",
+  },
+};
+
+const data = await apiInstance.databootstrapperServiceLoadData(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **databootstrapperv3LoadDataRequest** | **Databootstrapperv3LoadDataRequest**|  |
+
+
+### Return type
+
+**Databootstrapperv3LoadDataResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+
+
+
+
+# .DatamartProcessorServiceApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datamartProcessorServiceGetDatamartInfo**](DatamartProcessorServiceApi.md#datamartProcessorServiceGetDatamartInfo) | **GET** /api/v3/datamarts/info | Summary: Get datamarts Description: Return a list of files inside a datamart to the caller.
+[**datamartProcessorServiceGetDatamarts**](DatamartProcessorServiceApi.md#datamartProcessorServiceGetDatamarts) | **GET** /api/v3/datamarts | Summary: Get datamarts Description: Return a list of datamarts for a time interval to the caller.
+[**datamartProcessorServiceGetEarliestStartTime**](DatamartProcessorServiceApi.md#datamartProcessorServiceGetEarliestStartTime) | **GET** /api/v3/datamarts/earliest_start_time | Summary: Get rarliest start time Description: Return the earliest time period of data available in database.
+[**datamartProcessorServiceSendAllCompleteFilesToQueue**](DatamartProcessorServiceApi.md#datamartProcessorServiceSendAllCompleteFilesToQueue) | **POST** /api/v3/datamarts/repush_files | 
+[**datamartProcessorServiceStoreExtractionLogs**](DatamartProcessorServiceApi.md#datamartProcessorServiceStoreExtractionLogs) | **POST** /api/v3/datamarts/{request_id}/dm_extraction_logs | Summary: Store extraction logs Description: Store the datamart extraction logs inside GI.
+[**uploadDatamart**](DatamartProcessorServiceApi.md#uploadDatamart) | **POST** /api/v3/datamarts/upload | Summary: Upload datamart Description: Upload datamart file for ingestion.
+
+
+# **datamartProcessorServiceGetDatamartInfo**
+> Datamartprocessorv3GetDatamartInfoResponse datamartProcessorServiceGetDatamartInfo()
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
+
+const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {
+    // Ingestion id. (optional)
+  ingestionId: "ingestion_id_example",
+};
+
+const data = await apiInstance.datamartProcessorServiceGetDatamartInfo(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ingestionId** | [**string**] | Ingestion id. | (optional) defaults to undefined
+
+
+### Return type
+
+**Datamartprocessorv3GetDatamartInfoResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **datamartProcessorServiceGetDatamarts**
+> Datamartprocessorv3GetDatamartResponse datamartProcessorServiceGetDatamarts()
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
+
+const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {
+    // Data starting time period in UTC. (optional)
+  periodStart: new Date('1970-01-01T00:00:00.00Z'),
+    // Data ending time period in UTC. (optional)
+  periodEnd: new Date('1970-01-01T00:00:00.00Z'),
+};
+
+const data = await apiInstance.datamartProcessorServiceGetDatamarts(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **periodStart** | [**Date**] | Data starting time period in UTC. | (optional) defaults to undefined
+ **periodEnd** | [**Date**] | Data ending time period in UTC. | (optional) defaults to undefined
+
+
+### Return type
+
+**Datamartprocessorv3GetDatamartResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **datamartProcessorServiceGetEarliestStartTime**
+> Datamartprocessorv3GetEarliestStartTimeResponse datamartProcessorServiceGetEarliestStartTime()
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
+
+const request = {};
+
+const data = await apiInstance.datamartProcessorServiceGetEarliestStartTime(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+**Datamartprocessorv3GetEarliestStartTimeResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **datamartProcessorServiceSendAllCompleteFilesToQueue**
+> Datamartprocessorv3StatusResponseBase datamartProcessorServiceSendAllCompleteFilesToQueue(body)
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
+
+const request: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest = {
+  
+  body: {},
+};
+
+const data = await apiInstance.datamartProcessorServiceSendAllCompleteFilesToQueue(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **any**|  |
+
+
+### Return type
+
+**Datamartprocessorv3StatusResponseBase**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **datamartProcessorServiceStoreExtractionLogs**
+> Datamartprocessorv3DMExtractionLogsResponse datamartProcessorServiceStoreExtractionLogs(datamartprocessorv3DMExtractionLogsRequest)
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
+
+const request: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest = {
+    // Request id which co-relates to request.
+  requestId: "request_id_example",
+  
+  datamartprocessorv3DMExtractionLogsRequest: {
+    data: "data_example",
+    requestId: "requestId_example",
+  },
+};
+
+const data = await apiInstance.datamartProcessorServiceStoreExtractionLogs(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datamartprocessorv3DMExtractionLogsRequest** | **Datamartprocessorv3DMExtractionLogsRequest**|  |
+ **requestId** | [**string**] | Request id which co-relates to request. | defaults to undefined
+
+
+### Return type
+
+**Datamartprocessorv3DMExtractionLogsResponse**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | A successful response. |  -  |
+**0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
+
+# **uploadDatamart**
+> void uploadDatamart()
+
+
+### Example
+
+
+```typescript
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiUploadDatamartRequest } from '';
+
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
+
+const request: DatamartProcessorServiceApiUploadDatamartRequest = {
+    // The file to upload.
+  file: { data: Buffer.from(fs.readFileSync('/path/to/file', 'utf-8')), name: '/path/to/file' },
+};
+
+const data = await apiInstance.uploadDatamart(request);
+console.log('API called successfully. Returned data:', data);
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**HttpFile**] | The file to upload. | defaults to undefined
+
+
+### Return type
+
+**void**
+
+### Authorization
+
+[BasicAuth](README.md#BasicAuth), [ApiKeyAuth](README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful |  -  |
+**0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
 
