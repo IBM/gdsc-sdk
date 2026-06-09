@@ -1,3 +1,5 @@
+# Deprecated
+
 ## IBM Guardium Data Security Center SDK
 Welcome to the IBM Guardium Data Security Center SDK documentation.
 
