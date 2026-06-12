@@ -41,7 +41,7 @@
 ,
   "devDependencies": {
     "typescript": "^4.0",
-    "@types/node": "^18.0.0"
+    "@types/node": "^24.0.0"
   },
   "publishConfig": {
     "registry": "https://na.artifactory.swg-devops.com/artifactory/api/npm/sec-common-npm-local/"
