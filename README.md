@@ -1,3 +1,11 @@
+# ⚠️ DEPRECATION NOTICE
+
+**This repository and the corresponding SDK packages are no longer actively maintained.**
+
+* **Status:** Deprecated (Archived)
+* **Reason:** "Users are encourged to use the Guardium Data Security Center APIs directly."
+* **Support:** No further features, bug fixes, or security patches will be released. The repository will be placed in a read-only (archived) state.
+
 ## IBM Guardium Data Security Center SDK
 Welcome to the IBM Guardium Data Security Center SDK documentation.
 
